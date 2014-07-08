@@ -1,20 +1,64 @@
 <html>
 <head>
-<title>Jupyter</title>
+<title>Jupyter Project</title>
+
+
+<link rel="shortcut icon" type="image/png" href="favicon.png" />
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
 
 <link href="jupyter_font/styles.css" rel="stylesheet">
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+<link href="css/jupyter.css" rel="stylesheet">
 
+<script type="text/javascript" src="http://use.typekit.net/kpd5yrh.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 </head>
 <body>
-  Jupyter
-    <span>
-    <div class="icon jupyter-icon-jupiter"></div>
-    <div class="icon jupyter-icon-moon"></div>
-    </span>
+  
+  <div class="container">
+
+    <div id="main-title">
+      <h1 class="text-center">Project Jupyter</h1>
+    </div>
+
+    <div id="jupyter-logo" class="text-center">
+      <span class="icon jupyter-icon-jupiter"></span>
+      <span id="moon-1" class="icon jupyter-icon-moon"></span>
+      <img id="julia" src="images/Julia_256x256.png" class="language-logo" />
+      <span id="moon-2" class="icon jupyter-icon-moon"></span>
+      <img id="python" src="images/Python_256x256.png" class="language-logo" />
+      <span id="moon-3" class="icon jupyter-icon-moon"></span>
+      <img id="r" src="images/R_256x256.png" class="language-logo" />
+    </div>
+
+    <div id="sub-title">
+      <h2 class="text-center">Evolved from the IPython Project</h2>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+      <hr/>
+      <div class="row">
+        <div class="col-md-3">
+          <iframe src="http://ghbtns.com/github-btn.html?user=jupyter&type=follow"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200" height="20"></iframe>
+        </div>
+        <div class="col-md-3">
+          <a href="https://twitter.com/ProjectJupyter" class="twitter-follow-button" data-show-count="false">Follow @ProjectJupyter</a>
+        </div>
+        <div class="col-md-3"><a href="http://colaboratory.jupyter.org" target="_blank">Jupyter coLaboratory</a></div>
+        <div class="col-md-3"><a href="http://ipython.org" target="_blank">IPython Project</a></div>
+      </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
 </body>
 </html>

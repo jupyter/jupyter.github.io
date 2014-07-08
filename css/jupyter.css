@@ -1,0 +1,63 @@
+#jupyter-logo {
+    font-size: 300%;
+}
+
+body {
+    font-family: "minion-pro";
+}
+
+.container {
+}
+
+div#main-title {
+    margin: 50px 0px;
+}
+
+div#main-title h1 {
+    font-size: 48px;
+}
+
+div#jupyter-logo {
+    margin: 100px 0px;
+    position: relative;
+}
+
+#jupyter-logo .icon {
+    margin: 0px 10px;
+}
+
+div#sub-title {
+    margin: 50px 0px;
+}
+
+div#sub-title h2 {
+    font-size: 28px;
+}
+
+
+div#footer {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 20px;
+}
+
+img.language-logo {
+    display: none;
+    height: 64px;
+    width: 64px;
+    position: absolute;
+    top: -5px;
+    left: 120px;
+}
+
+#moon-1:hover + #julia {
+    display: block;
+} 
+
+#moon-2:hover + #python {
+    display: block;
+} 
+
+#moon-3:hover + #r {
+    display: block;
+} 
