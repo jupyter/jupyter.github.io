@@ -10,7 +10,7 @@ body {
 }
 
 div#main-title {
-    margin: 50px 0px;
+    margin: 40px 0px;
 }
 
 div#main-title h1 {
@@ -18,7 +18,7 @@ div#main-title h1 {
 }
 
 div#jupyter-logo {
-    margin: 100px 0px;
+    margin: 60px 0px;
     position: relative;
 }
 
@@ -36,7 +36,7 @@ div#sub-title h2 {
 
 
 div#footer {
-    position: absolute;
+    position: relative;
     bottom: 0px;
     margin-bottom: 20px;
 }
