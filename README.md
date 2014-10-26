@@ -1,1 +1,1 @@
-Jupyter.org website files
+[Jupyter.org](http://jupyter.org/) website files
