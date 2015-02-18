@@ -7,9 +7,15 @@
 body {
     font-family: "proxima-nova", sans-serif;
     font-size: 18px;
+    background-color: #eee;
 }
 
 .container {
+  background-color: white;
+}
+
+#ipython-jupyter-bullets {
+  margin-bottom: 50px;
 }
 
 div#main-title {
@@ -31,7 +37,7 @@ div#jupyter-logo {
 }
 
 div#sub-title {
-    margin: 50px 0px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
