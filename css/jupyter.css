@@ -1,16 +1,26 @@
 #jupyter-logo {
-    font-size: 300%;
+    width: 400px;
+    margin: auto;
+    text-align: center;
 }
 
 body {
-    font-family: "minion-pro";
+    font-family: "proxima-nova", sans-serif;
+    font-size: 18px;
+    background-color: #eee;
 }
 
 .container {
+  background-color: white;
+}
+
+#ipython-jupyter-bullets {
+  margin-bottom: 50px;
 }
 
 div#main-title {
     margin: 40px 0px;
+    text-align: center;
 }
 
 div#main-title h1 {
@@ -27,7 +37,8 @@ div#jupyter-logo {
 }
 
 div#sub-title {
-    margin: 50px 0px;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 div#sub-title h2 {
@@ -39,6 +50,7 @@ div#footer {
     position: relative;
     bottom: 0px;
     margin-bottom: 20px;
+    font-size: 14px;
 }
 
 img.language-logo {

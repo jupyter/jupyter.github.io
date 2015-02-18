@@ -3,7 +3,7 @@
 <title>Jupyter Project</title>
 
 
-<link rel="shortcut icon" type="image/png" href="favicon.png" />
+<link rel="shortcut icon" href="favicon.ico" />
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -22,22 +22,49 @@
   <div class="container">
 
     <div id="main-title">
-      <h1 class="text-center">Project Jupyter</h1>
+      <img src="images/jupyter-sq-text.svg" alt="Jupyter" id="jupyter-logo"/>
     </div>
-
-    <div id="jupyter-logo" class="text-center">
-      <span class="icon jupyter-icon-jupiter"></span>
-      <span id="moon-1" class="icon jupyter-icon-moon"></span>
-      <img id="julia" src="images/Julia_256x256.png" class="language-logo" />
-      <span id="moon-2" class="icon jupyter-icon-moon"></span>
-      <img id="python" src="images/Python_256x256.png" class="language-logo" />
-      <span id="moon-3" class="icon jupyter-icon-moon"></span>
-      <img id="r" src="images/R_256x256.png" class="language-logo" />
-    </div>
-
-    <div id="sub-title">
+    <div class="row">
+    <div id="sub-title" class="col-md-8 col-md-offset-2">
       <h2 class="text-center">Evolved from the IPython Project</h2>
+    <h2 class="text-center">
+      The language-agnostic parts of IPython are getting a new home in Project Jupyter
+    </h2>
+    </div>
+    </div>
+    
+    <div class="row" id="ipython-jupyter-bullets">
+      <div class="col-md-3 col-md-offset-3">
+        <h2 class="text-center">IPython</h2>
+        <ul>
+          <li>Interactive Python shell</li>
+          <li>Python kernel for Jupyter</li>
+          <li>Interactive Parallel Python</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h2 class="text-center">Jupyter</h3>
+        <ul>
+          <li>Rich REPL Protocol</li>
+          <li>Notebook (format, environment, conversion)</li>
+          <li><a href="https://github.com/jupyter/jupyterhub">JupyterHub</a> (multi-user notebook server)</li>
+          <li><a href="https://github.com/jupyter">More...</a></li>
+        </ul>
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <p>
+          IPython will continue to exist as a Python kernel for Jupyter,
+          but the notebook and other language-agnostic parts of IPython
+          will move to new projects under the Jupyter name.
+          IPython 3.0 will be the last monolithic release of IPython.
+        </p>
+      </div>
+    </div>
+
+    <div id="announcement-video">
       <center>
       <iframe width="500" height="300" style="margin:20px 0px 0px"
 	      src="https://www.youtube.com/embed/JDrhn0-r9Eg?start=258&end=529"
@@ -49,20 +76,20 @@
       </h4>
     </div>
 
-    <div id="footer">
-      <div class="container">
+    <div id="footer" class="text-center">
       <hr/>
       <div class="row">
-        <div class="col-md-3">
-          <iframe src="https://ghbtns.com/github-btn.html?user=jupyter&type=follow"
-            allowtransparency="true" frameborder="0" scrolling="0" width="200" height="20"></iframe>
+        <div class="col-sm-3">
+          <!-- Place this tag where you want the button to render. -->
+          <a class="github-button" href="https://github.com/jupyter">@jupyter on GitHub</a>
         </div>
-        <div class="col-md-3">
+        <div class="col-sm-3">
           <a href="https://twitter.com/ProjectJupyter" class="twitter-follow-button" data-show-count="false">Follow @ProjectJupyter</a>
         </div>
-        <div class="col-md-3"><a href="http://colaboratory.jupyter.org" target="_blank">Jupyter coLaboratory</a></div>
-        <div class="col-md-3"><a href="http://ipython.org" target="_blank">IPython Project</a></div>
-      </div>
+        <div class="col-sm-3">
+          <a href="https://groups.google.com/jupyter" target="_blank">Jupyter Mailing List</a>
+        </div>
+        <div class="col-sm-3"><a href="http://ipython.org" target="_blank">IPython Project</a></div>
       </div>
     </div>
 
@@ -80,5 +107,6 @@
   ga('send', 'pageview');
 
 </script>
+<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>
