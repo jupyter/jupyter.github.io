@@ -50,6 +50,7 @@ div#footer {
     position: relative;
     bottom: 0px;
     margin-bottom: 20px;
+    font-size: 14px;
 }
 
 img.language-logo {
