@@ -1,9 +1,12 @@
 #jupyter-logo {
-    font-size: 300%;
+    width: 400px;
+    margin: auto;
+    text-align: center;
 }
 
 body {
-    font-family: "minion-pro";
+    font-family: "proxima-nova", sans-serif;
+    font-size: 18px;
 }
 
 .container {
@@ -11,6 +14,7 @@ body {
 
 div#main-title {
     margin: 40px 0px;
+    text-align: center;
 }
 
 div#main-title h1 {
@@ -28,6 +32,7 @@ div#jupyter-logo {
 
 div#sub-title {
     margin: 50px 0px;
+    text-align: center;
 }
 
 div#sub-title h2 {
