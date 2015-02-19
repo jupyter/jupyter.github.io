@@ -1,5 +1,7 @@
+<doctype html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Jupyter Project</title>
 
 
@@ -15,10 +17,40 @@
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<style>
+  .img-circle{
+      width:70%;
+      margin: 15%;
+  }
+
+  .img-circle {
+      -webkit-filter:grayscale(1);
+      filter:grayscale(1);
+      transition:all 0.1s;
+  }
+
+  .img-circle:hover {
+    filter:none;
+    -webkit-filter:none;
+    border: thick solid orange;
+  }
+
+  .col-sm-4 h3, .col-sm-4 h5 {
+    text-align: center;
+  }
+
+  a {
+    color: orange;
+  }
+
+  a:hover{
+    color: darkorange;
+  }
+</style>
 
 </head>
 <body>
-  
+
   <div class="container">
 
     <div id="main-title">
@@ -32,7 +64,7 @@
     </h2>
     </div>
     </div>
-    
+
     <div class="row" id="ipython-jupyter-bullets">
       <div class="col-md-3 col-md-offset-3">
         <h2 class="text-center">IPython</h2>
@@ -76,6 +108,63 @@
       </h4>
     </div>
 
+      <hr/>
+    <div id="sub-title" class="col-md-8 col-md-offset-2">
+      <h2> The team </h2>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4 col-md-offset-4">
+        <img src="images/devs/fperez.jpg" alt="..." class="img-circle">
+        <h3>Fernando Pérez</h3>
+        <h5> BDFL and Creator</h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <img src="images/devs/ellisonbg.jpg" alt="..." class="img-circle">
+        <h3> Brian Granger</h3>
+        <h5>UX Designer</h5>
+      </div>
+      <div class="col-sm-4">
+        <img src="images/devs/takluyver.jpg" alt="..." class="img-circle">
+        <h3>Thomas Kluyver</h3>
+        <h5>Python 3 Genius</h5>
+      </div>
+      <div class="col-sm-4">
+        <img src="images/devs/minrk.jpg" alt="..." class="img-circle">
+        <h3>Min RK</h3>
+        <h5>Probably Have Clones</h5>
+      </div>
+      <div class="col-sm-4">
+        <img src="images/devs/rgbkrk.jpg" alt="..." class="img-circle">
+        <h3>Kyle Kelley</h3>
+        <h5>Dev Ops</h5>
+      </div>
+      <div class="col-sm-4">
+        <img src="images/devs/jhamrick.jpg" alt="..." class="img-circle">
+        <h3>Jessica Hamrick</h3>
+        <h5>Cognitive Science</h5>
+      </div>
+      <div class="col-sm-4">
+        <img src="images/devs/carreau.jpg" alt="..." class="img-circle">
+        <h3>Matthias Bussonnier</h3>
+        <h5>Biophysics</h5>
+      </div>
+      <div class="col-sm-4">
+        <img src="images/devs/bollwyvl.jpg" alt="..." class="img-circle">
+        <h3>NIcholas Bollweg</h3>
+        <h5>....</h5>
+      </div>
+      <div class="col-sm-4">
+        <img src="images/devs/jdfreder.jpg" alt="..." class="img-circle">
+        <h3>Jonathan Frederic</h3>
+        <h5>Javascript Expert</h5>
+      </div>
+    </div>
+
+
+
     <div id="footer" class="text-center">
       <hr/>
       <div class="row">
@@ -92,7 +181,6 @@
         <div class="col-sm-3"><a href="http://ipython.org" target="_blank">IPython Project</a></div>
       </div>
     </div>
-
 
 
   </div>
