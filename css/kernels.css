@@ -1,6 +1,9 @@
-body {
-  background-color: #fff;
+.container{
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: solid 1px #eee;
 }
+
 .kernel .version {
   margin-left: 10px;
   font-size: 80%;

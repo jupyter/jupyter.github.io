@@ -3,9 +3,16 @@
     _context = {};
     _features = {},
     _languages = {},
-    _kernels = {};
+    _kernels = {},
+    _search = "";
 
   d3.json("./kernels.json", kernelsLoaded);
+
+  var searchKernels = d3.select(".search-kernels")
+    .on("input", function(){
+      _search = searchKernels.property("value");
+      update();
+    });
 
 
   function kernelsLoaded(err, data){
@@ -18,9 +25,8 @@
     update();
   }
 
+
   function updateFeatures(selector){
-
-
     var features = selector.append("div")
       .classed({"feature-container": 1})
       .append("div")
@@ -32,9 +38,10 @@
     features.selectAll(".feature")
       .data(function(d){
         return d3.entries(d.value.features);
-      })
+      }, function(d){ return d.key; })
       .call(updateFeature);
   }
+
 
   function updateFeature(selection){
     selection
@@ -55,116 +62,146 @@
       .classed({fa: 1, "fa-fw": 1, "fa-2x": 1});
   }
 
+
   function update(){
     d3.select(".features")
       .selectAll(".feature")
       .data(d3.entries(_features))
       .call(updateFeature)
       .classed({"col-md-3": 1})
+      .selectAll("label")
+      .data(function(d){ return [d]; })
+      .enter()
       .append("label")
       .text(function(d){ return d.value.name; });
 
-    var sortedKernels = d3.entries(_kernels)
+    var kernelData = d3.entries(_kernels)
+      .filter(filterKernels())
       .sort(function(a, b){
         return d3.descending(
           Object.keys(a.value.features || {}).length,
           Object.keys(b.value.features || {}).length
         ) || d3.ascending(a.key, b.key);
       });
-    d3.select(".kernels")
+
+    var kernel = d3.select(".kernels")
       .classed({row: 1})
       .selectAll(".kernel")
-      .data(sortedKernels)
-      .call(function(kernel){
-        kernel = kernel.enter()
-          .append("div")
-          .classed({kernel: 1, "col-md-4": 1});
+      .data(kernelData, function(d){ return d.key; });
 
-        var panel = kernel.append("div")
-            .classed({panel: 1, "panel-default": 1});
+    kernel.exit().remove();
 
-        var body = panel.append("div")
-            .classed({"panel-body": 1});
+    kernel.enter()
+      .append("div")
+      .classed({kernel: 1, "col-md-4": 1})
+      .call(updateKernel);
 
-        var title = body.append("h2")
-          .classed({title: 1});
+    kernel.order();
+  }
 
-        title.append("img")
-          .classed({"pull-right": 1})
-          .attr("src", function(d){
-            return d.value.logo;
+  function filterKernels(){
+    var searchBits = _search.toLowerCase().split(" ");
+
+    return function(d){
+      if(!_search){
+        return true;
+      }
+      return searchBits.reduce(function(hit, bit){
+        return hit +
+          (d.value.name.toLowerCase().indexOf(bit) !== -1) +
+          ((d.value.description || "").toLowerCase().indexOf(bit) !== -1) +
+          (searchLanguages(bit, d.value.languages));
+      }, 0);
+    }
+  }
+
+  function searchLanguages(q, languages){
+    return d3.entries(languages).reduce(function(hit, d){
+      return hit + (_languages[d.key].name.toLowerCase().indexOf(q) !== -1)
+    }, 0);
+  }
+
+  function updateKernel(kernel){
+    var panel = kernel.append("div")
+        .classed({panel: 1, "panel-default": 1});
+
+    var body = panel.append("div")
+        .classed({"panel-body": 1});
+
+    var title = body.append("h2")
+      .classed({title: 1});
+
+    title.append("img")
+      .classed({"pull-right": 1})
+      .attr("src", function(d){
+        return d.value.logo;
+      });
+
+    title.append("a")
+      .text(function(d){ return d.value.name; })
+      .attr({href: function(d){ return d.value.url; }});
+
+    title.append("span")
+      .classed({version: 1, "text-muted": 1, "text-sm": 1})
+      .text(function(d){ return d.value.version; });
+
+    var lang = body.append("div")
+      .selectAll(".language")
+      .data(function(d){ return d3.entries(d.value.languages); })
+      .enter()
+      .append("div")
+      .classed({language: 1});
+
+    lang.append("a")
+      .text(function(d){
+        return _languages[d.key].name;
+      })
+      .attr({href: function(d){ return  _languages[d.key].url; }})
+
+    lang.selectAll("label")
+      .data(function(d){ return d.value.versions; })
+      .enter()
+      .append("label")
+      .classed({label: 1, "label-info": 1})
+      .text(String);
+
+    updateFeatures(body);
+
+    body.append("p")
+      .text(function(d){ return d.value.description; });
+
+    var footer = panel.append("div")
+      .classed({"panel-footer": 1})
+      .append("div")
+      .classed({"btn-group": 1, "btn-group-justified": 1});
+
+    var action = footer.selectAll(".action")
+      .data(function(kernel){
+        return d3.entries(kernel.value.actions || {})
+          .map(function(action){
+            return {action: _actions[action.key], value: action.value};
           });
+      })
+      .enter()
+      .append("a")
+      .classed({btn: 1})
+      .attr({
+        href: function(d){ return expandUri(d.value); },
+        title: function(d){ return d.action.name; }
+      });
 
+    action.filter(function(d){ return d.action.icon; })
+      .append("i")
+      .attr("class", function(d){
+        return d.action.icon.replace(":", "-");
+      })
+      .classed({fa: 1, "fa-2x": 1});
 
-        title.append("a")
-          .text(function(d){ return d.value.name; })
-          .attr({href: function(d){ return d.value.url; }});
-
-        title.append("span")
-          .classed({version: 1, "text-muted": 1, "text-sm": 1})
-          .text(function(d){ return d.value.version; });
-
-
-        var lang = body.append("div")
-          .selectAll(".language")
-          .data(function(d){ return d3.entries(d.value.languages); })
-          .enter()
-          .append("div")
-          .classed({language: 1});
-
-        lang.append("a")
-          .text(function(d){
-            return _languages[d.key].name;
-          })
-          .attr({href: function(d){ return  _languages[d.key].url; }})
-
-        lang.selectAll("label")
-          .data(function(d){ return d.value.versions; })
-          .enter()
-          .append("label")
-          .classed({label: 1, "label-info": 1})
-          .text(String);
-
-        updateFeatures(body);
-
-
-        body.append("p")
-          .text(function(d){ return d.value.description; });
-
-
-        var footer = panel.append("div")
-          .classed({"panel-footer": 1})
-          .append("div")
-          .classed({"btn-group": 1, "btn-group-justified": 1});
-
-        var action = footer.selectAll(".action")
-          .data(function(kernel){
-            return d3.entries(kernel.value.actions || {})
-              .map(function(action){
-                return {action: _actions[action.key], value: action.value};
-              });
-          })
-          .enter()
-          .append("a")
-          .classed({btn: 1})
-          .attr({
-            href: function(d){ return expandUri(d.value); },
-            title: function(d){ return d.action.name; }
-          });
-
-        action.filter(function(d){ return d.action.icon; })
-          .append("i")
-          .attr("class", function(d){
-            return d.action.icon.replace(":", "-");
-          })
-          .classed({fa: 1, "fa-2x": 1});
-
-        action.filter(function(d){ return d.action.image; })
-          .append("img")
-          .attr({
-            src: function(d){ return d.action.image; },
-            width: 40
-          });
+    action.filter(function(d){ return d.action.image; })
+      .append("img")
+      .attr({
+        src: function(d){ return d.action.image; },
+        width: 40
       });
   }
 
