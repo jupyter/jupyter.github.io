@@ -17,13 +17,16 @@
 
 <body>
   <div class="container">
-    <div class="row">
       <a href="../" class="pull-right">
         <img src="../images/jupyter-sq-text.svg" width="100"></a>
       </a>
-      <h1>Kernels</h1>
-      <p>Jupyter Kernels provide a productive computing in a number of languages.</p>
-    </div>
+  </div>
+
+  <div class="container">
+    <h1>Kernels</h1>
+    <p>
+      Jupyter Kernels provide a productive computing in a number of languages.
+    </p>
   </div>
 
   <div class="jumbotron">
@@ -54,7 +57,7 @@
           <img src="../images/zmq.gif" class="logo">
         </a>
         </h3>
-        <p>Jupyter uses ØMQ for high-performance communication between clients and the kernel. If your language can be called from Python, there are some shortcuts!</p>
+        <p>Jupyter uses <a href="http://zeromq.org/">ØMQ</a> for high-performance communication between clients and the kernel. If your language can be called from Python, there are some shortcuts!</p>
       </div>
       <div class="col-md-3">
         <h3>
@@ -77,11 +80,13 @@
 
       <div class="col-md-3">
         <h3>
-          <p><i class="fa fa-star text-primary"></i> Implement Docker</p>
+          <a href="https://github.com/jupyter/docker-demo-images/blob/master/Dockerfile">
+          <p><i class="fa fa-star text-primary"></i> Extend Docker Demo</p>
           <img src="../images/docker.png" class="logo">
+          </a>
         </h3>
         <p>
-          Extend the <a href="https://github.com/jupyter/docker-demo-images/blob/master/Dockerfile">Jupyter Demo Dockerfile</a> to make your kernel instantly available on <a href="http://try.jupyter.org">try.jupyter.org</a>.
+          Extend the Jupyter Demo Dockerfile to make your kernel instantly available on <a href="http://try.jupyter.org">try.jupyter.org</a>.
         </p>
       </div>
     </div>
