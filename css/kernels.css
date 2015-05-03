@@ -1,0 +1,38 @@
+body {
+  background-color: #fff;
+}
+.kernel .version {
+  margin-left: 10px;
+  font-size: 80%;
+}
+
+.features .feature{
+  text-align: left;
+}
+
+.kernel .features {
+  margin: -8px -8px 0 0;
+  text-align: justify;
+}
+.kernel .features .btn:first-child {
+  padding-left: 0;
+}
+
+.kernel .panel-footer{
+  padding: 0;
+}
+
+.kernel .panel-title {
+  font-size: 24px;
+  background-repeat: no-repeat;
+  background-position: top right;
+  height: 64px;
+}
+
+.container-white {
+  background-color: #fff;
+}
+
+.kernel .feature-container {
+  padding: 10px 0 0 0;
+}

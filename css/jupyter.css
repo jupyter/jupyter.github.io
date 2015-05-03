@@ -10,7 +10,7 @@ body {
     background-color: #eee;
 }
 
-.container {
+.container-white {
   background-color: white;
 }
 
@@ -64,12 +64,12 @@ img.language-logo {
 
 #moon-1:hover + #julia {
     display: block;
-} 
+}
 
 #moon-2:hover + #python {
     display: block;
-} 
+}
 
 #moon-3:hover + #r {
     display: block;
-} 
+}

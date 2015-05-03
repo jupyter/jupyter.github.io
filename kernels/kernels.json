@@ -1,0 +1,139 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+
+    "name": "rdfs:label",
+    "description": "rdfs:description",
+
+    "jupy": "http://jupyter.org/",
+    "kern": "jupy:kernels/",
+    "feat": "kern:kernels/features/",
+
+    "features": {
+      "@id": "kern:#feature",
+      "@container": "@index",
+      "@type": "@id"
+    },
+
+    "kernels": {
+      "@id": "kern:#kernel",
+      "@container": "@index",
+      "@type": "@id"
+    },
+
+    "act": "jupy:action/",
+    "actions": {
+      "@id": "act#action",
+      "@container": "@index",
+      "@type": "@id"
+    },
+
+    "fa": "http://fortawesome.github.io/Font-Awesome/icons/",
+    "icon": "fa:#icon",
+
+    "gh": "https://github.com/",
+    "docker": "https://registry.hub.docker.com/u/",
+    "try": "http://try.jupyter.org/new_kernel=",
+
+    "twbs": "http://getbootstrap.com/css/",
+    "twbs-context": "twbs:#helper-classes-colors/"
+  },
+  "kernels": {
+    "kern:ipython": {
+      "@id": "kern:ipython",
+      "name": "IPython",
+      "version": "3.0",
+      "logo": "python/logo-64x64.png",
+      "description": "The original Jupyter Kernel, IPython provides Python, a general purpose programming language.",
+      "features": {
+        "feat:magic": "twbs-context:primary",
+        "feat:widgets": "twbs-context:primary",
+        "feat:docs": "twbs-context:success",
+        "feat:autocomplete": "twbs-context:primary",
+        "feat:parallel": "twbs-context:primary"
+      },
+      "actions": {
+        "act:github": "gh:ipython/ipython",
+        "act:try": "try:IPython",
+        "act:docker": "docker:ipython/notebook"
+      }
+    },
+    "kern:ijulia": {
+      "@id": "kern:ijulia",
+      "name": "IJulia",
+      "version": "0.4",
+      "logo": "https://cdn.rawgit.com/JuliaLang/IJulia.jl/master/deps/logo-64x64.png",
+      "description": "IJulia is a Julia-language backend combined with the IPython interactive environment (soon to be called Jupyter). This combination allows you to interact with the Julia language using Jupyter/IPython's powerful graphical notebook, which combines code, formatted text, math, and multimedia in a single document.",
+      "features": {
+        "feat:magic": "twbs-context:warn",
+        "feat:widgets": "twbs-context:danger",
+        "feat:docs": "twbs-context:success",
+        "feat:autocomplete": "twbs-context:success"
+      },
+      "actions": {
+        "act:github": "gh:JuliaLang/IJulia.jl",
+        "act:try": "try:IJulia"
+      }
+    },
+    "kern:irkernel": {
+      "@id": "kern:irkernel",
+      "name": "IRKernel",
+      "version": "0.4",
+      "logo": "https://cdn.rawgit.com/IRkernel/IRkernel/master/inst/kernelspec/logo-64x64.png",
+      "description": "This is still experimental. Your code should be safe, since IPython handles saving and loading notebooks in another process, but you'll lose all your variables if it crashes.",
+      "features": {
+        "feat:magic": "twbs-context:warning",
+        "feat:autocomplete": "twbs-context:warning"
+      },
+      "actions": {
+        "act:docker": "docker:adrianliaw/jupyter-irkernel",
+        "act:try": "try:ir"
+      }
+    }
+  },
+  "features": {
+    "feat:magic": {
+      "@id": "feat:magic",
+      "name": "Magic",
+      "icon": "fa:magic"
+    },
+    "feat:widgets": {
+      "@id": "feat:widgets",
+      "name": "Interative Widgets",
+      "icon": "fa:dashboard"
+    },
+    "feat:docs": {
+      "@id": "feat:docs",
+      "name": "In-Notebook Documentation",
+      "icon": "fa:bookmark"
+    },
+    "feat:autocomplete": {
+      "@id": "feat:autocomplete",
+      "name": "Autocomplete",
+      "icon": "fa:flash"
+    },
+    "feat:parallel": {
+      "@id": "feat:parallel",
+      "name": "Parallel Computing",
+      "icon": "fa:cloud"
+    }
+  },
+  "actions": {
+    "act:try": {
+      "@id": "act:try",
+      "icon": "fa:book",
+      "name": "Try on try.jupyter.org"
+    },
+    "act:docker": {
+      "@id": "act:docker",
+      "image": "../images/docker.png",
+      "name": "Download Containerized Kernel"
+    },
+    "act:github": {
+      "@id": "act:github",
+      "icon": "fa:github",
+      "name": "Contribute on GitHub"
+    }
+  }
+}
