@@ -1,0 +1,3 @@
+[submodule "bower_components"]
+	path = bower_components
+	url = https://github.com/bollwyvl/jupyter.github.io.git
