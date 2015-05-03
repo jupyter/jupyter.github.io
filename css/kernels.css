@@ -36,3 +36,12 @@ body {
 .kernel .feature-container {
   padding: 10px 0 0 0;
 }
+
+.steps {
+  text-align: center;
+}
+
+.steps .logo{
+  max-width: 100px;
+  max-height: 100px;
+}

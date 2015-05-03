@@ -5,12 +5,10 @@
   <meta charset="UTF-8">
   <title>Jupyter Project</title>
 
+  <link rel="shortcut icon" href="../favicon.ico">
 
-  <link rel="shortcut icon" href="../favicon.ico" />
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-
-
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
   <link href="../jupyter_font/styles.css" rel="stylesheet">
   <link href="../css/jupyter.css" rel="stylesheet">
@@ -18,22 +16,75 @@
 </head>
 
 <body>
-  <div class="jumbotron">
-    <div class="container">
-      <div class="row">
-        <h1> <img src="../images/jupyter-sq-text.svg" width="100"><span>Kernels</span></h1>
-        <p>Jupyter Kernels provide a productive computing in a number of languages. In addition to the basic command line and Notebook-based experiences, some kernels provide additional interactivity features:</p>
-        <div class="features"></div>
-      </div>
+  <div class="container">
+    <div class="row">
+      <h1> <img src="../images/jupyter-sq-text.svg" width="100"><span>Kernels</span></h1>
+      <p>Jupyter Kernels provide a productive computing in a number of languages.</p>
     </div>
   </div>
+
+  <div class="jumbotron">
+    <div class="container">
+      <p>
+        In addition to the basic command line and Notebook experiences, kernels can implement additional interactivity features:
+      </p>
+      <div class="features"></div>
+    </div>
+  </div>
+
   <div class="container">
     <div class="kernels"></div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <div class="jumbotron">
+    <div class="container">
+      <h2>Your Kernel Here...</h2>
+      <p>Writing a Jupyter Kernel for your language can be a great way to add a powerful REPL and interactivity for your users, and reach a broader audience.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row steps">
+      <div class="col-md-3">
+        <h4><a href="http://ipython.org/ipython-doc/dev/development/kernels.html">
+          <p>Implement the Spec</p>
+          <img src="../images/zmq.gif" class="logo">
+        </a>
+        </h4>
+        <p>Jupyter uses ØMQ for high-performance communication between clients and the kernel. If your language can be called from Python, there are some shortcuts!</p>
+      </div>
+      <div class="col-md-3">
+        <h4>
+          <p>Publish on Github</p>
+          <img src="../images/github.png" class="logo">
+        </h4>
+        <p>Or wherever else you like!</p>
+      </div>
+      <div class="col-md-3">
+        <a href="">
+          <h4><a href="https://github.com/jupyter/jupyter.github.io/compare">
+            <p>Fork &amp; Pull Request</p>
+            <i class="fa fa-code-fork fa-5x"></i>
+          </a></h4>
+
+        <p>This site is open source! Fork it and make a pull request to get your new Kernel, example notebooks and logo added.</p>
+      </div>
+
+      <div class="col-md-3">
+        <h4>
+          <label class="label label-success">BONUS</label> Implement Docker
+          <img src="../images/docker.png" class="logo">
+        </h4>
+        <p>
+          Extend the <a href="https://github.com/jupyter/docker-demo-images/blob/master/Dockerfile">Jupyter Demo Dockerfile</a> to make your kernel instantly available on <a href="http://try.jupyter.org">try.jupyter.org</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../bower_components/d3/d3.min.js"></script>
   <script src="../scripts/kernels.js"></script>
 
   <script type="text/javascript" src="https://use.typekit.net/kpd5yrh.js"></script>

@@ -49,7 +49,7 @@
         },
         title: function(d){ return _features[d.key].name; }
         })
-      .classed({fa: 1, "fa-fw": 1});
+      .classed({fa: 1, "fa-fw": 1, "fa-2x": 1});
   }
 
   function update(){
@@ -61,11 +61,17 @@
       .append("label")
       .text(function(d){ return d.value.name; });
 
-
+    var sortedKernels = d3.entries(_kernels)
+      .sort(function(a, b){
+        return d3.descending(
+          Object.keys(a.value.features || {}).length,
+          Object.keys(b.value.features || {}).length
+        ) || d3.ascending(a.key, b.key);
+      });
     d3.select(".kernels")
       .classed({row: 1})
       .selectAll(".kernel")
-      .data(d3.entries(_kernels))
+      .data(sortedKernels)
       .call(function(kernel){
         kernel = kernel.enter()
           .append("div")
