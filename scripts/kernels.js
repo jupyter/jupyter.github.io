@@ -83,7 +83,8 @@
         var body = panel.append("div")
             .classed({"panel-body": 1});
 
-        var title = body.append("h2");
+        var title = body.append("h2")
+          .classed({title: 1});
 
         title.append("img")
           .classed({"pull-right": 1})
