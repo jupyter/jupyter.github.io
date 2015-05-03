@@ -96,8 +96,9 @@
           });
 
 
-        title.append("span")
-          .text(function(d){ return d.value.name; });
+        title.append("a")
+          .text(function(d){ return d.value.name; })
+          .attr({href: function(d){ return d.value.url; }});
 
         title.append("span")
           .classed({version: 1, "text-muted": 1, "text-sm": 1})
