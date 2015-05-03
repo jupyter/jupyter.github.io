@@ -1,17 +1,20 @@
 ;(function(d3){
-  var _kernels = {},
-    _features = {},
-    _actions = {},
+  var _actions = {},
     _context = {};
+    _features = {},
+    _languages = {},
+    _kernels = {};
 
   d3.json("./kernels.json", kernelsLoaded);
 
 
   function kernelsLoaded(err, data){
-    _kernels = data.kernels;
-    _features = data.features;
     _actions = data.actions;
     _context = data["@context"];
+    _features = data.features;
+    _kernels = data.kernels;
+    _languages = data.languages;
+
     update();
   }
 
@@ -100,7 +103,28 @@
           .classed({version: 1, "text-muted": 1, "text-sm": 1})
           .text(function(d){ return d.value.version; });
 
-        updateFeatures(title);
+
+        var lang = body.append("div")
+          .selectAll(".language")
+          .data(function(d){ return d3.entries(d.value.languages); })
+          .enter()
+          .append("div")
+          .classed({language: 1});
+
+        lang.append("a")
+          .text(function(d){
+            return _languages[d.key].name;
+          })
+          .attr({href: function(d){ return  _languages[d.key].url; }})
+
+        lang.selectAll("label")
+          .data(function(d){ return d.value.versions; })
+          .enter()
+          .append("label")
+          .classed({label: 1, "label-info": 1})
+          .text(String);
+
+        updateFeatures(body);
 
 
         body.append("p")

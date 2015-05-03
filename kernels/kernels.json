@@ -24,6 +24,12 @@
       "@id": "kern:#kernel",
       "@type": "@id"
     },
+    "lang": "jupy:Language/",
+    "languages": {
+      "@container": "@index",
+      "@id": "lang:#language",
+      "@type": "@id"
+    },
     "name": "rdfs:label",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
@@ -174,6 +180,11 @@
         "feat:magic": "twbs-context:warn",
         "feat:widgets": "twbs-context:danger"
       },
+      "languages": {
+        "lang:julia": {
+          "versions": ["0.3.8"]
+        }
+      },
       "logo": "https://cdn.rawgit.com/JuliaLang/IJulia.jl/master/deps/logo-64x64.png",
       "name": "IJulia",
       "url": "http://nbviewer.ipython.org/url/jdj.mit.edu/~stevenj/IJulia%20Preview.ipynb",
@@ -224,6 +235,11 @@
         "feat:parallel": "twbs-context:primary",
         "feat:widgets": "twbs-context:primary"
       },
+      "languages": {
+        "lang:python": {
+          "versions": ["2.7", "3.3", "3.4"]
+        }
+      },
       "logo": "python/logo-64x64.png",
       "name": "IPython",
       "version": "3.0",
@@ -239,6 +255,11 @@
       "features": {
         "feat:autocomplete": "twbs-context:warning",
         "feat:magic": "twbs-context:warning"
+      },
+      "languages": {
+        "lang:r": {
+          "versions": ["3.2.0", "3.1.3"]
+        }
       },
       "logo": "https://cdn.rawgit.com/IRkernel/IRkernel/master/inst/kernelspec/logo-64x64.png",
       "name": "IRKernel",
@@ -319,6 +340,23 @@
       "@id": "kern:spark-kernel",
       "name": "Spark Kernel",
       "url": "https://github.com/ibm-et/spark-kernel"
+    }
+  },
+  "languages": {
+    "lang:python": {
+      "@id": "lang:python",
+      "name": "Python",
+      "url": "http://python.org"
+    },
+    "lang:julia": {
+      "@id": "lang:julia",
+      "name": "Julia",
+      "url": "http://julialang.org/"
+    },
+    "lang:r": {
+      "@id": "lang:r",
+      "name": "R",
+      "url": "http://www.r-project.org/"
     }
   }
 }
