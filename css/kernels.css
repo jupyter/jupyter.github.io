@@ -4,6 +4,19 @@
   border-bottom: solid 1px #eee;
 }
 
+.search-icon {
+  position: absolute;
+  margin: 8px 0 0 5px;
+}
+
+.search-kernels{
+  text-indent: 20px;
+}
+
+.kernel-sorts i{
+  margin-right: 5px;
+}
+
 .kernel .version {
   margin-left: 10px;
   font-size: 80%;

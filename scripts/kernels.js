@@ -4,16 +4,82 @@
     _features = {},
     _languages = {},
     _kernels = {},
-    _search = "";
+    _search = "",
+    _sorts = {
+      features: {
+        name: "Features",
+        get: function(k){ return d3.keys(k.features).length; }
+      },
+      name: {
+        name: "Name",
+        get: function(k){ return k.name.toLowerCase(); }
+      },
+      language: {
+        name: "Language",
+        get: function(k){
+          return (d3.entries(k.languages || {"lang:zzz": 1}))[0].key;
+        }
+      },
+      // TODO: decide how to get date...
+      updated: {
+        name: "Updated",
+        get: function(k){
+          console.warn("Sort by Updated not yet supported");
+          return k.name;
+        }
+      }
+    },
+    _sort = _sorts.features,
+    _sortDir = "descending";
+
 
   d3.json("./kernels.json", kernelsLoaded);
 
-  var searchKernels = d3.select(".search-kernels")
-    .on("input", function(){
-      _search = searchKernels.property("value");
-      update();
+  updateUI();
+
+
+  function updateUI(){
+    var searchKernels = d3.select(".search-kernels")
+      .on("input", function(){
+        _search = searchKernels.property("value");
+        update();
+      });
+
+    var sort = d3.select(".kernel-sorts")
+      .classed({"btn-group": 1})
+      .selectAll("button")
+      .data(d3.entries(_sorts));
+
+    sort.enter()
+      .append("button")
+      .classed({btn: 1, "btn-default": 1})
+      .call(function(sort){
+        sort.append("i").classed({fa: 1});
+        sort.append("span").text(function(d){ return d.value.name; })
+
+        sort.on("click", function(d){
+          if(_sort === d.value){
+            _sortDir = _sortDir === "ascending" ? "descending": "ascending";
+          }
+
+          _sort = d.value;
+
+          updateUI();
+          update();
+        })
     });
 
+    sort.classed({"btn-primary": function(d){ return d.value === _sort; }})
+      .select("i")
+      .classed({
+        "fa-sort-asc": function(d){
+          return d.value === _sort && _sortDir === "ascending";
+        },
+        "fa-sort-desc": function(d){
+          return d.value === _sort && _sortDir === "descending";
+        }
+      })
+  }
 
   function kernelsLoaded(err, data){
     _actions = data.actions;
@@ -62,6 +128,11 @@
       .classed({fa: 1, "fa-fw": 1, "fa-2x": 1});
   }
 
+  function sortKernels(a, b){
+    return d3[_sortDir](_sort.get(a.value), _sort.get(b.value)) ||
+      // default sort
+      d3.ascending(_sorts.name.get(a.value), _sorts.name.get(b.value));
+  }
 
   function update(){
     d3.select(".features")
@@ -77,12 +148,7 @@
 
     var kernelData = d3.entries(_kernels)
       .filter(filterKernels())
-      .sort(function(a, b){
-        return d3.descending(
-          Object.keys(a.value.features || {}).length,
-          Object.keys(b.value.features || {}).length
-        ) || d3.ascending(a.key, b.key);
-      });
+      .sort(sortKernels);
 
     var kernel = d3.select(".kernels")
       .classed({row: 1})

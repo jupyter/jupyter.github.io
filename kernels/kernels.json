@@ -87,11 +87,6 @@
       "name": "Bash",
       "url": "https://github.com/takluyver/bash_kernel"
     },
-    "kern:ibrainfuck": {
-      "@id": "kern:ibrainfuck",
-      "name": "IBrainfuck",
-      "url": "https://github.com/robbielynch/ibrainfuck"
-    },
     "kern:brython-kernel": {
       "@id": "kern:brython-kernel",
       "name": "Brython Kernel",
