@@ -4,6 +4,10 @@
   text-align: justify;
 }
 
+.tooltip-inner {
+  white-space:pre-wrap;
+}
+
 .search-icon {
   position: absolute;
   margin: 8px 0 0 5px;

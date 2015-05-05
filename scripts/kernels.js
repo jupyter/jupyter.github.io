@@ -101,11 +101,11 @@
         "btn-group-sm": 1
       });
 
-    features.selectAll(".feature")
-      .data(function(d){
-        return d3.entries(d.value.features);
-      }, function(d){ return d.key; })
+    var feature = features.selectAll(".feature")
+      .data(function(d){ return d.value.features || []; })
       .call(updateFeature);
+
+    return feature;
   }
 
 
@@ -117,15 +117,13 @@
       .append("i")
       .attr({
         "class": function(d){
-          var cls = [_features[d.key].icon.replace(":", "-")];
-          if($.type(d.value) === "string"){
-            cls.push("text-" + d.value.split(":")[1]);
-          }
-          return cls.join(" ");
+          return _features[d.key || d].icon.replace(":", "-");
         },
-        title: function(d){ return _features[d.key].name; }
+        title: function(d){ return _features[d.key || d].name; }
         })
-      .classed({fa: 1, "fa-fw": 1, "fa-2x": 1});
+      .classed({fa: 1, "fa-fw": 1, "fa-2x": 1})
+      .attr({title: function(d){ return _features[d.key || d].description; }})
+      .each(function(){ $(this).tooltip(); });
   }
 
   function sortKernels(a, b){
@@ -139,9 +137,16 @@
       .selectAll(".feature")
       .data(d3.entries(_features))
       .call(updateFeature)
-      .classed({"col-md-3": 1})
-      .attr({title: function(d){ return d.value.description; }})
-      .each(function(){ $(this).tooltip(); })
+      .classed({
+        "col-md-3": 1,
+        "text-primary": function(d){ return d.value.filtered; },
+        "text-muted": function(d){ return !d.value.filtered; }
+      })
+      .on("click", function(d){
+        d.value.filtered = !d.value.filtered;
+        updateUI();
+        update();
+      })
       .selectAll("p")
       .data(function(d){ return [d]; })
       .enter()
@@ -168,18 +173,29 @@
   }
 
   function filterKernels(){
-    var searchBits = _search.toLowerCase().split(" ");
+    var searchBits = _search.toLowerCase().split(" "),
+      features = d3.entries(_features)
+        .filter(function(d){ return d.value.filtered; })
+        .map(function(d){ return d.key; }),
+      featureHit,
+      searchHit;
 
     return function(d){
-      if(!_search){
-        return true;
-      }
-      return searchBits.reduce(function(hit, bit){
-        return hit +
-          (d.value.name.toLowerCase().indexOf(bit) !== -1) +
-          ((d.value.description || "").toLowerCase().indexOf(bit) !== -1) +
-          (searchLanguages(bit, d.value.languages));
-      }, 0);
+      var featureHit = !features.length || features.reduce(
+        function(hit, feature){
+          return hit && (d.value.features || []).indexOf(feature) !== -1;
+        }, 1);
+
+      var searchHit = !searchBits.lenght || searchBits.reduce(
+        function(hit, bit){
+          return hit +
+            (d.value.name.toLowerCase().indexOf(bit) !== -1) +
+            ((d.value.description || "").toLowerCase().indexOf(bit) !== -1) +
+            (searchLanguages(bit, d.value.languages));
+        }, 0);
+
+      console.log(d.key, searchHit, featureHit);
+      return searchHit && featureHit;
     }
   }
 
@@ -233,10 +249,11 @@
       .classed({label: 1, "label-info": 1})
       .text(String);
 
-    updateFeatures(body);
-
     body.append("p")
       .text(function(d){ return d.value.description; });
+
+    updateFeatures(body)
+      .classed({"text-muted": 1});
 
     var footer = panel.append("div")
       .classed({"panel-footer": 1})
