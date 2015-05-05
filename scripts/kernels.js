@@ -46,13 +46,14 @@
       });
 
     var sort = d3.select(".kernel-sorts")
-      .classed({"btn-group": 1})
-      .selectAll("button")
+      .classed({"btn-group": 1, "btn-group-justified": 1})
+      .attr({role: "group"})
+      .selectAll("a")
       .data(d3.entries(_sorts));
 
     sort.enter()
-      .append("button")
-      .classed({btn: 1, "btn-default": 1})
+      .append("a")
+      .classed({btn: 1})
       .call(function(sort){
         sort.append("i").classed({fa: 1});
         sort.append("span").text(function(d){ return d.value.name; })
@@ -69,8 +70,7 @@
         })
     });
 
-    sort.classed({"btn-primary": function(d){ return d.value === _sort; }})
-      .select("i")
+    sort.select("i")
       .classed({
         "fa-sort-asc": function(d){
           return d.value === _sort && _sortDir === "ascending";
@@ -140,10 +140,12 @@
       .data(d3.entries(_features))
       .call(updateFeature)
       .classed({"col-md-3": 1})
-      .selectAll("label")
+      .attr({title: function(d){ return d.value.description; }})
+      .each(function(){ $(this).tooltip(); })
+      .selectAll("p")
       .data(function(d){ return [d]; })
       .enter()
-      .append("label")
+      .append("p")
       .text(function(d){ return d.value.name; });
 
     var kernelData = d3.entries(_kernels)

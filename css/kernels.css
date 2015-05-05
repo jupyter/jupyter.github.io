@@ -1,7 +1,7 @@
 .container{
   padding-top: 1em;
   padding-bottom: 1em;
-  border-bottom: solid 1px #eee;
+  text-align: justify;
 }
 
 .search-icon {
@@ -22,8 +22,12 @@
   font-size: 80%;
 }
 
+.container > .features {
+  margin-top: .5em;
+}
+
 .features .feature{
-  text-align: left;
+  text-align: center;
 }
 
 .kernel .title {
@@ -52,6 +56,9 @@
 }
 
 .steps {
+  text-align: justify;
+}
+.steps h3 {
   text-align: center;
 }
 

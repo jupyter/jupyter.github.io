@@ -22,71 +22,81 @@
       </a>
     <h1>Kernels</h1>
     <p>
-      Jupyter Kernels provide a productive computing in a number of languages.
-      <a href="#your-kernel-here">Don't see your kernel here?</a>
+      Jupyter Kernels provide a productive computing in a number of languages.   <a href="#your-kernel-here">Don't see your language here?</a>
     </p>
-  </div>
-
-  <div class="container">
-    <p>
-      In addition to the basic command line and Notebook experiences, kernels can implement additional interactivity features:
-    </p>
-    <div class="features"></div>
   </div>
 
   <div class="container">
     <div class="row">
-      <div class="form-group col-md-7">
+      <div class="col-md-8">
         <i class="fa fa-fw fa-search pull-left search-icon text-muted"></i>
         <input type="text" class="form-control search-kernels"
           placeholder="Search kernel titles, descriptions &amp; languages">
       </div>
-      <div class="form-group col-md-5">
-        <label><i class="fa fa-fw fa-sort-alpha-asc text-muted"></i></label>
+      <div class="col-md-4">
         <div class="kernel-sorts"></div>
       </div>
     </div>
+
+    <div class="features"></div>
     <div class="kernels"></div>
   </div>
 
   <div class="container">
     <a name="your-kernel-here"></a>
     <h2>Your Kernel Here...</h2>
-    <p>Writing a Jupyter Kernel for your language can be a great way to add a powerful REPL and interactivity for your users, and reach a broader audience.</p>
+    <p>
+      Writing a Jupyter Kernel for your language or environment adds a powerful REPL and interactivity for your users.
+    </p>
 
     <div class="row steps">
       <div class="col-md-4">
-        <h3><a href="http://ipython.org/ipython-doc/dev/development/kernels.html">
-          <p>Implement the Spec</p>
-          <img src="../images/zmq.gif" class="logo">
+        <h3>
+          <a href="http://ipython.org/ipython-doc/dev/development/wrapperkernels.html">
+          <p>Wrap your Language</p>
+          <i class="fa fa-gift fa-5x"></i>
         </a>
         </h3>
         <p>
-          Jupyter uses <a href="http://zeromq.org/">ØMQ</a> for high-performance communication between clients and the kernel. Test your kernel with <a href="https://github.com/ipython/ipython/wiki/Dev:-Testing-kernels-against-message-specification">kerneltest</a>.
+            Much of the Jupyter machinery is written in Python: if your language can be called from Python, you can <a href="http://ipython.org/ipython-doc/dev/development/wrapperkernels.html">take advantage</a> of existing work to create your kernel.
+        </p>
+
+        <div class="text-center text-muted">
+          or
+        </div>
+
+        <h3><a href="http://ipython.org/ipython-doc/dev/development/kernels.html">
+          <p>Implement the Spec</p>
+          <p><i class="fa fa-exchange fa-5x"></i></p>
+        </a>
+        </h3>
+        <p>
+          Jupyter uses <a href="http://zeromq.org/">ØMQ</a> for high-performance communication between clients and the kernel. You can implement the <a href="http://ipython.org/ipython-doc/dev/development/kernels.html">message spec</a> directly in ZMQ for maximum performance and language specificity.
         </p>
       </div>
       <div class="col-md-4">
         <h3>
           <a href="https://github.com/jupyter/jupyter.github.io/compare">
-            <p>Fork &amp; Pull Request</p>
+            <p>Fork on GitHub</p>
             <i class="fa fa-code-fork fa-5x"></i>
           </a>
         </h3>
 
         <p>
-          This site is open source! Fork it and make a pull request to get your new Kernel, example notebooks and logo added.
+          This site is <a href="https://github.com/jupyter/jupyter.github.io">open source</a>. To see your new Kernel information and logo here, make a <a href="https://github.com/jupyter/jupyter.github.io/compare">pull request</a>.
         </p>
       </div>
 
       <div class="col-md-4">
         <h3>
           <a href="https://github.com/jupyter/docker-demo-images/blob/master/Dockerfile">
-          <p><i class="fa fa-star text-primary"></i> Extend Docker Demo</p>
-          <img src="../images/docker.png" class="logo">
+          <p> Extend Demo Container</p>
+          <i class="fa fa-cube fa-5x"></i>
+
           </a>
         </h3>
         <p>
-          Extend the Jupyter Demo Dockerfile to make your kernel instantly available on <a href="http://try.jupyter.org">try.jupyter.org</a>.
+          <a href="http://try.jupyter.org">try.jupyter.org</a> and <a href="https://tmpnb.org/">tmpnb.org</a> provide free, instant, tmeporary kernels. To see your kernel and sample notebooks there, extend the <a href="https://github.com/jupyter/docker-demo-images/blob/master/Dockerfile">Jupyter Demo Dockerfile</a> and make a <a href="https://github.com/jupyter/docker-demo-images/compare">pull request</a>.
         </p>
       </div>
     </div>

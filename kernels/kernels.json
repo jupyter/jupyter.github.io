@@ -58,27 +58,26 @@
     "feat:autocomplete": {
       "@id": "feat:autocomplete",
       "icon": "fa:flash",
-      "name": "Autocomplete"
+      "name": "Autocomplete",
+      "description": "Show possible completions of currently-loaded symbols"
     },
     "feat:docs": {
       "@id": "feat:docs",
       "icon": "fa:bookmark",
-      "name": "In-Notebook Documentation"
+      "name": "Live Documentation",
+      "description": "Show documentation of a currently loaded symbol"
     },
-    "feat:magic": {
-      "@id": "feat:magic",
-      "icon": "fa:magic",
-      "name": "Magic"
-    },
-    "feat:parallel": {
-      "@id": "feat:parallel",
-      "icon": "fa:cloud",
-      "name": "Parallel Computing"
+    "feat:langext": {
+      "@id": "feat:langext",
+      "icon": "fa:level-up",
+      "name": "Language Extension",
+      "description": "Extend the implemented language with text symbols"
     },
     "feat:widgets": {
       "@id": "feat:widgets",
-      "icon": "fa:dashboard",
-      "name": "Interative Widgets"
+      "icon": "fa:sliders",
+      "name": "Widgets",
+      "description": "Evented, interactive, UI elements in the frontend that link to backend objects"
     }
   },
   "kernels": {
@@ -172,7 +171,7 @@
       "features": {
         "feat:autocomplete": "twbs-context:success",
         "feat:docs": "twbs-context:success",
-        "feat:magic": "twbs-context:warn",
+        "feat:langext": "twbs-context:warn",
         "feat:widgets": "twbs-context:danger"
       },
       "languages": {
@@ -226,8 +225,7 @@
       "features": {
         "feat:autocomplete": "twbs-context:primary",
         "feat:docs": "twbs-context:success",
-        "feat:magic": "twbs-context:primary",
-        "feat:parallel": "twbs-context:primary",
+        "feat:langext": "twbs-context:primary",
         "feat:widgets": "twbs-context:primary"
       },
       "languages": {
@@ -249,7 +247,7 @@
       "description": "This is still experimental. Your code should be safe, since IPython handles saving and loading notebooks in another process, but you'll lose all your variables if it crashes.",
       "features": {
         "feat:autocomplete": "twbs-context:warning",
-        "feat:magic": "twbs-context:warning"
+        "feat:langext": "twbs-context:warning"
       },
       "languages": {
         "lang:r": {
