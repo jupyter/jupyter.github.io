@@ -111,7 +111,7 @@
           "versions": ["2", "3"]
         }
       },
-      "logo": "https://raw.githubusercontent.com/Calysto/calysto_scheme/master/calysto_scheme/images/logo-64x64.png",
+      "logo": "https://cdn.rawgit.com/Calysto/calysto_scheme/917d855dcae3ebc1f6f2c2024a48c78570421f30/calysto_scheme/images/logo-64x64.png",
       "features": [
         "feat:autocomplete",
         "feat:docs",
