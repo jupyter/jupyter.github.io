@@ -104,7 +104,20 @@
     "kern:calysto-scheme": {
       "@id": "kern:calysto-scheme",
       "name": "Calysto Scheme",
-      "url": "https://github.com/Calysto/calysto/tree/master/calysto/language/scheme"
+      "url": "https://github.com/Calysto/calysto_scheme",
+      "version": "0.8.2",
+      "languages" : [
+        "lang:scheme": {
+          "versions": ["2", "3"]
+        }
+      ],
+      "logo": "https://raw.githubusercontent.com/Calysto/calysto_scheme/master/calysto_scheme/images/logo-64x64.png",
+      "features": [
+        "feat:autocomplete",
+        "feat:docs",
+        "feat:langext"
+      ],
+      "description": "Calysto Scheme is a real Scheme programming language with full support for continuations, including call/cc. It can also use all Python libraries. It has some extensions that make it useful (stepper-debugger, choose/fail, stack traces), or make it integrated with Python."
     },
     "kern:clojure-kernel": {
       "@id": "kern:clojure-kernel",
