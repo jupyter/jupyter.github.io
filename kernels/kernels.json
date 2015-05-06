@@ -40,7 +40,7 @@
   "actions": {
     "act:docker": {
       "@id": "act:docker",
-      "image": "../images/docker.png",
+      "icon": "fa:cube",
       "name": "Download Containerized Kernel"
     },
     "act:github": {
@@ -59,25 +59,25 @@
       "@id": "feat:autocomplete",
       "icon": "fa:flash",
       "name": "Autocomplete",
-      "description": "Show possible completions of currently-loaded symbols"
+      "description": "Shows possible completions of currently-loaded symbols"
     },
     "feat:docs": {
       "@id": "feat:docs",
       "icon": "fa:bookmark",
       "name": "Live Documentation",
-      "description": "Show documentation of a currently loaded symbol"
+      "description": "Shows documentation of a currently loaded symbol"
     },
     "feat:langext": {
       "@id": "feat:langext",
       "icon": "fa:level-up",
       "name": "Language Extension",
-      "description": "Extend the implemented language with text symbols"
+      "description": "Extends the implemented language with text symbols"
     },
     "feat:widgets": {
       "@id": "feat:widgets",
       "icon": "fa:sliders",
       "name": "Widgets",
-      "description": "Evented, interactive, UI elements in the frontend that link to backend objects"
+      "description": "Offers reactive UI elements in the frontend linked to backend data"
     }
   },
   "kernels": {

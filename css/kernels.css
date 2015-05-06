@@ -1,6 +1,5 @@
+/* Bootstrap overloads */
 .container{
-  padding-top: 1em;
-  padding-bottom: 1em;
   text-align: justify;
 }
 
@@ -8,17 +7,32 @@
   white-space:pre-wrap;
 }
 
-.search-icon {
-  position: absolute;
-  margin: 8px 0 0 5px;
+/* bootstrap-material-design overloads */
+* {
+  font-family: "RobotoDraft", Helvetica, sans-serif;
 }
 
+.tooltip {
+  font-size: 100%;
+}
+
+/* custom stuff */
 .search-kernels{
-  text-indent: 20px;
+  width: 10em;
+  display: inline-block;
+  text-align: center;
+}
+
+.filters .features{
+  text-align: center;
 }
 
 .kernel-sorts i{
   margin-right: 5px;
+}
+
+.kernel {
+  margin-top: 15px; 
 }
 
 .kernel .version {
@@ -26,37 +40,25 @@
   font-size: 80%;
 }
 
-.container > .features {
-  margin-top: .5em;
+
+.kernel .actions {
+  margin-bottom: -38px;
 }
 
-.features .feature{
-  text-align: center;
+.kernel .actions .btn{
+  margin-left: 8px;
 }
 
-.kernel .title {
-  margin-top: 0;
-}
-
-.language label{
+.kernel .language label{
   margin: 0 5px;
 }
 
 .kernel .features {
-  margin: -8px -8px 0 0;
-  text-align: justify;
+  margin: 5px 0;
 }
 
-.kernel .features .btn:first-child {
-  padding-left: 0;
-}
-
-.kernel .feature-container {
-  padding: 20px 0 0 0;
-}
-
-.kernel .panel-footer{
-  padding: 0;
+.kernel .feature:first-child{
+  margin-left: -6px;
 }
 
 .steps {

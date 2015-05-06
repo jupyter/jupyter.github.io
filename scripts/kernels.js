@@ -24,7 +24,6 @@
       updated: {
         name: "Updated",
         get: function(k){
-          console.warn("Sort by Updated not yet supported");
           return k.name;
         }
       }
@@ -72,10 +71,10 @@
 
     sort.select("i")
       .classed({
-        "fa-sort-asc": function(d){
+        "fa-arrow-up": function(d){
           return d.value === _sort && _sortDir === "ascending";
         },
-        "fa-sort-desc": function(d){
+        "fa-arrow-down": function(d){
           return d.value === _sort && _sortDir === "descending";
         }
       })
@@ -97,8 +96,7 @@
       .classed({"feature-container": 1})
       .append("div")
       .classed({
-        features: 1,
-        "btn-group-sm": 1
+        features: 1
       });
 
     var feature = features.selectAll(".feature")
@@ -113,7 +111,7 @@
     selection
       .enter()
       .append("span")
-      .classed({btn: 1, feature: 1})
+      .classed({feature: 1})
       .append("i")
       .attr({
         "class": function(d){
@@ -121,9 +119,9 @@
         },
         title: function(d){ return _features[d.key || d].name; }
         })
-      .classed({fa: 1, "fa-fw": 1, "fa-2x": 1})
+      .classed({fa: 1, "fa-fw": 1})
       .attr({title: function(d){ return _features[d.key || d].description; }})
-      .each(function(){ $(this).tooltip(); });
+      .call(tooltip);
   }
 
   function sortKernels(a, b){
@@ -133,24 +131,27 @@
   }
 
   function update(){
-    d3.select(".features")
+    var feature = d3.select(".features")
       .selectAll(".feature")
       .data(d3.entries(_features))
       .call(updateFeature)
       .classed({
-        "col-md-3": 1,
         "text-primary": function(d){ return d.value.filtered; },
-        "text-muted": function(d){ return !d.value.filtered; }
+        "text-muted": function(d){ return !d.value.filtered; },
+        "col-md-3": 1
       })
       .on("click", function(d){
         d.value.filtered = !d.value.filtered;
         updateUI();
         update();
       })
-      .selectAll("p")
+    
+    feature.select("i").classed({"fa-2x": 1})
+    
+    feature.selectAll("label")
       .data(function(d){ return [d]; })
       .enter()
-      .append("p")
+      .append("label")
       .text(function(d){ return d.value.name; });
 
     var kernelData = d3.entries(_kernels)
@@ -186,15 +187,13 @@
           return hit && (d.value.features || []).indexOf(feature) !== -1;
         }, 1);
 
-      var searchHit = !searchBits.lenght || searchBits.reduce(
+      var searchHit = !searchBits.length || searchBits.reduce(
         function(hit, bit){
           return hit +
             (d.value.name.toLowerCase().indexOf(bit) !== -1) +
             ((d.value.description || "").toLowerCase().indexOf(bit) !== -1) +
             (searchLanguages(bit, d.value.languages));
         }, 0);
-
-      console.log(d.key, searchHit, featureHit);
       return searchHit && featureHit;
     }
   }
@@ -204,6 +203,49 @@
       return hit + (_languages[d.key].name.toLowerCase().indexOf(q) !== -1)
     }, 0);
   }
+  
+  function updateActions(selection){
+    var action = selection.append("p")
+      .classed({actions: 1, "pull-right": 1})
+      .selectAll(".action")
+      .data(function(kernel){
+        return d3.entries(kernel.value.actions || {})
+          .map(function(action){
+            return {action: _actions[action.key], value: action.value};
+          });
+      })
+      .enter()
+      .append("a")
+      .classed({
+        btn: 1,
+        "btn-fab": 1,
+        "btn-raised": 1,
+        "btn-primary": 1
+      })
+      .attr({
+        href: function(d){ return expandUri(d.value); },
+        title: function(d){ return d.action.name; }
+      })
+      .call(tooltip);
+
+    action.filter(function(d){ return d.action.icon; })
+      .append("i")
+      .attr("class", function(d){
+        return d.action.icon.replace(":", "-");
+      })
+      .classed({fa: 1});
+
+    action.filter(function(d){ return d.action.image; })
+      .append("img")
+      .attr({
+        src: function(d){ return d.action.image; },
+        width: 40
+      });
+  }
+  
+  function tooltip(selection){
+    selection.each(function(){ $(this).tooltip(); });
+  }
 
   function updateKernel(kernel){
     var panel = kernel.append("div")
@@ -212,14 +254,14 @@
     var body = panel.append("div")
         .classed({"panel-body": 1});
 
-    var title = body.append("h2")
-      .classed({title: 1});
-
-    title.append("img")
+    body.append("img")
       .classed({"pull-right": 1})
       .attr("src", function(d){
         return d.value.logo;
       });
+
+    var title = body.append("h2")
+      .classed({title: 1});
 
     title.append("a")
       .text(function(d){ return d.value.name; })
@@ -249,45 +291,13 @@
       .classed({label: 1, "label-info": 1})
       .text(String);
 
-    body.append("p")
-      .text(function(d){ return d.value.description; });
-
     updateFeatures(body)
       .classed({"text-muted": 1});
 
-    var footer = panel.append("div")
-      .classed({"panel-footer": 1})
-      .append("div")
-      .classed({"btn-group": 1, "btn-group-justified": 1});
-
-    var action = footer.selectAll(".action")
-      .data(function(kernel){
-        return d3.entries(kernel.value.actions || {})
-          .map(function(action){
-            return {action: _actions[action.key], value: action.value};
-          });
-      })
-      .enter()
-      .append("a")
-      .classed({btn: 1})
-      .attr({
-        href: function(d){ return expandUri(d.value); },
-        title: function(d){ return d.action.name; }
-      });
-
-    action.filter(function(d){ return d.action.icon; })
-      .append("i")
-      .attr("class", function(d){
-        return d.action.icon.replace(":", "-");
-      })
-      .classed({fa: 1, "fa-2x": 1});
-
-    action.filter(function(d){ return d.action.image; })
-      .append("img")
-      .attr({
-        src: function(d){ return d.action.image; },
-        width: 40
-      });
+    body.append("p")
+      .text(function(d){ return d.value.description; });
+    
+    body.call(updateActions);
   }
 
   function expandUri(uri){
