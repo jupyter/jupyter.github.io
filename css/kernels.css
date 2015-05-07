@@ -1,0 +1,75 @@
+/* Bootstrap overloads */
+.container{
+  text-align: justify;
+}
+
+.tooltip-inner {
+  white-space:pre-wrap;
+}
+
+/* bootstrap-material-design overloads */
+* {
+  font-family: "RobotoDraft", Helvetica, sans-serif;
+}
+
+.tooltip {
+  font-size: 100%;
+}
+
+/* custom stuff */
+.search-kernels{
+  width: 10em;
+  display: inline-block;
+  text-align: center;
+  background-color: #fffde7;
+}
+
+.filters .btn-group .btn{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.kernel-sorts i{
+  margin-right: 5px;
+}
+
+.kernel {
+  margin-top: 36px; 
+}
+
+.kernel .version {
+  margin-left: 10px;
+}
+
+
+.kernel .actions {
+  margin-bottom: -38px;
+}
+
+.kernel .actions .btn{
+  margin-left: 8px;
+}
+
+.kernel .language label{
+  margin: 0 5px;
+}
+
+.kernel .features {
+  margin: 5px 0;
+}
+
+.kernel .feature:first-child{
+  margin-left: -6px;
+}
+
+.steps {
+  text-align: justify;
+}
+.steps h3 {
+  text-align: center;
+}
+
+.steps .logo{
+  max-width: 100px;
+  max-height: 100px;
+}

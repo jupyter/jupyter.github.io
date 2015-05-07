@@ -1,0 +1,377 @@
+{
+  "@context": {
+    "act": "jupy:action/",
+    "actions": {
+      "@container": "@index",
+      "@id": "act#action",
+      "@type": "@id"
+    },
+    "description": "rdfs:description",
+    "docker": "https://registry.hub.docker.com/u/",
+    "fa": "http://fortawesome.github.io/Font-Awesome/icons/",
+    "feat": "kern:kernels/features/",
+    "features": {
+      "@container": "@index",
+      "@id": "kern:#feature",
+      "@type": "@id"
+    },
+    "gh": "https://github.com/",
+    "icon": "fa:#icon",
+    "jupy": "http://jupyter.org/",
+    "kern": "jupy:kernels/",
+    "kernels": {
+      "@container": "@index",
+      "@id": "kern:#kernel",
+      "@type": "@id"
+    },
+    "lang": "jupy:Language/",
+    "languages": {
+      "@container": "@index",
+      "@id": "lang:#language",
+      "@type": "@id"
+    },
+    "name": "rdfs:label",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "try": "http://try.jupyter.org/new_kernel=",
+    "twbs": "http://getbootstrap.com/css/",
+    "twbs-context": "twbs:#helper-classes-colors/"
+  },
+  "actions": {
+    "act:docker": {
+      "@id": "act:docker",
+      "icon": "fa:cube",
+      "name": "Download Containerized Kernel"
+    },
+    "act:github": {
+      "@id": "act:github",
+      "icon": "fa:github",
+      "name": "Contribute on GitHub"
+    },
+    "act:try": {
+      "@id": "act:try",
+      "icon": "fa:rocket",
+      "name": "Try on try.jupyter.org"
+    }
+  },
+  "features": {
+    "feat:autocomplete": {
+      "@id": "feat:autocomplete",
+      "icon": "fa:flash",
+      "name": "Completion",
+      "description": "Shows possible completions of currently-loaded symbols"
+    },
+    "feat:docs": {
+      "@id": "feat:docs",
+      "icon": "fa:bookmark",
+      "name": "Live Doc",
+      "description": "Shows documentation of a currently loaded symbol"
+    },
+    "feat:langext": {
+      "@id": "feat:langext",
+      "icon": "fa:level-up",
+      "name": "Metas",
+      "description": "Extends the implemented language with text symbols"
+    },
+    "feat:widgets": {
+      "@id": "feat:widgets",
+      "icon": "fa:sliders",
+      "name": "Widgets",
+      "description": "Offers reactive UI elements in the frontend linked to backend data"
+    }
+  },
+  "kernels": {
+    "kern:bash": {
+      "@id": "kern:bash",
+      "name": "Bash",
+      "url": "https://github.com/takluyver/bash_kernel"
+    },
+    "kern:brython-kernel": {
+      "@id": "kern:brython-kernel",
+      "name": "Brython Kernel",
+      "url": "https://github.com/kikocorreoso/brythonmagic"
+    },
+    "kern:calico-project": {
+      "@id": "kern:calico-project",
+      "name": "Calico Project",
+      "url": "http://nbviewer.ipython.org/urls/bitbucket.org/ipre/calico/raw/master/notebooks/Calico%20Overview.ipynb"
+    },
+    "kern:calysto-processing": {
+      "@id": "kern:calysto-processing",
+      "name": "Calysto Processing",
+      "url": "https://github.com/Calysto/calysto_processing"
+    },
+    "kern:calysto-scheme": {
+      "@id": "kern:calysto-scheme",
+      "name": "Calysto Scheme",
+      "url": "https://github.com/Calysto/calysto_scheme",
+      "version": "0.8.2",
+      "languages" : {
+        "lang:scheme": {
+          "versions": ["2", "3"]
+        }
+      },
+      "logo": "https://cdn.rawgit.com/Calysto/calysto_scheme/917d855dcae3ebc1f6f2c2024a48c78570421f30/calysto_scheme/images/logo-64x64.png",
+      "features": [
+        "feat:autocomplete",
+        "feat:docs",
+        "feat:langext"
+      ],
+      
+      "actions": {
+        "act:github": "gh:Calysto/calysto_scheme"
+      },
+      "description": "Calysto Scheme is a real Scheme programming language with full support for continuations, including call/cc. It can also use all Python libraries. It has some extensions that make it useful (stepper-debugger, choose/fail, stack traces), or make it integrated with Python."
+    },
+    "kern:clojure-kernel": {
+      "@id": "kern:clojure-kernel",
+      "name": "Clojure Kernel",
+      "url": "https://github.com/roryk/ipython-clojure"
+    },
+    "kern:hy-kernel": {
+      "@id": "kern:hy-kernel",
+      "name": "Hy Kernel",
+      "url": "https://github.com/bollwyvl/hy_kernel/"
+    },
+    "kern:ialdor": {
+      "@id": "kern:ialdor",
+      "name": "IAldor",
+      "url": "https://github.com/mattpap/IAldor"
+    },
+    "kern:icsharp": {
+      "@id": "kern:icsharp",
+      "name": "ICSharp",
+      "url": "https://github.com/zabirauf/icsharp"
+    },
+    "kern:idl-kernel": {
+      "@id": "kern:idl-kernel",
+      "name": "idl_kernel",
+      "url": "https://github.com/lstagner/idl_kernel"
+    },
+    "kern:ierlang": {
+      "@id": "kern:ierlang",
+      "name": "IErlang",
+      "url": "https://github.com/robbielynch/ierlang"
+    },
+    "kern:iforth": {
+      "@id": "kern:iforth",
+      "name": "IForth",
+      "url": "https://github.com/jdfreder/iforth"
+    },
+    "kern:ifsharp": {
+      "@id": "kern:ifsharp",
+      "name": "IFSharp",
+      "url": "http://nbviewer.ipython.org/github/BayardRock/IfSharp/blob/master/Feature%20Notebook.ipynb"
+    },
+    "kern:igo": {
+      "@id": "kern:igo",
+      "name": "IGo",
+      "url": "https://github.com/takluyver/igo"
+    },
+    "kern:ihaskell": {
+      "@id": "kern:ihaskell",
+      "name": "IHaskell",
+      "url": "http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/IHaskell.ipynb"
+    },
+    "kern:ijavascript": {
+      "@id": "kern:ijavascript",
+      "name": "IJavascript",
+      "url": "https://www.npmjs.com/package/ijavascript"
+    },
+    "kern:ijulia": {
+      "@id": "kern:ijulia",
+      "actions": {
+        "act:github": "gh:JuliaLang/IJulia.jl",
+        "act:try": "try:IJulia"
+      },
+      "description": "IJulia is a Julia-language backend combined with the IPython interactive environment (soon to be called Jupyter). This combination allows you to interact with the Julia language using Jupyter/IPython's powerful graphical notebook, which combines code, formatted text, math, and multimedia in a single document.",
+      "features": [
+        "feat:autocomplete",
+        "feat:docs",
+        "feat:langext",
+        "feat:widgets"
+      ],
+      "languages": {
+        "lang:julia": {
+          "versions": ["0.3.8"]
+        }
+      },
+      "logo": "https://cdn.rawgit.com/JuliaLang/IJulia.jl/master/deps/logo-64x64.png",
+      "name": "IJulia",
+      "url": "http://nbviewer.ipython.org/url/jdj.mit.edu/~stevenj/IJulia%20Preview.ipynb",
+      "version": "0.4"
+    },
+    "kern:imathics": {
+      "@id": "kern:imathics",
+      "name": "IMathics",
+      "url": "http://nbviewer.ipython.org/gist/sn6uv/8381447"
+    },
+    "kern:imatlab": {
+      "@id": "kern:imatlab",
+      "name": "IMatlab",
+      "url": "https://github.com/calysto/matlab_kernel"
+    },
+    "kern:iocaml": {
+      "@id": "kern:iocaml",
+      "name": "IOCaml",
+      "url": "https://github.com/andrewray/iocaml"
+    },
+    "kern:ioctave": {
+      "@id": "kern:ioctave",
+      "name": "IOctave",
+      "url": "https://github.com/calysto/octave_kernel"
+    },
+    "kern:iperl": {
+      "@id": "kern:iperl",
+      "name": "IPerl",
+      "url": "https://metacpan.org/release/Devel-IPerl"
+    },
+    "kern:iperl6": {
+      "@id": "kern:iperl6",
+      "name": "IPerl6",
+      "url": "https://github.com/timo/iperl6kernel"
+    },
+    "kern:ipython": {
+      "@id": "kern:ipython",
+      "actions": {
+        "act:docker": "docker:ipython/notebook",
+        "act:github": "gh:ipython/ipython",
+        "act:try": "try:IPython"
+      },
+      "description": "The original Jupyter Kernel, IPython provides Python, a general purpose programming language.",
+      "features": [
+        "feat:autocomplete",
+        "feat:docs",
+        "feat:langext",
+        "feat:widgets"
+      ],
+      "languages": {
+        "lang:python": {
+          "versions": ["2.7", "3.3", "3.4"]
+        }
+      },
+      "logo": "python/logo-64x64.png",
+      "name": "IPython",
+      "version": "3.0",
+      "url": "http://ipython.org/"
+    },
+    "kern:irkernel": {
+      "@id": "kern:irkernel",
+      "actions": {
+        "act:docker": "docker:adrianliaw/jupyter-irkernel",
+        "act:try": "try:ir"
+      },
+      "description": "This is still experimental. Your code should be safe, since IPython handles saving and loading notebooks in another process, but you'll lose all your variables if it crashes.",
+      "features": [
+        "feat:autocomplete",
+        "feat:langext"
+      ],
+      "languages": {
+        "lang:r": {
+          "versions": ["3.2.0", "3.1.3"]
+        }
+      },
+      "logo": "https://cdn.rawgit.com/IRkernel/IRkernel/master/inst/kernelspec/logo-64x64.png",
+      "name": "IRKernel",
+      "version": "0.4",
+      "url": "https://github.com/takluyver/IRkernel"
+    },
+    "kern:iruby": {
+      "@id": "kern:iruby",
+      "name": "IRuby",
+      "url": "http://nbviewer.ipython.org/github/minad/iruby/blob/master/IRuby-Example.ipynb"
+    },
+    "kern:iscala": {
+      "@id": "kern:iscala",
+      "name": "IScala",
+      "url": "https://github.com/mattpap/IScala"
+    },
+    "kern:iscilab": {
+      "@id": "kern:iscilab",
+      "name": "IScilab",
+      "url": "https://github.com/blink1073/scilab_kernel"
+    },
+    "kern:ivisual-vpython-kernel": {
+      "@id": "kern:ivisual-vpython-kernel",
+      "name": "IVisual VPython Kernel",
+      "url": "https://pypi.python.org/pypi/IVisual"
+    },
+    "kern:jove": {
+      "@id": "kern:jove",
+      "name": "jove",
+      "url": "https://www.npmjs.com/package/jove"
+    },
+    "kern:lua-(used-in-splash)": {
+      "@id": "kern:lua-(used-in-splash)",
+      "name": "Lua (used in Splash)",
+      "url": "https://github.com/scrapinghub/splash/tree/master/splash/kernel"
+    },
+    "kern:lua-kernel": {
+      "@id": "kern:lua-kernel",
+      "name": "Lua Kernel",
+      "url": "https://github.com/neomantra/lua_ipython_kernel"
+    },
+    "kern:luajit-torch": {
+      "@id": "kern:luajit-torch",
+      "name": "LuaJIT/Torch",
+      "url": "https://github.com/facebook/iTorch"
+    },
+    "kern:metakernel-bash": {
+      "@id": "kern:metakernel-bash",
+      "name": "MetaKernel Bash",
+      "url": "https://github.com/Calysto/metakernel/tree/master/metakernel_bash"
+    },
+    "kern:metakernel-python": {
+      "@id": "kern:metakernel-python",
+      "name": "MetaKernel Python",
+      "url": "https://github.com/Calysto/metakernel/tree/master/metakernel_python"
+    },
+    "kern:mochi-kernel": {
+      "@id": "kern:mochi-kernel",
+      "name": "Mochi Kernel",
+      "url": "https://github.com/pya/mochi-kernel"
+    },
+    "kern:redis-kernel": {
+      "@id": "kern:redis-kernel",
+      "name": "Redis Kernel",
+      "url": "https://github.com/supercoderz/redis_kernel"
+    },
+    "kern:simple-example-kernel": {
+      "@id": "kern:simple-example-kernel",
+      "name": "Simple example kernel",
+      "url": "https://github.com/dsblank/simple_kernel"
+    },
+    "kern:skulpt-python-kernel": {
+      "@id": "kern:skulpt-python-kernel",
+      "name": "Skulpt Python Kernel",
+      "url": "https://github.com/Calysto/skulpt_python"
+    },
+    "kern:spark-kernel": {
+      "@id": "kern:spark-kernel",
+      "name": "Spark Kernel",
+      "url": "https://github.com/ibm-et/spark-kernel"
+    }
+  },
+  "languages": {
+    "lang:python": {
+      "@id": "lang:python",
+      "name": "Python",
+      "url": "http://python.org"
+    },
+    "lang:julia": {
+      "@id": "lang:julia",
+      "name": "Julia",
+      "url": "http://julialang.org/"
+    },
+    "lang:r": {
+      "@id": "lang:r",
+      "name": "R",
+      "url": "http://www.r-project.org/"
+    },
+    "lang:scheme": {
+      "@id": "lang:scheme",
+      "name": "Scheme",
+      "url": "https://en.wikipedia.org/wiki/Scheme_(programming_language)"
+    }
+  }
+}
