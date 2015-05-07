@@ -58,19 +58,19 @@
     "feat:autocomplete": {
       "@id": "feat:autocomplete",
       "icon": "fa:flash",
-      "name": "Autocomplete",
+      "name": "Completion",
       "description": "Shows possible completions of currently-loaded symbols"
     },
     "feat:docs": {
       "@id": "feat:docs",
       "icon": "fa:bookmark",
-      "name": "Live Documentation",
+      "name": "Live Doc",
       "description": "Shows documentation of a currently loaded symbol"
     },
     "feat:langext": {
       "@id": "feat:langext",
       "icon": "fa:level-up",
-      "name": "Language Extension",
+      "name": "Metas",
       "description": "Extends the implemented language with text symbols"
     },
     "feat:widgets": {

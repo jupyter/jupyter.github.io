@@ -23,8 +23,9 @@
   text-align: center;
 }
 
-.filters .features{
-  text-align: center;
+.filters .btn-group .btn{
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .kernel-sorts i{
@@ -32,12 +33,13 @@
 }
 
 .kernel {
-  margin-top: 15px; 
+  margin-top: 30px; 
 }
 
 .kernel .version {
   margin-left: 10px;
-  font-size: 80%;
+  margin-right: -50px;
+  font-size: 50%;
 }
 
 
