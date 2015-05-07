@@ -299,8 +299,8 @@
     title
       .filter(function(d){ return d.value.version; })
       .append("span")
-      .classed({version: 1, "text-muted": 1, "text-sm": 1})
-      .text(function(d){ return "v" + d.value.version; });
+      .classed({version: 1, "text-muted": 1})
+      .text(function(d){ return d.value.version; });
 
     var lang = body.filter(function(d){ return d.value.languages; })
       .append("div")
@@ -316,11 +316,11 @@
       })
       .attr({href: function(d){ return  _languages[d.key].url; }});
 
-    lang.selectAll("label")
+    lang.selectAll(".version")
       .data(function(d){ return d.value.versions; })
       .enter()
-      .append("label")
-      .classed({label: 1, "label-default": 1})
+      .append("span")
+      .classed({version: 1, "text-muted": 1})
       .text(String);
 
     updateFeatures(body)
