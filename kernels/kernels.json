@@ -117,6 +117,10 @@
         "feat:docs",
         "feat:langext"
       ],
+      
+      "actions": {
+        "act:github": "gh:Calysto/calysto_scheme"
+      },
       "description": "Calysto Scheme is a real Scheme programming language with full support for continuations, including call/cc. It can also use all Python libraries. It has some extensions that make it useful (stepper-debugger, choose/fail, stack traces), or make it integrated with Python."
     },
     "kern:clojure-kernel": {
