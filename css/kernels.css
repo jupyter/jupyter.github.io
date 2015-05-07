@@ -21,6 +21,7 @@
   width: 10em;
   display: inline-block;
   text-align: center;
+  background-color: #fffde7;
 }
 
 .filters .btn-group .btn{
