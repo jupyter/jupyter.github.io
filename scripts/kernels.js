@@ -181,6 +181,7 @@
       .data(Object, function(d){ return d.key; });
 
     kernel.exit().transition()
+      .ease(d3.ease("sin"))
       .delay(function(d, i){ return i * 10; })
       .style({opacity: 0, "margin-top": "-100px"})
       .remove();
@@ -192,6 +193,8 @@
       .transition()
       .ease(d3.ease("sin"))
       .style({opacity: 1, "margin-top": "32px"});
+
+    kernel.style({"z-index": function(d, i){ return 999 - i; }});
 
     kernel.order();
   }

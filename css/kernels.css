@@ -17,6 +17,11 @@
 }
 
 /* custom stuff */
+header.jumbotron {
+  z-index: 1000;
+  position: relative;
+}
+
 .search-kernels{
   width: 10em;
   display: inline-block;
@@ -33,8 +38,10 @@
   margin-right: 5px;
 }
 
+
 .kernel {
-  margin-top: 36px; 
+  margin-top: 36px;
+  position: relative;
 }
 
 .kernel .version {
