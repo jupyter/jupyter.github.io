@@ -17,9 +17,9 @@
 }
 
 /* custom stuff */
-header.jumbotron {
+header {
   z-index: 1000;
-  position: relative;
+  position: fixed;
 }
 
 .search-kernels{
@@ -38,6 +38,9 @@ header.jumbotron {
   margin-right: 5px;
 }
 
+.kernels {
+  margin-top: 260px;
+}
 
 .kernel {
   margin-top: 36px;

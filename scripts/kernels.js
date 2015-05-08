@@ -32,22 +32,33 @@
     _sortDir = "descending";
 
 
-  d3.json("./kernels.json", kernelsLoaded);
+  var header = d3.select("header"),
+    searchKernels = d3.select(".search-kernels"),
+    sorts = d3.select(".kernel-sorts"),
+    features = d3.select(".features"),
+    kernels = d3.select(".kernels"),
+    body = d3.select("body");
 
-  updateUI();
+  function scroll(){
+    var y = window.scrollY;
 
-  d3.select(window).on("resize", update);
+    header.selectAll("h1").style({
+      "zoom": Math.max(1/4, 1 - y / 500)
+    });
 
+    kernels.style({
+      "margin-top": header.node().clientHeight + "px"
+    });
+  }
 
   function updateUI(){
-    var searchKernels = d3.select(".search-kernels")
+    searchKernels
       .on("input", function(){
         _search = searchKernels.property("value");
         update();
       });
 
-    var sort = d3.select(".kernel-sorts")
-      .classed({"btn-group": 1, "btn-group-justified": 1})
+    var sort = sorts.classed({"btn-group": 1, "btn-group-justified": 1})
       .attr({role: "group"})
       .selectAll("a")
       .data(d3.entries(_sorts));
@@ -140,7 +151,7 @@
   }
 
   function update(){
-    var feature = d3.select(".features")
+    var feature = features
       .classed({"btn-group": 1, "btn-group-justified": 1})
       .selectAll(".feature")
       .data(d3.entries(_features))
@@ -164,8 +175,6 @@
     var kernelData = stackKernels(d3.entries(_kernels)
       .filter(filterKernels())
       .sort(sortKernels));
-
-    var kernels = d3.select(".kernels");
 
     var column = kernels.selectAll(".kernel-col")
       .data(kernelData)
@@ -200,7 +209,7 @@
   }
 
   function stackKernels(kernels){
-    var width = d3.select("body").node().clientWidth,
+    var width = body.node().clientWidth,
       columnCount = width < 990 ? 1 : 3,
       columnClasses = "kernel-col col-md-" + (12 / columnCount);
 
@@ -353,5 +362,15 @@
       return expandUri(bits[0]) + bits[1];
     }
   }
+
+  // finally, do some stuff
+  d3.json("./kernels.json", kernelsLoaded);
+
+  updateUI();
+
+  d3.select(window)
+    .on("resize", update)
+    .on("scroll", scroll);
+
 
 }).call(this, d3);
