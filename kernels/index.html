@@ -19,32 +19,35 @@
 
 <body>
   <header class="container-fluid well jumbotron">
-    <h1>
-      <a href="../">
-        <img src="../images/jupyter-sq-text.svg" width="100"></a>
-      </a>
-
-      Kernels
-    </h1>
-    <p>
-        <strong>Kernels</strong>, along with <a href="#frontends">Frontends</a>, make
-      <input type="text"
-        class="form-control search-kernels input-lg"
-        placeholder="computing">
-      <strong>interactive</strong>, <strong>reproducible</strong>, and <strong>productive</strong>.
-    </p>
-      <div class="filters">
-        <div class="row">
-          <div class="col-md-6">
-            <h4>Features</h4>
-            <div class="features"></div>
-          </div>
-          <div class="col-md-6">
-            <h4>Sort</h4>
-            <div class="kernel-sorts"></div>
-          </div>
+    <div class="filters">
+      <div class="row">
+        <a href="../" class="brand-logo col-xs-2">
+          <img src="../images/jupyter-sq-text.svg" class="image-responsive">
+        </a>
+        <h1 class="col-md-8 hide-watershed">
+          <span>Kernels</span>
+        </h1>
+        <p class="lead col-md-10">
+          <strong>Kernels</strong>, along with <a href="#frontends">Frontends</a>, make
+          <input type="text"
+            class="form-control search-kernels input-lg"
+            placeholder="computing">
+          <strong>interactive</strong>, <strong>reproducible</strong>, and <strong>productive</strong>.
+        </p>
+        <div class="col-md-5 shrink-watershed">
+          <h4 class="hide-watershed">Features</h4>
+          <div class="features"></div>
+        </div>
+        <div class="col-md-5 shrink-watershed">
+          <h4 class="hide-watershed">Sort</h4>
+          <div class="kernel-sorts"></div>
+        </div>
+        <div class="col-md-2">
+          <h4 class="hide-watershed">View</h4>
+          <div class="view-modes"></div>
         </div>
       </div>
+    </div>
   </header>
 
   <div class="container">

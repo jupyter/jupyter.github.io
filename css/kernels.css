@@ -22,28 +22,46 @@ header {
   position: fixed;
 }
 
+.brand-logo {
+  min-width: 100px;
+}
+
+.post-watershed .hide-watershed{
+  display: none;
+}
+
+
+.pre-watershed .lead {
+  margin: 40px 0;
+}
+
 .search-kernels{
-  width: 10em;
   display: inline-block;
   text-align: center;
   background-color: #fffde7;
 }
 
-.filters .btn-group .btn{
-  padding-left: 10px;
-  padding-right: 10px;
+.search-kernels{
+  width: 10em;
 }
 
-.kernel-sorts i{
-  margin-right: 5px;
+header .btn-group .btn{
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+header .feature span {
+  display: block;
 }
 
 .kernels {
   margin-top: 260px;
+  margin-top: 40px;
 }
 
 .kernel {
-  margin-top: 36px;
+  margin-bottom: 36px;
   position: relative;
 }
 

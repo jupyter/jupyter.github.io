@@ -1,4 +1,6 @@
 ;(function(d3){
+  var WATERSHED = 400;
+
   var _actions = {},
     _context = {};
     _features = {},
@@ -8,14 +10,17 @@
     _sorts = {
       features: {
         name: "Features",
+        icon: "fa:plus-circle",
         get: function(k){ return d3.keys(k.features).length; }
       },
       name: {
         name: "Name",
+        icon: "fa:archive",
         get: function(k){ return k.name.toLowerCase(); }
       },
       language: {
         name: "Language",
+        icon: "fa:language",
         get: function(k){
           return (d3.entries(k.languages || {"lang:zzz": 1}))[0].key;
         }
@@ -23,30 +28,75 @@
       // TODO: decide how to get date...
       updated: {
         name: "Updated",
+        icon: "fa:calendar",
         get: function(k){
           return k.name;
         }
       }
     },
+    _modes = {
+      chit: {
+        name: "Chit",
+        icon: "fa:th"
+      },
+      card: {
+        name: "Card",
+        icon: "fa:th-large"
+      },
+      list: {
+        name: "List",
+        icon: "fa:list"
+      }
+    },
+    _mode = "chit",
     _sort = _sorts.features,
     _sortDir = "descending";
 
 
   var header = d3.select("header"),
-    searchKernels = d3.select(".search-kernels"),
-    sorts = d3.select(".kernel-sorts"),
-    features = d3.select(".features"),
-    kernels = d3.select(".kernels"),
+    brand = header.select(".brand"),
+    brandLogo = header.select(".brand-logo"),
+    lead = header.select(".lead"),
+    searchKernels = header.select(".search-kernels"),
+    sorts = header.select(".kernel-sorts").classed({
+        "btn-group": 1,
+        "btn-group-justified": 1
+      })
+      .attr({role: "group"}),
+    modes = header.select(".view-modes").classed({
+        "btn-group": 1,
+        "btn-group-justified": 1
+      })
+      .attr({role: "group"}),
+    features = header.select(".features"),
+    kernels = d3.select(".kernels")
+      .style({
+        "margin-top": header.node().clientHeight + "px"
+      }),
     body = d3.select("body");
 
   function scroll(){
-    var y = window.scrollY;
+    var y = window.scrollY,
+      pre = y < WATERSHED,
+      post = !pre;
 
-    header.selectAll("h1").style({
-      "zoom": Math.max(1/4, 1 - y / 500)
+    header.classed({
+      "pre-watershed": pre,
+      "post-watershed": post
     });
 
-    kernels.style({
+    brandLogo.classed({
+      "col-xs-2": pre,
+      "col-xs-1": post,
+    });
+
+    header.selectAll(".shrink-watershed")
+      .classed({
+        "col-md-5": pre,
+        "col-md-4": post,
+      });
+
+    kernels.transition().style({
       "margin-top": header.node().clientHeight + "px"
     });
   }
@@ -55,20 +105,28 @@
     searchKernels
       .on("input", function(){
         _search = searchKernels.property("value");
+        window.scrollTo(0, window.scrollY > WATERSHED ? WATERSHED + 1: 0);
         update();
       });
 
-    var sort = sorts.classed({"btn-group": 1, "btn-group-justified": 1})
-      .attr({role: "group"})
-      .selectAll("a")
+    var sort = sorts.selectAll("a")
       .data(d3.entries(_sorts));
 
     sort.enter()
       .append("a")
       .classed({btn: 1})
       .call(function(sort){
-        sort.append("i").classed({fa: 1});
-        sort.append("span").text(function(d){ return d.value.name; })
+        sort.append("i")
+          .attr({"class": function(d){
+            return d.value.icon.replace(":", "-");
+          }})
+          .classed({fa: 1});
+
+        sort.append("i").classed({fa: 1, direction: 1});
+
+        sort.append("div")
+          .text(function(d){ return d.value.name; })
+          .classed({"hide-watershed": 1});
 
         sort.on("click", function(d){
           if(_sort === d.value){
@@ -86,16 +144,43 @@
       .classed({
         "btn-primary": isActiveSort()
       })
-      .select("i")
+      .select(".direction")
       .classed({
         "fa-arrow-up": isActiveSort("ascending"),
         "fa-arrow-down": isActiveSort("descending")
       });
+
+    var mode = modes.selectAll(".mode")
+      .data(d3.entries(_modes));
+
+    mode.enter().append("a")
+      .classed({btn: 1, mode: 1})
+      .on("click", function(d){
+        _mode = d.key;
+        updateUI();
+      }).call(function(mode){
+        mode.append("i")
+          .attr({
+            "class": function(d){
+              return d.value.icon.replace(":", "-");
+            }
+          })
+          .classed({fa: 1, "fa-fw": 1});
+
+        mode.append("div")
+          .classed({"hide-watershed": 1})
+          .text(function(d){ return d.value.name; })
+      });
+
+    mode.classed({
+      "btn-primary": function(d){ return d.key === _mode; }
+    });
   }
 
   function isActiveSort(direction){
     return function(d){
-      return d.value === _sort && (!direction || _sortDir === direction);
+      return d.value === _sort &&
+        (!direction || _sortDir === direction);
     };
   }
 
@@ -166,10 +251,11 @@
         update();
       });
 
-    feature.selectAll("span")
+    feature.selectAll("div")
       .data(function(d){ return [d]; })
       .enter()
-      .append("span")
+      .append("div")
+      .classed({"hide-watershed": 1})
       .text(function(d){ return d.value.name; });
 
     var kernelData = stackKernels(d3.entries(_kernels)
@@ -190,7 +276,6 @@
       .data(Object, function(d){ return d.key; });
 
     kernel.exit().transition()
-      .ease(d3.ease("sin"))
       .delay(function(d, i){ return i * 10; })
       .style({"margin-top": "-100px"})
       .remove();
@@ -292,7 +377,10 @@
   }
 
   function tooltip(selection){
-    selection.each(function(){ $(this).tooltip({container: "body"}); });
+    selection.each(function(){ $(this).tooltip({
+      container: "body",
+      placement: "bottom"
+    }); });
   }
 
   function updateKernel(kernel){
@@ -367,10 +455,10 @@
   d3.json("./kernels.json", kernelsLoaded);
 
   updateUI();
+  scroll();
 
   d3.select(window)
     .on("resize", update)
     .on("scroll", scroll);
-
 
 }).call(this, d3);
