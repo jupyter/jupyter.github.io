@@ -30,26 +30,25 @@
         placeholder="computing">
       <strong>interactive</strong>, <strong>reproducible</strong>, and <strong>productive</strong>.
     </p>
-  </div>
-
-  <div class="container filters">
-    <div class="row">
-      <div class="col-md-6">
-        <h4>Features</h4>
-        <div class="features"></div>
+      <div class="filters">
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Features</h4>
+            <div class="features"></div>
+          </div>
+          <div class="col-md-6">
+            <h4>Sort</h4>
+            <div class="kernel-sorts"></div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6">
-        <h4>Sort</h4>
-        <div class="kernel-sorts"></div>
-      </div>
-    </div>
   </div>
 
   <div class="container">
     <div class="kernels"></div>
   </div>
 
-  <div class="container">
+  <div class="container well">
     <h2>Don't see your language?</h2>
     <p>
       Writing a Jupyter Kernel for your language, database or other computing environment adds a powerful REPL and interactivity for your users.
@@ -57,74 +56,56 @@
 
     <div class="row steps">
       <div class="col-md-4">
-        <div class="panel">
-          <div class="panel-body">
-            <h3>
-              <a href="http://ipython.org/ipython-doc/dev/development/wrapperkernels.html">
-              <p>Wrap your Language</p>
-              <i class="fa fa-gift fa-5x"></i>
-            </a>
-            </h3>
-            <p>
-                Much of the Jupyter machinery is written in Python: if your language can be called from Python, you can <a href="http://ipython.org/ipython-doc/dev/development/wrapperkernels.html">take advantage</a> of existing work to create your kernel.
-            </p>
-          </div>
-        </div>
+        <h3>
+          <a href="http://ipython.org/ipython-doc/dev/development/wrapperkernels.html">
+          <p>Wrap your Language</p>
+          <i class="fa fa-gift fa-5x"></i>
+        </a>
+        </h3>
+        <p>
+            Much of the Jupyter machinery is written in Python: if your language can be called from Python, you can <a href="http://ipython.org/ipython-doc/dev/development/wrapperkernels.html">take advantage</a> of existing work to create your kernel.
+        </p>
 
         <h3 class="text-center text-muted">
           or
         </h3>
-        
-        <div class="panel">
-          <div class="panel-body">
-            <h3><a href="http://ipython.org/ipython-doc/dev/development/kernels.html">
-              <p>Implement the Spec</p>
-              <p><i class="fa fa-exchange fa-5x"></i></p>
-            </a>
-            </h3>
-            <p>
-              Jupyter uses <a href="http://zeromq.org/">ØMQ</a> for high-performance communication between clients and the kernel. You can implement the <a href="http://ipython.org/ipython-doc/dev/development/kernels.html">message spec</a> directly in ZMQ for maximum performance and language specificity.
-            </p>
-          </div>
-        </div>
+
+        <h3><a href="http://ipython.org/ipython-doc/dev/development/kernels.html">
+          <p>Implement the Spec</p>
+          <p><i class="fa fa-exchange fa-5x"></i></p>
+        </a>
+        </h3>
+        <p>
+          Jupyter uses <a href="http://zeromq.org/">ØMQ</a> for high-performance communication between clients and the kernel. You can implement the <a href="http://ipython.org/ipython-doc/dev/development/kernels.html">message spec</a> directly in ZMQ for maximum performance and language specificity.
+        </p>
       </div>
       <div class="col-md-4">
-        <div class="panel">
-          <div class="panel-body">
-            <h3>
-              <a href="https://github.com/jupyter/jupyter.github.io/compare">
-                <p>Fork on GitHub</p>
-                <i class="fa fa-code-fork fa-5x"></i>
-              </a>
-            </h3>
+        <h3>
+          <a href="https://github.com/jupyter/jupyter.github.io/compare">
+            <p>Fork on GitHub</p>
+            <i class="fa fa-code-fork fa-5x"></i>
+          </a>
+        </h3>
 
-            <p>
-              This site is <a href="https://github.com/jupyter/jupyter.github.io">open source</a>. To see your new Kernel information and logo here, make a <a href="https://github.com/jupyter/jupyter.github.io/compare">pull request</a>.
-            </p>
-          </div>
-        </div>
+        <p>
+          This site is <a href="https://github.com/jupyter/jupyter.github.io">open source</a>. To see your new Kernel information and logo here, make a <a href="https://github.com/jupyter/jupyter.github.io/compare">pull request</a>.
+        </p>
       </div>
 
       <div class="col-md-4">
-        <div class="panel">
-          <div class="panel-body">
-            <h3>
-              <a href="https://github.com/jupyter/docker-demo-images/blob/master/Dockerfile">
-              <p> Extend Demo Container</p>
-              <i class="fa fa-cube fa-5x"></i>
+        <h3>
+          <a href="https://github.com/jupyter/docker-demo-images/blob/master/Dockerfile">
+          <p> Extend Demo Container</p>
+          <i class="fa fa-cube fa-5x"></i>
 
-              </a>
-            </h3>
-            <p>
-              <a href="http://try.jupyter.org">try.jupyter.org</a> and <a href="https://tmpnb.org/">tmpnb.org</a> provide free, instant, tmeporary kernels. To see your kernel and sample notebooks there, extend the <a href="https://github.com/jupyter/docker-demo-images/blob/master/Dockerfile">Jupyter Demo Dockerfile</a> and make a <a href="https://github.com/jupyter/docker-demo-images/compare">pull request</a>.
-            </p>
-          </div>
-        </div>
+          </a>
+        </h3>
+        <p>
+          <a href="http://try.jupyter.org">try.jupyter.org</a> and <a href="https://tmpnb.org/">tmpnb.org</a> provide free, instant, tmeporary kernels. To see your kernel and sample notebooks there, extend the <a href="https://github.com/jupyter/docker-demo-images/blob/master/Dockerfile">Jupyter Demo Dockerfile</a> and make a <a href="https://github.com/jupyter/docker-demo-images/compare">pull request</a>.
+        </p>
       </div>
     </div>
-  </div>
 
-  <div class="container">
     <footer class="text-center">
       <div class="row">
         <div class="col-sm-2 col-sm-offset-1">

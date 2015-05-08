@@ -35,7 +35,7 @@
   d3.json("./kernels.json", kernelsLoaded);
 
   updateUI();
-  
+
   d3.select(window).on("resize", update);
 
 
@@ -81,7 +81,7 @@
         "fa-arrow-down": isActiveSort("descending")
       });
   }
-  
+
   function isActiveSort(direction){
     return function(d){
       return d.value === _sort && (!direction || _sortDir === direction);
@@ -122,7 +122,7 @@
       .classed({feature: 1})
       .attr({title: function(d){ return _features[d.key || d].description; }})
       .call(tooltip);
-    
+
     feature.append("i")
       .attr({
         "class": function(d){
@@ -154,7 +154,7 @@
         updateUI();
         update();
       });
-    
+
     feature.selectAll("span")
       .data(function(d){ return [d]; })
       .enter()
@@ -169,31 +169,38 @@
 
     var column = kernels.selectAll(".kernel-col")
       .data(kernelData)
-    
+
     column.exit().remove();
     column.enter().append("div");
     column.attr("class", function(d){
       return "kernel-col col-md-" + (12 / kernelData.length);
     });
-    
+
     var kernel = column
       .selectAll(".kernel")
       .data(Object, function(d){ return d.key; });
 
-    kernel.exit().remove();
+    kernel.exit().transition()
+      .delay(function(d, i){ return i * 10; })
+      .style({opacity: 0, "margin-top": "-100px"})
+      .remove();
 
     kernel.enter().append("div")
       .classed({kernel: 1})
-      .call(updateKernel);
+      .style({opacity: 0, "margin-top": "-100px"})
+      .call(updateKernel)
+      .transition()
+      .ease(d3.ease("sin"))
+      .style({opacity: 1, "margin-top": "32px"});
 
     kernel.order();
   }
-  
+
   function stackKernels(kernels){
     var width = d3.select("body").node().clientWidth,
       columnCount = width < 990 ? 1 : 3,
       columnClasses = "kernel-col col-md-" + (12 / columnCount);
-    
+
     return d3.range(columnCount).map(function(undef, col){
       return kernels.filter(function(kernel, ki){
         return ki % columnCount === col;
@@ -232,7 +239,7 @@
       return hit + (_languages[d.key].name.toLowerCase().indexOf(q) !== -1);
     }, 0);
   }
-  
+
   function updateActions(selection){
     var action = selection.append("p")
       .classed({actions: 1, "pull-right": 1})
@@ -271,7 +278,7 @@
         width: 40
       });
   }
-  
+
   function tooltip(selection){
     selection.each(function(){ $(this).tooltip({container: "body"}); });
   }
@@ -328,7 +335,7 @@
 
     body.append("p")
       .text(function(d){ return d.value.description; });
-    
+
     body.call(updateActions);
   }
 
