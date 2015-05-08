@@ -183,16 +183,16 @@
     kernel.exit().transition()
       .ease(d3.ease("sin"))
       .delay(function(d, i){ return i * 10; })
-      .style({opacity: 0, "margin-top": "-100px"})
+      .style({"margin-top": "-100px"})
       .remove();
 
     kernel.enter().append("div")
       .classed({kernel: 1})
-      .style({opacity: 0, "margin-top": "-100px"})
+      .style({"margin-top": "-100px"})
       .call(updateKernel)
       .transition()
       .ease(d3.ease("sin"))
-      .style({opacity: 1, "margin-top": "32px"});
+      .style({"margin-top": "36px"});
 
     kernel.style({"z-index": function(d, i){ return 999 - i; }});
 
