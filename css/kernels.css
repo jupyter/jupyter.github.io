@@ -3,6 +3,11 @@
   text-align: justify;
 }
 
+.container-fixed {
+  left: 0%;
+  right: 0%;
+}
+
 .tooltip-inner {
   white-space:pre-wrap;
 }
@@ -69,6 +74,13 @@ header .feature span {
   margin-left: 10px;
 }
 
+.kernel .title .version {
+  font-size: 50%;
+}
+
+.kernel .logo {
+  margin-left: -64px;
+}
 
 .kernel .actions {
   margin-bottom: -38px;
@@ -88,6 +100,14 @@ header .feature span {
 
 .kernel .feature:first-child{
   margin-left: -6px;
+}
+
+.kernel .reveal-card {
+  margin: -13px;
+  opacity: 0.5;
+}
+.kernel .reveal-card:hover {
+  opacity: 1.0;
 }
 
 .steps {
