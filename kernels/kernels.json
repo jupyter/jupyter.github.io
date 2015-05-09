@@ -30,6 +30,12 @@
       "@id": "kern:#kernel",
       "@type": "@id"
     },
+    "kmet": "kern:kernels/metrics/",
+    "metrics": {
+      "@container": "@index",
+      "@id": "kern:#metric",
+      "@type": "@id"
+    },
     "name": "rdfs:label",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
@@ -383,6 +389,14 @@
       "@id": "kern:spark-kernel",
       "name": "Spark Kernel",
       "url": "https://github.com/ibm-et/spark-kernel"
+    }
+  },
+  "metrics": {
+    "gh:stargazers": {
+      "icon": "fa:star"
+    },
+    "gh:forks": {
+      "icon": "fa:code-fork"
     }
   }
 }
