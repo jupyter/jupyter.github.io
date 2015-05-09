@@ -8,6 +8,12 @@
     },
     "description": "rdfs:description",
     "docker": "https://registry.hub.docker.com/u/",
+    "env": "jupy:Environment/",
+    "environments": {
+      "@container": "@index",
+      "@id": "env:#environment",
+      "@type": "@id"
+    },
     "fa": "http://fortawesome.github.io/Font-Awesome/icons/",
     "feat": "kern:kernels/features/",
     "features": {
@@ -22,12 +28,6 @@
     "kernels": {
       "@container": "@index",
       "@id": "kern:#kernel",
-      "@type": "@id"
-    },
-    "env": "jupy:Environment/",
-    "environments": {
-      "@container": "@index",
-      "@id": "env:#environment",
       "@type": "@id"
     },
     "name": "rdfs:label",
@@ -54,30 +54,52 @@
       "name": "Try on try.jupyter.org"
     }
   },
+  "environments": {
+    "env:julia": {
+      "@id": "env:julia",
+      "name": "Julia",
+      "url": "http://julialang.org/"
+    },
+    "env:python": {
+      "@id": "env:python",
+      "name": "Python",
+      "url": "http://python.org"
+    },
+    "env:r": {
+      "@id": "env:r",
+      "name": "R",
+      "url": "http://www.r-project.org/"
+    },
+    "env:scheme": {
+      "@id": "env:scheme",
+      "name": "Scheme",
+      "url": "https://en.wikipedia.org/wiki/Scheme_(programming_environment)"
+    }
+  },
   "features": {
     "feat:autocomplete": {
       "@id": "feat:autocomplete",
+      "description": "Shows possible completions of currently-loaded symbols",
       "icon": "fa:flash",
-      "name": "Completion",
-      "description": "Shows possible completions of currently-loaded symbols"
+      "name": "Completion"
     },
     "feat:docs": {
       "@id": "feat:docs",
+      "description": "Shows documentation of a currently loaded symbol",
       "icon": "fa:bookmark",
-      "name": "Live Doc",
-      "description": "Shows documentation of a currently loaded symbol"
+      "name": "Live Doc"
     },
     "feat:envext": {
       "@id": "feat:envext",
+      "description": "Extends the implemented environment with text symbols",
       "icon": "fa:level-up",
-      "name": "Metas",
-      "description": "Extends the implemented environment with text symbols"
+      "name": "Metas"
     },
     "feat:widgets": {
       "@id": "feat:widgets",
+      "description": "Offers reactive UI elements in the frontend linked to backend data",
       "icon": "fa:sliders",
-      "name": "Widgets",
-      "description": "Offers reactive UI elements in the frontend linked to backend data"
+      "name": "Widgets"
     }
   },
   "kernels": {
@@ -103,25 +125,27 @@
     },
     "kern:calysto-scheme": {
       "@id": "kern:calysto-scheme",
-      "name": "Calysto Scheme",
-      "url": "https://github.com/Calysto/calysto_scheme",
-      "version": "0.8.2",
-      "environments" : {
+      "actions": {
+        "act:github": "gh:Calysto/calysto_scheme"
+      },
+      "description": "Calysto Scheme is a real Scheme programming environment with full support for continuations, including call/cc. It can also use all Python libraries. It has some extensions that make it useful (stepper-debugger, choose/fail, stack traces), or make it integrated with Python.",
+      "environments": {
         "env:scheme": {
-          "versions": ["2", "3"]
+          "versions": [
+            "2",
+            "3"
+          ]
         }
       },
-      "logo": "https://cdn.rawgit.com/Calysto/calysto_scheme/917d855dcae3ebc1f6f2c2024a48c78570421f30/calysto_scheme/images/logo-64x64.png",
       "features": [
         "feat:autocomplete",
         "feat:docs",
         "feat:envext"
       ],
-
-      "actions": {
-        "act:github": "gh:Calysto/calysto_scheme"
-      },
-      "description": "Calysto Scheme is a real Scheme programming environment with full support for continuations, including call/cc. It can also use all Python libraries. It has some extensions that make it useful (stepper-debugger, choose/fail, stack traces), or make it integrated with Python."
+      "logo": "https://cdn.rawgit.com/Calysto/calysto_scheme/917d855dcae3ebc1f6f2c2024a48c78570421f30/calysto_scheme/images/logo-64x64.png",
+      "name": "Calysto Scheme",
+      "url": "https://github.com/Calysto/calysto_scheme",
+      "version": "0.8.2"
     },
     "kern:clojure-kernel": {
       "@id": "kern:clojure-kernel",
@@ -185,17 +209,19 @@
         "act:try": "try:IJulia"
       },
       "description": "IJulia is a Julia-environment backend combined with the IPython interactive environment (soon to be called Jupyter). This combination allows you to interact with the Julia environment using Jupyter/IPython's powerful graphical notebook, which combines code, formatted text, math, and multimedia in a single document.",
+      "environments": {
+        "env:julia": {
+          "versions": [
+            "0.3.8"
+          ]
+        }
+      },
       "features": [
         "feat:autocomplete",
         "feat:docs",
         "feat:envext",
         "feat:widgets"
       ],
-      "environments": {
-        "env:julia": {
-          "versions": ["0.3.8"]
-        }
-      },
       "logo": "https://cdn.rawgit.com/JuliaLang/IJulia.jl/master/deps/logo-64x64.png",
       "name": "IJulia",
       "url": "http://nbviewer.ipython.org/url/jdj.mit.edu/~stevenj/IJulia%20Preview.ipynb",
@@ -239,21 +265,25 @@
         "act:try": "try:IPython"
       },
       "description": "The original Jupyter Kernel, IPython provides Python, a general purpose programming environment.",
+      "environments": {
+        "env:python": {
+          "versions": [
+            "2.7",
+            "3.3",
+            "3.4"
+          ]
+        }
+      },
       "features": [
         "feat:autocomplete",
         "feat:docs",
         "feat:envext",
         "feat:widgets"
       ],
-      "environments": {
-        "env:python": {
-          "versions": ["2.7", "3.3", "3.4"]
-        }
-      },
       "logo": "python/logo-64x64.png",
       "name": "IPython",
-      "version": "3.0",
-      "url": "http://ipython.org/"
+      "url": "http://ipython.org/",
+      "version": "3.0"
     },
     "kern:irkernel": {
       "@id": "kern:irkernel",
@@ -262,19 +292,22 @@
         "act:try": "try:ir"
       },
       "description": "This is still experimental. Your code should be safe, since IPython handles saving and loading notebooks in another process, but you'll lose all your variables if it crashes.",
+      "environments": {
+        "env:r": {
+          "versions": [
+            "3.2.0",
+            "3.1.3"
+          ]
+        }
+      },
       "features": [
         "feat:autocomplete",
         "feat:envext"
       ],
-      "environments": {
-        "env:r": {
-          "versions": ["3.2.0", "3.1.3"]
-        }
-      },
       "logo": "https://cdn.rawgit.com/IRkernel/IRkernel/master/inst/kernelspec/logo-64x64.png",
       "name": "IRKernel",
-      "version": "0.4",
-      "url": "https://github.com/takluyver/IRkernel"
+      "url": "https://github.com/takluyver/IRkernel",
+      "version": "0.4"
     },
     "kern:iruby": {
       "@id": "kern:iruby",
@@ -350,28 +383,6 @@
       "@id": "kern:spark-kernel",
       "name": "Spark Kernel",
       "url": "https://github.com/ibm-et/spark-kernel"
-    }
-  },
-  "environments": {
-    "env:python": {
-      "@id": "env:python",
-      "name": "Python",
-      "url": "http://python.org"
-    },
-    "env:julia": {
-      "@id": "env:julia",
-      "name": "Julia",
-      "url": "http://julialang.org/"
-    },
-    "env:r": {
-      "@id": "env:r",
-      "name": "R",
-      "url": "http://www.r-project.org/"
-    },
-    "env:scheme": {
-      "@id": "env:scheme",
-      "name": "Scheme",
-      "url": "https://en.wikipedia.org/wiki/Scheme_(programming_environment)"
     }
   }
 }
