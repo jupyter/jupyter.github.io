@@ -18,22 +18,23 @@
 </head>
 
 <body>
-  <header class="container container-fixed well jumbotron">
+  <div class="container jumbotron">
+    <a href="../" class="brand-logo col-xs-2 text-center">
+      <img src="../images/jupyter-sq-text.svg" class="image-responsive">
+    </a>
+    <h1 class="col-md-8 hide-watershed">
+      <span>Kernels</span>
+    </h1>
+  </div>
+  <header class="container container-fixed well">
     <div class="filters">
       <div class="row">
-        <a href="../" class="brand-logo col-xs-2">
-          <img src="../images/jupyter-sq-text.svg" class="image-responsive">
-        </a>
-        <h1 class="col-md-8 hide-watershed">
-          <span>Kernels</span>
-        </h1>
-        <p class="lead col-md-10">
-          Along with <a href="#frontends">Frontends</a>, <strong>Kernels</strong> make
+        <h1 class="leader col-md-12 text-center">
+          Make computing more
+          <strong>interactive</strong>, <strong>reproducible</strong>, and <strong>productive</strong> in
           <input type="text"
-            class="form-control search-kernels input-lg"
-            placeholder="computing">
-          <strong>interactive</strong>, <strong>reproducible</strong>, and <strong>productive</strong>.
-        </p>
+            class="form-control search-kernels input-lg">
+        </h1>
         <div class="col-md-5 shrink-watershed">
           <h4 class="hide-watershed">Features</h4>
           <div class="features"></div>
@@ -55,21 +56,21 @@
   </div>
 
   <div class="container well">
-    <h2>Don't see your language?</h2>
+    <h2>Don't see your environment?</h2>
     <p>
-      Writing a Jupyter Kernel for your language, database or other computing environment adds a powerful REPL and interactivity for your users.
+      Writing a Jupyter Kernel for your environment, database or other computing environment adds a powerful REPL and interactivity for your users.
     </p>
 
     <div class="row steps">
       <div class="col-md-4">
         <h3>
           <a href="http://ipython.org/ipython-doc/dev/development/wrapperkernels.html">
-          <p>Wrap your Language</p>
+          <p>Wrap your environment</p>
           <i class="fa fa-gift fa-5x"></i>
         </a>
         </h3>
         <p>
-            Much of the Jupyter machinery is written in Python: if your language can be called from Python, you can <a href="http://ipython.org/ipython-doc/dev/development/wrapperkernels.html">take advantage</a> of existing work to create your kernel.
+            Much of the Jupyter machinery is written in Python: if your environment can be called from Python, you can <a href="http://ipython.org/ipython-doc/dev/development/wrapperkernels.html">take advantage</a> of existing work to create your kernel.
         </p>
 
         <h3 class="text-center text-muted">
@@ -82,7 +83,7 @@
         </a>
         </h3>
         <p>
-          Jupyter uses <a href="http://zeromq.org/">ØMQ</a> for high-performance communication between clients and the kernel. You can implement the <a href="http://ipython.org/ipython-doc/dev/development/kernels.html">message spec</a> directly in ZMQ for maximum performance and language specificity.
+          Jupyter uses <a href="http://zeromq.org/">ØMQ</a> for high-performance communication between clients and the kernel. You can implement the <a href="http://ipython.org/ipython-doc/dev/development/kernels.html">message spec</a> directly in ZMQ for maximum performance and environment specificity.
         </p>
       </div>
       <div class="col-md-4">

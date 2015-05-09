@@ -24,10 +24,10 @@
       "@id": "kern:#kernel",
       "@type": "@id"
     },
-    "lang": "jupy:Language/",
-    "languages": {
+    "env": "jupy:Environment/",
+    "environments": {
       "@container": "@index",
-      "@id": "lang:#language",
+      "@id": "env:#environment",
       "@type": "@id"
     },
     "name": "rdfs:label",
@@ -67,11 +67,11 @@
       "name": "Live Doc",
       "description": "Shows documentation of a currently loaded symbol"
     },
-    "feat:langext": {
-      "@id": "feat:langext",
+    "feat:envext": {
+      "@id": "feat:envext",
       "icon": "fa:level-up",
       "name": "Metas",
-      "description": "Extends the implemented language with text symbols"
+      "description": "Extends the implemented environment with text symbols"
     },
     "feat:widgets": {
       "@id": "feat:widgets",
@@ -106,8 +106,8 @@
       "name": "Calysto Scheme",
       "url": "https://github.com/Calysto/calysto_scheme",
       "version": "0.8.2",
-      "languages" : {
-        "lang:scheme": {
+      "environments" : {
+        "env:scheme": {
           "versions": ["2", "3"]
         }
       },
@@ -115,13 +115,13 @@
       "features": [
         "feat:autocomplete",
         "feat:docs",
-        "feat:langext"
+        "feat:envext"
       ],
-      
+
       "actions": {
         "act:github": "gh:Calysto/calysto_scheme"
       },
-      "description": "Calysto Scheme is a real Scheme programming language with full support for continuations, including call/cc. It can also use all Python libraries. It has some extensions that make it useful (stepper-debugger, choose/fail, stack traces), or make it integrated with Python."
+      "description": "Calysto Scheme is a real Scheme programming environment with full support for continuations, including call/cc. It can also use all Python libraries. It has some extensions that make it useful (stepper-debugger, choose/fail, stack traces), or make it integrated with Python."
     },
     "kern:clojure-kernel": {
       "@id": "kern:clojure-kernel",
@@ -184,15 +184,15 @@
         "act:github": "gh:JuliaLang/IJulia.jl",
         "act:try": "try:IJulia"
       },
-      "description": "IJulia is a Julia-language backend combined with the IPython interactive environment (soon to be called Jupyter). This combination allows you to interact with the Julia language using Jupyter/IPython's powerful graphical notebook, which combines code, formatted text, math, and multimedia in a single document.",
+      "description": "IJulia is a Julia-environment backend combined with the IPython interactive environment (soon to be called Jupyter). This combination allows you to interact with the Julia environment using Jupyter/IPython's powerful graphical notebook, which combines code, formatted text, math, and multimedia in a single document.",
       "features": [
         "feat:autocomplete",
         "feat:docs",
-        "feat:langext",
+        "feat:envext",
         "feat:widgets"
       ],
-      "languages": {
-        "lang:julia": {
+      "environments": {
+        "env:julia": {
           "versions": ["0.3.8"]
         }
       },
@@ -238,15 +238,15 @@
         "act:github": "gh:ipython/ipython",
         "act:try": "try:IPython"
       },
-      "description": "The original Jupyter Kernel, IPython provides Python, a general purpose programming language.",
+      "description": "The original Jupyter Kernel, IPython provides Python, a general purpose programming environment.",
       "features": [
         "feat:autocomplete",
         "feat:docs",
-        "feat:langext",
+        "feat:envext",
         "feat:widgets"
       ],
-      "languages": {
-        "lang:python": {
+      "environments": {
+        "env:python": {
           "versions": ["2.7", "3.3", "3.4"]
         }
       },
@@ -264,10 +264,10 @@
       "description": "This is still experimental. Your code should be safe, since IPython handles saving and loading notebooks in another process, but you'll lose all your variables if it crashes.",
       "features": [
         "feat:autocomplete",
-        "feat:langext"
+        "feat:envext"
       ],
-      "languages": {
-        "lang:r": {
+      "environments": {
+        "env:r": {
           "versions": ["3.2.0", "3.1.3"]
         }
       },
@@ -352,26 +352,26 @@
       "url": "https://github.com/ibm-et/spark-kernel"
     }
   },
-  "languages": {
-    "lang:python": {
-      "@id": "lang:python",
+  "environments": {
+    "env:python": {
+      "@id": "env:python",
       "name": "Python",
       "url": "http://python.org"
     },
-    "lang:julia": {
-      "@id": "lang:julia",
+    "env:julia": {
+      "@id": "env:julia",
       "name": "Julia",
       "url": "http://julialang.org/"
     },
-    "lang:r": {
-      "@id": "lang:r",
+    "env:r": {
+      "@id": "env:r",
       "name": "R",
       "url": "http://www.r-project.org/"
     },
-    "lang:scheme": {
-      "@id": "lang:scheme",
+    "env:scheme": {
+      "@id": "env:scheme",
       "name": "Scheme",
-      "url": "https://en.wikipedia.org/wiki/Scheme_(programming_language)"
+      "url": "https://en.wikipedia.org/wiki/Scheme_(programming_environment)"
     }
   }
 }

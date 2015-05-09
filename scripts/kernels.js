@@ -1,10 +1,8 @@
 ;(function(d3){
-  var WATERSHED = 400;
-
   var _actions = {},
     _context = {};
     _features = {},
-    _languages = {},
+    _environments = {},
     _kernels = {},
     _search = "",
     _sorts = {
@@ -18,11 +16,11 @@
         icon: "fa:archive",
         get: function(k){ return k.name.toLowerCase(); }
       },
-      language: {
-        name: "Language",
+      environment: {
+        name: "environment",
         icon: "fa:language",
         get: function(k){
-          return (d3.entries(k.languages || {"lang:zzz": 1}))[0].key;
+          return (d3.entries(k.environments || {"env:N/A": 1}))[0].key;
         }
       },
       // TODO: decide how to get date...
@@ -56,7 +54,8 @@
   var header = d3.select("header"),
     brand = header.select(".brand"),
     brandLogo = header.select(".brand-logo"),
-    lead = header.select(".lead"),
+    leader = header.select(".leader"),
+    kernelCount = leader.select(".kernel-count"),
     searchKernels = header.select(".search-kernels"),
     sorts = header.select(".kernel-sorts").classed({
         "btn-group": 1,
@@ -69,31 +68,34 @@
       })
       .attr({role: "group"}),
     features = header.select(".features"),
-    kernels = d3.select(".kernels")
-      .style({
-        "margin-top": header.node().clientHeight + "px"
-      }),
-    body = d3.select("body");
+    kernels = d3.select(".kernels"),
+    body = d3.select("body"),
+    jumbo = d3.select(".jumbotron");
 
+  var WATERSHED = +jumbo.node().clientHeight;
 
-  function watershedClasses(pre, post){
+  function watershedClasses(watershed, pre, post){
     var clses = {};
-    clses[pre] = window.scrollY < WATERSHED;
+    clses[pre] = watershed;
     clses[post] = !clses[pre];
     return clses;
   }
 
 
   function scroll(){
-    header.classed(watershedClasses("pre-watershed", "post-watershed"));
-    brandLogo.classed(watershedClasses("col-xs-2", "col-xs-1"));
+    var ws = window.scrollY < WATERSHED;
+    header.classed(watershedClasses(ws, "pre-watershed", "post-watershed"));
+    brandLogo.classed(watershedClasses(ws, "col-xs-2", "col-xs-1"));
 
     header.selectAll(".shrink-watershed")
-      .classed(watershedClasses("col-md-5", "col-md-4"));
+      .classed(watershedClasses(ws, "col-md-5", "col-md-4"));
 
-    kernels.transition().style({
-      "margin-top": header.node().clientHeight + "px"
-    });
+    header.selectAll(".fa")
+      .classed(watershedClasses(ws, "fa-2x", "fa-1x"));
+
+    kernels.style({
+      "margin-top": ws ? 0 : header.node().clientHeight + "px"
+    })
   }
 
 
@@ -101,7 +103,6 @@
     searchKernels
       .on("input", function(){
         _search = searchKernels.property("value");
-        window.scrollTo(0, window.scrollY > WATERSHED ? WATERSHED + 1: 0);
         update();
       });
 
@@ -187,7 +188,7 @@
     _context = data["@context"];
     _features = data.features;
     _kernels = data.kernels;
-    _languages = data.languages;
+    _environments = data.environments;
 
     update();
   }
@@ -249,6 +250,10 @@
         update();
       });
 
+    searchKernels.attr({
+      placeholder: d3.keys(_environments).length + " languages & environments"
+    })
+
     feature.selectAll("div")
       .data(function(d){ return [d]; })
       .enter()
@@ -256,17 +261,22 @@
       .classed({"hide-watershed": 1})
       .text(function(d){ return d.value.name; });
 
-    var kernelData = stackKernels(d3.entries(_kernels)
-      .filter(filterKernels())
-      .sort(sortKernels));
+    var kernelData = d3.entries(_kernels)
+        .filter(filterKernels())
+        .sort(sortKernels),
+      columnData = stackKernels(kernelData);
+
+    kernelCount
+      .transition()
+      .text(kernelData.length);
 
     var column = kernels.selectAll(".kernel-col")
-      .data(kernelData)
+      .data(columnData)
 
     column.exit().remove();
     column.enter().append("div");
     column.attr("class", function(d){
-      return "kernel-col col-md-" + (12 / kernelData.length);
+      return "kernel-col col-md-" + (12 / columnData.length);
     });
 
     var kernel = column
@@ -323,15 +333,15 @@
           return hit +
             (d.value.name.toLowerCase().indexOf(bit) !== -1) +
             ((d.value.description || "").toLowerCase().indexOf(bit) !== -1) +
-            (searchLanguages(bit, d.value.languages));
+            (searchEnvironments(bit, d.value.environments));
         }, 0);
       return searchHit && featureHit;
     };
   }
 
-  function searchLanguages(q, languages){
-    return d3.entries(languages).reduce(function(hit, d){
-      return hit + (_languages[d.key].name.toLowerCase().indexOf(q) !== -1);
+  function searchEnvironments(q, environments){
+    return d3.entries(environments).reduce(function(hit, d){
+      return hit + (_environments[d.key].name.toLowerCase().indexOf(q) !== -1);
     }, 0);
   }
 
@@ -384,6 +394,7 @@
   function updateKernel(kernel){
     kernel.style({"z-index": function(d, i){ return 999 - i; }});
     kernel.select(".detail")
+      .filter()
       .classed({
         hide: function(d){
           return !(d.value.expanded || (_mode === _modes.card));
@@ -417,19 +428,19 @@
       .classed({version: 1, "text-muted": 1})
       .text(function(d){ return d.value.version; });
 
-    var lang = body.filter(function(d){ return d.value.languages; })
+    var lang = body.filter(function(d){ return d.value.environments; })
       .append("div")
-      .selectAll(".language")
-      .data(function(d){ return d3.entries(d.value.languages); })
+      .selectAll(".environment")
+      .data(function(d){ return d3.entries(d.value.environments); })
       .enter()
       .append("div")
-      .classed({language: 1});
+      .classed({environment: 1});
 
     lang.append("a")
       .text(function(d){
-        return _languages[d.key].name;
+        return _environments[d.key].name;
       })
-      .attr({href: function(d){ return  _languages[d.key].url; }});
+      .attr({href: function(d){ return  _environments[d.key].url; }});
 
     lang.selectAll(".version")
       .data(function(d){ return d.value.versions; })
