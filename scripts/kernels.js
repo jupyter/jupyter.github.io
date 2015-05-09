@@ -33,8 +33,8 @@
       }
     },
     _modes = {
-      chit: {
-        name: "Chit",
+      cell: {
+        name: "Cell",
         icon: "fa:th"
       },
       card: {
@@ -46,7 +46,7 @@
         icon: "fa:list"
       }
     },
-    _mode = _modes.chit,
+    _mode = _modes.cell,
     _sort = _sorts.features,
     _sortDir = "descending";
 
@@ -154,7 +154,6 @@
       .classed({btn: 1, mode: 1})
       .on("click", function(d){
         _mode = d.value;
-        body.classed("")
         updateUI();
         update();
       }).call(function(mode){
@@ -183,14 +182,14 @@
     };
   }
 
-  function kernelsLoaded(err, data){
+  function dataLoaded(err, data){
     _actions = data.actions;
     _context = data["@context"];
     _features = data.features;
     _kernels = data.kernels;
     _environments = data.environments;
-
     update();
+    scroll();
   }
 
 
@@ -394,7 +393,6 @@
   function updateKernel(kernel){
     kernel.style({"z-index": function(d, i){ return 999 - i; }});
     kernel.select(".detail")
-      .filter()
       .classed({
         hide: function(d){
           return !(d.value.expanded || (_mode === _modes.card));
@@ -495,7 +493,7 @@
   }
 
   // finally, do some stuff
-  d3.json("./kernels.json", kernelsLoaded);
+  d3.json("./kernels.json", dataLoaded);
 
   updateUI();
   scroll();
