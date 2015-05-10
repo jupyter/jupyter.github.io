@@ -149,6 +149,11 @@
         "feat:envext"
       ],
       "logo": "https://cdn.rawgit.com/Calysto/calysto_scheme/917d855dcae3ebc1f6f2c2024a48c78570421f30/calysto_scheme/images/logo-64x64.png",
+      "metrics": {
+        "gh:forks": 2,
+        "gh:stargazers": 0,
+        "gh:updated": "2015-05-06T19:03:38+00:00"
+      },
       "name": "Calysto Scheme",
       "url": "https://github.com/Calysto/calysto_scheme",
       "version": "0.8.2"
@@ -156,36 +161,57 @@
     "kern:clojure-kernel": {
       "@id": "kern:clojure-kernel",
       "name": "Clojure Kernel",
+      "actions": {
+        "act:github": "gh:roryk/ipython-clojure"
+      },
       "url": "https://github.com/roryk/ipython-clojure"
     },
     "kern:hy-kernel": {
       "@id": "kern:hy-kernel",
       "name": "Hy Kernel",
+      "actions": {
+        "act:github": "gh:bollwyvl/hy_kernel"
+      },
       "url": "https://github.com/bollwyvl/hy_kernel/"
     },
     "kern:ialdor": {
       "@id": "kern:ialdor",
       "name": "IAldor",
+      "actions": {
+        "act:github": "gh:mattpap/IAldor"
+      },
       "url": "https://github.com/mattpap/IAldor"
     },
     "kern:icsharp": {
       "@id": "kern:icsharp",
       "name": "ICSharp",
+      "actions": {
+        "act:github": "gh:zabirauf/icsharp"
+      },
       "url": "https://github.com/zabirauf/icsharp"
     },
     "kern:idl-kernel": {
       "@id": "kern:idl-kernel",
       "name": "idl_kernel",
+      "actions": {
+        "act:github": "gh:lstagner/idl_kernel"
+      },
       "url": "https://github.com/lstagner/idl_kernel"
     },
     "kern:ierlang": {
       "@id": "kern:ierlang",
       "name": "IErlang",
+      "actions": {
+        "act:github": "gh:robbielynch/ierlang"
+      },
       "url": "https://github.com/robbielynch/ierlang"
     },
     "kern:iforth": {
       "@id": "kern:iforth",
       "name": "IForth",
+      "actions": {
+        "act:github": "gh:jdfreder/iforth"
+      },
       "url": "https://github.com/jdfreder/iforth"
     },
     "kern:ifsharp": {
@@ -196,11 +222,17 @@
     "kern:igo": {
       "@id": "kern:igo",
       "name": "IGo",
+      "actions": {
+        "act:github": "gh:takluyver/igo"
+      },
       "url": "https://github.com/takluyver/igo"
     },
     "kern:ihaskell": {
       "@id": "kern:ihaskell",
       "name": "IHaskell",
+      "actions": {
+        "act:github": "gh:gibiansky/IHaskell"
+      },
       "url": "http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/IHaskell.ipynb"
     },
     "kern:ijavascript": {
@@ -229,6 +261,11 @@
         "feat:widgets"
       ],
       "logo": "https://cdn.rawgit.com/JuliaLang/IJulia.jl/master/deps/logo-64x64.png",
+      "metrics": {
+        "gh:forks": 80,
+        "gh:stargazers": 636,
+        "gh:updated": "2015-05-08T20:10:51+00:00"
+      },
       "name": "IJulia",
       "url": "http://nbviewer.ipython.org/url/jdj.mit.edu/~stevenj/IJulia%20Preview.ipynb",
       "version": "0.4"
@@ -241,16 +278,25 @@
     "kern:imatlab": {
       "@id": "kern:imatlab",
       "name": "IMatlab",
+      "actions": {
+        "act:github": "gh:calysto/matlab_kernel"
+      },
       "url": "https://github.com/calysto/matlab_kernel"
     },
     "kern:iocaml": {
       "@id": "kern:iocaml",
       "name": "IOCaml",
+      "actions": {
+        "act:github": "gh:andrewray/iocaml"
+      },
       "url": "https://github.com/andrewray/iocaml"
     },
     "kern:ioctave": {
       "@id": "kern:ioctave",
       "name": "IOctave",
+      "actions": {
+        "act:github": "gh:calysto/octave_kernel"
+      },
       "url": "https://github.com/calysto/octave_kernel"
     },
     "kern:iperl": {
@@ -261,6 +307,9 @@
     "kern:iperl6": {
       "@id": "kern:iperl6",
       "name": "IPerl6",
+      "actions": {
+        "act:github": "gh:timo/iperl6kernel"
+      },
       "url": "https://github.com/timo/iperl6kernel"
     },
     "kern:ipython": {
@@ -287,6 +336,11 @@
         "feat:widgets"
       ],
       "logo": "python/logo-64x64.png",
+      "metrics": {
+        "gh:forks": 1912,
+        "gh:stargazers": 6444,
+        "gh:updated": "2015-05-09T21:50:19+00:00"
+      },
       "name": "IPython",
       "url": "http://ipython.org/",
       "version": "3.0"
@@ -295,7 +349,8 @@
       "@id": "kern:irkernel",
       "actions": {
         "act:docker": "docker:adrianliaw/jupyter-irkernel",
-        "act:try": "try:ir"
+        "act:try": "try:ir",
+        "act:github": "gh:takluyver/IRkernel"
       },
       "description": "This is still experimental. Your code should be safe, since IPython handles saving and loading notebooks in another process, but you'll lose all your variables if it crashes.",
       "environments": {
@@ -318,16 +373,25 @@
     "kern:iruby": {
       "@id": "kern:iruby",
       "name": "IRuby",
+      "actions": {
+        "act:github": "gh:minad/iruby"
+      },
       "url": "http://nbviewer.ipython.org/github/minad/iruby/blob/master/IRuby-Example.ipynb"
     },
     "kern:iscala": {
       "@id": "kern:iscala",
       "name": "IScala",
+      "actions": {
+        "act:github": "gh:mattpap/IScala"
+      },
       "url": "https://github.com/mattpap/IScala"
     },
     "kern:iscilab": {
       "@id": "kern:iscilab",
       "name": "IScilab",
+      "actions": {
+        "act:github": "gh:blink1073/scilab_kernel"
+      },
       "url": "https://github.com/blink1073/scilab_kernel"
     },
     "kern:ivisual-vpython-kernel": {
@@ -348,11 +412,17 @@
     "kern:lua-kernel": {
       "@id": "kern:lua-kernel",
       "name": "Lua Kernel",
+      "actions": {
+        "act:github": "gh:neomantra/lua_ipython_kernel"
+      },
       "url": "https://github.com/neomantra/lua_ipython_kernel"
     },
     "kern:luajit-torch": {
       "@id": "kern:luajit-torch",
       "name": "LuaJIT/Torch",
+      "actions": {
+        "act:github": "gh:facebook/iTorch"
+      },
       "url": "https://github.com/facebook/iTorch"
     },
     "kern:metakernel-bash": {
@@ -368,30 +438,48 @@
     "kern:mochi-kernel": {
       "@id": "kern:mochi-kernel",
       "name": "Mochi Kernel",
+      "actions": {
+        "act:github": "gh:pya/mochi-kernel"
+      },
       "url": "https://github.com/pya/mochi-kernel"
     },
     "kern:redis-kernel": {
       "@id": "kern:redis-kernel",
       "name": "Redis Kernel",
+      "actions": {
+        "act:github": "gh:supercoderz/redis_kernel"
+      },
       "url": "https://github.com/supercoderz/redis_kernel"
     },
     "kern:simple-example-kernel": {
       "@id": "kern:simple-example-kernel",
       "name": "Simple example kernel",
+      "actions": {
+        "act:github": "gh:dsblank/simple_kernel"
+      },
       "url": "https://github.com/dsblank/simple_kernel"
     },
     "kern:skulpt-python-kernel": {
       "@id": "kern:skulpt-python-kernel",
       "name": "Skulpt Python Kernel",
+      "actions": {
+        "act:github": "gh:Calysto/skulpt_python"
+      },
       "url": "https://github.com/Calysto/skulpt_python"
     },
     "kern:spark-kernel": {
       "@id": "kern:spark-kernel",
       "name": "Spark Kernel",
+      "actions": {
+        "act:github": "gh:ibm-et/spark-kernel"
+      },
       "url": "https://github.com/ibm-et/spark-kernel"
     }
   },
   "metrics": {
+    "gh:updated": {
+      "icon": "fa:heartbeat"
+    },
     "gh:stargazers": {
       "icon": "fa:star"
     },
