@@ -17,6 +17,7 @@
     "bootstrap": "~3.3.4",
     "font-awesome": "~4.3.0",
     "d3": "~3.5.5",
-    "bootstrap-material-design": "~0.3.0"
+    "bootstrap-material-design": "~0.3.0",
+    "moment": "~2.10.2"
   }
 }

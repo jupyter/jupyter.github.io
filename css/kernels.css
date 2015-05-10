@@ -7,6 +7,10 @@
   white-space:pre-wrap;
 }
 
+.panel-body {
+  position: relative;
+}
+
 /* bootstrap-material-design overloads */
 * {
   font-family: "RobotoDraft", Helvetica, sans-serif;
@@ -96,6 +100,12 @@ header .feature span {
   margin: 0 5px;
 }
 
+.metric {
+  margin-right: 10px;
+  display: block;
+  float: left;
+}
+
 .kernel .features {
   margin: 5px 0;
 }
@@ -105,8 +115,9 @@ header .feature span {
 }
 
 .kernel .reveal-card {
-  margin: -13px;
-  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 .kernel .reveal-card:hover {
   opacity: 1.0;

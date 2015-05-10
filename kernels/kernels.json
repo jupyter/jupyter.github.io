@@ -160,58 +160,101 @@
     },
     "kern:clojure-kernel": {
       "@id": "kern:clojure-kernel",
-      "name": "Clojure Kernel",
       "actions": {
         "act:github": "gh:roryk/ipython-clojure"
       },
+      "description": "Write Clojure code in the IPython console and notebook",
+      "metrics": {
+        "gh:forks": 3,
+        "gh:stargazers": 18,
+        "gh:updated": "2015-05-07T20:47:25+00:00"
+      },
+      "name": "Clojure Kernel",
       "url": "https://github.com/roryk/ipython-clojure"
     },
     "kern:hy-kernel": {
       "@id": "kern:hy-kernel",
-      "name": "Hy Kernel",
       "actions": {
         "act:github": "gh:bollwyvl/hy_kernel"
       },
+      "description": "A simple  IPython kernel for Hy",
+      "logo": "https://cdn.rawgit.com/bollwyvl/hy_kernel/982ed1b35df7a5307d5b934320c53cc79ee39dc1/hy_kernel/assets/logo-64x64.png",
+      "metrics": {
+        "gh:forks": 1,
+        "gh:stargazers": 8,
+        "gh:updated": "2015-05-08T22:11:15+00:00"
+      },
+      "name": "Hy Kernel",
       "url": "https://github.com/bollwyvl/hy_kernel/"
     },
     "kern:ialdor": {
       "@id": "kern:ialdor",
-      "name": "IAldor",
       "actions": {
         "act:github": "gh:mattpap/IAldor"
       },
+      "description": "Aldor backend for IPython",
+      "metrics": {
+        "gh:forks": 0,
+        "gh:stargazers": 0,
+        "gh:updated": "2014-01-20T18:30:40+00:00"
+      },
+      "name": "IAldor",
       "url": "https://github.com/mattpap/IAldor"
     },
     "kern:icsharp": {
       "@id": "kern:icsharp",
-      "name": "ICSharp",
       "actions": {
         "act:github": "gh:zabirauf/icsharp"
       },
+      "description": "C# kernel for IPython",
+      "metrics": {
+        "gh:forks": 3,
+        "gh:stargazers": 16,
+        "gh:updated": "2015-05-07T13:48:12+00:00"
+      },
+      "name": "ICSharp",
       "url": "https://github.com/zabirauf/icsharp"
     },
     "kern:idl-kernel": {
       "@id": "kern:idl-kernel",
-      "name": "idl_kernel",
       "actions": {
         "act:github": "gh:lstagner/idl_kernel"
       },
+      "description": "An IDL/GDL Jupyter kernel",
+      "metrics": {
+        "gh:forks": 0,
+        "gh:stargazers": 4,
+        "gh:updated": "2015-01-31T00:40:33+00:00"
+      },
+      "name": "idl_kernel",
       "url": "https://github.com/lstagner/idl_kernel"
     },
     "kern:ierlang": {
       "@id": "kern:ierlang",
-      "name": "IErlang",
       "actions": {
         "act:github": "gh:robbielynch/ierlang"
       },
+      "description": "An Erlang language kernel for IPython.",
+      "metrics": {
+        "gh:forks": 7,
+        "gh:stargazers": 101,
+        "gh:updated": "2015-05-04T15:55:41+00:00"
+      },
+      "name": "IErlang",
       "url": "https://github.com/robbielynch/ierlang"
     },
     "kern:iforth": {
       "@id": "kern:iforth",
-      "name": "IForth",
       "actions": {
         "act:github": "gh:jdfreder/iforth"
       },
+      "description": "Forth kernel for the IPython notebook",
+      "metrics": {
+        "gh:forks": 0,
+        "gh:stargazers": 1,
+        "gh:updated": "2014-08-09T14:24:51+00:00"
+      },
+      "name": "IForth",
       "url": "https://github.com/jdfreder/iforth"
     },
     "kern:ifsharp": {
@@ -221,18 +264,32 @@
     },
     "kern:igo": {
       "@id": "kern:igo",
-      "name": "IGo",
       "actions": {
         "act:github": "gh:takluyver/igo"
       },
+      "description": "Go Kernel for IPython",
+      "logo": "https://cdn.rawgit.com/takluyver/igo/618db4d6dab385436f02490c971337870bdb8574/kernel/logo-64x64.png",
+      "metrics": {
+        "gh:forks": 3,
+        "gh:stargazers": 32,
+        "gh:updated": "2015-04-30T12:38:37+00:00"
+      },
+      "name": "IGo",
       "url": "https://github.com/takluyver/igo"
     },
     "kern:ihaskell": {
       "@id": "kern:ihaskell",
-      "name": "IHaskell",
       "actions": {
         "act:github": "gh:gibiansky/IHaskell"
       },
+      "description": "A Haskell kernel for IPython.",
+      "logo": "https://cdn.rawgit.com/gibiansky/IHaskell/8eaf1aa65d6cb14166ba5bb5f5659424b48882d2/html/logo-64x64.png",
+      "metrics": {
+        "gh:forks": 82,
+        "gh:stargazers": 853,
+        "gh:updated": "2015-05-09T14:15:27+00:00"
+      },
+      "name": "IHaskell",
       "url": "http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/IHaskell.ipynb"
     },
     "kern:ijavascript": {
@@ -260,7 +317,7 @@
         "feat:envext",
         "feat:widgets"
       ],
-      "logo": "https://cdn.rawgit.com/JuliaLang/IJulia.jl/master/deps/logo-64x64.png",
+      "logo": "https://cdn.rawgit.com/JuliaLang/IJulia.jl/6981f1b7253657d05cca7c64f1fc5bd4b95b3a28/deps/logo-64x64.png",
       "metrics": {
         "gh:forks": 80,
         "gh:stargazers": 636,
@@ -277,26 +334,44 @@
     },
     "kern:imatlab": {
       "@id": "kern:imatlab",
-      "name": "IMatlab",
       "actions": {
         "act:github": "gh:calysto/matlab_kernel"
       },
+      "description": "Jupyter Kernel for Matlab",
+      "metrics": {
+        "gh:forks": 2,
+        "gh:stargazers": 13,
+        "gh:updated": "2015-05-08T16:26:23+00:00"
+      },
+      "name": "IMatlab",
       "url": "https://github.com/calysto/matlab_kernel"
     },
     "kern:iocaml": {
       "@id": "kern:iocaml",
-      "name": "IOCaml",
       "actions": {
         "act:github": "gh:andrewray/iocaml"
       },
+      "description": "An OCaml kernel for the IPython notebook",
+      "metrics": {
+        "gh:forks": 10,
+        "gh:stargazers": 64,
+        "gh:updated": "2015-05-08T15:41:05+00:00"
+      },
+      "name": "IOCaml",
       "url": "https://github.com/andrewray/iocaml"
     },
     "kern:ioctave": {
       "@id": "kern:ioctave",
-      "name": "IOctave",
       "actions": {
         "act:github": "gh:calysto/octave_kernel"
       },
+      "description": "An Octave kernel for IPython",
+      "metrics": {
+        "gh:forks": 1,
+        "gh:stargazers": 12,
+        "gh:updated": "2015-05-04T10:29:50+00:00"
+      },
+      "name": "IOctave",
       "url": "https://github.com/calysto/octave_kernel"
     },
     "kern:iperl": {
@@ -306,10 +381,16 @@
     },
     "kern:iperl6": {
       "@id": "kern:iperl6",
-      "name": "IPerl6",
       "actions": {
         "act:github": "gh:timo/iperl6kernel"
       },
+      "description": null,
+      "metrics": {
+        "gh:forks": 2,
+        "gh:stargazers": 5,
+        "gh:updated": "2015-02-16T00:37:36+00:00"
+      },
+      "name": "IPerl6",
       "url": "https://github.com/timo/iperl6kernel"
     },
     "kern:ipython": {
@@ -337,9 +418,9 @@
       ],
       "logo": "python/logo-64x64.png",
       "metrics": {
-        "gh:forks": 1912,
-        "gh:stargazers": 6444,
-        "gh:updated": "2015-05-09T21:50:19+00:00"
+        "gh:forks": 1913,
+        "gh:stargazers": 6447,
+        "gh:updated": "2015-05-09T23:45:52+00:00"
       },
       "name": "IPython",
       "url": "http://ipython.org/",
@@ -349,8 +430,8 @@
       "@id": "kern:irkernel",
       "actions": {
         "act:docker": "docker:adrianliaw/jupyter-irkernel",
-        "act:try": "try:ir",
-        "act:github": "gh:takluyver/IRkernel"
+        "act:github": "gh:IRkernel/IRkernel",
+        "act:try": "try:ir"
       },
       "description": "This is still experimental. Your code should be safe, since IPython handles saving and loading notebooks in another process, but you'll lose all your variables if it crashes.",
       "environments": {
@@ -365,33 +446,56 @@
         "feat:autocomplete",
         "feat:envext"
       ],
-      "logo": "https://cdn.rawgit.com/IRkernel/IRkernel/master/inst/kernelspec/logo-64x64.png",
+      "logo": "https://cdn.rawgit.com/IRkernel/IRkernel/425dcecb20465823e6360a23577e4dfa9369685e/inst/kernelspec/logo-64x64.png",
+      "metrics": {
+        "gh:forks": 37,
+        "gh:stargazers": 179,
+        "gh:updated": "2015-05-08T19:40:07+00:00"
+      },
       "name": "IRKernel",
       "url": "https://github.com/takluyver/IRkernel",
       "version": "0.4"
     },
     "kern:iruby": {
       "@id": "kern:iruby",
-      "name": "IRuby",
       "actions": {
         "act:github": "gh:minad/iruby"
       },
+      "description": "Ruby kernel for IPython Notebook",
+      "metrics": {
+        "gh:forks": 26,
+        "gh:stargazers": 148,
+        "gh:updated": "2015-05-08T23:34:43+00:00"
+      },
+      "name": "IRuby",
       "url": "http://nbviewer.ipython.org/github/minad/iruby/blob/master/IRuby-Example.ipynb"
     },
     "kern:iscala": {
       "@id": "kern:iscala",
-      "name": "IScala",
       "actions": {
         "act:github": "gh:mattpap/IScala"
       },
+      "description": "Scala backend for IPython",
+      "metrics": {
+        "gh:forks": 37,
+        "gh:stargazers": 166,
+        "gh:updated": "2015-05-09T16:01:07+00:00"
+      },
+      "name": "IScala",
       "url": "https://github.com/mattpap/IScala"
     },
     "kern:iscilab": {
       "@id": "kern:iscilab",
-      "name": "IScilab",
       "actions": {
         "act:github": "gh:blink1073/scilab_kernel"
       },
+      "description": "A Scilab Kernel for IPython",
+      "metrics": {
+        "gh:forks": 0,
+        "gh:stargazers": 1,
+        "gh:updated": "2014-10-06T23:58:22+00:00"
+      },
+      "name": "IScilab",
       "url": "https://github.com/blink1073/scilab_kernel"
     },
     "kern:ivisual-vpython-kernel": {
@@ -411,18 +515,31 @@
     },
     "kern:lua-kernel": {
       "@id": "kern:lua-kernel",
-      "name": "Lua Kernel",
       "actions": {
         "act:github": "gh:neomantra/lua_ipython_kernel"
       },
+      "description": "IPython Kernel for Lua -- sorry I stopped working on this!!",
+      "metrics": {
+        "gh:forks": 2,
+        "gh:stargazers": 14,
+        "gh:updated": "2015-05-06T06:42:34+00:00"
+      },
+      "name": "Lua Kernel",
       "url": "https://github.com/neomantra/lua_ipython_kernel"
     },
     "kern:luajit-torch": {
       "@id": "kern:luajit-torch",
-      "name": "LuaJIT/Torch",
       "actions": {
         "act:github": "gh:facebook/iTorch"
       },
+      "description": "IPython kernel for Torch with visualization and plotting",
+      "logo": "https://cdn.rawgit.com/facebook/iTorch/659fa4bcde23b14f449d50f0540b4d2883c54deb/kernelspec/logo-64x64.png",
+      "metrics": {
+        "gh:forks": 54,
+        "gh:stargazers": 486,
+        "gh:updated": "2015-05-08T22:25:20+00:00"
+      },
+      "name": "LuaJIT/Torch",
       "url": "https://github.com/facebook/iTorch"
     },
     "kern:metakernel-bash": {
@@ -437,54 +554,85 @@
     },
     "kern:mochi-kernel": {
       "@id": "kern:mochi-kernel",
-      "name": "Mochi Kernel",
       "actions": {
         "act:github": "gh:pya/mochi-kernel"
       },
+      "description": null,
+      "metrics": {
+        "gh:forks": 1,
+        "gh:stargazers": 4,
+        "gh:updated": "2015-04-19T09:32:41+00:00"
+      },
+      "name": "Mochi Kernel",
       "url": "https://github.com/pya/mochi-kernel"
     },
     "kern:redis-kernel": {
       "@id": "kern:redis-kernel",
-      "name": "Redis Kernel",
       "actions": {
         "act:github": "gh:supercoderz/redis_kernel"
       },
+      "description": "A simple kernel to interact with a redis database from IPython",
+      "metrics": {
+        "gh:forks": 1,
+        "gh:stargazers": 3,
+        "gh:updated": "2015-05-08T13:19:17+00:00"
+      },
+      "name": "Redis Kernel",
       "url": "https://github.com/supercoderz/redis_kernel"
     },
     "kern:simple-example-kernel": {
       "@id": "kern:simple-example-kernel",
-      "name": "Simple example kernel",
       "actions": {
         "act:github": "gh:dsblank/simple_kernel"
       },
+      "description": "A small, simple kernel example for IPython",
+      "metrics": {
+        "gh:forks": 6,
+        "gh:stargazers": 15,
+        "gh:updated": "2015-03-03T21:26:06+00:00"
+      },
+      "name": "Simple example kernel",
       "url": "https://github.com/dsblank/simple_kernel"
     },
     "kern:skulpt-python-kernel": {
       "@id": "kern:skulpt-python-kernel",
-      "name": "Skulpt Python Kernel",
       "actions": {
         "act:github": "gh:Calysto/skulpt_python"
       },
+      "description": "A Skulpt Python kernel for Jupyter",
+      "logo": "https://cdn.rawgit.com/Calysto/skulpt_python/c4c5aaad4c8af6e3f945f415e7b3f7d28949c8e1/skulpt_python/images/logo-64x64.png",
+      "metrics": {
+        "gh:forks": 0,
+        "gh:stargazers": 2,
+        "gh:updated": "2015-04-07T19:06:19+00:00"
+      },
+      "name": "Skulpt Python Kernel",
       "url": "https://github.com/Calysto/skulpt_python"
     },
     "kern:spark-kernel": {
       "@id": "kern:spark-kernel",
-      "name": "Spark Kernel",
       "actions": {
         "act:github": "gh:ibm-et/spark-kernel"
       },
+      "description": "A kernel that enables applications to interact with Apache Spark.",
+      "metrics": {
+        "gh:forks": 28,
+        "gh:stargazers": 137,
+        "gh:updated": "2015-05-09T17:04:52+00:00"
+      },
+      "name": "Spark Kernel",
       "url": "https://github.com/ibm-et/spark-kernel"
     }
   },
   "metrics": {
-    "gh:updated": {
-      "icon": "fa:heartbeat"
+    "gh:forks": {
+      "icon": "fa:code-fork"
     },
     "gh:stargazers": {
       "icon": "fa:star"
     },
-    "gh:forks": {
-      "icon": "fa:code-fork"
+    "gh:updated": {
+      "icon": "fa:heartbeat"
     }
   }
 }

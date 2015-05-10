@@ -1,9 +1,12 @@
-;(function(d3){
+;(function(d3, moment){
+  "use strict";
+
   var _actions = {},
-    _context = {};
+    _context = {},
     _features = {},
     _environments = {},
     _kernels = {},
+    _metrics = {},
     _search = "",
     _sorts = {
       features: {
@@ -17,18 +20,24 @@
         get: function(k){ return k.name.toLowerCase(); }
       },
       environment: {
-        name: "environment",
+        name: "Environment",
         icon: "fa:language",
         get: function(k){
           return (d3.entries(k.environments || {"env:N/A": 1}))[0].key;
         }
       },
-      // TODO: decide how to get date...
       updated: {
         name: "Updated",
-        icon: "fa:calendar",
+        icon: "fa:heartbeat",
         get: function(k){
-          return k.name;
+          return +moment((k.metrics || {})["gh:updated"]);
+        }
+      },
+      popularity: {
+        name: "Popularity",
+        icon: "fa:star",
+        get: function(k){
+          return (k.metrics || {})["gh:stargazers"] || 0;
         }
       }
     },
@@ -87,8 +96,6 @@
     header.classed(watershedClasses(ws, "pre-watershed", "post-watershed"));
     brandLogo.classed(watershedClasses(ws, "col-xs-2", "col-xs-1"));
 
-    header.selectAll(".shrink-watershed")
-      .classed(watershedClasses(ws, "col-md-5", "col-md-4"));
 
     header.selectAll(".fa")
       .classed(watershedClasses(ws, "fa-2x", "fa-1x"));
@@ -187,6 +194,7 @@
     _context = data["@context"];
     _features = data.features;
     _kernels = data.kernels;
+    _metrics = data.metrics;
     _environments = data.environments;
     update();
     scroll();
@@ -234,6 +242,7 @@
   }
 
   function update(){
+    // belongs in UI, but driven off data
     var feature = features
       .classed({"btn-group": 1, "btn-group-justified": 1})
       .selectAll(".feature")
@@ -251,7 +260,7 @@
 
     searchKernels.attr({
       placeholder: d3.keys(_environments).length + " languages & environments"
-    })
+    });
 
     feature.selectAll("div")
       .data(function(d){ return [d]; })
@@ -447,6 +456,31 @@
       .classed({version: 1, "text-muted": 1})
       .text(String);
 
+    var metric = body.filter(function(d){ return d.value.metrics; })
+      .append("div")
+      .classed({metrics: 1})
+      .selectAll(".metric")
+      .data(function(d){ return d3.entries(_metrics).map(function(metric){
+        return {metric: metric, kernel: d};
+      })})
+      .enter()
+      .append("span")
+      .classed({metric: 1});
+
+    metric.append("i")
+      .attr({"class": function(d){ return d.metric.value.icon.replace(":", "-"); }})
+      .classed({fa: 1, "fa-fw": 1, "text-muted": 1})
+
+    metric.append("span")
+      .text(function(d){
+        var val = d.kernel.value.metrics[d.metric.key];
+        if(d.metric.key === "gh:updated"){
+          val = moment(val).fromNow();
+        }
+        return val;
+      });
+
+
     var detail = panel.append("div")
       .classed({
         detail: 1,
@@ -502,4 +536,4 @@
     .on("resize", update)
     .on("scroll", scroll);
 
-}).call(this, d3);
+}).call(this, d3, moment);
