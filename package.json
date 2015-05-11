@@ -1,0 +1,27 @@
+{
+  "name": "jupyter.github.io",
+  "version": "0.0.0",
+  "description": "[Jupyter.org](http://jupyter.org/) website files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "less": "./node_modules/.bin/lessc --source-map less/kernels.less css/kernels.css",
+    "bower": "./node_modules/.bin/bower install",
+    "build": "npm run bower && npm run less"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bollwyvl/jupyter.github.io.git"
+  },
+  "authors": [
+    "Nicholas Bollweg <nick.bollweg@gmail.com>"
+  ],
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/bollwyvl/jupyter.github.io/issues"
+  },
+  "devDependencies": {
+    "bower": "~1.4.1",
+    "less": "~2.5.0"
+  }
+}
