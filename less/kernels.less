@@ -7,16 +7,25 @@
 
 @import "variables";
 
+/* FONTS */
+* {
+  font-family: "RobotoDraft", Helvetica, sans-serif;
+}
+
+
+/* BOOTSTRAP OVERRIDES */
 .container {
   text-align: justify;
 }
-.tooltip-inner {
-  white-space:pre-wrap;
-}
-.panel-body {
-  position: relative;
+.tooltip {
+  font-size: 100%;
+  .tooltip-inner {
+    white-space:pre-wrap;
+  }
 }
 
+
+/* MODE/SCROLL AGNOSTIC STUFF */
 .masthead {
   .container;
   .jumbotron;
@@ -30,16 +39,7 @@
   }
 }
 
-* {
-  font-family: "RobotoDraft", Helvetica, sans-serif;
-}
-.tooltip {
-  font-size: 100%;
-}
-.brand-logo {
-  width: 100px;
-  height: 100px;
-}
+
 header {
   .container;
   .container-fixed;
@@ -81,9 +81,81 @@ header {
   }
 }
 
+
+.kernel {
+  margin-bottom: 48px;
+  position: relative;
+
+  .version {
+    margin-left: 10px;
+  }
+
+  .title {
+    .version {
+      font-size: 50%;
+    }
+  }
+
+  .actions {
+    margin-bottom: -24px;
+
+    .btn {
+      margin-left: 8px;
+    }
+  }
+
+  .environment {
+    label {
+      margin: 0 5px;
+    }
+  }
+
+  .features {
+    margin: 0;
+
+    .feature:first-child {
+      margin-left: -6px;
+    }
+  }
+
+  .reveal-card {
+    position: absolute;
+    right: 0;
+    top: 72px;
+  }
+
+  .metric {
+    margin-right: 10px;
+    display: block;
+    float: left;
+    &:first-child {
+      margin-left: -4px;
+    }
+  }
+}
+
+
+.steps {
+  text-align: justify;
+  .row;
+
+  .step {
+    .make-md-column(4);
+    h3 {
+      .text-center;
+    }
+    .fa {
+      .fa-5x;
+    }
+  }
+}
+
+
+/* SCROLL STUFF */
 .pre-watershed {
   header {
     position: relative;
+    margin-top: -20px;
 
     .fa {
       .fa-2x;
@@ -109,66 +181,106 @@ header {
   }
 }
 
-.kernel {
-  margin-bottom: 36px;
-  position: relative;
-  .version {
-    margin-left: 10px;
-  }
-  .title {
-    .version {
-      font-size: 50%;
+
+/* MODE STUFF */
+.mode-cell, .mode-card{
+  .kernel {
+    .logo {
+      .pull-right;
     }
-  }
-  .logo {
-    margin-left: -64px;
-  }
-  .actions {
-    margin-bottom: -38px;
-    .btn {
-      margin-left: 8px;
+
+    .actions {
+      .pull-right;
     }
-  }
-  .environment {
-    label {
-      margin: 0 5px;
-    }
-  }
-  .features {
-    margin: 5px 0;
-  }
-  .feature:first-child {
-    margin-left: -6px;
-  }
-  .reveal-card {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
-  .reveal-card:hover {
-    opacity: 1.0;
-  }
-  .metric {
-    margin-right: 10px;
-    display: block;
-    float: left;
-  }
-  .metric:first-child {
-    margin-left: -4px;
   }
 }
 
-.steps {
-  text-align: justify;
-  .row;
+.mode-cell {
+  .card {
+    min-height: 130px;
+  }
 
-  .step {
-    .make-md-column(4);
-    h3 {
-      .text-center;
+  .reveal-card {
+    transition-property: all;
+    opacity: 1;
+
+    &:hover {
+      opacity: 1.0;
     }
-    .fa {
-      .fa-5x;
+  }
+}
+
+.mode-card {
+  .reveal-card {
+    transition-property: all;
+    opacity: 0;
+  }
+  .feature-container {
+    .pull-right;
+  }
+}
+
+.mode-list {
+  .kernel {
+    margin: 0;
+
+    .card{
+      box-shadow: none;
+
+      .card-body {
+        transition-property: all;
+        .make-md-column(12);
+
+        .logo {
+          transition-property: all;
+          .make-md-column(1);
+          min-height: 64px;
+        }
+
+        .title {
+          transition-property: all;
+          .make-md-column(4);
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        .metrics {
+          transition-property: all;
+          .make-md-column(3);
+        }
+
+        .features, .environments {
+          transition-property: all;
+          .make-md-column(2);
+        }
+
+        .features {
+          .text-right;
+        }
+
+        .description {
+          transition-property: all;
+          .make-md-column(8);
+        }
+
+        .actions {
+          transition-property: all;
+          .make-md-column(3);
+          .text-right;
+          margin-bottom: -50px;
+          .action {
+            width: 40px;
+            height: 40px;
+            padding: 13px;
+            font-size: 15px;
+          }
+        }
+      }
+
+      .reveal-card {
+        transition-property: all;
+        opacity: 0;
+      }
     }
   }
 }

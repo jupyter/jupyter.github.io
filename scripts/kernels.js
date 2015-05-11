@@ -290,11 +290,11 @@
 
     kernel.enter().append("div")
       .classed({kernel: 1})
-      .style({"margin-top": "-100px"})
+      .style({"top": "-100px"})
       .call(enterKernel)
       .transition()
       .ease(d3.ease("sin"))
-      .style({"margin-top": "36px"});
+      .style({"top": "36px"});
 
     kernel.call(updateKernel);
 
@@ -303,7 +303,7 @@
 
   function stackKernels(kernels){
     var width = body.node().clientWidth,
-      columnCount = width < 990 ? 1 : 3,
+      columnCount = (width < 990 || _mode === _modes.list) ? 1 : 3,
       columnClasses = "kernel-col col-md-" + (12 / columnCount);
 
     return d3.range(columnCount).map(function(undef, col){
@@ -347,7 +347,7 @@
 
   function updateActions(selection){
     var action = selection.append("p")
-      .classed({actions: 1, "pull-right": 1})
+      .classed({actions: 1})
       .selectAll(".action")
       .data(function(kernel){
         return d3.entries(kernel.value.actions || {})
@@ -358,6 +358,7 @@
       .enter()
       .append("a")
       .classed({
+        action: 1,
         btn: 1,
         "btn-fab": 1,
         "btn-raised": 1,
@@ -396,21 +397,32 @@
     kernel.select(".detail")
       .classed({
         hide: function(d){
-          return !(d.value.expanded || (_mode === _modes.card));
+          return !(d.value.expanded || (_mode !== _modes.cell));
         }
       });
+
+    var bodyClasses = d3.entries(_modes)
+      .reduce(function(memo, mode){
+        memo["mode-" + mode.key] = _mode === mode.value;
+        return memo;
+      }, {});
+
+    console.log(bodyClasses);
+
+    body.classed(bodyClasses);
   }
 
   function enterKernel(kernel){
     kernel.style({"z-index": function(d, i){ return 999 - i; }});
-    var panel = kernel.append("div")
-        .classed({panel: 1, "panel-default": 1});
+    var card = kernel.append("div")
+        .classed({card: 1});
 
-    var body = panel.append("div")
-        .classed({"panel-body": 1, "shadow-z-1": 1});
+    var body = card.append("div")
+        .classed({"card-body": 1});
 
-    body.append("img")
-      .classed({"pull-right": 1, logo: 1})
+    body.append("div")
+      .classed({logo: 1})
+      .append("img")
       .attr("src", function(d){
         return d.value.logo;
       });
@@ -428,10 +440,11 @@
       .classed({version: 1, "text-muted": 1})
       .text(function(d){ return d.value.version; });
 
-    var lang = body.filter(function(d){ return d.value.environments; })
+    var lang = body
       .append("div")
+      .classed({environments: 1})
       .selectAll(".environment")
-      .data(function(d){ return d3.entries(d.value.environments); })
+      .data(function(d){ return d3.entries(d.value.environments || {}); })
       .enter()
       .append("div")
       .classed({environment: 1});
@@ -449,13 +462,16 @@
       .classed({version: 1, "text-muted": 1})
       .text(String);
 
-    var metric = body.filter(function(d){ return d.value.metrics; })
+    var metric = body
       .append("div")
       .classed({metrics: 1})
       .selectAll(".metric")
-      .data(function(d){ return d3.entries(_metrics).map(function(metric){
-        return {metric: metric, kernel: d};
-      })})
+      .data(function(d){
+        return !d.value.metrics ? [] : d3.entries(_metrics)
+          .map(function(metric){
+            return {metric: metric, kernel: d};
+          });
+      })
       .enter()
       .append("span")
       .classed({metric: 1});
@@ -474,17 +490,16 @@
       });
 
 
-    var detail = panel.append("div")
+    var detail = body.append("div")
       .classed({
-        detail: 1,
-        "panel-body": 1,
-        hide: 1
+        detail: 1
       });
 
     updateFeatures(detail)
       .classed({"text-muted": 1});
 
-    detail.append("p")
+    detail.append("div")
+      .classed({description: 1})
       .text(function(d){ return d.value.description; });
 
     detail.call(updateActions);

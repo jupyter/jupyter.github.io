@@ -77864,15 +77864,21 @@ hr.on-light {
   font-weight: 400;
   src: local('RobotoDraft Italic'), local('RobotoDraft-Italic'), local('Roboto-Italic'), url('../bower_components/bootstrap-material-design/fonts/RobotoDraftItalic.woff2') format('woff2'), url('../bower_components/bootstrap-material-design/fonts/RobotoDraftItalic.woff') format('woff');
 }
+/* FONTS */
+* {
+  font-family: "RobotoDraft", Helvetica, sans-serif;
+}
+/* BOOTSTRAP OVERRIDES */
 .container {
   text-align: justify;
 }
-.tooltip-inner {
+.tooltip {
+  font-size: 100%;
+}
+.tooltip .tooltip-inner {
   white-space: pre-wrap;
 }
-.panel-body {
-  position: relative;
-}
+/* MODE/SCROLL AGNOSTIC STUFF */
 .masthead {
   margin-right: auto;
   margin-left: auto;
@@ -82523,16 +82529,6 @@ hr.on-light {
   padding-left: 15px;
   padding-right: 15px;
   text-align: center;
-}
-* {
-  font-family: "RobotoDraft", Helvetica, sans-serif;
-}
-.tooltip {
-  font-size: 100%;
-}
-.brand-logo {
-  width: 100px;
-  height: 100px;
 }
 header {
   text-align: justify;
@@ -87242,27 +87238,8 @@ header .btn-group .btn {
 header .feature span {
   display: block;
 }
-.pre-watershed header {
-  position: relative;
-}
-.pre-watershed header .fa {
-  font-size: 2em;
-}
-.post-watershed header {
-  top: 0;
-  position: fixed;
-  left: 0%;
-  right: 0%;
-}
-.post-watershed header .list-control h4 {
-  display: none !important;
-}
-.post-watershed header h1 {
-  font-size: 24px;
-  margin-top: 0;
-}
 .kernel {
-  margin-bottom: 36px;
+  margin-bottom: 48px;
   position: relative;
 }
 .kernel .version {
@@ -87271,11 +87248,8 @@ header .feature span {
 .kernel .title .version {
   font-size: 50%;
 }
-.kernel .logo {
-  margin-left: -64px;
-}
 .kernel .actions {
-  margin-bottom: -38px;
+  margin-bottom: -24px;
 }
 .kernel .actions .btn {
   margin-left: 8px;
@@ -87284,18 +87258,15 @@ header .feature span {
   margin: 0 5px;
 }
 .kernel .features {
-  margin: 5px 0;
+  margin: 0;
 }
-.kernel .feature:first-child {
+.kernel .features .feature:first-child {
   margin-left: -6px;
 }
 .kernel .reveal-card {
   position: absolute;
   right: 0;
-  bottom: 0;
-}
-.kernel .reveal-card:hover {
-  opacity: 1.0;
+  top: 72px;
 }
 .kernel .metric {
   margin-right: 10px;
@@ -87328,3 +87299,171 @@ header .feature span {
 .steps .step .fa {
   font-size: 5em;
 }
+/* SCROLL STUFF */
+.pre-watershed header {
+  position: relative;
+  margin-top: -20px;
+}
+.pre-watershed header .fa {
+  font-size: 2em;
+}
+.post-watershed header {
+  top: 0;
+  position: fixed;
+  left: 0%;
+  right: 0%;
+}
+.post-watershed header .list-control h4 {
+  display: none !important;
+}
+.post-watershed header h1 {
+  font-size: 24px;
+  margin-top: 0;
+}
+/* MODE STUFF */
+.mode-cell .kernel .logo,
+.mode-card .kernel .logo {
+  float: right !important;
+  float: right;
+}
+.mode-cell .kernel .actions,
+.mode-card .kernel .actions {
+  float: right !important;
+  float: right;
+}
+.mode-cell .card {
+  min-height: 130px;
+}
+.mode-cell .reveal-card {
+  transition-property: all;
+  opacity: 1;
+}
+.mode-cell .reveal-card:hover {
+  opacity: 1.0;
+}
+.mode-card .reveal-card {
+  transition-property: all;
+  opacity: 0;
+}
+.mode-card .feature-container {
+  float: right !important;
+  float: right;
+}
+.mode-list .kernel {
+  margin: 0;
+}
+.mode-list .kernel .card {
+  box-shadow: none;
+}
+.mode-list .kernel .card .card-body {
+  transition-property: all;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .mode-list .kernel .card .card-body {
+    float: left;
+    width: 100%;
+  }
+}
+.mode-list .kernel .card .card-body .logo {
+  transition-property: all;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  min-height: 64px;
+}
+@media (min-width: 992px) {
+  .mode-list .kernel .card .card-body .logo {
+    float: left;
+    width: 8.33333333%;
+  }
+}
+.mode-list .kernel .card .card-body .title {
+  transition-property: all;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@media (min-width: 992px) {
+  .mode-list .kernel .card .card-body .title {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.mode-list .kernel .card .card-body .metrics {
+  transition-property: all;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .mode-list .kernel .card .card-body .metrics {
+    float: left;
+    width: 25%;
+  }
+}
+.mode-list .kernel .card .card-body .features,
+.mode-list .kernel .card .card-body .environments {
+  transition-property: all;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .mode-list .kernel .card .card-body .features,
+  .mode-list .kernel .card .card-body .environments {
+    float: left;
+    width: 16.66666667%;
+  }
+}
+.mode-list .kernel .card .card-body .features {
+  text-align: right;
+}
+.mode-list .kernel .card .card-body .description {
+  transition-property: all;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .mode-list .kernel .card .card-body .description {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+.mode-list .kernel .card .card-body .actions {
+  transition-property: all;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: right;
+  margin-bottom: -50px;
+}
+@media (min-width: 992px) {
+  .mode-list .kernel .card .card-body .actions {
+    float: left;
+    width: 25%;
+  }
+}
+.mode-list .kernel .card .card-body .actions .action {
+  width: 40px;
+  height: 40px;
+  padding: 13px;
+  font-size: 15px;
+}
+.mode-list .kernel .card .reveal-card {
+  transition-property: all;
+  opacity: 0;
+}
+/*# sourceMappingURL=kernels.css.map */

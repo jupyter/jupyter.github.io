@@ -111,16 +111,24 @@
   "kernels": {
     "kern:bash": {
       "@id": "kern:bash",
+      "actions": {
+        "act:github": "gh:takluyverbash_kernel"
+      },
+      "description": "A bash kernel for IPython",
       "metrics": {
         "gh:forks": 15,
-        "gh:stargazers": 77,
-        "gh:updated": "2015-05-09T17:07:44+00:00"
+        "gh:stargazers": 79,
+        "gh:updated": "2015-05-11T13:42:22+00:00"
       },
       "name": "Bash",
       "url": "https://github.com/takluyver/bash_kernel"
     },
     "kern:brython-kernel": {
       "@id": "kern:brython-kernel",
+      "actions": {
+        "act:github": "gh:kikocorreosobrythonmagic"
+      },
+      "description": "Brython magic for the IPython notebook.",
       "metrics": {
         "gh:forks": 2,
         "gh:stargazers": 21,
@@ -131,21 +139,26 @@
     },
     "kern:calico-project": {
       "@id": "kern:calico-project",
+      "description": "Go Kernel for IPython",
       "metrics": {
-        "gh:forks": 0,
-        "gh:stargazers": 4,
-        "gh:updated": "2015-01-31T00:40:33+00:00"
+        "gh:forks": 3,
+        "gh:stargazers": 32,
+        "gh:updated": "2015-04-30T12:38:37+00:00"
       },
       "name": "Calico Project",
       "url": "http://nbviewer.ipython.org/urls/bitbucket.org/ipre/calico/raw/master/notebooks/Calico%20Overview.ipynb"
     },
     "kern:calysto-processing": {
       "@id": "kern:calysto-processing",
+      "actions": {
+        "act:github": "gh:Calystocalysto_processing"
+      },
+      "description": "Calysto Processing kernel for Jupyter",
       "logo": "https://cdn.rawgit.com/Calysto/calysto_processing/04bef7bdde32255778edf493ec3b76838aee1f58/calysto_processing/images/logo-64x64.png",
       "metrics": {
         "gh:forks": 0,
-        "gh:stargazers": 2,
-        "gh:updated": "2015-05-05T13:56:19+00:00"
+        "gh:stargazers": 3,
+        "gh:updated": "2015-05-11T07:07:02+00:00"
       },
       "name": "Calysto Processing",
       "url": "https://github.com/Calysto/calysto_processing"
@@ -280,11 +293,8 @@
     },
     "kern:ifsharp": {
       "@id": "kern:ifsharp",
-      "logo": "https://cdn.rawgit.com/Calysto/calysto_scheme/917d855dcae3ebc1f6f2c2024a48c78570421f30/calysto_scheme/images/logo-64x64.png",
-      "metrics": {
-        "gh:forks": 2,
-        "gh:stargazers": 0,
-        "gh:updated": "2015-05-06T19:03:38+00:00"
+      "actions": {
+        "act:github": "gh:BayardRock/IfSharp"
       },
       "name": "IFSharp",
       "url": "http://nbviewer.ipython.org/github/BayardRock/IfSharp/blob/master/Feature%20Notebook.ipynb"
@@ -313,8 +323,8 @@
       "logo": "https://cdn.rawgit.com/gibiansky/IHaskell/8eaf1aa65d6cb14166ba5bb5f5659424b48882d2/html/logo-64x64.png",
       "metrics": {
         "gh:forks": 82,
-        "gh:stargazers": 854,
-        "gh:updated": "2015-05-10T22:29:36+00:00"
+        "gh:stargazers": 855,
+        "gh:updated": "2015-05-11T21:29:08+00:00"
       },
       "name": "IHaskell",
       "url": "http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/IHaskell.ipynb"
@@ -324,6 +334,7 @@
       "actions": {
         "act:github": "gh:n-riesco/ijavascript"
       },
+      "description": "IJavascript is a javascript kernel for IPython's graphical notebook",
       "metrics": {
         "gh:forks": 7,
         "gh:stargazers": 34,
@@ -355,8 +366,8 @@
       "logo": "https://cdn.rawgit.com/JuliaLang/IJulia.jl/6981f1b7253657d05cca7c64f1fc5bd4b95b3a28/deps/logo-64x64.png",
       "metrics": {
         "gh:forks": 81,
-        "gh:stargazers": 637,
-        "gh:updated": "2015-05-10T09:58:49+00:00"
+        "gh:stargazers": 638,
+        "gh:updated": "2015-05-11T20:37:24+00:00"
       },
       "name": "IJulia",
       "url": "http://nbviewer.ipython.org/url/jdj.mit.edu/~stevenj/IJulia%20Preview.ipynb",
@@ -364,11 +375,7 @@
     },
     "kern:imathics": {
       "@id": "kern:imathics",
-      "metrics": {
-        "gh:forks": 10,
-        "gh:stargazers": 64,
-        "gh:updated": "2015-05-08T15:41:05+00:00"
-      },
+      "description": null,
       "name": "IMathics",
       "url": "http://nbviewer.ipython.org/gist/sn6uv/8381447"
     },
@@ -416,12 +423,6 @@
     },
     "kern:iperl": {
       "@id": "kern:iperl",
-      "logo": "https://cdn.rawgit.com/Calysto/calysto_scheme/917d855dcae3ebc1f6f2c2024a48c78570421f30/calysto_scheme/images/logo-64x64.png",
-      "metrics": {
-        "gh:forks": 2,
-        "gh:stargazers": 0,
-        "gh:updated": "2015-05-06T19:03:38+00:00"
-      },
       "name": "IPerl",
       "url": "https://metacpan.org/release/Devel-IPerl"
     },
@@ -464,9 +465,9 @@
       ],
       "logo": "python/logo-64x64.png",
       "metrics": {
-        "gh:forks": 1912,
-        "gh:stargazers": 6464,
-        "gh:updated": "2015-05-11T02:30:16+00:00"
+        "gh:forks": 1914,
+        "gh:stargazers": 6474,
+        "gh:updated": "2015-05-11T16:43:25+00:00"
       },
       "name": "IPython",
       "url": "http://ipython.org/",
@@ -495,8 +496,8 @@
       "logo": "https://cdn.rawgit.com/IRkernel/IRkernel/425dcecb20465823e6360a23577e4dfa9369685e/inst/kernelspec/logo-64x64.png",
       "metrics": {
         "gh:forks": 37,
-        "gh:stargazers": 180,
-        "gh:updated": "2015-05-10T11:33:16+00:00"
+        "gh:stargazers": 182,
+        "gh:updated": "2015-05-11T21:52:28+00:00"
       },
       "name": "IRKernel",
       "url": "https://github.com/takluyver/IRkernel",
@@ -546,32 +547,31 @@
     },
     "kern:ivisual-vpython-kernel": {
       "@id": "kern:ivisual-vpython-kernel",
+      "description": "Go Kernel for IPython",
       "metrics": {
-        "gh:forks": 0,
-        "gh:stargazers": 1,
-        "gh:updated": "2014-10-06T23:58:22+00:00"
+        "gh:forks": 3,
+        "gh:stargazers": 32,
+        "gh:updated": "2015-04-30T12:38:37+00:00"
       },
       "name": "IVisual VPython Kernel",
       "url": "https://pypi.python.org/pypi/IVisual"
     },
     "kern:jove": {
       "@id": "kern:jove",
-      "logo": "https://cdn.rawgit.com/Calysto/calysto_scheme/917d855dcae3ebc1f6f2c2024a48c78570421f30/calysto_scheme/images/logo-64x64.png",
-      "metrics": {
-        "gh:forks": 2,
-        "gh:stargazers": 0,
-        "gh:updated": "2015-05-06T19:03:38+00:00"
-      },
       "name": "jove",
       "url": "https://www.npmjs.com/package/jove"
     },
     "kern:lua-(used-in-splash)": {
       "@id": "kern:lua-(used-in-splash)",
+      "actions": {
+        "act:github": "gh:scrapinghubsplash"
+      },
+      "description": "Lightweight, scriptable browser as a service with an HTTP API",
       "logo": "https://cdn.rawgit.com/scrapinghub/splash/78c8010cf6659e730ebd63168591df4dbb20775f/splash/kernel/kernels/splash/logo-64x64.png",
       "metrics": {
-        "gh:forks": 58,
-        "gh:stargazers": 293,
-        "gh:updated": "2015-05-09T03:07:29+00:00"
+        "gh:forks": 59,
+        "gh:stargazers": 294,
+        "gh:updated": "2015-05-11T12:15:27+00:00"
       },
       "name": "Lua (used in Splash)",
       "url": "https://github.com/scrapinghub/splash/tree/master/splash/kernel"
@@ -598,30 +598,39 @@
       "description": "IPython kernel for Torch with visualization and plotting",
       "logo": "https://cdn.rawgit.com/facebook/iTorch/659fa4bcde23b14f449d50f0540b4d2883c54deb/kernelspec/logo-64x64.png",
       "metrics": {
-        "gh:forks": 54,
-        "gh:stargazers": 487,
-        "gh:updated": "2015-05-10T16:09:11+00:00"
+        "gh:forks": 55,
+        "gh:stargazers": 489,
+        "gh:updated": "2015-05-11T21:03:35+00:00"
       },
       "name": "LuaJIT/Torch",
       "url": "https://github.com/facebook/iTorch"
     },
     "kern:metakernel-bash": {
       "@id": "kern:metakernel-bash",
+      "actions": {
+        "act:github": "gh:Calystometakernel"
+      },
+      "description": "Jupyter/IPython Kernel Tools",
       "logo": "https://cdn.rawgit.com/Calysto/metakernel/93fc8522d7b9cbcc94e2a465a1c769c2493c9c61/metakernel/images/logo-64x64.png",
       "metrics": {
         "gh:forks": 2,
-        "gh:stargazers": 12,
-        "gh:updated": "2015-04-23T05:05:21+00:00"
+        "gh:stargazers": 13,
+        "gh:updated": "2015-05-11T07:08:02+00:00"
       },
       "name": "MetaKernel Bash",
       "url": "https://github.com/Calysto/metakernel/tree/master/metakernel_bash"
     },
     "kern:metakernel-python": {
       "@id": "kern:metakernel-python",
+      "actions": {
+        "act:github": "gh:Calystometakernel"
+      },
+      "description": "Jupyter/IPython Kernel Tools",
+      "logo": "https://cdn.rawgit.com/Calysto/metakernel/93fc8522d7b9cbcc94e2a465a1c769c2493c9c61/metakernel/images/logo-64x64.png",
       "metrics": {
         "gh:forks": 2,
-        "gh:stargazers": 12,
-        "gh:updated": "2015-04-23T05:05:21+00:00"
+        "gh:stargazers": 13,
+        "gh:updated": "2015-05-11T07:08:02+00:00"
       },
       "name": "MetaKernel Python",
       "url": "https://github.com/Calysto/metakernel/tree/master/metakernel_python"
