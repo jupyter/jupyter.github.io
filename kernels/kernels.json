@@ -112,7 +112,7 @@
     "kern:bash": {
       "@id": "kern:bash",
       "actions": {
-        "act:github": "gh:takluyverbash_kernel"
+        "act:github": "gh:takluyver/bash_kernel"
       },
       "description": "A bash kernel for IPython",
       "metrics": {
@@ -126,7 +126,7 @@
     "kern:brython-kernel": {
       "@id": "kern:brython-kernel",
       "actions": {
-        "act:github": "gh:kikocorreosobrythonmagic"
+        "act:github": "gh:kikocorreoso/brythonmagic"
       },
       "description": "Brython magic for the IPython notebook.",
       "metrics": {
@@ -151,7 +151,7 @@
     "kern:calysto-processing": {
       "@id": "kern:calysto-processing",
       "actions": {
-        "act:github": "gh:Calystocalysto_processing"
+        "act:github": "gh:Calysto/calysto_processing"
       },
       "description": "Calysto Processing kernel for Jupyter",
       "logo": "https://cdn.rawgit.com/Calysto/calysto_processing/04bef7bdde32255778edf493ec3b76838aee1f58/calysto_processing/images/logo-64x64.png",
@@ -375,7 +375,6 @@
     },
     "kern:imathics": {
       "@id": "kern:imathics",
-      "description": null,
       "name": "IMathics",
       "url": "http://nbviewer.ipython.org/gist/sn6uv/8381447"
     },
@@ -431,7 +430,6 @@
       "actions": {
         "act:github": "gh:timo/iperl6kernel"
       },
-      "description": null,
       "metrics": {
         "gh:forks": 2,
         "gh:stargazers": 5,
@@ -564,7 +562,7 @@
     "kern:lua-(used-in-splash)": {
       "@id": "kern:lua-(used-in-splash)",
       "actions": {
-        "act:github": "gh:scrapinghubsplash"
+        "act:github": "gh:scrapinghub/splash"
       },
       "description": "Lightweight, scriptable browser as a service with an HTTP API",
       "logo": "https://cdn.rawgit.com/scrapinghub/splash/78c8010cf6659e730ebd63168591df4dbb20775f/splash/kernel/kernels/splash/logo-64x64.png",
@@ -608,7 +606,7 @@
     "kern:metakernel-bash": {
       "@id": "kern:metakernel-bash",
       "actions": {
-        "act:github": "gh:Calystometakernel"
+        "act:github": "gh:Calysto/metakernel"
       },
       "description": "Jupyter/IPython Kernel Tools",
       "logo": "https://cdn.rawgit.com/Calysto/metakernel/93fc8522d7b9cbcc94e2a465a1c769c2493c9c61/metakernel/images/logo-64x64.png",
@@ -623,7 +621,7 @@
     "kern:metakernel-python": {
       "@id": "kern:metakernel-python",
       "actions": {
-        "act:github": "gh:Calystometakernel"
+        "act:github": "gh:Calysto/metakernel"
       },
       "description": "Jupyter/IPython Kernel Tools",
       "logo": "https://cdn.rawgit.com/Calysto/metakernel/93fc8522d7b9cbcc94e2a465a1c769c2493c9c61/metakernel/images/logo-64x64.png",
@@ -640,7 +638,6 @@
       "actions": {
         "act:github": "gh:pya/mochi-kernel"
       },
-      "description": null,
       "metrics": {
         "gh:forks": 1,
         "gh:stargazers": 4,
