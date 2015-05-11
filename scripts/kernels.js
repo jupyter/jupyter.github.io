@@ -55,7 +55,7 @@
         icon: "fa:list"
       }
     },
-    _mode = _modes.cell,
+    _mode = _modes.card,
     _sort = _sorts.popularity,
     _sortDir = "descending";
 
@@ -79,9 +79,9 @@
     features = header.select(".features"),
     kernels = d3.select(".kernels"),
     body = d3.select("body"),
-    jumbo = d3.select(".jumbotron");
+    masthead = d3.select(".masthead");
 
-  var WATERSHED = +jumbo.node().clientHeight;
+  var WATERSHED = +masthead.node().clientHeight;
 
   function watershedClasses(watershed, pre, post){
     var clses = {};
@@ -93,16 +93,11 @@
 
   function scroll(){
     var ws = window.scrollY < WATERSHED;
-    header.classed(watershedClasses(ws, "pre-watershed", "post-watershed"));
-    brandLogo.classed(watershedClasses(ws, "col-xs-2", "col-xs-1"));
-
-
-    header.selectAll(".fa")
-      .classed(watershedClasses(ws, "fa-2x", "fa-1x"));
+    body.classed(watershedClasses(ws, "pre-watershed", "post-watershed"));
 
     kernels.style({
       "margin-top": ws ? 0 : header.node().clientHeight + "px"
-    })
+    });
   }
 
 
@@ -129,8 +124,7 @@
         sort.append("i").classed({fa: 1, direction: 1});
 
         sort.append("div")
-          .text(function(d){ return d.value.name; })
-          .classed({"hide-watershed": 1});
+          .text(function(d){ return d.value.name; });
 
         sort.on("click", function(d){
           if(_sort === d.value){
@@ -173,7 +167,6 @@
           .classed({fa: 1, "fa-fw": 1});
 
         mode.append("div")
-          .classed({"hide-watershed": 1})
           .text(function(d){ return d.value.name; })
       });
 
@@ -266,7 +259,6 @@
       .data(function(d){ return [d]; })
       .enter()
       .append("div")
-      .classed({"hide-watershed": 1})
       .text(function(d){ return d.value.name; });
 
     var kernelData = d3.entries(_kernels)
@@ -279,7 +271,7 @@
       .text(kernelData.length);
 
     var column = kernels.selectAll(".kernel-col")
-      .data(columnData)
+      .data(columnData);
 
     column.exit().remove();
     column.enter().append("div");

@@ -10,33 +10,33 @@
 </head>
 
 <body>
-  <div class="container jumbotron">
-    <h1>
-      <a href="../">
-        <img src="../images/jupyter-sq-text.svg" class="brand-logo">
+  <div class="masthead">
+    <div class="row">
+      <a href="../" class="home-link">
+        <img src="../images/jupyter-sq-text.svg" class="image-responsive">
       </a>
-      <span>Kernels</span>
-    </h1>
+      <h1>Kernels</h1>
+    </div>
   </div>
-  <header class="container container-fixed well">
+  <header>
     <div class="filters">
       <div class="row">
-        <h1 class="leader col-md-12 text-center">
+        <h1 class="leader">
           Make computing more
           <strong>interactive</strong>, <strong>reproducible</strong>, and <strong>productive</strong> in
           <input type="text"
-            class="form-control search-kernels input-lg">
+            class="search-kernels input-lg form-control ">
         </h1>
-        <div class="col-md-5">
-          <h4 class="hide-watershed">Features</h4>
+        <div class="list-control">
+          <h4>Features</h4>
           <div class="features"></div>
         </div>
-        <div class="col-md-5">
-          <h4 class="hide-watershed">Sort</h4>
+        <div class="list-control">
+          <h4>Sort</h4>
           <div class="kernel-sorts"></div>
         </div>
-        <div class="col-md-2">
-          <h4 class="hide-watershed">View</h4>
+        <div class="list-control list-control-sm">
+          <h4>View</h4>
           <div class="view-modes"></div>
         </div>
       </div>
@@ -53,8 +53,8 @@
       Writing a Jupyter Kernel for your environment, database or other computing environment adds a powerful REPL and interactivity for your users.
     </p>
 
-    <div class="row steps">
-      <div class="col-md-4">
+    <div class="steps">
+      <div class="step">
         <h3>
           <a href="http://ipython.org/ipython-doc/dev/development/wrapperkernels.html">
           <p>Wrap your environment</p>
@@ -71,18 +71,19 @@
 
         <h3><a href="http://ipython.org/ipython-doc/dev/development/kernels.html">
           <p>Implement the Spec</p>
-          <p><i class="fa fa-exchange fa-5x"></i></p>
+          <p><i class="fa fa-exchange"></i></p>
         </a>
         </h3>
         <p>
           Jupyter uses <a href="http://zeromq.org/">ØMQ</a> for high-performance communication between clients and the kernel. You can implement the <a href="http://ipython.org/ipython-doc/dev/development/kernels.html">message spec</a> directly in ZMQ for maximum performance and environment specificity.
         </p>
       </div>
-      <div class="col-md-4">
+
+      <div class="step">
         <h3>
           <a href="https://github.com/jupyter/jupyter.github.io/compare">
             <p>Fork on GitHub</p>
-            <i class="fa fa-code-fork fa-5x"></i>
+            <i class="fa fa-code-fork"></i>
           </a>
         </h3>
 
@@ -91,11 +92,11 @@
         </p>
       </div>
 
-      <div class="col-md-4">
+      <div class="step">
         <h3>
           <a href="https://github.com/jupyter/docker-demo-images/blob/master/Dockerfile">
           <p> Extend Demo Container</p>
-          <i class="fa fa-cube fa-5x"></i>
+          <i class="fa fa-cube"></i>
 
           </a>
         </h3>
