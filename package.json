@@ -4,10 +4,9 @@
   "description": "[Jupyter.org](http://jupyter.org/) website files",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run bower && npm run less",
     "less": "./node_modules/.bin/lessc --source-map less/kernels.less css/kernels.css",
-    "bower": "./node_modules/.bin/bower install",
-    "build": "npm run bower && npm run less"
+    "bower": "./node_modules/.bin/bower install"
   },
   "repository": {
     "type": "git",
