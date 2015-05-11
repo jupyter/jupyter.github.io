@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run bower && npm run less",
-    "less": "./node_modules/.bin/lessc --source-map less/kernels.less css/kernels.css",
+    "less": "./node_modules/.bin/lessc less/kernels.less css/kernels.css",
     "bower": "./node_modules/.bin/bower install"
   },
   "repository": {
