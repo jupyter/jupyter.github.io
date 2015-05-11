@@ -21,13 +21,18 @@
 }
 
 /* custom stuff */
-header {
-  z-index: 1000;
-}
 
 .brand-logo {
   width: 100px;
   height: 100px;
+}
+
+header {
+  z-index: 1000;
+}
+
+.pre-watershed {
+  position: relative;
 }
 
 .post-watershed .hide-watershed{
@@ -104,6 +109,9 @@ header .feature span {
   margin-right: 10px;
   display: block;
   float: left;
+}
+.metric:first-child{
+  margin-left: -4px;
 }
 
 .kernel .features {

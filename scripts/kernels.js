@@ -20,7 +20,7 @@
         get: function(k){ return k.name.toLowerCase(); }
       },
       environment: {
-        name: "Environment",
+        name: "Language",
         icon: "fa:language",
         get: function(k){
           return (d3.entries(k.environments || {"env:N/A": 1}))[0].key;
@@ -30,11 +30,11 @@
         name: "Updated",
         icon: "fa:heartbeat",
         get: function(k){
-          return +moment((k.metrics || {})["gh:updated"]);
+          return +moment((k.metrics || {})["gh:updated"] || 1);
         }
       },
       popularity: {
-        name: "Popularity",
+        name: "Starred",
         icon: "fa:star",
         get: function(k){
           return (k.metrics || {})["gh:stargazers"] || 0;
@@ -56,7 +56,7 @@
       }
     },
     _mode = _modes.cell,
-    _sort = _sorts.features,
+    _sort = _sorts.popularity,
     _sortDir = "descending";
 
 
@@ -410,6 +410,7 @@
   }
 
   function enterKernel(kernel){
+    kernel.style({"z-index": function(d, i){ return 999 - i; }});
     var panel = kernel.append("div")
         .classed({panel: 1, "panel-default": 1});
 
@@ -485,9 +486,7 @@
       .classed({
         detail: 1,
         "panel-body": 1,
-        hide: function(d){
-          return !d.value.expanded;
-        }
+        hide: 1
       });
 
     updateFeatures(detail)

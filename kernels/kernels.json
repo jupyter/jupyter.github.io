@@ -111,21 +111,42 @@
   "kernels": {
     "kern:bash": {
       "@id": "kern:bash",
+      "metrics": {
+        "gh:forks": 15,
+        "gh:stargazers": 77,
+        "gh:updated": "2015-05-09T17:07:44+00:00"
+      },
       "name": "Bash",
       "url": "https://github.com/takluyver/bash_kernel"
     },
     "kern:brython-kernel": {
       "@id": "kern:brython-kernel",
+      "metrics": {
+        "gh:forks": 2,
+        "gh:stargazers": 21,
+        "gh:updated": "2015-03-25T19:44:07+00:00"
+      },
       "name": "Brython Kernel",
       "url": "https://github.com/kikocorreoso/brythonmagic"
     },
     "kern:calico-project": {
       "@id": "kern:calico-project",
+      "metrics": {
+        "gh:forks": 0,
+        "gh:stargazers": 4,
+        "gh:updated": "2015-01-31T00:40:33+00:00"
+      },
       "name": "Calico Project",
       "url": "http://nbviewer.ipython.org/urls/bitbucket.org/ipre/calico/raw/master/notebooks/Calico%20Overview.ipynb"
     },
     "kern:calysto-processing": {
       "@id": "kern:calysto-processing",
+      "logo": "https://cdn.rawgit.com/Calysto/calysto_processing/04bef7bdde32255778edf493ec3b76838aee1f58/calysto_processing/images/logo-64x64.png",
+      "metrics": {
+        "gh:forks": 0,
+        "gh:stargazers": 2,
+        "gh:updated": "2015-05-05T13:56:19+00:00"
+      },
       "name": "Calysto Processing",
       "url": "https://github.com/Calysto/calysto_processing"
     },
@@ -209,8 +230,8 @@
       "description": "C# kernel for IPython",
       "metrics": {
         "gh:forks": 3,
-        "gh:stargazers": 16,
-        "gh:updated": "2015-05-07T13:48:12+00:00"
+        "gh:stargazers": 17,
+        "gh:updated": "2015-05-10T04:20:00+00:00"
       },
       "name": "ICSharp",
       "url": "https://github.com/zabirauf/icsharp"
@@ -259,6 +280,12 @@
     },
     "kern:ifsharp": {
       "@id": "kern:ifsharp",
+      "logo": "https://cdn.rawgit.com/Calysto/calysto_scheme/917d855dcae3ebc1f6f2c2024a48c78570421f30/calysto_scheme/images/logo-64x64.png",
+      "metrics": {
+        "gh:forks": 2,
+        "gh:stargazers": 0,
+        "gh:updated": "2015-05-06T19:03:38+00:00"
+      },
       "name": "IFSharp",
       "url": "http://nbviewer.ipython.org/github/BayardRock/IfSharp/blob/master/Feature%20Notebook.ipynb"
     },
@@ -286,14 +313,22 @@
       "logo": "https://cdn.rawgit.com/gibiansky/IHaskell/8eaf1aa65d6cb14166ba5bb5f5659424b48882d2/html/logo-64x64.png",
       "metrics": {
         "gh:forks": 82,
-        "gh:stargazers": 853,
-        "gh:updated": "2015-05-09T14:15:27+00:00"
+        "gh:stargazers": 854,
+        "gh:updated": "2015-05-10T22:29:36+00:00"
       },
       "name": "IHaskell",
       "url": "http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/IHaskell.ipynb"
     },
     "kern:ijavascript": {
       "@id": "kern:ijavascript",
+      "actions": {
+        "act:github": "gh:n-riesco/ijavascript"
+      },
+      "metrics": {
+        "gh:forks": 7,
+        "gh:stargazers": 34,
+        "gh:updated": "2015-05-10T19:33:22+00:00"
+      },
       "name": "IJavascript",
       "url": "https://www.npmjs.com/package/ijavascript"
     },
@@ -319,9 +354,9 @@
       ],
       "logo": "https://cdn.rawgit.com/JuliaLang/IJulia.jl/6981f1b7253657d05cca7c64f1fc5bd4b95b3a28/deps/logo-64x64.png",
       "metrics": {
-        "gh:forks": 80,
-        "gh:stargazers": 636,
-        "gh:updated": "2015-05-08T20:10:51+00:00"
+        "gh:forks": 81,
+        "gh:stargazers": 637,
+        "gh:updated": "2015-05-10T09:58:49+00:00"
       },
       "name": "IJulia",
       "url": "http://nbviewer.ipython.org/url/jdj.mit.edu/~stevenj/IJulia%20Preview.ipynb",
@@ -329,6 +364,11 @@
     },
     "kern:imathics": {
       "@id": "kern:imathics",
+      "metrics": {
+        "gh:forks": 10,
+        "gh:stargazers": 64,
+        "gh:updated": "2015-05-08T15:41:05+00:00"
+      },
       "name": "IMathics",
       "url": "http://nbviewer.ipython.org/gist/sn6uv/8381447"
     },
@@ -376,6 +416,12 @@
     },
     "kern:iperl": {
       "@id": "kern:iperl",
+      "logo": "https://cdn.rawgit.com/Calysto/calysto_scheme/917d855dcae3ebc1f6f2c2024a48c78570421f30/calysto_scheme/images/logo-64x64.png",
+      "metrics": {
+        "gh:forks": 2,
+        "gh:stargazers": 0,
+        "gh:updated": "2015-05-06T19:03:38+00:00"
+      },
       "name": "IPerl",
       "url": "https://metacpan.org/release/Devel-IPerl"
     },
@@ -418,9 +464,9 @@
       ],
       "logo": "python/logo-64x64.png",
       "metrics": {
-        "gh:forks": 1913,
-        "gh:stargazers": 6447,
-        "gh:updated": "2015-05-09T23:45:52+00:00"
+        "gh:forks": 1912,
+        "gh:stargazers": 6464,
+        "gh:updated": "2015-05-11T02:30:16+00:00"
       },
       "name": "IPython",
       "url": "http://ipython.org/",
@@ -449,8 +495,8 @@
       "logo": "https://cdn.rawgit.com/IRkernel/IRkernel/425dcecb20465823e6360a23577e4dfa9369685e/inst/kernelspec/logo-64x64.png",
       "metrics": {
         "gh:forks": 37,
-        "gh:stargazers": 179,
-        "gh:updated": "2015-05-08T19:40:07+00:00"
+        "gh:stargazers": 180,
+        "gh:updated": "2015-05-10T11:33:16+00:00"
       },
       "name": "IRKernel",
       "url": "https://github.com/takluyver/IRkernel",
@@ -500,16 +546,33 @@
     },
     "kern:ivisual-vpython-kernel": {
       "@id": "kern:ivisual-vpython-kernel",
+      "metrics": {
+        "gh:forks": 0,
+        "gh:stargazers": 1,
+        "gh:updated": "2014-10-06T23:58:22+00:00"
+      },
       "name": "IVisual VPython Kernel",
       "url": "https://pypi.python.org/pypi/IVisual"
     },
     "kern:jove": {
       "@id": "kern:jove",
+      "logo": "https://cdn.rawgit.com/Calysto/calysto_scheme/917d855dcae3ebc1f6f2c2024a48c78570421f30/calysto_scheme/images/logo-64x64.png",
+      "metrics": {
+        "gh:forks": 2,
+        "gh:stargazers": 0,
+        "gh:updated": "2015-05-06T19:03:38+00:00"
+      },
       "name": "jove",
       "url": "https://www.npmjs.com/package/jove"
     },
     "kern:lua-(used-in-splash)": {
       "@id": "kern:lua-(used-in-splash)",
+      "logo": "https://cdn.rawgit.com/scrapinghub/splash/78c8010cf6659e730ebd63168591df4dbb20775f/splash/kernel/kernels/splash/logo-64x64.png",
+      "metrics": {
+        "gh:forks": 58,
+        "gh:stargazers": 293,
+        "gh:updated": "2015-05-09T03:07:29+00:00"
+      },
       "name": "Lua (used in Splash)",
       "url": "https://github.com/scrapinghub/splash/tree/master/splash/kernel"
     },
@@ -536,19 +599,30 @@
       "logo": "https://cdn.rawgit.com/facebook/iTorch/659fa4bcde23b14f449d50f0540b4d2883c54deb/kernelspec/logo-64x64.png",
       "metrics": {
         "gh:forks": 54,
-        "gh:stargazers": 486,
-        "gh:updated": "2015-05-08T22:25:20+00:00"
+        "gh:stargazers": 487,
+        "gh:updated": "2015-05-10T16:09:11+00:00"
       },
       "name": "LuaJIT/Torch",
       "url": "https://github.com/facebook/iTorch"
     },
     "kern:metakernel-bash": {
       "@id": "kern:metakernel-bash",
+      "logo": "https://cdn.rawgit.com/Calysto/metakernel/93fc8522d7b9cbcc94e2a465a1c769c2493c9c61/metakernel/images/logo-64x64.png",
+      "metrics": {
+        "gh:forks": 2,
+        "gh:stargazers": 12,
+        "gh:updated": "2015-04-23T05:05:21+00:00"
+      },
       "name": "MetaKernel Bash",
       "url": "https://github.com/Calysto/metakernel/tree/master/metakernel_bash"
     },
     "kern:metakernel-python": {
       "@id": "kern:metakernel-python",
+      "metrics": {
+        "gh:forks": 2,
+        "gh:stargazers": 12,
+        "gh:updated": "2015-04-23T05:05:21+00:00"
+      },
       "name": "MetaKernel Python",
       "url": "https://github.com/Calysto/metakernel/tree/master/metakernel_python"
     },
@@ -617,8 +691,8 @@
       "description": "A kernel that enables applications to interact with Apache Spark.",
       "metrics": {
         "gh:forks": 28,
-        "gh:stargazers": 137,
-        "gh:updated": "2015-05-09T17:04:52+00:00"
+        "gh:stargazers": 138,
+        "gh:updated": "2015-05-10T05:22:58+00:00"
       },
       "name": "Spark Kernel",
       "url": "https://github.com/ibm-et/spark-kernel"
