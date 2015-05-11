@@ -296,6 +296,12 @@
       "actions": {
         "act:github": "gh:BayardRock/IfSharp"
       },
+      "description": "F# Profile for iPython Notebook 1.x and 2.x",
+      "metrics": {
+        "gh:forks": 12,
+        "gh:stargazers": 88,
+        "gh:updated": "2015-05-07T09:28:16+00:00"
+      },
       "name": "IFSharp",
       "url": "http://nbviewer.ipython.org/github/BayardRock/IfSharp/blob/master/Feature%20Notebook.ipynb"
     },
