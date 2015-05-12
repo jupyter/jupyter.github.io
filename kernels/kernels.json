@@ -37,6 +37,7 @@
       "@type": "@id"
     },
     "name": "rdfs:label",
+    "nbv": "http://nbviewer.jupyter.org/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "try": "http://try.jupyter.org/new_kernel=",
@@ -58,6 +59,11 @@
       "@id": "act:try",
       "icon": "fa:rocket",
       "name": "Try on try.jupyter.org"
+    },
+    "act:view": {
+      "@id": "act:view",
+      "icon": "fa:book",
+      "name": "View on nbviewer.org"
     }
   },
   "environments": {
@@ -488,7 +494,8 @@
       "actions": {
         "act:docker": "docker:ipython/notebook",
         "act:github": "gh:ipython/ipython",
-        "act:try": "try:IPython"
+        "act:try": "try:IPython",
+        "act:view": "nbv:github/ipython/IPython/tree/master/examples"
       },
       "description": "The original Jupyter Kernel, IPython provides Python, a general purpose programming environment.",
       "environments": {
