@@ -454,7 +454,7 @@ function enterKernel(kernel){
     .attr({href: function(d){ return  _environments[d.key].url; }});
 
   lang.selectAll(".version")
-    .data(function(d){ return d.value.versions; })
+    .data(function(d){ return d.value.versions || []; })
     .enter()
     .append("span")
     .classed({version: 1, "text-muted": 1})

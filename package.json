@@ -8,7 +8,8 @@
     "less": "./node_modules/.bin/lessc  --clean-css='--s1 --advanced --compatibility=ie8' less/kernels.less css/kernels.css",
     "bower": "./node_modules/.bin/bower install",
     "browserify": "./node_modules/.bin/browserify kernels -o kernels/built.js -t uglifyify",
-    "dev": "./node_modules/.bin/watch 'npm run less' less/"
+    "dev": "./node_modules/.bin/watch 'npm run less' less/",
+    "watchify": "./node_modules/.bin/watchify kernels -o kernels/built.js -t uglifyify"
   },
   "repository": {
     "type": "git",

@@ -64,7 +64,7 @@
     "env:julia": {
       "@id": "env:julia",
       "name": "Julia",
-      "url": "http://julialang.org/"
+      "url": "http://julialang.org"
     },
     "env:python": {
       "@id": "env:python",
@@ -74,12 +74,42 @@
     "env:r": {
       "@id": "env:r",
       "name": "R",
-      "url": "http://www.r-project.org/"
+      "url": "http://www.r-project.org"
     },
     "env:scheme": {
       "@id": "env:scheme",
       "name": "Scheme",
       "url": "https://en.wikipedia.org/wiki/Scheme_(programming_environment)"
+    },
+    "env:haskell": {
+      "@id": "env:haskell",
+      "name": "Haskell",
+      "url": "https://www.haskell.org"
+    },
+    "env:scala": {
+      "@id": "env:scala",
+      "name": "Scala",
+      "url": "http://scala-lang.org"
+    },
+    "env:ruby": {
+      "@id": "env:ruby",
+      "name": "Ruby",
+      "url": "https://www.ruby-lang.org"
+    },
+    "env:erlang": {
+      "@id": "env:erlang",
+      "name": "Erlang",
+      "url": "http://www.erlang.org"
+    },
+    "env:fsharp": {
+      "@id": "env:fsharp",
+      "name": "F#",
+      "url": "http://fsharp.org"
+    },
+    "env:spark": {
+      "@id": "env:fsharp",
+      "name": "Spark",
+      "url": "https://spark.apache.org/"
     }
   },
   "features": {
@@ -269,6 +299,9 @@
         "act:github": "gh:robbielynch/ierlang"
       },
       "description": "An Erlang language kernel for IPython.",
+      "environments": {
+        "env:erlang": {}
+      },
       "metrics": {
         "gh:forks": 7,
         "gh:stargazers": 101,
@@ -297,6 +330,9 @@
         "act:github": "gh:BayardRock/IfSharp"
       },
       "description": "F# Profile for iPython Notebook 1.x and 2.x",
+      "environments": {
+        "env:fsharp": {}
+      },
       "metrics": {
         "gh:forks": 12,
         "gh:stargazers": 88,
@@ -326,6 +362,9 @@
         "act:github": "gh:gibiansky/IHaskell"
       },
       "description": "A Haskell kernel for IPython.",
+      "environments": {
+        "env:haskell": {}
+      },
       "logo": "https://cdn.rawgit.com/gibiansky/IHaskell/8eaf1aa65d6cb14166ba5bb5f5659424b48882d2/html/logo-64x64.png",
       "metrics": {
         "gh:forks": 82,
@@ -513,6 +552,9 @@
         "act:github": "gh:minad/iruby"
       },
       "description": "Ruby kernel for IPython Notebook",
+      "environments": {
+        "env:ruby": {}
+      },
       "metrics": {
         "gh:forks": 26,
         "gh:stargazers": 148,
@@ -527,6 +569,9 @@
         "act:github": "gh:mattpap/IScala"
       },
       "description": "Scala backend for IPython",
+      "environments": {
+        "env:scala": {}
+      },
       "metrics": {
         "gh:forks": 37,
         "gh:stargazers": 166,
@@ -701,6 +746,9 @@
         "act:github": "gh:ibm-et/spark-kernel"
       },
       "description": "A kernel that enables applications to interact with Apache Spark.",
+      "environments": {
+        "env:spark": {}
+      },
       "metrics": {
         "gh:forks": 28,
         "gh:stargazers": 138,
