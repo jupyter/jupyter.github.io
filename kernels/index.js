@@ -124,6 +124,7 @@ function updateUI(){
       sort.append("i").classed({fa: 1, direction: 1});
 
       sort.append("div")
+        .classed({"btn-label": 1})
         .text(function(d){ return d.value.name; });
 
       sort.on("click", function(d){
@@ -167,7 +168,8 @@ function updateUI(){
         .classed({fa: 1, "fa-fw": 1});
 
       mode.append("div")
-        .text(function(d){ return d.value.name; })
+        .classed({"btn-label": 1})
+        .text(function(d){ return d.value.name; });
     });
 
   mode.classed({
@@ -255,10 +257,11 @@ function update(){
     placeholder: d3.keys(_environments).length + " languages & environments"
   });
 
-  feature.selectAll("div")
+  feature.selectAll(".btn-label")
     .data(function(d){ return [d]; })
     .enter()
     .append("div")
+    .classed({"btn-label": 1})
     .text(function(d){ return d.value.name; });
 
   var kernelData = d3.entries(_kernels)

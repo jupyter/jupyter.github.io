@@ -61,6 +61,7 @@ header {
   .search-kernels {
     .text-center;
     width: 15em;
+    max-width: 95%;
     font-size: 100%;
     height: 1.5em !important;
     display: inline-block;
@@ -174,8 +175,18 @@ header {
     left: 0%;
     right: 0%;
 
-    .list-control h4 {
-      .hide;
+    .list-control {
+      .make-xs-column(6);
+
+      &.list-control-sm {
+        display: none;
+      }
+      h4 {
+        .hide;
+      }
+      .btn-label {
+        display: none;
+      }
     }
 
     h1 {
@@ -222,6 +233,7 @@ header {
   .description {
     .make-md-column(12);
     padding: 5px 0;
+    margin: 0;
   }
 }
 
