@@ -76,11 +76,15 @@ header {
   }
   .feature {
     span {
-      display: block;
+      display: inline-block;
     }
   }
 }
 
+
+.kernels {
+  margin-bottom: 48px;
+}
 
 .kernel {
   margin-bottom: 48px;
@@ -215,8 +219,9 @@ header {
     transition-property: all;
     opacity: 0;
   }
-  .feature-container {
-    .pull-right;
+  .description {
+    .make-md-column(12);
+    padding: 5px 0;
   }
 }
 
