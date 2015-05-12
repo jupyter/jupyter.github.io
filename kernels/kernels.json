@@ -163,7 +163,7 @@
       "@id": "kern:brython-kernel",
       "actions": {
         "act:github": "gh:kikocorreoso/brythonmagic",
-        "act:view": "nbv:github/kikocorreoso/brythonmagic/tree/master/notebooks"
+        "act:view": "nbv:github/kikocorreoso/brythonmagic/blob/master/notebooks/Brython usage in the IPython notebook.ipynb"
       },
       "description": "Brython magic for the IPython notebook.",
       "metrics": {
@@ -247,7 +247,7 @@
       "@id": "kern:hy-kernel",
       "actions": {
         "act:github": "gh:bollwyvl/hy_kernel",
-        "act:view": "nbv:github/bollwyvl/hy_kernel/tree/master/notebooks"
+        "act:view": "nbv:github/bollwyvl/hy_kernel/blob/master/notebooks/Magics.ipynb"
       },
       "description": "A simple  IPython kernel for Hy",
       "logo": "https://cdn.rawgit.com/bollwyvl/hy_kernel/982ed1b35df7a5307d5b934320c53cc79ee39dc1/hy_kernel/assets/logo-64x64.png",
@@ -277,7 +277,7 @@
       "@id": "kern:icsharp",
       "actions": {
         "act:github": "gh:zabirauf/icsharp",
-        "act:view": "nbv:github/zabirauf/icsharp/tree/master/iPythonNotebook"
+        "act:view": "nbv:github/zabirauf/icsharp/blob/master/iPythonNotebook/iCSharp Sample.ipynb"
       },
       "description": "C# kernel for IPython",
       "metrics": {
@@ -292,7 +292,7 @@
       "@id": "kern:idl-kernel",
       "actions": {
         "act:github": "gh:lstagner/idl_kernel",
-        "act:view": "nbv:github/lstagner/idl_kernel/tree/master/"
+        "act:view": "nbv:github/lstagner/idl_kernel/blob/master/demo.ipynb"
       },
       "description": "An IDL/GDL Jupyter kernel",
       "metrics": {
@@ -307,7 +307,7 @@
       "@id": "kern:ierlang",
       "actions": {
         "act:github": "gh:robbielynch/ierlang",
-        "act:view": "nbv:github/robbielynch/ierlang/tree/master/notebooks"
+        "act:view": "nbv:github/robbielynch/ierlang/blob/master/notebooks/ierlang_demo.ipynb"
       },
       "description": "An Erlang language kernel for IPython.",
       "environments": {
@@ -339,7 +339,7 @@
       "@id": "kern:ifsharp",
       "actions": {
         "act:github": "gh:BayardRock/IfSharp",
-        "act:view": "nbv:github/BayardRock/IfSharp/tree/master/"
+        "act:view": "nbv:github/BayardRock/IfSharp/blob/master/Feature Notebook.ipynb"
       },
       "description": "F# Profile for iPython Notebook 1.x and 2.x",
       "environments": {
@@ -372,7 +372,7 @@
       "@id": "kern:ihaskell",
       "actions": {
         "act:github": "gh:gibiansky/IHaskell",
-        "act:view": "nbv:github/gibiansky/IHaskell/tree/master/notebooks"
+        "act:view": "nbv:github/gibiansky/IHaskell/blob/master/ihaskell-display/ihaskell-charts/Test.ipynb"
       },
       "description": "A Haskell kernel for IPython.",
       "environments": {
@@ -391,7 +391,7 @@
       "@id": "kern:ijavascript",
       "actions": {
         "act:github": "gh:n-riesco/ijavascript",
-        "act:view": "nbv:github/n-riesco/ijavascript/tree/master/res"
+        "act:view": "nbv:github/n-riesco/ijavascript/blob/master/res/hello.ipynb"
       },
       "description": "IJavascript is a javascript kernel for IPython's graphical notebook",
       "metrics": {
@@ -441,7 +441,7 @@
       "@id": "kern:imatlab",
       "actions": {
         "act:github": "gh:calysto/matlab_kernel",
-        "act:view": "nbv:github/Calysto/matlab_kernel/tree/master/"
+        "act:view": "nbv:github/Calysto/matlab_kernel/blob/master/matlab_kernel.ipynb"
       },
       "description": "Jupyter Kernel for Matlab",
       "metrics": {
@@ -456,7 +456,7 @@
       "@id": "kern:iocaml",
       "actions": {
         "act:github": "gh:andrewray/iocaml",
-        "act:view": "nbv:github/andrewray/iocaml/tree/master/notebooks"
+        "act:view": "nbv:github/andrewray/iocaml/blob/master/notebooks/iocaml-Vg.ipynb"
       },
       "description": "An OCaml kernel for the IPython notebook",
       "metrics": {
@@ -471,7 +471,7 @@
       "@id": "kern:ioctave",
       "actions": {
         "act:github": "gh:calysto/octave_kernel",
-        "act:view": "nbv:github/Calysto/octave_kernel/tree/master/"
+        "act:view": "nbv:github/Calysto/octave_kernel/blob/master/octave_kernel.ipynb"
       },
       "description": "An Octave kernel for IPython",
       "metrics": {
@@ -506,7 +506,7 @@
         "act:docker": "docker:ipython/notebook",
         "act:github": "gh:ipython/ipython",
         "act:try": "try:IPython",
-        "act:view": "nbv:github/ipython/IPython/tree/master/examples"
+        "act:view": "nbv:github/ipython/ipython/blob/master/examples/Embedding/Index.ipynb"
       },
       "description": "The original Jupyter Kernel, IPython provides Python, a general purpose programming environment.",
       "environments": {
@@ -540,7 +540,7 @@
         "act:docker": "docker:adrianliaw/jupyter-irkernel",
         "act:github": "gh:IRkernel/IRkernel",
         "act:try": "try:ir",
-        "act:view": "nbv:github/IRkernel/IRkernel/tree/master/"
+        "act:view": "nbv:github/IRkernel/IRkernel/blob/master/Display.ipynb"
       },
       "description": "This is still experimental. Your code should be safe, since IPython handles saving and loading notebooks in another process, but you'll lose all your variables if it crashes.",
       "environments": {
@@ -569,7 +569,7 @@
       "@id": "kern:iruby",
       "actions": {
         "act:github": "gh:minad/iruby",
-        "act:view": "nbv:github/minad/iruby/tree/master/examples"
+        "act:view": "nbv:github/minad/iruby/blob/master/IRuby-Example.ipynb"
       },
       "description": "Ruby kernel for IPython Notebook",
       "environments": {
@@ -587,7 +587,7 @@
       "@id": "kern:iscala",
       "actions": {
         "act:github": "gh:mattpap/IScala",
-        "act:view": "nbv:github/mattpap/IScala/tree/master/examples"
+        "act:view": "nbv:github/mattpap/IScala/blob/master/examples/Display.ipynb"
       },
       "description": "Scala backend for IPython",
       "environments": {
@@ -664,7 +664,7 @@
       "@id": "kern:luajit-torch",
       "actions": {
         "act:github": "gh:facebook/iTorch",
-        "act:view": "nbv:github/facebook/iTorch/tree/master/"
+        "act:view": "nbv:github/facebook/iTorch/blob/master/iTorch_Demo.ipynb"
       },
       "description": "IPython kernel for Torch with visualization and plotting",
       "logo": "https://cdn.rawgit.com/facebook/iTorch/659fa4bcde23b14f449d50f0540b4d2883c54deb/kernelspec/logo-64x64.png",
@@ -680,7 +680,7 @@
       "@id": "kern:metakernel-bash",
       "actions": {
         "act:github": "gh:Calysto/metakernel",
-        "act:view": "nbv:github/Calysto/metakernel/tree/master/examples"
+        "act:view": "nbv:github/Calysto/metakernel/blob/master/examples/echo_kernel.ipynb"
       },
       "description": "Jupyter/IPython Kernel Tools",
       "logo": "https://cdn.rawgit.com/Calysto/metakernel/93fc8522d7b9cbcc94e2a465a1c769c2493c9c61/metakernel/images/logo-64x64.png",
@@ -696,7 +696,7 @@
       "@id": "kern:metakernel-python",
       "actions": {
         "act:github": "gh:Calysto/metakernel",
-        "act:view": "nbv:github/Calysto/metakernel/tree/master/examples"
+        "act:view": "nbv:github/Calysto/metakernel/blob/master/examples/echo_kernel.ipynb"
       },
       "description": "Jupyter/IPython Kernel Tools",
       "logo": "https://cdn.rawgit.com/Calysto/metakernel/93fc8522d7b9cbcc94e2a465a1c769c2493c9c61/metakernel/images/logo-64x64.png",
@@ -712,7 +712,7 @@
       "@id": "kern:mochi-kernel",
       "actions": {
         "act:github": "gh:pya/mochi-kernel",
-        "act:view": "nbv:github/pya/mochi-kernel/tree/master/"
+        "act:view": "nbv:github/pya/mochi-kernel/blob/master/Prototype of Mochi Kernel.ipynb"
       },
       "metrics": {
         "gh:forks": 1,
