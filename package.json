@@ -4,9 +4,10 @@
   "description": "[Jupyter.org](http://jupyter.org/) website files",
   "main": "index.js",
   "scripts": {
-    "test": "npm run bower && npm run less",
+    "test": "npm run bower && npm run less && npm run browserify",
     "less": "./node_modules/.bin/lessc  --clean-css='--s1 --advanced --compatibility=ie8' less/kernels.less css/kernels.css",
     "bower": "./node_modules/.bin/bower install",
+    "browserify": "./node_modules/.bin/browserify kernels -o kernels/built.js -t uglifyify",
     "dev": "./node_modules/.bin/watch 'npm run less' less/"
   },
   "repository": {
@@ -24,6 +25,8 @@
     "bower": "~1.4.1",
     "less": "~2.5.0",
     "watch": "~0.16.0",
-    "less-plugin-clean-css": "~1.5.0"
+    "less-plugin-clean-css": "~1.5.0",
+    "uglifyify": "~3.0.1",
+    "browserify": "~10.1.3"
   }
 }
