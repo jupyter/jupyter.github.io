@@ -13,6 +13,8 @@ body {
 }
 .navbar {
 	background-color: white;
+    border-bottom-color: #979797;
+    border-width: thin;
 }
  a {
 	color:black;
@@ -90,7 +92,6 @@ body {
     padding-top: 26px;
     font-size: 15pt;
 }
-
 @media(max-width:1200px) {
     
     .notebook_features .language_set h2{
@@ -98,6 +99,18 @@ body {
     }  
     .notebook_features #feature {
         padding-top: 40px;
+    }
+}
+@media(max-width:992px) {
+    .notebook_features  img {
+        margin: 0 auto;
+        width: 125px;
+    }
+    .notebook_features p {
+        text-align: center;
+    }
+    .notebook_features h2 {
+        text-align: center;
     }
 }
 .install_prompt {
