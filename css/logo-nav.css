@@ -70,7 +70,7 @@ body {
 }
 .notebook_features .language_set h2{
     font-size: 21px;
-    padding-top: 85px;
+    padding-top: 5px;
     color: #766A6A;
 }
 .notebook_features .share_set h2{
@@ -90,10 +90,7 @@ body {
     padding-top: 26px;
     font-size: 15pt;
 }
-.notebook_features .language{
-    width: 120px;
-    text-align: left;
-}
+
 @media(max-width:1200px) {
     
     .notebook_features .language_set h2{
