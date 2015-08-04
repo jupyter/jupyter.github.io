@@ -57,6 +57,13 @@ body {
     padding-bottom: 41px;
     font-size: 21pt;
 }
+@media(max-width:1200px) {
+    
+    .notebook_preview p {
+        line-height: 25pt;
+        font-size: 15pt;
+    }
+}
 .notebook_features {
     padding-top: 10%;
     padding-bottom: 10%;
