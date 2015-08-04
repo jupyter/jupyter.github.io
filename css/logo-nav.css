@@ -112,6 +112,9 @@ body {
     .notebook_features h2 {
         text-align: center;
     }
+    .notebook_preview p {
+        text-align: center;
+    }
 }
 .install_prompt {
     background-color: #FDFDFD;
