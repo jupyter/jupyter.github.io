@@ -223,12 +223,16 @@ body {
     font-size: 21px;s
     text-align: center;
     color: #766A6A;
+    text-align: center;
 }
 .hubfeature p {
     font-size: 15pt;
     text-align: center;
     color: #766A6A;
     padding-top: 2px;
+}
+.hubfeature img {
+    margin: 0 auto;
 }
 .hubfeatures {
     padding-top: 50px;
@@ -243,5 +247,8 @@ body {
     }
     .hubfeatures{
         background: none;
+    }
+    #data {
+    padding-top: 40px;
     }
 }
