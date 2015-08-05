@@ -211,13 +211,16 @@ body {
     padding-top: 10%;
     padding-bottom:10%;
 }
+.featuremiddle {
+    margin-top: 40px;
+}
 .hubdescription p {
     padding-top: 26px;
     font-size: 15pt;
     line-height: 21pt;
 }
 .hubfeature h2 {
-    font-size: 21px;
+    font-size: 21px;s
     text-align: center;
     color: #766A6A;
 }
@@ -232,7 +235,6 @@ body {
     background: url("../assets/line.svg");
     background-position: top center;
     background-repeat: no-repeat;
-
 }
 @media(max-width:992px) {
     .hubdescription {
