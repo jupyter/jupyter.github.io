@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="55px" viewBox="0 0 54 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FACC6A" offset="0%"></stop>
+            <stop stop-color="#F76B1C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Home---Desktop-Copy-2" sketch:type="MSArtboardGroup" transform="translate(-130.000000, -556.000000)" stroke="#000000">
+            <g id="Jupyter-Notebook-+-Group" sketch:type="MSLayerGroup" transform="translate(130.000000, 557.000000)">
+                <g id="Group" sketch:type="MSShapeGroup">
+                    <path d="M7.69546907,20.6264386 L35.5868513,30.4940256 L45.8611763,57.9398674 L16.2889614,49.5505737 L7.69546907,20.6264386 Z" id="Rectangle-7-Copy-2" stroke-width="1.67431927" fill="#FFFFFF" transform="translate(26.778323, 39.283153) rotate(-47.000000) translate(-26.778323, -39.283153) "></path>
+                    <path d="M7.69546907,15.543785 L35.5868513,25.4113719 L45.8611763,52.8572137 L16.2889614,44.46792 L7.69546907,15.543785 Z" id="Rectangle-7-Copy" stroke-width="1.67431927" fill="#FFFFFF" transform="translate(26.778323, 34.200499) rotate(-47.000000) translate(-26.778323, -34.200499) "></path>
+                    <path d="M7.69546907,10.1338471 L35.5868513,20.001434 L45.8611763,47.4472758 L16.2889614,39.0579821 L7.69546907,10.1338471 Z" id="Rectangle-7" stroke-width="1.67431927" fill="#FFFFFF" transform="translate(26.778323, 28.790561) rotate(-47.000000) translate(-26.778323, -28.790561) "></path>
+                    <path d="M34.346993,35.5051932 L38.9443161,30.5350325 L38.9443161,0.15330035 L30.5435715,0.15330035 L30.5435715,30.5350335 L34.346993,35.5051932 Z" id="Path-227" stroke-width="1.25573946" fill="url(#linearGradient-1)" transform="translate(34.743944, 17.829247) rotate(25.000000) translate(-34.743944, -17.829247) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
