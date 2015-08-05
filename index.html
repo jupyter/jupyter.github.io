@@ -31,6 +31,7 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-fixed-top" role="navigation">
+        <div class="navbar-inner">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -48,28 +49,31 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#" id="tab">INSTALL</a>
+                        <a href="#" class="tab" id="tab">INSTALL</a>
                     </li>
                     <li>
-                        <a href="#" id="tab">ABOUT</a>
+                        <a href="#" class="tab" id="tab">ABOUT</a>
                     </li>
                     <li>
-                        <a href="#" is="tab">DOCS</a>
+                        <a href="#" class="tab" id="tab">DOCS</a>
                     </li>
                     <li>
-                        <a href="#" id="tab">BLOG</a>
+                        <a href="#" class="tab" id="tab">BLOG</a>
                     </li>
                     <li>
-                        <a href="#" id="tab">DONATE</a>
+                        <a href="#" class="tab" id="tab">DONATE</a>
                     </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
+    </div>
+    <div id="top-shadow"></div>
     </nav>
 
     <!-- Page Content -->
+<section>
     <div class="jumbotron">
         <div class="row">
             <div class="col-lg-12">
@@ -77,7 +81,8 @@
             </div>
         </div>
     </div>
-
+</section>
+<section>
     <!-- Notebook Preview -->
     <div class="col-md-12 notebook_preview">
         <div class="container">
@@ -90,7 +95,8 @@
             </div>
         </div>
     </div>
-
+</section>
+<section>
     <div class="col-md-12 notebook_features">
         <div class="container">
             <div class="col-md-3 language_set">
@@ -115,7 +121,8 @@
             </div>
         </div>
     </div>
-
+</section>
+<section>
     <div class="col-md-12 install_prompt">
         <div class="container-fluid">
             <div class="content">
@@ -127,7 +134,8 @@
             </div>
         </div>
     </div>
-
+</section>
+<section>
     <div class="col-md-12 companyuse">
         <div class="container">
             <div class="companies">
@@ -151,14 +159,53 @@
             </div>
         </div>
     </div>
-
+</section>
+<section>
     <div class="col-md-12 jupyterhub">
         <div class="container">
             <div class="hubheader">
+                <div class="hublogo col-md-5">
+                    <img src="assets/hublogo.svg" class="img-responsive" style="margin:0 auto;">
+                </div>
+                <div class="hubdescription col-md-7">
+                    <h2>Jupyter for Organizations</h2>
+                    <p>JupyterHub is a multiuser version of the notebook designed for centralized deployments in companies, university classrooms and research labs.</p>
+                </div>
+            </div>
+            <div class="hubfeatures col-md-12">
+                <div class="feature1 hubfeature col-md-3 authentication">
+                    <img src="assets/authentication.svg" class="img-responsive" style="margin:0 auto;">
+                    <h2>Pluggable authentication</h2>
+                    <p>Manage users and authentication with PAM, OAuth or integrate with your own directory service system. Collaborate with others through the Linux permission model.</p>
+                </div>
+                <div class="feature2 hubfeature col-md-3" style="margin-top: 50px;">
+                    <img src="assets/central.svg" class="img-responsive" style="margin:0 auto;">
+                    <h2>Centralized deployment</h2>
+                    <p>Deploy the Jupyter Notebook to all users in your organization on centralized servers that have unified package management and data access.</p>
+                </div>
+                <div class="feature3 hubfeature col-md-3" style="margin-top: 50px;">
+                    <img src="assets/container.svg" class="img-responsive" style="margin:0 auto;">
+                    <h2>Container friendly</h2>
+                    <p>Use Docker containers to scale your deployment and isolate user processes. Assemble your deployment using a growing ecosystem of prebuilt Docker containers.</p>
+                </div>
+                <div class="feature4 hubfeature col-md-3">
+                    <img src="assets/data.svg" class="img-responsive" style="margin:0 auto;">
+                    <h2>Code Meets Data.</h2>
+                    <p>The Notebook has support for over 40 programming languages, including languages popular in Data Science such as Python, R, Julia and Scala. </p>
+                <div>
             </div>
         </div>
     </div>    
-
+</section>
+<section>
+    <div class="col-md-12 architecture">
+        <div class="container">
+            <div class="architectureheader">
+                <img src=""
+            </div>
+        </div>
+    </div>
+</section>
     <!-- /.container -->
 
     <!-- jQuery -->

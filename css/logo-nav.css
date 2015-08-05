@@ -5,7 +5,8 @@
  */
 
 body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    padding-top: 70px; 
+    /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 }
 
 .navbar-fixed-top .nav {
@@ -13,7 +14,6 @@ body {
 }
 .navbar {
 	background-color: white;
-    border-bottom-color: #979797;
     border-width: thin;
 }
  a {
@@ -27,6 +27,13 @@ body {
 .navbar-header .icon-bar {
     background-color: black;
 }
+
+
+#tab:hover {
+    color: #E46E2E;
+    background-color: white;
+}
+
 @media(min-width:768px) {
     body {
         padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
@@ -35,7 +42,7 @@ body {
     .navbar-fixed-top .navbar-brand {
         padding: 15px 0;
     }
-    #tab {
+    .tab {
         text-align: center;
     }
 }
@@ -124,7 +131,7 @@ body {
     border-right-style: none;
     border-left-style: none;
     border-width: thin;
-    margin-bottom: 10%;
+    
 }
 .install_prompt .content {
     padding-top: 4%;
@@ -157,7 +164,13 @@ body {
     }
 }
 .companyuse {
+    margin-top: 10%;
     margin-bottom: 10%;
+}
+.companyuse ul {
+    text-decoration: none;
+    padding-left: 0px;
+    margin: 0 auto;
 }
 .companies h2{
     padding-bottom: 30px;
@@ -184,4 +197,49 @@ body {
 .companies .col img{
     display: block;
     width: 100%
+}
+.jupyterhub {
+    background-color: #FDFDFD;
+}
+.jupyterhub .container {
+    border-style: solid;
+    border-top-color: #979797;
+    border-bottom-color: #979797;
+    border-right-style: none;
+    border-left-style: none;
+    border-width: thin;
+    padding-top: 10%;
+    padding-bottom:10%;
+}
+.hubdescription p {
+    padding-top: 26px;
+    font-size: 15pt;
+    line-height: 21pt;
+}
+.hubfeature h2 {
+    font-size: 21px;
+    text-align: center;
+    color: #766A6A;
+}
+.hubfeature p {
+    font-size: 15pt;
+    text-align: center;
+    color: #766A6A;
+    padding-top: 2px;
+}
+.hubfeatures {
+    padding-top: 50px;
+    background: url("../assets/line.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+
+}
+@media(max-width:992px) {
+    .hubdescription {
+        text-align: center;
+        padding-top: 10%;
+    }
+    .hubfeatures{
+        background: none;
+    }
 }

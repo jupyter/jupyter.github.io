@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="79px" height="79px" viewBox="0 0 79 79" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval 20 + Rectangle 2 + Line</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Home---Desktop-Copy-2" sketch:type="MSArtboardGroup" transform="translate(-200.000000, -2755.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(97.000000, 2493.000000)">
+                <g transform="translate(0.000000, 76.000000)" id="Oval-20-+-Rectangle-2-+-Oval-1" sketch:type="MSShapeGroup">
+                    <g transform="translate(103.000000, 186.000000)">
+                        <g id="Oval-20-+-Rectangle-2-+-Line">
+                            <circle id="Oval-20" fill="#767474" cx="39.5" cy="39.5" r="39.5"></circle>
+                            <path d="M30.744898,34.6758442 L28.3754655,34.6758442 C25.3998605,34.6758442 23,37.0840553 23,40.0547344 L23,54.5146162 C23,57.4869543 25.4066779,59.8935065 28.3754655,59.8935065 L50.6245345,59.8935065 C53.6001395,59.8935065 56,57.4852953 56,54.5146162 L56,40.0547344 C56,37.0823964 53.5933221,34.6758442 50.6245345,34.6758442 L48.255102,34.6758442 L48.255102,28.0964842 L48.2508352,28.0964842 C48.1050707,23.6013221 44.2429787,20 39.5,20 C34.7570213,20 30.8949293,23.6013221 30.7491648,28.0964842 L30.744898,28.0964842 L30.744898,34.6758442 Z" id="Rectangle-2" stroke="#FFFFFF" stroke-width="3"></path>
+                            <path d="M31.5,35.2 L46.5,35.2" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
