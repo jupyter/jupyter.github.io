@@ -251,4 +251,7 @@ body {
     #data {
     padding-top: 40px;
     }
+    .hubfeature h2 {
+        text-align: center;
+    }
 }
