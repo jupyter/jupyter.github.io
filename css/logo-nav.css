@@ -198,6 +198,22 @@ body {
     display: block;
     width: 100%
 }
+.greydout {
+    -webkit-opacity: 0.065;
+    -moz-opacity: .065;
+    opacity: 0.65;
+    -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.greydout:hover {
+    webkit-opacity: 1;
+    moz-opacity: 1;
+    opacity: 1;
+}
+.
 .jupyterhub {
     background-color: #FDFDFD;
 }
