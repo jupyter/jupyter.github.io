@@ -30,7 +30,7 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-fixed-top" role="navigation" id="navbar" data-spy="affix">
         <div class="navbar-inner">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -42,7 +42,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <img src="assets/nav_logo.svg" style="height:45px;" alt="">
+                    <img src="assets/nav_logo.svg" style="height:45px;">
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -69,8 +69,8 @@
         </div>
         <!-- /.container -->
     </div>
-    <div id="top-shadow"></div>
     </nav>
+    <div id="top-shadow"></div>
 
     <!-- Page Content -->
 <section>
@@ -201,8 +201,20 @@
 <section>
     <div class="col-md-12 architecture">
         <div class="container">
-            <div class="architectureheader">
-                <img src=""
+            <div class="architecturedescription">
+                <h2><img src="assets/architectureicon.svg" id="arcicon1"> Jupyter Architecture</h2>
+                <p>The Jupyter Notebook is based on a set of open standards for interactive computing. Think HTML and CSS for interactive computing on the web. These open standards can be leveraged by third party developers to build customized applications with embedded interactive computing.</p>
+            </div>
+            <div class="architecturecontent">
+                <div class="arcfeature col-md-4">
+                    <a><img src="assets/nbformat.svg" class="img-responsive">Notebook Document Format</a>
+                </div>
+                <div class="arcfeature col-md-4">
+                    <a><img src="assets/protocolicon.svg" class="img-responsive" id="protocol">Interactive Computing Protocol</a>
+                </div>
+                <div class="arcfeature col-md-4">
+                    <a><img src="assets/kernelicon.svg" class="img-responsive" id="kernel">The Kernel</a>
+                </div>
             </div>
         </div>
     </div>
