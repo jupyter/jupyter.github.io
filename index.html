@@ -16,6 +16,13 @@
     <!-- Custom CSS -->
     <link href="css/logo-nav.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.ico" />
+    <link href="assets/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="assets/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+    <link href="assets/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+    <link href="assets/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+    <link href="assets/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="assets/icon-hires.png" rel="icon" sizes="192x192" />
+    <link href="assets/icon-normal.png" rel="icon" sizes="128x128" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,7 +48,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <img src="assets/nav_logo.svg" style="height:45px;">
                 </a>
             </div>
@@ -52,7 +59,7 @@
                         <a href="http://jupyter.readthedocs.org/en/latest/install.html" class="tab" id="tab">INSTALL</a>
                     </li>
                     <li>
-                        <a href="#" class="tab" id="tab">ABOUT</a>
+                        <a href="about.html" class="tab" id="tab">ABOUT</a>
                     </li>
                     <li>
                         <a href="http://jupyter.readthedocs.org/en/latest/" class="tab" id="tab">DOCS</a>
@@ -70,7 +77,6 @@
         <!-- /.container -->
     </div>
     </nav>
-    <div id="top-shadow"></div>
 
     <!-- Page Content -->
 <section>
@@ -206,29 +212,28 @@
                 <p>The Jupyter Notebook is based on a set of open standards for interactive computing. Think HTML and CSS for interactive computing on the web. These open standards can be leveraged by third party developers to build customized applications with embedded interactive computing.</p>
             </div>
             <div class="architecturecontent">
-                <div class="arcfeature col-md-4">
-                    <a><img src="assets/nbformat.svg" class="img-responsive">Notebook Document Format</a>
+                <div class="arcfeature col-md-3" id="arcfeature1">
+                    <a data-toggle="dropdown"><img src="assets/nbformat.svg" class="img-responsive">Notebook Document Format</a>
                 </div>
-                <div class="arcfeature col-md-4">
+                <div class="arcfeature col-md-3 col-md-offset-1 pull-center">
                     <a><img src="assets/protocolicon.svg" class="img-responsive" id="protocol">Interactive Computing Protocol</a>
                 </div>
-                <div class="arcfeature col-md-4">
+                <div class="arcfeature col-md-3 col-md-offset-1">
                     <a><img src="assets/kernelicon.svg" class="img-responsive" id="kernel">The Kernel</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!--
+
 <section>
-    <div id="footer" class="text-center">
+    <div id="footer" class="footer">
       <div class="row">
-        <div class="col-sm-2 col-sm-offset-1">
-          <!-- Place this tag where you want the button to render. 
+        <div class="col-sm-2 col-sm-offset-1"> 
           <a class="github-button" href="https://github.com/jupyter">@jupyter on GitHub</a>
         </div>
         <div class="col-sm-2">
-          <a href="https://twitter.com/ProjectJupyter" class="twitter-follow-button" data-show-count="false">Follow @ProjectJupyter</a>
+          <a href="https://twitter.com/ProjectJupyter" class="twitter-follow-button" data-show-count="false">Follow @ProjectJupyter</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         </div>
         <div class="col-sm-2">
           <a href="https://blog.jupyter.org">Jupyter Blog</a>
@@ -240,7 +245,6 @@
       </div>
     </div>
 </section>
--->
     <!-- /.container -->
 
     <!-- jQuery -->
@@ -248,6 +252,8 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Place this tag right after the last button or just before your close body tag. -->
+    <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 
 </body>
 
