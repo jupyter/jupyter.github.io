@@ -322,4 +322,7 @@ body {
     .architecturedescription h2 {
         text-align: center;
     }
+    .architecturedescription p {
+        text-align: center;
+    }
 }
