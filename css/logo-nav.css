@@ -341,7 +341,7 @@ body {
 .header{
     padding-bottom: 30px; 
     text-align: center;
-    background-color: #F5F8FA;
+    background-color: #F8F8F8;
 }
 .header h1 {
     font-size: 41px;
@@ -388,4 +388,7 @@ body {
     #about-body {
         padding-top: 50px;
     }
+}
+.transparent {
+    background-color: white;
 }
