@@ -381,3 +381,11 @@ body {
 .institutional {
     background-color: 
 }
+#about-body {
+    padding-top: 70px;
+}
+@media (max-width: 768px) {
+    #about-body {
+        padding-top: 50px;
+    }
+}
