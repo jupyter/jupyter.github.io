@@ -30,11 +30,13 @@ body {
 .navbar-header .icon-bar {
     background-color: black;
 }
-
+.navbar-active {
+    color: #E46E2E;
+}
 
 #tab:hover {
     color: #E46E2E;
-    background-color: white;
+    background-color: transparent;
 }
 
 @media(min-width:768px) {
@@ -391,4 +393,66 @@ body {
 }
 .transparent {
     background-color: white;
+}
+.menu {
+    margin-top: 20px;
+
+}
+.institutional .clicky{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 21px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+} 
+.clicky:hover {
+    color: #E46E2E
+}
+.institutional .items {
+    border-color: black;
+    border-width: thin;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #979797;
+    height: 100px;
+}
+.content-gov {
+    margin-top: 18px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #818181;
+}
+.institutional .menu {
+    height: 30%
+}
+.abs {
+  position: absolute;
+  top: 50px;
+  contenteditable: false;
+}
+.menuClicked {
+    color: #E46E2E;
+}
+@media (max-width: 687px) {
+    .content-gov {
+        margin-top: 60px;
+        padding-bottom: 60px;
+        vertical-align: center;
+    }
+
+}
+@media (max-width: 599px) {
+    .content-gov {
+        margin-top: 50px;
+    }
+}
+@media (max-width: 509px) {
+    .institutional .items {
+        height: 120px;
+    }
+}
+@media (max-width: 423px) {
+    .institutional .items {
+        height: 140px;
+    }
 }
