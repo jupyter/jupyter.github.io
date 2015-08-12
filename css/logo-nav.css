@@ -451,8 +451,19 @@ body {
         height: 120px;
     }
 }
-@media (max-width: 423px) {
+@media (max-width: 395px) {
+    .content-gov {
+        margin-top: 90px;
+    }
     .institutional .items {
         height: 140px;
+    }
+}
+@media (max-width: 365px) {
+    .content-gov {
+        margin-top: 130px;
+    }
+    .institutional .items {
+        height: 160px;
     }
 }
