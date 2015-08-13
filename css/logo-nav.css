@@ -476,3 +476,17 @@ body {
         height: 160px;
     }
 }
+#footer1 {
+    background-color: #979797;
+}
+.navbar-bottom p {
+    color: white;
+    padding-top: 10px;
+}
+.navbar-bottom li{
+    display: inline-block;
+    color: white;
+}
+.follow {
+    display: block;
+}
