@@ -487,7 +487,10 @@ body {
 .navbar-bottom li{
     display: inline-block;
     color: white;
+    text-decoration: none;
 }
-.follow {
-    display: block;
+.navbar-bottom a {
+    text-decoration: none;
+    color: white;
 }
+
