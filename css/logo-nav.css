@@ -404,6 +404,7 @@ body {
     font-size: 21px;
     margin-left: 20px;
     margin-bottom: 10px;
+    cursor: default;
 } 
 .clicky:hover {
     color: #E46E2E
