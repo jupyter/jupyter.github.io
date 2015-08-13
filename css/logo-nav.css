@@ -425,10 +425,19 @@ body {
 .institutional .menu {
     height: 30%
 }
+#institutional {
+    border-style: solid;
+    border-top-color: #979797;
+    border-bottom-color: #979797;
+    border-right-style: none;
+    border-left-style: none;
+    border-width: thin;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
 .abs {
   position: absolute;
   top: 50px;
-  contenteditable: false;
 }
 .menuClicked {
     color: #E46E2E;
