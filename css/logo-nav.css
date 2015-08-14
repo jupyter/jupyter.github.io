@@ -419,8 +419,8 @@ body {
 }
 .content-gov {
     margin-top: 18px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 35px;
     color: #818181;
 }
 .institutional .menu {
@@ -492,4 +492,33 @@ body {
 .navbar-bottom a {
     text-decoration: none;
     color: white;
+}
+.navbar-bottom li::after {
+    content:" |";
+}
+.navbar-bottom li:last-of-type::after {
+    content:"";
+}
+@media (min-width: 513px) {
+    .follow {
+        float: right !important;
+    }
+    .navbar-bottom ul {
+        float: left;
+    }
+}
+@media (max-width: 513px) {
+    .follow {
+        display: block;
+        margin: 0 auto;
+        float: none;
+    }
+    .navbar-bottom .container {
+        text-align: center;
+        padding-bottom: 15px;
+    }
+}
+#auberon {
+    margin-left: 0px;
+    padding-left: 0px;
 }
