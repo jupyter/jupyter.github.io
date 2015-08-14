@@ -81,8 +81,18 @@
 <section>
     <div class="jumbotron">
         <div class="row">
-            <div class="col-lg-12">
-                <img class="img-responsive" src="assets/jumbotron_logo.svg" />
+            <div class="col-md-12">
+                <div class="img-container">
+                    <span class="centerer"><img class="img-responsive header-logo fade-in one" src="assets/circle1.svg"></span>
+                </div>
+                <div class="img-container">
+                    <span class="centerer"><img class="img-responsive header-logo fade-in two" src="assets/circle2.svg"></span>
+                    
+                </div>
+                <div class="img-container">
+                    <span class="centerer"><img class="img-responsive header-logo fade-in three" src="assets/circle3.svg"></span>
+                </div>
+                <img class="img-responsive" src="assets/main-logo.svg">
             </div>
         </div>
     </div>
@@ -211,14 +221,33 @@
                 <p>The Jupyter Notebook is based on a set of open standards for interactive computing. Think HTML and CSS for interactive computing on the web. These open standards can be leveraged by third party developers to build customized applications with embedded interactive computing.</p>
             </div>
             <div class="architecturecontent">
-                <div class="arcfeature col-md-3" id="arcfeature1">
-                    <a data-toggle="dropdown"><img src="assets/nbformat.svg" class="img-responsive">Notebook Document Format</a>
+                <div class="card-container">
+                    <div class="arcfeature card " id="arcfeature1">
+                        <div class="front">
+                         <a data-toggle="dropdown"><img src="assets/nbformat.svg" class="img-responsive">Notebook Document Format</a>
+                        </div>
+                        <div class="back">
+                            <p>Jupyter Notebooks are an open document format also based on JSON. These documents contain a complete snapshot of the users sessions and embed code, narrative text, equations and rich output. They can be manipulated programmatically or converted to static HTML, PDF, Markdown and reStructured Text. They are even rendered in place on GitHub.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="arcfeature col-md-3 col-md-offset-1 pull-center">
-                    <a><img src="assets/protocolicon.svg" class="img-responsive" id="protocol">Interactive Computing Protocol</a>
+                <div class="card-container">
+                    <div class="arcfeature card col-md-offset-1">
+                        <div class="front">
+                        <a><img src="assets/protocolicon.svg" class="img-responsive" id="protocol">Interactive Computing Protocol</a>
+                        </div>
+                        <div class="back">
+                        </div>
+                    </div>
                 </div>
-                <div class="arcfeature col-md-3 col-md-offset-1">
-                    <a><img src="assets/kernelicon.svg" class="img-responsive" id="kernel">The Kernel</a>
+                <div class="card-container">
+                    <div class="arcfeature card  col-md-offset-1">
+                        <div class="front">
+                        <a><img src="assets/kernelicon.svg" class="img-responsive" id="kernel">The Kernel</a>
+                        </div>
+                        <div class="back">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

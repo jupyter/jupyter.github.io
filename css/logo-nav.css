@@ -8,6 +8,40 @@ body {
     padding-top: 70px; 
     /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 }
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+ 
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+ 
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+.fade-in.one {
+-webkit-animation-delay: 0.3s;
+-moz-animation-delay: 0.3s;
+animation-delay: 0.3s;
+}
+ 
+.fade-in.two {
+-webkit-animation-delay: 0.7s;
+-moz-animation-delay:0.7s;
+animation-delay: 0.7s;
+}
+.fade-in.three {
+-webkit-animation-delay: 1.1s;
+-moz-animation-delay: 1.1s;
+animation-delay: 1.1s;
+}
 
 .navbar-fixed-top .nav {
     padding: 15px 0;
@@ -32,6 +66,21 @@ body {
 }
 .navbar-active {
     color: #E46E2E;
+}
+.img-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-right: 6%;
+    
+}
+.img-container img {
+    vertical-align: center;
+}
+.header {
+    margin: 0 auto;
+    display: block;
 }
 
 #tab:hover {
@@ -70,6 +119,12 @@ body {
 .jumbotron {
     background-color: white;
 }
+.centerer {
+    display: inline-block;
+    height: 100%;
+    margin: 0
+}
+
 .jumbotron img {
     margin: 0 auto;
 }
@@ -295,23 +350,20 @@ body {
 }
 .architecturecontent {
     padding-top: 26px;
+    margin: 0 auto;
+    text-align: center;
 }
 .arcfeature {
     font-size: 21px;
     text-align: center;
-    border-style: solid;
-    border-width: thin;
     padding-top: 5%;
     padding-bottom:5%;
     border-radius: 5px;
     height: 300px;
-    border-color: #979797;
+    
 }
 .arcfeature:hover a {
     text-decoration: none;
-}
-.arcfeature:hover {
-    background-color: #F6F6F6;
 }
 .arcfeature img {
     margin: 0 auto;
@@ -321,6 +373,43 @@ body {
 #arcfeature1 {
     margin-left: 40px;
 }
+.card {
+    -webkit-transform-style: preserve-3d;
+    -webkit-perspective: 1000;
+    width: 250px;
+    height: 250px;
+    position: relative;
+}
+.back, .front {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: -webkit-transform .3s ease-in;
+    width: 100%;
+    height: 100%;   
+    padding: 20px;
+    color: #fff;    
+    border-radius: 4px;
+    border-style: thin;
+    border-width: 1px;
+}
+.back {
+    -webkit-transform: rotateY(180deg);
+    overflow: hidden;
+}   
+.front {
+    background: white;
+}
+.card-container {
+    display: inline-block;
+    text-align: justify;
+}   
+.card-container:hover .back {   
+    -webkit-transform: rotateY(0deg);
+}
+.card-container:hover .front {      
+    -webkit-transform: rotateY(-180deg);
+}
+
 @media(max-width:992px) {
     #arcicon1 {
         display: block;
