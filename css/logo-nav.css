@@ -518,6 +518,11 @@ body {
         padding-bottom: 15px;
     }
 }
+@media (min-width: 768px) {
+    .follow {
+        margin-top: 15px;
+    }
+}
 #auberon {
     margin-left: 0px;
     padding-left: 0px;
