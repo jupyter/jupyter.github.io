@@ -10,4 +10,15 @@ $(window).on("scroll", function () {
         console.log("scrolled top");
     }
 });
-console.log("a")
+$(window).on("scroll", function () {
+    if ($(this).scrollTop() > 0) {
+        $(".navbar").addClass("navbar-scroll");
+        // $(".navbar").stop().animate({opacity: 0});
+        console.log("scrolled down");
+    }
+    else {
+        $(".navbar").removeClass("navbar-scroll");
+        // $(".navbar").stop().animate({opacity: 1});
+        console.log("scrolled top");
+    }
+});
