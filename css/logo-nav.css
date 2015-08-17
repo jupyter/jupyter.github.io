@@ -74,6 +74,10 @@ animation-delay: 1.1s;
     animation-name: smooth;
     animation-duration: 2s;
 }
+.nav > li > a:hover {
+    color: #E46E2E;
+    background-color: transparent;
+}
 .img-container {
     position: absolute;
     width: 100%;
@@ -94,7 +98,6 @@ animation-delay: 1.1s;
     color: #E46E2E;
     background-color: transparent;
 }
-
 @media(min-width:768px) {
     body {
         padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
@@ -126,7 +129,6 @@ animation-delay: 1.1s;
 .jumbotron {
     background-color: white;
 }
-
 .jumbotron img {
     margin: 0 auto;
 }
