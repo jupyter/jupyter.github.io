@@ -222,35 +222,34 @@
                 <p>The Jupyter Notebook is based on a set of open standards for interactive computing. Think HTML and CSS for interactive computing on the web. These open standards can be leveraged by third party developers to build customized applications with embedded interactive computing.</p>
             </div>
             <div class="architecturecontent">
-                <div class="card-container">
-                    <div class="arcfeature col-md-4 button1" id="arcfeature1">
-                        <div>
-                         <a><img src="assets/nbformat.svg" class="img-responsive">Notebook Document Format</a>
+                <div class="card">
+                    <div class="arcfeature col-md-4" id="arcfeature1">
+                        <div class="front">
+                            <a><img src="assets/nbformat.svg" class="img-responsive">Notebook Document Format</a>
+                        </div>
+                        <div class="back">
+                            <p>Jupyter Notebooks are an open document format based on JSON. They contain a complete snapshot of the users sessions and embed code, narrative text, equations and rich output. </p>
                         </div>
                     </div>
                 </div>
-                <div class="card-container">
-                    <div class="arcfeature col-md-4 button2">
-                        <div>
-                        <a><img src="assets/protocolicon.svg" class="img-responsive" id="protocol">Interactive Computing Protocol</a>
+                <div class="card">
+                    <div class="arcfeature col-md-4">
+                         <div class="front">
+                            <a><img src="assets/protocolicon.svg" class="img-responsive" id="protocol">Interactive Computing Protocol</a>
+                        </div>
+                        <div class="back">
+                            <p>Kernels and Frontends communicate using the Interactive Computing Protocol, an open network protocol based on JSON data over ZMQ and WebSockets.</p>
                         </div>
                     </div>
                 </div>
-                <div class="card-container">
-                    <div class="arcfeature col-md-4 button3">
-                        <div>
-                        <a><img src="assets/kernelicon.svg" class="img-responsive" id="kernel">The Kernel</a>
+                <div class="card">
+                    <div class="arcfeature col-md-4">
+                        <div class="front">
+                            <a><img src="assets/kernelicon.svg" class="img-responsive" id="kernel">The Kernel</a>
                         </div>
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="container div1">
-                        <p>Jupyter Notebooks are an open document format also based on JSON. These documents contain a complete snapshot of the users sessions and embed code, narrative text, equations and rich output. They can be manipulated programmatically or converted to static HTML, PDF, Markdown and reStructured Text. They are even rendered in place on GitHub.</p>
-                    </div>
-                    <div class="container div2">
-                        <p>haskdflasdkjflkadsjfsda</p>
-                    </div>
-                    <div class="container div3">
+                        <div class="back">
+                            <p>Kernels are processes that run interactive code in a particular programming language and return output to the user. Kernels also respond to tab completion and introspection requests.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -285,7 +284,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scroll.js"></script>
-    <script src="js/simon.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <!-- Place this tag right after the last button or just before your close body tag. -->
     <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
