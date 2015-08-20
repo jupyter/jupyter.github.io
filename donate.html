@@ -17,6 +17,9 @@
     <!-- Custom CSS -->
     <link href="css/logo-nav.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.ico" />
+    <link rel="stylesheet" href="css/timeline/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/timeline/style.css"> <!-- Resource style -->
+    <script src="js/timeline/modernizr.js"></script> <!-- Modernizr -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -75,20 +78,28 @@
         <!-- /.container -->
     </div>
 </nav>
-   
-
 <section>
     <div class="header">
         <div class="container">
             <h1>Donate to Jupyter</h1>
-            <p>If you have found IPython to be useful, please consider making a donation to the project commensurate with your resources.</p>
+            <!--<p>If you have found Jupyter to be useful, please consider making a donation to the project commensurate with your resources.</p>-->
+            <p>With your help, we are able to do incredible things. Every donation given is used to forward the Jupyter project.</p>
         </div>
     </div>
 </section>
 <section>
-    <div class="about-block">
+    <div class="architecture">
         <div class="container">
-            
+            <div class="architecturedescription">
+                <h2><img src="assets/donations-icon.svg" id="arcicon1"> Donations</h2>
+                <p class="col-md-6">Jupyter will always be 100% open source software, free for all to use and
+                released under the liberal terms of the modified BSD license. If you have found Jupyter to be useful in your work, research or company, please consider making a donation to the project commensurate with your resources. Any amount helps! All donations will be used strictly to fund Jupyter development, by supporting tasks such as developer sprints, better installers, improved documentation and paying for hosting costs for services.
+                </p>
+            </div>
+            <div class="col-md-6 donate-box">
+                <img src="assets/numfocus_logo.png" class="img-responsive">
+                <p>Our donations are managed by the NumFOCUS_ foundation, which passes 100% of your contribution to the IPython project. NumFOCUS is a 501(c)3 non-profit foundation, so if you are subject to US Tax law, your contributions will be tax-deductible.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -126,6 +137,7 @@
     <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/simon.js"></script>
+    <script src="js/timeline/main.js"></script> <!-- Resource jQuery -->
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </body>
 

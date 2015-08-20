@@ -361,7 +361,7 @@ animation-delay: 1.1s;
 .arcfeature {
     font-size: 21px;
     text-align: center;
-    padding-top: 5%;
+    padding-top: 4%;
     padding-bottom:5%;
     border-radius: 5px;
     height: 300px;
@@ -440,7 +440,6 @@ animation-delay: 1.1s;
     display: inline-block;
 }
 
-
 @media(max-width:992px) {
     #arcicon1 {
         display: block;
@@ -455,6 +454,9 @@ animation-delay: 1.1s;
     }
     #arcfeature1 {
         margin-left: 0px;
+    }
+    #protocol {
+        padding-top: 15px;
     }
 }
 
@@ -646,4 +648,27 @@ animation-delay: 1.1s;
 #footer-text {
     margin-left: 0px;
     padding-left: 0px;
+}
+
+/* Donate Page */
+
+.donate-box {
+    background-color: #F9F9F9;
+    height: 500px;
+    border-radius: 8px;
+    border-color: #979797;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 3px;
+    height: 300px;
+}
+.donate-box img {
+    padding-top: 17px;
+    padding-left: 17px;
+}
+.donate-box p {
+    font-size: 15pt;
+    padding-left: 17px;
+    padding-top: 17px;
+    padding-right: 17px;
 }
