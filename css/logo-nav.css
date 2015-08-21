@@ -716,3 +716,23 @@ animation-delay: 1.1s;
         height: 415px;
     }
 }
+@media (max-width: 521px) {
+    .donate-box {
+        height: 440px;
+    }
+}
+@media (max-width: 440px) {
+    .donate-box {
+        height: 475px;
+    }
+}
+@media (max-width: 428px) {
+    .donate-box {
+        height: 480px;
+    }
+}
+@media (max-width: 427px) {
+    .donate-box {
+        height: 500px;
+    }
+}
