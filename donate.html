@@ -100,8 +100,12 @@
                 <img src="assets/numfocus_logo.png" class="img-responsive">
                 <p>Our donations are managed by the NumFOCUS_ foundation, which passes 100% of your contribution to the IPython project. NumFOCUS is a 501(c)3 non-profit foundation, so if you are subject to US Tax law, your contributions will be tax-deductible.</p>
                 <div id="donate-formatting">
-                <a href="https://try.jupyter.org/" style="display: inline-block;" id="donate-button">Donate via Paypal</a>
-            </div>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="SMCAHLP2ST42G">
+                    <input style="display: inline-block;" id="donate-button" src="assets/paypal_donate.svg" type="image">
+                </form>
+                </div>
             </div>
         </div>
     </div>
