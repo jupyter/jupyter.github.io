@@ -379,12 +379,6 @@ animation-delay: 1.1s;
         margin-left: 50px;
     }
 }
-@media (max-width: 992px) {
-    .arcfeature {
-        margin-bottom: 20px;
-        height: 275px;
-    }
-}
 .card {
     display: block;
     margin: 0 auto;
@@ -465,6 +459,32 @@ animation-delay: 1.1s;
         padding-top: 10px;
         height: 260px;
     }
+    .arcfeature {
+        margin-bottom: 20px;
+        height: 275px;
+    }
+}
+@media (min-width: 1200px) {
+    .notebook_features {
+        padding-top:125px;
+        padding-bottom: 125px;
+    }
+    .companyuse {
+        margin-top: 125px;
+        margin-bottom: 125px;
+    }
+    .jupyterhub .container{
+        padding-top: 125px;
+        padding-bottom: 125px;
+    }
+    .architecture {
+        padding-top: 125px;
+        padding-bottom: 125px;
+    }
+    .install_prompt .content{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
 }
 
 /*About Page */
@@ -482,7 +502,7 @@ animation-delay: 1.1s;
     line-height: 30px;
     padding-top: 25px;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .header h1 {
         font-size: 34px;
     }
@@ -702,7 +722,7 @@ animation-delay: 1.1s;
     padding-top: 25px;
     padding-right: 25px;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .donate-box {
         margin-top: 10%;
     }
