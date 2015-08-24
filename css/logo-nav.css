@@ -296,7 +296,6 @@ animation-delay: 1.1s;
 .
 .jupyterhub {
     background-color: #FDFDFD;
-    backgound-image: url("assets/line.svg");
 }
 .jupyterhub .container {
     border-style: solid;
@@ -334,7 +333,7 @@ animation-delay: 1.1s;
 .hubfeatures {
     padding-top: 50px;
     background: url("../assets/line.svg");
-    background-position: top center;
+    background-position:  top center;
     background-repeat: no-repeat;
 }
 @media(max-width:992px) {
@@ -465,6 +464,9 @@ animation-delay: 1.1s;
     .arcfeature {
         margin-bottom: 20px;
         height: 275px;
+    }
+    #kernel {
+        height: 270px;
     }
 }
 @media (min-width: 1200px) {
