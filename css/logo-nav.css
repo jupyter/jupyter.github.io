@@ -199,6 +199,9 @@ animation-delay: 1.1s;
     .notebook_preview p {
         text-align: center;
     }
+    .share_set, .widget_set, .data_set {
+        padding-top: 40px;
+    }
 }
 .install_prompt {
     background-color: #FDFDFD;
