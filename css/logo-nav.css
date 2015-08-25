@@ -470,6 +470,9 @@ animation-delay: 1.1s;
     line-height: 30px;
     padding-top: 25px;
 }
+.supportparagraph {
+    font-size: 21px;
+}
 @media (max-width: 992px) {
     .header h1 {
         font-size: 34px;
@@ -477,6 +480,9 @@ animation-delay: 1.1s;
     .header p {
         font-size: 18px;
         padding-top: 20px;
+    }
+    .supportparagraph {
+        font-size: 18px;
     }
 }
 .about-block {
