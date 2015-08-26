@@ -375,11 +375,6 @@ animation-delay: 1.1s;
     color: white;
     text-decoration: none;
 }
-@media (min-width: 1200px) {
-    .arcfeature {
-        margin-left: 50px;
-    }
-}
 .card {
     display: block;
     margin: 0 auto;
