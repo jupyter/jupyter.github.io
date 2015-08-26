@@ -17,6 +17,10 @@ h2 {
     font-size: 29.4px;
     font-weight: 400;
 }
+h3 {
+    font-size: 21px;
+    font-weight: 400;
+}
 @-webkit-keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
@@ -369,6 +373,14 @@ animation-delay: 1.1s;
     margin-top: 15px;
     margin-bottom: 40px;
 }
+.arcfeature .front2 img {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+.arcfeature .front3 img {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
 .arcfeature .back p {
     margin-top: 40px;
 }
@@ -386,26 +398,53 @@ animation-delay: 1.1s;
     height: 100%;
     vertical-align: center;
 }
-.card .front, .card .back{
-    position: absolute;
+.card .front {
+    width: 275px;
+    height: 275px;
+    transition: transform 0.3s linear 0s;
+    -webkit-transition: -webkit-transform 0.3s linear 0s;
  
     -webkit-backface-visibility: hidden;
        -moz-backface-visibility: hidden;
          -o-backface-visibility: hidden;
-            backface-visibility: hidden;        
-    
-/* Apply some transitions so we see the element flip */ 
-    transition: transform 0.3s linear 0s;
-    -webkit-transition: -webkit-transform 0.3s linear 0s;
-        
-/* Assign a perspective */
-    transform: perspective(600px);
-    -webkit-transform: perspective(600px);
-    
+            backface-visibility: hidden;  
+    position: absolute;
+    text-align: center;
+}
+.card .front2 {
     width: 275px;
     height: 275px;
-}
+    transition: transform 0.3s linear 0s;
+    -webkit-transition: -webkit-transform 0.3s linear 0s;
  
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+         -o-backface-visibility: hidden;
+            backface-visibility: hidden;  
+    position: absolute;
+    text-align: center;
+}
+.card .front3 {
+    width: 275px;
+    height: 275px;
+    transition: transform 0.3s linear 0s;
+    -webkit-transition: -webkit-transform 0.3s linear 0s;
+ 
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+         -o-backface-visibility: hidden;
+            backface-visibility: hidden;  
+    position: absolute;
+    text-align: center;
+}
+.flipped {
+    transform: rotateY(180deg);
+}
+.content-back p{
+    margin-top: 10px;
+    margin-bottom: 45px;
+    font-size: 15px;
+}
 /* The .back element should be rotated at first, facing his back, hidden*/
 .card .back{
  
@@ -415,19 +454,11 @@ animation-delay: 1.1s;
     text-align: center;
 }
  
-/* The .front card needs to rotate when we hover*/
-.arcfeature:hover .front{
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-}
- 
-/* The .back card has to rotate to 0 degrees and be visible*/
-.arcfeature:hover .back{
-    transform: rotateY(0);
-    -webkit-transform: rotateY(0);
-}
-.arcfeature:hover a {
+
+
+.arcfeature a {
     text-decoration: none;
+    color: white;
 }
 .arcfeature img {
     margin: 0 auto;
