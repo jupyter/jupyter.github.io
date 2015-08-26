@@ -439,6 +439,7 @@ animation-delay: 1.1s;
 }
 .flipped {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 .content-back p{
     margin-top: 10px;
