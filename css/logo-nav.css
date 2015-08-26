@@ -365,6 +365,9 @@ animation-delay: 1.1s;
     margin-top: 15px;
     margin-bottom: 40px;
 }
+.arcfeature .back p {
+    margin-top: 40px;
+}
 .arc-button {
     background-color: #8D8D8D;
     padding: 8px 26px;
