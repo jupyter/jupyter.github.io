@@ -10,12 +10,15 @@ body {
     padding-top: 70px; 
     /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
     font-size: 10.71pt;
+    font-weight: 400;
 }
 h1 {
-    font-size: 29.4pt;
+    font-size: 35px;
+    font-weight: 400;
 }
 h2 {
-    font-size: 21pt;
+    font-size: 29.4px;
+    font-weight: 400;
 }
 @-webkit-keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -120,10 +123,10 @@ animation-delay: 1.1s;
     }
 }
 @media(max-width:992px) {
-    .language_set #feature {
+    .language-set #feature {
         display: block;
     }
-    .notebook_preview img {
+    .notebook-preview img {
         margin: 0 auto;
     }
     #notebookicon {
@@ -131,7 +134,7 @@ animation-delay: 1.1s;
         margin: 0 auto;
         padding-bottom: 10px;
     }
-    .notebook_preview h1 {
+    .notebook-preview h1 {
         text-align: center;
     }
 }
@@ -144,59 +147,61 @@ animation-delay: 1.1s;
     margin: 0 auto;
 }
 
-.notebook_preview p {
+.notebook-preview p {
     line-height: 31pt;
     padding-top: 41px;
     padding-bottom: 41px;
-    font-size: 21pt;
+    font-size: 21px;
 }
 @media(max-width:1200px) {
     
-    .notebook_preview p {
+    .notebook-preview p {
         line-height: 25pt;
         font-size: 15pt;
     }
 }
-.notebook_features, .architecture, .about-block, .companyuse, .jupyterhub .container {
+.notebook-features, .architecture, .about-block, .companyuse, .jupyterhub .container {
     padding-top: 10%;
     padding-bottom: 10%;
 }
-.notebook_features .share_set h2, .notebook_features .language_set h2{
-    font-size: 15pt;
+.notebook-features .share-set h2, .notebook-features .language-set h2{
+    font-size: 21px;
+    line-height: 1.5;
     color: #766A6A;
     padding-top: 5px;
 }
-.notebook_features .data_set h2, .notebook_features .widget_set  h2{
-    font-size: 15pt;
+.notebook-features .data-set h2, .notebook-features .widget-set  h2{
+    font-size: 21px;
+    line-height: 1.5;
     color:#766A6A;
 }
-.notebook_features p{
+.notebook-features p{
     padding-top: 26px;
-    font-size: 10.71pt;
-    line-height: 21pt;
+    font-size: 15px;
+    line-height: 1.5;
 }
 @media(max-width:1200px) {
     
-    .notebook_features .language_set h2{
+    .notebook-features .language-set h2{
         padding-top: 0px;
     }  
-    .notebook_features #feature {
+    .notebook-features #feature {
         padding-top: 4px;
     }
 }
 @media(max-width:992px) {
-    .notebook_features  img {
+    .notebook-features  img {
         margin: 0 auto;
         width: 125px;
     }
-    .notebook_features p, .notebook_features h2, .notebook_preview p {
+    .notebook-features p, .notebook-features h2, .notebook-preview p {
         text-align: center;
     }
-    .share_set, .widget_set, .data_set {
+    .share-set, .widget-set, .data-set {
         padding-top: 40px;
     }
 }
-.install_prompt {
+.install-prompt {
     background-color: #FDFDFD;
     border-style: solid;
     border-top-color: #979797;
@@ -206,7 +211,7 @@ animation-delay: 1.1s;
     border-width: thin;
     
 }
-.install_prompt .content {
+.install-prompt .content {
     padding-top: 4%;
     padding-bottom: 4%;
 }
@@ -299,18 +304,19 @@ animation-delay: 1.1s;
 }
 .hubdescription p {
     padding-top: 26px;
-    font-size: 15pt;
-    line-height: 21pt;
+    font-size: 21px;
+    line-height: 1.5;
 }
 .hubfeature h2 {
-    font-size: 15pt;
+    font-size: 21px;
+    line-height: 1.5;
     text-align: center;
     color: #766A6A;
     text-align: center;
 }
 .hubfeature p {
-    font-size: 10.71pt;
-    line-height: 21pt;
+    font-size: 15px;
+    line-height: 1.5;
     text-align: center;
     color: #766A6A;
     padding-top: 2px;
@@ -341,8 +347,8 @@ animation-delay: 1.1s;
 }
 .architecturedescription p {
     padding-top: 26px;
-    font-size: 15pt;
-    line-height: 21pt;
+    font-size: 21px;
+    line-height: 1.5;
 }
 .architecturecontent {
     padding-top: 26px;
@@ -454,11 +460,11 @@ animation-delay: 1.1s;
     }
 }
 @media (min-width: 1200px) {
-    .notebook_features, .companyuse, .jupyterhub .container, .architecture, .install_prompt .content {
+    .notebook-features, .companyuse, .jupyterhub .container, .architecture, .install-prompt .content {
         padding-top:125px;
         padding-bottom: 125px;
     }
-    .install_prompt .content{
+    .install-prompt .content{
         padding-top: 40px;
         padding-bottom: 40px;
     }
@@ -472,16 +478,16 @@ animation-delay: 1.1s;
     background-color: #F8F8F8;
 }
 .header h1 {
-    font-size: 29.4pt;
+    font-size: 41.16px;
 }
 .header p {
-    font-size: 15pt;
-    line-height: 21pt;
+    font-size: 21px;
+    line-height: 1.5;
     padding-top: 25px;
 }
 .supportparagraph {
-    font-size: 15pt;
-    line-height: 21pt;
+    font-size: 15px;
+    line-height: 1.5;
 }
 @media (max-width: 992px) {
     .header h1 {
@@ -674,15 +680,19 @@ animation-delay: 1.1s;
 }
 
 /* Donate Page */
-
+#donate-paragraph {
+    font-size: 15px;
+    line-height: 1.5;
+}
 .donate-box {
-    background-color: white
+    background-color: white;
     height: 500px;
     border-radius: 8px;
     border-color: #979797;
     border-style: solid;
     border-width: 1px;
     padding-left: 3px;
+    margin-top: 5%;
     height: 20%;
 }
 .donate-box img, .donate-box p, #donate-formatting {
@@ -690,7 +700,8 @@ animation-delay: 1.1s;
     padding-left: 25px;
 }
 .donate-box p {
-    font-size: 15pt;
+    font-size: 15px;
+    line-height: 1.5;
     padding-right: 25px;
 }
 #donate-button {
