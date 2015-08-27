@@ -401,6 +401,10 @@ animation-delay: 1.1s;
 .bt, .bt1, .bt2 {
     cursor: default;
 }
+#block3 {
+    margin-bottom: 42px;
+    margin-top: 35px;
+}
 .card .front {
     width: 275px;
     height: 275px;
@@ -446,7 +450,7 @@ animation-delay: 1.1s;
 }
 .content-back p{
     margin-top: 10px;
-    margin-bottom: 65px;
+    margin-bottom: 45px;
     font-size: 15px;
 }
 #document {
