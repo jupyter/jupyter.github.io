@@ -7,7 +7,7 @@ body {
     padding-top: 70px; 
     /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
     font-size: 10.71pt;
-    font-weight: 400;
+    font-weight: 300;
 }
 h1 {
     font-size: 35px;
@@ -446,8 +446,11 @@ animation-delay: 1.1s;
 }
 .content-back p{
     margin-top: 10px;
-    margin-bottom: 45px;
+    margin-bottom: 65px;
     font-size: 15px;
+}
+#document {
+    margin-bottom: 44px;
 }
 /* The .back element should be rotated at first, facing his back, hidden*/
 .card .back{
