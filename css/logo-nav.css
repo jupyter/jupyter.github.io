@@ -1,0 +1,167 @@
+/*!
+ * Start Bootstrap - Logo Nav HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}
+
+.navbar-fixed-top .nav {
+    padding: 15px 0;
+}
+.navbar {
+	background-color: white;
+}
+ a {
+	color:black;
+}
+
+.navbar-fixed-top .navbar-brand {
+    margin-top: 5px;
+    padding: 0 15px;
+}
+.navbar-header .icon-bar {
+    background-color: black;
+}
+@media(min-width:768px) {
+    body {
+        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+    #tab {
+        text-align: center;
+    }
+}
+@media(max-width:992px) {
+    .language_set #feature {
+        display: block;
+    }
+    .notebook_preview img {
+        margin: 0 auto;
+    }
+}
+.jumbotron {
+    background-color: white;
+}
+.jumbotron img {
+    margin: 0 auto;
+}
+.notebook_preview p {
+    line-height: 31pt;
+    padding-top: 41px;
+    padding-bottom: 41px;
+    font-size: 21pt;
+}
+.notebook_features {
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.notebook_features .language_set h2{
+    font-size: 21px;
+    padding-top: 85px;
+    color: #766A6A;
+}
+.notebook_features .share_set h2{
+    font-size: 21px;
+    color: #766A6A;
+    padding-top: 5px;
+}
+.notebook_features .widget_set h2{
+    font-size: 21px;
+    color:#766A6A;
+}
+.notebook_features .data_set h2{
+    font-size: 21px;
+    color:#766A6A;
+}
+.notebook_features p{
+    padding-top: 26px;
+    font-size: 15pt;
+}
+.notebook_features .language{
+    width: 120px;
+    text-align: left;
+}
+@media(max-width:1200px) {
+    
+    .notebook_features .language_set h2{
+        padding-top: 0px;
+    }  
+    .notebook_features #feature {
+        padding-top: 40px;
+    }
+}
+.install_prompt {
+    background-color: #FDFDFD;
+    border-style: solid;
+    border-top-color: #979797;
+    border-bottom-color: #979797;
+    border-right-style: none;
+    border-left-style: none;
+    border-width: thin;
+    margin-bottom: 10%;
+}
+.install_prompt .content {
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.buttons {
+    font-size: 19.24px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.buttons a{
+    background-color: #E46E2E;
+    padding: 13px 26px;
+    border-radius: 5.82px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0px 3px #863001;
+}
+#box2 {
+    padding: 13px 29px;
+}
+.buttons a:hover{
+    background-color: #DB5106;
+}
+@media(max-width:541px) {
+    #box2 {
+        margin-top: 20px;
+    }
+}
+.companyuse {
+    margin-bottom: 10%;
+}
+.companies h2{
+    padding-bottom: 30px;
+}
+.companies li {
+    display: inline-block;
+    vertical-align: center;
+    width: 18%;
+    padding: 2%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+@media(max-width:1200px) {
+    .companies li{
+        width:23%;
+    }
+}
+@media(max-width:769px) {
+    .companies li {
+        width: 30%;
+    }
+}
+.companies .col img{
+    display: block;
+    width: 100%
+}
