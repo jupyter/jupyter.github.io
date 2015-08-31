@@ -394,6 +394,7 @@ a {
 }
 .arc-button {
     background-color: #8D8D8D;
+    box-shadow: 0px 3px #595959;
     padding: 8px 26px;
     border-radius: 5.82px;
     color: white;
