@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="81px" height="81px" viewBox="0 0 81 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>&lt;/&gt;</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="12.3556605%" y1="100%" x2="100%" y2="-16.4479111%" id="linearGradient-1">
+            <stop stop-color="#CCCBCB" offset="0%"></stop>
+            <stop stop-color="#747171" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Home---Desktop-Copy-2" sketch:type="MSArtboardGroup" transform="translate(-133.000000, -1022.000000)" fill="url(#linearGradient-1)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(130.000000, 1019.000000)">
+                <g id="&lt;/&gt;-+-Language-of-Choice.-+-The-Notebook-has-sup" transform="translate(0.000000, 3.000000)" sketch:type="MSShapeGroup">
+                    <path d="M3,45.935 L30.018,59.045 L30.018,53.972 L8.586,43.94 L8.586,43.826 L30.018,33.851 L30.018,28.721 L3,41.831 L3,45.935 Z M38.853,61.325 L52.761,20 L47.859,20 L33.951,61.325 L38.853,61.325 Z M83.199,41.717 L56.181,28.721 L56.181,33.794 L77.955,43.826 L77.955,43.94 L56.181,53.972 L56.181,59.045 L83.199,46.049 L83.199,41.717 Z" id="&lt;/&gt;"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

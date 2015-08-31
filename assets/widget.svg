@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="81px" height="81px" viewBox="0 0 81 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>&lt;/&gt; copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="8.38709677" y="8.37171717" width="59.233871" height="59.1252525" rx="10.4644955"></rect>
+        <linearGradient x1="38.3844254%" y1="3691.93143%" x2="50%" y2="-1254.19201%" id="linearGradient-3">
+            <stop stop-color="#CCCBCB" offset="0%"></stop>
+            <stop stop-color="#747171" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Home---Desktop-Copy-2" sketch:type="MSArtboardGroup" transform="translate(-611.000000, -1022.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(130.000000, 1019.000000)">
+                <g id="&lt;/&gt;-+-Language-of-Choice.-+-The-Notebook-has-sup-Copy-2-+-Group" transform="translate(481.000000, 3.000000)">
+                    <g id="Group" transform="translate(2.000000, 2.000000)">
+                        <rect id="Rectangle-12-Copy-2" stroke="#979797" stroke-width="1.56967432" fill="#FFFFFF" sketch:type="MSShapeGroup" transform="translate(38.004032, 37.934343) rotate(-20.000000) translate(-38.004032, -37.934343) " x="8.38709677" y="8.37171717" width="59.233871" height="59.1252525" rx="10.4644955"></rect>
+                        <rect id="Rectangle-12-Copy" stroke="#979797" stroke-width="1.56967432" fill="#FFFFFF" sketch:type="MSShapeGroup" transform="translate(38.004032, 37.934343) rotate(-10.000000) translate(-38.004032, -37.934343) " x="8.38709677" y="8.37171717" width="59.233871" height="59.1252525" rx="10.4644955"></rect>
+                        <mask id="mask-2" sketch:name="Mask" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" stroke="#979797" stroke-width="1.56967432" fill="#FFFFFF" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                        <path d="M9.1733871,20.6676768 L66.8556456,20.6676768" id="Line" stroke="url(#linearGradient-3)" stroke-width="1.56967432" stroke-linecap="square" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                        <ellipse id="Oval-5" stroke="url(#linearGradient-3)" stroke-width="1.56967432" fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-2)" cx="15.7258065" cy="15.1737374" rx="2.09677419" ry="2.09292929"></ellipse>
+                        <ellipse id="Oval-5-Copy" stroke="url(#linearGradient-3)" stroke-width="1.56967432" fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-2)" cx="23.0645161" cy="15.1737374" rx="2.09677419" ry="2.09292929"></ellipse>
+                        <rect id="Rectangle-15" stroke="url(#linearGradient-3)" stroke-width="1.56967432" fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-2)" x="13.6290323" y="26.1616162" width="23.5887097" height="9.94141414"></rect>
+                        <rect id="Rectangle-15-Copy" stroke="url(#linearGradient-3)" stroke-width="1.56967432" fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-2)" x="39.3145161" y="26.1616162" width="23.5887097" height="9.94141414"></rect>
+                        <rect id="Rectangle-15-Copy-2" stroke="url(#linearGradient-3)" stroke-width="1.56967432" fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-2)" x="13.6290323" y="38.1959596" width="49.2741935" height="21.9757576"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

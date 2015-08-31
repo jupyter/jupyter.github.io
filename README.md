@@ -1,1 +1,3 @@
-[Jupyter.org](http://jupyter.org/) website files
+# Jupyter's main website
+
+This is the source to [Jupyter.org](http://jupyter.org/).

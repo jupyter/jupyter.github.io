@@ -1,0 +1,765 @@
+/*!
+ * Start Bootstrap - Logo Nav HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+body {
+    padding-top: 70px; 
+    /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    font-size: 10.71pt;
+    font-weight: 300;
+}
+h1 {
+    font-size: 35px;
+    font-weight: 400;
+}
+h2 {
+    font-size: 29.4px;
+    font-weight: 400;
+}
+h3 {
+    font-size: 21px;
+    font-weight: 400;
+}
+@-webkit-keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
+
+.fade-in {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+ 
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+ 
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+.fade-in.one {
+-webkit-animation-delay: 0.3s;
+-moz-animation-delay: 0.3s;
+animation-delay: 0.3s;
+}
+ 
+.fade-in.two {
+-webkit-animation-delay: 0.7s;
+-moz-animation-delay:0.7s;
+animation-delay: 0.7s;
+}
+.fade-in.three {
+-webkit-animation-delay: 1.1s;
+-moz-animation-delay: 1.1s;
+animation-delay: 1.1s;
+}
+
+.navbar-fixed-top .nav {
+    padding: 15px 0;
+}
+.navbar {
+	background-color: white;
+    border-width: thin;
+}
+.navbar-gray {
+    background-color: rgb(248,248,248);
+}
+a {
+    color: black;
+}
+#nbviewer {
+	color:gray;
+    font-weight: 500;
+    text-decoration: underline;
+}
+#nbviewer:hover {
+    color: rgb(224, 103, 29);   
+}
+
+.navbar-fixed-top .navbar-brand {
+    margin-top: 5px;
+    padding: 0 15px;
+}
+.navbar-header .icon-bar {
+    background-color: black;
+}
+.navbar-active {
+    color: #E46E2E;
+}
+.navbar-scroll {
+    box-shadow: 1px 1px 1px #999; 
+    -moz-box-shadow: 1px 1px 1px #999;
+    -webkit-box-shadow: 1px 1px 1px #999;
+    animation-name: smooth;
+    animation-duration: 2s;
+}
+.nav > li > a:hover {
+    color: #E46E2E;
+    background-color: transparent;
+}
+.img-container {
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+.img-container img {
+    vertical-align: center;
+}
+.header {
+    margin: 0 auto;
+    display: block;
+}
+
+#tab:hover {
+    color: #E46E2E;
+    background-color: transparent;
+}
+@media(min-width:768px) {
+    body {
+        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+    .tab {
+        text-align: center;
+    }
+}
+@media(max-width:992px) {
+    .language-set #feature {
+        display: block;
+    }
+    .notebook-preview img {
+        margin: 0 auto;
+    }
+    #notebookicon {
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
+    .notebook-preview h1 {
+        text-align: center;
+    }
+}
+.jumbotron {
+    background-color: white;
+    overflow: hidden;
+}
+.jumbotron img {
+    margin: 0 auto;
+}
+@media (max-width: 768px){
+    .jumbotron {
+        margin-right: 5%;
+    }
+}
+
+.notebook-preview p {
+    line-height: 31pt;
+    padding-top: 41px;
+    padding-bottom: 41px;
+    font-size: 21px;
+}
+@media(max-width:1200px) {
+    
+    .notebook-preview p {
+        line-height: 25pt;
+        font-size: 15pt;
+    }
+}
+.notebook-features, .architecture, .about-block, .companyuse, .jupyterhub .container {
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.notebook-features .share-set h2, .notebook-features .language-set h2{
+    font-size: 21px;
+    line-height: 1.5;
+    color: #766A6A;
+    padding-top: 5px;
+}
+.notebook-features .data-set h2, .notebook-features .widget-set  h2{
+    font-size: 21px;
+    line-height: 1.5;
+    color:#766A6A;
+}
+.notebook-features p{
+    padding-top: 26px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+@media(max-width:1200px) {
+    
+    .notebook-features .language-set h2{
+        padding-top: 0px;
+    }  
+    .notebook-features #feature {
+        padding-top: 4px;
+    }
+}
+@media(max-width:992px) {
+    .notebook-features  img {
+        margin: 0 auto;
+        width: 125px;
+    }
+    .notebook-features p, .notebook-features h2, .notebook-preview p {
+        text-align: center;
+    }
+    .share-set, .widget-set, .data-set {
+        padding-top: 40px;
+    }
+}
+.install-prompt {
+    background-color: #FDFDFD;
+    border-style: solid;
+    border-top-color: #979797;
+    border-bottom-color: #979797;
+    border-right-style: none;
+    border-left-style: none;
+    border-width: thin;
+    
+}
+.install-prompt .content {
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.buttons {
+    font-size: 19.24px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.buttons a{
+    background-color: #E46E2E;
+    padding: 13px 26px;
+    border-radius: 5.82px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0px 3px #863001;
+}
+#box2 {
+    padding: 13px 29px;
+}
+.buttons a:hover{
+    background-color: #DB5106;
+}
+@media(max-width:541px) {
+    #box2 {
+        margin-top: 20px;
+    }
+}
+.companyuse ul {
+    text-decoration: none;
+    padding-left: 0px;
+    margin: 0 auto;
+}
+.companies h2{
+    padding-bottom: 30px;
+}
+.companies li {
+    display: inline-block;
+    vertical-align: center;
+    width: 18%;
+    padding: 2%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+@media(max-width:1200px) {
+    .companies li{
+        width:23%;
+    }
+}
+@media(max-width:769px) {
+    .companies li {
+        width: 30%;
+    }
+}
+.companies .col img{
+    display: block;
+    width: 100%
+}
+.greydout {
+    -webkit-opacity: 0.065;
+    -moz-opacity: .065;
+    opacity: 0.65;
+    -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.greydout:hover {
+    webkit-opacity: 1;
+    moz-opacity: 1;
+    opacity: 1;
+}
+.
+.jupyterhub {
+    background-color: #FDFDFD;
+}
+.jupyterhub .container {
+    border-style: solid;
+    border-top-color: #979797;
+    border-bottom-color: #979797;
+    border-right-style: none;
+    border-left-style: none;
+    border-width: thin;
+}
+.featuremiddle {
+    margin-top: 40px;
+}
+.hubdescription p {
+    padding-top: 26px;
+    font-size: 21px;
+    line-height: 1.5;
+}
+.hubfeature h2 {
+    font-size: 21px;
+    line-height: 1.5;
+    text-align: center;
+    color: #766A6A;
+    text-align: center;
+}
+.hubfeature p {
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+    color: #766A6A;
+    padding-top: 2px;
+}
+.hubfeature img {
+    margin: 0 auto;
+}
+.hubfeatures {
+    padding-top: 50px;
+    background: url("../assets/line.svg");
+    background-position:  top center;
+    background-repeat: no-repeat;
+}
+@media(max-width:992px) {
+    .hubdescription {
+        text-align: center;
+        padding-top: 10%;
+    }
+    .hubfeatures{
+        background: none;
+    }
+    #data {
+    padding-top: 40px;
+    }
+    .hubfeature h2 {
+        text-align: center;
+    }
+}
+.architecturedescription p {
+    padding-top: 26px;
+    font-size: 21px;
+    line-height: 1.5;
+}
+.architecturecontent {
+    padding-top: 26px;
+    margin: 0 auto;
+    text-align: center;
+}
+.arcfeature {
+    font-size: 21px;
+    text-align: center;
+    border-radius: 5px;
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid #CCC;
+}
+.arcfeature .front img {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+.arcfeature .front2 img {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+.arcfeature .front3 img {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+.arcfeature .back p {
+    margin-top: 40px;
+}
+.arc-button {
+    background-color: #8D8D8D;
+    padding: 8px 26px;
+    border-radius: 5.82px;
+    color: white;
+    text-decoration: none;
+}
+.card {
+    display: block;
+    margin: 0 auto;
+    text-align:center;
+    height: 100%;
+    vertical-align: center;
+}
+.bt, .bt1, .bt2 {
+    cursor: default;
+}
+#block3 {
+    margin-bottom: 42px;
+    margin-top: 35px;
+}
+.card .front {
+    width: 275px;
+    height: 275px;
+    transition: transform 0.3s linear 0s;
+    -webkit-transition: -webkit-transform 0.3s linear 0s;
+ 
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+         -o-backface-visibility: hidden;
+            backface-visibility: hidden;  
+    position: absolute;
+    text-align: center;
+}
+.card .front2 {
+    width: 275px;
+    height: 275px;
+    transition: transform 0.3s linear 0s;
+    -webkit-transition: -webkit-transform 0.3s linear 0s;
+ 
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+         -o-backface-visibility: hidden;
+            backface-visibility: hidden;  
+    position: absolute;
+    text-align: center;
+}
+.card .front3 {
+    width: 275px;
+    height: 275px;
+    transition: transform 0.3s linear 0s;
+    -webkit-transition: -webkit-transform 0.3s linear 0s;
+ 
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+         -o-backface-visibility: hidden;
+            backface-visibility: hidden;  
+    position: absolute;
+    text-align: center;
+}
+.flipped {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+.content-back p{
+    margin-top: 10px;
+    margin-bottom: 45px;
+    font-size: 15px;
+}
+#document {
+    margin-bottom: 44px;
+}
+/* The .back element should be rotated at first, facing his back, hidden*/
+.card .back{
+ 
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+
+    text-align: center;
+}
+ 
+
+
+.arcfeature a {
+    text-decoration: none;
+    color: white;
+}
+.arcfeature img {
+    margin: 0 auto;
+    padding-bottom: 5%;
+    padding-top: 1%;
+}
+.arcfeature {
+    display: inline-block;
+}
+
+@media(max-width:992px) {
+    #arcicon1 {
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
+    .architecturedescription h2 {
+        text-align: center;
+    }
+    .architecturedescription p {
+        text-align: center;
+    }
+}
+@media (min-width: 1200px) {
+    .notebook-features, .companyuse, .jupyterhub .container, .architecture, .install-prompt .content {
+        padding-top:125px;
+        padding-bottom: 125px;
+    }
+    .install-prompt .content{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+/*About Page */
+
+.header{
+    padding-bottom: 30px; 
+    text-align: center;
+    background-color: #F8F8F8;
+}
+.header h1 {
+    font-size: 41.16px;
+}
+.header p {
+    font-size: 21px;
+    line-height: 1.5;
+    padding-top: 25px;
+}
+.supportparagraph {
+    font-size: 15px;
+    line-height: 1.5;
+}
+@media (max-width: 992px) {
+    .header h1 {
+        font-size: 34px;
+    }
+    .header p {
+        font-size: 18px;
+        padding-top: 20px;
+    }
+    .supportparagraph {
+        font-size: 10.71pt;
+    }
+}
+.about-block {
+    text-align: center;
+}
+.about-block img {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+}
+.row1 {
+    padding-top: 5%;
+}
+.col6 {
+    display: inline-block;
+    vertical-align: top;
+    min-height: 1px;
+    position: relative;
+    margin: 20px 0;
+    width: 240px;
+}
+.customerLogo {
+    height: 100px;
+}
+.logo-fix {
+    width: 200px;
+}
+.institutional {
+    background-color: 
+}
+#about-body {
+    padding-top: 70px;
+}
+@media (max-width: 768px) {
+    #about-body {
+        padding-top: 50px;
+    }
+}
+.transparent {
+    background-color: white;
+}
+.menu {
+    margin-top: 20px;
+
+}
+.institutional .clicky{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 21px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    cursor: default;
+} 
+.clicky:hover {
+    color: #E46E2E
+}
+.institutional .items {
+    border-color: black;
+    border-width: thin;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #979797;
+    height: 100px;
+}
+.content-gov {
+    margin-top: 18px;
+    padding-left: 20px;
+    padding-right: 35px;
+    color: #818181;
+}
+.institutional .menu {
+    height: 30%
+}
+#institutional {
+    border-style: solid;
+    border-top-color: #979797;
+    border-bottom-color: #979797;
+    border-right-style: none;
+    border-left-style: none;
+    border-width: thin;
+
+}
+.abs {
+  position: absolute;
+  top: 50px;
+}
+.menuClicked {
+    color: #E46E2E;
+}
+@media (max-width: 687px) {
+    .content-gov {
+        margin-top: 60px;
+        padding-bottom: 60px;
+        vertical-align: center;
+    }
+
+}
+@media (max-width: 599px) {
+    .content-gov {
+        margin-top: 50px;
+    }
+}
+@media (max-width: 509px) {
+    .institutional .items {
+        height: 120px;
+    }
+}
+@media (max-width: 395px) {
+    .content-gov {
+        margin-top: 90px;
+    }
+    .institutional .items {
+        height: 140px;
+    }
+}
+@media (max-width: 365px) {
+    .content-gov {
+        margin-top: 130px;
+    }
+    .institutional .items {
+        height: 160px;
+    }
+}
+#footer1 {
+    background-color: #979797;
+}
+.navbar-bottom p {
+    color: white;
+    padding-top: 10px;
+}
+.navbar-bottom li{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+.navbar-bottom a {
+    text-decoration: none;
+    color: white;
+}
+.navbar-bottom li::after {
+    content:" |";
+}
+.navbar-bottom li:last-of-type::after {
+    content:"";
+}
+@media (min-width: 513px) {
+    .follow {
+        float: right !important;
+    }
+    .navbar-bottom ul {
+        float: left;
+    }
+}
+@media (max-width: 513px) {
+    .follow {
+        display: block;
+        margin: 0 auto;
+        float: none;
+    }
+    .navbar-bottom .container {
+        text-align: center;
+        padding-bottom: 15px;
+    }
+}
+@media (min-width: 768px) {
+    .follow {
+        margin-top: 15px;
+    }
+}
+@media (min-width: 1200px) {
+    .about-block  {
+        padding-top: 125px;
+        padding-bottom: 125px;
+    }
+}
+#footer-text {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+/* Donate Page */
+#donate-paragraph {
+    font-size: 15px;
+    line-height: 1.5;
+}
+.donate-box {
+    background-color: white;
+    height: 500px;
+    border-radius: 8px;
+    border-color: #979797;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 3px;
+    margin-top: 5%;
+    height: 20%;
+}
+.donate-box img, .donate-box p, #donate-formatting {
+    padding-top: 25px;
+    padding-left: 25px;
+}
+.donate-box p {
+    font-size: 15px;
+    line-height: 1.5;
+    padding-right: 25px;
+}
+#donate-button {
+    background-color: #E46E2E;
+    padding: 13px 26px;
+    border-radius: 5.82px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0px 3px #863001;
+    margin-bottom: 25px;
+}
+#donate-formatting {
+    padding-right: 25px;
+}
+@media (max-width: 992px) {
+    .donate-box {
+        margin-top: 10%;
+    }
+}

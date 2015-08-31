@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="402px" height="61px" viewBox="0 0 402 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Jupyter Notebook + Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="573.702374" height="367.953191"></rect>
+        <path id="path-3" d="M6,0 L621,0 L621,392 L0,392 L6,0 Z"></path>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#FACC6A" offset="0%"></stop>
+            <stop stop-color="#F76B1C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Home---Desktop-Copy-2" sketch:type="MSArtboardGroup" transform="translate(-130.000000, -555.000000)">
+            <g id="Line-+-Screen-Shot-2015-07-16-at-5.00.54-PM-+-Rectangle-5-+-Rectangle-6-+-ScreenShot-Lorenz" sketch:type="MSLayerGroup" transform="translate(472.000000, 485.000000)">
+                <g id="Line-+-Screen-Shot-2015-07-16-at-5.00.54-PM-+-Rectangle-5-+-Rectangle-6" transform="translate(0.000000, 23.000000)">
+                    <g id="Screen-Shot-2015-07-16-at-5.00.54-PM-+-Rectangle-5-+-Rectangle-6" transform="translate(0.297626, 0.000000)">
+                        <mask id="mask-2" sketch:name="Mask" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+                <g id="ScreenShot-Lorenz" transform="translate(3.000000, 0.000000)">
+                    <mask id="mask-4" sketch:name="Mask" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <use id="Mask" fill-opacity="0" fill="#D8D8D8" sketch:type="MSShapeGroup" xlink:href="#path-3"></use>
+                </g>
+            </g>
+            <g id="Jupyter-Notebook-+-Group" sketch:type="MSLayerGroup" transform="translate(130.000000, 556.000000)">
+                <text id="Jupyter-Notebook" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="41" font-weight="260" fill="#766969">
+                    <tspan x="71.1875" y="47.4586101">Jupyter Notebook</tspan>
+                </text>
+                <g id="Group" stroke="#000000" sketch:type="MSShapeGroup">
+                    <path d="M7.69546907,21.6264386 L35.5868513,31.4940256 L45.8611763,58.9398674 L16.2889614,50.5505737 L7.69546907,21.6264386 Z" id="Rectangle-7-Copy-2" stroke-width="1.67431927" fill="#FFFFFF" transform="translate(26.778323, 40.283153) rotate(-47.000000) translate(-26.778323, -40.283153) "></path>
+                    <path d="M7.69546907,16.543785 L35.5868513,26.4113719 L45.8611763,53.8572137 L16.2889614,45.46792 L7.69546907,16.543785 Z" id="Rectangle-7-Copy" stroke-width="1.67431927" fill="#FFFFFF" transform="translate(26.778323, 35.200499) rotate(-47.000000) translate(-26.778323, -35.200499) "></path>
+                    <path d="M7.69546907,11.1338471 L35.5868513,21.001434 L45.8611763,48.4472758 L16.2889614,40.0579821 L7.69546907,11.1338471 Z" id="Rectangle-7" stroke-width="1.67431927" fill="#FFFFFF" transform="translate(26.778323, 29.790561) rotate(-47.000000) translate(-26.778323, -29.790561) "></path>
+                    <path d="M34.346993,35.5051932 L38.9443161,30.5350325 L38.9443161,0.15330035 L30.5435715,0.15330035 L30.5435715,30.5350335 L34.346993,35.5051932 Z" id="Path-227" stroke-width="1.25573946" fill="url(#linearGradient-5)" transform="translate(34.743944, 17.829247) rotate(25.000000) translate(-34.743944, -17.829247) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

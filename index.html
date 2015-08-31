@@ -1,211 +1,327 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Jupyter Project</title>
 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<link rel="shortcut icon" href="favicon.ico" />
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <title>Project Jupyter | Home</title>
 
-<link href="jupyter_font/styles.css" rel="stylesheet">
-<link href="css/jupyter.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.ico" />
+    <link href="assets/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="assets/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+    <link href="assets/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+    <link href="assets/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+    <link href="assets/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="assets/icon-hires.png" rel="icon" sizes="192x192" />
+    <link href="assets/icon-normal.png" rel="icon" sizes="128x128" />
 
-<script type="text/javascript" src="https://use.typekit.net/kpd5yrh.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-<style>
-
-.logos > div {
-    height: 150px;
-}
-
-.logos > div > img{
-    height:80%;
-    max-width:80%;
-}
-
-</style>
-
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="//use.typekit.net/kpd5yrh.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
 </head>
+
 <body>
-  
-  <div class="container">
 
-    <div id="main-title">
-      <img src="images/jupyter-sq-text.svg" alt="Jupyter" id="jupyter-logo"/>
+    <!-- Navigation -->
+    <nav class="navbar navbar-fixed-top" role="navigation" id="navbar" data-spy="affix">
+        <div class="navbar-inner">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/nav_logo.svg" style="height:45px;">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="http://jupyter.readthedocs.org/en/latest/install.html" class="tab" id="tab">INSTALL</a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="tab">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="http://jupyter.readthedocs.org/en/latest/" class="tab">DOCS</a>
+                    </li>
+                    <li>
+                        <a href="https://blog.jupyter.org/" class="tab">BLOG</a>
+                    </li>
+                    <li>
+                        <a href="donate.html" class="tab">DONATE</a>
+                    </li>
+                   <!-- <li>
+                        <a href="#" class="tab" id="tab">DONATE</a>
+                    </li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
     </div>
-    <div class="row">
-      <div id="sub-title" class="col-md-8 col-md-offset-2">
-        <h2 class="text-center">Evolved from the IPython Project</h2>
-        <h2 class="text-center">
-          The language-agnostic parts of IPython are getting a new home in Project Jupyter
-        </h2>
-      </div>
+    </nav>
+    <!-- Page Content -->
+<section>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="img-container">
+                    <span><img class="img-responsive fade-in one" src="assets/circle1.svg"></span>
+                </div>
+                <div class="img-container">
+                    <span><img class="img-responsive fade-in two" src="assets/circle2.svg"></span>
+                    
+                </div>
+                <div class="img-container">
+                    <span><img class="img-responsive fade-in three" src="assets/circle3.svg"></span>
+                </div>
+                <div class="img-container">
+                    <img class="img-responsive" src="assets/main-logo.svg">
+                </div>
+                <img class="img-responsive" src="assets/white-background.svg">
+            </div>
+        </div>
     </div>
-    <hr>
-    <div class="row">
-      <div class="col-md-6 text-center">
-        <p>
-        <a type="button" class="btn btn-primary btn-lg" href='https://try.jupyter.org'>Try it in your browser</a>
-        </p>
-        <p>No install or login required. Python 3, Julia, R, Haskell, Ruby.</p>
-      </div>
-      <div class="col-md-6 text-center">
-        <p>
-        <a type="button" class="btn btn-primary btn-lg" href='https://jupyter.readthedocs.org'>Read the docs</a>
-        </p>
-        <p>
-          For more info on the Jupyter project,
-          including <a href='http://jupyter.readthedocs.org/en/latest/install.html'>installation</a>.
-        </p>
-      </div>
+</section>
+<section>
+    <!-- Notebook Preview -->
+    <div class="notebook-preview">
+        <div class="container">
+            <div class="col-md-6">
+                <!--<img class="img-responsive" src="assets/notebook_header.svg" />-->
+                <h1><img src="assets/notebookicon.svg" id="notebookicon"> Jupyter Notebook</h1>
+                <p>The Jupyter Notebook is a web-based interactive computing platform that allows users to author data- and code-driven narratives that combine live code, equations, narrative text, visualizations, interactive dashboards and other media.</p>
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive" src="assets/jupyterpreview.png" id="portal"/>
+            </div>
+        </div>
     </div>
-    <hr>
-      <div class="row logos">
-        <div class="col-md-3 text-center">
-            <img src='images/Julia_256x256.png' alt='Julia' title='Julia' />
+</section>
+<section>
+    <div class="notebook-features">
+        <div class="container">
+            <div class="col-md-3 language-set">
+                <img class="img-responsive language" src="assets/language.svg" id="feature">
+                <h2>Language of choice</h2>
+                <p>The Notebook has support for over 40 programming languages, including those popular in Data Science such as Python, R, Julia and Scala.</p>
+            </div>
+            <div class="col-md-3 share-set">
+                <img class="img-responsive share" src="assets/share.svg">
+                <h2>Share notebooks</h2>
+                <p> Notebooks can be shared with others using email, Dropbox, GitHub and the <a href="http://nbviewer.jupyter.org/" id="nbviewer">Jupyter Notebook Viewer</a>.</p>
+            </div>
+            <div class="col-md-3 widget-set">
+                <img class="img-responsive widget" src="assets/widget.svg">
+                <h2>Interactive widgets</h2>
+                <p>Code can produce rich output such as images, videos, LaTeX, and JavaScript. Interactive widgets can be used to manipulate and visualize data in realtime.</p>
+            </div>
+            <div class="col-md-3 data-set">
+                <img class="img-responsive data" src="assets/spark.svg">
+                <h2> Big data integration</h2>
+                <p>Leverage big data tools, such as Apache Spark, from Python, R and Scala. Explore that same data with pandas, scikit-learn, ggplot2, dplyr, etc.</p>
+            </div>
         </div>
-        <div class="col-md-3 text-center">
-            <img src='images/Python_256x256.png' alt='Python' title='Python' />
-        </div>
-        <div class="col-md-3 text-center">
-            <img src='images/R_256x256.png' alt='R' title='R' />
-        </div>
-        <div class="col-md-3 text-center">
-            <img src='images/haskell.png' alt='Haskell' title='Haskell' />
-        </div>
-      </div>
-      <div class="row logos">
-        <div class="col-md-3 text-center">
-            <img src='images/ruby.png' alt='Ruby' title='Ruby' />
-        </div>
-        <div class="col-md-3 text-center">
-            <img src='images/calico.png' alt='Calico' title='Calico' />
-        </div>
-        <div class="col-md-3 text-center">
-            <img src='images/fsharp.png' alt='Fsharp' title='Fsharp' />
-        </div>
-        <div class="col-md-3 text-center">
-            <img src='images/lua.png' alt='Lua' title='Lua' />
-        </div>
-      </div>
-      <div class="row logos">
-        <div class="col-md-3 text-center">
-            <img src='images/erlang.png' alt='Erlang' title='Erlang' />
-        </div>
-        <div class="col-md-3 text-center">
-            <img src='images/hy.png' alt='Hy' title='Hy' />
-        </div>
-        <div class="col-md-3 text-center">
-            <img src='images/spark-logo.png' alt='Spark' title='Spark' />
-        </div>
-        <div class="col-md-3 text-center">
-            <img src='images/perl.png' alt='Perl' title='Perl' />
-        </div>
-      </div>
-      <div class="row logos">
-        <div class="col-md-8 col-md-offset-2 text-center">
-          <p>
-          <a type="button" class="btn btn-primary btn-lg" 
-                            href='https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages'>
-              And More
-          </a>
-          </p>
-        </div>
-      </div>
-    <hr>
-    
-    <div class="row" id="ipython-jupyter-bullets">
-      <div class="col-md-3 col-md-offset-3">
-        <h2 class="text-center">IPython</h2>
-        <ul>
-          <li><a href="https://ipython.org">Interactive Python shell</a></li>
-          <li><a href="https://github.com/ipython/ipykernel">Python kernel for Jupyter</a></li>
-          <li><a href="https://ipyparallel.readthedocs.org">Interactive Parallel Python</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <h2 class="text-center">Jupyter</h2>
-        <ul>
-          <li><a href="https://jupyter-client.readthedocs.org">Rich REPL Protocol</a></li>
-          <li><a href="https://jupyter-notebook.readthedocs.org">Notebook</a>
-            (
-             <a href="https://nbformat.readthedocs.org">format</a>,
-             <a href="https://jupyter-notebook.readthedocs.org">environment</a>,
-             <a href="https://nbconvert.readthedocs.org">conversion</a>
-            )
-          </li>
-          <li><a href="https://github.com/jupyter/jupyterhub">JupyterHub</a> (multi-user notebook server)</li>
-          <li><a href="https://github.com/jupyter">More...</a></li>
-        </ul>
-      </div>
     </div>
-
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <p>
-          IPython will continue to exist as a Python shell and a kernel for Jupyter,
-          but the notebook and other language-agnostic parts of IPython
-          will move to new projects under the Jupyter name.
-          IPython 3.0 will be the last monolithic release of IPython.
-        </p>
-        <p>
-          Follow <a href="https://blog.jupyter.org">our blog</a> for news and announcements.
-        </p>
-      </div>
+</section>
+<section>
+    <div class="install-prompt">
+        <div class="container-fluid">
+            <div class="content">
+                <h2 style="text-align:center;">Ready to get started?</h2>
+                <div class="buttons">
+                    <a href="https://try.jupyter.org/" style="display: inline-block;">Try it in your browser</a>
+                    <a href="http://jupyter.readthedocs.org/en/latest/install.html" style="display: inline-block;" id="box2">Install the Notebook</a>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div id="announcement-video">
-      <center>
-      <iframe width="500" height="300" style="margin:20px 0px 0px"
-	      src="https://www.youtube.com/embed/JDrhn0-r9Eg?start=258&end=529"
-	      frameborder="0" allowfullscreen></iframe>
-      </center>
-      <h4 class="text-center">
-	<a href="https://speakerdeck.com/fperez/project-jupyter"
-	   target="_blank">(Slides for talk above announcing the project)</a>
-      </h4>
+</section>
+<section>
+    <div class="companyuse">
+        <div class="container">
+            <div class="companies">
+                <h2 style="text-align:center;">Currently in use at</h2>
+                <ul class="row center-h companies" style="text-align:center;">
+                    <a href="http://www.google.com"><li class="col"><img src="assets/google.svg" class="greydout" alt="Google" height="45" width="130"></li></a>
+                    <a href="http://www.microsoft.com"><li class="col"><img src="assets/Microsoft.svg" class="greydout" alt="Microsoft" height="55" width="206"></li></a>
+                    <a href="http://www.ibm.com"><li class="col"><img src="assets/IBM.svg" class="greydout" alt="IBM" height="40" width="60"></li></a>
+                    <a href="http://www.bloomberg.com"><li class="col"><img src="assets/bloomberg.svg" class="greydout" alt="Bloomberg" height="45" width="222"></li></a>
+                    <!--<a href="http://www.nytimes.com"><li class="col"><img src="assets/nyt.svg" class="greydout" alt="New york times" height="50" width="119"></li></a>-->
+                    <a href="http://www.oreilly.com"><li class="col"><img src="assets/oreilly.svg" class="greydout" alt="OReilly" height="45" width="244"></li></a>
+                    <a href="http://continuum.io"><li class="col"><img src="assets/continuum.svg" class="greydout" alt="Continuum" height="60" width="102"></li></a>
+                    <a href="https://www.quantopian.com/"><li class="col"><img src="assets/quantopian.svg" class="greydout" alt="Quantopian" height="60" width="118"></li></a>
+                    <a href="http://www.netapp.com/us/"><li class="col"><img src="assets/netapp.svg" class="greydout" alt="NetApp" height="60" width="344"></li></a>
+                    <a href="https://software-carpentry.org/"><li class="col"><img src="assets/carpentry.svg" class="greydout" alt="Carpentry" height="60" width="131"></li></a>
+                    <a href="https://www.janelia.org/"><li class="col"><img src="assets/janelia.svg" class="greydout" alt="Janelia" height="60" width="178"></li></a>
+                    <a href="http://codeneuro.org/"><li class="col"><img src="assets/codeneuro.svg" class="greydout" alt="CodeNeuro" height="60" width="296"></li></a>
+                    <!--<a href="http://fivethirtyeight.com"><li class="col"><img src="assets/538.svg" class="greydout" alt="538" height="60" width="76"></li></a>-->
+                    <a href="https://www.brynmawr.edu"><li class="col"><img src="assets/brynmawr.svg" class="greydout" alt="BrynMawr" height="60" width="72"></li></a>
+                    <a href="http://www.calpoly.edu"><li class="col"><img src="assets/calpoly.svg" class="greydout" alt="CalPoly" height="60" width="72"></li></a>
+                    <a href="http://www.berkeley.edu"><li class="col"><img src="assets/Berkeley.svg" class="greydout" alt="Berkeley" height="60" width="147"></li></a>
+                    <!--<a href="https://www.stanford.edu"><li class="col"><img src="assets/stanford.svg" class="greydout" alt="Stanford" height="60" width="137"></li></a>-->
+                    <a href="http://www.sheffield.ac.uk/"><li class="col"><img src="assets/sheffield.svg" class="greydout" alt="Sheffield" height="60" width="137"></li></a>
+                    <a href="http://www.gwu.edu/"><li class="col"><img src="assets/washington.svg" class="greydout" alt="Washington" height="70" width="108"></li></a>
+                    <a href="http://www.nyu.edu"><li class="col"><img src="assets/NYU.svg" class="greydout" alt="NYU" height="60" width="133"></li></a>
+                    <!--<a href="http://www.columbia.edu"><li class="col"><img src="assets/columbia.svg" class="greydout" alt="Columbia" height="60" width="207"></li></a>-->
+                </ul>
+            </div>
+        </div>
     </div>
-
-    <div id="footer" class="text-center">
-      <hr/>
-      <div class="row">
-        <div class="col-sm-2 col-sm-offset-1">
-          <!-- Place this tag where you want the button to render. -->
-          <a class="github-button" href="https://github.com/jupyter">@jupyter on GitHub</a>
+</section>
+<section>
+    <div class="jupyterhub">
+        <div class="container">
+            <div class="hubheader">
+                <div class="hublogo col-md-5">
+                    <img src="assets/hublogo.svg" class="img-responsive" style="margin:0 auto;">
+                </div>
+                <div class="hubdescription col-md-7">
+                    <h2>Jupyter for Organizations</h2>
+                    <p>JupyterHub is a multiuser version of the notebook designed for centralized deployments in companies, university classrooms and research labs.</p>
+                </div>
+            </div>
+            <div class="hubfeatures col-md-12">
+                <div class="feature1 hubfeature col-md-3 authentication">
+                    <img src="assets/authentication.svg" class="img-responsive">
+                    <h2>Pluggable authentication</h2>
+                    <p>Manage users and authentication with PAM, OAuth or integrate with your own directory service system. Collaborate with others through the Linux permission model.</p>
+                </div>
+                <div class="featuremiddle hubfeature col-md-3">
+                    <img src="assets/central.svg" class="img-responsive">
+                    <h2>Centralized deployment</h2>
+                    <p>Deploy the Jupyter Notebook to all users in your organization on centralized servers on- or off-site.</p>
+                </div>
+                <div class="featuremiddle hubfeature col-md-3">
+                    <img src="assets/container.svg" class="img-responsive">
+                    <h2>Container friendly</h2>
+                    <p>Use Docker containers to scale your deployment and isolate user processes using a growing ecosystem of prebuilt Docker containers.</p>
+                </div>
+                <div class="feature4 hubfeature col-md-3">
+                    <img src="assets/data.svg" class="img-responsive" id="data">
+                    <h2>Code meets data</h2>
+                    <p>Deploy the Notebook next to your data to provide unified software management and data access within your organization.</p>
+                </div>
+            </div>
+            <div class="col-md-12 buttons">
+                <a href="https://github.com/jupyter/jupyterhub" style="display: inline-block;">More Info About JupyterHub</a>
+            </div>
         </div>
-        <div class="col-sm-2">
-          <a href="https://twitter.com/ProjectJupyter" class="twitter-follow-button" data-show-count="false">Follow @ProjectJupyter</a>
-        </div>
-        <div class="col-sm-2">
-          <a href="https://blog.jupyter.org">Jupyter Blog</a>
-        </div>
-        <div class="col-sm-2">
-          <a href="https://groups.google.com/forum/#!forum/jupyter">Jupyter Mailing List</a>
-        </div>
-        <div class="col-sm-2"><a href="http://ipython.org">IPython Project</a></div>
-      </div>
     </div>
+</section>
+<section>
+    <div class="architecture">
+        <div class="container">
+            <div class="architecturedescription">
+                <h2><img src="assets/architectureicon2.svg" id="arcicon1"> Jupyter Architecture</h2>
+                <p>The Jupyter Notebook is based on a set of open standards for interactive computing. Think HTML and CSS for interactive computing on the web. These open standards can be leveraged by third party developers to build customized applications with embedded interactive computing.</p>
+            </div>
+            <div class="architecturecontent row col-md-12">
+                <div class="card col-md-4">
+                    <div class="arcfeature" id="arcfeature1">
+                        <div class="container">
+                            <div class="front">
+                                <img src="assets/notebook-format.svg">
+                                <br>
+                                <a class="arc-button bt">Learn More</a>
+                            </div>
+                            <div class="front flipped content-back">
+                                <h3>The Notebook Document Format</h3>
+                                <p id="document">Jupyter Notebooks are an open document format based on JSON. They contain a complete record of the user's sessions and embed code, narrative text, equations and rich output. </p>
+                                <a class="arc-button bt">Go back</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-md-4">
+                    <div class="arcfeature" id="protocol">
+                        <div class="container">
+                            <div class="front2">
+                                <img src="assets/protocol.svg">
+                                <a class="arc-button bt1">Learn More</a>
+                            </div>
+                            <div class="front2 flipped content-back">
+                                <h3>Interactive Computing Protocol</h3>
+                                <p>The Notebook communicates with computational Kernels using the Interactive Computing Protocol, an open network protocol based on JSON data over ZMQ and WebSockets.</p>
+                                <a class="arc-button bt1">Go back</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-md-4">
+                    <div class="arcfeature" id="kernel">
+                        <div class="container">
+                            <div class="front3">
+                                <img src="assets/kernel.svg">
+                                <a class="arc-button bt2">Learn More</a>
+                            </div>
+                            <div class="front3 flipped content-back">
+                                <h3>The Kernel</h3>
+                                <p id="block3">Kernels are processes that run interactive code in a particular programming language and return output to the user. Kernels also respond to tab completion and introspection requests.</p>
+                                <a class="arc-button bt2">Go back</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="navbar-bottom" role="navigation" id="footer1">
+        <div class="container">
+            <div class="navbar-text">
+                <ul id="footer-text">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="http://jupyter.readthedocs.org/en/latest/install.html">  Install</a></li>
+                    <li><a href="about.html">  About</a></li>
+                    <li><a href="http://jupyter.readthedocs.org/en/latest/">  Documentation</a></li>
+                    <li><a href="https://blog.jupyter.org/">  Blog</a></li>
+                    <li><a href="donate.html">  Donate</a></li>
+                    <p>Copyright © 2015  Project Jupyter</p>
+                </ul>
+            </div>
+            <div class="follow">
+                <a class="github-button" href="https://github.com/jupyter" aria-label="Follow @jupyter on GitHub">Follow @jupyter</a>
+                <br><a href="https://twitter.com/ProjectJupyter" class="twitter-follow-button" data-show-count="false">Follow @ProjectJupyter</a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- /.container -->
 
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/architecture.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Place this tag right after the last button or just before your close body tag. -->
+    <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-  </div>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-52617120-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 </body>
+
 </html>
