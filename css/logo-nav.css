@@ -357,6 +357,9 @@ a {
     .hubfeature h2 {
         text-align: center;
     }
+    #hubicon {
+        width: 60%;
+    }
 }
 .architecturedescription p {
     padding-top: 26px;
