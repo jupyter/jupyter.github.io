@@ -154,6 +154,12 @@ a {
 .jumbotron img {
     margin: 0 auto;
 }
+.jumbotron-text p{
+    font-size: 21px;
+    line-height: 31px;
+    text-align: center;
+    padding-bottom: 30px;
+}
 @media (max-width: 768px){
     .jumbotron {
         margin-right: 5%;
@@ -325,7 +331,6 @@ a {
     line-height: 1.5;
     text-align: center;
     color: #766A6A;
-    text-align: center;
 }
 .hubfeature p {
     font-size: 15px;
