@@ -560,6 +560,12 @@ a {
     margin: 0 auto;
     padding: 20px;
 }
+#visualization {
+    display: block;
+    margin: 0 auto;
+    padding-top:40px;
+}
+
 .row1 {
     padding-top: 5%;
 }
@@ -577,9 +583,40 @@ a {
 .logo-fix {
     width: 200px;
 }
-.institutional {
-    background-color: 
+.gray {
+    background-color: #F9F9F9;
 }
+.steering-council {
+    margin: 0 auto;
+    display: block;
+}
+.council-name {
+    float:left;
+    font-size: 19px;
+    margin-top: 10px;
+}
+.council-info {
+    float:left;
+    font-size: 15px;
+    text-align: left;
+    margin-top: 0px;
+}
+.material {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  height: 100px;
+  margin: 1rem;
+  position: relative;
+  width: 200px;
+}
+
+.material-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.2s ease-in-out;
+}
+
+
 #about-body {
     padding-top: 70px;
 }
@@ -624,12 +661,7 @@ a {
     height: 30%
 }
 #institutional {
-    border-style: solid;
-    border-top-color: #979797;
-    border-bottom-color: #979797;
-    border-right-style: none;
-    border-left-style: none;
-    border-width: thin;
+    background-color: #F9F9F9;
 
 }
 .abs {
