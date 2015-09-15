@@ -565,6 +565,7 @@ a {
     margin: 0 auto;
     padding-top:40px;
 }
+
 .row1 {
     padding-top: 5%;
 }
@@ -588,6 +589,17 @@ a {
 .steering-council {
     margin: 0 auto;
     display: block;
+}
+.council-name {
+    float:left;
+    font-size: 19px;
+    margin-top: 10px;
+}
+.council-info {
+    float:left;
+    font-size: 15px;
+    text-align: left;
+    margin-top: 0px;
 }
 .material {
   background: #fff;
