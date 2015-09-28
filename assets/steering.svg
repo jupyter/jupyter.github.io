@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval 83 + Rectangle 204 + Group + Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="-37.5892001%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FBDA61" offset="0%"></stop>
+            <stop stop-color="#F76B1C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="About---Desktop" sketch:type="MSArtboardGroup" transform="translate(-570.000000, -1235.000000)">
+            <g id="Our-team-is-primaril-+-Oval-83-+-Rectangle-204-+-Group-+-Group-+-Steering-Council" sketch:type="MSLayerGroup" transform="translate(225.000000, 1235.000000)">
+                <g id="Oval-83-+-Rectangle-204-+-Group-+-Group" transform="translate(345.000000, 0.000000)" sketch:type="MSShapeGroup">
+                    <path d="M34.487462,52.5624669 C45.0417856,50.475122 53,41.1669313 53,30 C53,29.1066138 52.9490638,28.2251244 52.8499371,27.3582774 C49.6569194,27.9394045 43.2366597,29.9282655 39.2296143,36.6962891 C35.3364747,43.271922 34.5907191,49.4889087 34.487462,52.5624669 Z M50.4884446,19.538261 C46.6801928,12.0950311 38.9351006,7 30,7 C21.0061261,7 13.2179672,12.1622798 9.43691731,19.6854455 C12.2954349,20.9758923 18.9032277,23.265625 29.8029785,23.265625 C41.1306998,23.265625 47.8228054,20.792553 50.4884446,19.538261 Z M7.06893061,28.2060321 C7.02325928,28.7980241 7,29.3962958 7,30 C7,41.1538128 14.9395275,50.4532497 25.4753525,52.5550807 C25.2853952,49.2160563 24.3646602,42.3613226 20.1672363,36.9663086 C15.9393566,31.5321492 9.96397844,29.1120741 7.06893061,28.2060321 Z M30,60 C46.5685425,60 60,46.5685425 60,30 C60,13.4314575 46.5685425,0 30,0 C13.4314575,0 0,13.4314575 0,30 C0,46.5685425 13.4314575,60 30,60 Z" id="Oval-83" fill="url(#linearGradient-1)"></path>
+                    <g id="Rectangle-204-+-Group-+-Group" transform="translate(11.000000, 23.000000)" fill="#FFFFFF">
+                        <path d="M14,7.00032973 C14,5.34329338 15.3486445,4 17.0003297,4 L20.9996703,4 C22.6567066,4 24,5.3486445 24,7.00032973 L24,10.9996703 C24,12.6567066 22.6513555,14 20.9996703,14 L17.0003297,14 C15.3432934,14 14,12.6513555 14,10.9996703 L14,7.00032973 Z M15,6.99810135 C15,5.89458045 15.8867064,5 16.9981014,5 L21.0018986,5 C22.1054196,5 23,5.88670635 23,6.99810135 L23,11.0018986 C23,12.1054196 22.1132936,13 21.0018986,13 L16.9981014,13 C15.8945804,13 15,12.1132936 15,11.0018986 L15,6.99810135 Z" id="Rectangle-204"></path>
+                        <g id="Group" transform="translate(32.000000, 0.000000)">
+                            <circle id="Oval-199" cx="0.5" cy="2.5" r="0.5"></circle>
+                            <circle id="Oval-199-Copy" cx="2.5" cy="1.5" r="0.5"></circle>
+                            <circle id="Oval-199-Copy-2" cx="4.5" cy="0.5" r="0.5"></circle>
+                            <circle id="Oval-199-Copy-3" cx="1.5" cy="4.5" r="0.5"></circle>
+                            <circle id="Oval-199-Copy-4" cx="3.5" cy="3.5" r="0.5"></circle>
+                            <circle id="Oval-199-Copy-5" cx="5.5" cy="2.5" r="0.5"></circle>
+                        </g>
+                        <g id="Group" transform="translate(3.000000, 2.500000) scale(-1, 1) translate(-3.000000, -2.500000) ">
+                            <circle id="Oval-199-Copy-11" cx="0.5" cy="2.5" r="0.5"></circle>
+                            <circle id="Oval-199-Copy-6" cx="2.5" cy="1.5" r="0.5"></circle>
+                            <circle id="Oval-199-Copy-7" cx="4.5" cy="0.5" r="0.5"></circle>
+                            <circle id="Oval-199-Copy-8" cx="1.5" cy="4.5" r="0.5"></circle>
+                            <circle id="Oval-199-Copy-9" cx="3.5" cy="3.5" r="0.5"></circle>
+                            <circle id="Oval-199-Copy-10" cx="5.5" cy="2.5" r="0.5"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
