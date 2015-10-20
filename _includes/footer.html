@@ -1,0 +1,40 @@
+<footer>
+    <div class="navbar-bottom" role="navigation" id="footer1">
+        <div class="container">
+            <div class="navbar-text">
+                <ul id="footer-text">
+                    <li><a href="{{site.baseurl}}">Home</a></li>
+                    {% for nav in site.data.nav.head %}
+                      {% if nav.url %}
+                           <li><a href="{{site.baseurl}}{{nav.url}}" target="_blank">{{nav.title}}</a></li>
+                      {% else %}
+                        {% for ppage in site.pages %}
+                           {% if nav contains ppage.title %}
+                               <li><a href="{{site.baseurl}}{{page.url}}">{{ppage.title}}</a></li>
+                           {% endif %}
+                           {% endfor %}
+                      {% endif %}
+                    {% endfor %}
+                    <p>Copyright © {{site.time | date: '%Y' }}  Project Jupyter - Last updated {{site.time | date: "%a, %b %d, %Y" }}</p>
+                </ul>
+            </div>
+            <div class="follow">
+                <a class="github-button" href="https://github.com/jupyter" aria-label="Follow @jupyter on GitHub">Follow @jupyter</a>
+                <br><a href="https://twitter.com/ProjectJupyter" class="twitter-follow-button" data-show-count="false">Follow @ProjectJupyter</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- jQuery -->
+    <script src="{{site.baseurl}}/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{site.baseurl}}/js/bootstrap.min.js"></script>
+    <!-- Place this tag right after the last button or just before your close body tag. -->
+    <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+    <script src="{{site.baseurl}}/js/scroll.js"></script>
+    <script src="{{site.baseurl}}/js/architecture.js"></script>
+    <script src="{{site.baseurl}}/js/simon.js"></script>
+    <script src="{{site.baseurl}}/js/timeline/main.js"></script> <!-- Resource jQuery -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

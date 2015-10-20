@@ -1,0 +1,9 @@
+head:
+    - title: Install
+      url: http://jupyter.readthedocs.org/en/latest/install.html
+    - Project
+    - title: Documentation
+      url: http://jupyter.readthedocs.org/en/latest/install.html
+    - title: Blog
+      url: https://blog.jupyter.org
+    - Donate
