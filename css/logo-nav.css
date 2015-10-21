@@ -281,7 +281,7 @@ a {
         width:23%;
     }
 }
-@media(max-width:769px) {
+@media(max-width:767px) {
     .companies li {
         width: 30%;
     }
@@ -703,23 +703,18 @@ a {
 .navbar-bottom li:last-of-type::after {
     content:"";
 }
-@media (min-width: 513px) {
+@media (max-width: 509) {
     .follow {
         float: right !important;
-    }
-    .navbar-bottom ul {
-        float: left;
-    }
-}
-@media (max-width: 513px) {
-    .follow {
         display: block;
         margin: 0 auto;
-        float: none;
     }
     .navbar-bottom .container {
         text-align: center;
         padding-bottom: 15px;
+    }
+    .navbar-bottom ul {
+        float: left;
     }
 }
 @media (min-width: 768px) {
