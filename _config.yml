@@ -1,0 +1,14 @@
+# Site settings
+title: Project Jupyter
+email: jupyter@googlegroups.com
+description: > # this means to ignore newlines until "baseurl:"
+    The Jupyter Notebook is a web-based interactive computing platform. The
+    notebook combines live code, equations, narrative text, visualizations,
+    interactive dashboards and other media.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://jupyter.org" # the base hostname & protocol for your site
+twitter_username: ProjectJupyter
+github_username:  Jupyter
+
+# Build settings
+markdown: kramdown

@@ -1,0 +1,46 @@
+<nav class="navbar navbar-fixed-top {% if page.navbar_gray %}navbar-gray{%endif%}" role="navigation" id="navbar" >
+        <div class="navbar-inner">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{site.baseurl}}/index.html">
+                    <img src="{{site.baseurl}}/assets/nav_logo.svg" style="height:45px;">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    {% for nav in site.data.nav.head %}
+                      {% if nav.url %}
+                           <li>
+                             <a href="{{site.baseurl}}{{nav.url}}" class="tab" id="tab" target="_blank">{{nav.title | upcase}}</a>
+                           </li>
+                      {% else %}
+                        {% for targetpage in site.pages %}
+                           {% if nav contains targetpage.title%}
+                              {% if page.title == targetpage.title %}
+                               <li>
+                                   <a href  class="tab navbar-active" id="tab">{{targetpage.title| upcase}}</a>
+                               </li>
+                               {% else %}
+                               <li>
+                                   <a href="{{site.baseurl}}{{targetpage.url}}" class="tab" id="tab">{{targetpage.title| upcase}}</a>
+                               </li>
+                               {% endif %}
+                           {% endif %}
+                           {% endfor %}
+                      {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </div>
+</nav>  
