@@ -99,6 +99,9 @@ a {
     color: #E46E2E;
     background-color: transparent;
 }
+.nav > li > a:focus {
+    background-color: white;
+}
 .img-container {
     position: absolute;
     width: 95%;
