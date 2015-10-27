@@ -152,7 +152,7 @@ a {
     text-align: center;
     padding-bottom: 30px;
 }
-@media (max-width: 768px){
+@media (max-width: 767px){
     .jumbotron {
         margin-right: 5%;
     }
@@ -254,7 +254,7 @@ a {
 .buttons a:hover{
     background-color: #DB5106;
 }
-@media(max-width:541px) {
+@media(max-width:509px) {
     #box2 {
         margin-top: 20px;
     }
@@ -703,9 +703,17 @@ a {
 .navbar-bottom li:last-of-type::after {
     content:"";
 }
-@media (max-width: 509) {
+
+@media (min-width: 510px) {
     .follow {
         float: right !important;
+    }
+    .navbar-bottom ul {
+        float: left;
+    }
+}
+@media (max-width: 509px) {
+    .follow {
         display: block;
         margin: 0 auto;
     }
