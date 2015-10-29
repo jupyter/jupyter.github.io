@@ -8,9 +8,9 @@
                       {% if nav.url %}
                            <li><a href="{{site.baseurl}}{{nav.url}}" target="_blank">{{nav.title}}</a></li>
                       {% else %}
-                        {% for ppage in site.pages %}
-                           {% if nav contains ppage.title %}
-                               <li><a href="{{site.baseurl}}{{page.url}}">{{ppage.title}}</a></li>
+                        {% for target_page in site.pages %}
+                           {% if nav contains target_page.title %}
+                               <li><a href="{{site.baseurl}}{{target_page.url}}">{{target_page.title}}</a></li>
                            {% endif %}
                            {% endfor %}
                       {% endif %}
