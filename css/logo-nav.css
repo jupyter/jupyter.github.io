@@ -305,7 +305,7 @@ a {
     moz-opacity: 1;
     opacity: 1;
 }
-.
+
 .jupyterhub {
     background-color: #FDFDFD;
 }
@@ -407,6 +407,11 @@ a {
     color: white;
     text-decoration: none;
 }
+
+#arcfeature1 a:hover, #protocol a:hover, #kernel a:hover {
+    background-color: #DB5106;
+    box-shadow: 0px 3px #863001;
+}
 .card {
     display: block;
     margin: 0 auto;
@@ -417,10 +422,12 @@ a {
 .bt, .bt1, .bt2 {
     cursor: default;
 }
+
 #block3 {
     margin-bottom: 42px;
     margin-top: 35px;
 }
+
 .card .front {
     width: 275px;
     height: 275px;
@@ -775,6 +782,12 @@ a {
     box-shadow: 0px 3px #863001;
     margin-bottom: 25px;
 }
+
+#donate-button:hover {
+    background-color: #DB5106;
+    box-shadow: 0px 3px #863001;
+}
+
 #donate-formatting {
     padding-right: 25px;
 }
