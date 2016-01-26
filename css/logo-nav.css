@@ -796,3 +796,12 @@ a {
         margin-top: 10%;
     }
 }
+.community {
+    margin: 0 auto;
+    display: block;
+}
+.community-resource {
+    text-align: center;
+    font-size: 19px;
+    margin-top: 10px;
+}

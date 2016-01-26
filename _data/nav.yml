@@ -2,6 +2,7 @@ head:
     - title: Install
       url: http://jupyter.readthedocs.org/en/latest/install.html
     - Project
+    - Community
     - title: Documentation
       url: http://jupyter.readthedocs.org/en/latest/index.html
     - title: Blog
