@@ -17,7 +17,7 @@ $ gem install jekyll
 cd into the root of this directory, 
 
 ```
-jekyll serve --base-url ''
+jekyll serve --baseurl ''
 ```
 
 Open your browser to localhost:4000
