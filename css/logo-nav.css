@@ -156,9 +156,6 @@ a {
     .jumbotron {
         margin-right: 5%;
     }
-    body {
-        padding-top: 50px;
-    }
 }
 
 .notebook-preview p {
@@ -287,6 +284,9 @@ a {
 @media(max-width:767px) {
     .companies li {
         width: 30%;
+    }
+    body {
+        padding-top: 50px;
     }
 }
 .companies .col img{
