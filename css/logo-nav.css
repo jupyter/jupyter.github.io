@@ -156,6 +156,9 @@ a {
     .jumbotron {
         margin-right: 5%;
     }
+    body {
+        padding-top: 50px;
+    }
 }
 
 .notebook-preview p {
