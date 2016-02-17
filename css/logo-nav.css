@@ -597,16 +597,28 @@ a {
     margin: 0 auto;
     display: block;
 }
-.council-name {
+.card-header {
+    text-align: left;
     float:left;
     font-size: 19px;
     margin-top: 10px;
 }
-.council-info {
+.card-info {
     float:left;
     font-size: 15px;
     text-align: left;
     margin-top: 0px;
+}
+.card-link a {
+    float: left;
+    font-size: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #F27624;
+    line-height: 1;
+}
+.card-link a:hover {
+    text-decoration: none;
 }
 .material {
   background: #fff;
@@ -805,11 +817,6 @@ a {
 .community {
     margin: 0 auto;
     display: block;
-}
-.community-resource {
-    text-align: center;
-    font-size: 19px;
-    margin-top: 10px;
 }
 @media (max-width: 1200px) {
     .navbar-header {
