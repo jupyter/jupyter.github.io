@@ -62,6 +62,7 @@ animation-delay: 1.1s;
 .navbar {
 	background-color: white;
     border-width: thin;
+    -webkit-transition: .2s;
 }
 .navbar-gray {
     background-color: rgb(248,248,248);
@@ -89,7 +90,7 @@ a {
 .nav > li > a {
     padding: 10px 13px;
     padding-top: 15px;
-    -webkit-transition: .4s;
+    letter-spacing: 1px;
 }
 .nav > li > a:hover {
     color: #E46E2E;
@@ -264,7 +265,8 @@ a {
     padding: 13px 29px;
 }
 .buttons a:hover{
-    background-color: #DB5106;
+    background-color: #F27624;
+    -webkit-transition: .2s;
 }
 @media(max-width:509px) {
     #box2 {
@@ -821,14 +823,15 @@ a {
 .community-section {
     padding: 17px;
     border-bottom: 1px solid #E8E8E8;
+    height: 160px;
 }
 .community-text {
-    padding-top: 10px;
+    padding-top: 9px;
     text-align: left;
     vertical-align: middle;
 }
 .community-button {
-    margin-top: 55px;
+    margin-top: 48px;
 }
 .community-button a {
     background-color: #E46E2E;
@@ -837,6 +840,11 @@ a {
     text-decoration: none;
     box-shadow: 0px 3px #863001;
     color: white;
+    letter-spacing: 1px;
+    -webkit-transition: .2s;
+}
+.community-button a:hover {
+    background-color: #F27624;
 }
 #last-block {
     border-bottom: none;
@@ -867,6 +875,10 @@ a {
     }
     #github-break {
         display: inline;
+    }
+    .nav>li>a {
+        font-size: 13px;
+        letter-spacing: 1px;
     }
     
 }
