@@ -176,8 +176,8 @@ a {
     }
 }
 .notebook-features, .architecture, .about-block, .companyuse, .jupyterhub .container {
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 .notebook-features h2{
     font-size: 21px;
@@ -525,8 +525,8 @@ a {
 }
 @media (min-width: 1200px) {
     .notebook-features, .companyuse, .jupyterhub .container, .architecture, .install-prompt .content {
-        padding-top:125px;
-        padding-bottom: 125px;
+        padding-top:75px;
+        padding-bottom: 75px;
     }
     .install-prompt .content{
         padding-top: 40px;
@@ -756,12 +756,6 @@ a {
         margin-top: 15px;
     }
 }
-@media (min-width: 1200px) {
-    .about-block  {
-        padding-top: 125px;
-        padding-bottom: 125px;
-    }
-}
 #footer-text {
     margin-left: 0px;
     padding-left: 0px;
@@ -813,9 +807,51 @@ a {
 #donate-link {
     text-decoration: none;
 }
+
+/*Community Page */
+
+.community-block {
+    padding: 17px;
+    border-bottom: 1px solid #E8E8E8;
+}
+.community-text {
+    padding-top: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+.community-button {
+    margin-top: 55px;
+}
+.community-button a {
+    background-color: #E46E2E;
+    padding: 13px 60px;
+    border-radius: 5.82px;
+    text-decoration: none;
+    box-shadow: 0px 3px #863001;
+    color: white;
+}
+#last-block {
+    border-bottom: none;
+}
 @media (max-width: 992px) {
     .donate-box {
         margin-top: 10%;
+    }
+    .community-block {
+        padding: 0px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        height: 400px;
+    }
+    .community-text {
+        padding-top: 0px;
+        text-align: center;
+    }
+    #gitter, #mailing-list {
+        border-left: 1px solid #E8E8E8;
+    }
+    .community-block img {
+        padding-bottom: 0px;
     }
 }
 .community {
