@@ -89,14 +89,21 @@ a {
 .nav > li > a {
     padding: 10px 13px;
     padding-top: 15px;
-
+    -webkit-transition: .4s;
 }
 .nav > li > a:hover {
     color: #E46E2E;
     background-color: transparent;
+    -webkit-transition: .2s;
 }
 .nav > li > a:focus {
     background-color: white;
+}
+.nav > li > a:active {
+    background-color: #F8F8F8;
+}
+.nav > li > a:visited {
+    background-color: #F8F8F8;
 }
 .img-container {
     position: absolute;
