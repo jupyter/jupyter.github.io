@@ -89,6 +89,7 @@ a {
 .nav > li > a {
     padding: 10px 13px;
     padding-top: 15px;
+
 }
 .nav > li > a:hover {
     color: #E46E2E;
@@ -810,7 +811,7 @@ a {
 
 /*Community Page */
 
-.community-block {
+.community-section {
     padding: 17px;
     border-bottom: 1px solid #E8E8E8;
 }
@@ -833,11 +834,14 @@ a {
 #last-block {
     border-bottom: none;
 }
+#github-break {
+    display: none;
+}
 @media (max-width: 992px) {
     .donate-box {
         margin-top: 10%;
     }
-    .community-block {
+    .community-section {
         padding: 0px;
         padding-top: 10px;
         padding-bottom: 30px;
@@ -850,13 +854,19 @@ a {
     #gitter, #mailing-list {
         border-left: 1px solid #E8E8E8;
     }
-    .community-block img {
+    .community-section img {
         padding-bottom: 0px;
+        margin-top: 15px;
     }
+    #github-break {
+        display: inline;
+    }
+    
 }
 .community {
     margin: 0 auto;
     display: block;
+    padding: 0px 0px;
 }
 @media (min-width: 768px) {
     .navbar-toggle {
