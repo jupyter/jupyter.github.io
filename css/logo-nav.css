@@ -847,9 +847,10 @@ a {
     background-color: #F27624;
 }
 
-#last-block {
+.community-section:last-child {
     border-bottom: none;
 }
+
 #github-break {
     display: none;
 }
@@ -867,7 +868,7 @@ a {
         padding-top: 0px;
         text-align: center;
     }
-    #gitter, #mailing-list {
+    .community-section:nth-child(even) {
         border-left: 1px solid #E8E8E8;
     }
     .community-section img {
