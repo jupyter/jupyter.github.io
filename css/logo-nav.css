@@ -60,7 +60,7 @@ animation-delay: 1.1s;
     padding: 15px 0;
 }
 .navbar {
-	background-color: white;
+    background-color: white;
     border-width: thin;
     -webkit-transition: .2s;
 }
@@ -195,7 +195,7 @@ a {
 }
 
 .notebook-features p a {
-	color:gray;
+    color:gray;
     font-weight: 500;
     text-decoration: underline;
 }
