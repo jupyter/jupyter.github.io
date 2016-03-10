@@ -90,7 +90,6 @@ a {
 .nav > li > a {
     padding: 10px 13px;
     padding-top: 15px;
-    letter-spacing: 1px;
 }
 .nav > li > a:hover {
     color: #E46E2E;
