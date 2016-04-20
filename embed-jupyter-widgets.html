@@ -1,0 +1,237 @@
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF8">
+    <script src="https://npmcdn.com/codemirror@5.13.4/lib/codemirror.js"></script>
+    <script src="https://npmcdn.com/codemirror@5.13.4/mode/python/python.js"></script>
+    <script src="https://npmcdn.com/codemirror@5.13.4/mode/javascript/javascript.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/codemirror@5.13.4/lib/codemirror.css">
+    <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        var inputarea = document.getElementsByClassName("inputarea")[0];
+        var editor = CodeMirror(inputarea, {
+            value:  "from ipywidgets import VBox, jsdlink, IntSlider\n" +
+                    "s1 = IntSlider(description='Maximum', min=100, max=200, value=100)\n" +
+                    "s2 = IntSlider(description='Value', value=40)\n" +
+                    "jsdlink((s1, 'value'), (s2, 'max'))\n" +
+                    "VBox([s1, s2])",
+            mode: "python",
+            tabSize: 4,
+            showCursorWhenSelecting: true,
+            viewportMargin: Infinity,
+            readOnly: true
+        });
+
+        var snipetarea = document.getElementsByClassName("snipetarea")[0];
+        var snipet_editor = CodeMirror(snipetarea, {
+            value:
+'\x3cscript src="https://npmcdn.com/jupyter-js-widgets@~1.0.0/dist/embed.js">\x3c/script>\n\
+\x3cscript type="application/vnd.jupyter-embedded-widgets">\n\
+{\n\
+    "0b2839e97da34d4db1de1e0a58acb485": {\n\
+        "model_name": "LayoutModel",\n\
+        "model_module": "jupyter-js-widgets",\n\
+        "state": {},\n\
+        "views": []\n\
+    },\n\
+    "637439f04a6c45f79ebe95a520abd86e": {\n\
+        "model_name": "IntSliderModel",\n\
+        "model_module": "jupyter-js-widgets",\n\
+        "state": {\n\
+            "layout": "IPY_MODEL_0b2839e97da34d4db1de1e0a58acb485",\n\
+            "description": "Maximum",\n\
+            "max": 200,\n\
+            "min": 100,\n\
+            "value": 100\n\
+        },\n\
+        "views": []\n\
+    },\n\
+    "9f4fdcbc76764609b3095d1681a1a044": {\n\
+        "model_name": "LayoutModel",\n\
+        "model_module": "jupyter-js-widgets",\n\
+        "state": {},\n\
+        "views": []\n\
+    },\n\
+    "b5e0072bfc0246feb7117b83a8fbc94b": {\n\
+        "model_name": "IntSliderModel",\n\
+        "model_module": "jupyter-js-widgets",\n\
+        "state": {\n\
+            "layout": "IPY_MODEL_9f4fdcbc76764609b3095d1681a1a044",\n\
+            "description": "Value",\n\
+            "value": 40\n\
+        },\n\
+        "views": []\n\
+    },\n\
+    "aa4288be316142248e0be51c0bb107aa": {\n\
+        "model_name": "DirectionalLinkModel",\n\
+        "model_module": "jupyter-js-widgets",\n\
+        "state": {\n\
+            "target": [\n\
+                "IPY_MODEL_b5e0072bfc0246feb7117b83a8fbc94b",\n\
+                "max"\n\
+            ],\n\
+            "source": [\n\
+                "IPY_MODEL_637439f04a6c45f79ebe95a520abd86e",\n\
+                "value"\n\
+            ]\n\
+        },\n\
+        "views": []\n\
+    },\n\
+    "b0c77cc378bc4cfca1357e13b049b253": {\n\
+        "model_name": "LayoutModel",\n\
+        "model_module": "jupyter-js-widgets",\n\
+        "state": {\n\
+            "flex_flow": "column",\n\
+            "display": "flex"\n\
+        },\n\
+        "views": []\n\
+    },\n\
+    "bf7d86e0469c4ec8aab2228a438e7120": {\n\
+        "model_name": "BoxModel",\n\
+        "model_module": "jupyter-js-widgets",\n\
+        "state": {\n\
+            "children": [\n\
+                "IPY_MODEL_637439f04a6c45f79ebe95a520abd86e",\n\
+                "IPY_MODEL_b5e0072bfc0246feb7117b83a8fbc94b"\n\
+            ],\n\
+            "layout": "IPY_MODEL_b0c77cc378bc4cfca1357e13b049b253"\n\
+        },\n\
+        "views": [\n\
+            {}\n\
+        ]\n\
+    }\n\
+}\n\
+\x3c/script>',
+            mode: "javascript",
+            tabSize: 4,
+            showCursorWhenSelecting: true,
+            viewportMargin: Infinity,
+            readOnly: true
+        });
+
+    });
+    </script>
+    <style>
+    body {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 900px;
+        background-color: #eee;
+        font-family: sans-serif;
+    }
+
+    .jupyter-js-widgets-example {
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: white;
+        overflow: auto;
+        box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
+    }
+
+    .widgetarea, .inputarea, .snipetarea {
+        margin: 5px;
+    }
+
+    .CodeMirror {
+        border: 1px solid #ccc;
+        height: auto;
+        background-color: #f7f7f7;
+        border-radius: 2px;
+    }
+
+    .CodeMirror-Scroll {
+        height: auto;
+    }
+    </style>
+    </head>
+    <body>
+        <h1>Embedding Jupyter Interactive Widgets</h1>
+        <div class="jupyter-js-widgets-example">
+            <h2>Notebook Code</h2>
+            <div class="inputarea"></div>
+            <h2>Generated Live Widgets</h2>
+            <div class="widgetarea">
+                <script src="https://npmcdn.com/jupyter-js-widgets@~1.0.0/dist/embed.js"></script>
+                <script type="application/vnd.jupyter-embedded-widgets">
+                {
+                    "0b2839e97da34d4db1de1e0a58acb485": {
+                        "model_name": "LayoutModel",
+                        "model_module": "jupyter-js-widgets",
+                        "state": {},
+                        "views": []
+                    },
+                    "637439f04a6c45f79ebe95a520abd86e": {
+                        "model_name": "IntSliderModel",
+                        "model_module": "jupyter-js-widgets",
+                        "state": {
+                            "layout": "IPY_MODEL_0b2839e97da34d4db1de1e0a58acb485",
+                            "description": "Maximum",
+                            "max": 200,
+                            "min": 100,
+                            "value": 100
+                        },
+                        "views": []
+                    },
+                    "9f4fdcbc76764609b3095d1681a1a044": {
+                        "model_name": "LayoutModel",
+                        "model_module": "jupyter-js-widgets",
+                        "state": {},
+                        "views": []
+                    },
+                    "b5e0072bfc0246feb7117b83a8fbc94b": {
+                        "model_name": "IntSliderModel",
+                        "model_module": "jupyter-js-widgets",
+                        "state": {
+                            "layout": "IPY_MODEL_9f4fdcbc76764609b3095d1681a1a044",
+                            "description": "Value",
+                            "value": 40
+                        },
+                        "views": []
+                    },
+                    "aa4288be316142248e0be51c0bb107aa": {
+                        "model_name": "DirectionalLinkModel",
+                        "model_module": "jupyter-js-widgets",
+                        "state": {
+                            "target": [
+                                "IPY_MODEL_b5e0072bfc0246feb7117b83a8fbc94b",
+                                "max"
+                            ],
+                            "source": [
+                                "IPY_MODEL_637439f04a6c45f79ebe95a520abd86e",
+                                "value"
+                            ]
+                        },
+                        "views": []
+                    },
+                    "b0c77cc378bc4cfca1357e13b049b253": {
+                        "model_name": "LayoutModel",
+                        "model_module": "jupyter-js-widgets",
+                        "state": {
+                            "flex_flow": "column",
+                            "display": "flex"
+                        },
+                        "views": []
+                    },
+                    "bf7d86e0469c4ec8aab2228a438e7120": {
+                        "model_name": "BoxModel",
+                        "model_module": "jupyter-js-widgets",
+                        "state": {
+                            "children": [
+                                "IPY_MODEL_637439f04a6c45f79ebe95a520abd86e",
+                                "IPY_MODEL_b5e0072bfc0246feb7117b83a8fbc94b"
+                            ],
+                            "layout": "IPY_MODEL_b0c77cc378bc4cfca1357e13b049b253"
+                        },
+                        "views": [
+                            {}
+                        ]
+                    }
+                }
+                </script>
+            </div>
+            <h2>Embeddable HTML Snippet</h2>
+            <p>Paste this code snippet into any html page to generate the above live widgets</p>
+            <div class="snipetarea"></div>
+        </div>
+    </body>
+</html>
