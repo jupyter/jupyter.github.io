@@ -739,7 +739,7 @@ a {
     content:"";
 }
 
-@media (min-width: 510px) {
+@media (min-width: 710px) {
     .follow {
         float: right !important;
     }
@@ -747,7 +747,7 @@ a {
         float: left;
     }
 }
-@media (max-width: 509px) {
+@media (max-width: 710px) {
     .follow {
         display: block;
         margin: 0 auto;
@@ -756,8 +756,8 @@ a {
         text-align: center;
         padding-bottom: 15px;
     }
-    .navbar-bottom ul {
-        float: left;
+    .footer-text {
+        text-align: center;
     }
 }
 @media (min-width: 768px) {
@@ -769,7 +769,6 @@ a {
     margin-left: 0px;
     padding-left: 0px;
 }
-
 /* Donate Page */
 #donate-paragraph {
     font-size: 15px;
@@ -893,11 +892,14 @@ a {
         margin-top: 20px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .navbar-header {
         margin-bottom: 0;
     }
     .navbar-toggle {
         padding-top: 10px;
+    }
+    .follow {
+        margin-top: 0px;
     }
 }
