@@ -50,6 +50,8 @@ def create_graph_repos(repos=REPOS, use_custom_images=USE_CUSTOM_IMAGES, repo_im
         for commit in commits:
             duplicate = False
             author = commit["author"]
+            if not author:
+                continue
             for index, node in enumerate(graph["nodes"]):
                 if node["name"] == author["login"]:
                     duplicate = True
