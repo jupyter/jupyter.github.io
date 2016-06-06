@@ -11,7 +11,7 @@ what where.
 # Quick local testing
 
 ```
-$ gem install jekyll
+$ gem install jekyll kramdown github-pages
 ```
 
 cd into the root of this directory, 
