@@ -85,7 +85,7 @@ def main(command=[]):
         graph = create_graph_repos()
         if graph is not None and len(graph["nodes"]) > 0:
             with open(DATA_FILE, 'w') as f:
-                json.dump(graph, f)
+                json.dump(graph, f, indent=1, sort_keys=True)
         else:
             raise ValueError("Empty graph generated")
         update_timestamp()
