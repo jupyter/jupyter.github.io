@@ -9,7 +9,7 @@ REPOS = [("jupyter", "notebook"), ("jupyter", "jupyter_console"), ("jupyter", "j
         ("ipython", "ipyparallel"), ("jupyter", "nbconvert"), ("jupyter", "nbformat"), ("jupyter", "nbgrader"), ("jupyter", "tmpnb")]
 REPO_IMG_DIR = "repo_images/"
 IMG_TYPE = "png"
-CENTER_IMG = "http://jupyter.org/jupyter-circle.png"
+CENTER_IMG = "https://jupyter.org/jupyter-circle.png"
 
 #Do not change these
 DATA_FILE = "graphData.json"
