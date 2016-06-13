@@ -1,0 +1,105 @@
+---
+layout: default
+title: Widgets
+navbar_gray: true
+---
+
+<link href="css/gallery.css" rel="stylesheet">
+<link href="css/syntax.css" rel="stylesheet">
+<script src="https://npmcdn.com/jupyter-js-widgets@1.1.2/dist/embed.js"></script>
+
+<section>
+  <div class="header">
+    <div class="container">
+    <h1>Interactive Widgets</h1>
+      <p>Jupyter widgets enable interactive data visualization in the Jupyter notebooks.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="about-block">
+    <div class="container">
+      <img class="img-responsive widget" src="assets/widget.svg">
+      <p>Notebooks come alive when interactive widgets are used. Users can visualize and control changes in the data.</p>
+      <p>Learning becomes an immersive, plus fun, experience. Researchers can easily see how changing inputs to a model impact the results.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="tabbable tabs-left">
+            <ul class="nav nav-tabs">
+            <li class="active">
+              <a href="#ipyleaflet" data-toggle="tab">
+                <p>ipyleaflet</p>
+                <p>Geo-spatial analytics</p>
+              </a></li>
+            <li>
+              <a href="#bqplot" data-toggle="tab">
+                <p>bqplot</p>
+                <p>Interative 2d data visualization</p>
+              </a>
+            </li>
+            <li>
+              <a href="#pythreejs" data-toggle="tab">
+                <p>pythreejs</p>
+                <p>3d data visualization</p>
+              </a>
+            </li>
+            <li>
+              <a href="#cookiecutter" data-toggle="tab">
+                <p>cookiecutter</p>
+                <p>Template widget project</p>
+              </a>
+            </li>
+            </ul>
+            <div class="tab-content">
+            <div class="tab-pane active" id="ipyleaflet">
+                <h2>ipyleaflet</h2>
+                <a href="https://github.com/ellisonbg/ipyleaflet">https://github.com/ellisonbg/ipyleaflet</a>
+                {% highlight python %}{% include_relative assets/ipyleaflet-example.py %}{% endhighlight %}
+                <script type="application/vnd.jupyter-embedded-widgets">
+                    {% include_relative assets/ipyleaflet-example.json %}
+                </script>
+            </div>
+            <div class="tab-pane" id="bqplot">
+                <h2>bqplot</h2>
+                <a href="https://github.com/bloomberg/bqplot">https://github.com/bloomberg/bqplot</a>
+                {% highlight python %}{% include_relative assets/bqplot-example.py %}{% endhighlight %}
+                <script type="application/vnd.jupyter-embedded-widgets">
+                    {% include_relative assets/bqplot-example.json %}
+                </script>
+            </div>
+            <div class="tab-pane" id="pythreejs">
+                <h2>pythreejs</h2>
+                <a href="https://github.com/jovyan/pythreejs">https://github.com/jovyan/pythreejs</a>
+                {% highlight python %}{% include_relative assets/pythreejs-example.py %}{% endhighlight %}
+                <script type="application/vnd.jupyter-embedded-widgets">
+                    {% include_relative assets/pythreejs-example.json %}
+                </script>
+            </div>
+            <div class="tab-pane" id="cookiecutter">
+                <h2>widget cookiecutter</h2>
+                <a href="https://github.com/jupyter/widget-cookiecutter">https://github.com/jupyter/widget-cookiecutter</a>
+                  <div class="widgets-paragraph">
+                    <p>
+                    The Jupyter widget framework is extensible and enables developers to create custom
+                    widget libraries and bindings for visualization libraries of the JavaScript ecosystem.
+                    </p>
+                    <p>
+                    The <code>cookiecutter</code> project helps widget authors get up to speed with the
+                    packaging and distribution of Jupyter interactive widgets.
+                    </p>
+                    <p>
+                    It produces a base project for a Jupyter interactive widget library following the current best practices.
+                    An implementation for a placeholder "Hello World" widget is provided. Following these practices will
+                    help make your custom widgets work in static web pages (like the examples of this page) and be compatible
+                    with future versions of Jupyter.
+                    </p>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>

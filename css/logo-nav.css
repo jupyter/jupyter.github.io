@@ -770,6 +770,13 @@ a {
     padding-left: 0px;
 }
 
+/* Widgets Page */
+.widgets-paragraph {
+    font-size: 15px;
+    line-height: 1.5;
+    padding-top: 26px;
+}
+
 /* Donate Page */
 #donate-paragraph {
     font-size: 15px;
