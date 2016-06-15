@@ -10,12 +10,12 @@ head:
     - title: Community
       dropdown:
          - title: Blog
-           href: https://blog.jupyter.org
+           url: https://blog.jupyter.org
          - title: Events
-           href: http://google.com
+           url: http://google.com
          - title: Connect
-           href: http://jupyter.org/community.html
+           url: http://jupyter.org/community.html
          - title: Notebook Examples
-           href: https://nbviewer.jupyter.org
+           url: https://nbviewer.jupyter.org
     - title: About 
       url: http://jupyter.org/about.html

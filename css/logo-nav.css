@@ -166,7 +166,7 @@ a {
 }
 @media (max-width: 767px){
     .jumbotron {
-        margin-right: 5px;
+        margin-right: 5%;
     }
 }
 
