@@ -914,9 +914,31 @@ a {
 }
 
 .dropdown-menu {
-    background-color: orange;
+    background-color: #f8f8f8;
 }
 
-.dropdown-menu a:hover {
-    background-color: blue;
+.dropdown-toggle:active {
+    color: transparent;
+}
+/* e46e2e  DARK ORANGE  f8f8f8  Gray     */
+
+.dropdown-menu > li > a:hover {
+    color: #f27624;
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+   .dropdown-menu {
+      display: none !important;
+  }
+
+  .open .dropdown-menu {
+      display: block !important;
+  }
+} 
+
+#test {
+    box-shadow: none;
+    border: none;
+    background-color:  transparent;
 }
