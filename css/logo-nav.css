@@ -908,3 +908,15 @@ a {
         padding-top: 10px;
     }
 }
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    background-color: orange;
+}
+
+.dropdown-menu a:hover {
+    background-color: blue;
+}
