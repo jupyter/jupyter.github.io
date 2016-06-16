@@ -15,7 +15,7 @@ head:
            url: http://google.com
          - title: Connect
            url: http://jupyter.org/community.html
-         - title: Notebook  &nbsp &nbsp &nbsp<br> Viewer
+         - title: Notebook <br> Viewer
            url: https://nbviewer.jupyter.org
     - title: About 
       url: http://jupyter.org/about.html
