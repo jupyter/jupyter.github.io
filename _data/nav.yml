@@ -3,7 +3,7 @@ head:
       url: http://jupyter.readthedocs.org/en/latest/install.html
     - title: Documentation
       url: http://jupyter.readthedocs.org/en/latest/index.html
-    - title: Tools  
+    - title: Tools
       dropdown:
         - title: Widgets
         - title: Kernel
