@@ -120,10 +120,6 @@ a {
     display: block;
 }
 
-#tab:hover {
-    color: #E46E2E;
-    background-color: transparent;
-}
 @media(min-width:768px) {
 
     .navbar-fixed-top .navbar-brand {
@@ -908,8 +904,10 @@ a {
     }
 }
 .nav li:hover {
-    color:black;
     background-color: #F6F6F6;
+}
+.nav li a:hover {
+    color: black;
 }
 .nav.title {
     color:white;
@@ -933,14 +931,14 @@ a {
 .dropdown-menu > li > a:hover {
     color: white;
     background-color: #FF944D;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 .dropdown-menu > li > a{
     color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: 300;
 }
 
 @media (max-width: 768px) {
@@ -954,19 +952,32 @@ a {
 }
 .dropdown-menu {
     min-width: 0px;
-    padding: 0 0 0 0;
     margin-top:0px;
+    padding: 0 0 0 0;
     box-shadow: none;
     border: none;
     background-color:  #E66E20;
     color: white;
 } 
+.dropdown-menu li {
+    width:130px;
+}
 .navbar-right {
     height:90px;
 }
 #maintabs {
-    padding: 23px 0 23px 0;
+    width: 130px;
+    padding: 22px 8px 23px 8px;
+    font-weight: 400;
+    font-size: 14px;
 }
+#maintabs:hover a {
+    color:black;
+}
+
 .dropdown{
-    padding: 23px 0 23px 0;
+    width: 130px;
+    padding: 22px 8px 23px 8px;
+    font-weight: 400;
+    font-size: 14px;
 }
