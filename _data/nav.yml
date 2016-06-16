@@ -3,9 +3,11 @@ head:
     url: http://jupyter.readthedocs.org/en/latest/install.html
   - title: Documentation
     url: http://jupyter.readthedocs.org/en/latest/index.html
-  - title: Tools
+  - title: Software
     subitem:
       - title: Widgets
+      - title: Kernels
+        url: https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages
   - title: Services
     subitem:
       - title: Try Notebook
