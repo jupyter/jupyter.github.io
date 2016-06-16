@@ -905,9 +905,6 @@ a {
 .nav li:hover {
     background-color: #F6F6F6;
 }
-.nav li a:hover {
-    color: black;
-}
 .nav.title {
     color:white;
 }
@@ -918,7 +915,6 @@ a {
 }
 
 .dropdown-menu {
-    color: white;
     border-radius: 0;
 }
 
@@ -927,10 +923,9 @@ a {
 }
 /* e46e2e  DARK ORANGE  f8f8f8  Gray     */
 .dropdown-menu > li > a{
-    color: white;
     padding-top: 15px;
     padding-bottom: 15px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .dropdown-menu > li > a:hover {
@@ -952,7 +947,7 @@ a {
     padding: 0 0 0 0;
     box-shadow: none;
     border: none;
-    background-color:  #E66E20;
+    background-color:  #f6f6f6;
     color: white;
 } 
 .dropdown-menu li {
@@ -978,4 +973,7 @@ a {
     padding: 17px 0px 18px 0px;
     font-weight: 400;
     font-size: 15px;
+}
+#carrot {
+    margin-left: 1px;
 }
