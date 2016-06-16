@@ -88,8 +88,7 @@ a {
     animation-duration: 2s;
 }
 .nav > li > a {
-    padding: 10px 13px;
-    padding-top: 15px;
+    padding: 13px 13px;
 }
 .nav > li > a:hover {
     background-color: transparent;
@@ -99,10 +98,10 @@ a {
     background-color: white;
 }
 .nav > li > a:active {
-    background-color: #F8F8F8;
+    background-color: #f6f6f6;
 }
 .nav > li > a:visited {
-    background-color: #F8F8F8;
+    background-color: #f6f6f6;
 }
 .img-container {
     position: absolute;
@@ -935,6 +934,7 @@ a {
 }
 
 .dropdown-menu > li > a:hover {
+    color: white;
     background-color: #FF944D;
 }
 
@@ -949,7 +949,6 @@ a {
 }
 .dropdown-menu {
     min-width: 0px;
-    margin-top:0px;
     padding: 0 0 0 0;
     box-shadow: none;
     border: none;
@@ -958,16 +957,16 @@ a {
 } 
 .dropdown-menu li {
     text-align: left;
-    width:130px;
+    width:138px;
 }
 .navbar-right {
-    height:90px;
+    height:80px;
 }
 #maintabs {
-    width: 130px;
-    padding: 22px 8px 23px 8px;
+    width: 140px;
+    padding: 17px 0px 18px 0px;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 15px;
 }
 #maintabs:hover a {
     color:black;
@@ -975,8 +974,8 @@ a {
 
 .dropdown{
     text-align: center;
-    width: 130px;
-    padding: 22px 8px 23px 8px;
+    width: 138px;
+    padding: 17px 0px 18px 0px;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 15px;
 }
