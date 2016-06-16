@@ -3,7 +3,7 @@ head:
       url: http://jupyter.readthedocs.org/en/latest/install.html
     - title: Documentation
       url: http://jupyter.readthedocs.org/en/latest/index.html
-    - title: Tools
+    - title: Tools  
       dropdown:
         - title: Widgets
         - title: Kernel
@@ -15,7 +15,7 @@ head:
            url: http://google.com
          - title: Connect
            url: http://jupyter.org/community.html
-         - title: Notebook Examples
+         - title: Notebook  &nbsp &nbsp &nbsp<br> Viewer
            url: https://nbviewer.jupyter.org
     - title: About 
       url: http://jupyter.org/about.html
