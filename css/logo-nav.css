@@ -927,18 +927,15 @@ a {
     background-color: #F6F6F6;
 }
 /* e46e2e  DARK ORANGE  f8f8f8  Gray     */
-
-.dropdown-menu > li > a:hover {
-    color: white;
-    background-color: #FF944D;
-    padding-top: 12px;
-    padding-bottom: 12px;
-}
 .dropdown-menu > li > a{
     color: white;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-weight: 300;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: #FF944D;
 }
 
 @media (max-width: 768px) {
@@ -960,6 +957,7 @@ a {
     color: white;
 } 
 .dropdown-menu li {
+    text-align: left;
     width:130px;
 }
 .navbar-right {
@@ -976,6 +974,7 @@ a {
 }
 
 .dropdown{
+    text-align: center;
     width: 130px;
     padding: 22px 8px 23px 8px;
     font-weight: 400;
