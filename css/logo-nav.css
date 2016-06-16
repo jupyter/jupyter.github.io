@@ -922,7 +922,6 @@ a {
 
 .dropdown-menu {
     color: white;
-    background-color: #F6F6F6;
     border-radius: 0;
 }
 
@@ -956,12 +955,18 @@ a {
 .dropdown-menu {
     min-width: 0px;
     padding: 0 0 0 0;
-} 
-
-#test {
     margin-top:0px;
     box-shadow: none;
     border: none;
     background-color:  #E66E20;
     color: white;
+} 
+.navbar-right {
+    height:90px;
+}
+#maintabs {
+    padding: 23px 0 23px 0;
+}
+.dropdown{
+    padding: 23px 0 23px 0;
 }
