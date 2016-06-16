@@ -1,21 +1,23 @@
 head:
-    - title: Install
-      url: http://jupyter.readthedocs.org/en/latest/install.html
-    - title: Documentation
-      url: http://jupyter.readthedocs.org/en/latest/index.html
-    - title: Tools
-      dropdown:
-        - title: Widgets
-        - title: Kernel
-    - title: Community
-      dropdown:
-         - title: Blog
-           url: https://blog.jupyter.org
-         - title: Events
-           url: http://google.com
-         - title: Connect
-           url: http://jupyter.org/community.html
-         - title: Notebook <br> Viewer
-           url: https://nbviewer.jupyter.org
-    - title: About 
-      url: http://jupyter.org/about.html
+  - title: Install
+    url: http://jupyter.readthedocs.org/en/latest/install.html
+  - title: Documentation
+    url: http://jupyter.readthedocs.org/en/latest/index.html
+  - title: Tools
+    subitem:
+      - title: Widgets
+  - title: Services
+    subitem:
+      - title: Try Notebook
+      - title: NBViewer
+        url: https://nbviewer.jupyter.org
+  - title: Community
+    subitem:
+      - title: Connect
+        url: http://jupyter.org/community.html
+      - title: Github Help
+        url: https://github.com/jupyter/help
+      - title: Blog
+        url: https://blog.jupyter.org
+  - title: About 
+    url: http://jupyter.org/about.html
