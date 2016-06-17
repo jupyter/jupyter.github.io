@@ -25,17 +25,45 @@
                       {% endif %}
                       {% if nav.subitem %}
                           <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ nav.title }} <img id="carrot" src="assets/carrot.svg" alt="carrot"></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ nav.title }} <img id="carrot" src="assets/carrot.svg" alt="carrot"></a>
                               <ul class="dropdown-menu">
                                   {% for submenu in nav.subitem %}
-                                      <li><a href="{{ submenu.url }}">{{ submenu.title }}</a></li>
+                                    {% if submenu.url %}
+                                      <li><a href="{{ submenu.url }}" target="_blank">{{ submenu.title }}</a></li>
+                                    {% else %} 
+                                      {% for targetpage in site.pages %}
+                                         {% if submenu.title contains targetpage.title%}
+                                            {% if page.title == targetpage.title %}
+                                              <li>
+                                                <a href  class="tab navbar-active" id="tab">{{targetpage.title}}</a>
+                                              </li>
+                                            {% else %}
+                                              <li>
+                                                <a href="{{site.baseurl}}{{targetpage.url}}" class="tab" id="tab">{{targetpage.title}}</a>
+                                              </li>
+                                            {% endif %}
+                                        {% endif %}
+                                      {% endfor %}
+                                    {% endif %}
                                   {% endfor %}
                               </ul>
                           </li>
+                      {% else %}
+                        {% for targetpage in site.pages %}
+                           {% if nav.title contains targetpage.title%}
+                              {% if page.title == targetpage.title %}
+                               <li id="maintabs">
+                                   <a href  class="tab navbar-active" id="tab">{{targetpage.title}}</a>
+                               </li>
+                               {% else %}
+                               <li id="maintabs">
+                                   <a href="{{site.baseurl}}{{targetpage.url}}" class="tab" id="tab">{{targetpage.title}}</a>
+                               </li>
+                               {% endif %}
+                           {% endif %}
+                        {% endfor %}
                       {% endif %}
-                    {% endfor %}
-
-
+                    {% endfor %}              
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
