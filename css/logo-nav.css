@@ -87,23 +87,19 @@ a {
     animation-name: smooth;
     animation-duration: 2s;
 }
+.nav > li:hover {
+    background-color: #f6f6f6
+}
 .nav > li > a {
-    padding: 30px 20px 30px 20px;
+    padding: 30px 0px 30px 0px;
 }
 .nav > li > a:hover {
-    color: #E46E2E;
-    background-color: transparent;
-    -webkit-transition: .2s;
+    color: black;
 }
 .nav > li > a:focus {
     background-color: white;
 }
-.nav > li > a:active {
-    background-color: #F8F8F8;
-}
-.nav > li > a:visited {
-    background-color: #F8F8F8;
-}
+
 .img-container {
     position: absolute;
     width: 95%;
@@ -120,10 +116,6 @@ a {
     display: block;
 }
 
-#tab:hover {
-    color: #E46E2E;
-    background-color: transparent;
-}
 @media(min-width:768px) {
 
     .navbar-fixed-top .navbar-brand {
@@ -547,7 +539,7 @@ a {
 .header{
     padding-bottom: 30px;
     text-align: center;
-    background-color: #F8F8F8;
+    background-color: #F6F6F6;
 }
 .header h1 {
     font-size: 41.16px;
@@ -911,11 +903,13 @@ a {
 /*------------------------------------------------*/
 /*------------------------------------------------*/
 .nav li:hover {
-    background-color: #F6F6F6;
-    padding: 0  0 0 0;
+    background-color: #f6f6f6;
+}
+.nav a {
+    width: 130px;
 }
 .nav li{
-  padding: 0 0 0 0;
+    padding: 0 0 0 0;
 }
 #carrot {
     margin-left: 1px;
@@ -924,7 +918,6 @@ a {
     color:black;
 }
 #maintabs {
-    padding: 0px 0px 0px 0px;
     font-weight: 400;
     font-size: 15px;
 }
@@ -934,16 +927,20 @@ a {
 }
 .dropdown-menu {
     min-width: 0px;
-    padding: 0 0 0 0;
     box-shadow: none;
     border: none;
-    background-color:  #f6f6f6;
+    background-color: #f6f6f6;
     color: white;
+    padding: 0 0 0 0;
 }
 .dropdown{
-    padding: 17px 0px 18px 0px;
+    text-align: center;
     font-weight: 400;
     font-size: 15px;
+}
+.dropdown-menu > li > a {
+    padding: 10px 18px 10px 18px;
+    font-size: 14px;
 }
 .dropdown-menu > li > a:hover {
     color: white;
@@ -961,9 +958,19 @@ a {
         display: block !important;
     }
     .dropdown, #maintabs {
-        padding: 0 0 0 0;
+        padding: 0 20px 0 20px;
+        text-align: left;
+    }
+    .nav a {
+        width: auto;
+    }
+    .dropdown {
+        padding-left: 20px;
     }
 }
 ul.nav.navbar-nav.navbar-right {
-  padding: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+.navbar-fixed-top {
+  border-style: none;
 }
