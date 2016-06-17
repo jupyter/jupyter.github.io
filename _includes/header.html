@@ -35,11 +35,11 @@
                                          {% if submenu.title contains targetpage.title%}
                                             {% if page.title == targetpage.title %}
                                               <li>
-                                                <a href  class="tab navbar-active" id="tab">{{targetpage.title}}</a>
+                                                <a href >{{targetpage.title}}</a>
                                               </li>
                                             {% else %}
                                               <li>
-                                                <a href="{{site.baseurl}}{{targetpage.url}}" class="tab" id="tab">{{targetpage.title}}</a>
+                                                <a href="{{site.baseurl}}{{targetpage.url}}">{{targetpage.title}}</a>
                                               </li>
                                             {% endif %}
                                         {% endif %}
