@@ -4,7 +4,7 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 body {
-    padding-top: 70px; 
+    padding-top: 70px;
     /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
     font-size: 10.71pt;
     font-weight: 300;
@@ -30,11 +30,11 @@ h3 {
     -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
     -moz-animation:fadeIn ease-in 1;
     animation:fadeIn ease-in 1;
- 
+
     -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
     -moz-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
- 
+
     -webkit-animation-duration:1s;
     -moz-animation-duration:1s;
     animation-duration:1s;
@@ -44,7 +44,7 @@ h3 {
 -moz-animation-delay: 0.3s;
 animation-delay: 0.3s;
 }
- 
+
 .fade-in.two {
 -webkit-animation-delay: 0.7s;
 -moz-animation-delay:0.7s;
@@ -57,7 +57,7 @@ animation-delay: 1.1s;
 }
 
 .navbar-fixed-top .nav {
-    padding: 0 0;
+    padding: 15px 0;
 }
 .navbar {
     background-color: white;
@@ -81,16 +81,17 @@ a {
     color: #E46E2E;
 }
 .navbar-scroll {
-    box-shadow: 1px 1px 1px #999; 
+    box-shadow: 1px 1px 1px #999;
     -moz-box-shadow: 1px 1px 1px #999;
     -webkit-box-shadow: 1px 1px 1px #999;
     animation-name: smooth;
     animation-duration: 2s;
 }
 .nav > li > a {
-    padding: 13px 13px;
+    padding: 30px 20px 30px 20px;
 }
 .nav > li > a:hover {
+    color: #E46E2E;
     background-color: transparent;
     -webkit-transition: .2s;
 }
@@ -98,10 +99,10 @@ a {
     background-color: white;
 }
 .nav > li > a:active {
-    background-color: #f6f6f6;
+    background-color: #F8F8F8;
 }
 .nav > li > a:visited {
-    background-color: #f6f6f6;
+    background-color: #F8F8F8;
 }
 .img-container {
     position: absolute;
@@ -109,7 +110,7 @@ a {
     height: 100%;
     text-align: center;
     margin: 0 auto;
-    
+
 }
 .img-container img {
     vertical-align: center;
@@ -119,6 +120,10 @@ a {
     display: block;
 }
 
+#tab:hover {
+    color: #E46E2E;
+    background-color: transparent;
+}
 @media(min-width:768px) {
 
     .navbar-fixed-top .navbar-brand {
@@ -171,7 +176,7 @@ a {
     font-size: 21px;
 }
 @media(max-width:1200px) {
-    
+
     .notebook-preview p {
         line-height: 25pt;
         font-size: 15pt;
@@ -194,7 +199,7 @@ a {
 }
 
 .notebook-features p a:hover {
-    color: rgb(224, 103, 29);   
+    color: rgb(224, 103, 29);
 }
 
 
@@ -205,10 +210,10 @@ a {
 }
 
 @media(max-width:1200px) {
-    
+
     .notebook-features .language-set h2{
         padding-top: 0px;
-    }  
+    }
     .notebook-features #feature {
         padding-top: 4px;
     }
@@ -233,7 +238,7 @@ a {
     border-right-style: none;
     border-left-style: none;
     border-width: thin;
-    
+
 }
 .install-prompt .content {
     padding-top: 4%;
@@ -443,11 +448,11 @@ a {
     height: 275px;
     transition: transform 0.3s linear 0s;
     -webkit-transition: -webkit-transform 0.3s linear 0s;
- 
+
     -webkit-backface-visibility: hidden;
        -moz-backface-visibility: hidden;
          -o-backface-visibility: hidden;
-            backface-visibility: hidden;  
+            backface-visibility: hidden;
     position: absolute;
     text-align: center;
 }
@@ -456,11 +461,11 @@ a {
     height: 275px;
     transition: transform 0.3s linear 0s;
     -webkit-transition: -webkit-transform 0.3s linear 0s;
- 
+
     -webkit-backface-visibility: hidden;
        -moz-backface-visibility: hidden;
          -o-backface-visibility: hidden;
-            backface-visibility: hidden;  
+            backface-visibility: hidden;
     position: absolute;
     text-align: center;
 }
@@ -469,11 +474,11 @@ a {
     height: 275px;
     transition: transform 0.3s linear 0s;
     -webkit-transition: -webkit-transform 0.3s linear 0s;
- 
+
     -webkit-backface-visibility: hidden;
        -moz-backface-visibility: hidden;
          -o-backface-visibility: hidden;
-            backface-visibility: hidden;  
+            backface-visibility: hidden;
     position: absolute;
     text-align: center;
 }
@@ -491,13 +496,13 @@ a {
 }
 /* The .back element should be rotated at first, facing his back, hidden*/
 .card .back{
- 
+
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
 
     text-align: center;
 }
- 
+
 
 
 .arcfeature a {
@@ -540,7 +545,7 @@ a {
 /*About Page */
 
 .header{
-    padding-bottom: 30px; 
+    padding-bottom: 30px;
     text-align: center;
     background-color: #F8F8F8;
 }
@@ -658,7 +663,7 @@ a {
     margin-left: 20px;
     margin-bottom: 10px;
     cursor: default;
-} 
+}
 
 .clicky:hover {
     color: #E46E2E
@@ -882,7 +887,7 @@ a {
         font-size: 13px;
         letter-spacing: 1px;
     }
-    
+
 }
 .community {
     margin: 0 auto;
@@ -902,45 +907,30 @@ a {
         padding-top: 10px;
     }
 }
+
+/*------------------------------------------------*/
+/*------------------------------------------------*/
 .nav li:hover {
     background-color: #F6F6F6;
+    padding: 0  0 0 0;
 }
-.nav.title {
-    color:white;
+.nav li{
+  padding: 0 0 0 0;
 }
-
+#carrot {
+    margin-left: 1px;
+}
+#maintabs:hover a {
+    color:black;
+}
+#maintabs {
+    padding: 0px 0px 0px 0px;
+    font-weight: 400;
+    font-size: 15px;
+}
 .dropdown:hover .dropdown-menu {
     color: white;
     display: block;
-}
-
-.dropdown-menu {
-    border-radius: 0;
-}
-
-.dropdown-toggle:active {
-    background-color: #F6F6F6;
-}
-/* e46e2e  DARK ORANGE  f8f8f8  Gray     */
-.dropdown-menu > li > a{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-weight: 400;
-}
-
-.dropdown-menu > li > a:hover {
-    color: white;
-    background-color: #FF944D;
-}
-
-@media (max-width: 768px) {
-    .dropdown-menu {
-        display: none !important;
-    }
-
-    .open .dropdown-menu {
-        display: block !important;
-    }
 }
 .dropdown-menu {
     min-width: 0px;
@@ -949,31 +939,31 @@ a {
     border: none;
     background-color:  #f6f6f6;
     color: white;
-} 
-.dropdown-menu li {
-    text-align: left;
-    width:138px;
+}
+.dropdown{
+    padding: 17px 0px 18px 0px;
+    font-weight: 400;
+    font-size: 15px;
+}
+.dropdown-menu > li > a:hover {
+    color: white;
+    background-color: #FF944D;
 }
 .navbar-right {
-    height:80px;
+  padding-top: 0px;
 }
-#maintabs {
-    width: 140px;
-    padding: 17px 0px 18px 0px;
-    font-weight: 400;
-    font-size: 15px;
-}
-#maintabs:hover a {
-    color:black;
-}
+@media (max-width: 768px) {
+    .dropdown-menu {
+        display: none !important;
+    }
 
-.dropdown{
-    text-align: center;
-    width: 138px;
-    padding: 17px 0px 18px 0px;
-    font-weight: 400;
-    font-size: 15px;
+    .open .dropdown-menu {
+        display: block !important;
+    }
+    .dropdown, #maintabs {
+        padding: 0 0 0 0;
+    }
 }
-#carrot {
-    margin-left: 1px;
+ul.nav.navbar-nav.navbar-right {
+  padding: 0 0 0 0;
 }
