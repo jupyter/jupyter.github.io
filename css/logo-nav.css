@@ -1034,6 +1034,14 @@ ul.nav.navbar-nav.navbar-right {
         padding: 10px 20px 10px 20px !important;
         text-align: left !important;
     }
+    
+    .nav > li > a {
+        border-top: 2px solid #F2F2F2;
+    }
+    
+    .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+        border-color: #F2F2F2;
+    }
 
     #carrot {
         float: right;
