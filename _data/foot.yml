@@ -1,8 +1,8 @@
 tail:
     - title: Install
       url: http://jupyter.readthedocs.org/en/latest/install.html
-    - Project
-    - Community
+    - About
+    - Connect
     - title: Documentation
       url: http://jupyter.readthedocs.org/en/latest/index.html
     - title: NBViewer
