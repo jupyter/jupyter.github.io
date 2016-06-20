@@ -946,6 +946,10 @@ ul.nav.navbar-nav.navbar-right {
     text-align: center;
 }
 
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+   max-height: none;
+}
+
 /*------------------------------------------------*/
 /*------------------------------------------------*/
 
@@ -1065,3 +1069,4 @@ ul.nav.navbar-nav.navbar-right {
         padding: 20px 15px 20px 15px;
     }
 }
+
