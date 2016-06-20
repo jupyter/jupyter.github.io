@@ -952,19 +952,28 @@ ul.nav.navbar-nav.navbar-right {
 
 /*------------------------------------------------*/
 /*------------------------------------------------*/
+@media (max-width: 1200px) {
+   .nav>li>a {
+       font-size: 14px;
+       font-weight: 400;
+   }
+   .nav a {
+       width: 110px;
+   }
+}
 
 @media(max-width:992px) {
    .nav>li>a {
-        font-size: 14px;
+        font-size: 13px;
         letter-spacing: 1px;
     }
 
     .dropdown-menu>li>a {
-        font-size: 14px;
+        font-size: 13px;
         letter-spacing: 1px;
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
     .navbar-toggle {
         margin: 23px 0 23px 0;
         padding: 9px 0 9px 0;
@@ -1062,11 +1071,11 @@ ul.nav.navbar-nav.navbar-right {
         margin-right: 0px !important;
     }
     .dropdown  a  {
-        padding: 20px 15px 20px 15px !important;
+        padding: 10px 15px 10px 15px !important;
 
     }
     #maintabs a {
-        padding: 20px 15px 20px 15px;
+        padding: 10px 15px 10px 15px;
     }
 }
 
