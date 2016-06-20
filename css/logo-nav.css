@@ -1053,10 +1053,10 @@ ul.nav.navbar-nav.navbar-right {
         margin-right: 0px !important;
     }
     .dropdown  a  {
-        padding: 20px 10px 20px 10px !important;
+        padding: 20px 15px 20px 15px !important;
 
     }
     #maintabs a {
-        padding: 20px 10px 20px 10px;
+        padding: 20px 15px 20px 15px;
     }
 }
