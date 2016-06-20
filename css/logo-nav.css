@@ -951,7 +951,12 @@ ul.nav.navbar-nav.navbar-right {
 
 @media(max-width:992px) {
    .nav>li>a {
-        font-size: 13px;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .dropdown-menu>li>a {
+        font-size: 14px;
         letter-spacing: 1px;
     }
 }
@@ -1028,6 +1033,10 @@ ul.nav.navbar-nav.navbar-right {
     #maintabs a {
         padding: 10px 20px 10px 20px !important;
         text-align: left !important;
+    }
 
+    #carrot {
+        float: right;
+        padding-top: 10px;
     }
 }
