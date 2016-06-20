@@ -117,31 +117,7 @@ a {
     display: block;
 }
 
-@media(min-width:768px) {
 
-    .navbar-fixed-top .navbar-brand {
-        padding: 18px 0;
-    }
-    .tab {
-        text-align: center;
-    }
-}
-@media(max-width:992px) {
-    .language-set #feature {
-        display: block;
-    }
-    .notebook-preview img {
-        margin: 0 auto;
-    }
-    #notebookicon {
-        display: block;
-        margin: 0 auto;
-        padding-bottom: 10px;
-    }
-    .notebook-preview h1 {
-        text-align: center;
-    }
-}
 .jumbotron {
     margin-top:30px;
     background-color: white;
@@ -156,11 +132,7 @@ a {
     text-align: center;
     padding-bottom: 30px;
 }
-@media (max-width: 767px){
-    .jumbotron {
-        margin-right: 5%;
-    }
-}
+
 
 .notebook-preview p {
     line-height: 31pt;
@@ -168,13 +140,7 @@ a {
     padding-bottom: 41px;
     font-size: 21px;
 }
-@media(max-width:1200px) {
 
-    .notebook-preview p {
-        line-height: 25pt;
-        font-size: 15pt;
-    }
-}
 .notebook-features, .architecture, .about-block, .companyuse, .jupyterhub .container {
     padding-top: 5%;
     padding-bottom: 5%;
@@ -202,27 +168,7 @@ a {
     line-height: 1.5;
 }
 
-@media(max-width:1200px) {
 
-    .notebook-features .language-set h2{
-        padding-top: 0px;
-    }
-    .notebook-features #feature {
-        padding-top: 4px;
-    }
-}
-@media(max-width:992px) {
-    .notebook-features  img {
-        margin: 0 auto;
-        width: 125px;
-    }
-    .notebook-features p, .notebook-features h2, .notebook-preview p {
-        text-align: center;
-    }
-    .share-set, .widget-set, .data-set {
-        padding-top: 40px;
-    }
-}
 .install-prompt {
     background-color: #FDFDFD;
     border-style: solid;
@@ -259,11 +205,7 @@ a {
     background-color: #F27624;
     -webkit-transition: .2s;
 }
-@media(max-width:509px) {
-    #box2 {
-        margin-top: 20px;
-    }
-}
+
 .companyuse ul {
     text-decoration: none;
     padding-left: 0px;
@@ -281,19 +223,7 @@ a {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-@media(max-width:1200px) {
-    .companies li{
-        width:23%;
-    }
-}
-@media(max-width:767px) {
-    .companies li {
-        width: 30%;
-    }
-    body {
-        padding-top: 50px;
-    }
-}
+
 .companies .col img{
     display: block;
     width: 100%
@@ -954,7 +884,7 @@ a {
 .navbar-right {
   padding-top: 0px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .dropdown-menu {
         display: none !important;
     }
@@ -962,19 +892,161 @@ a {
     .open .dropdown-menu {
         display: block !important;
     }
-    .dropdown, #maintabs {
-        padding: 0 20px 0 20px;
-    }
+    
     .nav a {
         width: auto;
     }
     .dropdown {
         padding-left: 25px;
     }
+
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+   .navbar-nav .open .dropdown-menu {
+       position: static;
+       float: none;
+       width: auto;
+       margin-top: 0;
+       background-color: transparent;
+       border: 0;
+       -webkit-box-shadow: none;
+       box-shadow: none;
+    }
+    
+    .dropdown  a  {
+        padding: 10px 20px 10px 20px !important;
+        text-align: left !important;
+
+    }
+    #maintabs {
+        padding: 0 20px 0 20px;
+        text-align: left !important;
+
+    }
+
 }
 ul.nav.navbar-nav.navbar-right {
     padding: 0 0 0 0;
 }
 .navbar-fixed-top {
   border-style: none;
+}
+
+@media(max-width:1200px) {
+    .companies li{
+        width:23%;
+    }
+}
+@media(max-width:767px) {
+    .companies li {
+        width: 30%;
+    }
+    body {
+        padding-top: 50px;
+    }
+}
+@media(min-width:768px) {
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 18px 0;
+    }
+    .tab {
+        text-align: center;
+    }
+}
+@media(max-width:992px) {
+    .language-set #feature {
+        display: block;
+    }
+    .notebook-preview img {
+        margin: 0 auto;
+    }
+    #notebookicon {
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
+    .notebook-preview h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px){
+    .jumbotron {
+        margin-right: 5%;
+    }
+}
+
+@media(max-width:1200px) {
+
+    .notebook-preview p {
+        line-height: 25pt;
+        font-size: 15pt;
+    }
+}
+
+@media(max-width:1200px) {
+
+    .notebook-features .language-set h2{
+        padding-top: 0px;
+    }
+    .notebook-features #feature {
+        padding-top: 4px;
+    }
+}
+@media(max-width:992px) {
+    .notebook-features  img {
+        margin: 0 auto;
+        width: 125px;
+    }
+    .notebook-features p, .notebook-features h2, .notebook-preview p {
+        text-align: center;
+    }
+    .share-set, .widget-set, .data-set {
+        padding-top: 40px;
+    }
+}
+
+@media(max-width:509px) {
+    #box2 {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #maintabs {
+        text-align: left !important;
+    }
 }
