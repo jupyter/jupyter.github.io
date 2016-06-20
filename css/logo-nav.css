@@ -79,12 +79,11 @@ a {
 .navbar-active {
     color: #E46E2E;
 }
-.navbar-scroll {
-    box-shadow: 1px 1px 1px #999;
-    -moz-box-shadow: 1px 1px 1px #999;
-    -webkit-box-shadow: 1px 1px 1px #999;
-    animation-name: smooth;
-    animation-duration: 2s;
+.navbar-scroll .navbar-inner{
+    border-bottom: 1px solid #979797;
+}
+.navbar-scroll .navbar-inner .dropdown-menu > :first-child {
+    border-top: 1px solid #979797;
 }
 .nav > li:hover {
     background-color: #f6f6f6
@@ -908,7 +907,8 @@ a {
     background-color: #f6f6f6;
 }
 .nav a {
-    width: 130px;
+    width: 140px;
+    color: #313940;
 }
 .nav li{
     padding: 0 0 0 0;
@@ -920,8 +920,9 @@ a {
     color:black;
 }
 #maintabs {
-    font-weight: 400;
-    font-size: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #767474;
 }
 .dropdown:hover .dropdown-menu {
     color: white;
@@ -937,12 +938,14 @@ a {
 }
 .dropdown{
     text-align: center;
-    font-weight: 400;
-    font-size: 15px;
+    font-weight: 500;
+    font-size: 16px;
 }
 .dropdown-menu > li > a {
     padding: 10px 18px 10px 18px;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #313940;
 }
 .dropdown-menu > li > a:hover {
     color: white;
@@ -961,13 +964,12 @@ a {
     }
     .dropdown, #maintabs {
         padding: 0 20px 0 20px;
-        text-align: left;
     }
     .nav a {
         width: auto;
     }
     .dropdown {
-        padding-left: 20px;
+        padding-left: 25px;
     }
 }
 ul.nav.navbar-nav.navbar-right {
