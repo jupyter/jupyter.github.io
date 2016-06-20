@@ -1026,12 +1026,10 @@ ul.nav.navbar-nav.navbar-right {
     }
     
     .dropdown  a  {
-        padding: 10px 20px 10px 20px !important;
         text-align: left !important;
 
     }
     #maintabs a {
-        padding: 10px 20px 10px 20px !important;
         text-align: left !important;
     }
     
@@ -1046,5 +1044,19 @@ ul.nav.navbar-nav.navbar-right {
     #carrot {
         float: right;
         padding-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-header {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+    .dropdown  a  {
+        padding: 20px 10px 20px 10px !important;
+
+    }
+    #maintabs a {
+        padding: 20px 10px 20px 10px;
     }
 }
