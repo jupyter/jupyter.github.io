@@ -950,8 +950,9 @@ a {
         text-align: left !important;
 
     }
-    #maintabs {
-        padding: 0 20px 0 20px;
+
+    #maintabs a {
+        padding: 10px 20px 10px 20px !important;
         text-align: left !important;
 
     }
