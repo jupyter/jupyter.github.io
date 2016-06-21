@@ -950,6 +950,10 @@ ul.nav.navbar-nav.navbar-right {
    max-height: none;
 }
 
+.navbar-header .icon-bar {
+    background-color: #E46E2E;
+}
+
 /*------------------------------------------------*/
 /*------------------------------------------------*/
 @media (max-width: 1200px) {
@@ -1078,6 +1082,9 @@ ul.nav.navbar-nav.navbar-right {
     }
     #maintabs a {
         padding: 10px 15px 10px 15px;
+    }
+    .navbar-scroll .navbar-inner .dropdown-menu > :first-child {
+        border-top: none;
     }
 }
 
