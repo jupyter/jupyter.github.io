@@ -960,6 +960,10 @@ ul.nav.navbar-nav.navbar-right {
    .nav a {
        width: 110px;
    }
+   .dropdown-menu > li > a {
+        font-size: 13px;
+    }
+
 }
 
 @media(max-width:992px) {
@@ -1032,7 +1036,6 @@ ul.nav.navbar-nav.navbar-right {
        position: static;
        float: none;
        width: auto;
-       margin-top: 0;
        background-color: transparent;
        border: 0;
        -webkit-box-shadow: none;
@@ -1047,9 +1050,10 @@ ul.nav.navbar-nav.navbar-right {
         text-align: left !important;
     }
     
-    .nav > li > a {
+    .nav:first-child {
         border-top: 2px solid #F2F2F2;
     }
+
     
     .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
         border-color: #F2F2F2;
@@ -1062,6 +1066,18 @@ ul.nav.navbar-nav.navbar-right {
     #carrot {
         float: right;
         padding-top: 8px;
+    }
+
+    .nav > li > a:focus {
+        background-color: #E7E7E7 !important;
+    }
+
+    .dropdown  a  {
+        padding: 10px 15px 10px 15px !important;
+
+    }
+    #maintabs a {
+        padding: 10px 15px 10px 15px;
     }
 }
 
