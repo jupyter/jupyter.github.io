@@ -267,7 +267,7 @@ ul.nav.navbar-nav.navbar-right {
         padding-top: 8px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .navbar-header {
         margin-left: 0px !important;
         margin-right: 0px !important;
@@ -463,7 +463,7 @@ ul.nav.navbar-nav.navbar-right {
         width:23%;
     }
 }
-@media(max-width:768px) {
+@media(max-width:767px) {
     .companies li {
         width: 30%;
     }
