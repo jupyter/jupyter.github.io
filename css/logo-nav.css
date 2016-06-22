@@ -871,16 +871,7 @@ ul.nav.navbar-nav.navbar-right {
         padding: 10px;
     }
 }
-@media (max-width: 395px) {
-    .content-gov {
-        margin-top: 90px;
-    }
-}
-@media (max-width: 365px) {
-    .content-gov {
-        margin-top: 130px;
-    }
-}
+
 #footer1 {
     background-color: #979797;
 }
