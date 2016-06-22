@@ -90,7 +90,7 @@ animation-delay: 1.1s;
 .nav > li > a:focus {
     background-color: #f6f6f6;
 }
-.nav .open>a, .nav .open>a:focus {
+.nav .open > a, .nav .open > a:focus {
     background-color: #f6f6f6;
 }
 .nav li:hover {
@@ -150,7 +150,7 @@ ul.nav.navbar-nav.navbar-right {
 }
 
 @media (max-width: 1200px) {
-   .nav>li>a {
+   .nav > li > a {
        font-size: 14px;
        font-weight: 400;
    }
@@ -167,7 +167,7 @@ ul.nav.navbar-nav.navbar-right {
         display: none !important;
     }
 
-    .nav>li>a {
+    .nav > li > a {
         font-size: 13px;
         letter-spacing: 1px;
     }
@@ -180,7 +180,7 @@ ul.nav.navbar-nav.navbar-right {
     .nav > li > a:focus {
         background-color: #E7E7E7 !important;
     }
-    .dropdown-menu>li>a {
+    .dropdown-menu > li > a {
         font-size: 13px;
         letter-spacing: 1px;
     }
@@ -222,10 +222,10 @@ ul.nav.navbar-nav.navbar-right {
         float: none!important;
         margin-top: 7.5px;
     }
-    .navbar-nav>li {
+    .navbar-nav > li {
         float: none;
     }
-    .navbar-nav>li>a {
+    .navbar-nav > li > a {
         padding-top: 10px;
         padding-bottom: 10px;
     }
@@ -244,7 +244,7 @@ ul.nav.navbar-nav.navbar-right {
     .nav:first-child {
         border-top: 2px solid #F2F2F2;
     }
-    .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    .nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
         border-color: #F2F2F2;
     }
    .navbar-scroll .navbar-inner .dropdown-menu > :first-child {

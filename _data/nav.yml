@@ -17,7 +17,7 @@ head:
   - title: Community
     subitem:
       - title: Connect
-      - title: Github Help
+      - title: GitHub Help
         url: https://github.com/jupyter/help
       - title: Blog
         url: https://blog.jupyter.org
