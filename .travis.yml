@@ -3,7 +3,7 @@ rvm:
 - 2.2
 
 matrix:
-  allowed_failure:
+  allow_failures:
     - rvm: 2.2
 
 before_install:
@@ -13,19 +13,13 @@ install:
  - npm install -g csslint
  - bundle install
 
-before_script:
- - chmod +x ./script/cibuild
-
 script:
- - ./script/cibuild
+ - bash .travis/cibuild
  - csslint _site/css/gallery.css
  - csslint _site/css/logo-nav.css
  - csslint _site/css/syntax.css
 
 # branch whitelist, only for GitHub Pages
-branches:
-  only:
-  - master
 
 env:
   global:
