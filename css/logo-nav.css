@@ -4,7 +4,7 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 body {
-    padding-top: 70px; 
+    padding-top: 80px;
     /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
     font-size: 10.71pt;
     font-weight: 300;
@@ -30,11 +30,11 @@ h3 {
     -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
     -moz-animation:fadeIn ease-in 1;
     animation:fadeIn ease-in 1;
- 
+
     -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
     -moz-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
- 
+
     -webkit-animation-duration:1s;
     -moz-animation-duration:1s;
     animation-duration:1s;
@@ -44,7 +44,7 @@ h3 {
 -moz-animation-delay: 0.3s;
 animation-delay: 0.3s;
 }
- 
+
 .fade-in.two {
 -webkit-animation-delay: 0.7s;
 -moz-animation-delay:0.7s;
@@ -56,62 +56,240 @@ animation-delay: 0.7s;
 animation-delay: 1.1s;
 }
 
-.navbar-fixed-top .nav {
-    padding: 15px 0;
+/* //////////////////////////// */
+/*         NAVBAR CODE          */
+/* //////////////////////////// */
+
+.navbar-fixed-top .navbar-brand {
+    padding: 18px 0;
 }
 .navbar {
     background-color: white;
-    border-width: thin;
     -webkit-transition: .2s;
-}
-.navbar-gray {
-    background-color: rgb(248,248,248);
-}
-a {
-    color: black;
-}
-.navbar-fixed-top .navbar-brand {
-    margin-top: 5px;
-    padding: 0 15px;
 }
 .navbar-header .icon-bar {
-    background-color: black;
+    background-color: #E46E2E;
 }
-.navbar-active {
-    color: #E46E2E;
+.navbar-scroll .navbar-inner{
+    border-bottom: 1px solid #979797;
 }
-.navbar-scroll {
-    box-shadow: 1px 1px 1px #999; 
-    -moz-box-shadow: 1px 1px 1px #999;
-    -webkit-box-shadow: 1px 1px 1px #999;
-    animation-name: smooth;
-    animation-duration: 2s;
+.navbar-scroll .navbar-inner .dropdown-menu {
+    border-top: 1px solid #979797;
+}
+.nav > li:hover {
+    background-color: #f6f6f6
 }
 .nav > li > a {
-    padding: 10px 13px;
-    padding-top: 15px;
+    padding: 30px 0px 30px 0px;
+    color: #313940;
 }
 .nav > li > a:hover {
-    color: #E46E2E;
-    background-color: transparent;
-    -webkit-transition: .2s;
+    background-color: #f6f6f6;
+    color: black;
 }
 .nav > li > a:focus {
-    background-color: white;
+    background-color: #f6f6f6;
 }
-.nav > li > a:active {
-    background-color: #F8F8F8;
+.nav .open > a, .nav .open > a:focus {
+    background-color: #f6f6f6;
 }
-.nav > li > a:visited {
-    background-color: #F8F8F8;
+.nav li:hover {
+    background-color: #f6f6f6;
 }
+.nav a {
+    width: 140px;
+    
+}
+.nav li{
+    padding: 0 0 0 0;
+}
+#carrot {
+    margin-left: 1px;
+}
+.tab {
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: #767474;
+}
+.tabs:hover a {
+    color:black;
+}
+.dropdown{
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+}
+.dropdown-menu {
+    min-width: 0px;
+    box-shadow: none;
+    border: none;
+    background-color: #f6f6f6;
+    color: white;
+    padding: 0 0 0 0;
+}
+.dropdown:hover .dropdown-menu {
+    color: white;
+    display: block;
+}
+.dropdown-menu > li > a {
+    padding: 10px 18px 10px 18px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #313940;
+}
+.dropdown-menu > li > a:hover {
+    color: white;
+    background-color: #FF944D;
+}
+ul.nav.navbar-nav.navbar-right {
+    padding: 0 0 0 0;
+}
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+   max-height: none;
+}
+
+@media (max-width: 1200px) {
+   .nav > li > a {
+       font-size: 14px;
+       font-weight: 400;
+   }
+   .nav a {
+       width: 110px;
+   }
+   .dropdown-menu > li > a {
+        font-size: 13px;
+    }
+}
+@media(max-width:992px)  {
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .nav > li > a {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .nav > li > a:hover {
+       background-color: #E7E7E7;
+       color: black;
+    }
+
+    .nav > li > a:focus {
+        background-color: #E7E7E7 !important;
+    }
+    .dropdown-menu > li > a {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    .dropdown-menu > li  {
+       background-color: #f6f6f6;
+    }
+    .dropdown-menu {
+        display: none !important;
+    }
+    .dropdown  a  {
+        text-align: left !important;
+    }
+    .dropdown  a  {
+        padding: 10px 15px 10px 15px !important;
+    }
+    .dropdown {
+        padding-left: 25px;
+    }
+    .navbar-toggle {
+        margin: 23px 0 23px 0;
+        padding: 9px 0 9px 0;
+    }
+    .navbar-toggle {
+        display: block;
+        margin-left: 15px;
+    }
+    .navbar-header {
+        float: none;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav > li {
+        float: none;
+    }
+    .navbar-nav > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .nav a {
+        width: auto;
+    }
+   .navbar-nav .open .dropdown-menu {
+       position: static;
+       float: none;
+       width: auto;
+       background-color: transparent;
+       border: 0;
+       -webkit-box-shadow: none;
+       box-shadow: none;
+    } 
+    .nav:first-child {
+        border-top: 2px solid #F2F2F2;
+    }
+    .nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+        border-color: #F2F2F2;
+    }
+   .navbar-scroll .navbar-inner .dropdown-menu > :first-child {
+        border-top: none;
+    }
+    .open .dropdown-menu {
+        display: block !important;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+    #maintabs a {
+        text-align: left !important;
+    }
+    #maintabs a {
+        padding: 10px 15px 10px 15px;
+    }
+    #carrot {
+        float: right;
+        padding-top: 8px;
+    }
+}
+@media (max-width: 767px) {
+    .navbar-header {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+    .dropdown  a  {
+        padding: 10px 15px 10px 15px !important;
+
+    }
+    #maintabs a {
+        padding: 10px 15px 10px 15px;
+    }
+}
+
+/*------------------------------------------------*/
+
 .img-container {
     position: absolute;
     width: 95%;
     height: 100%;
     text-align: center;
     margin: 0 auto;
-    
+
 }
 .img-container img {
     vertical-align: center;
@@ -121,35 +299,7 @@ a {
     display: block;
 }
 
-#tab:hover {
-    color: #E46E2E;
-    background-color: transparent;
-}
-@media(min-width:768px) {
 
-    .navbar-fixed-top .navbar-brand {
-        padding: 15px 0;
-    }
-    .tab {
-        text-align: center;
-    }
-}
-@media(max-width:992px) {
-    .language-set #feature {
-        display: block;
-    }
-    .notebook-preview img {
-        margin: 0 auto;
-    }
-    #notebookicon {
-        display: block;
-        margin: 0 auto;
-        padding-bottom: 10px;
-    }
-    .notebook-preview h1 {
-        text-align: center;
-    }
-}
 .jumbotron {
     margin-top:30px;
     background-color: white;
@@ -169,20 +319,13 @@ a {
         margin-right: 5%;
     }
 }
-
 .notebook-preview p {
     line-height: 31pt;
     padding-top: 41px;
     padding-bottom: 41px;
     font-size: 21px;
 }
-@media(max-width:1200px) {
-    
-    .notebook-preview p {
-        line-height: 25pt;
-        font-size: 15pt;
-    }
-}
+
 .notebook-features, .architecture, .about-block, .companyuse, .jupyterhub .container {
     padding-top: 5%;
     padding-bottom: 5%;
@@ -200,21 +343,34 @@ a {
 }
 
 .notebook-features p a:hover {
-    color: rgb(224, 103, 29);   
+    color: rgb(224, 103, 29);
 }
-
-
 .notebook-features p{
     padding-top: 26px;
     font-size: 15px;
     line-height: 1.5;
 }
-
+@media(max-width:992px) {
+    .language-set #feature {
+        display: block;
+    }
+    .notebook-preview img {
+        margin: 0 auto;
+    }
+    #notebookicon {
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
+    .notebook-preview h1 {
+        text-align: center;
+    }
+}
 @media(max-width:1200px) {
-    
+
     .notebook-features .language-set h2{
         padding-top: 0px;
-    }  
+    }
     .notebook-features #feature {
         padding-top: 4px;
     }
@@ -231,6 +387,13 @@ a {
         padding-top: 40px;
     }
 }
+@media(max-width:1200px) {
+
+    .notebook-preview p {
+        line-height: 25pt;
+        font-size: 15pt;
+    }
+}
 .install-prompt {
     background-color: #FDFDFD;
     border-style: solid;
@@ -239,7 +402,7 @@ a {
     border-right-style: none;
     border-left-style: none;
     border-width: thin;
-    
+
 }
 .install-prompt .content {
     padding-top: 4%;
@@ -263,15 +426,16 @@ a {
 #box2 {
     padding: 13px 29px;
 }
-.buttons a:hover{
-    background-color: #F27624;
-    -webkit-transition: .2s;
-}
 @media(max-width:509px) {
     #box2 {
         margin-top: 20px;
     }
 }
+.buttons a:hover{
+    background-color: #F27624;
+    -webkit-transition: .2s;
+}
+
 .companyuse ul {
     text-decoration: none;
     padding-left: 0px;
@@ -289,6 +453,11 @@ a {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+.companies .col img{
+    display: block;
+    width: 100%
+}
 @media(max-width:1200px) {
     .companies li{
         width:23%;
@@ -299,12 +468,8 @@ a {
         width: 30%;
     }
     body {
-        padding-top: 50px;
+        padding-top: 80px;
     }
-}
-.companies .col img{
-    display: block;
-    width: 100%
 }
 .greydout {
     -webkit-opacity: 0.065;
@@ -449,11 +614,11 @@ a {
     height: 275px;
     transition: transform 0.3s linear 0s;
     -webkit-transition: -webkit-transform 0.3s linear 0s;
- 
+
     -webkit-backface-visibility: hidden;
        -moz-backface-visibility: hidden;
          -o-backface-visibility: hidden;
-            backface-visibility: hidden;  
+            backface-visibility: hidden;
     position: absolute;
     text-align: center;
 }
@@ -462,11 +627,11 @@ a {
     height: 275px;
     transition: transform 0.3s linear 0s;
     -webkit-transition: -webkit-transform 0.3s linear 0s;
- 
+
     -webkit-backface-visibility: hidden;
        -moz-backface-visibility: hidden;
          -o-backface-visibility: hidden;
-            backface-visibility: hidden;  
+            backface-visibility: hidden;
     position: absolute;
     text-align: center;
 }
@@ -475,11 +640,11 @@ a {
     height: 275px;
     transition: transform 0.3s linear 0s;
     -webkit-transition: -webkit-transform 0.3s linear 0s;
- 
+
     -webkit-backface-visibility: hidden;
        -moz-backface-visibility: hidden;
          -o-backface-visibility: hidden;
-            backface-visibility: hidden;  
+            backface-visibility: hidden;
     position: absolute;
     text-align: center;
 }
@@ -497,13 +662,13 @@ a {
 }
 /* The .back element should be rotated at first, facing his back, hidden*/
 .card .back{
- 
+
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
 
     text-align: center;
 }
- 
+
 
 
 .arcfeature a {
@@ -546,9 +711,9 @@ a {
 /*About Page */
 
 .header{
-    padding-bottom: 30px; 
+    padding-bottom: 30px;
     text-align: center;
-    background-color: #F8F8F8;
+    background-color: #F6F6F6;
 }
 .header h1 {
     font-size: 41.16px;
@@ -664,7 +829,7 @@ a {
     margin-left: 20px;
     margin-bottom: 10px;
     cursor: default;
-} 
+}
 
 .clicky:hover {
     color: #E46E2E
@@ -706,16 +871,7 @@ a {
         padding: 10px;
     }
 }
-@media (max-width: 395px) {
-    .content-gov {
-        margin-top: 90px;
-    }
-}
-@media (max-width: 365px) {
-    .content-gov {
-        margin-top: 130px;
-    }
-}
+
 #footer1 {
     background-color: #979797;
 }
@@ -884,27 +1040,11 @@ a {
     #github-break {
         display: inline;
     }
-    .nav>li>a {
-        font-size: 13px;
-        letter-spacing: 1px;
-    }
-    
+
+
 }
 .community {
     margin: 0 auto;
     display: block;
     padding: 0px 0px;
-}
-@media (min-width: 768px) {
-    .navbar-toggle {
-        margin-top: 20px;
-    }
-}
-@media (max-width: 768px) {
-    .navbar-header {
-        margin-bottom: 0;
-    }
-    .navbar-toggle {
-        padding-top: 10px;
-    }
 }

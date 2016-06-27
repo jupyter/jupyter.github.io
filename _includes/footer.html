@@ -4,7 +4,7 @@
             <div class="navbar-text">
                 <ul id="footer-text">
                     <li><a href="{{site.baseurl}}/index.html">Home</a></li>
-                    {% for nav in site.data.nav.head %}
+                    {% for nav in site.data.foot.tail %}
                       {% if nav.url %}
                            <li><a href="{{site.baseurl}}{{nav.url}}" target="_blank">{{nav.title}}</a></li>
                       {% else %}
