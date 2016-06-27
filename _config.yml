@@ -13,3 +13,5 @@ github_username:  Jupyter
 # Build settings
 markdown: kramdown
 highlighter: rouge
+
+exclude: [vendor]
