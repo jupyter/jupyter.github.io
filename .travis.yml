@@ -17,7 +17,7 @@ script:
  - csslint _site/css/gallery.css
  - csslint _site/css/logo-nav.css
  - csslint _site/css/syntax.css
- - csslint _site/css/materialize.css
+# - csslint _site/css/materialize.css
 
 # branch whitelist, only for GitHub Pages
 branches:
