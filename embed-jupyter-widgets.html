@@ -1,10 +1,10 @@
 <html>
     <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF8">
-    <script src="https://npmcdn.com/codemirror@5.13.4/lib/codemirror.js"></script>
-    <script src="https://npmcdn.com/codemirror@5.13.4/mode/python/python.js"></script>
-    <script src="https://npmcdn.com/codemirror@5.13.4/mode/javascript/javascript.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/codemirror@5.13.4/lib/codemirror.css">
+    <script src="https://unpkg.com/codemirror@5.13.4/lib/codemirror.js"></script>
+    <script src="https://unpkg.com/codemirror@5.13.4/mode/python/python.js"></script>
+    <script src="https://unpkg.com/codemirror@5.13.4/mode/javascript/javascript.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/codemirror@5.13.4/lib/codemirror.css">
     <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         var inputarea = document.getElementsByClassName("inputarea")[0];
@@ -24,7 +24,7 @@
         var snipetarea = document.getElementsByClassName("snipetarea")[0];
         var snipet_editor = CodeMirror(snipetarea, {
             value:
-'\x3cscript src="https://npmcdn.com/jupyter-js-widgets@~1.0.0/dist/embed.js">\x3c/script>\n\
+'\x3cscript src="https://unpkg.com/jupyter-js-widgets@~1.0.0/dist/embed.js">\x3c/script>\n\
 \x3cscript type="application/vnd.jupyter-embedded-widgets">\n\
 {\n\
     "0b2839e97da34d4db1de1e0a58acb485": {\n\
@@ -151,7 +151,7 @@
             <div class="inputarea"></div>
             <h2>Generated Live Widgets</h2>
             <div class="widgetarea">
-                <script src="https://npmcdn.com/jupyter-js-widgets@~1.0.0/dist/embed.js"></script>
+                <script src="https://unpkg.com/jupyter-js-widgets@~1.0.0/dist/embed.js"></script>
                 <script type="application/vnd.jupyter-embedded-widgets">
                 {
                     "0b2839e97da34d4db1de1e0a58acb485": {
