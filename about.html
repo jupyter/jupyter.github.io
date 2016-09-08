@@ -38,7 +38,7 @@ navbar_gray: true
 <section>
     <div class="about-block">
         <div class="container">
-            <img src="assets/community.svg" class="img-responsive">
+            <img src="assets/community.svg" class="img-responsive" alt="community graphic with orange circle and network">
             <h2>Community</h2>
             <p class="supportparagraph" style="display:inline;">Our vibrant community empowers us to create an amazing platform. Dynamic developers, cutting edge scientists as well as everyday users work together to further Jupyter's best-in-class tools.</p>
             <p class="supportparagraph hidden-xs hidden-sm" style="display:inline;">Here is a dynamic visualization of our most recent contributors:</p>
@@ -47,110 +47,98 @@ navbar_gray: true
             <div id="visualization" class="hidden-xs hidden-sm">
             </div>
             <div id="visualization" class="hidden-md hidden-lg">
-                <img src="assets/community-replace.png" class="img-responsive">
+                <img src="assets/community-replace.png" class="img-responsive" alt="community graphic">
             <script>
 
-//basic tuning parameters
-var width = 600,
-    height = 500,
-    radius = 15,
-    distance = 70,
-    gravity = .09,
-    charge = -550;
+                //basic tuning parameters
+                var width = 600,
+                    height = 500,
+                    radius = 15,
+                    distance = 70,
+                    gravity = .09,
+                    charge = -550;
 
-//scale for icon classes
-var scale = new Array();
-scale["contributor"] = 1;
-scale["repo"] = 1.4;
-scale["center"] = 4.5;
+                //scale for icon classes
+                var scale = new Array();
+                scale["contributor"] = 1;
+                scale["repo"] = 1.4;
+                scale["center"] = 4.5;
 
-//Whether to show label
-var showLabel = new Array();
-showLabel["contributor"] = true;
-showLabel["repo"] = true;
-showLabel["center"] = false;
+                //Whether to show label
+                var showLabel = new Array();
+                showLabel["contributor"] = true;
+                showLabel["repo"] = true;
+                showLabel["center"] = false;
 
-var svg = d3.select("#visualization").append("svg")
-    .attr("width", width)
-    .attr("height", height);
+                var svg = d3.select("#visualization").append("svg")
+                    .attr("width", width)
+                    .attr("height", height);
 
-var force = d3.layout.force()
-    .gravity(gravity)
-    .distance(function (d) {return d.value * distance})
-    .charge(charge)
-    .size([width, height]);
+                var force = d3.layout.force()
+                    .gravity(gravity)
+                    .distance(function (d) {return d.value * distance})
+                    .charge(charge)
+                    .size([width, height]);
 
-d3.json("graphData.json", function(error, json) {
-  if (error) throw error;
+                d3.json("graphData.json", function(error, json) {
+                  if (error) throw error;
 
-  force
-      .nodes(json.nodes)
-      .links(json.links)
-      .start();
+                  force
+                      .nodes(json.nodes)
+                      .links(json.links)
+                      .start();
 
-  var link = svg.selectAll(".link")
-      .data(json.links)
-    .enter().append("line")
-      .attr("class", function(d) {return "link" + d.value});
+                  var link = svg.selectAll(".link")
+                      .data(json.links)
+                    .enter().append("line")
+                      .attr("class", function(d) {return "link" + d.value});
 
-  var node = svg.selectAll(".node")
-      .data(json.nodes)
-    .enter().append("g")
-      .attr("class", "node")
-      .call(force.drag);
+                  var node = svg.selectAll(".node")
+                      .data(json.nodes)
+                    .enter().append("g")
+                      .attr("class", "node")
+                      .call(force.drag);
 
-  svg.append("clipPath")
-    .attr("id", "clipCircle-contributor")
-    .append("circle")
-      .attr("r", radius * scale["contributor"]);
+                  svg.append("clipPath")
+                    .attr("id", "clipCircle-contributor")
+                    .append("circle")
+                      .attr("r", radius * scale["contributor"]);
 
-  //uncomment to enable circle clipping for repo icons
-  /*
-  svg.append("clipPath")
-    .attr("id", "clipCircle-repo")
-    .append("circle")
-      .attr("r", radius * scale["repo"]);
+                  node.append("svg:image")
+                      .attr("xlink:href", function(d) {return d.image;})
+                      .attr("x", function(d) {return -radius * scale[d.type]})
+                      .attr("y", function(d) {return -radius * scale[d.type]})
+                      .attr("width", function(d) {return radius * 2 * scale[d.type]})
+                      .attr("height", function(d) {return radius * 2 * scale[d.type]})
+                      .attr("clip-path", function(d) {return "url(#clipCircle-" + d.type + ")" });
 
-  svg.append("clipPath")
-    .attr("id", "clipCircle-center")
-    .append("circle")
-      .attr("r", radius * scale["center"]);
-  */
+                  node.append("text")
+                      .attr("dx", 20)
+                      .attr("dy", ".35em")
+                      .text(function(d) { return (showLabel[d.type]) ? d.name : ""});
 
-  node.append("svg:image")
-      .attr("xlink:href", function(d) {return d.image;})
-      .attr("x", function(d) {return -radius * scale[d.type]})
-      .attr("y", function(d) {return -radius * scale[d.type]})
-      .attr("width", function(d) {return radius * 2 * scale[d.type]})
-      .attr("height", function(d) {return radius * 2 * scale[d.type]})
-      .attr("clip-path", function(d) {return "url(#clipCircle-" + d.type + ")" });
+                  force.on("tick", function() {
+                    node.attr("cx", function(d) { return d.x = Math.max(radius, Math.min(width - radius, d.x)); })
+                        .attr("cy", function(d) { return d.y = Math.max(radius, Math.min(height - radius, d.y)); });
 
-  node.append("text")
-      .attr("dx", 20)
-      .attr("dy", ".35em")
-      .text(function(d) { return (showLabel[d.type]) ? d.name : ""});
+                    link.attr("x1", function(d) { return d.source.x; })
+                        .attr("y1", function(d) { return d.source.y; })
+                        .attr("x2", function(d) { return d.target.x; })
+                        .attr("y2", function(d) { return d.target.y; });
 
-  force.on("tick", function() {
-    node.attr("cx", function(d) { return d.x = Math.max(radius, Math.min(width - radius, d.x)); })
-        .attr("cy", function(d) { return d.y = Math.max(radius, Math.min(height - radius, d.y)); });
+                    node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+                  });
+                });
 
-    link.attr("x1", function(d) { return d.source.x; })
-        .attr("y1", function(d) { return d.source.y; })
-        .attr("x2", function(d) { return d.target.x; })
-        .attr("y2", function(d) { return d.target.y; });
-
-    node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
-  });
-});
-
-</script>
+            </script>
+            </div>
         </div>
     </div>
 </section>
 <section>
     <div class="about-block steering-council gray">
         <div class="container">
-            <img src="assets/steering.svg" class="img-responsive">
+            <img src="assets/steering.svg" class="img-responsive" alt="steering committee icon">
             <h2>Steering Council</h2>
             <p class="supportparagraph">Our team is primarily led by 10 steering committee members who ultimately make the final decisions.</p>
             <div class="col-md-12">
@@ -205,38 +193,38 @@ d3.json("graphData.json", function(error, json) {
 <section>
     <div class="about-block">
         <div class="container">
-            <img src="assets/sponsors2.svg" class="img-responsive">
+            <img src="assets/sponsors2.svg" class="img-responsive" alt="sponsors">
             <h2>Sponsors</h2>
             <p class="supportparagraph">Project Jupyter receives direct funding from the following foundations and companies:</p>
-            <div class="col6"><a href="http://helmsleytrust.org"><img src="assets/helmsley.svg" class="customerLogo"></a></div>
-            <div class="col6"><a href="http://www.sloan.org/"><img src="assets/alfred.svg" class="customerLogo"></a></div>
-            <div class="col6"><a href="https://www.moore.org/"><img src="assets/moore.svg" class="customerLogo"></a></div>
-            <div class="col6"><a href="https://www.google.com/"><img src="assets/google-color.svg" class="customerLogo"></a></div>
-            <div class="col6"><a href="http://www.microsoft.com/"><img src="assets/microsoft-color.svg" class="customerLogo logo-fix"></a></div>
-            <div class="col6"><a href="http://developer.rackspace.com/"><img src="assets/rackspace-color.svg" class="customerLogo logo-fix"></a></div>
-            <div class="col6"><a href="https://www.fastly.com/"><img src="assets/fastly.svg" class="customerLogo"></a></div>
+            <div class="col6"><a href="http://helmsleytrust.org"><img src="assets/helmsley.svg" class="customerLogo" alt="helmsley trust logo"></a></div>
+            <div class="col6"><a href="http://www.sloan.org/"><img src="assets/alfred.svg" class="customerLogo" alt="sloan logo"></a></div>
+            <div class="col6"><a href="https://www.moore.org/"><img src="assets/moore.svg" class="customerLogo" alt="moore foundation logo"></a></div>
+            <div class="col6"><a href="https://www.google.com/"><img src="assets/google-color.svg" class="customerLogo" alt="google logo"></a></div>
+            <div class="col6"><a href="http://www.microsoft.com/"><img src="assets/microsoft-color.svg" class="customerLogo logo-fix" alt="microsoft logo"></a></div>
+            <div class="col6"><a href="http://developer.rackspace.com/"><img src="assets/rackspace-color.svg" class="customerLogo logo-fix" alt="rackspace logo"></a></div>
+            <div class="col6"><a href="https://www.fastly.com/"><img src="assets/fastly.svg" class="customerLogo" alt="fastly logo"></a></div>
         </div>
     </div>
 </section>
 <section>
     <div class="about-block gray" id="institutional">
         <div class="container">
-            <img src="assets/institutional_partners2.svg" class="img-responsive">
+            <img src="assets/institutional_partners2.svg" class="img-responsive" alt="institutional partners">
             <h2>Institutional Partners</h2>
             <p class="supportparagraph">Institutional Partners are companies and universities that support the project by employing Steering Council members. 
             Current Institutional Partners include:</p>
-            <div class="col6"><a href="http://continuum.io/"><img src="assets/continuum-color.svg" class="customerLogo" height="60" width="200"></a></div>
-            <div class="col6"><a href="http://www.bloomberg.com/"><img src="assets/bloomberg-color.svg" class="customerLogo logo-fix"></a></div>
-            <div class="col6"><a href="http://developer.rackspace.com/"><img src="assets/rackspace-color.svg" class="customerLogo"></a></div>
-            <div class="col6"><a href="http://www.calpoly.edu/"><img src="assets/poly-color.svg" class="customerLogo"></a></div>
-            <div class="col6"><a href="http://www.berkeley.edu/"><img src="assets/berkeley-color.svg" class="customerLogo"></a></div>
+            <div class="col6"><a href="http://continuum.io/"><img src="assets/continuum-color.svg" class="customerLogo" height="60" width="200" alt="continuum.io logo"></a></div>
+            <div class="col6"><a href="http://www.bloomberg.com/"><img src="assets/bloomberg-color.svg" class="customerLogo logo-fix" alt="bloomberg logo"></a></div>
+            <div class="col6"><a href="http://developer.rackspace.com/"><img src="assets/rackspace-color.svg" class="customerLogo" alt="rackspace logo"></a></div>
+            <div class="col6"><a href="http://www.calpoly.edu/"><img src="assets/poly-color.svg" class="customerLogo" alt="cal poly logo"></a></div>
+            <div class="col6"><a href="http://www.berkeley.edu/"><img src="assets/berkeley-color.svg" class="customerLogo" alt="UC Berkeley logo"></a></div>
         </div>
     </div>
 </section>
 <section>
     <div class="about-block institutional">
         <div class="container">
-            <img src="assets/governance-icon2.svg" class="img-responsive" id="governance">
+            <img src="assets/governance-icon2.svg" class="img-responsive" id="governance" alt="governance icon">
             <h2>Governance</h2>
             <p class="supportparagraph">Robust, community driven development with institutional backing.</p>
             <div class="menu col-md-12">

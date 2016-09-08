@@ -1,5 +1,7 @@
 # Jupyter's main website
 
+[![Build Status](https://travis-ci.org/jupyter/jupyter.github.io.svg?branch=master)](https://travis-ci.org/jupyter/jupyter.github.io)
+
 This is the source to [Jupyter.org](http://jupyter.org/).
 
 # Build instruction. 
@@ -11,7 +13,7 @@ what where.
 # Quick local testing
 
 ```
-$ gem install jekyll
+$ gem install jekyll kramdown github-pages
 ```
 
 cd into the root of this directory, 
@@ -78,4 +80,11 @@ Add commit (and don't forget to add to `_data/nav.yml`
 
 `navbar_gray: true` start the navbar with a grey background if you need it. 
 
+# Continuous Integration Testing on Travis
+
+Travis will run and test:
+
+- jekyll build
+- html-proofer
+- csslint
 
