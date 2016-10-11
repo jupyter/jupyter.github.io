@@ -34,7 +34,7 @@ img.img-scaling {
   display: block;
   margin-top: 26px;
   margin-bottom: 26px;
-  min-height: 600px;
+  min-height: 1100px;
 }
 
 .tabs-left > .nav-tabs > li {
@@ -49,7 +49,7 @@ img.img-scaling {
 
 .tabs-left > .nav-tabs {
   float: left;
-  height: 600px;
+  height: 1100px;
   margin-right: 19px;
   border-right: 1px solid #ddd;
 }
