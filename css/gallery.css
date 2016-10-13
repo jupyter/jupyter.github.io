@@ -1,3 +1,25 @@
+.jupyter-widget-header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin: 0px 0px 16px 0px;
+}
+
+.jupyter-widget-header h2 {
+    display: inline;
+}
+
+img.img-scaling {
+    height: 32px;
+    vertical-align: top;
+}
+
+.gallery-title {
+    font-size: 32px;
+    line-height: 32px;
+    height: 32px;
+}
+
 .tabs-left > .nav-tabs {
   border-bottom: 0;
 }
@@ -12,7 +34,7 @@
   display: block;
   margin-top: 26px;
   margin-bottom: 26px;
-  min-height: 600px;
+  min-height: 1100px;
 }
 
 .tabs-left > .nav-tabs > li {
@@ -27,7 +49,7 @@
 
 .tabs-left > .nav-tabs {
   float: left;
-  height: 600px;
+  height: 1100px;
   margin-right: 19px;
   border-right: 1px solid #ddd;
 }

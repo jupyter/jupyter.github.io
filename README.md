@@ -40,10 +40,10 @@ The **navbar** is in `_data/nav.yml` and look like that:
 head:
     - Home
     - title: Install
-      url: http://jupyter.readthedocs.org/en/latest/install.html
+      url: https://jupyter.readthedocs.io/en/latest/install.html
     - About
     - title: Documentation
-      url: http://jupyter.readthedocs.org/en/latest/install.html
+      url: https://jupyter.readthedocs.io/en/latest/install.html
     - title: Blog
       url: https://blog.jupyter.org
     - Donate

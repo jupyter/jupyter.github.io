@@ -116,6 +116,10 @@ a {
 .img-container img {
     vertical-align: center;
 }
+#main-logo {
+	height: calc(100% - 20px);
+	margin-top: 10px;
+}
 .header {
     margin: 0 auto;
     display: block;
