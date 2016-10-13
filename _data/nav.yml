@@ -1,6 +1,5 @@
 head:
-    - title: Install
-      url: https://jupyter.readthedocs.io/en/latest/install.html
+    - Install
     - About
     - Resources
     - title: Documentation
