@@ -29,219 +29,284 @@ navbar_gray: true
 <section>
     <div class="header">
         <div class="container">
-            <h1>About Project Jupyter</h1>
-            <p>Project Jupyter was born out of the IPython Project in 2014 as it evolved to support interactive
-            data science and scientific computing across all programming languages.</p>
-        </div>
-    </div>
-</section>
-<section>
-    <div class="about-block">
-        <div class="container">
-            <img src="assets/community.svg" class="img-responsive" alt="community graphic with orange circle and network">
-            <h2>Community</h2>
-            <p class="supportparagraph" style="display:inline;">Our vibrant community empowers us to create an amazing platform. Dynamic developers, cutting edge scientists as well as everyday users work together to further Jupyter's best-in-class tools.</p>
-            <p class="supportparagraph hidden-xs hidden-sm" style="display:inline;">Here is a dynamic visualization of our most recent contributors:</p>
-            <!--<img class="img-responsive col-md-12" src="assets/spiderweb.png"> -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
-            <div id="visualization" class="hidden-xs hidden-sm">
-            </div>
-            <div id="visualization" class="hidden-md hidden-lg">
-                <img src="assets/community-replace.png" class="img-responsive" alt="community graphic">
-            <script>
-
-                //basic tuning parameters
-                var width = 600,
-                    height = 500,
-                    radius = 15,
-                    distance = 70,
-                    gravity = .09,
-                    charge = -550;
-
-                //scale for icon classes
-                var scale = new Array();
-                scale["contributor"] = 1;
-                scale["repo"] = 1.4;
-                scale["center"] = 4.5;
-
-                //Whether to show label
-                var showLabel = new Array();
-                showLabel["contributor"] = true;
-                showLabel["repo"] = true;
-                showLabel["center"] = false;
-
-                var svg = d3.select("#visualization").append("svg")
-                    .attr("width", width)
-                    .attr("height", height);
-
-                var force = d3.layout.force()
-                    .gravity(gravity)
-                    .distance(function (d) {return d.value * distance})
-                    .charge(charge)
-                    .size([width, height]);
-
-                d3.json("graphData.json", function(error, json) {
-                  if (error) throw error;
-
-                  force
-                      .nodes(json.nodes)
-                      .links(json.links)
-                      .start();
-
-                  var link = svg.selectAll(".link")
-                      .data(json.links)
-                    .enter().append("line")
-                      .attr("class", function(d) {return "link" + d.value});
-
-                  var node = svg.selectAll(".node")
-                      .data(json.nodes)
-                    .enter().append("g")
-                      .attr("class", "node")
-                      .call(force.drag);
-
-                  svg.append("clipPath")
-                    .attr("id", "clipCircle-contributor")
-                    .append("circle")
-                      .attr("r", radius * scale["contributor"]);
-
-                  node.append("svg:image")
-                      .attr("xlink:href", function(d) {return d.image;})
-                      .attr("x", function(d) {return -radius * scale[d.type]})
-                      .attr("y", function(d) {return -radius * scale[d.type]})
-                      .attr("width", function(d) {return radius * 2 * scale[d.type]})
-                      .attr("height", function(d) {return radius * 2 * scale[d.type]})
-                      .attr("clip-path", function(d) {return "url(#clipCircle-" + d.type + ")" });
-
-                  node.append("text")
-                      .attr("dx", 20)
-                      .attr("dy", ".35em")
-                      .text(function(d) { return (showLabel[d.type]) ? d.name : ""});
-
-                  force.on("tick", function() {
-                    node.attr("cx", function(d) { return d.x = Math.max(radius, Math.min(width - radius, d.x)); })
-                        .attr("cy", function(d) { return d.y = Math.max(radius, Math.min(height - radius, d.y)); });
-
-                    link.attr("x1", function(d) { return d.source.x; })
-                        .attr("y1", function(d) { return d.source.y; })
-                        .attr("x2", function(d) { return d.target.x; })
-                        .attr("y2", function(d) { return d.target.y; });
-
-                    node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
-                  });
-                });
-
-            </script>
+            <div class="row">
+                <h1>About Project Jupyter</h1>
+                <p>Project Jupyter was born out of the IPython Project in 2014 as it evolved to support interactive
+                data science and scientific computing across all programming languages.</p>
             </div>
         </div>
     </div>
 </section>
 <section>
-    <div class="about-block steering-council gray">
+    <div class="section-white top-white-section">
         <div class="container">
-            <img src="assets/steering.svg" class="img-responsive" alt="steering committee icon">
-            <h2>Steering Council</h2>
-            <p class="supportparagraph">Our team is primarily led by 12 steering committee members who ultimately make the final decisions.</p>
-            <div class="col-md-12">
-                <div class="col-md-4 material material-1">
-                    <p class="card-header">Brian Granger<p>
-                    <p class="card-info">Cal Poly, San Luis Obispo<br><a href="https://github.com/ellisonbg" target="_blank"><em>@ellisonbg</em></a> on GitHub</p>
+            <div class="row">
+                <img src="assets/community.svg" class="section-icon img-responsive" alt="community graphic with orange circle and network">
+                <h2 class="col-sm-12 section-header">Community</h2>
+                <p class="col-sm-12 support-paragraph">Our vibrant community empowers us to create an amazing platform. Dynamic developers, cutting edge scientists as well as everyday users work together to further Jupyter's best-in-class tools.<span class="hidden-xs hidden-sm"> Here is a dynamic visualization of our most recent contributors:</span></p>
+                <!--<img class="img-responsive col-md-12" src="assets/spiderweb.png"> -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+                <div id="visualization" class="hidden-xs hidden-sm">
                 </div>
-                <div class="col-md-4 material material-1">
-                    <p class="card-header">Damian Avila<p>
-                    <p class="card-info">Continuum Analytics<br><a href="https://github.com/damianavila" target="_blank"><em>@damianavila</em></a> on GitHub</p>
-                </div>
-                <div class="col-md-4 material material-1">
-                    <p class="card-header">Fernando Perez<p>
-                    <p class="card-info">UC Berkeley<br><a href="https://github.com/fperez" target="_blank"><em>@fperez</em></a> on GitHub</p>
-                </div>
-                <div class="col-md-4 material material-1">
-                    <p class="card-header">Jason Grout<p>
-                    <p class="card-info">Bloomberg<br><a href="https://github.com/jasongrout" target="_blank"><em>@jasongrout</em></a> on GitHub</p>
-                </div>
-                <div class="col-md-4 material material-1">
-                    <p class="card-header">Jessica Hamrick<p>
-                    <p class="card-info">UC Berkeley<br><a href="https://github.com/jhamrick" target="_blank"><em>@jhamrick</em></a> on GitHub</p>
-                </div>
-                <div class="col-md-4 material material-1">
-                    <p class="card-header">Jonathan Frederic<p>
-                    <p class="card-info">Cal Poly, San Luis Obispo<br><a href="https://github.com/jdfreder" target="_blank"><em>@jdfreder</em></a> on GitHub</p>
-                </div>
-                <div class="col-md-4 material material-1">
-                    <p class="card-header">Kyle Kelley<p>
-                    <p class="card-info">Netflix<br><a href="https://github.com/rgbkrk" target="_blank"><em>@rgbkrk</em></a> on GitHub</p>
-                </div>
-                <div class="col-md-4 material material-1">
-                    <p class="card-header">Matthias Bussonnier<p>
-                    <p class="card-info">UC Berkeley<br><a href="https://github.com/carreau" target="_blank"><em>@carreau</em></a> on GitHub</p>
-                </div>
-                <div class="col-md-4 material material-1">
-                    <p class="card-header">Min Ragan-Kelley<p>
-                    <p class="card-info">Simula Research Lab<br><a href="https://github.com/minrk" target="_blank"><em>@minrk</em></a> on GitHub</p>
-                </div>
-                <div class="col-md-4 material material-1">
-                    <p class="card-header">Peter Parente<p>
-                    <p class="card-info">MaxPoint<br><a href="https://github.com/parente" target="_blank"><em>@parente</em></a> on GitHub</p>
-                </div>
-                <div class="col-md-4 material material-1">
-                    <p class="card-header">Sylvain Corlay<p>
-                    <p class="card-info">QuantStack<br><a href="https://github.com/sylvaincorlay" target="_blank"><em>@sylvaincorlay</em></a> on GitHub</p>
-                </div>
-                <div class="col-md-4 material material-1">
-                    <p class="card-header">Thomas Kluyver<p>
-                    <p class="card-info">UC Berkeley<br><a href="https://github.com/takluyver" target="_blank"><em>@takluyver</em></a> on GitHub</p>
+                <div id="visualization" class="hidden-md hidden-lg">
+                    <img src="assets/community-replace.png" class="img-responsive" alt="community graphic">
+                <script>
+
+                    //basic tuning parameters
+                    var width = 600,
+                        height = 500,
+                        radius = 15,
+                        distance = 70,
+                        gravity = .09,
+                        charge = -550;
+
+                    //scale for icon classes
+                    var scale = new Array();
+                    scale["contributor"] = 1;
+                    scale["repo"] = 1.4;
+                    scale["center"] = 4.5;
+
+                    //Whether to show label
+                    var showLabel = new Array();
+                    showLabel["contributor"] = true;
+                    showLabel["repo"] = true;
+                    showLabel["center"] = false;
+
+                    var svg = d3.select("#visualization").append("svg")
+                        .attr("width", width)
+                        .attr("height", height);
+
+                    var force = d3.layout.force()
+                        .gravity(gravity)
+                        .distance(function (d) {return d.value * distance})
+                        .charge(charge)
+                        .size([width, height]);
+
+                    d3.json("graphData.json", function(error, json) {
+                        if (error) throw error;
+
+                        force
+                            .nodes(json.nodes)
+                            .links(json.links)
+                            .start();
+
+                        var link = svg.selectAll(".link")
+                            .data(json.links)
+                            .enter().append("line")
+                            .attr("class", function(d) {return "link" + d.value});
+
+                        var node = svg.selectAll(".node")
+                            .data(json.nodes)
+                            .enter().append("g")
+                            .attr("class", "node")
+                            .call(force.drag);
+
+                        svg.append("clipPath")
+                            .attr("id", "clipCircle-contributor")
+                            .append("circle")
+                            .attr("r", radius * scale["contributor"]);
+
+                        node.append("svg:image")
+                            .attr("xlink:href", function(d) {return d.image;})
+                            .attr("x", function(d) {return -radius * scale[d.type]})
+                            .attr("y", function(d) {return -radius * scale[d.type]})
+                            .attr("width", function(d) {return radius * 2 * scale[d.type]})
+                            .attr("height", function(d) {return radius * 2 * scale[d.type]})
+                            .attr("clip-path", function(d) {return "url(#clipCircle-" + d.type + ")" });
+
+                        node.append("text")
+                            .attr("dx", 20)
+                            .attr("dy", ".35em")
+                            .text(function(d) { return (showLabel[d.type]) ? d.name : ""});
+
+                        force.on("tick", function() {
+                            node.attr("cx", function(d) { return d.x = Math.max(radius, Math.min(width - radius, d.x)); })
+                            .attr("cy", function(d) { return d.y = Math.max(radius, Math.min(height - radius, d.y)); });
+
+                        link.attr("x1", function(d) { return d.source.x; })
+                            .attr("y1", function(d) { return d.source.y; })
+                            .attr("x2", function(d) { return d.target.x; })
+                            .attr("y2", function(d) { return d.target.y; });
+
+                        node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+                        });
+                    });
+                </script>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <section>
-    <div class="about-block">
+    <div class="section-grey steering-council">
         <div class="container">
-            <img src="assets/sponsors2.svg" class="img-responsive" alt="sponsors">
-            <h2>Sponsors</h2>
-            <p class="supportparagraph">Project Jupyter receives direct funding from the following sources:</p>
-            <div class="col6"><a href="http://helmsleytrust.org"><img src="assets/helmsley.svg" class="customerLogo" alt="helmsley trust logo"></a></div>
-            <div class="col6"><a href="http://www.sloan.org/"><img src="assets/alfred.svg" class="customerLogo" alt="sloan logo"></a></div>
-            <div class="col6"><a href="https://www.moore.org/"><img src="assets/moore.svg" class="customerLogo" alt="moore foundation logo"></a></div>
-            <div class="col6"><a href="https://www.google.com/"><img src="assets/google-color.svg" class="customerLogo" alt="google logo"></a></div>
-            <div class="col6"><a href="http://www.microsoft.com/"><img src="assets/microsoft-color.svg" class="customerLogo logo-fix" alt="microsoft logo"></a></div>
-            <div class="col6"><a href="http://developer.rackspace.com/"><img src="assets/rackspace-color.svg" class="customerLogo logo-fix" alt="rackspace logo"></a></div>
-            <div class="col6"><a href="https://www.fastly.com/"><img src="assets/fastly.svg" class="customerLogo" alt="fastly logo"></a></div>
-            <div class="col6"><a href="http://opendreamkit.org/"><img src="assets/EC-H2020.svg" class="customerLogo" alt="EU logo"></a></div>
+            <div class="row">
+                <img src="assets/steering.svg" class="section-icon img-responsive" alt="steering committee icon">
+                <h2 class="col-sm-12 section-header">Steering Council</h2>
+                <p class="col-sm-12 support-paragraph">Our team is primarily led by 12 steering committee members who ultimately make the final decisions.</p>
+                <div class="col-md-12 section-content">
+                    <div class="col-md-4 material material-1">
+                        <p class="card-header">Brian Granger<p>
+                        <p class="card-info">Cal Poly, San Luis Obispo<br><a href="https://github.com/ellisonbg" target="_blank"><em>@ellisonbg</em></a> on GitHub</p>
+                    </div>
+                    <div class="col-md-4 material material-1">
+                        <p class="card-header">Damian Avila<p>
+                        <p class="card-info">Continuum Analytics<br><a href="https://github.com/damianavila" target="_blank"><em>@damianavila</em></a> on GitHub</p>
+                    </div>
+                    <div class="col-md-4 material material-1">
+                        <p class="card-header">Fernando Perez<p>
+                        <p class="card-info">UC Berkeley<br><a href="https://github.com/fperez" target="_blank"><em>@fperez</em></a> on GitHub</p>
+                    </div>
+                    <div class="col-md-4 material material-1">
+                        <p class="card-header">Jason Grout<p>
+                        <p class="card-info">Bloomberg<br><a href="https://github.com/jasongrout" target="_blank"><em>@jasongrout</em></a> on GitHub</p>
+                    </div>
+                    <div class="col-md-4 material material-1">
+                        <p class="card-header">Jessica Hamrick<p>
+                        <p class="card-info">UC Berkeley<br><a href="https://github.com/jhamrick" target="_blank"><em>@jhamrick</em></a> on GitHub</p>
+                    </div>
+                    <div class="col-md-4 material material-1">
+                        <p class="card-header">Jonathan Frederic<p>
+                        <p class="card-info">Cal Poly, San Luis Obispo<br><a href="https://github.com/jdfreder" target="_blank"><em>@jdfreder</em></a> on GitHub</p>
+                    </div>
+                    <div class="col-md-4 material material-1">
+                        <p class="card-header">Kyle Kelley<p>
+                        <p class="card-info">Netflix<br><a href="https://github.com/rgbkrk" target="_blank"><em>@rgbkrk</em></a> on GitHub</p>
+                    </div>
+                    <div class="col-md-4 material material-1">
+                        <p class="card-header">Matthias Bussonnier<p>
+                        <p class="card-info">UC Berkeley<br><a href="https://github.com/carreau" target="_blank"><em>@carreau</em></a> on GitHub</p>
+                    </div>
+                    <div class="col-md-4 material material-1">
+                        <p class="card-header">Min Ragan-Kelley<p>
+                        <p class="card-info">Simula Research Lab<br><a href="https://github.com/minrk" target="_blank"><em>@minrk</em></a> on GitHub</p>
+                    </div>
+                    <div class="col-md-4 material material-1">
+                        <p class="card-header">Peter Parente<p>
+                        <p class="card-info">MaxPoint<br><a href="https://github.com/parente" target="_blank"><em>@parente</em></a> on GitHub</p>
+                    </div>
+                    <div class="col-md-4 material material-1">
+                        <p class="card-header">Sylvain Corlay<p>
+                        <p class="card-info">QuantStack<br><a href="https://github.com/sylvaincorlay" target="_blank"><em>@sylvaincorlay</em></a> on GitHub</p>
+                    </div>
+                    <div class="col-md-4 material material-1">
+                        <p class="card-header">Thomas Kluyver<p>
+                        <p class="card-info">UC Berkeley<br><a href="https://github.com/takluyver" target="_blank"><em>@takluyver</em></a> on GitHub</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 <section>
-    <div class="about-block gray" id="institutional">
+    <div class="section-white">
         <div class="container">
-            <img src="assets/institutional_partners2.svg" class="img-responsive" alt="institutional partners">
-            <h2>Institutional Partners</h2>
-            <p class="supportparagraph">Institutional Partners are companies and universities that support the project by employing Steering Council members. 
+            <div class="row">
+                <img src="assets/sponsors2.svg" class="section-icon img-responsive" alt="sponsors">
+                <h2 class="col-sm-12 section-header">Sponsors</h2>
+                <p class="col-sm-12 support-paragraph">Project Jupyter receives direct funding from the following sources:</p>
+                <div class="col-xs-12">
+                    <div class="col-sm-3 col-xs-6 sponsor">
+                        <a href="http://helmsleytrust.org">
+                            <img src="assets/helmsley.svg" class="sponsor-logo" alt="helmsley trust logo"/>                                   </a>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 sponsor">
+                        <a href="http://www.sloan.org/">
+                            <img src="assets/alfred.svg" class="sponsor-logo" alt="sloan logo"/>
+                        </a>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 sponsor">
+                        <a href="https://www.moore.org/">
+                            <img src="assets/moore.svg" class="sponsor-logo" alt="moore foundation logo"/>
+                        </a>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 sponsor">
+                        <a href="https://www.google.com/">
+                            <img src="assets/google-color.svg"  class="sponsor-logo" alt="google logo"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="col-sm-3 col-xs-6 sponsor">
+                        <a href="http://developer.rackspace.com/">
+                            <img src="assets/rackspace-color.svg" class="sponsor-logo" alt="rackspace logo"/>
+                        </a>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 sponsor">
+                        <a href="https://www.fastly.com/">
+                            <img src="assets/fastly.svg" class="sponsor-logo" alt="fastly logo"/>
+                        </a>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 sponsor">
+                        <a href="http://opendreamkit.org/">
+                            <img src="assets/EC-H2020.svg" class="sponsor-logo" alt="EU logo"/>
+                        </a>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 sponsor">
+                        <a href="http://www.microsoft.com/">
+                            <img src="assets/microsoft-color.svg" class="sponsor-logo" alt="microsoft logo"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="section-grey">
+        <div class="container">
+            <div class="row">
+                <img src="assets/institutional_partners2.svg" class="section-icon img-responsive" alt="institutional partners">
+                <h2 class="col-sm-12 section-header">Institutional Partners</h2>
+                <p class="col-sm-12 support-paragraph">Institutional Partners are companies and universities that support the project by employing Steering Council members. 
             Current Institutional Partners include:</p>
-            <div class="col6"><a href="http://continuum.io/"><img src="assets/continuum-color.svg" class="customerLogo" height="60" width="200" alt="continuum.io logo"></a></div>
-            <div class="col6"><a href="http://www.bloomberg.com/"><img src="assets/bloomberg-color.svg" class="customerLogo logo-fix" alt="bloomberg logo"></a></div>
-            <div class="col6"><a href="http://developer.rackspace.com/"><img src="assets/rackspace-color.svg" class="customerLogo" alt="rackspace logo"></a></div>
-            <div class="col6"><a href="http://www.calpoly.edu/"><img src="assets/poly-color.svg" class="customerLogo" alt="cal poly logo"></a></div>
-            <div class="col6"><a href="http://www.berkeley.edu/"><img src="assets/berkeley-color.svg" class="customerLogo" alt="UC Berkeley logo"></a></div>
+                <div class="col-sm-3 col-xs-6 sponsor">
+                    <a href="http://continuum.io/">
+                        <img src="assets/continuum-color.svg" class="sponsor-logo" height="60" width="200" alt="continuum.io logo">
+                    </a>
+                </div>
+                <div class="col-sm-3 col-xs-6 sponsor">
+                    <a href="http://www.bloomberg.com/">
+                        <img src="assets/bloomberg-color.svg" class="sponsor-logo" alt="bloomberg logo">
+                    </a>
+                </div>
+                <div class="col-sm-3 col-xs-6 sponsor">
+                    <a href="http://developer.rackspace.com/">
+                        <img src="assets/rackspace-color.svg" class="sponsor-logo" alt="rackspace logo">
+                    </a>
+                </div>
+                <div class="col-sm-3 col-xs-6 sponsor">
+                    <a href="http://www.calpoly.edu/">
+                        <img src="assets/poly-color.svg" class="sponsor-logo" alt="cal poly logo">
+                    </a>
+                </div>
+                <div class="col-sm-3 col-sm-offset-4 col-xs-6 sponsor center-block">
+                    <a href="http://www.berkeley.edu/">
+                        <img src="assets/berkeley-color.svg" class="sponsor-logo" alt="UC Berkeley logo">
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 <section>
-    <div class="about-block institutional">
+    <div class="section-white governance">
         <div class="container">
-            <img src="assets/governance-icon2.svg" class="img-responsive" id="governance" alt="governance icon">
-            <h2>Governance</h2>
-            <p class="supportparagraph">Robust, community driven development with institutional backing.</p>
-            <div class="menu col-md-12">
-                <a class="button1 clicky">NumFocus</a>
-                <a class="button2 clicky">Copyright/License</a>
-                <a class="button3 clicky">Decisions</a>
-                <a class="button4 clicky">Steering Council</a>
-                <div class="items">
-                    <div class="div1 content-gov">Project Jupyter is part of the non-profit NumFOCUS Foundation, which provides fiscal sponsorship, governance and a legal umbrella for the project.</div>
-                    <div class="div2 content-gov" style='display:none'>We use a shared copyright model that enables all contributors to maintain the copyright on their contributions. All code is licensed under the terms of the revised BSD license.</div>
-                    <div class="div3 content-gov" style='display:none'>Technical decisions are made through open community discussion and consensus, with a Steering Council and BDFL (Fernando Perez) stepping in when consensus cannot be reached.</div>
-                    <div class="div4 content-gov" style='display:none'>The overall leadership, strategy and direction for the project is provided by the Jupyter Steering Council, a group of the most active project contributors that are nominated for leadership.</div>
+            <div class="row">
+                <img src="assets/governance-icon2.svg" class="section-icon img-responsive" id="governance" alt="governance icon">
+                <h2 class="col-sm-12 section-header">Governance</h2>
+                <p class="col-sm-12 support-paragraph">Robust, community driven development with institutional backing.</p>
+                <div class="menu col-md-12">
+                    <a class="button1 clicky">NumFocus</a>
+                    <a class="button2 clicky">Copyright/License</a>
+                    <a class="button3 clicky">Decisions</a>
+                    <a class="button4 clicky">Steering Council</a>
+                    <div class="items">
+                        <div class="div1 content-gov">Project Jupyter is part of the non-profit NumFOCUS Foundation, which provides fiscal sponsorship, governance and a legal umbrella for the project.</div>
+                        <div class="div2 content-gov" style='display:none'>We use a shared copyright model that enables all contributors to maintain the copyright on their contributions. All code is licensed under the terms of the revised BSD license.</div>
+                        <div class="div3 content-gov" style='display:none'>Technical decisions are made through open community discussion and consensus, with a Steering Council and BDFL (Fernando Perez) stepping in when consensus cannot be reached.</div>
+                        <div class="div4 content-gov" style='display:none'>The overall leadership, strategy and direction for the project is provided by the Jupyter Steering Council, a group of the most active project contributors that are nominated for leadership.</div>
+                    </div>
                 </div>
             </div>
         </div>

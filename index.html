@@ -41,12 +41,14 @@ title: Home
     <!-- Notebook Preview -->
     <div class="notebook-preview">
         <div class="container">
-            <div class="col-md-6">
-                <h1><img src="assets/notebookicon.svg" id="notebookicon" alt="notebook icon"> Jupyter Notebook</h1>
-                <p>The Jupyter Notebook is a web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, machine learning and much more.</p>
-            </div>
-            <div class="col-md-6">
-                <img class="img-responsive" src="assets/jupyterpreview.png" id="portal" alt="example notebook of Lorenz differential equations"/>
+            <div class="row">
+                <div class="col-md-6">
+                    <h1><img src="assets/notebookicon.svg" id="notebookicon" alt="notebook icon"> Jupyter Notebook</h1>
+                    <p>The Jupyter Notebook is a web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, machine learning and much more.</p>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-responsive" src="assets/jupyterpreview.png" id="portal" alt="example notebook of Lorenz differential equations"/>
+                </div>
             </div>
         </div>
     </div>
@@ -54,25 +56,27 @@ title: Home
 <section>
     <div class="notebook-features">
         <div class="container">
-            <div class="col-md-3 language-set">
-                <img class="img-responsive language" src="assets/language.svg" id="feature" alt="icon to represent a language">
-                <h2>Language of choice</h2>
-                <p>The Notebook has support for over 40 programming languages, including those popular in Data Science such as Python, R, Julia and Scala.</p>
-            </div>
-            <div class="col-md-3 share-set">
-                <img class="img-responsive share" src="assets/share.svg" alt="icon to represent sharing a notebook">
-                <h2>Share notebooks</h2>
-                <p> Notebooks can be shared with others using email, Dropbox, GitHub and the <a href="http://nbviewer.jupyter.org/">Jupyter Notebook Viewer</a>.</p>
-            </div>
-            <div class="col-md-3 widget-set">
-                <img class="img-responsive widget" src="assets/widget.svg" alt="icon to represent an interactive widget">
-                <h2>Interactive widgets</h2>
-                <p>Code can produce rich output such as images, videos, LaTeX, and JavaScript. Interactive widgets can be used to manipulate and visualize data in realtime.</p>
-            </div>
-            <div class="col-md-3 data-set">
-                <img class="img-responsive data" src="assets/spark.svg" alt="spark logo to represent big data">
-                <h2> Big data integration</h2>
-                <p>Leverage big data tools, such as Apache Spark, from Python, R and Scala. Explore that same data with pandas, scikit-learn, ggplot2, dplyr, etc.</p>
+            <div class="row">
+                <div class="col-md-3 notebook-feature">
+                    <img class="img-responsive language" src="assets/language.svg" id="feature" alt="icon to represent a language">
+                    <h2>Language of choice</h2>
+                    <p>The Notebook has support for over 40 programming languages, including those popular in Data Science such as Python, R, Julia and Scala.</p>
+                </div>
+                <div class="col-md-3 notebook-feature">
+                    <img class="img-responsive share" src="assets/share.svg" alt="icon to represent sharing a notebook">
+                    <h2>Share notebooks</h2>
+                    <p> Notebooks can be shared with others using email, Dropbox, GitHub and the <a href="http://nbviewer.jupyter.org/">Jupyter Notebook Viewer</a>.</p>
+                </div>
+                <div class="col-md-3 notebook-feature">
+                    <img class="img-responsive widget" src="assets/widget.svg" alt="icon to represent an interactive widget">
+                    <h2>Interactive widgets</h2>
+                    <p>Code can produce rich output such as images, videos, LaTeX, and JavaScript. Interactive widgets can be used to manipulate and visualize data in realtime.</p>
+                </div>
+                <div class="col-md-3 notebook-feature">
+                    <img class="img-responsive data" src="assets/spark.svg" alt="spark logo to represent big data">
+                    <h2> Big data integration</h2>
+                    <p>Leverage big data tools, such as Apache Spark, from Python, R and Scala. Explore that same data with pandas, scikit-learn, ggplot2, dplyr, etc.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -93,9 +97,9 @@ title: Home
 <section>
     <div class="section-white">
         <div class="container">
-            <div class="companies">
+            <div class="row">
                 <h2 style="text-align:center;">Currently in use at</h2>
-                <ul class="row center-h companies" style="text-align:center;">
+                <ul class="companies">
                     <a href="http://www.google.com"><li class="col"><img src="assets/google.svg" class="greydout" alt="Google" height="45" width="130"></li></a>
                     <a href="http://www.microsoft.com"><li class="col"><img src="assets/Microsoft.svg" class="greydout" alt="Microsoft" height="55" width="206"></li></a>
                     <a href="http://www.ibm.com"><li class="col"><img src="assets/IBM.svg" class="greydout" alt="IBM" height="40" width="60"></li></a>
@@ -169,8 +173,9 @@ title: Home
     <div class="section-white">
         <div class="container">
             <div class="architecturedescription">
-                <h2><img src="assets/architectureicon2.svg" id="arcicon1" alt="icon to represent jupyter architecture"> Jupyter Architecture</h2>
-                <p>The Jupyter Notebook is based on a set of open standards for interactive computing. Think HTML and CSS for interactive computing on the web. These open standards can be leveraged by third party developers to build customized applications with embedded interactive computing.</p>
+                <img src="assets/architectureicon2.svg" class="section-icon" alt="icon to represent jupyter architecture">
+                <h2 class="section-header">Jupyter Architecture</h2>
+                <p class="support-paragraph">The Jupyter Notebook is based on a set of open standards for interactive computing. Think HTML and CSS for interactive computing on the web. These open standards can be leveraged by third party developers to build customized applications with embedded interactive computing.</p>
             </div>
             <div class="architecturecontent row col-md-12">
                 <div class="card col-md-4">
@@ -178,7 +183,6 @@ title: Home
                         <div class="container">
                             <div class="front">
                                 <img src="assets/notebook-format.svg" alt="icon to represent notebook format">
-                                <br>
                                 <a class="arc-button bt">Learn more</a>
                             </div>
                             <div class="front flipped content-back">
