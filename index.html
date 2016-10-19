@@ -34,67 +34,108 @@ title: Home
     </div>
 </section>
 <section>
-    <!-- Notebook Preview -->
-    <div class="notebook-preview">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2><img src="assets/notebookicon.svg" id="notebookicon" alt="notebook icon"> Jupyter Notebook</h2>
-                    <h4>The Jupyter Notebook is a web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, machine learning and much more.</h3>
-                </div>
-                <div class="col-md-6">
-                    <img class="img-responsive" src="assets/jupyterpreview.png" id="portal" alt="example notebook of Lorenz differential equations"/>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section>
-    <div class="notebook-features">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 notebook-feature">
-                    <img class="img-responsive language" src="assets/language.svg" id="feature" alt="icon to represent a language">
-                    <h4>Language of choice</h4>
-                    <p>The Notebook has support for over 40 programming languages, including those popular in Data Science such as Python, R, Julia and Scala.</p>
-                </div>
-                <div class="col-md-3 notebook-feature">
-                    <img class="img-responsive share" src="assets/share.svg" alt="icon to represent sharing a notebook">
-                    <h4>Share notebooks</h4>
-                    <p> Notebooks can be shared with others using email, Dropbox, GitHub and the <a href="http://nbviewer.jupyter.org/">Jupyter Notebook Viewer</a>.</p>
-                </div>
-                <div class="col-md-3 notebook-feature">
-                    <img class="img-responsive widget" src="assets/widget.svg" alt="icon to represent an interactive widget">
-                    <h4>Interactive widgets</h4>
-                    <p>Code can produce rich output such as images, videos, LaTeX, and JavaScript. Interactive widgets can be used to manipulate and visualize data in realtime.</p>
-                </div>
-                <div class="col-md-3 notebook-feature">
-                    <img class="img-responsive data" src="assets/spark.svg" alt="spark logo to represent big data">
-                    <h4> Big data integration</h4>
-                    <p>Leverage big data tools, such as Apache Spark, from Python, R and Scala. Explore that same data with pandas, scikit-learn, ggplot2, dplyr, etc.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section>
     <div class="install-prompt">
         <div class="container-fluid">
-            <div class="content">
-                <h3>Ready to get started?</h3>
-                <div class="buttons">
-                    <a href="https://try.jupyter.org/">Try it in your browser</a>
-                    <a href="https://jupyter.readthedocs.io/en/latest/install.html" id="box2">Install the Notebook</a>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 class="prompt-header">Ready to get started?</h3>
+                    <div>
+                        <a class="prompt-button" href="https://try.jupyter.org/">Try it in your browser</a>
+                        <a class="prompt-button" href="https://jupyter.readthedocs.io/en/latest/install.html" id="box2">Install the Notebook</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <section>
-    <div class="section-white section-center">
+    <div class="section-white">
+        <div class="notebook-preview">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img class="img-responsive" src="assets/jupyterpreview.png" id="portal" alt="example notebook of Lorenz differential equations"/>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="assets/nbicon.svg" class="notebook-icon" alt="notebook icon">
+                        <h3>The Jupyter Notebook</h3>
+                        <h4>The Jupyter Notebook is a web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, machine learning and much more.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="notebook-features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 notebook-feature">
+                        <img class="img-responsive language" src="assets/language.svg" id="feature" alt="icon to represent a language">
+                        <h4>Language of choice</h4>
+                        <p>The Notebook has support for over 40 programming languages, including those popular in Data Science such as Python, R, Julia and Scala.</p>
+                    </div>
+                    <div class="col-md-3 notebook-feature">
+                        <img class="img-responsive share" src="assets/share.svg" alt="icon to represent sharing a notebook">
+                        <h4>Share notebooks</h4>
+                        <p> Notebooks can be shared with others using email, Dropbox, GitHub and the <a href="http://nbviewer.jupyter.org/">Jupyter Notebook Viewer</a>.</p>
+                    </div>
+                    <div class="col-md-3 notebook-feature">
+                        <img class="img-responsive widget" src="assets/widget.svg" alt="icon to represent an interactive widget">
+                        <h4>Interactive widgets</h4>
+                        <p>Code can produce rich output such as images, videos, LaTeX, and JavaScript. Interactive widgets can be used to manipulate and visualize data in realtime.</p>
+                    </div>
+                    <div class="col-md-3 notebook-feature">
+                        <img class="img-responsive data" src="assets/spark.svg" alt="spark logo to represent big data">
+                        <h4> Big data integration</h4>
+                        <p>Leverage big data tools, such as Apache Spark, from Python, R and Scala. Explore that same data with pandas, scikit-learn, ggplot2, dplyr, etc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="jupyterhub section-grey">
         <div class="container">
             <div class="row">
-                <h3>Currently in use at</h3>
+            <div class="hubheader">
+                <div class="hublogo col-md-offset-3 col-md-6 col-md-offset-3">
+                    <img src="assets/hublogo.svg" class="img-responsive" style="margin:0 auto;" id="hublogo" alt="jupyterhub logo">
+                    
+                </div>
+            </div>
+            <div class="hubfeatures col-md-12">
+                <div class="feature1 hubfeature col-md-3 authentication">
+                    <img src="assets/authentication.svg" class="img-responsive" alt="authentication icon">
+                    <h4>Pluggable authentication</h4>
+                    <p>Manage users and authentication with PAM, OAuth or integrate with your own directory service system. Collaborate with others through the Linux permission model.</p>
+                </div>
+                <div class="featuremiddle hubfeature col-md-3">
+                    <img src="assets/central.svg" class="img-responsive" alt="icon to represent centralized deployment">
+                    <h4>Centralized deployment</h4>
+                    <p>Deploy the Jupyter Notebook to all users in your organization on centralized servers on- or off-site.</p>
+                </div>
+                <div class="featuremiddle hubfeature col-md-3">
+                    <img src="assets/container.svg" class="img-responsive" alt="container icon">
+                    <h4>Container friendly</h4>
+                    <p>Use Docker containers to scale your deployment and isolate user processes using a growing ecosystem of prebuilt Docker containers.</p>
+                </div>
+                <div class="feature4 hubfeature col-md-3">
+                    <img src="assets/data.svg" class="img-responsive" id="data" alt="icon to represent data">
+                    <h4>Code meets data</h4>
+                    <p>Deploy the Notebook next to your data to provide unified software management and data access within your organization.</p>
+                </div>
+            </div>
+            <div class="col-md-12 buttons">
+                <a href="https://github.com/jupyter/jupyterhub" style="display: inline-block;">More info about JupyterHub</a>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="section-white">
+        <div class="container">
+            <div class="row">
+                <h3 class="section-header">Currently in use at</h3>
                 <ul class="companies">
                     <a href="http://www.google.com"><li class="col"><img src="assets/google.svg" class="greydout" alt="Google" height="45" width="130"></li></a>
                     <a href="http://www.microsoft.com"><li class="col"><img src="assets/Microsoft.svg" class="greydout" alt="Microsoft" height="55" width="206"></li></a>
@@ -126,47 +167,7 @@ title: Home
     </div>
 </section>
 <section>
-    <div class="jupyterhub section-grey">
-        <div class="container">
-            <div class="hubheader">
-                <div class="hublogo col-md-5">
-                    <img src="assets/hublogo.svg" class="img-responsive" style="margin:0 auto;" id="hublogo" alt="jupyterhub logo">
-                </div>
-                <div class="hubdescription col-md-7">
-                    <h3>Jupyter for Organizations</h3>
-                    <h4>JupyterHub is a multiuser version of the notebook designed for centralized deployments in companies, university classrooms and research labs.</h4>
-                </div>
-            </div>
-            <div class="hubfeatures col-md-12">
-                <div class="feature1 hubfeature col-md-3 authentication">
-                    <img src="assets/authentication.svg" class="img-responsive" alt="authentication icon">
-                    <h4>Pluggable authentication</h4>
-                    <p>Manage users and authentication with PAM, OAuth or integrate with your own directory service system. Collaborate with others through the Linux permission model.</p>
-                </div>
-                <div class="featuremiddle hubfeature col-md-3">
-                    <img src="assets/central.svg" class="img-responsive" alt="icon to represent centralized deployment">
-                    <h4>Centralized deployment</h4>
-                    <p>Deploy the Jupyter Notebook to all users in your organization on centralized servers on- or off-site.</p>
-                </div>
-                <div class="featuremiddle hubfeature col-md-3">
-                    <img src="assets/container.svg" class="img-responsive" alt="container icon">
-                    <h4>Container friendly</h4>
-                    <p>Use Docker containers to scale your deployment and isolate user processes using a growing ecosystem of prebuilt Docker containers.</p>
-                </div>
-                <div class="feature4 hubfeature col-md-3">
-                    <img src="assets/data.svg" class="img-responsive" id="data" alt="icon to represent data">
-                    <h4>Code meets data</h4>
-                    <p>Deploy the Notebook next to your data to provide unified software management and data access within your organization.</p>
-                </div>
-            </div>
-            <div class="col-md-12 buttons">
-                <a href="https://github.com/jupyter/jupyterhub" style="display: inline-block;">More info about JupyterHub</a>
-            </div>
-        </div>
-    </div>
-</section>
-<section>
-    <div class="section-white">
+    <div class="section-grey">
         <div class="container">
             <div class="architecturedescription">
                 <img src="assets/architectureicon2.svg" class="section-icon" alt="icon to represent jupyter architecture">

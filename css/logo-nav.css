@@ -111,6 +111,10 @@ animation-delay: 1.1s;
     color: #E46E2E;
     background-color: transparent;
 }
+.notebook-icon {
+    width: 75px;
+    height: auto;
+}
 @media(min-width:768px) {
 
     .navbar-fixed-top .navbar-brand {
@@ -127,7 +131,7 @@ animation-delay: 1.1s;
     .notebook-preview img {
         margin: 0 auto;
     }
-    #notebookicon {
+    .notebook-icon {
         display: block;
         margin: 0 auto;
         padding-bottom: 10px;
@@ -168,7 +172,9 @@ animation-delay: 1.1s;
 .notebook-feature{
     color:#766A6A;
 }
-
+.notebook-features {
+    margin-top: 32px;
+}
 .notebook-features p a {
     color:gray;
     font-weight: 500;
@@ -206,29 +212,23 @@ animation-delay: 1.1s;
     }
 }
 .install-prompt {
-    background-color: #FDFDFD;
+    background-color: #FAFAFA;
     border-style: solid;
-    border-top-color: #979797;
-    border-bottom-color: #979797;
+    border-top-color: #BDBDBD;
+    border-bottom-color: #BDBDBD;
     border-right-style: none;
     border-left-style: none;
     border-width: thin;
     text-align: center;
+    padding: 4px 0px 24px 0px;
 }
-.install-prompt .content {
-    padding-top: 4%;
-    padding-bottom: 4%;
+.prompt-header {
+    margin-bottom: 16px;
 }
-.install-prompt .buttons {
-    display: inline-block;
-}
-.buttons {
-    font-size: 19.24px;
+.prompt-button {
     text-align: center;
-    padding-top: 40px;
-    /*padding-bottom: 20px;*/
-}
-.buttons a{
+    font-size: 16px;
+    display: inline-block;
     background-color: #E46E2E;
     padding: 13px 26px;
     border-radius: 5.82px;
@@ -304,10 +304,6 @@ animation-delay: 1.1s;
 .featuremiddle {
     margin-top: 40px;
 }
-.hubdescription p {
-    font-size: 21px;
-    line-height: 1.5;
-}
 .hubfeature {
     text-align: center;
     color: #766A6A;
@@ -323,10 +319,6 @@ animation-delay: 1.1s;
     background-repeat: no-repeat;
 }
 @media(max-width:992px) {
-    .hubdescription {
-        text-align: center;
-        padding-top: 10%;
-    }
     .hubfeatures{
         background: none;
     }
@@ -341,6 +333,7 @@ animation-delay: 1.1s;
     }
 }
 .arcfeature {
+    background-color: white;
     font-size: 21px;
     text-align: center;
     border-radius: 5px;
@@ -476,12 +469,6 @@ animation-delay: 1.1s;
         text-align: center;
     }
 }
-@media (min-width: 1200px) {
-    .install-prompt .content{
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-}
 
 /*About Page */
 
@@ -490,29 +477,11 @@ animation-delay: 1.1s;
     text-align: center;
     background-color: #F8F8F8;
 }
-.header h1 {
-    font-size: 41.16px;
-}
-.header p {
-    font-size: 21px;
-}
 .support-paragraph {
     font-size: 15px;
     line-height: 1.5;
     text-align: center;
     margin-bottom: 16px;
-}
-@media (max-width: 992px) {
-    .header h1 {
-        font-size: 34px;
-    }
-    .header p {
-        font-size: 18px;
-        padding-top: 20px;
-    }
-    .support-paragraph {
-        font-size: 10.71pt;
-    }
 }
 #visualization svg{
     display: block;
@@ -831,11 +800,12 @@ animation-delay: 1.1s;
   background-color: white;
 }
 
-.top-white-section {
+.top-section-border {
     border-top: 1px solid #E0E0E0;
+}
+.bottom-section-border {
     border-bottom: 1px solid #E0E0E0;
 }
-
 .section-grey {
   padding: 56px 0px;
   background-color: #fafafa;
@@ -903,4 +873,3 @@ animation-delay: 1.1s;
         font-weight: 400;
     }
 }
-@media ()
