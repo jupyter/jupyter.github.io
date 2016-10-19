@@ -6,19 +6,6 @@
 body {
     padding-top: 70px;
     /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
-    font-size: 10.71pt;
-    font-weight: 300;
-}
-h1 {
-    font-size: 35px;
-    font-weight: 400;
-}
-h2 {
-    font-size: 29.4px;
-    font-weight: 400;
-}
-h3 {
-    font-size: 21px;
     font-weight: 400;
 }
 @-webkit-keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
@@ -157,11 +144,9 @@ animation-delay: 1.1s;
 .jumbotron img {
     margin: 0 auto;
 }
-.jumbotron-text p{
-    font-size: 21px;
-    line-height: 31px;
+.jumbotron-text {
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 32px;
 }
 @media (max-width: 767px){
     .jumbotron {
@@ -170,10 +155,7 @@ animation-delay: 1.1s;
 }
 
 .notebook-preview p {
-    line-height: 31pt;
-    padding-top: 41px;
-    padding-bottom: 41px;
-    font-size: 21px;
+    padding: 40px 0px;
 }
 @media(max-width:1200px) {
 
@@ -183,9 +165,7 @@ animation-delay: 1.1s;
     }
 }
 
-.notebook-features h2{
-    font-size: 21px;
-    line-height: 1.5;
+.notebook-feature{
     color:#766A6A;
 }
 
@@ -201,9 +181,7 @@ animation-delay: 1.1s;
 
 
 .notebook-features p{
-    padding-top: 26px;
-    font-size: 15px;
-    line-height: 1.5;
+    padding-top: 16px;
 }
 
 @media(max-width:1200px) {
@@ -235,13 +213,15 @@ animation-delay: 1.1s;
     border-right-style: none;
     border-left-style: none;
     border-width: thin;
-
+    text-align: center;
 }
 .install-prompt .content {
     padding-top: 4%;
     padding-bottom: 4%;
 }
-
+.install-prompt .buttons {
+    display: inline-block;
+}
 .buttons {
     font-size: 19.24px;
     text-align: center;
@@ -325,23 +305,14 @@ animation-delay: 1.1s;
     margin-top: 40px;
 }
 .hubdescription p {
-    padding-top: 26px;
     font-size: 21px;
     line-height: 1.5;
 }
-.hubfeature h2 {
-    font-size: 21px;
-    line-height: 1.5;
+.hubfeature {
     text-align: center;
     color: #766A6A;
 }
-.hubfeature p {
-    font-size: 15px;
-    line-height: 1.5;
-    text-align: center;
-    color: #766A6A;
-    padding-top: 2px;
-}
+
 .hubfeature img {
     margin: 0 auto;
 }
@@ -529,7 +500,7 @@ animation-delay: 1.1s;
     font-size: 15px;
     line-height: 1.5;
     text-align: center;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 @media (max-width: 992px) {
     .header h1 {
@@ -612,10 +583,6 @@ animation-delay: 1.1s;
     background-color: white;
 }
 
-.menu {
-    margin-top: 20px;
-
-}
 .governance .clicky{
     display: inline-block;
     text-decoration: none;
@@ -776,7 +743,7 @@ animation-delay: 1.1s;
 /*Community Page */
 
 .community-section {
-    padding: 17px;
+    padding: 16px;
     border-bottom: 1px solid #E8E8E8;
     height: 160px;
 }
@@ -860,7 +827,7 @@ animation-delay: 1.1s;
 
 /* new stuff */
 .section-white {
-  padding: 75px 0px;
+  padding: 56px 0px;
   background-color: white;
 }
 
@@ -870,7 +837,7 @@ animation-delay: 1.1s;
 }
 
 .section-grey {
-  padding: 75px 0px;
+  padding: 56px 0px;
   background-color: #fafafa;
   border-top: 1px solid #E0E0E0;
   border-bottom: 1px solid #E0E0E0;
@@ -889,6 +856,10 @@ animation-delay: 1.1s;
     display: block;
     margin: 0 auto;
 }
+.section-center {
+    /*To center the companies on the home page & get rid of padding on left associated with ul*/
+    text-align: center;
+}
 .sponsor {
     margin: 16px 0px;
 }
@@ -896,9 +867,40 @@ animation-delay: 1.1s;
     width: 75%;
     height: auto;
 }
+.steering-cards {
+    text-align: center;
+}
 
 @media (min-width: 1200px) {
   .section-white, .section-grey {
     padding: 5% 0%;
   }
 }
+@media (min-width: 1200px) {
+    p {
+        font-size: 16px;
+        line-height: 1.375;
+        font-weight: 400;
+    }
+    h4 {
+        font-size: 18px;
+        line-height: 1.22;
+        font-weight: 400;
+    }
+    h3 {
+        font-size: 28px;
+        line-height: 1.25;
+        font-weight: 400;
+    }
+    h2 {
+        font-size: 36px;
+        line-height: 1.25;
+        font-weight: 400;
+    }
+    h1 {
+        font-size: 48px;
+        line-height: 1.05em;
+        font-weight: 400;
+    }
+}
+@media ()
