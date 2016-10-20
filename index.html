@@ -40,8 +40,8 @@ title: Home
                 <div class="col-xs-12">
                     <h3 class="prompt-header">Ready to get started?</h3>
                     <div>
-                        <a class="prompt-button" href="https://try.jupyter.org/">Try it in your browser</a>
-                        <a class="prompt-button" href="https://jupyter.readthedocs.io/en/latest/install.html" id="box2">Install the Notebook</a>
+                        <a class="orange-button" href="https://try.jupyter.org/">Try it in your browser</a>
+                        <a class="orange-button" href="https://jupyter.readthedocs.io/en/latest/install.html" id="box2">Install the Notebook</a>
                     </div>
                 </div>
             </div>
@@ -56,10 +56,9 @@ title: Home
                     <div class="col-md-6">
                         <img class="img-responsive" src="assets/jupyterpreview.png" id="portal" alt="example notebook of Lorenz differential equations"/>
                     </div>
-                    <div class="col-md-6">
-                        <img src="assets/nbicon.svg" class="notebook-icon" alt="notebook icon">
-                        <h3>The Jupyter Notebook</h3>
-                        <h4>The Jupyter Notebook is a web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, machine learning and much more.</h3>
+                    <div class="col-md-6 nb-highlight">
+                        <h3><img src="assets/nbicon.svg" class="notebook-icon" alt="notebook icon">The Jupyter Notebook</h3>
+                        <h4 class="nb-desc">The Jupyter Notebook is a web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, machine learning and much more.</h3>
                     </div>
                 </div>
             </div>
@@ -93,13 +92,15 @@ title: Home
     </div>
 </section>
 <section>
-    <div class="jupyterhub section-grey">
+    <div class="section-grey">
         <div class="container">
             <div class="row">
-            <div class="hubheader">
-                <div class="hublogo col-md-offset-3 col-md-6 col-md-offset-3">
+            <div>
+                <div class="hublogo col-md-offset-4 col-md-4 col-md-offset-4">
                     <img src="assets/hublogo.svg" class="img-responsive" style="margin:0 auto;" id="hublogo" alt="jupyterhub logo">
-                    
+                </div>
+                <div class="col-md-offset-3 col-md-6 col-md-offset-3" style="margin-bottom:-36px">
+                    <p style="padding-top:24px; text-align: center">A multiversion version of the notebook designed for companies, classrooms and research labs</p>
                 </div>
             </div>
             <div class="hubfeatures col-md-12">
@@ -111,7 +112,7 @@ title: Home
                 <div class="featuremiddle hubfeature col-md-3">
                     <img src="assets/central.svg" class="img-responsive" alt="icon to represent centralized deployment">
                     <h4>Centralized deployment</h4>
-                    <p>Deploy the Jupyter Notebook to all users in your organization on centralized servers on- or off-site.</p>
+                    <p>Deploy the Jupyter Notebook to all of the users in your organization on centralized servers on- or off-site.</p>
                 </div>
                 <div class="featuremiddle hubfeature col-md-3">
                     <img src="assets/container.svg" class="img-responsive" alt="container icon">
@@ -124,8 +125,8 @@ title: Home
                     <p>Deploy the Notebook next to your data to provide unified software management and data access within your organization.</p>
                 </div>
             </div>
-            <div class="col-md-12 buttons">
-                <a href="https://github.com/jupyter/jupyterhub" style="display: inline-block;">More info about JupyterHub</a>
+            <div class="col-md-12" style="text-align: center; margin-top: 24px;">
+                <a class="orange-button" href="https://github.com/jupyter/jupyterhub">More info about JupyterHub</a>
             </div>
             </div>
         </div>
