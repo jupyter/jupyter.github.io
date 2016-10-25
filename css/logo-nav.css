@@ -429,16 +429,16 @@ animation-delay: 1.1s;
     background-color: white;
 }
 
-.governance .clicky{
+.governance .clickable{
     display: inline-block;
     text-decoration: none;
-    font-size: 21px;
+    font-size: 20px;
     margin-left: 20px;
     margin-bottom: 10px;
     cursor: default;
 }
 
-.clicky:hover {
+.clickable:hover {
     color: #E46E2E
 }
 
@@ -452,11 +452,7 @@ animation-delay: 1.1s;
     transition: all 1s;
     min-height: 100px;
 }
-.content-gov {
-    padding-left: 20px;
-    padding-right: 35px;
-    color: #818181;
-}
+
 .menuClicked {
     color: #E46E2E;
 }
@@ -500,22 +496,30 @@ animation-delay: 1.1s;
     height: 20%;
 }
 
-/*Community Page */
+/*Community Resources Page */
 
-.community-section {
+.resource-section {
     padding: 16px;
     border-bottom: 1px solid #E8E8E8;
-    height: 160px;
+    vertical-align: middle;
 }
-.community-text {
-    padding-top: 9px;
+.resource-text {
     text-align: left;
     vertical-align: middle;
 }
-.community-button {
-    margin-top: 48px;
+.resource-logo {
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+} 
+.resource-name {
+     margin-top: 6px;
 }
-.community-button a {
+.resource-button {
+    text-align: center;
+    margin-top: 32px;
+}
+.resource-button a {
     background-color: #E46E2E;
     padding: 13px 60px;
     border-radius: 5.82px;
@@ -525,17 +529,12 @@ animation-delay: 1.1s;
     letter-spacing: 1px;
     -webkit-transition: .2s;
 }
-.community-button a:hover {
+.resource-button a:hover {
     background-color: #F27624;
 }
 
-.community-section:last-child {
+.resource-section:last-child {
     border-bottom: none;
-}
-.community {
-    margin: 0 auto;
-    display: block;
-    padding: 0px 0px;
 }
 
 /* new stuff */
@@ -635,6 +634,9 @@ animation-delay: 1.1s;
     }
     .notebook-features {
         margin-top: 0px;
+    }
+    .resource-content {
+        padding-top: 48px;
     }
     p {
         font-size: 16px;
@@ -786,21 +788,6 @@ animation-delay: 1.1s;
         padding:10px;
         min-height:0px;
     }
-
-    .content-gov {
-        margin: 0px;
-        padding: 10px;
-    }
-}
-@media (max-width: 395px) {
-    .content-gov {
-        margin-top: 90px;
-    }
-}
-@media (max-width: 365px) {
-    .content-gov {
-        margin-top: 130px;
-    }
 }
 @media (min-width: 510px) {
     .follow {
@@ -845,20 +832,20 @@ animation-delay: 1.1s;
     .donate-box {
         margin-top: 10%;
     }
-    .community-section {
+    .resource-section {
         padding: 0px;
         padding-top: 10px;
         padding-bottom: 30px;
         height: 400px;
     }
-    .community-text {
+    .resource-text {
         padding-top: 0px;
         text-align: center;
     }
-    .community-section:nth-child(even) {
+    .resource-section:nth-child(even) {
         border-left: 1px solid #E8E8E8;
     }
-    .community-section img {
+    .resource-section img {
         padding-bottom: 0px;
         margin-top: 15px;
     }

@@ -1,100 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="120"
-   height="100"
-   viewBox="0 0 119.99999 99.999993"
-   id="svg4824"
-   version="1.1"
-   inkscape:version="0.91 r13725"
-   sodipodi:docname="mail-education.svg">
-  <defs
-     id="defs4826" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="-24.491515"
-     inkscape:cy="59.296462"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     units="px"
-     inkscape:window-width="1415"
-     inkscape:window-height="570"
-     inkscape:window-x="73"
-     inkscape:window-y="24"
-     inkscape:window-maximized="0" />
-  <metadata
-     id="metadata4829">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-952.36224)">
-    <g
-       class="com.sun.star.drawing.ClosedBezierShape"
-       id="g63"
-       transform="matrix(0.07403419,0,0,0.07403419,-53.421635,916.79486)">
-      <g
-         id="id4">
-        <rect
-           class="BoundingBox"
-           x="723"
-           y="741"
-           width="1619"
-           height="573"
-           id="rect66"
-           style="fill:none;stroke:none" />
-        <path
-           d="m 2341,1049 c -45,15 -87,29 -129,43 -71,24 -142,47 -214,71 -95,31 -191,62 -286,94 -55,18 -110,36 -165,54 -5,2 -12,2 -17,0 -117,-38 -234,-76 -350,-114 -138,-44 -275,-88 -412,-133 -14,-4 -28,-9 -45,-15 25,-10 47,-19 69,-27 73,-28 145,-55 218,-83 77,-29 155,-58 233,-88 86,-32 171,-64 256,-97 11,-4 22,-9 33,-12 4,-1 10,-1 14,0 88,34 177,68 265,102 118,46 237,91 355,137 57,22 115,44 175,68 z"
-           id="path68"
-           inkscape:connector-curvature="0"
-           style="fill:#757575;fill-opacity:0.81999966;stroke:#ffffff;stroke-opacity:0.81999966" />
-      </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <circle id="Oval" fill="#868686" cx="100" cy="100" r="100"></circle>
+            <g id="mail-education" transform="translate(28.500000, 61.500000)" fill="#FFFFFF">
+                <g id="Artboard">
+                    <g id="Page-1">
+                        <g id="Artboard">
+                            <path d="M36.6480218,45.5884743 C46.3153657,48.8402168 55.9827096,52.0919601 65.7379384,55.3437026 C67.4956373,55.9588974 69.3412211,57.0135169 71.1868047,57.0135169 C73.032389,57.0135169 74.790088,55.9588974 76.6356716,55.3437026 C85.1605111,52.4434994 93.7732359,49.6311817 102.38596,46.7309785 C105.901358,45.5884743 109.504641,44.3580847 113.020038,43.2155806 C113.195809,43.1276952 113.371579,43.1276952 113.635233,43.0398105 L113.635233,62.9018079 C111.701764,62.9896933 109.680411,63.0775779 107.746942,63.253348 C101.682881,63.9564274 95.7945896,65.2747016 90.0820679,67.38394 C83.7543522,69.5810637 77.6902912,72.5691522 71.9777695,76.0845494 C71.6262294,76.2603195 71.0110351,76.2603195 70.6594953,76.0845494 C61.695231,70.7235679 52.203657,66.6808605 42.0090034,64.4837368 C38.1420659,63.6927727 34.1872434,63.429118 30.3203058,62.9018079 C29.9687661,62.9018079 29.5293413,62.9018079 29.0899166,62.8139232 L29.0899166,43.0398105 C31.63858,43.91866 34.1872434,44.7096248 36.6480218,45.5884743 L36.6480218,45.5884743 Z M142.19784,27.351113 C138.243017,28.6693872 134.55185,29.8997764 130.860682,31.1301656 C124.620851,33.2394043 118.38102,35.2607579 112.053304,37.3699969 C103.704234,40.09443 95.2672794,42.8188632 86.91821,45.6311817 C82.0845379,47.2131106 77.2508664,48.7950395 72.4171943,50.3769684 C71.9777695,50.5527385 71.3625747,50.5527385 70.9231501,50.3769684 C60.6406117,47.0373405 50.3580731,43.6977126 40.1634196,40.3580847 C28.0352973,36.4911474 15.9950599,32.6242096 3.9548225,28.6693872 C2.72443327,28.3178474 1.49404405,27.8784226 1.13686838e-13,27.351113 C2.19712361,26.4722635 4.13059239,25.6812991 6.06406117,24.9782195 C12.4796621,22.5174411 18.8073781,20.1445475 25.2229791,17.6837691 C31.9901197,15.1351057 38.8451454,12.5864423 45.7001711,9.949894 C53.2582764,7.13757579 60.7284966,4.32525751 68.1987169,1.42505435 C69.1654512,1.07351463 70.1321857,0.634089888 71.09892,0.370435043 C71.4504601,0.282550094 71.9777695,0.282550094 72.3293096,0.370435043 C80.0631842,3.35852315 87.8849442,6.34661125 95.6188195,9.33469936 C105.989243,13.3774068 116.447551,17.3322293 126.817975,21.3749367 C131.827416,23.3084055 136.924743,25.2418743 142.19784,27.351113 L142.19784,27.351113 Z" id="Combined-Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
     </g>
-    <g
-       class="com.sun.star.drawing.ClosedBezierShape"
-       id="g70"
-       transform="matrix(0.07403419,0,0,0.07403419,-53.421635,916.79486)">
-      <g
-         id="id5">
-        <rect
-           class="BoundingBox"
-           x="1054"
-           y="1182"
-           width="964"
-           height="379"
-           id="rect73"
-           style="fill:none;stroke:none" />
-        <path
-           d="m 1054,1182 c 29,10 58,19 86,29 110,37 220,74 331,111 20,7 41,19 62,19 21,0 41,-12 62,-19 97,-33 195,-65 293,-98 40,-13 81,-27 121,-40 2,-1 4,-1 7,-2 l 0,226 c -22,1 -45,2 -67,4 -69,8 -136,23 -201,47 -72,25 -141,59 -206,99 -4,2 -11,2 -15,0 -102,-61 -210,-107 -326,-132 -44,-9 -89,-12 -133,-18 -4,0 -9,0 -14,-1 l 0,-225 z"
-           id="path75"
-           inkscape:connector-curvature="0"
-           style="fill:#757575;fill-opacity:0.81999966;stroke:#ffffff;stroke-opacity:0.81999966" />
-      </g>
-    </g>
-  </g>
 </svg>

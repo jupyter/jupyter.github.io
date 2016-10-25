@@ -1,101 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   enable-background="new 0 0 32 32"
-   height="32px"
-   id="Layer_1"
-   version="1.1"
-   viewBox="0 0 32 32"
-   width="32px"
-   xml:space="preserve"
-   inkscape:version="0.91 r13725"
-   sodipodi:docname="1475190340_calendar.svg"><metadata
-     id="metadata28"><rdf:RDF><cc:Work
-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
-     id="defs26" /><sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="902"
-     inkscape:window-height="730"
-     id="namedview24"
-     showgrid="false"
-     inkscape:zoom="7.375"
-     inkscape:cx="24.745763"
-     inkscape:cy="16"
-     inkscape:window-x="394"
-     inkscape:window-y="143"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="Layer_1" /><g
-     id="calendar_1_"
-     style="opacity:0.81999966"><path
-       d="M 29.334,3 25,3 25,1 C 25,0.447 24.553,0 24,0 23.447,0 23,0.447 23,1 l 0,2 -6,0 0,-2 C 17,0.447 16.552,0 16,0 15.448,0 15,0.447 15,1 L 15,3 9,3 9,1 C 9,0.447 8.552,0 8,0 7.448,0 7,0.447 7,1 L 7,3 2.667,3 C 1.194,3 0,4.193 0,5.666 L 0,29.333 C 0,30.806 1.194,32 2.667,32 l 26.667,0 C 30.807,32 32,30.806 32,29.333 L 32,5.666 C 32,4.193 30.807,3 29.334,3 Z M 30,29.333 C 30,29.701 29.701,30 29.334,30 L 2.667,30 C 2.299,30 2,29.701 2,29.333 L 2,5.666 C 2,5.299 2.299,5 2.667,5 L 7,5 7,7 C 7,7.553 7.448,8 8,8 8.552,8 9,7.553 9,7 l 0,-2 6,0 0,2 c 0,0.553 0.448,1 1,1 0.552,0 1,-0.447 1,-1 l 0,-2 6,0 0,2 c 0,0.553 0.447,1 1,1 0.553,0 1,-0.447 1,-1 l 0,-2 4.334,0 C 29.701,5 30,5.299 30,5.666 l 0,23.667 z"
-       id="path4"
-       inkscape:connector-curvature="0"
-       style="fill:#757575" /><rect
-       height="3"
-       width="4"
-       x="7"
-       y="12"
-       id="rect6"
-       style="fill:#757575" /><rect
-       height="3"
-       width="4"
-       x="7"
-       y="17"
-       id="rect8"
-       style="fill:#757575" /><rect
-       height="3"
-       width="4"
-       x="7"
-       y="22"
-       id="rect10"
-       style="fill:#757575" /><rect
-       height="3"
-       width="4"
-       x="14"
-       y="22"
-       id="rect12"
-       style="fill:#757575" /><rect
-       height="3"
-       width="4"
-       x="14"
-       y="17"
-       id="rect14"
-       style="fill:#757575" /><rect
-       height="3"
-       width="4"
-       x="14"
-       y="12"
-       id="rect16"
-       style="fill:#757575" /><rect
-       height="3"
-       width="4"
-       x="21"
-       y="22"
-       id="rect18"
-       style="fill:#757575" /><rect
-       height="3"
-       width="4"
-       x="21"
-       y="17"
-       id="rect20"
-       style="fill:#757575" /><rect
-       height="3"
-       width="4"
-       x="21"
-       y="12"
-       id="rect22"
-       style="fill:#757575" /></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <circle id="Oval" fill="#868686" cx="100" cy="100" r="100"></circle>
+            <g id="calendar-icon" transform="translate(40.000000, 40.000000)" fill="#FFFFFF">
+                <g id="Artboard">
+                    <g id="Page-1">
+                        <g id="Artboard">
+                            <path d="M110.0025,11.25 L93.75,11.25 L93.75,3.75 C93.75,1.67625 92.07375,0 90,0 C87.92625,0 86.25,1.67625 86.25,3.75 L86.25,11.25 L63.75,11.25 L63.75,3.75 C63.75,1.67625 62.07,0 60,0 C57.93,0 56.25,1.67625 56.25,3.75 L56.25,11.25 L33.75,11.25 L33.75,3.75 C33.75,1.67625 32.07,0 30,0 C27.93,0 26.25,1.67625 26.25,3.75 L26.25,11.25 L10.00125,11.25 C4.4775,11.25 0,15.72375 0,21.2475 L0,109.99875 C0,115.5225 4.4775,120 10.00125,120 L110.0025,120 C115.52625,120 120,115.5225 120,109.99875 L120,21.2475 C120,15.72375 115.52625,11.25 110.0025,11.25 L110.0025,11.25 L110.0025,11.25 Z M112.5,109.99875 C112.5,111.37875 111.37875,112.5 110.0025,112.5 L10.00125,112.5 C8.62125,112.5 7.5,111.37875 7.5,109.99875 L7.5,21.2475 C7.5,19.87125 8.62125,18.75 10.00125,18.75 L26.25,18.75 L26.25,26.25 C26.25,28.32375 27.93,30 30,30 C32.07,30 33.75,28.32375 33.75,26.25 L33.75,18.75 L56.25,18.75 L56.25,26.25 C56.25,28.32375 57.93,30 60,30 C62.07,30 63.75,28.32375 63.75,26.25 L63.75,18.75 L86.25,18.75 L86.25,26.25 C86.25,28.32375 87.92625,30 90,30 C92.07375,30 93.75,28.32375 93.75,26.25 L93.75,18.75 L110.0025,18.75 C111.37875,18.75 112.5,19.87125 112.5,21.2475 L112.5,109.99875 L112.5,109.99875 L112.5,109.99875 Z" id="path4"></path>
+                            <rect id="rect6" x="26.25" y="45" width="15" height="11.25"></rect>
+                            <rect id="rect8" x="26.25" y="63.75" width="15" height="11.25"></rect>
+                            <rect id="rect10" x="26.25" y="82.5" width="15" height="11.25"></rect>
+                            <rect id="rect12" x="52.5" y="82.5" width="15" height="11.25"></rect>
+                            <rect id="rect14" x="52.5" y="63.75" width="15" height="11.25"></rect>
+                            <rect id="rect16" x="52.5" y="45" width="15" height="11.25"></rect>
+                            <rect id="rect18" x="78.75" y="82.5" width="15" height="11.25"></rect>
+                            <rect id="rect20" x="78.75" y="63.75" width="15" height="11.25"></rect>
+                            <rect id="rect22" x="78.75" y="45" width="15" height="11.25"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
