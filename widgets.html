@@ -25,7 +25,7 @@ navbar_gray: true
   <div class="section-white top-section-border">
     <div class="container">
       <img class="section-icon img-responsive" src="assets/widget.svg" alt="icon to represent multiple notebooks">
-        <h3 class="col-sm-12 section-header">Notebook Widgets</h2>
+        <h3 class="col-sm-12 section-header">Notebook Widgets</h3>
       <p class="support-paragraph">Notebooks come alive when interactive widgets are used. Users can visualize and control changes in the data. Learning becomes an immersive, plus fun, experience. Researchers can easily see how changing inputs to a model impact the results.</p>
     </div>
   </div>
@@ -72,7 +72,7 @@ navbar_gray: true
                         </a>
                     </span>
                 </div>
-                <p class=supportparagraph>
+                <p>
                 A library for creating simple interactive maps with panning and
                 zooming. ipyleaflet supports annotations such as polygons,
                 markers, and more generally any geojson-encoded geographical
@@ -99,7 +99,7 @@ navbar_gray: true
                         </a>
                     </span>
                 </div>
-                <p class=supportparagraph>
+                <p>
                 A 2-D interative data visualization library implementing the
                 constructs of the grammar of graphics. bqplot provides a simple
                 API for creating custom user interactions.
@@ -125,7 +125,7 @@ navbar_gray: true
                         </a>
                     </span>
                 </div>
-                <p class=supportparagraph>
+                <p>
                 A 3-D visualization library enabling GPU-accelerated computer
                 graphics in Jupyter.
                 </p>
@@ -134,9 +134,11 @@ navbar_gray: true
                 <script type="application/vnd.jupyter-embedded-widgets">
                     {% include_relative assets/pythreejs-example.json %}
                 </script>
+                <div>
                 <h3>Installation</h3>
                 With conda:
                 {% highlight bash %}conda install -c conda-forge pythreejs{% endhighlight %}
+                </div>
             </div>
             <div class="tab-pane" id="cookiecutter">
                 <div class="jupyter-widget-header">
@@ -147,15 +149,15 @@ navbar_gray: true
                         </a>
                     </span>
                 </div>
-                <p class=supportparagraph>
+                <p>
                 The Jupyter widget framework is extensible and enables developers to create custom
                 widget libraries and bindings for visualization libraries of the JavaScript ecosystem.
                 </p>
-                <p class=supportparagraph>
+                <p>
                 The <code>cookiecutter</code> project helps widget authors get up to speed with the
                 packaging and distribution of Jupyter interactive widgets.
                 </p>
-                <p class=supportparagraph>
+                <p>
                 It produces a base project for a Jupyter interactive widget library following the current best practices.
                 An implementation for a placeholder "Hello World" widget is provided. Following these practices will
                 help make your custom widgets work in static web pages (like the examples of this page) and be compatible
