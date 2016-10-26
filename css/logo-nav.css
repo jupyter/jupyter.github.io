@@ -1,48 +1,10 @@
-/*!
- * Start Bootstrap - Logo Nav HTML Template (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
 body {
     padding-top: 70px;
     /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
     font-weight: 400;
 }
-@-webkit-keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
-/*This entire section related to fading is for the front page with the Jupyter logo*/
-.fade-in {
-    opacity:0;  /* make things invisible upon start */
-    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-    -moz-animation:fadeIn ease-in 1;
-    animation:fadeIn ease-in 1;
 
-    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
-
-    -webkit-animation-duration:1s;
-    -moz-animation-duration:1s;
-    animation-duration:1s;
-}
-.fade-in.one {
--webkit-animation-delay: 0.3s;
--moz-animation-delay: 0.3s;
-animation-delay: 0.3s;
-}
-
-.fade-in.two {
--webkit-animation-delay: 0.7s;
--moz-animation-delay:0.7s;
-animation-delay: 0.7s;
-}
-.fade-in.three {
--webkit-animation-delay: 1.1s;
--moz-animation-delay: 1.1s;
-animation-delay: 1.1s;
-}
-
+/* Navbar and footer (global) styling */
 .navbar-fixed-top .nav {
     padding: 15px 0;
 }
@@ -92,30 +54,76 @@ animation-delay: 1.1s;
 .nav > li > a:visited {
     background-color: #F8F8F8;
 }
-.img-container {
-    position: absolute;
-    width: 95%;
-    height: 100%;
-    text-align: center;
-    margin: 0 auto;
+.tab:hover {
+    color: #E46E2E;
+    background-color: transparent;
 }
-.img-container img {
-    vertical-align: center;
+.footer {
+    background-color: #979797;
 }
+.footer p {
+    color: white;
+    padding-top: 10px;
+}
+.footer li{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+.footer li::after {
+    content:" |";
+}
+.footer li:last-of-type::after {
+    content:"";
+}
+.footer-text {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+/*Main logo animation on the front page of the Jupyter website */
 #main-logo {
 	height: calc(100% - 20px);
 	margin-top: 10px;
     padding-left: 20px;
 }
+@-webkit-keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
+/*This entire section related to fading is for the front page with the Jupyter logo*/
+.fade-in {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use         animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
 
-#tab:hover {
-    color: #E46E2E;
-    background-color: transparent;
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation      is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
 }
-.notebook-icon {
-    width: 60px;
-    height: auto;
-    margin-right: 12px;
+.fade-in.one {
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.fade-in.two {
+    -webkit-animation-delay: 0.7s;
+    -moz-animation-delay:0.7s;
+    animation-delay: 0.7s;
+}
+.fade-in.three {
+    -webkit-animation-delay: 1.1s;
+    -moz-animation-delay: 1.1s;
+    animation-delay: 1.1s;
 }
 .jumbotron {
     margin-top:30px;
@@ -128,6 +136,16 @@ animation-delay: 1.1s;
 .jumbotron-text {
     text-align: center;
     padding-bottom: 32px;
+}
+.img-container {
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+.img-container img {
+    vertical-align: center;
 }
 
 /* Reusable elements */
@@ -174,7 +192,7 @@ animation-delay: 1.1s;
     margin-top: 12px;
     margin-bottom: 8px;
 }
-/* Used for descriptions of sections */
+/* Used for descriptions of sections underneath section headers*/
 .support-paragraph {
     font-size: 15px;
     line-height: 1.5;
@@ -204,12 +222,21 @@ animation-delay: 1.1s;
 .nb-highlight-text {
     margin-top: 60px;
 }
+.notebook-icon {
+    width: 60px;
+    height: auto;
+    margin-right: 12px;
+}
+/* Give space between the notebook features (4 features) on front page and the     img + description */
 .notebook-features {
-    /* Give space between the notebook features (4 features) on front page and the     img + description */
     margin-top: 32px;
 }
 .notebook-features p{
     padding-top: 16px;
+}
+.nb-desc {
+    line-height: 1.5;
+    font-weight: 400;
 }
 
 /* Install prompt on front page */
@@ -228,7 +255,7 @@ animation-delay: 1.1s;
     margin-bottom: 16px;
 }
 
-/* Companies section for only front page (this section acts differently than customer logos in about section) */
+/* Companies section for only "Currently in use" (this section acts differently than customer logos in the "About" section of the site) */
 
 /*Section-center is used to center the companies on the home page & get rid of padding on left associated with ul*/
 .section-center {
@@ -252,10 +279,10 @@ animation-delay: 1.1s;
     -moz-opacity: .065;
     opacity: 0.65;
     -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
 }
 .greydout:hover {
     webkit-opacity: 1;
@@ -321,7 +348,7 @@ animation-delay: 1.1s;
     height: 100%;
     vertical-align: center;
 }
-/* Used to make cursor turn to link cursor when hovering over architecture buttons */
+/* Used to make cursor turn to link specific cursor when hovering over architecture buttons */
 .bt, .bt1, .bt2 {
     cursor: default;
 }
@@ -399,15 +426,23 @@ animation-delay: 1.1s;
     text-decoration: none;
 }
 .material {
-  background: #fff;
-  border-radius: 2px;
-  display: inline-block;
-  height: 130px;
-  margin: 1rem;
-  position: relative;
-  width: 200px;
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    height: 130px;
+    margin: 1rem;
+    position: relative;
+    width: 200px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+/* Styling for the Sponsor logos on About page*/
+.sponsor {
+    margin: 16px 0px;
+}
+.sponsor-logo {
+    width: 75%;
+    height: auto;
 }
 
 /* Used to style the clickable tabs within the governance section */
@@ -423,6 +458,11 @@ animation-delay: 1.1s;
     color: #E46E2E
 }
 
+/* Active state when a tab in the governance section is selected */
+.menuClicked {
+    color: #E46E2E;
+}
+
 /* Used to style the description of a particular tab within the governance section */
 .governance-desc {
     border-color: black;
@@ -433,36 +473,6 @@ animation-delay: 1.1s;
     padding: 30px;
     transition: all 1s;
     min-height: 100px;
-}
-
-.menuClicked {
-    color: #E46E2E;
-}
-#footer1 {
-    background-color: #979797;
-}
-.navbar-bottom p {
-    color: white;
-    padding-top: 10px;
-}
-.navbar-bottom li{
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-}
-.navbar-bottom a {
-    text-decoration: none;
-    color: white;
-}
-.navbar-bottom li::after {
-    content:" |";
-}
-.navbar-bottom li:last-of-type::after {
-    content:"";
-}
-#footer-text {
-    margin-left: 0px;
-    padding-left: 0px;
 }
 
 /* Donate Page */
@@ -480,10 +490,15 @@ animation-delay: 1.1s;
 
 /*Community Resources Page */
 
+/* Resource section is used to create a new resource on the community resources page. */
 .resource-section {
     padding: 16px;
     border-bottom: 1px solid #E8E8E8;
     vertical-align: middle;
+}
+/* Used to specify that the last resource should not have a border underneath it's content */
+.resource-section:last-child {
+    border-bottom: none;
 }
 .resource-text {
     text-align: left;
@@ -515,24 +530,8 @@ animation-delay: 1.1s;
     background-color: #F27624;
 }
 
-.resource-section:last-child {
-    border-bottom: none;
-}
-.sponsor {
-    margin: 16px 0px;
-}
-.sponsor-logo {
-    width: 75%;
-    height: auto;
-}
-.steering-cards {
-    text-align: center;
-}
-.nb-desc {
-    line-height: 1.5;
-    font-weight: 400;
-}
-
+/* Bootstrap Breakpoint Media Queries */
+/* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .section-white, .section-grey {
     padding: 5% 0%;
@@ -542,7 +541,21 @@ animation-delay: 1.1s;
     .nb-highlight-text {
         margin-top: 32px;
     }
+    .notebook-features .language-set h2{
+        padding-top: 0px;
+    }
+    .notebook-features #feature {
+        padding-top: 4px;
+    }
+    .notebook-preview p {
+        line-height: 25pt;
+        font-size: 15pt;
+    }
+    .companies li{
+        width:23%;
+    }
 }
+/* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     p {
         font-size: 16px;
@@ -571,69 +584,37 @@ animation-delay: 1.1s;
     }
 }
 @media (max-width: 992px) {
+    p {
+        font-size: 16px;
+        line-height: 1.25em;
+        font-weight: 400;
+    }
+    h4 {
+        font-size: 18px;
+        line-height: 1.11em;
+        font-weight: 500;
+    }
+    h3 {
+        font-size: 22px;
+        line-height: 1.136em;
+        font-weight: 500;
+    }
+    h2 {
+        font-size: 26px;
+        line-height: 1.153em;
+        font-weight: 500;
+    }
+    h1 {
+        font-size: 32px;
+        line-height: 1.25em;
+        font-weight: 500;
+    }
     .nb-highlight-text {
         text-align: center;
     }
     .notebook-features {
         margin-top: 0px;
     }
-    .resource-content {
-        padding-top: 48px;
-    }
-    p {
-        font-size: 16px;
-        line-height: 1.25em;
-        font-weight: 400;
-    }
-    h4 {
-        font-size: 18px;
-        line-height: 1.11em;
-        font-weight: 500;
-    }
-    h3 {
-        font-size: 22px;
-        line-height: 1.136em;
-        font-weight: 500;
-    }
-    h2 {
-        font-size: 26px;
-        line-height: 1.153em;
-        font-weight: 500;
-    }
-    h1 {
-        font-size: 32px;
-        line-height: 1.25em;
-        font-weight: 500;
-    }
-}
-@media (max-width: 768px) {
-    p {
-        font-size: 16px;
-        line-height: 1.25em;
-        font-weight: 400;
-    }
-    h4 {
-        font-size: 18px;
-        line-height: 1.11em;
-        font-weight: 500;
-    }
-    h3 {
-        font-size: 22px;
-        line-height: 1.136em;
-        font-weight: 500;
-    }
-    h2 {
-        font-size: 26px;
-        line-height: 1.153em;
-        font-weight: 500;
-    }
-    h1 {
-        font-size: 32px;
-        line-height: 1.25em;
-        font-weight: 500;
-    }
-}
-@media(max-width:992px) {
     .language-set #feature {
         display: block;
     }
@@ -648,26 +629,6 @@ animation-delay: 1.1s;
     .notebook-preview h1 {
         text-align: center;
     }
-}
-@media(min-width:768px) {
-
-    .navbar-fixed-top .navbar-brand {
-        padding: 15px 0;
-    }
-    .tab {
-        text-align: center;
-    }
-}
-@media(max-width:1200px) {
-
-    .notebook-features .language-set h2{
-        padding-top: 0px;
-    }
-    .notebook-features #feature {
-        padding-top: 4px;
-    }
-}
-@media(max-width:992px) {
     .notebook-features  img {
         margin: 0 auto;
         width: 125px;
@@ -678,32 +639,11 @@ animation-delay: 1.1s;
     .notebook-feature {
         padding-top: 40px;
     }
-}
-@media(max-width:1200px) {
-    .notebook-preview p {
-        line-height: 25pt;
-        font-size: 15pt;
-    }
-}
-@media(max-width:1200px) {
-    .companies li{
-        width:23%;
-    }
-}
-@media(max-width:767px) {
-    .companies li {
-        width: 30%;
-    }
-    body {
-        padding-top: 50px;
-    }
-}
-@media(max-width:992px) {
     .hubfeatures{
         background: none;
     }
     #data {
-    padding-top: 40px;
+        padding-top: 40px;
     }
     .hubfeature h2 {
         text-align: center;
@@ -711,66 +651,12 @@ animation-delay: 1.1s;
     #hublogo {
         width: 60%;
     }
-}
-@media(max-width:509px) {
-    .install-button {
-        margin-top: 20px;
-    }
-}
-@media(max-width:992px) {
     .architecturedescription h2 {
         text-align: center;
     }
     .architecturedescription p {
         text-align: center;
     }
-}
-@media (max-width: 509px) {
-    .items {
-        padding:10px;
-        min-height:0px;
-    }
-}
-@media (min-width: 510px) {
-    .follow {
-        float: right !important;
-    }
-    .navbar-bottom ul {
-        float: left;
-    }
-}
-@media (max-width: 509px) {
-    .follow {
-        display: block;
-        margin: 0 auto;
-    }
-    .navbar-bottom .container {
-        text-align: center;
-        padding-bottom: 15px;
-    }
-    .navbar-bottom ul {
-        float: left;
-    }
-}
-@media (min-width: 768px) {
-    .follow {
-        margin-top: 15px;
-    }
-}
-@media (min-width: 768px) {
-    .navbar-toggle {
-        margin-top: 20px;
-    }
-}
-@media (max-width: 768px) {
-    .navbar-header {
-        margin-bottom: 0;
-    }
-    .navbar-toggle {
-        padding-top: 10px;
-    }
-}
-@media (max-width: 992px) {
     .donate-box {
         margin-top: 10%;
     }
@@ -780,10 +666,6 @@ animation-delay: 1.1s;
         padding-bottom: 30px;
         height: 400px;
     }
-    .resource-text {
-        padding-top: 0px;
-        text-align: center;
-    }
     .resource-section:nth-child(even) {
         border-left: 1px solid #E8E8E8;
     }
@@ -791,17 +673,102 @@ animation-delay: 1.1s;
         padding-bottom: 0px;
         margin-top: 15px;
     }
-    #github-break {
-        display: inline;
+    .resource-content {
+        padding-top: 48px;
+    }
+    .resource-text {
+        padding-top: 0px;
+        text-align: center;
     }
     .nav>li>a {
         font-size: 13px;
         letter-spacing: 1px;
     }
-
 }
-@media (max-width: 767px){
+/* Small devices (tablets, 768px and up) */
+@media(min-width:768px) {
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+    .tab {
+        text-align: center;
+    }
+    .follow {
+        margin-top: 15px;
+    }
+    .navbar-toggle {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 768px) {
+    p {
+        font-size: 16px;
+        line-height: 1.25em;
+        font-weight: 400;
+    }
+    h4 {
+        font-size: 18px;
+        line-height: 1.11em;
+        font-weight: 500;
+    }
+    h3 {
+        font-size: 22px;
+        line-height: 1.136em;
+        font-weight: 500;
+    }
+    h2 {
+        font-size: 26px;
+        line-height: 1.153em;
+        font-weight: 500;
+    }
+    h1 {
+        font-size: 32px;
+        line-height: 1.25em;
+        font-weight: 500;
+    }
+    .navbar-header {
+        margin-bottom: 0;
+    }
+    .navbar-toggle {
+        padding-top: 10px;
+    }
+    .companies li {
+        width: 30%;
+    }
+    body {
+        padding-top: 50px;
+    }
     .jumbotron {
         margin-right: 5%;
+    }
+}
+/* Extra small devices (these are mostly fixes to make sure elements act correctly to look good) */
+@media (min-width: 509px) {
+    .follow {
+        float: right !important;
+    }
+    .footer ul {
+        float: left;
+    }
+}
+@media(max-width:509px) {
+    .install-button {
+        margin-top: 20px;
+    }
+    .items {
+        padding:10px;
+        min-height:0px;
+    }
+    .follow {
+        display: block;
+        margin: 0 auto;
+    }
+    .footer {
+        text-align: center;
+        padding-bottom: 15px;
+    }
+    .footer ul {
+        float: left;
     }
 }
