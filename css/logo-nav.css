@@ -1,61 +1,10 @@
-/*!
- * Start Bootstrap - Logo Nav HTML Template (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
 body {
-    padding-top: 70px; 
+    padding-top: 70px;
     /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
-    font-size: 10.71pt;
-    font-weight: 300;
-}
-h1 {
-    font-size: 35px;
     font-weight: 400;
-}
-h2 {
-    font-size: 29.4px;
-    font-weight: 400;
-}
-h3 {
-    font-size: 21px;
-    font-weight: 400;
-}
-@-webkit-keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
-
-.fade-in {
-    opacity:0;  /* make things invisible upon start */
-    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-    -moz-animation:fadeIn ease-in 1;
-    animation:fadeIn ease-in 1;
- 
-    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
- 
-    -webkit-animation-duration:1s;
-    -moz-animation-duration:1s;
-    animation-duration:1s;
-}
-.fade-in.one {
--webkit-animation-delay: 0.3s;
--moz-animation-delay: 0.3s;
-animation-delay: 0.3s;
-}
- 
-.fade-in.two {
--webkit-animation-delay: 0.7s;
--moz-animation-delay:0.7s;
-animation-delay: 0.7s;
-}
-.fade-in.three {
--webkit-animation-delay: 1.1s;
--moz-animation-delay: 1.1s;
-animation-delay: 1.1s;
 }
 
+/* Navbar and footer (global) styling */
 .navbar-fixed-top .nav {
     padding: 15px 0;
 }
@@ -81,7 +30,7 @@ animation-delay: 1.1s;
     color: #E46E2E;
 }
 .navbar-scroll {
-    box-shadow: 1px 1px 1px #999; 
+    box-shadow: 1px 1px 1px #999;
     -moz-box-shadow: 1px 1px 1px #999;
     -webkit-box-shadow: 1px 1px 1px #999;
     animation-name: smooth;
@@ -105,54 +54,76 @@ animation-delay: 1.1s;
 .nav > li > a:visited {
     background-color: #F8F8F8;
 }
-.img-container {
-    position: absolute;
-    width: 95%;
-    height: 100%;
-    text-align: center;
-    margin: 0 auto;
-    
-}
-.img-container img {
-    vertical-align: center;
-}
-#main-logo {
-	height: calc(100% - 20px);
-	margin-top: 10px;
-}
-.header {
-    margin: 0 auto;
-    display: block;
-}
-
-#tab:hover {
+.tab:hover {
     color: #E46E2E;
     background-color: transparent;
 }
-@media(min-width:768px) {
-
-    .navbar-fixed-top .navbar-brand {
-        padding: 15px 0;
-    }
-    .tab {
-        text-align: center;
-    }
+.footer {
+    background-color: #979797;
 }
-@media(max-width:992px) {
-    .language-set #feature {
-        display: block;
-    }
-    .notebook-preview img {
-        margin: 0 auto;
-    }
-    #notebookicon {
-        display: block;
-        margin: 0 auto;
-        padding-bottom: 10px;
-    }
-    .notebook-preview h1 {
-        text-align: center;
-    }
+.footer p {
+    color: white;
+    padding-top: 10px;
+}
+.footer li{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+.footer li::after {
+    content:" |";
+}
+.footer li:last-of-type::after {
+    content:"";
+}
+.footer-text {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+/*Main logo animation on the front page of the Jupyter website */
+#main-logo {
+	height: calc(100% - 20px);
+	margin-top: 10px;
+    padding-left: 20px;
+}
+@-webkit-keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
+/*This entire section related to fading is for the front page with the Jupyter logo*/
+.fade-in {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use         animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation      is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+.fade-in.one {
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.fade-in.two {
+    -webkit-animation-delay: 0.7s;
+    -moz-animation-delay:0.7s;
+    animation-delay: 0.7s;
+}
+.fade-in.three {
+    -webkit-animation-delay: 1.1s;
+    -moz-animation-delay: 1.1s;
+    animation-delay: 1.1s;
 }
 .jumbotron {
     margin-top:30px;
@@ -162,101 +133,78 @@ animation-delay: 1.1s;
 .jumbotron img {
     margin: 0 auto;
 }
-.jumbotron-text p{
-    font-size: 21px;
-    line-height: 31px;
+.jumbotron-text {
     text-align: center;
+    padding-bottom: 32px;
+}
+.img-container {
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+.img-container img {
+    vertical-align: center;
+}
+
+/* Reusable elements */
+
+/* Header section of each page */
+.header{
     padding-bottom: 30px;
-}
-@media (max-width: 767px){
-    .jumbotron {
-        margin-right: 5%;
-    }
+    text-align: center;
+    background-color: #F8F8F8;
 }
 
-.notebook-preview p {
-    line-height: 31pt;
-    padding-top: 41px;
-    padding-bottom: 41px;
-    font-size: 21px;
+/* Section elements */
+/* Section classes used for particular sections within a page. Sections should differ in background color when used next to each other */
+.section-white {
+  padding: 56px 0px;
+  background-color: white;
 }
-@media(max-width:1200px) {
-    
-    .notebook-preview p {
-        line-height: 25pt;
-        font-size: 15pt;
-    }
+.section-grey {
+  padding: 56px 0px;
+  background-color: #fafafa;
+  border-top: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
 }
-.notebook-features, .architecture, .about-block, .companyuse, .jupyterhub .container {
-    padding-top: 5%;
-    padding-bottom: 5%;
+/* Used to specifying when a section is at the top or bottom of the page to apply appropriate border */
+.top-section-border {
+    border-top: 1px solid #E0E0E0;
 }
-.notebook-features h2{
-    font-size: 21px;
-    line-height: 1.5;
-    color:#766A6A;
+.bottom-section-border {
+    border-bottom: 1px solid #E0E0E0;
 }
-
-.notebook-features p a {
-    color:gray;
-    font-weight: 500;
-    text-decoration: underline;
+.section-content {
+    display: block;
+    margin: 0 auto;
 }
-
-.notebook-features p a:hover {
-    color: rgb(224, 103, 29);   
+/* Icon above section header */
+.section-icon {
+    display: block;
+    margin: 0 auto;
 }
-
-
-.notebook-features p{
-    padding-top: 26px;
+/* Header for each section */
+.section-header {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+/* Used for descriptions of sections underneath section headers*/
+.support-paragraph {
     font-size: 15px;
     line-height: 1.5;
-}
-
-@media(max-width:1200px) {
-    
-    .notebook-features .language-set h2{
-        padding-top: 0px;
-    }  
-    .notebook-features #feature {
-        padding-top: 4px;
-    }
-}
-@media(max-width:992px) {
-    .notebook-features  img {
-        margin: 0 auto;
-        width: 125px;
-    }
-    .notebook-features p, .notebook-features h2, .notebook-preview p {
-        text-align: center;
-    }
-    .share-set, .widget-set, .data-set {
-        padding-top: 40px;
-    }
-}
-.install-prompt {
-    background-color: #FDFDFD;
-    border-style: solid;
-    border-top-color: #979797;
-    border-bottom-color: #979797;
-    border-right-style: none;
-    border-left-style: none;
-    border-width: thin;
-    
-}
-.install-prompt .content {
-    padding-top: 4%;
-    padding-bottom: 4%;
-}
-
-.buttons {
-    font-size: 19.24px;
     text-align: center;
-    padding-top: 40px;
-    padding-bottom: 20px;
+    margin-bottom: 16px;
 }
-.buttons a{
+
+/* Orange action button */
+.orange-button {
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
     background-color: #E46E2E;
     padding: 13px 26px;
     border-radius: 5.82px;
@@ -264,25 +212,54 @@ animation-delay: 1.1s;
     text-decoration: none;
     box-shadow: 0px 3px #863001;
 }
-#box2 {
-    padding: 13px 29px;
-}
-.buttons a:hover{
+.orange-button:hover {
     background-color: #F27624;
-    -webkit-transition: .2s;
-}
-@media(max-width:509px) {
-    #box2 {
-        margin-top: 20px;
-    }
-}
-.companyuse ul {
     text-decoration: none;
-    padding-left: 0px;
-    margin: 0 auto;
+    color: white;
 }
-.companies h2{
-    padding-bottom: 30px;
+
+/* Jupyter Notebook highlight section on front page */
+.nb-highlight-text {
+    margin-top: 60px;
+}
+.notebook-icon {
+    width: 60px;
+    height: auto;
+    margin-right: 12px;
+}
+/* Give space between the notebook features (4 features) on front page and the     img + description */
+.notebook-features {
+    margin-top: 32px;
+}
+.notebook-features p{
+    padding-top: 16px;
+}
+.nb-desc {
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* Install prompt on front page */
+.install-prompt {
+    background-color: #FAFAFA;
+    border-style: solid;
+    border-top-color: #BDBDBD;
+    border-bottom-color: #BDBDBD;
+    border-right-style: none;
+    border-left-style: none;
+    border-width: thin;
+    text-align: center;
+    padding: 4px 0px 24px 0px;
+}
+.prompt-header {
+    margin-bottom: 16px;
+}
+
+/* Companies section for only "Currently in use" (this section acts differently than customer logos in the "About" section of the site) */
+
+/*Section-center is used to center the companies on the home page & get rid of padding on left associated with ul*/
+.section-center {
+    text-align: center;
 }
 .companies li {
     display: inline-block;
@@ -293,19 +270,6 @@ animation-delay: 1.1s;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-@media(max-width:1200px) {
-    .companies li{
-        width:23%;
-    }
-}
-@media(max-width:767px) {
-    .companies li {
-        width: 30%;
-    }
-    body {
-        padding-top: 50px;
-    }
-}
 .companies .col img{
     display: block;
     width: 100%
@@ -315,10 +279,10 @@ animation-delay: 1.1s;
     -moz-opacity: .065;
     opacity: 0.65;
     -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
 }
 .greydout:hover {
     webkit-opacity: 1;
@@ -326,77 +290,28 @@ animation-delay: 1.1s;
     opacity: 1;
 }
 
-.jupyterhub {
-    background-color: #FDFDFD;
-}
-.jupyterhub .container {
-    border-style: solid;
-    border-top-color: #979797;
-    border-bottom-color: #979797;
-    border-right-style: none;
-    border-left-style: none;
-    border-width: thin;
-}
-.featuremiddle {
+/* JupyterHub section on front page */
+/* Feature-middle is for the JupyterHub features that are in the middle that need to be offset to sit on the track */
+.feature-middle {
     margin-top: 40px;
 }
-.hubdescription p {
-    padding-top: 26px;
-    font-size: 21px;
-    line-height: 1.5;
-}
-.hubfeature h2 {
-    font-size: 21px;
-    line-height: 1.5;
+.hubfeature {
     text-align: center;
-    color: #766A6A;
-}
-.hubfeature p {
-    font-size: 15px;
-    line-height: 1.5;
-    text-align: center;
-    color: #766A6A;
-    padding-top: 2px;
 }
 .hubfeature img {
     margin: 0 auto;
 }
 .hubfeatures {
-    padding-top: 50px;
+    /* Padding that is used to make the hubfeature circles sit on track */
+    padding-top: 48px;
     background: url("../assets/line.svg");
     background-position:  top center;
     background-repeat: no-repeat;
 }
-@media(max-width:992px) {
-    .hubdescription {
-        text-align: center;
-        padding-top: 10%;
-    }
-    .hubfeatures{
-        background: none;
-    }
-    #data {
-    padding-top: 40px;
-    }
-    .hubfeature h2 {
-        text-align: center;
-    }
-    #hublogo {
-        width: 60%;
-    }
-}
-.architecturedescription p {
-    padding-top: 26px;
-    font-size: 21px;
-    line-height: 1.5;
-}
-.architecturecontent {
-    padding-top: 26px;
-    margin: 0 auto;
-    text-align: center;
-}
+
+/* Architecture section on front page */
 .arcfeature {
-    font-size: 21px;
+    background-color: white;
     text-align: center;
     border-radius: 5px;
     height: 300px;
@@ -404,22 +319,16 @@ animation-delay: 1.1s;
     margin: 0 auto;
     border: 1px solid #CCC;
 }
-.arcfeature .front img {
-    margin-top: 15px;
-    margin-bottom: 40px;
-}
-.arcfeature .front2 img {
-    margin-top: 15px;
-    margin-bottom: 40px;
-}
-.arcfeature .front3 img {
+.arcfeature .front img, .arcfeature .front2 img, .arcfeature .front3 img {
     margin-top: 15px;
     margin-bottom: 40px;
 }
 .arcfeature .back p {
     margin-top: 40px;
 }
+/* Specific grey button used on each card in the Architecture section on the front page of the site */
 .arc-button {
+    font-size: 20px;
     background-color: #8D8D8D;
     box-shadow: 0px 3px #595959;
     padding: 8px 26px;
@@ -439,51 +348,22 @@ animation-delay: 1.1s;
     height: 100%;
     vertical-align: center;
 }
+/* Used to make cursor turn to link specific cursor when hovering over architecture buttons */
 .bt, .bt1, .bt2 {
     cursor: default;
 }
 
-#block3 {
-    margin-bottom: 42px;
-    margin-top: 35px;
-}
+/* Styling for each card in the architecture section on front page. Each card needs it's own front class to work with the javascript associated with the cards */
+.card .front, .card .front2, .card .front3 {
+    width: 275px;
+    height: 275px;
+    transition: transform 0.3s linear 0s;
+    -webkit-transition: -webkit-transform 0.3s linear 0s;
 
-.card .front {
-    width: 275px;
-    height: 275px;
-    transition: transform 0.3s linear 0s;
-    -webkit-transition: -webkit-transform 0.3s linear 0s;
- 
     -webkit-backface-visibility: hidden;
        -moz-backface-visibility: hidden;
          -o-backface-visibility: hidden;
-            backface-visibility: hidden;  
-    position: absolute;
-    text-align: center;
-}
-.card .front2 {
-    width: 275px;
-    height: 275px;
-    transition: transform 0.3s linear 0s;
-    -webkit-transition: -webkit-transform 0.3s linear 0s;
- 
-    -webkit-backface-visibility: hidden;
-       -moz-backface-visibility: hidden;
-         -o-backface-visibility: hidden;
-            backface-visibility: hidden;  
-    position: absolute;
-    text-align: center;
-}
-.card .front3 {
-    width: 275px;
-    height: 275px;
-    transition: transform 0.3s linear 0s;
-    -webkit-transition: -webkit-transform 0.3s linear 0s;
- 
-    -webkit-backface-visibility: hidden;
-       -moz-backface-visibility: hidden;
-         -o-backface-visibility: hidden;
-            backface-visibility: hidden;  
+            backface-visibility: hidden;
     position: absolute;
     text-align: center;
 }
@@ -493,23 +373,14 @@ animation-delay: 1.1s;
 }
 .content-back p{
     margin-top: 10px;
-    margin-bottom: 45px;
-    font-size: 15px;
+    margin-bottom: 16px;
 }
-#document {
-    margin-bottom: 44px;
-}
-/* The .back element should be rotated at first, facing his back, hidden*/
 .card .back{
- 
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
 
     text-align: center;
 }
- 
-
-
 .arcfeature a {
     text-decoration: none;
     color: white;
@@ -523,97 +394,14 @@ animation-delay: 1.1s;
     display: inline-block;
 }
 
-@media(max-width:992px) {
-    #arcicon1 {
-        display: block;
-        margin: 0 auto;
-        padding-bottom: 10px;
-    }
-    .architecturedescription h2 {
-        text-align: center;
-    }
-    .architecturedescription p {
-        text-align: center;
-    }
-}
-@media (min-width: 1200px) {
-    .notebook-features, .companyuse, .jupyterhub .container, .architecture, .install-prompt .content {
-        padding-top:75px;
-        padding-bottom: 75px;
-    }
-    .install-prompt .content{
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-}
-
 /*About Page */
-
-.header{
-    padding-bottom: 30px; 
-    text-align: center;
-    background-color: #F8F8F8;
-}
-.header h1 {
-    font-size: 41.16px;
-}
-.header p {
-    font-size: 21px;
-}
-.supportparagraph {
-    font-size: 15px;
-    line-height: 1.5;
-}
-@media (max-width: 992px) {
-    .header h1 {
-        font-size: 34px;
-    }
-    .header p {
-        font-size: 18px;
-        padding-top: 20px;
-    }
-    .supportparagraph {
-        font-size: 10.71pt;
-    }
-}
-.about-block {
-    text-align: center;
-}
-.about-block img {
+/* Used to position the replacement SVG image when a screen is too small for the D3 visualization of contributors */
+#visualization svg{
     display: block;
     margin: 0 auto;
-    padding: 20px;
-}
-#visualization {
-    display: block;
-    margin: 0 auto;
-    padding-top:40px;
 }
 
-.row1 {
-    padding-top: 5%;
-}
-.col6 {
-    display: inline-block;
-    vertical-align: top;
-    min-height: 1px;
-    position: relative;
-    margin: 20px 0;
-    width: 240px;
-}
-.customerLogo {
-    height: 100px;
-}
-.logo-fix {
-    width: 200px;
-}
-.gray {
-    background-color: #F9F9F9;
-}
-.steering-council {
-    margin: 0 auto;
-    display: block;
-}
+/* .Card-header, .card-info, .card-link, and .material are used for cards within the steering council section of the page. */
 .card-header {
     text-align: left;
     float:left;
@@ -638,43 +426,45 @@ animation-delay: 1.1s;
     text-decoration: none;
 }
 .material {
-  background: #fff;
-  border-radius: 2px;
-  display: inline-block;
-  height: 130px;
-  margin: 1rem;
-  position: relative;
-  width: 200px;
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    height: 130px;
+    margin: 1rem;
+    position: relative;
+    width: 200px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.2s ease-in-out;
+}
+/* Styling for the Sponsor logos on About page*/
+.sponsor {
+    margin: 16px 0px;
+}
+.sponsor-logo {
+    width: 75%;
+    height: auto;
 }
 
-.material-1 {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.2s ease-in-out;
-}
-
-
-.transparent {
-    background-color: white;
-}
-
-.menu {
-    margin-top: 20px;
-
-}
-.institutional .clicky{
+/* Used to style the clickable tabs within the governance section */
+.clickable{
     display: inline-block;
     text-decoration: none;
-    font-size: 21px;
+    font-size: 20px;
     margin-left: 20px;
     margin-bottom: 10px;
     cursor: default;
-} 
-
-.clicky:hover {
+}
+.clickable:hover {
     color: #E46E2E
 }
 
-.items {
+/* Active state when a tab in the governance section is selected */
+.menuClicked {
+    color: #E46E2E;
+}
+
+/* Used to style the description of a particular tab within the governance section */
+.governance-desc {
     border-color: black;
     border-width: thin;
     border-style: solid;
@@ -684,108 +474,8 @@ animation-delay: 1.1s;
     transition: all 1s;
     min-height: 100px;
 }
-.content-gov {
-    padding-left: 20px;
-    padding-right: 35px;
-    color: #818181;
-}
-
-
-#institutional {
-    background-color: #F9F9F9;
-}
-
-.menuClicked {
-    color: #E46E2E;
-}
-
-@media (max-width: 509px) {
-    .items {
-        padding:10px;
-        min-height:0px;
-    }
-
-    .content-gov {
-        margin: 0px;
-        padding: 10px;
-    }
-}
-@media (max-width: 395px) {
-    .content-gov {
-        margin-top: 90px;
-    }
-}
-@media (max-width: 365px) {
-    .content-gov {
-        margin-top: 130px;
-    }
-}
-#footer1 {
-    background-color: #979797;
-}
-.navbar-bottom p {
-    color: white;
-    padding-top: 10px;
-}
-.navbar-bottom li{
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-}
-.navbar-bottom a {
-    text-decoration: none;
-    color: white;
-}
-.navbar-bottom li::after {
-    content:" |";
-}
-.navbar-bottom li:last-of-type::after {
-    content:"";
-}
-
-@media (min-width: 510px) {
-    .follow {
-        float: right !important;
-    }
-    .navbar-bottom ul {
-        float: left;
-    }
-}
-@media (max-width: 509px) {
-    .follow {
-        display: block;
-        margin: 0 auto;
-    }
-    .navbar-bottom .container {
-        text-align: center;
-        padding-bottom: 15px;
-    }
-    .navbar-bottom ul {
-        float: left;
-    }
-}
-@media (min-width: 768px) {
-    .follow {
-        margin-top: 15px;
-    }
-}
-#footer-text {
-    margin-left: 0px;
-    padding-left: 0px;
-}
-
-/* Widgets Page */
-.widgets-paragraph {
-    font-size: 15px;
-    line-height: 1.5;
-    padding-top: 26px;
-}
 
 /* Donate Page */
-#donate-paragraph {
-    font-size: 15px;
-    line-height: 1.5;
-}
 .donate-box {
     background-color: white;
     height: 500px;
@@ -793,57 +483,40 @@ animation-delay: 1.1s;
     border-color: #979797;
     border-style: solid;
     border-width: 1px;
-    padding-left: 3px;
+    padding: 32px;
     margin-top: 5%;
     height: 20%;
 }
-.donate-box img, .donate-box p, #donate-formatting {
-    padding-top: 25px;
-    padding-left: 25px;
-}
-.donate-box p {
-    font-size: 15px;
-    line-height: 1.5;
-    padding-right: 25px;
-}
-#donate-button {
-    background-color: #E46E2E;
-    padding: 13px 26px;
-    border-radius: 5.82px;
-    text-align: center;
-    font-size: 18px;
-    color: white;
-    text-decoration: none;
-    box-shadow: 0px 3px #863001;
-    margin-bottom: 25px;
-}
 
-#donate-button:hover {
-    text-decoration: none;
-    background-color: #DB5106;
-    box-shadow: 0px 3px #863001;
-}
+/*Community Resources Page */
 
-#donate-link {
-    text-decoration: none;
-}
-
-/*Community Page */
-
-.community-section {
-    padding: 17px;
+/* Resource section is used to create a new resource on the community resources page. */
+.resource-section {
+    padding: 16px;
     border-bottom: 1px solid #E8E8E8;
-    height: 160px;
+    vertical-align: middle;
 }
-.community-text {
-    padding-top: 9px;
+/* Used to specify that the last resource should not have a border underneath it's content */
+.resource-section:last-child {
+    border-bottom: none;
+}
+.resource-text {
     text-align: left;
     vertical-align: middle;
 }
-.community-button {
-    margin-top: 48px;
+.resource-logo {
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+} 
+.resource-name {
+     margin-top: 6px;
 }
-.community-button a {
+.resource-button {
+    text-align: center;
+    margin-top: 32px;
+}
+.resource-button a {
     background-color: #E46E2E;
     padding: 13px 60px;
     border-radius: 5.82px;
@@ -853,62 +526,249 @@ animation-delay: 1.1s;
     letter-spacing: 1px;
     -webkit-transition: .2s;
 }
-.community-button a:hover {
+.resource-button a:hover {
     background-color: #F27624;
 }
 
-.community-section:last-child {
-    border-bottom: none;
+/* Bootstrap Breakpoint Media Queries */
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .section-white, .section-grey {
+    padding: 5% 0%;
+  }
 }
-
-#github-break {
-    display: none;
+@media (max-width: 1200px) {
+    .nb-highlight-text {
+        margin-top: 32px;
+    }
+    .notebook-features .language-set h2{
+        padding-top: 0px;
+    }
+    .notebook-features #feature {
+        padding-top: 4px;
+    }
+    .notebook-preview p {
+        line-height: 25pt;
+        font-size: 15pt;
+    }
+    .companies li{
+        width:23%;
+    }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    p {
+        font-size: 16px;
+        line-height: 1.375;
+        font-weight: 400;
+    }
+    h4 {
+        font-size: 18px;
+        line-height: 1.22;
+        font-weight: 500;
+    }
+    h3 {
+        font-size: 28px;
+        line-height: 1.25;
+        font-weight: 500;
+    }
+    h2 {
+        font-size: 36px;
+        line-height: 1.25;
+        font-weight: 500;
+    }
+    h1 {
+        font-size: 48px;
+        line-height: 1.05em;
+        font-weight: 500;
+    }
 }
 @media (max-width: 992px) {
+    p {
+        font-size: 16px;
+        line-height: 1.25em;
+        font-weight: 400;
+    }
+    h4 {
+        font-size: 18px;
+        line-height: 1.11em;
+        font-weight: 500;
+    }
+    h3 {
+        font-size: 22px;
+        line-height: 1.136em;
+        font-weight: 500;
+    }
+    h2 {
+        font-size: 26px;
+        line-height: 1.153em;
+        font-weight: 500;
+    }
+    h1 {
+        font-size: 32px;
+        line-height: 1.25em;
+        font-weight: 500;
+    }
+    .nb-highlight-text {
+        text-align: center;
+    }
+    .notebook-features {
+        margin-top: 0px;
+    }
+    .language-set #feature {
+        display: block;
+    }
+    .notebook-preview img {
+        margin: 0 auto;
+    }
+    .notebook-icon {
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
+    .notebook-preview h1 {
+        text-align: center;
+    }
+    .notebook-features  img {
+        margin: 0 auto;
+        width: 125px;
+    }
+    .notebook-features {
+        text-align: center;
+    }
+    .notebook-feature {
+        padding-top: 40px;
+    }
+    .hubfeatures{
+        background: none;
+    }
+    #data {
+        padding-top: 40px;
+    }
+    .hubfeature h2 {
+        text-align: center;
+    }
+    #hublogo {
+        width: 60%;
+    }
+    .architecturedescription h2 {
+        text-align: center;
+    }
+    .architecturedescription p {
+        text-align: center;
+    }
     .donate-box {
         margin-top: 10%;
     }
-    .community-section {
+    .resource-section {
         padding: 0px;
         padding-top: 10px;
         padding-bottom: 30px;
         height: 400px;
     }
-    .community-text {
-        padding-top: 0px;
-        text-align: center;
-    }
-    .community-section:nth-child(even) {
+    .resource-section:nth-child(even) {
         border-left: 1px solid #E8E8E8;
     }
-    .community-section img {
+    .resource-section img {
         padding-bottom: 0px;
         margin-top: 15px;
     }
-    #github-break {
-        display: inline;
+    .resource-content {
+        padding-top: 48px;
+    }
+    .resource-text {
+        padding-top: 0px;
+        text-align: center;
     }
     .nav>li>a {
         font-size: 13px;
         letter-spacing: 1px;
     }
-    
 }
-.community {
-    margin: 0 auto;
-    display: block;
-    padding: 0px 0px;
-}
-@media (min-width: 768px) {
+/* Small devices (tablets, 768px and up) */
+@media(min-width:768px) {
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+    .tab {
+        text-align: center;
+    }
+    .follow {
+        margin-top: 15px;
+    }
     .navbar-toggle {
         margin-top: 20px;
     }
 }
 @media (max-width: 768px) {
+    p {
+        font-size: 16px;
+        line-height: 1.25em;
+        font-weight: 400;
+    }
+    h4 {
+        font-size: 18px;
+        line-height: 1.11em;
+        font-weight: 500;
+    }
+    h3 {
+        font-size: 22px;
+        line-height: 1.136em;
+        font-weight: 500;
+    }
+    h2 {
+        font-size: 26px;
+        line-height: 1.153em;
+        font-weight: 500;
+    }
+    h1 {
+        font-size: 32px;
+        line-height: 1.25em;
+        font-weight: 500;
+    }
     .navbar-header {
         margin-bottom: 0;
     }
     .navbar-toggle {
         padding-top: 10px;
+    }
+    .companies li {
+        width: 30%;
+    }
+    body {
+        padding-top: 50px;
+    }
+    .jumbotron {
+        margin-right: 5%;
+    }
+}
+/* Extra small devices (these are mostly fixes to make sure elements act correctly to look good) */
+@media (min-width: 509px) {
+    .follow {
+        float: right !important;
+    }
+    .footer ul {
+        float: left;
+    }
+}
+@media(max-width:509px) {
+    .install-button {
+        margin-top: 20px;
+    }
+    .items {
+        padding:10px;
+        min-height:0px;
+    }
+    .follow {
+        display: block;
+        margin: 0 auto;
+    }
+    .footer {
+        text-align: center;
+        padding-bottom: 15px;
+    }
+    .footer ul {
+        float: left;
     }
 }
