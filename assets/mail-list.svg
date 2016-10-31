@@ -1,56 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   version="1.1"
-   id="Layer_1"
-   x="0px"
-   y="0px"
-   viewBox="0 0 87 76"
-   enable-background="new 0 0 24 24"
-   xml:space="preserve"
-   inkscape:version="0.91 r13725"
-   sodipodi:docname="mail-list.svg"
-   width="87"
-   height="76"><metadata
-     id="metadata13"><rdf:RDF><cc:Work
-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
-     id="defs11" /><sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1847"
-     inkscape:window-height="1056"
-     id="namedview9"
-     showgrid="false"
-     inkscape:zoom="4.9166667"
-     inkscape:cx="-46.56327"
-     inkscape:cy="20.129129"
-     inkscape:window-x="73"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="Layer_1" /><g
-     id="g3"
-     transform="matrix(4.8333333,0,0,4.8333333,-14.5,-24.666667)"
-     style="fill:#939393;stroke:none;fill-opacity:1"><path
-       d="M 21,9 C 21,7.3 19.7,6 18,6 l -15,0 0,3 9,4 9,-4 z"
-       id="path5"
-       inkscape:connector-curvature="0"
-       style="fill:#939393;stroke:none;fill-opacity:1" /><path
-       d="m 3,11 0,6 c 0,1.7 1.3,3 3,3 l 15,0 0,-9 -9,4 -9,-4 z"
-       id="path7"
-       inkscape:connector-curvature="0"
-       style="fill:#939393;stroke:none;fill-opacity:1" /></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <circle id="Oval" fill="#868686" cx="100" cy="100" r="100"></circle>
+            <g id="mail-list" transform="translate(40.000000, 56.000000)" fill="#FFFFFF">
+                <g id="Artboard" transform="translate(0.000000, 0.000000)">
+                    <g id="Page-1">
+                        <g id="Artboard">
+                            <path d="M119.917127,11.4702232 C119.915975,5.38486388 114.984664,0.443048061 108.896397,0.432357455 L11.101559,0.260636606 C5.01612999,0.24995097 0.0829150303,5.17830036 0.0829150303,11.2644565 L0.0829150303,20.2137402 L60.0002697,46.8436758 L119.917625,20.2137402 C119.917625,8.89601764 119.917127,11.4702232 119.917127,11.4702232 L119.917127,11.4702232 Z M0.0829150303,67.5948236 C0.0829150303,78.9125461 0.0823752485,76.7998273 0.0823752485,76.7998273 C0.0812471394,82.8880461 5.01092197,87.81298 11.0994517,87.7999612 L108.898506,87.5908376 C114.984198,87.5778242 119.917625,82.6385261 119.917625,76.5426152 L119.917625,27.6499202 L60.0002697,54.2798558 L0.0829150303,27.6499202 L0.0829150303,67.5948236 L0.0829150303,67.5948236 Z" id="Combined-Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

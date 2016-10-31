@@ -19,18 +19,18 @@
                     {% for nav in site.data.nav.head %}
                       {% if nav.url %}
                            <li>
-                             <a href="{{site.baseurl}}{{nav.url}}" class="tab" id="tab" target="_blank">{{nav.title | upcase}}</a>
+                             <a href="{{site.baseurl}}{{nav.url}}" class="tab" target="_blank">{{nav.title | upcase}}</a>
                            </li>
                       {% else %}
                         {% for targetpage in site.pages %}
                            {% if nav contains targetpage.title%}
                               {% if page.title == targetpage.title %}
                                <li>
-                                   <a href  class="tab navbar-active" id="tab">{{targetpage.title| upcase}}</a>
+                                   <a href  class="tab navbar-active">{{targetpage.title| upcase}}</a>
                                </li>
                                {% else %}
                                <li>
-                                   <a href="{{site.baseurl}}{{targetpage.url}}" class="tab" id="tab">{{targetpage.title| upcase}}</a>
+                                   <a href="{{site.baseurl}}{{targetpage.url}}" class="tab">{{targetpage.title| upcase}}</a>
                                </li>
                                {% endif %}
                            {% endif %}
