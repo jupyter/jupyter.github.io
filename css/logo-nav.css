@@ -81,8 +81,8 @@ body {
     content:"";
 }
 .footer-text {
-    margin-left: 0px;
-    padding-left: 0px;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 /*Main logo animation on the front page of the Jupyter website */
@@ -160,11 +160,11 @@ body {
 /* Section elements */
 /* Section classes used for particular sections within a page. Sections should differ in background color when used next to each other */
 .section-white {
-  padding: 56px 0px;
+  padding: 56px 0;
   background-color: white;
 }
 .section-grey {
-  padding: 56px 0px;
+  padding: 56px 0;
   background-color: #fafafa;
   border-top: 1px solid #E0E0E0;
   border-bottom: 1px solid #E0E0E0;
@@ -210,7 +210,7 @@ body {
     border-radius: 5.82px;
     color: white;
     text-decoration: none;
-    box-shadow: 0px 3px #863001;
+    box-shadow: 0 3px #863001;
 }
 .orange-button:hover {
     background-color: #F27624;
@@ -249,7 +249,7 @@ body {
     border-left-style: none;
     border-width: thin;
     text-align: center;
-    padding: 4px 0px 24px 0px;
+    padding: 4px 0 24px 0;
 }
 .prompt-header {
     margin-bottom: 16px;
@@ -330,7 +330,7 @@ body {
 .arc-button {
     font-size: 20px;
     background-color: #8D8D8D;
-    box-shadow: 0px 3px #595959;
+    box-shadow: 0 3px #595959;
     padding: 8px 26px;
     border-radius: 5.82px;
     color: white;
@@ -339,7 +339,7 @@ body {
 
 #arcfeature1 a:hover, #protocol a:hover, #kernel a:hover {
     background-color: #DB5106;
-    box-shadow: 0px 3px #863001;
+    box-shadow: 0 3px #863001;
 }
 .card {
     display: block;
@@ -412,7 +412,7 @@ body {
     float:left;
     font-size: 15px;
     text-align: left;
-    margin-top: 0px;
+    margin-top: 0;
 }
 .card-link a {
     float: left;
@@ -438,7 +438,7 @@ body {
 }
 /* Styling for the Sponsor logos on About page*/
 .sponsor {
-    margin: 16px 0px;
+    margin: 16px 0;
 }
 .sponsor-logo {
     width: 75%;
@@ -521,7 +521,7 @@ body {
     padding: 13px 60px;
     border-radius: 5.82px;
     text-decoration: none;
-    box-shadow: 0px 3px #863001;
+    box-shadow: 0 3px #863001;
     color: white;
     letter-spacing: 1px;
     -webkit-transition: .2s;
@@ -542,7 +542,7 @@ body {
         margin-top: 32px;
     }
     .notebook-features .language-set h2{
-        padding-top: 0px;
+        padding-top: 0;
     }
     .notebook-features #feature {
         padding-top: 4px;
@@ -613,7 +613,7 @@ body {
         text-align: center;
     }
     .notebook-features {
-        margin-top: 0px;
+        margin-top: 0;
     }
     .language-set #feature {
         display: block;
@@ -661,7 +661,7 @@ body {
         margin-top: 10%;
     }
     .resource-section {
-        padding: 0px;
+        padding: 0;
         padding-top: 10px;
         padding-bottom: 30px;
         height: 400px;
@@ -670,14 +670,14 @@ body {
         border-left: 1px solid #E8E8E8;
     }
     .resource-section img {
-        padding-bottom: 0px;
+        padding-bottom: 0;
         margin-top: 15px;
     }
     .resource-content {
         padding-top: 48px;
     }
     .resource-text {
-        padding-top: 0px;
+        padding-top: 0;
         text-align: center;
     }
     .nav>li>a {
@@ -758,7 +758,7 @@ body {
     }
     .items {
         padding:10px;
-        min-height:0px;
+        min-height:0;
     }
     .follow {
         display: block;
