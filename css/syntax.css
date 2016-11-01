@@ -1,6 +1,6 @@
 .highlight .err {
-    color: #a61717;
     background-color: #e3d2d2;
+    color: #a61717;
 }
 
 .highlight .k {
@@ -28,18 +28,18 @@
 
 .highlight .cs {
     color: #999999;
-    font-weight: bold;
     font-style: italic;
+    font-weight: bold;
 }
 
 .highlight .gd {
-    color: #000000;
     background-color: #ffdddd;
+    color: #000000;
 }
 
 .highlight .gd .x {
-    color: #000000;
     background-color: #ffaaaa;
+    color: #000000;
 }
 
 .highlight .ge {
@@ -55,13 +55,13 @@
 }
 
 .highlight .gi {
-    color: #000000;
     background-color: #ddffdd;
+    color: #000000;
 }
 
 .highlight .gi .x {
-    color: #000000;
     background-color: #aaffaa;
+    color: #000000;
 }
 
 .highlight .go {
@@ -250,6 +250,6 @@
 }
 
 .highlight .gc {
-    color: #999;
     background-color: #EAF2F5;
+    color: #999;
 }
