@@ -9,7 +9,7 @@
     display: inline;
 }
 
-img.img-scaling {
+.img-scaling {
     height: 32px;
     vertical-align: top;
 }
