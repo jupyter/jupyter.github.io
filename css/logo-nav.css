@@ -437,7 +437,7 @@ body {
 .sponsor {
     margin: 16px 0;
 }
-.sponsor-logo {
+.company-logo {
     height: auto;
     width: 75%;
 }
@@ -505,7 +505,7 @@ body {
     display: block;
     height: 80px;
     margin: 0 auto;
-} 
+}
 .resource-name {
      margin-top: 6px;
 }
