@@ -5,8 +5,20 @@ import os
 import sys
 
 #Change these to fit desired repos and icons
-REPOS = [("jupyter", "notebook"), ("jupyter", "jupyter_console"), ("jupyter", "jupyter_core"), ("ipython", "ipywidgets"), \
-        ("ipython", "ipyparallel"), ("jupyter", "nbconvert"), ("jupyter", "nbformat"), ("jupyter", "nbgrader"), ("jupyter", "tmpnb")]
+REPOS = [
+    ("jupyterlab", "jupyterlab"), 
+    ("jupyterhub", "jupyterhub"),
+    ("jupyter", "notebook"), 
+    ("jupyter", "jupyter_console"), 
+    ("jupyter", "jupyter_core"), 
+    ("ipython", "ipywidgets"), 
+    ("ipython", "ipyparallel"), 
+    ("jupyter", "nbconvert"), 
+    ("jupyter", "nbformat"), 
+    ("jupyter", "tmpnb"),
+    ("jupyter", "nbgrader"),
+    ("jupyter", "qtconsole") 
+]
 REPO_IMG_DIR = "repo_images/"
 IMG_TYPE = "png"
 CENTER_IMG = "https://jupyter.org/jupyter-circle.png"
