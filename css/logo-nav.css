@@ -243,10 +243,10 @@ body {
     background-color: #FAFAFA;
     border-bottom-color: #BDBDBD;
     border-left-style: none;
-    border-right-style: none;
     border-style: solid;
     border-top-color: #BDBDBD;
     border-width: thin;
+    border-right: 0px;
     padding: 4px 0 24px 0;
     text-align: center;
 }
