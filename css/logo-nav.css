@@ -20,13 +20,12 @@ body {
     color: black;
 }
 .navbar-fixed-top .navbar-brand {
-    margin-top: 5px;
     padding: 0 15px;
 }
 .navbar-header .icon-bar {
     background-color: black;
 }
-.navbar-active {
+.navbar-nav > li > .navbar-active {
     color: #E46E2E;
 }
 .navbar-scroll {
@@ -36,8 +35,12 @@ body {
     -webkit-box-shadow: 1px 1px 1px #999;
     box-shadow: 1px 1px 1px #999;
 }
+.navbar-logo {
+    height: 45px;
+}
 .nav > li > a {
-    padding: 15px 13px 10px;
+    font-size: 16px;
+    padding: 12px 16px 10px;
 }
 .nav > li > a:hover {
     background-color: transparent;
@@ -735,6 +738,10 @@ body {
     }
     .navbar-toggle {
         padding-top: 10px;
+    }
+    .navbar-logo {
+        height: 40px;
+        margin-top: 6px;
     }
     .companies li {
         width: 30%;
