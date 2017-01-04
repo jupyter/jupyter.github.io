@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="114px" height="85px" viewBox="0 0 114 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 21</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0.223214286" width="116" height="94.9199982" rx="4"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="116" height="94.9199982" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-588.000000, -537.000000)">
+            <g id="Group-19" transform="translate(58.000000, 336.000000)">
+                <g id="Group-16" transform="translate(393.000000, 66.000000)">
+                    <g id="Group-10" transform="translate(0.000000, 120.000000)">
+                        <g id="Rectangle-8">
+                            <g id="Group-21" transform="translate(137.000000, 15.000000)">
+                                <use id="Rectangle-8" stroke="#979797" mask="url(#mask-2)" stroke-width="6" fill="#000000" xlink:href="#path-1"></use>
+                                <path d="M16.78125,26.8684896 L25.1484375,22.8606771 L16.78125,18.8528646 L16.78125,16.9778646 L27.5976562,22.2630208 L27.5976562,23.4583333 L16.78125,28.7434896 L16.78125,26.8684896 Z M43.14875,35.1302083 L28.3948438,35.1302083 L28.3948438,33.4895833 L43.14875,33.4895833 L43.14875,35.1302083 Z" id="&gt;_" fill="#FFFFFF"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

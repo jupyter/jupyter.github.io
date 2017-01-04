@@ -1,0 +1,152 @@
+---
+layout: default
+title: Documentation
+navbar_gray: false
+---
+
+
+<style>
+/*Styling for the community section */
+/* Style for inter-repo links */
+.link1 {
+  stroke: white;
+  stroke-width: 1;
+}
+
+/* Style for repo-contributor links */
+.link2 {
+  stroke: #e6e6e6;
+  stroke-width: 2;
+}
+
+.node text {
+  pointer-events: none;
+  font: 0px sans-serif;
+}
+</style>
+
+
+<section>
+    <div class="header header-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Documentation</h2>
+                    <p>Browse documentation for everything in the Jupyter universe</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="steering-council">
+    <div class="section-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 docs-get-started">
+                  <h3 class="docs-get-started-section-head">Get Started</h3>
+                  <ul class="docs-get-started-items">
+                    <li class="docs-get-started-item">
+                      <h4 class="docs-get-started-head">Jupyter Notebook Quickstart</h4>
+                      <p class="docs-get-started-subhead">Get up and running with the notebook</p>
+                    </li>
+                    <li class="docs-get-started-item">
+                      <h4 class="docs-get-started-head">Architecture</h4>
+                      <p class="docs-get-started-subhead">How does Jupyter work</p>
+                    </li>
+                    <li class="docs-get-started-item">
+                      <h4 class="docs-get-started-head">Narratives and Use Cases</h4>
+                      <p class="docs-get-started-subhead">Narratives of common deployment scenarios</p>
+                    </li>
+                    <li class="docs-get-started-item">
+                      <h4 class="docs-get-started-head">Installation, Configuration, and Usage</h4>
+                      <p class="docs-get-started-subhead">An interactive python kernel and REPL</p>
+                    </li>
+                    <li class="docs-get-started-item">
+                      <h4 class="docs-get-started-head">Community</h4>
+                      <p class="docs-get-started-subhead">Sustainability and growth</p>
+                    </li>
+                    <li class="docs-get-started-item">
+                      <h4 class="docs-get-started-head">Contributor Guides</h4>
+                      <p class="docs-get-started-subhead">How to contribute to the projects</p>
+                    </li>
+                    <li class="docs-get-started-item">
+                      <h4 class="docs-get-started-head">Release Notes</h4>
+                      <p class="docs-get-started-subhead">New features, upgrades, deprecation
+notes, and bug fixes</p>
+                    </li>
+                    <li class="docs-get-started-item">
+                      <h4 class="docs-get-started-head">Reference</h4>
+                      <p class="docs-get-started-subhead">APIs</p>
+                    </li>
+                    <li class="docs-get-started-item">
+                      <h4 class="docs-get-started-head">Contents</h4>
+                      <p class="docs-get-started-subhead">Full table of contents</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-8 docs-projects-documentation">
+                  <h3 class="docs-projects-head">Project Documentation</h3>
+                  <div class="dropdown">
+                    <div id="interfaces-block" class="col-md-4 col-sm-4 docs-projects-item btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <h4 class="docs-project-tile-head docs-project-two-line">Jupyter <br>Interfaces</h4>
+                    </div>
+                    <ul class="interfaces-dropdown-menu docs-dropdown-menu dropdown-menu" aria-labelledby="interfaces-block">
+                      <li><a href="#">Jupyter Notebook</a></li>
+                      <li><a href="#">Jupyter Console</a></li>
+                      <li><a href="#">Qtconsole</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown">
+                    <div id="education-block" class="col-md-4 col-sm-4 docs-projects-item btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <h4 class="docs-project-tile-head docs-project-one-line">Education</h4>
+                    </div>
+                    <ul class="education-dropdown-menu docs-dropdown-menu dropdown-menu" aria-labelledby="education-block">
+                      <li><a href="#">NbGrader</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown">
+                    <div id="jupyterhub-block" class="col-md-4 col-sm-4 docs-projects-item btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <h4 class="docs-project-tile-head docs-project-one-line">JupyterHub</h4>
+                    </div>
+                    <ul class="jupyterhub-dropdown-menu docs-dropdown-menu dropdown-menu" aria-labelledby="jupyterhub-block">
+                      <li><a href="#">JupyterHub</a></li>
+                      <li><a href="#">Configurable HTTP Proxy</a></li>
+                      <li><a href="#">DockerSpawner</a></li>
+                      <li><a href="#">IDAPAuthenticator</a></li>
+                      <li><a href="#">OAuthenticator</a></li>
+                      <li><a href="#">SudoSpawner</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown">
+                    <div id="kernels-block" class="col-md-4 col-sm-4 docs-projects-item btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <h4 class="docs-project-tile-head docs-project-one-line">Kernels</h4>
+                    </div>
+                    <ul class="jupyterhub-dropdown-menu docs-dropdown-menu dropdown-menu" aria-labelledby="jupyterhub-block">
+                      <li><a href="#">JupyterHub</a></li>
+                      <li><a href="#">Configurable HTTP Proxy</a></li>
+                      <li><a href="#">DockerSpawner</a></li>
+                      <li><a href="#">IDAPAuthenticator</a></li>
+                      <li><a href="#">OAuthenticator</a></li>
+                      <li><a href="#">SudoSpawner</a></li>
+                    </ul>
+                  </div>
+                  <div id="conversion-block" class="col-md-4 col-sm-4 docs-projects-item">
+                    <h4 class="docs-project-tile-head docs-project-two-line">Conversion & Formatting</h4>
+                  </div>
+                  <div id="ipython-block" class="col-md-4 col-sm-4 docs-projects-item">
+                    <h4 class="docs-project-tile-head docs-project-one-line">IPython</h4>
+                  </div>
+                  <div id="architecture-block" class="col-md-4 col-sm-4 docs-projects-item">
+                    <h4 class="docs-project-tile-head docs-project-one-line">Architecture</h4>
+                  </div>
+                  <div id="deployment-block" class="col-md-4 col-sm-4 docs-projects-item">
+                    <h4 class="docs-project-tile-head docs-project-one-line">Deployment</h4>
+                  </div>
+                  <div id="jupyterlab-block" class="col-md-4 col-sm-4 docs-projects-item">
+                    <h4 class="docs-project-tile-head docs-project-one-line">JupyterLab</h4>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
