@@ -9,9 +9,11 @@ body {
     padding: 15px 0;
 }
 .navbar {
-    background-color: white;
     border-width: thin;
     -webkit-transition: .2s;
+}
+.navbar-white {
+  background-color: white;
 }
 .navbar-gray {
     background-color: rgb(248,248,248);
@@ -155,9 +157,14 @@ body {
 
 /* Header section of each page */
 .header{
-    background-color: #F8F8F8;
     padding-bottom: 30px;
     text-align: center;
+}
+.header-grey {
+  background-color: #F8F8F8;
+}
+.header-white {
+  background-color: white;
 }
 
 /* Section elements */
