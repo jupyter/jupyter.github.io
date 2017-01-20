@@ -538,6 +538,46 @@ body {
     background-color: #F27624;
 }
 
+/* JupyterCon Jumbotron Styling */
+.jupytercon-navbar {
+    background-color: transparent;
+}
+.jupytercon-nav > li > a{
+    color: white;
+}
+.jupytercon-jumbotron {
+    background-image: url(../assets/jupytercon-ny.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: auto;
+    margin-top: 0px;
+    position: relative;
+    top: -70px;
+}
+#jupytercon-logo {
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    margin-top: 48px;
+}
+.jupytercon-header, .jupytercon-subheader  {
+    color: white;
+    text-align: center;
+}
+.jupytercon-header {
+    margin-bottom: 16px;
+}
+.jupytercon-subheader {
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+.jupytercon-button {
+    display: block;
+    text-align: center;
+    margin-top: 60px;
+}
+
 /* Bootstrap Breakpoint Media Queries */
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
@@ -751,6 +791,10 @@ body {
     }
     .jumbotron {
         margin-right: 5%;
+    }
+    .jupytercon-jumbotron {
+        margin-right: 0px;
+        margin-bottom: 0px;
     }
 }
 /* Extra small devices (these are mostly fixes to make sure elements act correctly to look good) */
