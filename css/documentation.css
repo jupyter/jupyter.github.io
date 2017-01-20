@@ -34,7 +34,7 @@
 .docs-projects-item {
   background-color: white;
   height: 100px;
-  width: 232px;
+  width: 47%;
   border: 1px solid #BDBDBD;
   border-radius: 4px;
   margin: 8px;
@@ -42,16 +42,17 @@
 }
 .docs-project-tile-head {
   font-size: 20px;
+  padding-left: 12px;
 }
 .docs-project-two-line {
-  margin-top: 22px;
+  margin-top: 20px;
 }
 .docs-project-one-line {
   margin-top: 36px;
 }
 .docs-dropdown-menu {
   font-size: 16px;
-  width: 232px;
+  width: 47%;
   top: 105px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
@@ -60,7 +61,7 @@
   left: 8px;
 }
 .education-dropdown-menu {
-  left: 256px;
+  left: 51%;
 }
 .jupyterhub-dropdown-menu {
   left: 504px;
@@ -68,22 +69,27 @@
 #interfaces-block {
   background-image: url(../assets/documentation/interfaces-block.svg);
   background-repeat: no-repeat;
-  background-position: 120px;
+  background-position: center right;
+  background-size: 150px;
 }
 #education-block {
   background-image: url(../assets/documentation/education-block.svg);
   background-repeat: no-repeat;
-  background-position: 124px;
+  background-position: right center;
+  background-size: 150px;
 }
 #jupyterhub-block {
   background-image: url(../assets/documentation/jupyterhub_block.svg);
   background-repeat: no-repeat;
-  background-position: 132px 10px;
+  background-position-y: bottom;
+  background-position-x: 88%;
 }
 #kernels-block {
   background-image: url(../assets/documentation/kernels-block.svg);
   background-repeat: no-repeat;
-  background-position: 120px 15px;
+  background-position: right;
+  background-size: 150px;
+  background-position-y: 12px;
 }
 #conversion-block {
   background-image: url(../assets/documentation/conversion-block.svg);
@@ -93,7 +99,8 @@
 #ipython-block {
   background-image: url(../assets/documentation/ipython-block-placeholder.png);
   background-repeat: no-repeat;
-  background-position: 112px;
+  background-position: right;
+  background-position-x: 82%;
 }
 #architecture-block {
   background-image: url(../assets/documentation/architecture-block.png);
