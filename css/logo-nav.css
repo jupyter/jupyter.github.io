@@ -35,6 +35,9 @@ body {
     -webkit-box-shadow: 1px 1px 1px #999;
     box-shadow: 1px 1px 1px #999;
 }
+.jupytercon-nav > li > .black-tab {
+    color: black;
+}
 .navbar-logo {
     height: 45px;
 }
@@ -554,12 +557,13 @@ body {
     margin-top: 0px;
     position: relative;
     top: -70px;
+    margin-bottom: -70px;
 }
 #jupytercon-logo {
     display: block;
     margin: 0 auto;
     width: 500px;
-    margin-top: 48px;
+    margin-top: 60px;
 }
 .jupytercon-header, .jupytercon-subheader  {
     color: white;
@@ -576,6 +580,10 @@ body {
     display: block;
     text-align: center;
     margin-top: 60px;
+    margin-bottom: 20px;
+}
+.navbar-toggle > .white-icon-bar {
+    background-color: white;
 }
 
 /* Bootstrap Breakpoint Media Queries */
@@ -794,7 +802,6 @@ body {
     }
     .jupytercon-jumbotron {
         margin-right: 0px;
-        margin-bottom: 0px;
     }
 }
 /* Extra small devices (these are mostly fixes to make sure elements act correctly to look good) */
