@@ -222,6 +222,11 @@ body {
     color: white;
     text-decoration: none;
 }
+.orange-button:active, .orange-button:focus {
+    background-color: #DC601C;
+    color: white;
+    text-decoration: none;
+}
 
 /* Jupyter Notebook highlight section on front page */
 .nb-highlight-text {
