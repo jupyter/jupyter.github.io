@@ -27,6 +27,8 @@ navbar_gray: false
 
 
 <section>
+    <div class="header-breadcrumbs">
+    </div>
     <div class="header header-white">
         <div class="container">
             <div class="row">
@@ -42,52 +44,10 @@ navbar_gray: false
     <div class="section-grey">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 docs-get-started">
-                  <h3 class="docs-get-started-section-head">Get Started</h3>
-                  <ul class="docs-get-started-items">
-                    <li class="docs-get-started-item">
-                      <h4 class="docs-get-started-head">Jupyter Notebook Quickstart</h4>
-                      <p class="docs-get-started-subhead">Get up and running with the notebook</p>
-                    </li>
-                    <li class="docs-get-started-item">
-                      <h4 class="docs-get-started-head">Architecture</h4>
-                      <p class="docs-get-started-subhead">How does Jupyter work</p>
-                    </li>
-                    <li class="docs-get-started-item">
-                      <h4 class="docs-get-started-head">Narratives and Use Cases</h4>
-                      <p class="docs-get-started-subhead">Narratives of common deployment scenarios</p>
-                    </li>
-                    <li class="docs-get-started-item">
-                      <h4 class="docs-get-started-head">Installation, Configuration, and Usage</h4>
-                      <p class="docs-get-started-subhead">An interactive python kernel and REPL</p>
-                    </li>
-                    <li class="docs-get-started-item">
-                      <h4 class="docs-get-started-head">Community</h4>
-                      <p class="docs-get-started-subhead">Sustainability and growth</p>
-                    </li>
-                    <li class="docs-get-started-item">
-                      <h4 class="docs-get-started-head">Contributor Guides</h4>
-                      <p class="docs-get-started-subhead">How to contribute to the projects</p>
-                    </li>
-                    <li class="docs-get-started-item">
-                      <h4 class="docs-get-started-head">Release Notes</h4>
-                      <p class="docs-get-started-subhead">New features, upgrades, deprecation
-notes, and bug fixes</p>
-                    </li>
-                    <li class="docs-get-started-item">
-                      <h4 class="docs-get-started-head">Reference</h4>
-                      <p class="docs-get-started-subhead">APIs</p>
-                    </li>
-                    <li class="docs-get-started-item">
-                      <h4 class="docs-get-started-head">Contents</h4>
-                      <p class="docs-get-started-subhead">Full table of contents</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-md-8 docs-projects-documentation">
-                  <h3 class="docs-projects-head">Project Documentation</h3>
+              <div class="col-md-12">
+                <div class="docs-projects-documentation">
                   <div class="dropdown">
-                    <div id="interfaces-block" class="col-md-4 col-sm-4 docs-projects-item btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <div id="interfaces-block" class="col-md-4 col-sm-2 docs-projects-item btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                       <h4 class="docs-project-tile-head docs-project-two-line">Jupyter <br>Interfaces</h4>
                     </div>
                     <ul class="interfaces-dropdown-menu docs-dropdown-menu dropdown-menu" aria-labelledby="interfaces-block">
@@ -97,7 +57,7 @@ notes, and bug fixes</p>
                     </ul>
                   </div>
                   <div class="dropdown">
-                    <div id="education-block" class="col-md-4 col-sm-4 docs-projects-item btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <div id="education-block" class="col-md-4 col-sm-2 docs-projects-item btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                       <h4 class="docs-project-tile-head docs-project-one-line">Education</h4>
                     </div>
                     <ul class="education-dropdown-menu docs-dropdown-menu dropdown-menu" aria-labelledby="education-block">
@@ -105,7 +65,7 @@ notes, and bug fixes</p>
                     </ul>
                   </div>
                   <div class="dropdown">
-                    <div id="jupyterhub-block" class="col-md-4 col-sm-4 docs-projects-item btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <div id="jupyterhub-block" class="col-md-4 col-sm-2 docs-projects-item btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                       <h4 class="docs-project-tile-head docs-project-one-line">JupyterHub</h4>
                     </div>
                     <ul class="jupyterhub-dropdown-menu docs-dropdown-menu dropdown-menu" aria-labelledby="jupyterhub-block">
@@ -118,34 +78,74 @@ notes, and bug fixes</p>
                     </ul>
                   </div>
                   <div class="dropdown">
-                    <div id="kernels-block" class="col-md-4 col-sm-4 docs-projects-item btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <div id="kernels-block" class="col-md-4 col-sm-2 docs-projects-item btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                       <h4 class="docs-project-tile-head docs-project-one-line">Kernels</h4>
                     </div>
-                    <ul class="jupyterhub-dropdown-menu docs-dropdown-menu dropdown-menu" aria-labelledby="jupyterhub-block">
-                      <li><a href="#">JupyterHub</a></li>
-                      <li><a href="#">Configurable HTTP Proxy</a></li>
-                      <li><a href="#">DockerSpawner</a></li>
-                      <li><a href="#">IDAPAuthenticator</a></li>
-                      <li><a href="#">OAuthenticator</a></li>
-                      <li><a href="#">SudoSpawner</a></li>
+                    <ul class="kernels-dropdown-menu docs-dropdown-menu dropdown-menu" aria-labelledby="jupyterhub-block">
+                      <li><a href="#">IPython</a></li>
+                      <li><a href="#">IRkernel</a></li>
+                      <li><a href="#">IJUlia</a></li>
+                      <li><a href="#">Community maintained kernels</a></li>
                     </ul>
                   </div>
-                  <div id="conversion-block" class="col-md-4 col-sm-4 docs-projects-item">
-                    <h4 class="docs-project-tile-head docs-project-two-line">Conversion & Formatting</h4>
+                <div class="dropdown">
+                  <div id="conversion-block" class="col-md-4 col-sm-2 docs-projects-item btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <h4 class="docs-project-tile-head docs-project-two-line">Conversion & <br> Formatting</h4>
                   </div>
-                  <div id="ipython-block" class="col-md-4 col-sm-4 docs-projects-item">
+                  <ul class="conversion-dropdown-menu docs-dropdown-menu dropdown-menu" aria-labelledby="conversion-block">
+                    <li><a href="#">nbconvert</a></li>
+                    <li><a href="#">nbformat</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown">
+                  <div id="ipython-block" class="col-md-4 col-sm-2 docs-projects-item btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     <h4 class="docs-project-tile-head docs-project-one-line">IPython</h4>
                   </div>
-                  <div id="architecture-block" class="col-md-4 col-sm-4 docs-projects-item">
+                  <ul class="ipython-dropdown-menu docs-dropdown-menu dropdown-menu" aria-labelledby="ipython-block">
+                    <li><a href="#">IPython</a></li>
+                    <li><a href="#">ipykernel</a></li>
+                    <li><a href="#">ipyparallel</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown">
+                  <div id="architecture-block" class="col-md-4 col-sm-2 docs-projects-item btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     <h4 class="docs-project-tile-head docs-project-one-line">Architecture</h4>
                   </div>
-                  <div id="deployment-block" class="col-md-4 col-sm-4 docs-projects-item">
+                  <ul class="architecture-dropdown-menu docs-dropdown-menu dropdown-menu" aria-labelledby="architecture-block">
+                    <li><a href="#">jupyter_client</a></li>
+                    <li><a href="#">jupyter_core</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown">
+                  <div id="deployment-block" class="col-md-4 col-sm-2 docs-projects-item btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     <h4 class="docs-project-tile-head docs-project-one-line">Deployment</h4>
                   </div>
-                  <div id="jupyterlab-block" class="col-md-4 col-sm-4 docs-projects-item">
+                  <ul class="deployment-dropdown-menu docs-dropdown-menu dropdown-menu" aria-labelledby="deployment-block">
+                    <li><a href="#">docker-stacks</a></li>
+                    <li><a href="#">ipywidgets</a></li>
+                    <li><a href="#">jupyter-drive</a></li>
+                    <li><a href="#">jupyter-sphinx-theme</a></li>
+                    <li><a href="#">kernel_gateway</a></li>
+                    <li><a href="#">nbviewer</a></li>
+                    <li><a href="#">tmpnb</a></li>
+                    <li><a href="#">traitlets</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown">
+                  <div id="jupyterlab-block" class="col-md-4 col-sm-2 docs-projects-item btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     <h4 class="docs-project-tile-head docs-project-one-line">JupyterLab</h4>
                   </div>
+                  <ul class="jupyterlab-dropdown-menu docs-dropdown-menu dropdown-menu" aria-labelledby="jupyterlab-block">
+                    <li><a href="#">jupyter-js-notebook</a></li>
+                    <li><a href="#">jupyter-js-phosphide</a></li>
+                    <li><a href="#">jupyter-js-plugins</a></li>
+                    <li><a href="#">jupyter-js-services</a></li>
+                    <li><a href="#">jupyter-js-ui</a></li>
+                    <li><a href="#">jupyter-js-utils</a></li>
+                  </ul>
                 </div>
+                </div>
+              </div>
             </div>
         </div>
     </div>
