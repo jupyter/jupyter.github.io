@@ -70,6 +70,7 @@ p {
 }
 .docs-project-tile-head {
   font-size: 20px;
+  padding-left: 12px;
 }
 .docs-project-two-line {
   margin-top: 28px;
@@ -90,6 +91,7 @@ p {
 .education-dropdown-menu {
   left: 374px;
 }
+
 .jupyterhub-dropdown-menu {
   left: 740px;
 }
@@ -137,7 +139,8 @@ p {
 #jupyterhub-block {
   background-image: url(../assets/documentation/jupyterhub_block.svg);
   background-repeat: no-repeat;
-  background-position: 132px 10px;
+  background-position-y: bottom;
+  background-position-x: 88%;
 }
 #kernels-block {
   background-image: url(../assets/documentation/kernels-block.svg);
@@ -152,7 +155,8 @@ p {
 #ipython-block {
   background-image: url(../assets/documentation/ipython-block-placeholder.png);
   background-repeat: no-repeat;
-  background-position: 112px;
+  background-position: right;
+  background-position-x: 82%;
 }
 #architecture-block {
   background-image: url(../assets/documentation/architecture-block.png);
