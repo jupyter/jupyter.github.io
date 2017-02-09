@@ -1,3 +1,29 @@
+.header-white {
+  background-color: #7E7E7F;
+}
+
+.header-breadcrumbs {
+  display: block;
+  background-color: #7E7E7F;
+  width: auto;
+  height: 44px;
+  border-bottom: 1px solid #979797;
+}
+
+h2 {
+  margin-top: 42.5px;
+  color: white;
+}
+
+p {
+  color: white;
+  font-weight: 300;
+}
+
+.header {
+  padding-bottom: 32.5px;
+}
+
 .docs-get-started {
   background-color: white;
   border: 1px solid #BDBDBD;
@@ -33,27 +59,29 @@
 }
 .docs-projects-item {
   background-color: white;
-  height: 100px;
-  width: 47%;
-  border: 1px solid #BDBDBD;
+  height: 125px;
+  width: 350px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .12);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .24);
   border-radius: 4px;
   margin: 8px;
   text-align: left;
+  padding-left: 28px;
 }
 .docs-project-tile-head {
   font-size: 20px;
   padding-left: 12px;
 }
 .docs-project-two-line {
-  margin-top: 20px;
+  margin-top: 28px;
 }
 .docs-project-one-line {
-  margin-top: 36px;
+  margin-top: 46px;
 }
 .docs-dropdown-menu {
   font-size: 16px;
-  width: 47%;
-  top: 105px;
+  width: 350px;
+  top: 125px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
@@ -61,22 +89,52 @@
   left: 8px;
 }
 .education-dropdown-menu {
-  left: 51%;
+  left: 374px;
 }
+
 .jupyterhub-dropdown-menu {
-  left: 504px;
+  left: 740px;
 }
+
+.kernels-dropdown-menu {
+    left: 8px;
+    top: 264px;
+}
+
+.conversion-dropdown-menu {
+  left: 374px;
+  top: 264px;
+}
+
+.ipython-dropdown-menu {
+  left: 740px;
+  top: 264px;
+}
+
+.architecture-dropdown-menu {
+  left: 8px;
+  top: 410px;
+}
+
+.deployment-dropdown-menu {
+  left: 374px;
+  top: 410px;
+}
+
+.jupyterlab-dropdown-menu {
+  left: 740px;
+  top: 410px;
+}
+
 #interfaces-block {
   background-image: url(../assets/documentation/interfaces-block.svg);
   background-repeat: no-repeat;
-  background-position: center right;
-  background-size: 150px;
+  background-position: 234px;
 }
 #education-block {
   background-image: url(../assets/documentation/education-block.svg);
   background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 150px;
+  background-position: 234px;
 }
 #jupyterhub-block {
   background-image: url(../assets/documentation/jupyterhub_block.svg);
@@ -87,9 +145,7 @@
 #kernels-block {
   background-image: url(../assets/documentation/kernels-block.svg);
   background-repeat: no-repeat;
-  background-position: right;
-  background-size: 150px;
-  background-position-y: 12px;
+  background-position: 235px 15px;
 }
 #conversion-block {
   background-image: url(../assets/documentation/conversion-block.svg);
@@ -116,4 +172,126 @@
   background-image: url(../assets/documentation/jupyterlab-block.svg);
   background-repeat: no-repeat;
   background-position: 132px 32px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1200px) {
+
+.jupyterhub-dropdown-menu {
+  left: 8px;
+  top: 264px;
+}
+
+.kernels-dropdown-menu{
+  left: 374px;
+  top: 264px;
+}
+
+.conversion-dropdown-menu {
+  left: 8px;
+  top: 410px;
+}
+
+.ipython-dropdown-menu{
+  left: 374px;
+  top: 410px;
+}
+
+.architecture-dropdown-menu {
+  left: 8px;
+  top: 548px;
+}
+
+.deployment-dropdown-menu {
+  top: 548px;
+}
+
+.jupyterlab-dropdown-menu {
+  left: 8px;
+  top: 688px;
+}
+
+}
+
+@media screen and (max-width: 992px) {
+
+  .education-dropdown-menu {
+    left: 8px;
+    top: 264px;
+  }
+
+  .jupyterhub-dropdown-menu {
+    top: 410px;
+  }
+
+  .kernels-dropdown-menu {
+    left: 8px;
+    top: 548px;
+  }
+
+  .conversion-dropdown-menu {
+    top: 688px;
+  }
+
+  .ipython-dropdown-menu {
+    left: 8px;
+    top: 824px;
+  }
+
+  .architecture-dropdown-menu {
+    top: 968px;
+  }
+
+  .deployment-dropdown-menu {
+    left: 8px;
+    top: 1108px;
+  }
+
+  .jupyterlab-dropdown-menu {
+    left: 8px;
+    top: 1250px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .education-dropdown-menu {
+    left: 8px;
+    top: 124px;
+  }
+
+  .jupyterhub-dropdown-menu {
+    top: 124px;
+  }
+
+  .kernels-dropdown-menu {
+    left: 8px;
+    top: 126px;
+  }
+
+  .conversion-dropdown-menu {
+    top: 128px;
+  }
+
+  .ipython-dropdown-menu {
+    left: 8px;
+    top: 128px;
+  }
+
+  .architecture-dropdown-menu {
+    top: 128px;
+  }
+
+  .deployment-dropdown-menu {
+    left: 8px;
+    top: 128px;
+  }
+
+  .jupyterlab-dropdown-menu {
+    left: 8px;
+    top: 128px;
+  }
+
 }
