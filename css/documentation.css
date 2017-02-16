@@ -85,13 +85,6 @@ p {
 .interfaces-dropdown-menu {
   left: 8px;
 }
-.education-dropdown-menu {
-  left: 374px;
-}
-
-.jupyterhub-dropdown-menu {
-  left: 740px;
-}
 
 .kernels-dropdown-menu {
     left: 8px;
@@ -175,11 +168,6 @@ p {
 
 @media screen and (max-width: 1200px) {
 
-.jupyterhub-dropdown-menu {
-  left: 8px;
-  top: 264px;
-}
-
 .kernels-dropdown-menu{
   left: 374px;
   top: 264px;
@@ -212,15 +200,6 @@ p {
 }
 
 @media screen and (max-width: 992px) {
-
-  .education-dropdown-menu {
-    left: 8px;
-    top: 264px;
-  }
-
-  .jupyterhub-dropdown-menu {
-    top: 410px;
-  }
 
   .kernels-dropdown-menu {
     left: 8px;
