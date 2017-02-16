@@ -1,4 +1,10 @@
 $(document).ready(function() {
+    if (window.outerWidth < 768) {
+                $('.navbar').removeClass('jupytercon-navbar');
+                $('.tab').addClass('black-tab');
+                document.getElementById('jupyter-nav-logo').src = '/assets/nav_logo.svg';
+                $('.icon-bar').removeClass('white-icon-bar');
+    }
     $(window).bind('resize', function() {
         if (window.location.pathname == '/' || window.location.pathname == '/index.html') {
             if (window.outerWidth < 768) {
