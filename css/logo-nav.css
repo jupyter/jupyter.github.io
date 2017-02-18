@@ -568,7 +568,7 @@ body {
     display: block;
     margin: 0 auto;
     width: 500px;
-    margin-top: 60px;
+    margin-top: 100px;
 }
 .jupytercon-header, .jupytercon-subheader  {
     color: white;
