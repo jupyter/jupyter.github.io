@@ -553,6 +553,9 @@ body {
 .jupytercon-nav > li > a{
     color: white;
 }
+.jupytercon-nav > li > a:active, .jupytercon-nav > li > a:focus {
+  background-color: transparent;
+}
 .jupytercon-jumbotron {
     background-image: url(../assets/jupytercon-ny.jpg);
     background-repeat: no-repeat;
