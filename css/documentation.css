@@ -127,49 +127,56 @@ p {
 #interfaces-block {
   background-image: url(../assets/documentation/interfaces-block.svg);
   background-repeat: no-repeat;
-  background-position: 234px;
+  background-position-x: 102%;
+  background-position-y: center
 }
 #education-block {
   background-image: url(../assets/documentation/education-block.svg);
   background-repeat: no-repeat;
-  background-position: 234px;
+  background-position-x: 90%;
+  background-position-y: center
 }
 #jupyterhub-block {
   background-image: url(../assets/documentation/jupyterhub_block.svg);
   background-repeat: no-repeat;
-  background-position-y: bottom;
-  background-position-x: 88%;
+  background-position-x: 90%;
+  background-position-y: 10px;
 }
 #kernels-block {
   background-image: url(../assets/documentation/kernels-block.svg);
   background-repeat: no-repeat;
-  background-position: 235px 15px;
+  background-position-x: 102%;
+  background-position-y: 130%;
 }
 #conversion-block {
   background-image: url(../assets/documentation/conversion-block.svg);
   background-repeat: no-repeat;
-  background-position: 158px;
+  background-position-x: 90%;
+  background-position-y: center
 }
 #ipython-block {
-  background-image: url(../assets/documentation/ipython-block-placeholder.png);
+  background-image: url(../assets/documentation/ipython-block-font.svg);
   background-repeat: no-repeat;
-  background-position: right;
-  background-position-x: 82%;
+  background-position-x: 90%;
+  background-position-y: center;
 }
 #architecture-block {
-  background-image: url(../assets/documentation/architecture-block.png);
+  background-image: url(../assets/documentation/architecture-block.svg);
   background-repeat: no-repeat;
-  background-position: 155px 24px;
+  background-position-x: 90%;
+  background-position-y: center;
 }
 #deployment-block {
   background-image: url(../assets/documentation/deployment-block.svg);
   background-repeat: no-repeat;
-  background-position: 140px;
+  background-position-x: 90%;
+  background-position-y: 140%;
 }
 #jupyterlab-block {
   background-image: url(../assets/documentation/jupyterlab-block.svg);
   background-repeat: no-repeat;
-  background-position: 132px 32px;
+  background-position-x: 90%;
+  background-position-y: center;
 }
 
 /* MEDIA QUERIES */
@@ -191,12 +198,17 @@ p {
     width: 330px;
   }
 
+
+
+
 }
 
 @media screen and (max-width: 768px) {
 
   .docs-dropdown-menu {
     width: 100%;
+    left: 8px;
+    right: 8px;
   }
 
 }

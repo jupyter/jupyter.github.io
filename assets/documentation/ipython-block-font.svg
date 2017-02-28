@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="114px" height="38px" viewBox="0 0 114 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="Monospace821BT-Roman, Monospac821 BT" font-weight="normal">
+        <g id="Artboard" transform="translate(-41.000000, -332.000000)">
+            <g id="Group-2" transform="translate(35.000000, 319.000000)">
+                <text id="IP" font-size="50" letter-spacing="0.800000012" fill="#161616">
+                    <tspan x="0" y="48">IP</tspan>
+                </text>
+                <text id="[y]:" font-size="34" letter-spacing="-5.4000001">
+                    <tspan x="62" y="43" fill="#4079B2">[</tspan>
+                    <tspan x="77.0697265" y="43" fill="#161616">y</tspan>
+                    <tspan x="92.1394529" y="43" fill="#4079B2">]</tspan>
+                    <tspan x="107.209179" y="43" letter-spacing="0.800000012" fill="#4079B2">:</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
