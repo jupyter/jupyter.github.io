@@ -206,9 +206,23 @@ p {
 @media screen and (max-width: 768px) {
 
   .docs-dropdown-menu {
-    width: 100%;
+    width: 400px;
+    max-width: 92%;
+    margin: 0 auto;
     left: 8px;
     right: 8px;
+    top: 120px;
   }
+
+  .docs-projects-item {
+    max-width: 400px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 8px;
+  }
+
+  }
+
 
 }
