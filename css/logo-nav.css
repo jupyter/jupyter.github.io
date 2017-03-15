@@ -742,9 +742,15 @@ body {
         padding-top: 0;
         text-align: center;
     }
+    .navbar-logo {
+      height: 36px;
+      margin-top: 4px;
+    }
     .nav>li>a {
         font-size: 13px;
-        letter-spacing: 1px;
+        letter-spacing: .8px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 }
 /* Small devices (tablets, 768px and up) */
@@ -788,6 +794,11 @@ body {
         font-size: 32px;
         font-weight: 500;
         line-height: 1.25em;
+    }
+    .nav>li>a {
+        letter-spacing: 1px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
     .navbar-header {
         margin-bottom: 0;
