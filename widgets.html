@@ -44,13 +44,19 @@ navbar_gray: true
         <li>
           <a href="#bqplot" data-toggle="tab">
             <p>bqplot</p>
-            <p>Interactive 2-D data visualization</p>
+            <p>2-D interactive data visualization</p>
           </a>
         </li>
         <li>
           <a href="#pythreejs" data-toggle="tab">
             <p>pythreejs</p>
             <p>3-D data visualization</p>
+          </a>
+        </li>
+        <li>
+          <a href="#ipyvolume" data-toggle="tab">
+            <p>ipyvolume</p>
+            <p>3-D volume rendering</p>
           </a>
         </li>
         <li>
@@ -122,7 +128,7 @@ navbar_gray: true
           {
               "model_id": "10e4ea0790e94bcba5d41df5f3ce007c"
           }
-</script>
+          </script>
           <h3>Installation</h3>
           With conda:
           {% highlight bash %}conda install -c conda-forge bqplot{% endhighlight %}
@@ -162,6 +168,35 @@ navbar_gray: true
           With pip:
           {% highlight bash %}pip install pythreejs
           jupyter nbextension enable --py --sys-prefix pythreejs{% endhighlight %}
+        </div>
+        <div class="tab-pane" id="ipyvolume">
+          <div class="jupyter-widget-header">
+            <span class="gallery-title">ipyvolume</span>
+            <span>
+                <a href="https://github.com/maartenbreddels/ipyvolume">
+                <img class="img-scaling" src="assets/github.svg" alt="GitHub">
+                </a>
+            </span>
+          </div>
+          <p>
+          3d plotting for Python in the Jupyter notebook based on IPython widgets using WebGL.
+          </p>
+          <h3>Example</h3>
+          {% highlight python %}{% include_relative assets/ipyvolume-example.py %}{% endhighlight %}
+          <script type="application/vnd.jupyter.widget-state+json">
+              {% include_relative assets/ipyvolume-example.json %}
+          </script>
+          <script type="application/vnd.jupyter.widget-view+json">
+          {
+              "model_id": "16697810550d48d690315b958c3802b7"
+          }
+          </script>
+          <h3>Installation</h3>
+          With conda:
+          {% highlight bash %}conda install -c conda-forge ipyvolume{% endhighlight %}
+          With pip:
+          {% highlight bash %}pip install ipyvolume
+          jupyter nbextension enable --py --sys-prefix ipyvolume{% endhighlight %}
         </div>
         <div class="tab-pane" id="cookiecutter">
           <div class="jupyter-widget-header">
