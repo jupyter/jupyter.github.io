@@ -6,7 +6,7 @@ navbar_gray: true
 
 <link href="css/gallery.css" rel="stylesheet">
 <link href="css/syntax.css" rel="stylesheet">
-<script src="https://unpkg.com/jupyter-js-widgets@1.1.2/dist/embed.js"></script>
+<script src="https://unpkg.com/jupyter-js-widgets@~2.1.4/dist/embed.js"></script>
 
 <section>
   <div class="header">
@@ -81,8 +81,13 @@ navbar_gray: true
           </p>
           <h3>Example</h3>
           {% highlight python %}{% include_relative assets/ipyleaflet-example.py %}{% endhighlight %}
-          <script type="application/vnd.jupyter-embedded-widgets">
+          <script type="application/vnd.jupyter.widget-state+json">
               {% include_relative assets/ipyleaflet-example.json %}
+          </script>
+          <script type="application/vnd.jupyter.widget-view+json">
+          {
+              "model_id": "5e5cc11723794d639e8d7a3f0951fdea"
+          }
           </script>
           <h3>Installation</h3>
           With conda:
@@ -110,9 +115,14 @@ navbar_gray: true
           </p>
           <h3>Example</h3>
           {% highlight python %}{% include_relative assets/bqplot-example.py %}{% endhighlight %}
-          <script type="application/vnd.jupyter-embedded-widgets">
+          <script type="application/vnd.jupyter.widget-state+json">
               {% include_relative assets/bqplot-example.json %}
           </script>
+          <script type="application/vnd.jupyter.widget-view+json">
+          {
+              "model_id": "10e4ea0790e94bcba5d41df5f3ce007c"
+          }
+</script>
           <h3>Installation</h3>
           With conda:
           {% highlight bash %}conda install -c conda-forge bqplot{% endhighlight %}
@@ -138,8 +148,13 @@ navbar_gray: true
           </p>
           <h3>Example</h3>
           {% highlight python %}{% include_relative assets/pythreejs-example.py %}{% endhighlight %}
-          <script type="application/vnd.jupyter-embedded-widgets">
+          <script type="application/vnd.jupyter.widget-state+json">
               {% include_relative assets/pythreejs-example.json %}
+          </script>
+          <script type="application/vnd.jupyter.widget-view+json">
+          {
+              "model_id": "1c5ad89ba4924d83a54b15e400806b18"
+          }
           </script>
           <h3>Installation</h3>
           With conda:
