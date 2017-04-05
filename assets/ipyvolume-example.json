@@ -12,12 +12,12 @@
             }
         },
         "8886551359c34414ab88f8569ae089bc": {
-            "model_name": "VolumeRendererThreeModel",
+            "model_name": "FigureModel",
             "model_module": "ipyvolume",
-            "model_module_version": "*",
+            "model_module_version": "~0.3.0",
             "state": {
-                "_model_module_version": "*",
-                "_view_module_version": "*",
+                "_model_module_version": "~0.3.0",
+                "_view_module_version": "~0.3.0",
                 "animation": 200,
                 "animation_exponent": 1,
                 "data_max": 0,
@@ -195,11 +195,11 @@
         "df0eed55fbff47a8a0f2f5e79ff36f4a": {
             "model_name": "ScatterModel",
             "model_module": "ipyvolume",
-            "model_module_version": "*",
+            "model_module_version": "~0.3.0",
             "state": {
                 "_dom_classes": [],
-                "_model_module_version": "*",
-                "_view_module_version": "*",
+                "_model_module_version": "~0.3.0",
+                "_view_module_version": "~0.3.0",
                 "geo": "arrow",
                 "layout": "IPY_MODEL_0e47e496a51a4e198fa27243726b77a4",
                 "selected": null,
