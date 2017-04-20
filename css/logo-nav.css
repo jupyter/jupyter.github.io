@@ -593,6 +593,9 @@ body {
 .navbar-toggle > .white-icon-bar {
     background-color: white;
 }
+.footer-text {
+    font-size: 16px;
+}
 
 /* Bootstrap Breakpoint Media Queries */
 /* Large devices (large desktops, 1200px and up) */
@@ -645,6 +648,10 @@ body {
         font-size: 48px;
         font-weight: 500;
         line-height: 1.05em;
+    }
+    .follow {
+        float: right;
+        margin-top: 15px;
     }
 }
 @media (max-width: 992px) {
@@ -752,6 +759,13 @@ body {
         padding-left: 8px;
         padding-right: 8px;
     }
+    .follow {
+        float: left;
+        margin-bottom: 20px;
+    }
+    .navbar-text {
+        margin-left: 0px;
+    }
 }
 /* Small devices (tablets, 768px and up) */
 @media(min-width:768px) {
@@ -761,9 +775,6 @@ body {
     }
     .tab {
         text-align: center;
-    }
-    .follow {
-        margin-top: 15px;
     }
     .navbar-toggle {
         margin-top: 20px;
@@ -825,9 +836,6 @@ body {
 }
 /* Extra small devices (these are mostly fixes to make sure elements act correctly to look good) */
 @media (min-width: 509px) {
-    .follow {
-        float: right !important;
-    }
     .footer ul {
         float: left;
     }
@@ -841,6 +849,7 @@ body {
         padding:10px;
     }
     .follow {
+        float: none;
         display: block;
         margin: 0 auto;
     }
