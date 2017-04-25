@@ -37,6 +37,9 @@ body {
     -webkit-box-shadow: 1px 1px 1px #999;
     box-shadow: 1px 1px 1px #999;
 }
+.jupytercon-nav > li > .black-tab {
+    color: black;
+}
 .navbar-logo {
     height: 45px;
 }
@@ -223,6 +226,11 @@ body {
 }
 .orange-button:hover {
     background-color: #F27624;
+    color: white;
+    text-decoration: none;
+}
+.orange-button:active, .orange-button:focus {
+    background-color: #DC601C;
     color: white;
     text-decoration: none;
 }
@@ -545,6 +553,54 @@ body {
     background-color: #F27624;
 }
 
+/* JupyterCon Jumbotron Styling */
+.jupytercon-navbar {
+    background-color: transparent;
+}
+.jupytercon-nav > li > a{
+    color: white;
+}
+.jupytercon-nav > li > a:active, .jupytercon-nav > li > a:focus {
+  background-color: transparent;
+}
+.jupytercon-jumbotron {
+    background-image: url(../assets/jupytercon-ny.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: auto;
+    margin-top: 0px;
+    position: relative;
+    top: -70px;
+    margin-bottom: -70px;
+}
+#jupytercon-logo {
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    margin-top: 100px;
+}
+.jupytercon-header, .jupytercon-subheader  {
+    color: white;
+    text-align: center;
+}
+.jupytercon-header {
+    margin-bottom: 16px;
+}
+.jupytercon-subheader {
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+.jupytercon-button {
+    display: block;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.navbar-toggle > .white-icon-bar {
+    background-color: white;
+}
+
 /* Bootstrap Breakpoint Media Queries */
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
@@ -693,9 +749,15 @@ body {
         padding-top: 0;
         text-align: center;
     }
+    .navbar-logo {
+      height: 36px;
+      margin-top: 4px;
+    }
     .nav>li>a {
         font-size: 13px;
-        letter-spacing: 1px;
+        letter-spacing: .8px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 }
 /* Small devices (tablets, 768px and up) */
@@ -740,6 +802,11 @@ body {
         font-weight: 500;
         line-height: 1.25em;
     }
+    .nav>li>a {
+        letter-spacing: 1px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
     .navbar-header {
         margin-bottom: 0;
     }
@@ -758,6 +825,9 @@ body {
     }
     .jumbotron {
         margin-right: 5%;
+    }
+    .jupytercon-jumbotron {
+        margin-right: 0px;
     }
 }
 /* Extra small devices (these are mostly fixes to make sure elements act correctly to look good) */

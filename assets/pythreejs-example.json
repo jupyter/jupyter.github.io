@@ -1,235 +1,272 @@
 {
-    "8065dd7a1c6a4bf4ab2e38a9ac7bfb88": {
-        "model_name": "ParametricGeometryModel",
-        "model_module": "jupyter-threejs",
-        "state": {
-            "func": "\nfunction f(origu,origv) {\n    // scale u and v to the ranges I want: [0, 2*pi]\n    var u = 2*Math.PI*origu;\n    var v = 2*Math.PI*origv;\n    \n    var x = Math.sin(u);\n    var y = Math.cos(v);\n    var z = Math.cos(u+v);\n    \n    return new THREE.Vector3(x,y,z)\n}\n"
-        },
-        "views": []
-    },
-    "2deba3bdbd9746ac9cc7e2bbb13f140d": {
-        "model_name": "LambertMaterialModel",
-        "model_module": "jupyter-threejs",
-        "state": {
-            "color": "green",
-            "side": "FrontSide"
-        },
-        "views": []
-    },
-    "677461e24d0c47729e697d6006071151": {
-        "model_name": "MeshModel",
-        "model_module": "jupyter-threejs",
-        "state": {
-            "scale": [
-                1,
-                1,
-                1
-            ],
-            "visible": true,
-            "geometry": "IPY_MODEL_8065dd7a1c6a4bf4ab2e38a9ac7bfb88",
-            "quaternion": [],
-            "children": [],
-            "position": [
-                0,
-                0,
-                0
-            ],
-            "up": [
-                0,
-                1,
-                0
-            ],
-            "receiveShadow": false,
-            "material": "IPY_MODEL_2deba3bdbd9746ac9cc7e2bbb13f140d",
-            "castShadow": false
-        },
-        "views": []
-    },
-    "53b39429ad794acc96370cba0f647aa7": {
-        "model_name": "LambertMaterialModel",
-        "model_module": "jupyter-threejs",
-        "state": {
-            "color": "yellow",
-            "side": "BackSide"
-        },
-        "views": []
-    },
-    "7adc6022ffd849779ab5630d1e2904ce": {
-        "model_name": "MeshModel",
-        "model_module": "jupyter-threejs",
-        "state": {
-            "scale": [
-                1,
-                1,
-                1
-            ],
-            "visible": true,
-            "geometry": "IPY_MODEL_8065dd7a1c6a4bf4ab2e38a9ac7bfb88",
-            "quaternion": [],
-            "children": [],
-            "position": [
-                0,
-                0,
-                0
-            ],
-            "up": [
-                0,
-                1,
-                0
-            ],
-            "receiveShadow": false,
-            "material": "IPY_MODEL_53b39429ad794acc96370cba0f647aa7",
-            "castShadow": false
-        },
-        "views": []
-    },
-    "e12cb8c4009d4dd2a51b011ba7656343": {
-        "model_name": "AmbientLightModel",
-        "model_module": "jupyter-threejs",
-        "state": {
-            "scale": [
-                1,
-                1,
-                1
-            ],
-            "visible": true,
-            "quaternion": [],
-            "children": [],
-            "position": [
-                0,
-                0,
-                0
-            ],
-            "up": [
-                0,
-                1,
-                0
-            ],
-            "receiveShadow": false,
-            "color": "#777777",
-            "castShadow": false
-        },
-        "views": []
-    },
-    "5963e7effe3345a492065d84ed0a48d9": {
-        "model_name": "SceneModel",
-        "model_module": "jupyter-threejs",
-        "state": {
-            "scale": [
-                1,
-                1,
-                1
-            ],
-            "visible": true,
-            "quaternion": [],
-            "children": [
-                "IPY_MODEL_677461e24d0c47729e697d6006071151",
-                "IPY_MODEL_7adc6022ffd849779ab5630d1e2904ce",
-                "IPY_MODEL_e12cb8c4009d4dd2a51b011ba7656343"
-            ],
-            "position": [
-                0,
-                0,
-                0
-            ],
-            "up": [
-                0,
-                1,
-                0
-            ],
-            "receiveShadow": false,
-            "castShadow": false
-        },
-        "views": []
-    },
-    "9ab31392ae0b4ef48368ac0a9ba74650": {
-        "model_name": "DirectionalLightModel",
-        "model_module": "jupyter-threejs",
-        "state": {
-            "scale": [
-                1,
-                1,
-                1
-            ],
-            "visible": true,
-            "quaternion": [],
-            "intensity": 0.6,
-            "children": [],
-            "position": [
-                3,
-                5,
-                1
-            ],
-            "up": [
-                0,
-                1,
-                0
-            ],
-            "receiveShadow": false,
-            "castShadow": false
-        },
-        "views": []
-    },
-    "350cb8bd6cb64d6a854a08b38dc2253c": {
-        "model_name": "PerspectiveCameraModel",
-        "model_module": "jupyter-threejs",
-        "state": {
-            "visible": true,
-            "receiveShadow": false,
-            "children": [
-                "IPY_MODEL_9ab31392ae0b4ef48368ac0a9ba74650"
-            ],
-            "position": [
-                2.5,
-                2.5,
-                2.5
-            ],
-            "up": [
-                0,
-                0,
-                1
-            ],
-            "scale": [
-                1,
-                1,
-                1
-            ],
-            "quaternion": [],
-            "castShadow": false
-        },
-        "views": []
-    },
-    "34852749f4b743da8971250ff153c75f": {
-        "model_name": "OrbitControlsModel",
-        "model_module": "jupyter-threejs",
-        "state": {
-            "controlling": "IPY_MODEL_350cb8bd6cb64d6a854a08b38dc2253c"
-        },
-        "views": []
-    },
-    "711f6fea498e4556a3d85216e478f61f": {
-        "model_name": "LayoutModel",
-        "model_module": "jupyter-js-widgets",
-        "state": {},
-        "views": []
-    },
-    "5fa73cf3542d45bab0684cc42e18d0cb": {
-        "model_name": "RendererModel",
-        "model_module": "jupyter-threejs",
-        "state": {
-            "camera": "IPY_MODEL_350cb8bd6cb64d6a854a08b38dc2253c",
-            "height": "400",
-            "controls": [
-                "IPY_MODEL_34852749f4b743da8971250ff153c75f"
-            ],
-            "scene": "IPY_MODEL_5963e7effe3345a492065d84ed0a48d9",
-            "layout": "IPY_MODEL_711f6fea498e4556a3d85216e478f61f",
-            "width": "600"
-        },
-        "views": [
-            {
-                "cell_index": 15
+    "version_major": 1,
+    "version_minor": 0,
+    "state": {
+        "8e7e0f6eb9844e3f9bb5174def2773b1": {
+            "model_name": "ParametricGeometryModel",
+            "model_module": "jupyter-threejs",
+            "model_module_version": "*",
+            "state": {
+                "_model_module_version": "*",
+                "_view_module_version": "*",
+                "func": "\nfunction f(origu,origv) {\n    // scale u and v to the ranges I want: [0, 2*pi]\n    var u = 2*Math.PI*origu;\n    var v = 2*Math.PI*origv;\n    \n    var x = Math.sin(u);\n    var y = Math.cos(v);\n    var z = Math.cos(u+v);\n    \n    return new THREE.Vector3(x,y,z)\n}\n",
+                "msg_throttle": 1
             }
-        ]
+        },
+        "7878e7a39ac84d9d83f49f0e3c22a34e": {
+            "model_name": "LambertMaterialModel",
+            "model_module": "jupyter-threejs",
+            "model_module_version": "*",
+            "state": {
+                "_model_module_version": "*",
+                "_view_module_version": "*",
+                "color": "green",
+                "msg_throttle": 1,
+                "side": "FrontSide"
+            }
+        },
+        "04fd031af48d42ee9eb3f54c3cb36456": {
+            "model_name": "MeshModel",
+            "model_module": "jupyter-threejs",
+            "model_module_version": "*",
+            "state": {
+                "_model_module_version": "*",
+                "_view_module_version": "*",
+                "castShadow": false,
+                "children": [],
+                "geometry": "IPY_MODEL_8e7e0f6eb9844e3f9bb5174def2773b1",
+                "material": "IPY_MODEL_7878e7a39ac84d9d83f49f0e3c22a34e",
+                "msg_throttle": 1,
+                "position": [
+                    0,
+                    0,
+                    0
+                ],
+                "quaternion": [],
+                "receiveShadow": false,
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "up": [
+                    0,
+                    1,
+                    0
+                ],
+                "visible": true
+            }
+        },
+        "a7f219cfdae9424f859e90e397bc287c": {
+            "model_name": "LambertMaterialModel",
+            "model_module": "jupyter-threejs",
+            "model_module_version": "*",
+            "state": {
+                "_model_module_version": "*",
+                "_view_module_version": "*",
+                "color": "yellow",
+                "msg_throttle": 1,
+                "side": "BackSide"
+            }
+        },
+        "ed74977d7e6140358a2b9c79da1519e3": {
+            "model_name": "MeshModel",
+            "model_module": "jupyter-threejs",
+            "model_module_version": "*",
+            "state": {
+                "_model_module_version": "*",
+                "_view_module_version": "*",
+                "castShadow": false,
+                "children": [],
+                "geometry": "IPY_MODEL_8e7e0f6eb9844e3f9bb5174def2773b1",
+                "material": "IPY_MODEL_a7f219cfdae9424f859e90e397bc287c",
+                "msg_throttle": 1,
+                "position": [
+                    0,
+                    0,
+                    0
+                ],
+                "quaternion": [],
+                "receiveShadow": false,
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "up": [
+                    0,
+                    1,
+                    0
+                ],
+                "visible": true
+            }
+        },
+        "5ab81bda60764803be4371a770e6b758": {
+            "model_name": "AmbientLightModel",
+            "model_module": "jupyter-threejs",
+            "model_module_version": "*",
+            "state": {
+                "_model_module_version": "*",
+                "_view_module_version": "*",
+                "castShadow": false,
+                "children": [],
+                "color": "#777777",
+                "msg_throttle": 1,
+                "position": [
+                    0,
+                    0,
+                    0
+                ],
+                "quaternion": [],
+                "receiveShadow": false,
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "up": [
+                    0,
+                    1,
+                    0
+                ],
+                "visible": true
+            }
+        },
+        "6509a619a56a434c873ffd9cfb313653": {
+            "model_name": "SceneModel",
+            "model_module": "jupyter-threejs",
+            "model_module_version": "*",
+            "state": {
+                "_model_module_version": "*",
+                "_view_module_version": "*",
+                "castShadow": false,
+                "children": [
+                    "IPY_MODEL_04fd031af48d42ee9eb3f54c3cb36456",
+                    "IPY_MODEL_ed74977d7e6140358a2b9c79da1519e3",
+                    "IPY_MODEL_5ab81bda60764803be4371a770e6b758"
+                ],
+                "msg_throttle": 1,
+                "position": [
+                    0,
+                    0,
+                    0
+                ],
+                "quaternion": [],
+                "receiveShadow": false,
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "up": [
+                    0,
+                    1,
+                    0
+                ],
+                "visible": true
+            }
+        },
+        "514a1d27f02e47cfb7faede16d4e0ab8": {
+            "model_name": "DirectionalLightModel",
+            "model_module": "jupyter-threejs",
+            "model_module_version": "*",
+            "state": {
+                "_model_module_version": "*",
+                "_view_module_version": "*",
+                "castShadow": false,
+                "children": [],
+                "intensity": 0.6,
+                "msg_throttle": 1,
+                "position": [
+                    3,
+                    5,
+                    1
+                ],
+                "quaternion": [],
+                "receiveShadow": false,
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "up": [
+                    0,
+                    1,
+                    0
+                ],
+                "visible": true
+            }
+        },
+        "ff56869a1368407fa77401fb9f9ca56b": {
+            "model_name": "PerspectiveCameraModel",
+            "model_module": "jupyter-threejs",
+            "model_module_version": "*",
+            "state": {
+                "_model_module_version": "*",
+                "_view_module_version": "*",
+                "castShadow": false,
+                "children": [
+                    "IPY_MODEL_514a1d27f02e47cfb7faede16d4e0ab8"
+                ],
+                "msg_throttle": 1,
+                "position": [
+                    2.5,
+                    2.5,
+                    2.5
+                ],
+                "quaternion": [],
+                "receiveShadow": false,
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "up": [
+                    0,
+                    0,
+                    1
+                ],
+                "visible": true
+            }
+        },
+        "5807776457c44690b11355d39c32f599": {
+            "model_name": "OrbitControlsModel",
+            "model_module": "jupyter-threejs",
+            "model_module_version": "*",
+            "state": {
+                "_model_module_version": "*",
+                "_view_module_version": "*",
+                "controlling": "IPY_MODEL_ff56869a1368407fa77401fb9f9ca56b",
+                "msg_throttle": 1
+            }
+        },
+        "5f5c22b36d944cb8abf13e8c754331f7": {
+            "model_name": "LayoutModel",
+            "model_module": "jupyter-js-widgets",
+            "model_module_version": "~2.1.4",
+            "state": {
+                "_model_module_version": "~2.1.4",
+                "_view_module_version": "~2.1.4"
+            }
+        },
+        "1c5ad89ba4924d83a54b15e400806b18": {
+            "model_name": "RendererModel",
+            "model_module": "jupyter-threejs",
+            "model_module_version": "*",
+            "state": {
+                "_dom_classes": [],
+                "_model_module_version": "*",
+                "_view_module_version": "*",
+                "camera": "IPY_MODEL_ff56869a1368407fa77401fb9f9ca56b",
+                "controls": [
+                    "IPY_MODEL_5807776457c44690b11355d39c32f599"
+                ],
+                "height": "400",
+                "layout": "IPY_MODEL_5f5c22b36d944cb8abf13e8c754331f7",
+                "msg_throttle": 1,
+                "scene": "IPY_MODEL_6509a619a56a434c873ffd9cfb313653",
+                "width": "600"
+            }
+        }
     }
 }

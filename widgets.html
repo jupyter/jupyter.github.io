@@ -6,7 +6,7 @@ navbar_gray: true
 
 <link href="css/gallery.css" rel="stylesheet">
 <link href="css/syntax.css" rel="stylesheet">
-<script src="https://unpkg.com/jupyter-js-widgets@1.1.2/dist/embed.js"></script>
+<script src="https://unpkg.com/jupyter-js-widgets@~2.1.4/dist/embed.js"></script>
 
 <section>
   <div class="header header-grey">
@@ -26,7 +26,7 @@ navbar_gray: true
     <div class="container">
       <img class="section-icon img-responsive" src="assets/widget.svg" alt="icon to represent multiple notebooks">
         <h3 class="col-sm-12 section-header">Notebook Widgets</h3>
-      <p class="support-paragraph">Notebooks come alive when interactive widgets are used. Users can visualize and control changes in the data. Learning becomes an immersive, plus fun, experience. Researchers can easily see how changing inputs to a model impact the results.</p>
+      <p class="support-paragraph">Notebooks come alive when interactive widgets are used. Users can visualize and control changes in the data. Learning becomes an immersive, plus fun, experience. Researchers can easily see how changing inputs to a model impacts the results.</p>
     </div>
   </div>
 </section>
@@ -44,13 +44,19 @@ navbar_gray: true
         <li>
           <a href="#bqplot" data-toggle="tab">
             <p>bqplot</p>
-            <p>Interactive 2-D data visualization</p>
+            <p>2-D interactive data visualization</p>
           </a>
         </li>
         <li>
           <a href="#pythreejs" data-toggle="tab">
             <p>pythreejs</p>
             <p>3-D data visualization</p>
+          </a>
+        </li>
+        <li>
+          <a href="#ipyvolume" data-toggle="tab">
+            <p>ipyvolume</p>
+            <p>3-D plotting</p>
           </a>
         </li>
         <li>
@@ -75,21 +81,26 @@ navbar_gray: true
           </div>
           <p>
           A library for creating simple interactive maps with panning and
-          zooming. ipyleaflet supports annotations such as polygons,
+          zooming, ipyleaflet supports annotations such as polygons,
           markers, and more generally any geojson-encoded geographical
           data structure.
           </p>
           <h3>Example</h3>
           {% highlight python %}{% include_relative assets/ipyleaflet-example.py %}{% endhighlight %}
-          <script type="application/vnd.jupyter-embedded-widgets">
+          <script type="application/vnd.jupyter.widget-state+json">
               {% include_relative assets/ipyleaflet-example.json %}
+          </script>
+          <script type="application/vnd.jupyter.widget-view+json">
+          {
+              "model_id": "5e5cc11723794d639e8d7a3f0951fdea"
+          }
           </script>
           <h3>Installation</h3>
           With conda:
           {% highlight bash %}conda install -c conda-forge ipyleaflet{% endhighlight %}
           With pip:
           {% highlight bash %}pip install ipyleaflet
-          jupyter nbextension enable --py --sys-prefix ipyleaflet{% endhighlight %}
+jupyter nbextension enable --py --sys-prefix ipyleaflet{% endhighlight %}
         </div>
         <div class="tab-pane" id="bqplot">
           <div class="jupyter-widget-header">
@@ -104,21 +115,26 @@ navbar_gray: true
             </span>
           </div>
           <p>
-          A 2-D interative data visualization library implementing the
-          constructs of the grammar of graphics. bqplot provides a simple
+          A 2-D interactive data visualization library implementing the
+          constructs of the grammar of graphics, bqplot provides a simple
           API for creating custom user interactions.
           </p>
           <h3>Example</h3>
           {% highlight python %}{% include_relative assets/bqplot-example.py %}{% endhighlight %}
-          <script type="application/vnd.jupyter-embedded-widgets">
+          <script type="application/vnd.jupyter.widget-state+json">
               {% include_relative assets/bqplot-example.json %}
+          </script>
+          <script type="application/vnd.jupyter.widget-view+json">
+          {
+              "model_id": "10e4ea0790e94bcba5d41df5f3ce007c"
+          }
           </script>
           <h3>Installation</h3>
           With conda:
           {% highlight bash %}conda install -c conda-forge bqplot{% endhighlight %}
           With pip:
           {% highlight bash %}pip install bqplot
-          jupyter nbextension enable --py --sys-prefix bqplot{% endhighlight %}
+jupyter nbextension enable --py --sys-prefix bqplot{% endhighlight %}
         </div>
         <div class="tab-pane" id="pythreejs">
           <div class="jupyter-widget-header">
@@ -138,15 +154,52 @@ navbar_gray: true
           </p>
           <h3>Example</h3>
           {% highlight python %}{% include_relative assets/pythreejs-example.py %}{% endhighlight %}
-          <script type="application/vnd.jupyter-embedded-widgets">
+          <script type="application/vnd.jupyter.widget-state+json">
               {% include_relative assets/pythreejs-example.json %}
+          </script>
+          <script type="application/vnd.jupyter.widget-view+json">
+          {
+              "model_id": "1c5ad89ba4924d83a54b15e400806b18"
+          }
           </script>
           <h3>Installation</h3>
           With conda:
           {% highlight bash %}conda install -c conda-forge pythreejs{% endhighlight %}
           With pip:
           {% highlight bash %}pip install pythreejs
-          jupyter nbextension enable --py --sys-prefix pythreejs{% endhighlight %}
+jupyter nbextension enable --py --sys-prefix pythreejs{% endhighlight %}
+        </div>
+        <div class="tab-pane" id="ipyvolume">
+          <div class="jupyter-widget-header">
+            <span class="gallery-title">ipyvolume</span>
+            <span>
+              <a href="http://mybinder.org/repo/maartenbreddels/ipyvolume/notebooks/docs/source/">
+              <img class="img-scaling" src="assets/mybinder.svg" alt="Binder">
+              </a>
+                <a href="https://github.com/maartenbreddels/ipyvolume">
+                <img class="img-scaling" src="assets/github.svg" alt="GitHub">
+                </a>
+            </span>
+          </div>
+          <p>
+          3d plotting for Python in the Jupyter notebook based on IPython widgets using WebGL.
+          </p>
+          <h3>Example</h3>
+          {% highlight python %}{% include_relative assets/ipyvolume-example.py %}{% endhighlight %}
+          <script type="application/vnd.jupyter.widget-state+json">
+              {% include_relative assets/ipyvolume-example.json %}
+          </script>
+          <script type="application/vnd.jupyter.widget-view+json">
+          {
+              "model_id": "16697810550d48d690315b958c3802b7"
+          }
+          </script>
+          <h3>Installation</h3>
+          With conda:
+          {% highlight bash %}conda install -c conda-forge ipyvolume{% endhighlight %}
+          With pip:
+          {% highlight bash %}pip install ipyvolume
+jupyter nbextension enable --py --sys-prefix ipyvolume{% endhighlight %}
         </div>
         <div class="tab-pane" id="cookiecutter">
           <div class="jupyter-widget-header">
