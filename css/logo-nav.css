@@ -31,6 +31,7 @@ body {
     color: #E46E2E;
 }
 .navbar-scroll {
+  background-color: white;
     animation-duration: 2s;
     animation-name: smooth;
     -moz-box-shadow: 1px 1px 1px #999;
