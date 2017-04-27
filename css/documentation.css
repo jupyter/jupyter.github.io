@@ -11,7 +11,7 @@
 }
 
 .header {
-  padding-bottom: 32.5px;
+  padding-bottom: 32px;
 }
 
 .docs-get-started {
@@ -147,6 +147,7 @@
 #ipython-block {
   background-image: url(../assets/documentation/ipython-block-font.svg);
   background-repeat: no-repeat;
+  background-size: 108px;
   background-position-x: 90%;
   background-position-y: center;
 }

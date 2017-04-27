@@ -159,9 +159,15 @@ body {
 /* Reusable elements */
 
 /* Header section of each page */
-.header{
+.header {
     padding-bottom: 30px;
     text-align: center;
+}
+.header-darkgray {
+  /* Only using dark gray for documentation page, add padding top to center in header */
+  padding-top: 32px;
+  background-color: #757575;
+  color: white;
 }
 .header-grey {
   background-color: #F8F8F8;

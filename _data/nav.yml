@@ -2,8 +2,7 @@ head:
     - Install
     - About
     - Resources
-    - title: Documentation
-      url: https://jupyter.readthedocs.io/en/latest/index.html
+    - Documentation
     - title: NBViewer
       url: https://nbviewer.jupyter.org
     - Widgets
