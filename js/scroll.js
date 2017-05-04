@@ -1,6 +1,7 @@
 $(document).ready(function() {
     if (window.outerWidth < 768) {
                 $('.navbar').removeClass('jupytercon-navbar');
+                $('.navbar').addClass('navbar-white');
                 $('.tab').addClass('black-tab');
                 document.getElementById('jupyter-nav-logo').src = '/assets/nav_logo.svg';
                 $('.icon-bar').removeClass('white-icon-bar');
@@ -9,12 +10,12 @@ $(document).ready(function() {
         if (window.location.pathname == '/' || window.location.pathname == '/index.html') {
             if (window.outerWidth < 768) {
                 $('.navbar').removeClass('jupytercon-navbar');
+                $('.navbar').addClass('navbar-white');
                 $('.tab').addClass('black-tab');
                 document.getElementById('jupyter-nav-logo').src = '/assets/nav_logo.svg';
                 $('.icon-bar').removeClass('white-icon-bar');
             }
             else {
-                console.log(window.location.pathname);
                 $('.navbar').addClass('jupytercon-navbar');
                 $('.tab').removeClass('black-tab');
                 document.getElementById('jupyter-nav-logo').src = '/assets/white_nav_logo.svg';
