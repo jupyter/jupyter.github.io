@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="121px" height="128px" viewBox="0 0 121 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>education-block</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="130" height="130"></rect>
+        <rect id="path-3" x="0.0766695952" y="0.166228851" width="4.9496948" height="4.85890187"></rect>
+        <polygon id="path-5" points="2.56779929 2.08742649 3.07936908 3.10393312 2.02366492 3.09684326"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-679.000000, -450.000000)">
+            <g id="education-block" transform="translate(671.000000, 450.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <g mask="url(#mask-2)" id="Group-4">
+                    <g transform="translate(10.000000, -11.000000)">
+                        <g>
+                            <g id="Page-1">
+                                <g id="Artboard">
+                                    <g id="Group-19">
+                                        <g id="Group-16">
+                                            <g id="Group-8">
+                                                <g id="Rectangle-7" transform="translate(0.000000, 0.036656)">
+                                                    <g id="Group-4" transform="translate(0.000000, 0.559079)">
+                                                        <rect id="Rectangle-7" stroke="#616161" stroke-width="2" fill="#FFFFFF" fill-rule="nonzero" transform="translate(58.500000, 76.132727) rotate(-30.000000) translate(-58.500000, -76.132727) " x="18.4784285" y="28.8651656" width="80.0431433" height="94.535122"></rect>
+                                                        <g id="Group-2" transform="translate(85.791516, 43.011967) rotate(1.000000) translate(-85.791516, -43.011967) translate(56.291516, 1.011967)">
+                                                            <g id="Rectangle-6" transform="translate(34.847738, 32.830305) rotate(30.000000) translate(-34.847738, -32.830305) translate(25.847738, 0.330305)">
+                                                                <g id="path-1-link" transform="translate(0.000000, -0.000000)" fill-rule="nonzero" fill="#000000">
+                                                                    <rect id="path-1" x="0.056734156" y="0.303400975" width="17.2417253" height="64.4566889"></rect>
+                                                                </g>
+                                                                <g id="path-1-link" transform="translate(0.000000, -0.000000)" fill="#FBCE27">
+                                                                    <rect id="path-1" x="0.056734156" y="0.303400975" width="17.2417253" height="64.4566889"></rect>
+                                                                </g>
+                                                            </g>
+                                                            <g id="Group-17" transform="translate(0.007153, 56.227355)">
+                                                                <polygon id="Triangle" stroke="#616161" stroke-width="1.8" fill="#FFEBB0" fill-rule="nonzero" transform="translate(12.882434, 13.621306) rotate(-150.000000) translate(-12.882434, -13.621306) " points="11.6909112 4.0543145 22.1567948 23.1253333 3.60807329 23.1882981"></polygon>
+                                                                <g id="Triangle" transform="translate(11.019478, 16.965252) rotate(-150.000000) translate(-11.019478, -16.965252) translate(8.019478, 13.965252)">
+                                                                    <g id="path-3-link" transform="translate(1.988641, 2.052562)" fill="#616161">
+                                                                        <polygon id="path-3" points="0.579158446 0.0348649095 1.09072824 1.05137154 0.0350240758 1.04428168"></polygon>
+                                                                    </g>
+                                                                    <g id="path-3-link" transform="translate(-0.000000, -0.000000)">
+                                                                        <g id="path-3-Clipped">
+                                                                            <mask id="mask-4" fill="white">
+                                                                                <use xlink:href="#path-3"></use>
+                                                                            </mask>
+                                                                            <g id="Rectangle-path"></g>
+                                                                            <polygon id="path-3" stroke="#616161" stroke-width="3.5999999" mask="url(#mask-4)" points="2.56779929 2.08742649 3.07936908 3.10393312 2.02366492 3.09684326"></polygon>
+                                                                            <mask id="mask-6" fill="white">
+                                                                                <use xlink:href="#path-5"></use>
+                                                                            </mask>
+                                                                            <g id="path-3"></g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                        <path d="M13.2864407,49.8983397 L59.040832,127.279911" id="Line" stroke="#E1E1E1" stroke-width="2" stroke-linecap="square"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
