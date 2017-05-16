@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="122px" height="101px" viewBox="0 0 122 101" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>kernels-blockdoc</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0.23484003" width="122" height="99.8637481" rx="4"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-139.000000, -128.000000)">
+            <g id="kernels-block" transform="translate(139.000000, 128.000000)">
+                <g id="Group-21">
+                    <g id="Page-1">
+                        <g id="Artboard">
+                            <g id="Group-19">
+                                <g id="Group-16">
+                                    <g id="Group-10">
+                                        <g id="Rectangle-8">
+                                            <g id="Group-21">
+                                                <g id="Rectangle-8">
+                                                    <g id="path-1-Clipped">
+                                                        <mask id="mask-2" fill="white">
+                                                            <use xlink:href="#path-1"></use>
+                                                        </mask>
+                                                        <g id="path-1"></g>
+                                                        <rect id="path-1" stroke="#979797" stroke-width="6" fill="#000000" fill-rule="nonzero" mask="url(#mask-2)" x="0" y="0.23484003" width="122" height="99.8637481" rx="4"></rect>
+                                                    </g>
+                                                </g>
+                                                <path d="M17.6492457,28.2678901 L26.4492188,24.0513374 L17.6492457,19.8347846 L17.6492457,17.8621284 L29.0251212,23.4225531 L29.0251212,24.6801215 L17.6492457,30.2405463 L17.6492457,28.2678901 Z M45.3805819,36.9599066 L29.8635426,36.9599066 L29.8635426,35.2338324 L45.3805819,35.2338324 L45.3805819,36.9599066 Z" id="&gt;_" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

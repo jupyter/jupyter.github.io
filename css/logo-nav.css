@@ -9,9 +9,11 @@ body {
     padding: 15px 0;
 }
 .navbar {
-    background-color: white;
     border-width: thin;
     -webkit-transition: .2s;
+}
+.navbar-white {
+  background-color: white;
 }
 .navbar-gray {
     background-color: rgb(248,248,248);
@@ -29,6 +31,7 @@ body {
     color: #E46E2E;
 }
 .navbar-scroll {
+  background-color: white;
     animation-duration: 2s;
     animation-name: smooth;
     -moz-box-shadow: 1px 1px 1px #999;
@@ -157,10 +160,21 @@ body {
 /* Reusable elements */
 
 /* Header section of each page */
-.header{
-    background-color: #F8F8F8;
+.header {
     padding-bottom: 30px;
     text-align: center;
+}
+.header-darkgray {
+  /* Only using dark gray for documentation page, add padding top to center in header */
+  padding-top: 32px;
+  background-color: #757575;
+  color: white;
+}
+.header-grey {
+  background-color: #F8F8F8;
+}
+.header-white {
+  background-color: white;
 }
 
 /* Section elements */

@@ -1,16 +1,22 @@
-<nav class="navbar navbar-fixed-top {% if page.navbar_gray %}navbar-gray{%endif%} {% if page.url == '/' || page.url == '/index.html' %}jupytercon-navbar{% endif %}" role="navigation" id="navbar" >
+<nav class="navbar navbar-fixed-top {% if page.navbar_gray %}navbar-gray{%endif%} {% if page.navbar_white %}navbar-white{%endif%} {% if page.navbar_jupytercon %}jupytercon-navbar{% endif %}" role="navigation" id="navbar" >
         <div class="navbar-inner">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar {% if page.url == '/' || page.url == '/index.html' %}white-icon-bar{% endif %}"></span>
-                    <span class="icon-bar {% if page.url == '/' || page.url == '/index.html' %}white-icon-bar{% endif %}"></span>
-                    <span class="icon-bar {% if page.url == '/' || page.url == '/index.html' %}white-icon-bar{% endif %}"></span>
+                    {% if page.url == '/' or page.url == '/index.html' %}
+                      <span class="icon-bar white-icon-bar"></span>
+                      <span class="icon-bar white-icon-bar"></span>
+                      <span class="icon-bar white-icon-bar"></span>
+                    {% else %}
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    {% endif %}
                 </button>
                 <a class="navbar-brand" href="{{site.baseurl}}/index.html">
-                    <img id="jupyter-nav-logo" class="navbar-logo" src="{% if page.url == '/' | page.url == '/index.html' %}{{site.baseurl}}/assets/white_nav_logo.svg{% else %}{{site.baseurl}}/assets/nav_logo.svg{%endif%}" alt="Jupyter logo">
+                    <img id="jupyter-nav-logo" class="navbar-logo" src="{% if page.url == '/' or page.url == '/index.html' %}{{site.baseurl}}/assets/white_nav_logo.svg{% else %}{{site.baseurl}}/assets/nav_logo.svg{%endif%}" alt="Jupyter logo">
                 </a>
             </div>
             <div class="blur"></div>
@@ -44,4 +50,4 @@
         </div>
         <!-- /.container -->
     </div>
-</nav>  
+</nav>
