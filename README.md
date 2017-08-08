@@ -13,13 +13,14 @@ what where.
 # Quick local testing
 
 ```
-$ gem install jekyll kramdown github-pages
+gem install bundler
+bundle install
 ```
 
 cd into the root of this directory, 
 
 ```
-jekyll serve --baseurl ''
+bundle exec jekyll serve --baseurl ''
 ```
 
 Open your browser to localhost:4000
