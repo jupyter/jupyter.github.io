@@ -1,7 +1,7 @@
 head:
     - Install
     - About
-    - Resources
+    - Community
     - Documentation
     - title: NBViewer
       url: https://nbviewer.jupyter.org
