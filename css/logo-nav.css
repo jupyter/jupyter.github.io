@@ -296,7 +296,8 @@ body {
 }
 .companies .col img{
     display: block;
-    width: 100%
+    width: 100%;
+    max-height: 60px;
 }
 .greydout {
     -moz-opacity: .065;
