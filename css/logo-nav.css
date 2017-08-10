@@ -154,7 +154,7 @@ body {
     width: 95%;
 }
 .img-container img {
-    vertical-align: center;
+    vertical-align: middle;
 }
 
 /* Reusable elements */
@@ -291,7 +291,7 @@ body {
     box-sizing: border-box;
     display: inline-block;
     padding: 2%;
-    vertical-align: center;
+    vertical-align: middle;
     width: 18%;
 }
 .companies .col img{
@@ -370,8 +370,7 @@ body {
     display: block;
     height: 100%;
     margin: 0 auto;
-    text-align:center;
-    vertical-align: center;
+    text-align: center;
 }
 /* Used to make cursor turn to link specific cursor when hovering over architecture buttons */
 .bt, .bt1, .bt2 {
