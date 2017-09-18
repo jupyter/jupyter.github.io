@@ -112,19 +112,24 @@
 
 .jupyterlab-dropdown-menu {
   left: 23px;
+#general-block {
+  background-image: url(../assets/documentation/general-block.svg);
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-size: 80px;
+  background-position-y: center;
 }
-
 #interfaces-block {
   background-image: url(../assets/documentation/interfaces-block.svg);
   background-repeat: no-repeat;
   background-position-x: 102%;
-  background-position-y: center
+  background-position-y: center;
 }
 #education-block {
   background-image: url(../assets/documentation/education-block.svg);
   background-repeat: no-repeat;
   background-position-x: 90%;
-  background-position-y: center
+  background-position-y: center;
 }
 #jupyterhub-block {
   background-image: url(../assets/documentation/jupyterhub_block.svg);
