@@ -76,42 +76,9 @@
   top: 125px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-}
-.interfaces-dropdown-menu {
   left: 23px;
 }
 
-.education-dropdown-menu {
-  left: 23px;
-}
-
-.jupyterhub-dropdown-menu {
-  left: 23px;
-}
-
-.kernels-dropdown-menu {
-    left: 23px;
-}
-
-.conversion-dropdown-menu {
-  left: 23px;
-  top: 122px;
-}
-
-.ipython-dropdown-menu {
-  left: 23px;
-}
-
-.architecture-dropdown-menu {
-  left: 23px;
-}
-
-.deployment-dropdown-menu {
-  left: 23px;
-}
-
-.jupyterlab-dropdown-menu {
-  left: 23px;
 #general-block {
   background-image: url(../assets/documentation/general-block.svg);
   background-repeat: no-repeat;
