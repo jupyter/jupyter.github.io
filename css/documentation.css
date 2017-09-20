@@ -76,55 +76,27 @@
   top: 125px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-}
-.interfaces-dropdown-menu {
   left: 23px;
 }
 
-.education-dropdown-menu {
-  left: 23px;
+#general-block {
+  background-image: url(../assets/documentation/general-block.svg);
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-size: 80px;
+  background-position-y: center;
 }
-
-.jupyterhub-dropdown-menu {
-  left: 23px;
-}
-
-.kernels-dropdown-menu {
-    left: 23px;
-}
-
-.conversion-dropdown-menu {
-  left: 23px;
-  top: 122px;
-}
-
-.ipython-dropdown-menu {
-  left: 23px;
-}
-
-.architecture-dropdown-menu {
-  left: 23px;
-}
-
-.deployment-dropdown-menu {
-  left: 23px;
-}
-
-.jupyterlab-dropdown-menu {
-  left: 23px;
-}
-
 #interfaces-block {
   background-image: url(../assets/documentation/interfaces-block.svg);
   background-repeat: no-repeat;
   background-position-x: 102%;
-  background-position-y: center
+  background-position-y: center;
 }
 #education-block {
   background-image: url(../assets/documentation/education-block.svg);
   background-repeat: no-repeat;
   background-position-x: 90%;
-  background-position-y: center
+  background-position-y: center;
 }
 #jupyterhub-block {
   background-image: url(../assets/documentation/jupyterhub_block.svg);
