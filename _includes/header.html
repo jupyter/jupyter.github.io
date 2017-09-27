@@ -1,4 +1,4 @@
-<nav class="navbar navbar-fixed-top {% if page.navbar_gray %}navbar-gray{%endif%} {% if page.navbar_white %}navbar-white{%endif%} {% if page.navbar_jupytercon %}jupytercon-navbar{% endif %}" role="navigation" id="navbar" >
+<nav class="navbar navbar-fixed-top {% if page.navbar_gray %}navbar-gray{%endif%} {% if page.navbar_white %}navbar-white{%endif%}" role="navigation" id="navbar" >
         <div class="navbar-inner">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -22,7 +22,7 @@
             <div class="blur"></div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right {% if page.url == '/' | page.url == '/index.html' %}jupytercon-nav{% endif %}">
+                <ul class="nav navbar-nav navbar-right">
                     {% for nav in site.data.nav.head %}
                       {% if nav.url %}
                            <li>
