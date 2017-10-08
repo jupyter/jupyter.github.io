@@ -20,27 +20,33 @@
   border-radius: 4px;
   padding: 0px;
 }
+
 .docs-get-started-section-head {
   padding: 20px 24px 0px 24px;
   margin-top: 0px;
   margin-bottom: 4px;
 }
+
 .docs-get-started-items {
   list-style: none;
   list-style-type: none;
   padding: 0px 24px;
 }
+
 .docs-get-started-item {
   padding: 8px 0px;
 }
+
 .docs-get-started-head {
   margin-top: 0px;
   margin-bottom: 4px;
   color: #1976D2;
 }
+
 .docs-get-started-subhead {
   margin-bottom: 0px;
 }
+
 .docs-projects-head {
   padding-left: 8px;
 }
@@ -60,62 +66,55 @@
   text-align: left;
   padding-left: 28px;
 }
+
 .docs-project-tile-head {
   font-size: 20px;
   padding-left: 12px;
 }
+
 .docs-project-two-line {
   margin-top: 28px;
 }
+
 .docs-project-one-line {
   margin-top: 46px;
 }
-.docs-dropdown-menu {
-  font-size: 16px;
-  width: 350px;
-  top: 125px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  left: 23px;
-}
 
-#general-block {
-  background-image: url(../assets/documentation/general-block.svg);
-  background-repeat: no-repeat;
-  background-position-x: 90%;
-  background-size: 80px;
-  background-position-y: center;
-}
 #interfaces-block {
   background-image: url(../assets/documentation/interfaces-block.svg);
   background-repeat: no-repeat;
   background-position-x: 102%;
   background-position-y: center;
 }
+
 #education-block {
   background-image: url(../assets/documentation/education-block.svg);
   background-repeat: no-repeat;
   background-position-x: 90%;
   background-position-y: center;
 }
+
 #jupyterhub-block {
   background-image: url(../assets/documentation/jupyterhub_block.svg);
   background-repeat: no-repeat;
   background-position-x: 90%;
   background-position-y: 10px;
 }
+
 #kernels-block {
   background-image: url(../assets/documentation/kernels-block.svg);
   background-repeat: no-repeat;
   background-position-x: 102%;
   background-position-y: 130%;
 }
+
 #conversion-block {
   background-image: url(../assets/documentation/conversion-block.svg);
   background-repeat: no-repeat;
   background-position-x: 90%;
   background-position-y: center
 }
+
 #ipython-block {
   background-image: url(../assets/documentation/ipython-block-font.svg);
   background-repeat: no-repeat;
@@ -123,18 +122,21 @@
   background-position-x: 90%;
   background-position-y: center;
 }
+
 #architecture-block {
   background-image: url(../assets/documentation/architecture-block.svg);
   background-repeat: no-repeat;
   background-position-x: 90%;
   background-position-y: center;
 }
+
 #deployment-block {
   background-image: url(../assets/documentation/deployment-block.svg);
   background-repeat: no-repeat;
   background-position-x: 90%;
   background-position-y: 140%;
 }
+
 #jupyterlab-block {
   background-image: url(../assets/documentation/jupyterlab-block.svg);
   background-repeat: no-repeat;
@@ -145,37 +147,12 @@
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 1200px) {
-
-.docs-dropdown-menu {
-  width: 440px;
-}
-
-
-
-
 }
 
 @media screen and (max-width: 992px) {
-
-  .docs-dropdown-menu {
-    width: 330px;
-  }
-
-
-
-
 }
 
 @media screen and (max-width: 768px) {
-
-  .docs-dropdown-menu {
-    width: 400px;
-    max-width: 92%;
-    margin: 0 auto;
-    left: 8px;
-    right: 8px;
-    top: 120px;
-  }
 
   .docs-projects-item {
     min-width: 300px;
@@ -185,8 +162,5 @@
     margin: 0 auto;
     margin-bottom: 8px;
   }
-
-  }
-
 
 }

@@ -1,5 +1,5 @@
 (function(){
-	"use strcit";
+	"use strict";
 	
 	var div1 = $(".div1" );
 	var div2 = $(".div2" );
