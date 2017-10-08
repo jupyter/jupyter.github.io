@@ -1,7 +1,6 @@
 ---
 layout: page
 title: CoC
-navbar_gray: true
 ---
 
 

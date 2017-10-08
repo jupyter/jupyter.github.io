@@ -69,7 +69,6 @@ or `my_page/index.html` (will have url `https://jupyter.org/my_page/`), start wi
 ---
 layout: default
 title: My Page
-navbar_gray: true
 ---
 
 write some html here (consider you are already inside `<body></body>`
@@ -78,8 +77,6 @@ write some html here (consider you are already inside `<body></body>`
 You can not do it yet with .md file, but you will be able soon.
 
 Add commit (and don't forget to add to `_data/nav.yml`
-
-`navbar_gray: true` start the navbar with a grey background if you need it. 
 
 # Continuous Integration Testing on Travis
 
