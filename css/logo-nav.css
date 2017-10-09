@@ -572,14 +572,29 @@ body {
 /* Donate Page */
 .donate-box {
     background-color: white;
-    border-color: #979797;
-    border-radius: 8px;
+    border-color: #e0e0e0;
+    border-radius: 2px;
     border-style: solid;
     border-width: 1px;
-    height: 500px;
-    height: 20%;
-    margin-top: 5%;
+    margin-top: 32px;
     padding: 32px;
+}
+
+#donate-formatting {
+    width: 100%;
+    text-align: center;
+}
+
+#donate-formatting a {
+    width: 250px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#numfocus-logo {
+    height: 100px;
 }
 
 /*Community Resources Page */
