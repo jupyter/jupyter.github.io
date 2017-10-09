@@ -1,148 +1,55 @@
-.header-white {
-  background-color: #7E7E7F;
-}
-
-.header-breadcrumbs {
-  display: block;
-  background-color: #7E7E7F;
-  width: auto;
-  height: 44px;
-  border-bottom: 1px solid #979797;
-}
-
-.header {
-  padding-bottom: 32px;
-}
-
-.docs-get-started {
-  background-color: white;
-  border: 1px solid #BDBDBD;
-  border-radius: 4px;
-  padding: 0px;
-}
-
-.docs-get-started-section-head {
-  padding: 20px 24px 0px 24px;
-  margin-top: 0px;
-  margin-bottom: 4px;
-}
-
-.docs-get-started-items {
-  list-style: none;
-  list-style-type: none;
-  padding: 0px 24px;
-}
-
-.docs-get-started-item {
-  padding: 8px 0px;
-}
-
-.docs-get-started-head {
-  margin-top: 0px;
-  margin-bottom: 4px;
-  color: #1976D2;
-}
-
-.docs-get-started-subhead {
-  margin-bottom: 0px;
-}
-
-.docs-projects-head {
-  padding-left: 8px;
-}
-
-.docs-projects-documentation {
+.docs-cards {
   margin-bottom: 20px;
 }
 
-.docs-projects-item {
-  background-color: white;
-  height: 125px;
-  width: 100%;
-  box-shadow: 0 0 2px rgba(0, 0, 0, .12);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, .24);
-  border-radius: 4px;
-  margin: 8px;
-  text-align: left;
-  padding-left: 28px;
+.docs-card-col {
+  padding: 16px;
 }
 
-.docs-project-tile-head {
-  font-size: 20px;
-  padding-left: 12px;
+.docs-card div {
+  box-sizing: border-box;
 }
 
-.docs-project-two-line {
-  margin-top: 28px;
+.docs-card {
+  height: 240px;
+  background: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .24);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
 }
 
-.docs-project-one-line {
-  margin-top: 46px;
+.docs-card-heading {
+  padding: 16px;
+  background: #1976D2;
+  color: white;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 14px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  flex: 0 1 auto;
 }
 
-#interfaces-block {
-  background-image: url(../assets/documentation/interfaces-block.svg);
-  background-repeat: no-repeat;
-  background-position-x: 102%;
-  background-position-y: center;
+.docs-card-body {
+  padding: 16px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  flex: 0 1 auto;
 }
 
-#education-block {
-  background-image: url(../assets/documentation/education-block.svg);
-  background-repeat: no-repeat;
-  background-position-x: 90%;
-  background-position-y: center;
+.docs-card-body ul {
+  padding-left: 0px;
 }
 
-#jupyterhub-block {
-  background-image: url(../assets/documentation/jupyterhub_block.svg);
-  background-repeat: no-repeat;
-  background-position-x: 90%;
-  background-position-y: 10px;
+.docs-card-body li {
+  list-style: none;
+  padding: 4px 0px 4px 0px;
+  font-size: 14px;
 }
 
-#kernels-block {
-  background-image: url(../assets/documentation/kernels-block.svg);
-  background-repeat: no-repeat;
-  background-position-x: 102%;
-  background-position-y: 130%;
-}
 
-#conversion-block {
-  background-image: url(../assets/documentation/conversion-block.svg);
-  background-repeat: no-repeat;
-  background-position-x: 90%;
-  background-position-y: center
-}
 
-#ipython-block {
-  background-image: url(../assets/documentation/ipython-block-font.svg);
-  background-repeat: no-repeat;
-  background-size: 108px;
-  background-position-x: 90%;
-  background-position-y: center;
-}
-
-#architecture-block {
-  background-image: url(../assets/documentation/architecture-block.svg);
-  background-repeat: no-repeat;
-  background-position-x: 90%;
-  background-position-y: center;
-}
-
-#deployment-block {
-  background-image: url(../assets/documentation/deployment-block.svg);
-  background-repeat: no-repeat;
-  background-position-x: 90%;
-  background-position-y: 140%;
-}
-
-#jupyterlab-block {
-  background-image: url(../assets/documentation/jupyterlab-block.svg);
-  background-repeat: no-repeat;
-  background-position-x: 90%;
-  background-position-y: center;
-}
 
 /* MEDIA QUERIES */
 
@@ -153,14 +60,5 @@
 }
 
 @media screen and (max-width: 768px) {
-
-  .docs-projects-item {
-    min-width: 300px;
-    max-width: 400px;
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 8px;
-  }
 
 }

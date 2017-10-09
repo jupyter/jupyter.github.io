@@ -186,19 +186,19 @@ body {
 
 /* Header section of each page */
 .header {
-    padding-bottom: 30px;
+    padding-top: 42px;
+    padding-bottom: 42px; 
     text-align: center;
 }
 
 .header-darkgray {
   /* Only using dark gray for documentation page, add padding top to center in header */
-  padding-top: 32px;
   background-color: #757575;
   color: white;
 }
 
 .header-grey {
-  background-color: #F8F8F8;
+  background-color: #f5f5f5;
 }
 
 .header-white {
@@ -213,7 +213,7 @@ body {
 }
 
 .section-grey {
-  background-color: #fafafa;
+  background-color: #f5f5f5;
   border-bottom: 1px solid #E0E0E0;
   border-top: 1px solid #E0E0E0;
   padding: 56px 0;
@@ -305,14 +305,14 @@ body {
 
 /* Install prompt on front page */
 .install-prompt {
-    background-color: #FAFAFA;
-    border-bottom-color: #BDBDBD;
+    background-color: #f5f5f5;
+    border-bottom-color: #e0e0e0;
     border-left-style: none;
     border-style: solid;
-    border-top-color: #BDBDBD;
+    border-top-color: #e0e0e0;
     border-width: thin;
     border-right: 0px;
-    padding: 4px 0 24px 0;
+    padding: 24px 0 42px 0;
     text-align: center;
 }
 
@@ -405,8 +405,7 @@ body {
 /* Specific grey button used on each card in the Architecture section on the front page of the site */
 .arc-button {
     background-color: #8D8D8D;
-    border-radius: 5.82px;
-    box-shadow: 0 3px #595959;
+    border-radius: 2px;
     color: white;
     font-size: 20px;
     padding: 8px 26px;
