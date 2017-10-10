@@ -38,11 +38,16 @@ title: Install
                 <p>As an existing or experienced Python user, you may wish to install Jupyter using Python’s package manager, 
                     <a href="https://jupyter.readthedocs.io/en/latest/glossary.html#term-pip">pip</a>, instead of Anaconda.
                 </p>
-                <p>First, ensure that you have the latest pip; older versions may have trouble with some dependencies:</p>
-                {% highlight bash %}pip3 install --upgrade pip{% endhighlight %}
-                <p>Then install the Jupyter Notebook using:</p>
-                {% highlight bash %}pip3 install jupyter{% endhighlight %}
-                <p>(If you are running Python 2, change the <code>pip3</code> in these commands to <code>pip</code>.)</p>
+                <p>
+                    If you have Python 3 installed (which we recommended):
+                    {% highlight bash %}python3 -m pip install --upgrade pip
+python3 -m pip install jupyter{% endhighlight %}
+                </p>
+                <p>
+                    If you have Python 2 installed:
+                    {% highlight bash %}python -m pip install --upgrade pip
+python -m pip install jupyter{% endhighlight %}
+                </p>
                 <p>Congratulations, you have installed Jupyter Notebook! To run the notebook, run the following command at 
                         the Terminal (Mac/Linux) or Command Prompt (Windows): {% highlight bash %}jupyter notebook{% endhighlight %}
                 <p>
