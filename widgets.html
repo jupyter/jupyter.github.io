@@ -59,6 +59,12 @@ title: Widgets
           </a>
         </li>
         <li>
+          <a href="#beakerx" data-toggle="tab">
+            <p>BeakerX</p>
+            <p>tables, plotting, forms</p>
+          </a>
+        </li>
+        <li>
           <a href="#cookiecutter" data-toggle="tab">
             <p>cookiecutter</p>
             <p>Template widget project</p>
@@ -199,6 +205,32 @@ jupyter nbextension enable --py --sys-prefix pythreejs{% endhighlight %}
           With pip:
           {% highlight bash %}pip install ipyvolume
 jupyter nbextension enable --py --sys-prefix ipyvolume{% endhighlight %}
+        </div>
+        <div class="tab-pane" id="beakerx">
+          <div class="jupyter-widget-header">
+            <span class="gallery-title">BeakerX</span>
+            <span>
+                <a href="http://github.com/twosigma/beakerx">
+                <img class="img-scaling" src="assets/github.svg" alt="GitHub">
+                </a>
+            </span>
+          </div>
+          <p>
+
+          <a href="http://BeakerX.com">BeakerX</a> includes
+          widgets for interactive tables, plots, forms, and more.  The tables
+          display automatically for pandas dataframes and
+          BeakerX's JVM kernels.
+            
+          </p>
+          <h3>Example</h3>
+          {% highlight python %}{% include_relative assets/beakerx-example.py %}{% endhighlight %}
+          <h3>Installation</h3>
+          With conda:
+          {% highlight bash %}conda install -c conda-forge beakerx ipywidgets{% endhighlight %}
+          With pip:
+          {% highlight bash %}pip install beakerx
+beakerx-install{% endhighlight %}
         </div>
         <div class="tab-pane" id="cookiecutter">
           <div class="jupyter-widget-header">
