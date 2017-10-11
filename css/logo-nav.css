@@ -8,28 +8,30 @@ body {
 .navbar-fixed-top .nav {
     padding: 15px 0;
 }
+
 .navbar {
     border-width: thin;
     -webkit-transition: .2s;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
 }
-.navbar-white {
-  background-color: white;
-}
-.navbar-gray {
-    background-color: rgb(248,248,248);
-}
+
 .navbar a {
     color: black;
 }
+
 .navbar-fixed-top .navbar-brand {
     padding: 0 15px;
 }
+
 .navbar-header .icon-bar {
     background-color: black;
 }
+
 .navbar-nav > li > .navbar-active {
     color: #E46E2E;
 }
+
 .navbar-scroll {
   background-color: white;
     animation-duration: 2s;
@@ -38,56 +40,71 @@ body {
     -webkit-box-shadow: 1px 1px 1px #999;
     box-shadow: 1px 1px 1px #999;
 }
+
 .jupytercon-nav > li > .black-tab {
     color: black;
 }
+
 .navbar-logo {
     height: 45px;
 }
+
 .nav > li > a {
     font-size: 16px;
     padding: 12px 16px 10px;
 }
+
 .nav > li > a:hover {
     background-color: transparent;
     color: #E46E2E;
     -webkit-transition: .2s;
 }
+
 .nav > li > a:focus {
     background-color: white;
 }
+
 .nav > li > a:active {
     background-color: #F8F8F8;
 }
+
 .nav > li > a:visited {
     background-color: #F8F8F8;
 }
+
 .tab:hover {
     background-color: transparent;
     color: #E46E2E;
 }
+
 .footer {
     background-color: #979797;
 }
+
 .footer p {
     color: white;
     padding-top: 10px;
 }
-.footer li{
+
+.footer li {
     color: white;
     display: inline-block;
     text-decoration: none;
 }
+
 .footer a {
     color: white;
     text-decoration: none;
 }
+
 .footer li::after {
     content:" |";
 }
+
 .footer li:last-of-type::after {
     content:"";
 }
+
 .footer-text {
     margin-left: 0;
     padding-left: 0;
@@ -99,6 +116,7 @@ body {
 	margin-top: 10px;
     padding-left: 20px;
 }
+
 @-webkit-keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
@@ -118,6 +136,7 @@ body {
 
     opacity:0;  /* make things invisible upon start */
 }
+
 .fade-in.one {
     -webkit-animation-delay: 0.3s;
     -moz-animation-delay: 0.3s;
@@ -129,23 +148,28 @@ body {
     -moz-animation-delay:0.7s;
     animation-delay: 0.7s;
 }
+
 .fade-in.three {
     -webkit-animation-delay: 1.1s;
     -moz-animation-delay: 1.1s;
     animation-delay: 1.1s;
 }
+
 .jumbotron {
     background-color: white;
     margin-top:30px;
     overflow: hidden;
 }
+
 .jumbotron img {
     margin: 0 auto;
 }
+
 .jumbotron-text {
     padding-bottom: 32px;
     text-align: center;
 }
+
 .img-container {
     height: 100%;
     margin: 0 auto;
@@ -153,6 +177,7 @@ body {
     text-align: center;
     width: 95%;
 }
+
 .img-container img {
     vertical-align: middle;
 }
@@ -161,18 +186,21 @@ body {
 
 /* Header section of each page */
 .header {
-    padding-bottom: 30px;
+    padding-top: 42px;
+    padding-bottom: 42px; 
     text-align: center;
 }
+
 .header-darkgray {
   /* Only using dark gray for documentation page, add padding top to center in header */
-  padding-top: 32px;
   background-color: #757575;
   color: white;
 }
+
 .header-grey {
-  background-color: #F8F8F8;
+  background-color: #f5f5f5;
 }
+
 .header-white {
   background-color: white;
 }
@@ -183,33 +211,40 @@ body {
     background-color: white;
     padding: 56px 0;
 }
+
 .section-grey {
-  background-color: #fafafa;
+  background-color: #f5f5f5;
   border-bottom: 1px solid #E0E0E0;
   border-top: 1px solid #E0E0E0;
   padding: 56px 0;
 }
+
 /* Used to specifying when a section is at the top or bottom of the page to apply appropriate border */
 .top-section-border {
     border-top: 1px solid #E0E0E0;
 }
+
 .bottom-section-border {
     border-bottom: 1px solid #E0E0E0;
 }
+
 .section-content {
     display: block;
     margin: 0 auto;
 }
+
 /* Icon above section header */
 .section-icon {
     display: block;
     margin: 0 auto;
 }
+
 /* Header for each section */
 .section-header {
     margin: 12px auto 8px;
     text-align: center;
 }
+
 /* Used for descriptions of sections underneath section headers*/
 .support-paragraph {
     font-size: 15px;
@@ -221,21 +256,22 @@ body {
 /* Orange action button */
 .orange-button {
     background-color: #E46E2E;
-    border-radius: 5.82px;
-    box-shadow: 0 3px #863001;
+    border-radius: 2px;
     color: white;
     display: inline-block;
     font-size: 16px;
     padding: 13px 26px;
     text-align: center;
     text-decoration: none;
-
+    margin: 0px 4px 0px 4px;
 }
+
 .orange-button:hover {
     background-color: #F27624;
     color: white;
     text-decoration: none;
 }
+
 .orange-button:active, .orange-button:focus {
     background-color: #DC601C;
     color: white;
@@ -246,18 +282,22 @@ body {
 .nb-highlight-text {
     margin-top: 60px;
 }
+
 .notebook-icon {
     height: auto;
     margin-right: 12px;
     width: 60px;
 }
+
 /* Give space between the notebook features (4 features) on front page and the     img + description */
 .notebook-features {
     margin-top: 32px;
 }
+
 .notebook-features p{
     padding-top: 16px;
 }
+
 .nb-desc {
     font-weight: 400;
     line-height: 1.5;
@@ -265,16 +305,17 @@ body {
 
 /* Install prompt on front page */
 .install-prompt {
-    background-color: #FAFAFA;
-    border-bottom-color: #BDBDBD;
+    background-color: #f5f5f5;
+    border-bottom-color: #e0e0e0;
     border-left-style: none;
     border-style: solid;
-    border-top-color: #BDBDBD;
+    border-top-color: #e0e0e0;
     border-width: thin;
     border-right: 0px;
-    padding: 4px 0 24px 0;
+    padding: 24px 0 42px 0;
     text-align: center;
 }
+
 .prompt-header {
     margin-bottom: 16px;
 }
@@ -285,6 +326,7 @@ body {
 .section-center {
     text-align: center;
 }
+
 .companies li {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -294,11 +336,13 @@ body {
     vertical-align: middle;
     width: 18%;
 }
+
 .companies .col img{
     display: block;
     width: 100%;
     max-height: 60px;
 }
+
 .greydout {
     -moz-opacity: .065;
     -webkit-opacity: 0.065;
@@ -309,6 +353,7 @@ body {
     -o-transition: all .5s ease;
     transition: all .5s ease;
 }
+
 .greydout:hover {
     -webkit-opacity: 1;
     -moz-opacity: 1;
@@ -320,12 +365,15 @@ body {
 .feature-middle {
     margin-top: 40px;
 }
+
 .hubfeature {
     text-align: center;
 }
+
 .hubfeature img {
     margin: 0 auto;
 }
+
 .hubfeatures {
     background: url("../assets/line.svg");
     background-position:  top center;
@@ -344,18 +392,20 @@ body {
     text-align: center;
     width: 300px;
 }
+
 .arcfeature .front img, .arcfeature .front2 img, .arcfeature .front3 img {
     margin-bottom: 40px;
     margin-top: 15px;
 }
+
 .arcfeature .back p {
     margin-top: 40px;
 }
+
 /* Specific grey button used on each card in the Architecture section on the front page of the site */
 .arc-button {
     background-color: #8D8D8D;
-    border-radius: 5.82px;
-    box-shadow: 0 3px #595959;
+    border-radius: 2px;
     color: white;
     font-size: 20px;
     padding: 8px 26px;
@@ -366,6 +416,7 @@ body {
     background-color: #DB5106;
     box-shadow: 0 3px #863001;
 }
+
 .card {
     display: block;
     height: 100%;
@@ -390,28 +441,34 @@ body {
     transition: transform 0.3s linear 0s;
     width: 275px;
 }
+
 .flipped {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
+
 .content-back p{
     margin-bottom: 16px;
     margin-top: 10px;
 }
+
 .card .back{
     text-align: center;
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
+
 .arcfeature a {
     color: white;
     text-decoration: none;
 }
+
 .arcfeature img {
     margin: 0 auto;
     padding-bottom: 5%;
     padding-top: 1%;
 }
+
 .arcfeature {
     display: inline-block;
 }
@@ -431,18 +488,21 @@ body {
     margin-top: 0px;
     margin-left: -15px;
 }
+
 .card-header {
     float:left;
     font-size: 16px;
     margin-top: 10px;
     text-align: left;
 }
+
 .card-info {
     float:left;
     font-size: 13px;
     margin-top: 0;
     text-align: left;
 }
+
 .card-link a {
     color: #F27624;
     float: left;
@@ -451,9 +511,11 @@ body {
     text-align: left;
     text-transform: uppercase;
 }
+
 .card-link a:hover {
     text-decoration: none;
 }
+
 .material {
     background: #fff;
     border-radius: 2px;
@@ -470,13 +532,14 @@ body {
 .sponsor {
     margin: 16px 0;
 }
+
 .company-logo {
     height: auto;
     width: 75%;
 }
 
 /* Used to style the clickable tabs within the governance section */
-.clickable{
+.clickable {
     cursor: default;
     display: inline-block;
     font-size: 20px;
@@ -484,6 +547,7 @@ body {
     margin-left: 20px;
     text-decoration: none;
 }
+
 .clickable:hover {
     color: #E46E2E
 }
@@ -508,14 +572,29 @@ body {
 /* Donate Page */
 .donate-box {
     background-color: white;
-    border-color: #979797;
-    border-radius: 8px;
+    border-color: #e0e0e0;
+    border-radius: 2px;
     border-style: solid;
     border-width: 1px;
-    height: 500px;
-    height: 20%;
-    margin-top: 5%;
+    margin-top: 32px;
     padding: 32px;
+}
+
+#donate-formatting {
+    width: 100%;
+    text-align: center;
+}
+
+#donate-formatting a {
+    width: 250px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#numfocus-logo {
+    height: 100px;
 }
 
 /*Community Resources Page */
@@ -526,87 +605,50 @@ body {
     padding: 16px;
     vertical-align: middle;
 }
+
 /* Used to specify that the last resource should not have a border underneath it's content */
 .resource-section:last-child {
     border-bottom: none;
 }
+
 .resource-text {
     text-align: left;
     vertical-align: middle;
 }
+
 .resource-logo {
     display: block;
     height: 80px;
     margin: 0 auto;
 }
+
 .resource-name {
      margin-top: 6px;
 }
+
 .resource-button {
     margin-top: 32px;
     text-align: center;
 }
+
 .resource-button a {
     background-color: #E46E2E;
-    border-radius: 5.82px;
-    box-shadow: 0 3px #863001;
+    border-radius: 2px;
     color: white;
     letter-spacing: 1px;
     padding: 13px 60px;
     text-decoration: none;
     -webkit-transition: .2s;
 }
+
 .resource-button a:hover {
     background-color: #F27624;
 }
 
-/* JupyterCon Jumbotron Styling */
-.jupytercon-navbar {
-    background-color: transparent;
-}
-.jupytercon-nav > li > a{
-    color: white;
-}
-.jupytercon-nav > li > a:active, .jupytercon-nav > li > a:focus {
-  background-color: transparent;
-}
-.jupytercon-jumbotron {
-    background-image: url(../assets/jupytercon-ny.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    width: auto;
-    margin-top: 0px;
-    position: relative;
-    top: -70px;
-    margin-bottom: -70px;
-}
-#jupytercon-logo {
-    display: block;
-    margin: 0 auto;
-    width: 500px;
-    margin-top: 100px;
-}
-.jupytercon-header, .jupytercon-subheader  {
-    color: white;
-    text-align: center;
-}
-.jupytercon-header {
-    margin-bottom: 16px;
-}
-.jupytercon-subheader {
-    margin-top: 8px;
-    margin-bottom: 0px;
-}
-.jupytercon-button {
-    display: block;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
 .navbar-toggle > .white-icon-bar {
     background-color: white;
 }
+
 .footer-text {
     font-size: 16px;
 }
@@ -618,6 +660,7 @@ body {
     padding: 5% 0;
   }
 }
+
 @media (max-width: 1200px) {
     .nb-highlight-text {
         margin-top: 32px;
@@ -636,6 +679,7 @@ body {
         width:23%;
     }
 }
+
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     p {
@@ -668,6 +712,7 @@ body {
         margin-top: 15px;
     }
 }
+
 @media (max-width: 992px) {
     p {
         font-size: 16px;
@@ -781,6 +826,7 @@ body {
         margin-left: 0px;
     }
 }
+
 /* Small devices (tablets, 768px and up) */
 @media(min-width:768px) {
 
@@ -794,6 +840,7 @@ body {
         margin-top: 20px;
     }
 }
+
 @media (max-width: 768px) {
     p {
         font-size: 16px;
@@ -848,12 +895,14 @@ body {
         margin-right: 0px;
     }
 }
+
 /* Extra small devices (these are mostly fixes to make sure elements act correctly to look good) */
 @media (min-width: 509px) {
     .footer ul {
         float: left;
     }
 }
+
 @media(max-width:509px) {
     .install-button {
         margin-top: 20px;
