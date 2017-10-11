@@ -225,6 +225,20 @@ jupyter nbextension enable --py --sys-prefix ipyvolume{% endhighlight %}
           </p>
           <h3>Example</h3>
           {% highlight python %}{% include_relative assets/beakerx-example.py %}{% endhighlight %}
+          <style>
+            .beaker-table-display .dtcontainer {
+              width: auto;
+              display: inline-block;
+            }
+          </style>
+          <script type="application/vnd.jupyter.widget-state+json">
+              {% include_relative assets/beakerx-example.json %}
+          </script>
+          <script type="application/vnd.jupyter.widget-view+json">
+          {
+              "model_id": "d6371237-9b40-427e-9833-71cb25330855"
+          }
+          </script>
           <h3>Installation</h3>
           With conda:
           {% highlight bash %}conda install -c conda-forge beakerx ipywidgets{% endhighlight %}
