@@ -6,7 +6,6 @@ title: Widgets
 <link href="css/gallery.css" rel="stylesheet">
 <link href="css/syntax.css" rel="stylesheet">
 <script src="https://unpkg.com/jupyter-js-widgets@~2.1.4/dist/embed.js"></script>
-
 <section>
   <div class="header header-grey">
     <div class="container">
@@ -59,7 +58,7 @@ title: Widgets
           </a>
         </li>
         <li>
-          <a href="#beakerx" data-toggle="tab">
+          <a href="#beakerx" data-toggle="tab" onclick="adjustBeakerXTable()">
             <p>BeakerX</p>
             <p>tables, plotting, forms</p>
           </a>
@@ -226,12 +225,6 @@ jupyter nbextension enable --py --sys-prefix ipyvolume{% endhighlight %}
           </p>
           <h3>Example</h3>
           {% highlight python %}{% include_relative assets/beakerx-example.py %}{% endhighlight %}
-          <style>
-            .beaker-table-display .dtcontainer {
-              width: auto;
-              display: inline-block;
-            }
-          </style>
           <script type="application/vnd.jupyter.widget-state+json">
               {% include_relative assets/beakerx-example.json %}
           </script>
@@ -239,6 +232,15 @@ jupyter nbextension enable --py --sys-prefix ipyvolume{% endhighlight %}
           {
               "model_id": "d6371237-9b40-427e-9833-71cb25330855"
           }
+          </script>
+          <script type="application/javascript">
+              function adjustBeakerXTable() {
+                  setTimeout(function() {
+                      document
+                          .querySelector('#beakerx .dtcontainer')
+                          .dispatchEvent(new Event('update.bko-table'));
+                  });
+              }
           </script>
           <h3>Installation</h3>
           With conda:
