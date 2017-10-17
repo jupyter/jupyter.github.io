@@ -1,21 +1,21 @@
 {
-    "version_major": 1,
+    "version_major": 2,
     "version_minor": 0,
     "state": {
         "0e07325a83c74d5ab333b6d1d462eeb7": {
             "model_name": "LayoutModel",
-            "model_module": "jupyter-js-widgets",
-            "model_module_version": "~2.1.4",
+            "model_module": "@jupyter-widgets/base",
+            "model_module_version": "*",
             "state": {
-                "_model_module_version": "~2.1.4",
-                "_view_module_version": "~2.1.4",
+                "_model_module_version": "*",
+                "_view_module_version": "*",
                 "min_width": "125px"
             }
         },
         "da500199480845b08b2c3ae42282c239": {
             "model_name": "LinearScaleModel",
             "model_module": "bqplot",
-            "model_module_version": "^0.2.3",
+            "model_module_version": "^0.3.0",
             "state": {
                 "allow_padding": false,
                 "max": 1,
@@ -26,7 +26,7 @@
         "4f0ff8e2dd7143af9a50f9f87dc18142": {
             "model_name": "LinearScaleModel",
             "model_module": "bqplot",
-            "model_module_version": "^0.2.3",
+            "model_module_version": "^0.3.0",
             "state": {
                 "allow_padding": false,
                 "max": 1,
@@ -37,7 +37,7 @@
         "00b66cdad63c4eeea9e823801dc525ef": {
             "model_name": "FigureModel",
             "model_module": "bqplot",
-            "model_module_version": "^0.2.3",
+            "model_module_version": "^0.3.0",
             "state": {
                 "_dom_classes": [],
                 "axes": [
@@ -58,7 +58,7 @@
         "3e3b6e3b7a874916bfdf1ff8f3f8c622": {
             "model_name": "ColorScaleModel",
             "model_module": "bqplot",
-            "model_module_version": "^0.2.3",
+            "model_module_version": "^0.3.0",
             "state": {
                 "_model_name": "ColorScaleModel",
                 "_view_name": "ColorScale",
@@ -71,7 +71,7 @@
         "743ee353175845c99f51922901a0197c": {
             "model_name": "LinearScaleModel",
             "model_module": "bqplot",
-            "model_module_version": "^0.2.3",
+            "model_module_version": "^0.3.0",
             "state": {
                 "stabilized": false
             }
@@ -79,7 +79,7 @@
         "def4917622744820bea105ffac45c535": {
             "model_name": "LinearScaleModel",
             "model_module": "bqplot",
-            "model_module_version": "^0.2.3",
+            "model_module_version": "^0.3.0",
             "state": {
                 "stabilized": false
             }
@@ -87,12 +87,12 @@
         "fe152e293f2e4352ad63fd0c591c354a": {
             "model_name": "ScatterModel",
             "model_module": "bqplot",
-            "model_module_version": "^0.2.3",
+            "model_module_version": "^0.3.0",
             "state": {
                 "_model_module": "bqplot",
-                "_model_module_version": "^0.2.3",
+                "_model_module_version": "^0.3.0",
                 "_view_module": "bqplot",
-                "_view_module_version": "^0.2.3",
+                "_view_module_version": "^0.3.0",
                 "apply_clip": true,
                 "color": {
                     "values": [
@@ -480,7 +480,7 @@
         "fb3c131dd8f84cbba1d4fa80158a4bf9": {
             "model_name": "ColorAxisModel",
             "model_module": "bqplot",
-            "model_module_version": "^0.2.3",
+            "model_module_version": "^0.3.0",
             "state": {
                 "scale": "IPY_MODEL_3e3b6e3b7a874916bfdf1ff8f3f8c622",
                 "side": "bottom",
@@ -493,7 +493,7 @@
         "f77e5357cbe6415aa2046a2721243aec": {
             "model_name": "AxisModel",
             "model_module": "bqplot",
-            "model_module_version": "^0.2.3",
+            "model_module_version": "^0.3.0",
             "state": {
                 "scale": "IPY_MODEL_743ee353175845c99f51922901a0197c",
                 "side": "bottom",
@@ -506,7 +506,7 @@
         "2db8e3e15c0e401a85605b445c9d53ec": {
             "model_name": "AxisModel",
             "model_module": "bqplot",
-            "model_module_version": "^0.2.3",
+            "model_module_version": "^0.3.0",
             "state": {
                 "orientation": "vertical",
                 "scale": "IPY_MODEL_def4917622744820bea105ffac45c535",
@@ -519,17 +519,17 @@
         },
         "73f1d788c12f401cb1e27fabdd122a71": {
             "model_name": "LayoutModel",
-            "model_module": "jupyter-js-widgets",
-            "model_module_version": "~2.1.4",
+            "model_module": "@jupyter-widgets/base",
+            "model_module_version": "*",
             "state": {
-                "_model_module_version": "~2.1.4",
-                "_view_module_version": "~2.1.4"
+                "_model_module_version": "*",
+                "_view_module_version": "*"
             }
         },
         "9e54e2b04e9c43e18e08897a48f268c8": {
             "model_name": "ToolbarModel",
             "model_module": "bqplot",
-            "model_module_version": "^0.2.3",
+            "model_module_version": "^0.3.0",
             "state": {
                 "figure": "IPY_MODEL_00b66cdad63c4eeea9e823801dc525ef",
                 "layout": "IPY_MODEL_73f1d788c12f401cb1e27fabdd122a71"
@@ -537,20 +537,20 @@
         },
         "a9fdf191501843ecbc324b65fa66ff23": {
             "model_name": "LayoutModel",
-            "model_module": "jupyter-js-widgets",
-            "model_module_version": "~2.1.4",
+            "model_module": "@jupyter-widgets/base",
+            "model_module_version": "*",
             "state": {
-                "_model_module_version": "~2.1.4",
-                "_view_module_version": "~2.1.4"
+                "_model_module_version": "*",
+                "_view_module_version": "*"
             }
         },
         "10e4ea0790e94bcba5d41df5f3ce007c": {
             "model_name": "VBoxModel",
-            "model_module": "jupyter-js-widgets",
-            "model_module_version": "~2.1.4",
+            "model_module": "@jupyter-widgets/controls",
+            "model_module_version": "*",
             "state": {
-                "_model_module_version": "~2.1.4",
-                "_view_module_version": "~2.1.4",
+                "_model_module_version": "*",
+                "_view_module_version": "*",
                 "children": [
                     "IPY_MODEL_00b66cdad63c4eeea9e823801dc525ef",
                     "IPY_MODEL_9e54e2b04e9c43e18e08897a48f268c8"

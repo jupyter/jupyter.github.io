@@ -5,7 +5,22 @@ title: Widgets
 
 <link href="css/gallery.css" rel="stylesheet">
 <link href="css/syntax.css" rel="stylesheet">
-<script src="https://unpkg.com/jupyter-js-widgets@~2.1.4/dist/embed.js"></script>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"
+        integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA="
+        crossorigin="anonymous">
+</script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
+<script>
+  // Configure requirejs
+  if (window.require) {
+    window.requirejs.onError = function(e) {
+      console.log(e);
+      // hack! Remove the anonymous require call from https://unpkg.com/@jupyter-widgets/html-manager@0.10.2/dist/embed-amd.js
+      // window.require(['@jupyter-widgets/html-manager/dist/libembed-amd'], ...
+    }
+  }
+</script>
 <section>
   <div class="header header-grey">
     <div class="container">
@@ -195,7 +210,7 @@ jupyter nbextension enable --py --sys-prefix pythreejs{% endhighlight %}
           </script>
           <script type="application/vnd.jupyter.widget-view+json">
           {
-              "model_id": "16697810550d48d690315b958c3802b7"
+              "model_id": "3a74fe1c2fc14b30a012b5754cd55af7"
           }
           </script>
           <h3>Installation</h3>
@@ -236,9 +251,8 @@ jupyter nbextension enable --py --sys-prefix ipyvolume{% endhighlight %}
           <script type="application/javascript">
               function adjustBeakerXTable() {
                   setTimeout(function() {
-                      document
-                          .querySelector('#beakerx .dtcontainer')
-                          .dispatchEvent(new Event('update.bko-table'));
+                      var dtcontainer = document.querySelector('#beakerx .dtcontainer');
+                      dtcontainer && dtcontainer.dispatchEvent(new Event('update.bko-table'));
                   });
               }
           </script>
@@ -273,6 +287,7 @@ beakerx-install{% endhighlight %}
           with future versions of Jupyter.
           </p>
         </div>
+      </div>
     </div>
   </div>
 </section>

@@ -1,5 +1,5 @@
 {
-    "version_major": 1,
+    "version_major": 2,
     "version_minor": 0,
     "state": {
         "8e7e0f6eb9844e3f9bb5174def2773b1": {
@@ -242,11 +242,11 @@
         },
         "5f5c22b36d944cb8abf13e8c754331f7": {
             "model_name": "LayoutModel",
-            "model_module": "jupyter-js-widgets",
-            "model_module_version": "~2.1.4",
+            "model_module": "@jupyter-widgets/base",
+            "model_module_version": "*",
             "state": {
-                "_model_module_version": "~2.1.4",
-                "_view_module_version": "~2.1.4"
+                "_model_module_version": "*",
+                "_view_module_version": "*"
             }
         },
         "1c5ad89ba4924d83a54b15e400806b18": {
