@@ -5,7 +5,8 @@
         "d6371237-9b40-427e-9833-71cb25330855": {
             "model_name": "TableDisplayModel",
             "model_module": "beakerx",
-            "model_module_version": "*",
+            "model_module_version": "0.6.2-widgets7b",
+            "view_module_version": "0.6.2-widgets7b",
             "state": {
                 "model": {
                     "columnOrder": [],
