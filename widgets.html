@@ -11,16 +11,6 @@ title: Widgets
         crossorigin="anonymous">
 </script>
 <script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
-<script>
-  // Configure requirejs
-  if (window.require) {
-    window.requirejs.onError = function(e) {
-      console.log(e);
-      // hack! Remove the anonymous require call from https://unpkg.com/@jupyter-widgets/html-manager@0.10.2/dist/embed-amd.js
-      // window.require(['@jupyter-widgets/html-manager/dist/libembed-amd'], ...
-    }
-  }
-</script>
 <section>
   <div class="header header-grey">
     <div class="container">
