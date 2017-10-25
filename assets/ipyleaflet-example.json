@@ -1,14 +1,14 @@
 {
-    "version_major": 1,
+    "version_major": 2,
     "version_minor": 0,
     "state": {
         "65591986e1dd41b98905aa28db7f46c9": {
             "model_name": "LayoutModel",
-            "model_module": "jupyter-js-widgets",
-            "model_module_version": "~2.1.4",
+            "model_module": "@jupyter-widgets/base",
+            "model_module_version": "*",
             "state": {
-                "_model_module_version": "~2.1.4",
-                "_view_module_version": "~2.1.4",
+                "_model_module_version": "*",
+                "_view_module_version": "*",
                 "align_self": "stretch",
                 "height": "400px"
             }

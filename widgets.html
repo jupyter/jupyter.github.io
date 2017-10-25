@@ -5,8 +5,12 @@ title: Widgets
 
 <link href="css/gallery.css" rel="stylesheet">
 <link href="css/syntax.css" rel="stylesheet">
-<script src="https://unpkg.com/jupyter-js-widgets@~2.1.4/dist/embed.js"></script>
-
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"
+        integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA="
+        crossorigin="anonymous">
+</script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
 <section>
   <div class="header header-grey">
     <div class="container">
@@ -56,6 +60,12 @@ title: Widgets
           <a href="#ipyvolume" data-toggle="tab">
             <p>ipyvolume</p>
             <p>3-D plotting</p>
+          </a>
+        </li>
+        <li>
+          <a href="#beakerx" data-toggle="tab" onclick="adjustBeakerXTable()">
+            <p>BeakerX</p>
+            <p>tables, plotting, forms</p>
           </a>
         </li>
         <li>
@@ -190,7 +200,7 @@ jupyter nbextension enable --py --sys-prefix pythreejs{% endhighlight %}
           </script>
           <script type="application/vnd.jupyter.widget-view+json">
           {
-              "model_id": "16697810550d48d690315b958c3802b7"
+              "model_id": "3a74fe1c2fc14b30a012b5754cd55af7"
           }
           </script>
           <h3>Installation</h3>
@@ -199,6 +209,49 @@ jupyter nbextension enable --py --sys-prefix pythreejs{% endhighlight %}
           With pip:
           {% highlight bash %}pip install ipyvolume
 jupyter nbextension enable --py --sys-prefix ipyvolume{% endhighlight %}
+        </div>
+        <div class="tab-pane" id="beakerx">
+          <div class="jupyter-widget-header">
+            <span class="gallery-title">BeakerX</span>
+            <span>
+                <a href="http://github.com/twosigma/beakerx">
+                <img class="img-scaling" src="assets/github.svg" alt="GitHub">
+                </a>
+            </span>
+          </div>
+          <p>
+          <a href="http://BeakerX.com">BeakerX</a> includes widgets
+          for interactive tables, plots, forms, and more.
+          The table widget automatically recognizes pandas dataframes
+          and allows you to search, sort, drag, filter, format,
+          select, graph, hide, pin, and export to CSV or
+          clipboard. This makes connecting to spreadsheets quick and
+          easy.
+          </p>
+          <h3>Example</h3>
+          {% highlight python %}{% include_relative assets/beakerx-example.py %}{% endhighlight %}
+          <script type="application/vnd.jupyter.widget-state+json">
+              {% include_relative assets/beakerx-example.json %}
+          </script>
+          <script type="application/vnd.jupyter.widget-view+json">
+          {
+              "model_id": "d6371237-9b40-427e-9833-71cb25330855"
+          }
+          </script>
+          <script type="application/javascript">
+              function adjustBeakerXTable() {
+                  setTimeout(function() {
+                      var dtcontainer = document.querySelector('#beakerx .dtcontainer');
+                      dtcontainer && dtcontainer.dispatchEvent(new Event('update.bko-table'));
+                  });
+              }
+          </script>
+          <h3>Installation</h3>
+          With conda:
+          {% highlight bash %}conda install -c conda-forge beakerx ipywidgets{% endhighlight %}
+          With pip:
+          {% highlight bash %}pip install beakerx
+beakerx-install{% endhighlight %}
         </div>
         <div class="tab-pane" id="cookiecutter">
           <div class="jupyter-widget-header">
@@ -224,6 +277,7 @@ jupyter nbextension enable --py --sys-prefix ipyvolume{% endhighlight %}
           with future versions of Jupyter.
           </p>
         </div>
+      </div>
     </div>
   </div>
 </section>
