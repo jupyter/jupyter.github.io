@@ -63,6 +63,12 @@ title: Widgets
           </a>
         </li>
         <li>
+          <a href="#nglview" data-toggle="tab">
+            <p>nglview</p>
+            <p>3-D interactive molecular visualization</p>
+          </a>
+        </li>
+        <li>
           <a href="#beakerx" data-toggle="tab" onclick="adjustBeakerXTable()">
             <p>BeakerX</p>
             <p>tables, plotting, forms</p>
@@ -110,6 +116,30 @@ title: Widgets
           With pip:
           {% highlight bash %}pip install ipyleaflet
 jupyter nbextension enable --py --sys-prefix ipyleaflet{% endhighlight %}
+        </div>
+        <div class="tab-pane" id="nglview">
+          <div class="jupyter-widget-header">
+            <span class="gallery-title">nglview</span>
+          </div>
+          <p>
+          A Jupyter widget to interactively view molecular structures and trajectories.
+          </p>
+          <h3>Example</h3>
+          {% highlight python %}{% include_relative assets/nglview-example.py %}{% endhighlight %}
+          <script type="application/vnd.jupyter.widget-state+json">
+              {% include_relative assets/nglview-example.json %}
+          </script>
+          <script type="application/vnd.jupyter.widget-view+json">
+          {
+              "model_id": "8a1512fb32fe47ee904e1ed8aa498e10"
+          }
+          </script>
+          <h3>Installation</h3>
+          With conda:
+          {% highlight bash %}conda install -c bioconda nglview{% endhighlight %}
+          With pip:
+          {% highlight bash %}pip install nglview
+jupyter nbextension enable --py --sys-prefix nglview{% endhighlight %}
         </div>
         <div class="tab-pane" id="bqplot">
           <div class="jupyter-widget-header">
