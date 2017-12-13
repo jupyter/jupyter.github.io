@@ -4,11 +4,11 @@
 
 This is the source to [Jupyter.org](http://jupyter.org/).
 
-# Build instruction. 
+# Build instructions
 
-The site is build using GitHub Pages Jekyll, see [Jekyll
-website](http://jekyllrb.com/) for customizing build process, and detail on how
-what where. 
+The site is built using GitHub Pages Jekyll, see [Jekyll
+website](http://jekyllrb.com/) for customizing the build process, and detail on how
+what where.
 
 # Quick local testing
 
@@ -17,25 +17,25 @@ gem install bundler
 bundle install
 ```
 
-cd into the root of this directory, 
+cd into the root of this directory,
 
 ```
 bundle exec jekyll serve --baseurl ''
 ```
 
-Open your browser to localhost:4000
+Open your browser to localhost:4000.
 
-Edit the various part and reload at will. 
+Edit the various parts and reload at will.
 
-Enjoy
+Enjoy.
 
-# What is where. 
+# What is where
 
 Most pages are located at the place where their URL is, nothing fancy.  Headers
-and footer are in `_includes/head.html`, `_includes/header.html` ,
+and footer are in `_includes/head.html`, `_includes/header.html`,
 `_includes/footer.html`.
 
-The **navbar** is in `_data/nav.yml` and look like that:
+The **navbar** is in `_data/nav.yml` and looks like that:
 
 ```
 head:
@@ -50,7 +50,7 @@ head:
     - Donate
 ```
 
-which mean, insert in order the following links into the navbar:
+which means, insert in order the following links into the navbar:
 
     - Link to `Home` page, guess the url by yourself. 
     - link to `Install` page, the url is...
@@ -60,10 +60,10 @@ which mean, insert in order the following links into the navbar:
 The navbar will automatically target `_blank` pages where the url is explicit,
 and mark the correct link as the "current" one.
 
-# How do I create a new page ?
+# How do I create a new page?
 
 Create `my_page.html` (will have url `https://jupyter.org/my_page.html`)
-or `my_page/index.html` (will have url `https://jupyter.org/my_page/`), start with the following :
+or `my_page/index.html` (will have url `https://jupyter.org/my_page/`), start with the following:
 
 ```
 ---
@@ -71,14 +71,14 @@ layout: default
 title: My Page
 ---
 
-write some html here (consider you are already inside `<body></body>`
+write some html here (consider you are already inside `<body></body>`)
 ```
 
-You can not do it yet with .md file, but you will be able soon.
+You cannot do it yet with .md file, but you will be able soon.
 
-Add commit (and don't forget to add to `_data/nav.yml`
+Add commit (and don't forget to add to `_data/nav.yml`).
 
-# Continuous Integration Testing on Travis
+# Continuous integration testing on Travis
 
 Travis will run and test:
 
