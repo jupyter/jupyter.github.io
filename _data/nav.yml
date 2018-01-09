@@ -6,6 +6,7 @@ head:
     - title: NBViewer
       url: https://nbviewer.jupyter.org
     - Widgets
+    - Stuff
     - title: Blog
       url: https://blog.jupyter.org
 

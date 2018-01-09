@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+{% for category in site.data.ecosystem %}
+<section>
+    <div class="section-white">
+        <div class="container">
+            <div class="row">
+              <h2 class='col-sm-12 section-header'>{{category[0]}}</h2>
+              <p class='col-sm-12 support-paragraph'>{{category[1].description | markdownify}}</p>
+              {% for item in category[1].items %}
+                <div class="col-sm-6 col-md-12 resource-section">
+                    <div class="resource-content">
+                        <div class="col-md-2">
+                            <img src="{{site.baseurl}}/assets/github.svg" class="resource-logo" alt="github icon">
+                        </div>
+                        <div class="col-md-8 resource-text">
+                            <h3 class="resource-name">{{item[0]}}</h3>
+                            <p class="resource-desc">{{item[1].description}}</p>
+                        </div>
+                        {%- if item[1].url -%}
+                        <div class="col-md-2 resource-button">
+                          <a href="{{item[1].url}}">View</a>
+                        </div>
+                        {%- endif -%}
+                    </div>
+                </div>
+
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endfor %}

@@ -1,0 +1,31 @@
+Kernels:
+  logo: null
+  description: >
+
+    **Kernels** are the engines responsible for code execution. Generally
+    kernels are associated with one language, but a few kernels can manage
+    multiple languages, often simultaneously. 
+
+  items:
+    IPython:
+        description: The reference Kernel implementation in Python
+        logo: null
+        url: https://ipython.org
+    IHaskell:
+        description: A Kernel for the Haskell Language
+        logo: null
+Frontends:
+  logo: null
+  description: >
+    **Frontends** are user facing application, usually in which you edit code.
+    Frontend can connect to a _kernel_ which provides code execution. A frontend
+    can either be a standalone application, or an extension for an existing
+    application or text editor
+  items:
+    Notebook:
+        description: The Classic notebook Frontend.
+        url: https://jupyter-notebook.readthedocs.org
+    Hydrogen:
+        description: Integration with Atom
+
+
