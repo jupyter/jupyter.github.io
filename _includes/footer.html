@@ -37,3 +37,15 @@
     <script src="{{site.baseurl}}/js/architecture.js"></script>
     <script src="{{site.baseurl}}/js/simon.js"></script>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script>
+  $('#foo').on('change keyup keypress paste', function(){
+    var s =  $('#foo').val().toLowerCase();
+    $('.resource-section').map(function(ind, it){ 
+      if(it.getAttribute('data-filter').toLowerCase().indexOf(s) == -1){
+        it.classList.add('hid');
+      } else {
+        it.classList.remove('hid');
+      }
+    })
+  })
+</script>

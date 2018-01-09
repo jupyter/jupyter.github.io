@@ -2,21 +2,63 @@
 layout: default
 ---
 
+{{content | markdownify }}
+<style>
+
+.resource-section{
+  transition: all 0.5s ease;
+}
+
+.hid {
+  height:0;
+  padding:0;
+  opacity:0;
+}
+</style>
+
+
+
+<div class="section-white">
+    <div class="container">
+        <div class="row">
+          <div class="form-group col-sm-12 col">
+            <input class='form-control' placeholder='search' id='foo' type='text'>
+          </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+<p>The projects and services listed on this page are mostly maintained by third
+party, the quality, and correctness of implementation, frequency of update, and
+support are not guarantied, nor is the presence of a project or service on this
+page a recommendation to use it. This list is not exhaustive. If you see a
+missing project, feel free to open a Pull-Request. Be sure to check with the
+author before adding it here.</p>
+</div>
+
 {% for category in site.data.ecosystem %}
-<section>
-    <div class="section-white">
+    <div class="">
         <div class="container">
-            <div class="row">
-              <h2 class='col-sm-12 section-header'>{{category[0]}}</h2>
-              <p class='col-sm-12 support-paragraph'>{{category[1].description | markdownify}}</p>
+              <h2 class='col-md-12 section-header' id='{{category[0]}}'>{{category[0]}}</h2>
+              <p class='support-paragraph'>{{category[1].description | markdownify}}</p>
+            <div class='row'>
               {% for item in category[1].items %}
-                <div class="col-sm-6 col-md-12 resource-section">
+                <div class="col-sm-6 col-md-12 resource-section"
+                  data-filter='
+                     {{-item[0]-}}|
+                     {{-item[1].description-}}|
+                     {{-item[1].url-}}|
+                     {{-item[1].tags-}}
+                     '>
                     <div class="resource-content">
                         <div class="col-md-2">
-                            <img src="{{site.baseurl}}/assets/github.svg" class="resource-logo" alt="github icon">
+                          {%- if item[1].logo %}
+                          <img src="{{site.baseurl}}/assets/{{item[1].logo}}" class="resource-logo" alt="github icon">
+                          {% endif -%}
                         </div>
                         <div class="col-md-8 resource-text">
-                            <h3 class="resource-name">{{item[0]}}</h3>
+                            <h3 class="resource-name" id='{{category[0]}}-{{item[0]}}'>{{item[0]}}</h3>
                             <p class="resource-desc">{{item[1].description}}</p>
                         </div>
                         {%- if item[1].url -%}
@@ -31,5 +73,4 @@ layout: default
             </div>
         </div>
     </div>
-</section>
 {% endfor %}
