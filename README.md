@@ -20,7 +20,7 @@ bundle install
 cd into the root of this directory,
 
 ```
-bundle exec jekyll serve --baseurl ''
+bundle exec jekyll serve -w
 ```
 
 Open your browser to localhost:4000.
