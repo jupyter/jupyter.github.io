@@ -38,14 +38,32 @@
     <script src="{{site.baseurl}}/js/simon.js"></script>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 <script>
-  $('#foo').on('change keyup keypress paste', function(){
-    var s =  $('#foo').val().toLowerCase();
-    $('.resource-section').map(function(ind, it){ 
-      if(it.getAttribute('data-filter').toLowerCase().indexOf(s) == -1){
-        it.classList.add('hid');
-      } else {
+  $('#searchfield').show().on('change keyup keypress paste', function(){
+    var searchterm =  $('#searchfield').val().toLowerCase();
+    if (searchterm != ''){
+      $('.searchable_category').addClass('searching')
+    } else {
+      $('.searchable_category').removeClass('searching')
+    }
+
+    var searchterms = searchterm.split(' ').filter(function(it){return it});
+    
+    var matches = 0
+    $('.resource-item').map(function(ind, it){ 
+      search_corpus = it.getAttribute('data-filter').toLowerCase()
+
+      var match_array = searchterms.map(function(it){return search_corpus.indexOf(it) == -1?0:1});
+      var n_matches = match_array.reduce(function(a,b){return a+b}, 0);
+      var match = (n_matches == searchterms.length);
+      console.log( match_array, n_matches, searchterms.length);
+      
+      if(match){
+        matches += 1;
         it.classList.remove('hid');
+      } else {
+        it.classList.add('hid');
       }
     })
+    console.log('Found', matches, 'matches for', searchterm )
   })
 </script>

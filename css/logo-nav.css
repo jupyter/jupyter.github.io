@@ -602,7 +602,7 @@ body {
 /*Community Resources Page */
 
 /* Resource section is used to create a new resource on the community resources page. */
-.resource-section {
+.resource-section, .resource-item {
     border-bottom: 1px solid #E8E8E8;
     padding: 16px;
     vertical-align: middle;
@@ -658,6 +658,22 @@ body {
   .section-white, .section-grey {
     padding: 5% 0;
   }
+}
+
+@media (max-width: 1200px) and (min-width:992px) {
+    .navbar-logo {
+      /* show only planet and moon on narrow screen */
+        clip-path: inset(0px 125px 0px 0px);
+        margin-right: -115px;
+    }
+}
+
+@media (max-width: 992px) and (min-width:768px){
+    .navbar-logo {
+      /* show only planet and moon on narrow screen */
+        clip-path: inset(0px 100px 0px 0px);
+        margin-right: -100px;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -789,6 +805,9 @@ body {
     .donate-box {
         margin-top: 10%;
     }
+    .resource-item {
+        padding: 0px 0 30px;
+    }
     .resource-section {
         height: 400px;
         padding: 10px 0 30px;
@@ -796,7 +815,7 @@ body {
     .resource-section:nth-child(even) {
         border-left: 1px solid #E8E8E8;
     }
-    .resource-section img {
+    .resource-section img, .resource-item img {
         margin-top: 15px;
         padding-bottom: 0;
     }
@@ -812,11 +831,12 @@ body {
       margin-top: 4px;
     }
     .nav>li>a {
-        font-size: 13px;
-        letter-spacing: .8px;
-        padding-left: 8px;
-        padding-right: 8px;
+         font-size: 15px;
+         letter-spacing: .8px;
+         padding-left: 7px;
+         padding-right: 7px;
     }
+    
     .follow {
         float: left;
         margin-bottom: 20px;

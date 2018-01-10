@@ -1,5 +1,5 @@
 Kernels:
-  logo: null
+  logo: language.svg
   description: >
 
     **Kernels** are the engines responsible for code execution. Generally
@@ -35,11 +35,18 @@ Kernels:
           The R kernel is the perfect tool for statisticians looking to use the
           R from the comfort of a notebook.
         logo: r-logo.svg
+    IScala:
+      description: >
+        You guessed it; a scala kernel for Jupyter !
+      url: https://github.com/mattpap/IScala
+      logo: scala-logo.svg
     IRuby: {}
     IJavascript: {}
     ICSharp: {}
+
+    
 Frontends:
-  logo: null
+  logo: kernelicon.svg
   description: >
     **Frontends** are user facing application, usually in which you edit code.
     Frontend can connect to a _kernel_ which provides code execution. A frontend
@@ -55,8 +62,11 @@ Frontends:
     Notebook:
         description: The Classic notebook Frontend.
         url: https://jupyter-notebook.readthedocs.org
+        logo: notebookicon.svg
     Hydrogen:
         description: Integration with Atom
+        url: https://nteract.io/atom
+        logo: null
     VSCode Jupyter:
         url: https://marketplace.visualstudio.com/items?itemName=donjayamanne.jupyter
         description: Plugin for Visual Studio Code.
@@ -66,7 +76,7 @@ Frontends:
 Services:
   description: >
     **Services** that provides, integrate with, or augment Jupyter.
-  logo: null
+  logo: central.svg
   items:
     MyBinder:
       description: > 
@@ -81,14 +91,21 @@ Services:
       description: >
         Ex Sage Math Cloud, Cocalc offershosting of Jupyter notebook in the
         cloud and provide features unique to the Sage environement.
+    R-Brain:
+      description: R-brain provides an Cloud-based IDE based on Jupyter Optimized for Python & R Language.
+      url: https://cdn.worldvectorlogo.com/logos/scala-4.svg
+      logo: r-brain-logo.jpg
 
 Utilities:
-  logo: null
+  logo: data.svg
   description: >
     Miscelaneous **utilities** to work with the Jupyter Ecosystem
   items:
     nbconvert:
       description: A tool to convert notebook to multiple formats.
       url: https://nbconvert.readthedocs.org
-    nbdine:
-      description: Diff and merge of notebook
+    nbdime:
+      description: Diff and Merge of notebooks.
+      url: https://github.com/jupyter/nbdime
+      tags: git, github, simula, MinRk
+
