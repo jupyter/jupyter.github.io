@@ -22,7 +22,7 @@ Kernels:
   Community maintained kernels: https://github.com/jupyter/jupyter/wiki/Jupyter-kernels
 
 Widgets:
-  IPyWidgets: https://ipywidgets.readthedocs.io/en/latest/
+  IPyWidgets/Jupyter Widgets: https://ipywidgets.readthedocs.io/en/latest/
   widget-cookiecutter: https://github.com/jupyter-widgets/widget-cookiecutter/
 
 Notebook Documents:
