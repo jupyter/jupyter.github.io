@@ -71,6 +71,8 @@ Frontends:
         url: https://marketplace.visualstudio.com/items?itemName=donjayamanne.jupyter
         description: Plugin for Visual Studio Code.
         logo: vscode-jupyter-logo.png
+    QtConsole: {}
+    Jupyter Console: {}
 
 
 Services:
@@ -95,6 +97,12 @@ Services:
       description: R-brain provides an Cloud-based IDE based on Jupyter Optimized for Python & R Language.
       url: https://cdn.worldvectorlogo.com/logos/scala-4.svg
       logo: r-brain-logo.jpg
+    Nbviewer: 
+      url: https://nbviewer.jupyter.org
+      logo: notebook-file-logo.svg
+      description: Render any publicly available notebook document or GitHub repository
+    Azure Notebooks:
+      tags: microsoft, azure
 
 Utilities:
   logo: data.svg
@@ -108,4 +116,9 @@ Utilities:
       description: Diff and Merge of notebooks.
       url: https://github.com/jupyter/nbdime
       tags: git, github, simula, MinRk
+    jupyter_client: {}
+    jupyterhub: 
+      tags: multiple users, authentication, OAuth, kubernetes
+    nbgrader:
+      tags: education
 
