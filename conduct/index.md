@@ -1,8 +1,6 @@
 ---
-layout: page
-title: CoC
+layout: markdown
 ---
-
 
 Jupyter Code of Conduct can be found on the [Jupyter/Governance GitHub
 Repository](https://github.com/jupyter/governance). For convenience it has been
