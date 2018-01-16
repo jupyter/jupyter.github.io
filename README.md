@@ -20,12 +20,13 @@ bundle install
 cd into the root of this directory,
 
 ```
-bundle exec jekyll serve -w
+bundle exec jekyll serve liveserve
 ```
 
 Open your browser to localhost:4000.
 
-Edit the various parts and reload at will.
+Edit the various parts, the `liveserve` option should automatically rebuild and
+refresh the pages when changes occur.
 
 Enjoy.
 

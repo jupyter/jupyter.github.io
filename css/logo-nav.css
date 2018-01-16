@@ -107,6 +107,7 @@ body {
 }
 
 .footer-text {
+    font-size: 16px;
     margin-left: 0;
     padding-left: 0;
 }
@@ -650,9 +651,6 @@ body {
     background-color: white;
 }
 
-.footer-text {
-    font-size: 16px;
-}
 
 /* Bootstrap Breakpoint Media Queries */
 /* Large devices (large desktops, 1200px and up) */
@@ -898,12 +896,6 @@ body {
 }
 
 /* Extra small devices (these are mostly fixes to make sure elements act correctly to look good) */
-@media (min-width: 509px) {
-    .footer ul {
-        float: left;
-    }
-}
-
 @media(max-width:509px) {
     .install-button {
         margin-top: 20px;
@@ -920,8 +912,5 @@ body {
     .footer {
         padding-bottom: 15px;
         text-align: center;
-    }
-    .footer ul {
-        float: left;
     }
 }
