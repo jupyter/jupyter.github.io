@@ -4,17 +4,17 @@
             <div class="navbar-text">
                 <ul class="footer-text">
                     <li><a href="{{site.baseurl}}/index.html">Home</a></li>
-                    {% for nav in site.data.nav.head %}
-                      {% if nav.url %}
-                           <li><a href="{{site.baseurl}}{{nav.url}}" target="_blank">{{nav.title}}</a></li>
-                      {% else %}
-                        {% for target_page in site.pages %}
-                           {% if nav contains target_page.title %}
+                    {%- for nav in site.data.nav.head %}
+                      {%- if nav.url %}
+                               <li><a href="{{site.baseurl}}{{nav.url}}" target="_blank">{{nav.title}}</a></li>
+                      {%- else %}
+                        {%- for target_page in site.pages %}
+                           {%- if nav contains target_page.title %}
                                <li><a href="{{site.baseurl}}{{target_page.url}}">{{target_page.title}}</a></li>
-                           {% endif %}
-                           {% endfor %}
-                      {% endif %}
-                    {% endfor %}
+                           {%- endif %}
+                           {%- endfor %}
+                      {%- endif %}
+                    {%- endfor %}
                     <!--{{ site.time}}-->
                 </ul>
                 <p>Copyright © {{site.time | date: '%Y' }}  Project Jupyter - Last updated {{site.time | date: "%a, %b %d, %Y" }}</p>

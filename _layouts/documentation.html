@@ -1,0 +1,35 @@
+---
+layout: default
+title: Documentation
+---
+
+<section>
+    <div class="header header-grey">
+      <h2>Documentation</h2>
+      <p>Browse the Jupyter universe for information.</p>
+    </div>
+</section>
+<section>
+    <div class="top-section-border">
+        <div class="container">
+            <div class="row docs-cards">
+              {%- for card in site.data.documentation -%}
+                <div class="col-lg-4 col-md-6 col-sm-6 docs-card-col">
+                  <div class="docs-card">
+                    <div id="general-block" class="docs-card-heading">
+                      <h4 class="">{{card[0]}}</h4>
+                    </div>
+                    <div class="docs-card-body">
+                      <ul>
+                        {%- for item in card[1] %}
+                        <li><a href="{{item[1]}}">{{item[0]}}</a></li>
+                        {%- endfor %}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,46 @@
+
+
+General:
+  Project-wide Documentation: https://jupyter.readthedocs.io
+  Contributing to Jupyter: https://jupyter.readthedocs.io/en/latest/contributor/content-contributor.html
+
+User Interfaces:
+  JupyterLab: https://jupyterlab-tutorial.readthedocs.io/en/latest/
+  Jupyter Notebook: https://jupyter-notebook.readthedocs.io/en/stable/
+  Jupyter Console: https://jupyter-console.readthedocs.io/en/stable/
+  Qt Console : https://qtconsole.readthedocs.io/en/stable/
+
+IPython:
+  IPython: https://ipython.readthedocs.io/en/stable/
+  IPyParallel: https://ipyparallel.readthedocs.io/en/stable/
+  Traitlets: https://traitlets.readthedocs.io/en/stable/
+
+Kernels:
+  IPython: https://ipython.readthedocs.io/en/stable/
+  IRkernel: https://irkernel.github.io/
+  IJulia: https://github.com/JuliaLang/IJulia.jl
+  Community maintained kernels: https://github.com/jupyter/jupyter/wiki/Jupyter-kernels
+
+Widgets:
+  IPyWidgets/Jupyter Widgets: https://ipywidgets.readthedocs.io/en/latest/
+  widget-cookiecutter: https://github.com/jupyter-widgets/widget-cookiecutter/
+
+Notebook Documents:
+  nbconvert: https://nbconvert.readthedocs.io/en/latest/
+  nbformat: https://nbformat.readthedocs.io/en/latest/
+  nbviewer: https://github.com/jupyter/nbviewer/
+
+JupyterHub:
+  JupyterHub: https://jupyterhub.readthedocs.io/en/stable/
+  Zero to JupyterHub: https://zero-to-jupyterhub.readthedocs.io/en/latest/
+  nbgrader: https://nbgrader.readthedocs.io/en/latest/
+  All JupyterHub Projects...: https://github.com/jupyterhub
+
+Deployment:
+  Docker Stacks: https://github.com/jupyter/docker-stacks
+  Kernel Gateway: https://jupyter-kernel-gateway.readthedocs.io/en/latest/
+
+Foundations:
+  Jupyter Client: https://jupyter-client.readthedocs.io/en/latest/
+  Jupyter Core: https://jupyter-core.readthedocs.io/en/latest/
+  Jupyter Alabaster Theme: https://jupyter-alabaster-theme.readthedocs.io/en/latest/

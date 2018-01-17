@@ -21,7 +21,7 @@
 
 .docs-card-heading {
   padding: 16px;
-  background: #1976D2;
+  background: #F27624;
   color: white;
   font-size: 14px;
   font-weight: normal;
@@ -46,19 +46,4 @@
   list-style: none;
   padding: 4px 0px 4px 0px;
   font-size: 14px;
-}
-
-
-
-
-/* MEDIA QUERIES */
-
-@media screen and (max-width: 1200px) {
-}
-
-@media screen and (max-width: 992px) {
-}
-
-@media screen and (max-width: 768px) {
-
 }
