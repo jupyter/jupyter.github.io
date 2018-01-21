@@ -28,10 +28,10 @@ layout: default
    margin: 0;
 }
 
-.sponsored-item {
+.sponsored-item, .featured-item {
   background-color: #f6f6f6;
 }
-.sponsored-item:hover {
+.resource-item:hover {
   background-color: #ddd;
 }
 
@@ -92,17 +92,19 @@ author before adding it here.</p>
               {{category[1].description | markdownify}}
               </div>
               <div class='row'>
-              {% assign sponsored = category[1].items | group_by: 'sponsored' | sort: 'name' | reverse %}
-              {% for xx in sponsored %}
+              {% assign featured = category[1].items | group_by: 'featured' | sort: 'name' | reverse %}
+              {% for xx in featured %}
               {% assign sorted = xx.items| sort: 'name' %}
               <!--- {{xx}} -->
               {% for item in sorted %}
-                <div class="col-md-12 resource-item {% if item.sponsored %}sponsored-item{% endif %}"
+                <div class="col-md-12 resource-item {% if item.sponsored
+                     %}sponsored-item{% endif %} {% if item.featured %}featured-item{% endif %}"
                   data-filter='
                      {{-item.name-}}|
                      {{-category[0]}}|
                      {{-item.description-}}|
-                     {{-item.tags-}}
+                     {{-item.tags-}}|
+                     {{-item.license-}}
                      '>
                     <div class="resource-content">
                         <div class="col-md-2">
@@ -118,10 +120,15 @@ author before adding it here.</p>
                         <div class="col-md-8 resource-text">
                             <div class='legal-attributes'>
                               {% if item.sponsored %}
-                                <span title="This item is sponsored: It has been artificially be made more proeminent.">sponsored</span>
+                                <span title="This item is sponsored: A financial
+                                  agreement exist between Jupyter and this item
+                                  author, to propomote this item..">Sponsored</span>
                               {% endif %}
-                              {% if item.licence %}
-                                <span title='This item is under the {{item.licence}} license'>{{item['licence']}}</span>
+                              {% if item.featured %}
+                                <span title="This item is featured: It has been artificially be made more proeminent.">Featured</span>
+                              {% endif %}
+                              {% if item.license %}
+                                <span title='This item is under the {{item.license}} license'>{{item['license']}}</span>
                               {% endif %}
                               {% if item.commercial %}
                                 <span>Commercial</span>
@@ -143,4 +150,34 @@ author before adding it here.</p>
             </div>
         </div>
     </section>
+
 {% endfor %}
+    <section>
+      <div class="container">
+        <h2 class='col-md-12 section-header' id='{{category[0]}}'>Missing project? </h2>
+
+      <p>You did not find what you are looking for ? This list may be
+      incomplete. Expand the next section to know how to add a project on this
+      list. 
+      <details>
+      <summary>Adding a project on this page.</summary>
+      <p>
+      To be added to this page the following must be true:
+      <ul>
+        <li>The project must be related to Jupyter, integrate with Jupyter</li>
+        <li>The project author or owner must agree for his project to be listed
+          on this page, and must give explicit permission for this page to list
+          his project name and brand and logo.</li>
+        <li>The project should be maintained and working, avoid submitting
+          project that are less than a couple month old.</li>
+        <li>We only accept Project addition via Pull-Requests for now.Send a
+          Pull-request to https://github.com/jupyter/jupyter.github.io which
+          adds the following fields:
+          
+        
+        </li>
+      </ul>
+      </p>
+    </details>
+      </div>
+    </section>
