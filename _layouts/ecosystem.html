@@ -27,6 +27,33 @@ layout: default
    padding: 0;
    margin: 0;
 }
+
+.sponsored-item {
+  background-color: #f6f6f6;
+}
+.sponsored-item:hover {
+  background-color: #ddd;
+}
+
+.legal-attributes * {
+    color: gray;
+    font-size: 80%;
+    display: inline;
+}
+
+.legal-attributes {
+  float: right;
+}
+
+.legal-attributes > span:after {
+    content: ' -';
+}
+
+.legal-attributes > span:last-child:after {
+  content: '';
+}
+
+
 </style>
 
 
@@ -65,18 +92,22 @@ author before adding it here.</p>
               {{category[1].description | markdownify}}
               </div>
               <div class='row'>
-              {% for item in category[1].items %}
-                <div class="col-md-12 resource-item"
+              {% assign sponsored = category[1].items | group_by: 'sponsored' | sort: 'name' | reverse %}
+              {% for xx in sponsored %}
+              {% assign sorted = xx.items| sort: 'name' %}
+              <!--- {{xx}} -->
+              {% for item in sorted %}
+                <div class="col-md-12 resource-item {% if item.sponsored %}sponsored-item{% endif %}"
                   data-filter='
-                     {{-item[0]-}}|
+                     {{-item.name-}}|
                      {{-category[0]}}|
-                     {{-item[1].description-}}|
-                     {{-item[1].tags-}}
+                     {{-item.description-}}|
+                     {{-item.tags-}}
                      '>
                     <div class="resource-content">
                         <div class="col-md-2">
-                          {%- if item[1].logo %}
-                          <img src="{{site.baseurl}}/assets/{{item[1].logo}}" class="resource-logo" alt="{{item[0]}} icon">
+                          {%- if item.logo %}
+                          <img src="{{site.baseurl}}/assets/{{item.logo}}" class="resource-logo" alt="{{item.name}} icon">
                           {% else -%}
                             {%- if category[1].logo %}
                             <img src="{{site.baseurl}}/assets/{{category[1].logo}}" class="resource-logo" alt="generic icon">
@@ -85,17 +116,29 @@ author before adding it here.</p>
                           {% endif -%}
                         </div>
                         <div class="col-md-8 resource-text">
-                            <h3 class="resource-name" id='{{category[0]}}-{{item[0]}}'>{{item[0]}}</h3>
-                            <p class="resource-desc">{{item[1].description}}</p>
+                            <div class='legal-attributes'>
+                              {% if item.sponsored %}
+                                <span title="This item is sponsored: It has been artificially be made more proeminent.">sponsored</span>
+                              {% endif %}
+                              {% if item.licence %}
+                                <span title='This item is under the {{item.licence}} license'>{{item['licence']}}</span>
+                              {% endif %}
+                              {% if item.commercial %}
+                                <span>Commercial</span>
+                              {% endif %}
+                            </div>
+                            <h3 class="resource-name" id='{{category[0]}}-{{item.name}}'>{{item.name}}</h3>
+                            <p class="resource-desc">{{item.description}}</p>
                         </div>
-                        {%- if item[1].url -%}
+                        {%- if item.url -%}
                         <div class="col-md-2 resource-button">
-                          <a href="{{item[1].url}}">View</a>
+                          <a href="{{item.url}}">View</a>
                         </div>
                         {%- endif -%}
                     </div>
                 </div>
 
+              {% endfor %}
               {% endfor %}
             </div>
         </div>
