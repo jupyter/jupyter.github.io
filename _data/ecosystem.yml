@@ -69,7 +69,7 @@ Frontends:
       featured: 0
       description: The Classic notebook Frontend.
       url: https://jupyter-notebook.readthedocs.org
-      logo: notebookicon.svg
+      logo: ../notebookicon.svg
     - name: Hydrogen
       description: Integration with Atom
       url: https://nteract.io/atom
@@ -110,10 +110,15 @@ Services:
       logo: r-brain-logo.jpg
     - name: Nbviewer
       url: https://nbviewer.jupyter.org
-      logo: notebook-file-logo.svg
+      logo: ../notebook-file-logo.svg
       description: Render any publicly available notebook document or GitHub repository
     - name: Azure Notebooks
+      logo: azure-notebooks-logo.png
+      url: https://notebooks.azure.com
+      commercial: true
       tags: microsoft, azure
+      description: >
+        Jupyter notebook hosted on Azure cloud.
 
 Utilities:
   logo: data.svg

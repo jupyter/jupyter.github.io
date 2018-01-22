@@ -109,7 +109,7 @@ author before adding it here.</p>
                     <div class="resource-content">
                         <div class="col-md-2">
                           {%- if item.logo %}
-                          <img src="{{site.baseurl}}/assets/{{item.logo}}" class="resource-logo" alt="{{item.name}} icon">
+                          <img src="{{site.baseurl}}/assets/ecosystem/{{item.logo}}" class="resource-logo" alt="{{item.name}} icon">
                           {% else -%}
                             {%- if category[1].logo %}
                             <img src="{{site.baseurl}}/assets/{{category[1].logo}}" class="resource-logo" alt="generic icon">
@@ -155,13 +155,14 @@ author before adding it here.</p>
     <section>
       <div class="container">
         <h2 class='col-md-12 section-header' id='{{category[0]}}'>Missing project? </h2>
-
+        <div class='support-paragraph'>
+      
       <p>You did not find what you are looking for ? This list may be
       incomplete. Expand the next section to know how to add a project on this
       list. 
-      <details>
-      <summary>Adding a project on this page.</summary>
+      </div>
       <p>
+      Projects will be  listed alphabetically.
       To be added to this page the following must be true:
       <ul>
         <li>The project must be related to Jupyter, integrate with Jupyter</li>
@@ -173,11 +174,22 @@ author before adding it here.</p>
         <li>We only accept Project addition via Pull-Requests for now.Send a
           Pull-request to https://github.com/jupyter/jupyter.github.io which
           adds the following fields:
-          
-        
+          <pre>
+- name: [name of your project.]
+  license: [optional license, if open source, or "Proprietary" if open source]
+  featured: [reserved to the Jupyter Team]
+  sponsored: [reserved to the Jupyter Team]
+  commercial: [false|true, is your project commercial]
+  description: >
+      [Multi line markdown description of your project. Avoid links,
+      and please keep it not too long]
+  logo: [optional, name of your logo file, place it in /assets/, svg
+  preffered, will be rendered in an about 80x80 square on variable
+  color background.]
+  url: [url for the "view" button, please use https if possible]
+          </pre>
         </li>
+
       </ul>
       </p>
-    </details>
-      </div>
     </section>
