@@ -2,6 +2,67 @@
 layout: default
 title: "About Us"
 permalink: /about
+steering:
+  - name: Damian Avila
+    avatar: https://avatars3.githubusercontent.com/u/1640669?v=3&s=400
+    affiliation: Anaconda, Inc.
+    gh_handle: 'damianavila'
+  - name: Matthias Bussonnier
+    avatar: https://avatars2.githubusercontent.com/u/335567?v=3&s=400
+    affiliation: UC Berkeley
+    gh_handle: 'carreau'
+  - name: Sylvain Corlay
+    avatar: https://avatars0.githubusercontent.com/u/2397974?v=3&s=400
+    affiliation: QuantStack
+    gh_handle: 'sylvaincorlay'
+  - name: Jonathan Frederic
+    avatar: https://avatars2.githubusercontent.com/u/3292874?v=3&s=400
+    affiliation: Google
+    gh_handle: 'jdfreder'
+  - name: Brian Granger
+    avatar: https://avatars1.githubusercontent.com/u/27600?v=3&s=400
+    affiliation: Cal Poly, San Luis Obispo
+    gh_handle: 'ellisonbg'
+  - name: Jason Grout
+    avatar: https://avatars1.githubusercontent.com/u/192614?v=3&s=400
+    affiliation: Bloomberg
+    gh_handle: 'jasongrout'
+  - name: Jessica Hamrick
+    avatar: https://avatars2.githubusercontent.com/u/83444?v=3&s=400
+    affiliation: DeepMind
+    gh_handle: 'jhamrick'
+  - name: Paul Ivanov
+    avatar: https://avatars3.githubusercontent.com/u/118211?v=3&s=400
+    affiliation: Bloomberg
+    gh_handle: 'ivanov'
+  - name: Thomas Kluyver
+    avatar: https://avatars0.githubusercontent.com/u/327925?v=3&s=400
+    affiliation: University of Southampton
+    gh_handle: 'takluyver'
+  - name: Kyle Kelley
+    avatar: https://avatars1.githubusercontent.com/u/836375?v=3&s=400
+    affiliation: Netflix
+    gh_handle: 'rgbkrk'
+  - name: Peter Parente
+    avatar: https://avatars2.githubusercontent.com/u/153745?v=3&s=400
+    affiliation: MaxPoint
+    gh_handle: 'parente'
+  - name: Fernando Perez
+    avatar: https://avatars3.githubusercontent.com/u/57394?v=3&s=400
+    affiliation: UC Berkeley
+    gh_handle: 'fperez'
+  - name: Min Ragan-Kelley
+    avatar: https://avatars0.githubusercontent.com/u/151929?v=3&s=400
+    affiliation: Simula Research Lab
+    gh_handle: 'minrk'
+  - name: Steven Silvester
+    avatar: https://avatars2.githubusercontent.com/u/2096628?v=3&s=400
+    affiliation: Project Jupyter
+    gh_handle: 'blink1073'
+  - name: Carol Willing
+    avatar: https://avatars1.githubusercontent.com/u/2680980?v=3&s=400
+    affiliation: Cal Poly
+    gh_handle: 'willingc'
 ---
 
 
@@ -66,81 +127,13 @@ permalink: /about
                     of the following members (in alphabetical order).
                 </p>
                 <div class="col-md-12 section-content section-center">
+                    {% for member in page.steering %}
                     <div class="col-md-4 material">
-                        <img class="council-member-photo" alt="Damian Avila's avatar picture" src='https://avatars3.githubusercontent.com/u/1640669?v=3&s=170' />
-                        <p class="card-header">Damian Avila</p>
-                        <p class="card-info">Anaconda, Inc.<br><a href="https://github.com/damianavila" target="_blank"><em>@damianavila</em></a> on GitHub</p>
+                      <img class="council-member-photo" alt="{{member.name}}'s avatar picture" src='{{member.avatar}}' />
+                      <p class="card-header">{{member.name}}</p>
+                      <p class="card-info">{{member.affiliation}}<br><a href="https://github.com/{{member.gh_handle}}" target="_blank"><em>@{{member.gh_handle}}</em></a> on GitHub</p>
                     </div>
-                    <div class="col-md-4 material">
-                        <img class="council-member-photo" alt="Matthias Bussonnier's avatar picture" src='https://avatars2.githubusercontent.com/u/335567?v=3&s=400' />
-                        <p class="card-header">Matthias Bussonnier</p>
-                        <p class="card-info">UC Berkeley<br><a href="https://github.com/carreau" target="_blank"><em>@carreau</em></a> on GitHub</p>
-                    </div>
-                    <div class="col-md-4 material">
-                        <img class="council-member-photo" alt="Sylvain Corlay's avatar picture" src='https://avatars0.githubusercontent.com/u/2397974?v=3&s=400' />
-                        <p class="card-header">Sylvain Corlay</p>
-                        <p class="card-info">QuantStack<br><a href="https://github.com/sylvaincorlay" target="_blank"><em>@sylvaincorlay</em></a> on GitHub</p>
-                    </div>
-                    <div class="col-md-4 material">
-                        <img class="council-member-photo" alt="Jonathan Frederic's avatar picture" src='https://avatars2.githubusercontent.com/u/3292874?v=3&s=400' />
-                        <p class="card-header">Jonathan Frederic</p>
-                        <p class="card-info">Google<br><a href="https://github.com/jdfreder" target="_blank"><em>@jdfreder</em></a> on GitHub</p>
-                    </div>
-                    <div class="col-md-4 material">
-                        <img class="council-member-photo" alt="Brian Granger's avatar picture" src='https://avatars1.githubusercontent.com/u/27600?v=3&s=170' />
-                        <p class="card-header">Brian Granger</p>
-                        <p class="card-info">Cal Poly, San Luis Obispo<br><a href="https://github.com/ellisonbg" target="_blank"><em>@ellisonbg</em></a> on GitHub</p>
-                    </div>
-                    <div class="col-md-4 material">
-                        <img class="council-member-photo" alt="Jason Grout's avatar picture" src='https://avatars1.githubusercontent.com/u/192614?v=3&s=400' />
-                        <p class="card-header">Jason Grout</p>
-                        <p class="card-info">Bloomberg<br><a href="https://github.com/jasongrout" target="_blank"><em>@jasongrout</em></a> on GitHub</p>
-                    </div>
-                    <div class="col-md-4 material">
-                        <img class="council-member-photo" alt="Jessica Hamrick's avatar picture" src='https://avatars2.githubusercontent.com/u/83444?v=3&s=400' />
-                        <p class="card-header">Jessica Hamrick</p>
-                        <p class="card-info">DeepMind<br><a href="https://github.com/jhamrick" target="_blank"><em>@jhamrick</em></a> on GitHub</p>
-                    </div>
-                     <div class="col-md-4 material">
-                        <img class="council-member-photo" alt="Paul Ivanov's avatar picture" src='https://avatars3.githubusercontent.com/u/118211?v=3&s=400' />
-                        <p class="card-header">Paul Ivanov</p>
-                        <p class="card-info">Bloomberg<br><a href="https://github.com/ivanov" target="_blank"><em>@ivanov</em></a> on GitHub</p>
-                    </div>
-                    <div class="col-md-4 material">
-                        <img class="council-member-photo" alt="Thomas Kluyver's avatar picture" src='https://avatars0.githubusercontent.com/u/327925?v=3&s=400' />
-                        <p class="card-header">Thomas Kluyver</p>
-                        <p class="card-info">University of Southampton<br><a href="https://github.com/takluyver" target="_blank"><em>@takluyver</em></a> on GitHub</p>
-                    </div>
-                    <div class="col-md-4 material">
-                        <img class="council-member-photo" alt="Kyle Kelley's avatar picture" src='https://avatars1.githubusercontent.com/u/836375?v=3&s=400' />
-                        <p class="card-header">Kyle Kelley</p>
-                        <p class="card-info">Netflix<br><a href="https://github.com/rgbkrk" target="_blank"><em>@rgbkrk</em></a> on GitHub</p>
-                    </div>
-                    <div class="col-md-4 material">
-                        <img class="council-member-photo" alt="Peter Parente's avatar picture" src='https://avatars2.githubusercontent.com/u/153745?v=3&s=400' />
-                        <p class="card-header">Peter Parente</p>
-                        <p class="card-info">MaxPoint<br><a href="https://github.com/parente" target="_blank"><em>@parente</em></a> on GitHub</p>
-                    </div>
-                    <div class="col-md-4 material">
-                        <img class="council-member-photo" alt="Fernando Perez's avatar picture" src='https://avatars3.githubusercontent.com/u/57394?v=3&s=400' />
-                        <p class="card-header">Fernando Perez</p>
-                        <p class="card-info">UC Berkeley<br><a href="https://github.com/fperez" target="_blank"><em>@fperez</em></a> on GitHub</p>
-                    </div>
-                    <div class="col-md-4 material">
-                        <img class="council-member-photo" alt="Min Ragan-Kelley's avatar picture" src='https://avatars0.githubusercontent.com/u/151929?v=3&s=400' />
-                        <p class="card-header">Min Ragan-Kelley</p>
-                        <p class="card-info">Simula Research Lab<br><a href="https://github.com/minrk" target="_blank"><em>@minrk</em></a> on GitHub</p>
-                    </div>
-                    <div class="col-md-4 material">
-                        <img class="council-member-photo" alt="Steven Silvester's avatar picture" src='https://avatars2.githubusercontent.com/u/2096628?v=3&s=400' />
-                        <p class="card-header">Steven Silvester</p>
-                        <p class="card-info">Project Jupyter<br><a href="https://github.com/blink1073" target="_blank"><em>@blink1073</em></a> on GitHub</p>
-                    </div>
-                    <div class="col-md-4 material">
-                        <img class="council-member-photo" alt="Carol Willing's avatar picture" src='https://avatars1.githubusercontent.com/u/2680980?v=3&s=400' />
-                        <p class="card-header">Carol Willing</p>
-                        <p class="card-info">Cal Poly<br><a href="https://github.com/willingc" target="_blank"><em>@willingc</em></a> on GitHub</p>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
