@@ -12,12 +12,21 @@ what where.
 
 # Quick local testing
 
+Clone this repository locally, and cd into it:
+
+```
+git clone https://github.com/jupyter/jupyter.github.io
+cd jupyter.github.io
+```
+
+Install `bundler`, and use it to install the dependencies to build the website:
+
 ```
 gem install bundler
 bundle install
 ```
 
-cd into the root of this directory,
+Now you can ask Jekyll to build the website.
 
 ```
 bundle exec jekyll serve liveserve
@@ -27,6 +36,8 @@ Open your browser to localhost:4000.
 
 Edit the various parts, the `liveserve` option should automatically rebuild and
 refresh the pages when changes occur.
+
+To stop serving the website, press **`Ctrl`**-`C` in your terminal
 
 Enjoy.
 
