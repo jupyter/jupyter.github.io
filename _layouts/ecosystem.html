@@ -1,0 +1,198 @@
+---
+layout: default
+---
+
+{{content | markdownify }}
+<style>
+
+.resource-item{
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+.hid {
+  height:0;
+  padding-top:0;
+  padding-bottom:0;
+  opacity:0;
+}
+
+.section-header, .support-paragraph, .sec-logo {
+  transition: all 0.5s ease;
+}
+/*.searching .section-header ,*/
+.searching .support-paragraph,
+.searching .sec-logo{
+
+   height: 0;
+   opacity: 0;
+   padding-top: 0;
+   padding-bottom: 0;
+   margin: 0;
+}
+
+.sponsored-item, .featured-item {
+  background-color: #f6f6f6;
+}
+.resource-item:hover {
+  background-color: #ddd;
+}
+
+.legal-attributes * {
+    color: gray;
+    font-size: 80%;
+    display: inline;
+}
+
+.legal-attributes {
+  float: right;
+}
+
+.legal-attributes > span:after {
+    content: ' -';
+}
+
+.legal-attributes > span:last-child:after {
+  content: '';
+}
+
+
+</style>
+
+
+
+<div class="section-white">
+<div class="container">
+<p>The projects and services listed on this page are mostly maintained by third
+party, the quality, and correctness of implementation, frequency of update, and
+support are not guarantied, nor is the presence of a project or service on this
+page a recommendation to use it. This list is not exhaustive. If you see a
+missing project, feel free to open a Pull-Request. Be sure to check with the
+author before adding it here.</p>
+</div>
+</div>
+
+    <div class="container">
+        <div class="row">
+          <div class="form-group col-xs-12 col btn-group" role='group'>
+            <input class='form-control' placeholder='Filter items'
+            style='display:none' id='searchfield' type='text'>
+          </div> 
+        </div>
+    </div>
+
+
+{% for category in site.data.ecosystem %}
+    <section class='searchable_category'>
+        <div class="container">
+              <h2 class='col-md-12 section-header' id='{{category[0]}}'>{{category[0]}}</h2>
+              {%- if category[1].logo %}
+                            <img
+                            src="{{site.baseurl}}/assets/{{category[1].logo}}"
+                            class="sec-logo resource-logo" alt="{{category[0]}} icon">
+              {% endif -%}
+              <div class='support-paragraph'>
+              {{category[1].description | markdownify}}
+              </div>
+              <div class='row'>
+              {% assign featured = category[1].items | group_by: 'featured' | sort: 'name' | reverse %}
+              {% for xx in featured %}
+              {% assign sorted = xx.items| sort: 'name' %}
+              <!--- {{xx}} -->
+              {% for item in sorted %}
+                <div class="col-md-12 resource-item {% if item.sponsored
+                     %}sponsored-item{% endif %} {% if item.featured %}featured-item{% endif %}"
+                  data-filter='
+                     {{-item.name-}}|
+                     {{-category[0]}}|
+                     {{-item.description-}}|
+                     {{-item.tags-}}|
+                     {{-item.license-}}
+                     '>
+                    <div class="resource-content">
+                        <div class="col-md-2">
+                          {%- if item.logo %}
+                          <img src="{{site.baseurl}}/assets/ecosystem/{{item.logo}}" class="resource-logo" alt="{{item.name}} icon">
+                          {% else -%}
+                            {%- if category[1].logo %}
+                            <img src="{{site.baseurl}}/assets/{{category[1].logo}}" class="resource-logo" alt="generic icon">
+                            {% endif -%}
+                          {% else -%}
+                          {% endif -%}
+                        </div>
+                        <div class="col-md-8 resource-text">
+                            <div class='legal-attributes'>
+                              {% if item.sponsored %}
+                                <span title="This item is sponsored: A financial
+                                  agreement exist between Jupyter and this item
+                                  author, to propomote this item..">Sponsored</span>
+                              {% endif %}
+                              {% if item.featured %}
+                                <span title="This item is featured: It has been artificially be made more proeminent.">Featured</span>
+                              {% endif %}
+                              {% if item.license %}
+                                <span title='This item is under the {{item.license}} license'>{{item['license']}}</span>
+                              {% endif %}
+                              {% if item.commercial %}
+                                <span>Commercial</span>
+                              {% endif %}
+                            </div>
+                            <h3 class="resource-name" id='{{category[0]}}-{{item.name}}'>{{item.name}}</h3>
+                            <p class="resource-desc">{{item.description}}</p>
+                        </div>
+                        {%- if item.url -%}
+                        <div class="col-md-2 resource-button">
+                          <a href="{{item.url}}">View</a>
+                        </div>
+                        {%- endif -%}
+                    </div>
+                </div>
+
+              {% endfor %}
+              {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endfor %}
+    <section>
+      <div class="container">
+        <h2 class='col-md-12 section-header' id='{{category[0]}}'>Missing project? </h2>
+        <div class='support-paragraph'>
+      
+      <p>You did not find what you are looking for ? This list may be
+      incomplete. Expand the next section to know how to add a project on this
+      list. 
+      </div>
+      <p>
+      Projects will be  listed alphabetically.
+      To be added to this page the following must be true:
+      <ul>
+        <li>The project must be related to Jupyter, integrate with Jupyter</li>
+        <li>The project author or owner must agree for his project to be listed
+          on this page, and must give explicit permission for this page to list
+          his project name and brand and logo.</li>
+        <li>The project should be maintained and working, avoid submitting
+          project that are less than a couple month old.</li>
+        <li>We only accept Project addition via Pull-Requests for now.Send a
+          Pull-request to https://github.com/jupyter/jupyter.github.io which
+          adds the following fields:
+          <pre>
+- name: [name of your project.]
+  license: [optional license, if open source, or "Proprietary" if open source]
+  featured: [reserved to the Jupyter Team]
+  sponsored: [reserved to the Jupyter Team]
+  commercial: [false|true, is your project commercial]
+  description: >
+      [Multi line markdown description of your project. Avoid links,
+      and please keep it not too long]
+  logo: [optional, name of your logo file, place it in /assets/, svg
+  preffered, will be rendered in an about 80x80 square on variable
+  color background.]
+  url: [url for the "view" button, please use https if possible]
+          </pre>
+        </li>
+
+      </ul>
+      </p>
+    </section>

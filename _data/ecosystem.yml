@@ -1,0 +1,140 @@
+Kernels:
+  logo: language.svg
+  description: >
+
+    **Kernels** are the engines responsible for code execution. Generally
+    kernels are associated with one language, but a few kernels can manage
+    multiple languages, often simultaneously. 
+
+  items:
+      - name: IPython
+        license: BSD
+        featured: 0
+        commercial: false
+        description: >
+          The reference Kernel implementation for Jupyter; written in Python,
+          provide all the features of the Command Line IPython shell, and more.
+        logo: python-logo.svg
+        url: https://ipython.org
+      - name: IHaskell
+        commercial: false
+        description: >
+
+          IHaskell provide a haskell kernel with extra interactivity features to
+          make full usage of the notebook features.
+        logo: haskell-logo.svg
+        url: https://github.com/gibiansky/IHaskell
+
+      - name: IJulia
+        license: MIT
+        commercial: false
+        description: >
+          IJulia allow you to access the Julia programming language from any
+          Jupyter conmpatible frontend.
+        logo: julia-logo.svg
+        url: https://github.com/JuliaLang/IJulia.jl
+      - name: IRKernel
+        commercial: false
+        url: https://irkernel.github.io/
+        description: >
+          The R kernel is the perfect tool for statisticians looking to use the
+          R from the comfort of a notebook.
+        logo: r-logo.svg
+      - name: IScala
+        sponsored: true
+        commercial: false
+        description: >
+          You guessed it; a scala kernel for Jupyter !
+        url: https://github.com/mattpap/IScala
+        logo: scala-logo.svg
+      - name: IRuby
+        commercial: false
+
+    
+Frontends:
+  logo: kernelicon.svg
+  description: >
+    **Frontends** are user facing application, usually in which you edit code.
+    Frontend can connect to a _kernel_ which provides code execution. A frontend
+    can either be a standalone application, or an extension for an existing
+    application or text editor
+  items:
+    - name: Nteract
+      description: >
+        Nteract provides a native (electron) notebook interface that provide
+        rich integration into operating system and allow a pure Desktop experience.
+      logo: nteract-logo.png
+      url: https://nteract.io
+    - name: Notebook
+      featured: 0
+      description: The Classic notebook Frontend.
+      url: https://jupyter-notebook.readthedocs.org
+      logo: ../notebookicon.svg
+    - name: Hydrogen
+      description: Integration with Atom
+      url: https://nteract.io/atom
+      logo: null
+    - name: VSCode Jupyter
+      url: https://marketplace.visualstudio.com/items?itemName=donjayamanne.jupyter
+      description: Plugin for Visual Studio Code.
+      logo: vscode-jupyter-logo.png
+    - name: QtConsole
+    - name: Jupyter Console
+
+
+Services:
+  description: >
+    **Services** that provides, integrate with, or augment Jupyter.
+  logo: central.svg
+  items:
+    - name: MyBinder
+      commercial: false
+      description: > 
+        MyBinder.org is a free service the provide ephemeral computing in the
+        cloud and turn any git repository into a temporary jupyter notebook
+        instance in the cloud. 
+      url: https://mybinder.org
+      logo: binder-logo.png
+    - name: CoCalc
+      sponsored: 0
+      commercial: true
+      logo: cocalc-logo.png
+      url: https://cocalc.com/
+      description: >
+        Ex Sage Math Cloud, Cocalc offershosting of Jupyter notebook in the
+        cloud and provide features unique to the Sage environement.
+    - name: R-Brain
+      commercial: true
+      description: R-brain provides an Cloud-based IDE based on Jupyter Optimized for Python & R Language.
+      url: https://cdn.worldvectorlogo.com/logos/scala-4.svg
+      logo: r-brain-logo.jpg
+    - name: Nbviewer
+      url: https://nbviewer.jupyter.org
+      logo: ../notebook-file-logo.svg
+      description: Render any publicly available notebook document or GitHub repository
+    - name: Azure Notebooks
+      logo: azure-notebooks-logo.png
+      url: https://notebooks.azure.com
+      commercial: true
+      tags: microsoft, azure
+      description: >
+        Jupyter notebook hosted on Azure cloud.
+
+Utilities:
+  logo: data.svg
+  description: >
+    Miscelaneous **utilities** to work with the Jupyter Ecosystem
+  items:
+    - name: nbconvert
+      description: A tool to convert notebook to multiple formats.
+      url: https://nbconvert.readthedocs.org
+    - name: nbdime
+      description: Diff and Merge of notebooks.
+      url: https://github.com/jupyter/nbdime
+      tags: git, github, simula, MinRk
+    - name: jupyter_client
+    - name: jupyterhub
+      tags: multiple users, authentication, OAuth, kubernetes
+    - name: nbgrader
+      tags: education
+
