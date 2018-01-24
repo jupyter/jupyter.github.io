@@ -73,12 +73,12 @@ steering:
     avatar: https://avatars1.githubusercontent.com/u/2680980?v=3&s=400
     affiliation: Cal Poly
     gh_handle: 'willingc'
+retired_steering:
   - first: Jonathan
     last: Frederic
     avatar: https://avatars2.githubusercontent.com/u/3292874?v=3&s=400
     affiliation: Google
     gh_handle: 'jdfreder'
-retired_steering:
 ---
 
 
@@ -153,7 +153,8 @@ retired_steering:
                     {% endfor %}
                 </div>
                 {% if page.retired_steering %}
-                <h3 class="col-sm-12 section-header">Retired Council Member</h3>
+                {% assign num = page.retired_steering | size %}
+                <h3 class="col-sm-12 section-header">Retired Steering Council Member{% if num > 1 %}s{% endif %}</h3>
                 <div class="col-md-12 section-content section-center">
                     {% assign sorted = page.retired_steering | sort: "last" %}
                     {% for member in sorted  %}
