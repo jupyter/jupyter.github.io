@@ -77,8 +77,8 @@ retired_steering:
   - first: Jonathan
     last: Frederic
     avatar: https://avatars2.githubusercontent.com/u/3292874?v=3&s=400
-    affiliation: Google
     gh_handle: 'jdfreder'
+    dates: '2016-2018'
 ---
 
 
@@ -161,7 +161,8 @@ retired_steering:
                     <div class="col-md-4 material">
                       <img class="council-member-photo" alt="{{member.first}} {{member.last}}'s avatar picture" src='{{member.avatar}}' />
                       <p class="card-header">{{member.first}} {{member.last}}</p>
-                      <p class="card-info">{{member.affiliation}}<br><a href="https://github.com/{{member.gh_handle}}" target="_blank"><em>@{{member.gh_handle}}</em></a> on GitHub</p>
+                      <p class="card-info">Member: {{member.dates}}<br>
+                      <a href="https://github.com/{{member.gh_handle}}" target="_blank"><em>@{{member.gh_handle}}</em></a> on GitHub</p>
                     </div>
                     {% endfor %}
                 </div>
