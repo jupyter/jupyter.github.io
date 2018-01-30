@@ -305,6 +305,33 @@ body {
     line-height: 1.5;
 }
 
+
+.jupytercon-section {
+    background: url('/assets/jupytercon-ny.jpg');
+    background-size: 100%;
+    color: white;
+    border-bottom-color: #e0e0e0;
+    border-left-style: none;
+    border-style: solid;
+    border-top-color: #e0e0e0;
+    border-width: thin;
+    border-right: 0px;
+    padding: 24px 0 42px 0;
+    text-align: center;
+    min-height: 300px;
+    padding-top: 55px;
+}
+
+.jupytercon-section p{
+  margin-bottom: 40px;
+
+}
+.jupytercon-section p a{
+    color: white;
+    text-decoration: underline;
+}
+
+
 /* Install prompt on front page */
 .install-prompt {
     background-color: #f5f5f5;

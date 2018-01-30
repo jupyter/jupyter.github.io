@@ -2,6 +2,7 @@
 layout: default
 title: Home
 navbar_jupytercon: true
+cfp: true
 permalink: /
 ---
 
@@ -36,6 +37,25 @@ permalink: /
         </div>
     </div>
 </section>
+{% if page.cfp %}
+<section>
+    <div class="jupytercon-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 class="prompt-header">JupyterCon 2018 Call For Proposal</h3>
+                    <p>Due <b>March 6</b>, learn more on
+                    <a href='https://blog.jupyter.org/jupytercon-2018-call-for-proposal-87986014ee0b'>our
+                      blog</a>.</p>
+                    <div>
+                        <a class="orange-button" href="https://conferences.oreilly.com/jupyter/jup-ny/public/cfp/621" >Submit your proposal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
 <section>
     <div class="install-prompt">
         <div class="container-fluid">
