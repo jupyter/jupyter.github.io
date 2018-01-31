@@ -21,7 +21,8 @@
 
 .docs-card-heading {
   padding: 16px;
-  background: #F27624;
+  /* color is on purpose not Jupyter Orange */
+  background: #1976D2;
   color: white;
   font-size: 14px;
   font-weight: normal;
