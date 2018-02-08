@@ -303,6 +303,8 @@ body {
 .nb-desc {
     font-weight: 400;
     line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 32px;
 }
 
 
