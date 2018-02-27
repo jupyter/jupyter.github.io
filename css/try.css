@@ -1,0 +1,48 @@
+.try-cards {
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.try-cards a {
+color: inherit;
+  text-decoration: none;
+}
+
+.try-cards a:visited {
+  color: inherit;
+}
+
+.try-cards img {
+  width: 240px;
+  height: 100px;
+  object-fit: contain;
+  margin: 12px auto;
+}
+
+.try-card-header {
+  background-color: #F27624;
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+}
+
+/* eliminate margin on hX tag in .try-header */
+.try-card-header > * {
+  margin: 0px;
+}
+
+.try-card {
+  min-height: 240px;
+  background: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .24);
+  border-radius: 2px;
+  text-align: center;
+  vertical-align: baseline;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.try-card:hover {
+    box-shadow: 0px 6px 6px #aaa;
+}

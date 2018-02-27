@@ -1,0 +1,18 @@
+- title: Try Jupyter with Python
+  description: |
+    A tutorial introducing basic features of Jupyter notebooks
+    and the IPython kernel.
+  logo: python.svg
+  url: https://mybinder.org/v2/gh/ipython/ipython-in-depth/master?filepath=binder/Index.ipynb
+
+- title: Try Jupyter with Julia
+  description: |
+    A basic example of using Jupyter with Julia.
+  logo: julia.svg
+  url: https://mybinder.org/v2/gh/binder-examples/julia-python/master?filepath=julia.ipynb
+
+- title: Try Jupyter with R
+  description: |
+    A basic example of using Jupyter with R.
+  logo: R.svg
+  url: https://mybinder.org/v2/gh/binder-examples/r/master?filepath=index.ipynb
