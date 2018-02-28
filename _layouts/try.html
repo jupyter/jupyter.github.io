@@ -27,11 +27,11 @@ title: Try Jupyter
         {%- for item in site.data.try -%}
         <a href="{{ item['url'] }}" class="try-link">
           <div class="col-lg-4 col-md-6 col-sm-6 cardlist-col">
-            <div class="cardlist-card try-card text-center">
+            <div class="cardlist-card try-card">
               <div class="card-heading">
-                <h3>{{ item['title'] }}</h3>
+                <h4>{{ item['title'] }}</h4>
               </div>
-              <div class="card-body">
+              <div class="card-body text-center">
                 <img class="try-logo" src="{{ site.baseurl }}/assets/try/{{ item['logo'] }}"/>
                 <p>{{ item['description'] }}</p>
               </div>
