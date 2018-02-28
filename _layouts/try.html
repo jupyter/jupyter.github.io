@@ -23,18 +23,18 @@ title: Try Jupyter
 <section>
   <div class="top-section-border">
     <div class="container">
-      <div class="row try-cards">
+      <div class="row cardlist">
         {%- for item in site.data.try -%}
         <a href="{{ item['url'] }}" class="try-link">
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="try-card">
-              <div class="try-card-header">
-                <h3 class="text-center">{{ item['title'] }}</h3>
+          <div class="col-lg-4 col-md-6 col-sm-6 cardlist-col">
+            <div class="cardlist-card try-card text-center">
+              <div class="card-heading">
+                <h3>{{ item['title'] }}</h3>
               </div>
-              <img src="{{ site.baseurl }}/assets/try/{{ item['logo'] }}"/>
-              <p>
-                {{ item['description'] }}
-              </p>
+              <div class="card-body">
+                <img class="try-logo" src="{{ site.baseurl }}/assets/try/{{ item['logo'] }}"/>
+                <p>{{ item['description'] }}</p>
+              </div>
             </div>
           </div>
         </a>
