@@ -680,6 +680,88 @@ body {
     background-color: white;
 }
 
+@media(max-width:509px) {
+    .install-button {
+        margin-top: 20px;
+    }
+    .items {
+        min-height:0;
+        padding:10px;
+    }
+    .follow {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+    .footer {
+        padding-bottom: 15px;
+        text-align: center;
+    }
+    .footer ul {
+        float: left;
+    }
+    #lab-notebook-parallax {
+        padding-top: 32px;
+    }
+    .lab-notebook-paper {
+        padding: 32px;
+    }
+    .lab-content-wrapper #lab-notebook-parallax .container {
+        padding: 0px 20px;
+    }
+    .lab-notebook-cell-input {
+        width: 78%;
+    }
+
+    /* Styling for JupyterLab Jumbotron on home page */
+    .lab-home-jumbotron-logo {
+        width: 84%;
+    }
+    .lab-home-jumbotron-btn {
+        max-width: inherit;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+}
+
+.lab-home-jumbotron {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    overflow: hidden;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.lab-home-jumbotron-logo {
+    display: block;
+    max-width: 428px;
+    padding-top: 60px;
+    padding-right: 20px;
+}
+
+.lab-home-jumbotron-preview {
+    width: 800px;
+}
+
+.lab-home-jumbotron-subhead {
+    color: white;
+    padding-left: 154px;
+    margin-bottom: 28px;
+    line-height: 1.32;
+}
+
+.lab-home-jumbotron-btn-container {
+    margin-left: 154px;
+}
+
+.lab-home-jumbotron-btn {
+    display: block;
+    max-width: 200px;
+    margin-bottom: 16px;
+}
+
 .stars, .twinkling {
   position:absolute;
   top:0;
