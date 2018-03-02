@@ -316,7 +316,7 @@ body {
     border-left-style: none;
     border-style: solid;
     border-top-color: #e0e0e0;
-    border-width: thin;
+    border-width: 0px;
     border-right: 0px;
     padding: 24px 0 42px 0;
     text-align: center;
