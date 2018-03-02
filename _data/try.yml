@@ -5,6 +5,13 @@
   logo: python.svg
   url: https://mybinder.org/v2/gh/ipython/ipython-in-depth/master?filepath=binder/Index.ipynb
 
+- title: Try JupyterLab
+  description: |
+    JupyterLab is the new interface for Jupyter notebooks and is ready for testing.
+    Give it a try!
+  logo: jupyter.png
+  url: https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/master?urlpath=lab%2Ftree%2Fdemo%2FLorenz.ipynb
+
 - title: Try Jupyter with Julia
   description: |
     A basic example of using Jupyter with Julia.
@@ -17,9 +24,3 @@
   logo: R.svg
   url: https://mybinder.org/v2/gh/binder-examples/r/master?filepath=index.ipynb
 
-- title: Try JupyterLab
-  description: |
-    JupyterLab is the new interface for Jupyter notebooks and is ready for testing.
-    Give it a try!
-  logo: jupyter.png
-  url: https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/master?urlpath=lab%2Ftree%2Fdemo%2FLorenz.ipynb
