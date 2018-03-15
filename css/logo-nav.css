@@ -789,6 +789,17 @@ body {
   animation:move-twinkle-back 600s linear infinite;
 }
 
+/* JupyterCon Jumbotron Styling */
+.jupytercon-navbar {
+    background-color: transparent;
+    border: none;
+}
+.jupytercon-nav > li > a{
+    color: white;
+}
+.jupytercon-nav > li > a:active, .jupytercon-nav > li > a:focus {
+  background-color: transparent;
+}
 
 /* Bootstrap Breakpoint Media Queries */
 /* Large devices (large desktops, 1200px and up) */
