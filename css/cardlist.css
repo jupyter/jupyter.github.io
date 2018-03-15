@@ -1,0 +1,80 @@
+/* cardlist used by documentation and try pages */
+
+.cardlist {
+  margin-bottom: 20px;
+}
+
+.cardlist-col {
+  padding: 16px;
+}
+
+.cardlist-card {
+  height: 240px;
+  background: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .24);
+  border-radius: 2px;
+}
+
+.card-heading {
+  padding: 16px;
+  /* color is on purpose not Jupyter Orange */
+  background: #1976D2;
+  color: white;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 14px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.card-body {
+  padding: 16px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  flex: 0 1 auto;
+}
+
+.card-body ul {
+  padding-left: 0px;
+}
+
+.card-body li {
+  list-style: none;
+  padding: 4px 0px 4px 0px;
+  font-size: 14px;
+}
+
+
+/* extra style for try cards */
+
+/* try cards are links: eliminate text decoration and
+   highlight on hover by extending shadow
+*/
+
+a.try-link {
+color: inherit;
+  text-decoration: none;
+}
+
+a.try-link:visited {
+  color: inherit;
+}
+
+.try-card:hover {
+  box-shadow: 0px 6px 6px #aaa;
+}
+
+/* try cards need to be a little taller */
+.cardlist-card.try-card {
+  height: 280px;
+}
+
+/* shrink-to-fit logos */
+
+img.try-logo {
+  height: 100px;
+  width: 100%;
+  object-fit: contain;
+  margin: 12px auto;
+}
+
