@@ -680,6 +680,9 @@ body {
     background-color: white;
 }
 
+.jupytercon-button {
+    padding: 16px;
+}
 
 /* Bootstrap Breakpoint Media Queries */
 /* Large devices (large desktops, 1200px and up) */
