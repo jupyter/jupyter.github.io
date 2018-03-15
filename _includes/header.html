@@ -1,4 +1,4 @@
-<nav class="navbar navbar-fixed-top" role="navigation" id="navbar" >
+<nav class="navbar navbar-fixed-top {% if page.navbar_gray %}navbar-gray{%endif%} {% if page.navbar_white %}navbar-white{%endif%} {% if page.navbar_jupytercon %}jupytercon-navbar{% endif %}" role="navigation" id="navbar" >
         <div class="navbar-inner">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -16,13 +16,18 @@
                     {% endif %}
                 </button>
                 <a class="navbar-brand" href="{{site.baseurl}}/index.html">
-                    <img id="jupyter-nav-logo" class="navbar-logo" src="{{site.baseurl}}/assets/nav_logo.svg" alt="Jupyter logo">
+	    {% if page.navbar_jupytercon %}
+		<img id="jupyter-nav-logo" class="navbar-logo white-logo" src="{{site.baseurl}}/assets/white_nav_logo.svg" alt="Jupyter logo">
+	    {% else %}
+		<img id="jupyter-nav-logo" class="navbar-logo" src="{{site.baseurl}}/assets/nav_logo.svg" alt="Jupyter logo">
+	    {% endif %}
+
                 </a>
             </div>
             <div class="blur"></div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+		<ul class="nav navbar-nav navbar-right {% if page.url == '/' | page.url == '/index.html' %}jupytercon-nav{% endif %}">
                     {%- for nav in site.data.nav.head -%}
                       {%- if nav.url %}
                                <li>
