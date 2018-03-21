@@ -1048,6 +1048,144 @@ body {
     .jupytercon-jumbotron {
         margin-right: 0px;
     }
+
+    .lab-jumbotron {
+        height: 440px;
+    }
+        .lab-loading-screen {
+        visibility: hidden;
+    }
+    .lab-loading-screen-bg {
+        visibility: hidden;
+    }
+    .lab-header {
+        animation: showHeaderText 1s ease 1s forwards;
+    }
+    .lab-header-logo {
+        width: 75%;
+        max-width: 300px;
+    }
+    .lab-jumbotron h2 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .lab-header-subhead {
+        font-size: 16px;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    #lab-header-preview {
+        width: 90%;
+        margin-top: -186px;
+        max-width: 475px;
+    }
+    .lab-dockpanel-header {
+        margin-bottom: 12px;
+    }
+    #lab-dockpanel-img {
+        height: 320px;
+        margin-left: 0px;
+    }
+    .lab-ext-preview-viewer {
+        padding: 0px;    
+    }
+    .lab-ext-preview-nav-item {
+        min-width: 104px;
+    }
+    .lab-ext-preview-content.ext-active {
+        display: block;
+        width: 100%;
+        padding-top: 28px;
+    }
+    .lab-ext-preview-img {
+        display: block;
+        margin: 0 auto;   
+    }
+    .lab-ext-preview-about {
+        display: block;
+        margin: 0px 28px;
+    }
+    .lab-ext-preview-about-head {
+        margin: 0 auto;
+        margin-top: 12px;
+    }
+    .lab-ext-preview-about-desc {
+        padding-top: 12px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .lab-ext-preview-nav {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: 124px;
+    }
+    .lab-features-card-container {
+        justify-content: space-around;
+    }
+    .lab-native-img {
+        max-width: 95%;
+    }
+
+    .lab-home-jumbotron-preview {
+        width: 480px;
+        float: center;
+    }
+
+    /* Hide real time collaboration animation on mobile. Inputting image in it's place */
+    .lab-collab-cell-output, .lab-collab-cell-text, #collab-preview-tab-2-img {
+        display: none;
+    }
+
+    /* Hide chat collaboration animation on mobile. Inputting image in it's place */
+    .lab-collab-chat-img-container {
+        display: none;
+    }
+
+    #collab-preview-tab-1 .lab-collab-preview-text{
+        margin-top: 24px;
+    }
+
+    #collab-preview-tab-2 {
+        height: 100%;
+    }
+
+    #collab-preview-tab-3 {
+        margin-top: 48px;
+    }
+
+    #collab-preview-tab-2 .lab-collab-preview-text {
+        top: 0;
+    }
+
+    .lab-collab-realtime-img-mobile, .lab-collab-chat-img-mobile {
+        display: block;
+    }
+    .lab-collab-preview-nav {
+        left: 0px;
+        margin-top: 20px;
+    }
+    .lab-collab-preview-img {
+        max-width: 368px;
+        width: 100%;
+    }
+    #lab-collab-about {
+        padding-left: 15px;
+    }
+    #lab-collab-about-section-header {
+        padding: 0px 15px;
+    }
+
+    #lab-native-lorenz-vid {
+        display: none;
+    }
+
+    .lab-native-laptop {
+        margin-top: 0px;
+    }
+
+    /* Styling for JupyterLab Jumbotron on home page */
+    .lab-home-jumbotron-logo {
+        width: 364px;
 }
 
 /* Extra small devices (these are mostly fixes to make sure elements act correctly to look good) */
@@ -1067,6 +1205,10 @@ body {
     .footer {
         padding-bottom: 15px;
         text-align: center;
+    }
+    .lab-home-jumbotron-preview {
+        width: 360px;
+        float: center;
     }
 }
 
