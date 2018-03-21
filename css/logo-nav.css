@@ -799,6 +799,9 @@ body {
 }
 .jupytercon-nav > li > a:active, .jupytercon-nav > li > a:focus {
   background-color: transparent;
+
+.jupytercon-button {
+    padding: 16px;
 }
 
 /* Bootstrap Breakpoint Media Queries */

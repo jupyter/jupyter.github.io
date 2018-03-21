@@ -1,0 +1,45 @@
+---
+layout: default
+title: Try Jupyter
+---
+
+<section>
+  <div class="header header-grey">
+    <div class="container">
+      <h2>Try Jupyter</h2>
+      <p class="lead">
+        You can try Jupyter out right now, without installing anything.
+        Select an example below and you will get a temporary Jupyter
+        server just for you, running on
+        <a href="https://mybinder.org">mybinder.org</a>.
+        If you like it, you can
+        <a href="https://jupyter.org/install.html">install Jupyter</a>
+        yourself.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="top-section-border">
+    <div class="container">
+      <div class="row cardlist">
+        {%- for item in site.data.try -%}
+        <a href="{{ item['url'] }}" class="try-link">
+          <div class="col-lg-4 col-md-6 col-sm-6 cardlist-col">
+            <div class="cardlist-card try-card">
+              <div class="card-heading">
+                <h4>{{ item['title'] }}</h4>
+              </div>
+              <div class="card-body text-center">
+                <img class="try-logo" src="{{ site.baseurl }}/assets/try/{{ item['logo'] }}"/>
+                <p>{{ item['description'] }}</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
