@@ -13,7 +13,7 @@ title: Documentation
     <div class="top-section-border">
         <div class="container">
             <div class="row cardlist">
-              {%- for card in site.data.documentation -%}
+              {% for card in site.data.documentation %}
                 <div class="col-lg-4 col-md-6 col-sm-6 cardlist-col">
                   <div class="cardlist-card doc-card">
                     <div class="card-heading">
@@ -21,14 +21,14 @@ title: Documentation
                     </div>
                     <div class="card-body">
                       <ul>
-                        {%- for item in card[1] %}
+                        {% for item in card[1] %}
                         <li><a href="{{item[1]}}">{{item[0]}}</a></li>
-                        {%- endfor %}
+                        {% endfor %}
                       </ul>
                     </div>
                   </div>
                 </div>
-              {%- endfor -%}
+              {% endfor %}
             </div>
         </div>
     </div>
