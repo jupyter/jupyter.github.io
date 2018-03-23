@@ -21,8 +21,12 @@ body {
     color: black;
 }
 
-.navbar-fixed-top .navbar-brand {
-    padding: 0 15px;
+.navbar-toggle {
+    padding: 15px;
+}
+
+.navbar-collapse {
+    background-color: #00293f;
 }
 
 .navbar-header .icon-bar {
@@ -110,6 +114,13 @@ body {
     font-size: 16px;
     margin-left: 0;
     padding-left: 0;
+}
+
+.call-to-actions {
+    text-align: center;
+    float: left;
+    width: 100%;
+    margin-top: 30px;
 }
 
 /*Main logo animation on the front page of the Jupyter website */
@@ -300,6 +311,14 @@ body {
     padding-top: 16px;
 }
 
+.notebook-feature {
+    text-align: center;
+}
+
+.notebook-feature img {
+    display: inline-block;
+}
+
 .nb-desc {
     font-weight: 400;
     line-height: 1.5;
@@ -419,7 +438,7 @@ body {
     border: 1px solid #CCC;
     border-radius: 5px;
     height: 300px;
-    margin: 0 auto;
+    margin: 10px auto;
     text-align: center;
     width: 300px;
 }
@@ -680,50 +699,6 @@ body {
     background-color: white;
 }
 
-@media(max-width:509px) {
-    .install-button {
-        margin-top: 20px;
-    }
-    .items {
-        min-height:0;
-        padding:10px;
-    }
-    .follow {
-        float: none;
-        display: block;
-        margin: 0 auto;
-    }
-    .footer {
-        padding-bottom: 15px;
-        text-align: center;
-    }
-    .footer ul {
-        float: left;
-    }
-    #lab-notebook-parallax {
-        padding-top: 32px;
-    }
-    .lab-notebook-paper {
-        padding: 32px;
-    }
-    .lab-content-wrapper #lab-notebook-parallax .container {
-        padding: 0px 20px;
-    }
-    .lab-notebook-cell-input {
-        width: 78%;
-    }
-
-    /* Styling for JupyterLab Jumbotron on home page */
-    .lab-home-jumbotron-logo {
-        width: 84%;
-    }
-    .lab-home-jumbotron-btn {
-        max-width: inherit;
-        width: 100%;
-        margin-bottom: 12px;
-    }
-}
-
 .lab-home-jumbotron {
     height: 100%;
     width: 100%;
@@ -731,35 +706,37 @@ body {
     overflow: hidden;
     margin-bottom: 0px;
     padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 30px;
 }
 
 .lab-home-jumbotron-logo {
     display: block;
+    padding-top: 30px;
     max-width: 428px;
-    padding-top: 60px;
-    padding-right: 20px;
 }
 
 .lab-home-jumbotron-preview {
-    width: 800px;
+    width: 150%;
+    max-width: 800px;
+    margin-bottom: 30px;
 }
 
 .lab-home-jumbotron-subhead {
     color: white;
-    padding-left: 154px;
-    margin-bottom: 28px;
     line-height: 1.32;
+    text-align: center;
+    max-width: 428px;
+    margin: 30px auto;
 }
 
 .lab-home-jumbotron-btn-container {
-    margin-left: 154px;
+    text-align: center;
 }
 
 .lab-home-jumbotron-btn {
-    display: block;
+    display: inline-block;
     max-width: 200px;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
 }
 
 .stars, .twinkling {
@@ -799,9 +776,58 @@ body {
 }
 .jupytercon-nav > li > a:active, .jupytercon-nav > li > a:focus {
   background-color: transparent;
+}
 
 .jupytercon-button {
     padding: 16px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.375;
+}
+h4 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.22;
+}
+h3 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.25;
+}
+h2 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.25;
+}
+h1 {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.05em;
+}
+.follow {
+    float: right;
+    text-align: right;
+    margin-top: 15px;
+}
+.navbar-fixed-top .navbar-brand {
+    padding: 8px;
+}
+.tab {
+    text-align: center;
+}
+.navbar-toggle {
+    margin-top: 8px;
+}
+.footer ul {
+    float: left;
+}
+.navbar-text {
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 /* Bootstrap Breakpoint Media Queries */
@@ -809,6 +835,9 @@ body {
 @media (min-width: 1200px) {
   .section-white, .section-grey {
     padding: 5% 0;
+  }
+  .lab-home-jumbotron-preview {
+      width: 100%;
   }
 }
 
@@ -831,46 +860,10 @@ body {
     }
 }
 
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-    p {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.375;
-    }
-    h4 {
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 1.22;
-    }
-    h3 {
-        font-size: 28px;
-        font-weight: 500;
-        line-height: 1.25;
-    }
-    h2 {
-        font-size: 36px;
-        font-weight: 500;
-        line-height: 1.25;
-    }
-    h1 {
-        font-size: 48px;
-        font-weight: 500;
-        line-height: 1.05em;
-    }
-    .follow {
-        float: right;
-        margin-top: 15px;
-    }
-}
-
-@media (min-width: 509px) {
-    .footer ul {
-        float: left;
-    }
-}
-
 @media (max-width: 992px) {
+    .collapse {
+        display: none !important;
+    }
     p {
         font-size: 16px;
         font-weight: 400;
@@ -979,26 +972,39 @@ body {
         float: left;
         margin-bottom: 20px;
     }
-    .navbar-text {
-        margin-left: 0px;
-    }
-}
-
-/* Small devices (tablets, 768px and up) */
-@media(min-width:768px) {
-
-    .navbar-fixed-top .navbar-brand {
-        padding: 15px 0;
-    }
-    .tab {
-        text-align: center;
-    }
-    .navbar-toggle {
+    .install-button {
         margin-top: 20px;
     }
-}
+    .items {
+        min-height:0;
+        padding:10px;
+    }
+    .follow {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+    .footer {
+        padding-bottom: 15px;
+        text-align: center;
+    }
+    .footer ul {
+        float: none;
+    }
+    #lab-notebook-parallax {
+        padding-top: 32px;
+    }
+    .lab-notebook-paper {
+        padding: 32px;
+    }
+    .lab-content-wrapper #lab-notebook-parallax .container {
+        padding: 0px 20px;
+    }
+    .lab-notebook-cell-input {
+        width: 78%;
+    }
 
-@media (max-width: 768px) {
+    /* Styling for JupyterLab Jumbotron on home page */
     p {
         font-size: 16px;
         font-weight: 400;
@@ -1031,9 +1037,6 @@ body {
     }
     .navbar-header {
         margin-bottom: 0;
-    }
-    .navbar-toggle {
-        padding-top: 10px;
     }
     .navbar-logo {
         height: 40px;
@@ -1129,11 +1132,6 @@ body {
         max-width: 95%;
     }
 
-    .lab-home-jumbotron-preview {
-        width: 480px;
-        float: center;
-    }
-
     /* Hide real time collaboration animation on mobile. Inputting image in it's place */
     .lab-collab-cell-output, .lab-collab-cell-text, #collab-preview-tab-2-img {
         display: none;
@@ -1188,11 +1186,8 @@ body {
 
     /* Styling for JupyterLab Jumbotron on home page */
     .lab-home-jumbotron-logo {
-        width: 364px;
-}
-
-/* Extra small devices (these are mostly fixes to make sure elements act correctly to look good) */
-@media(max-width:509px) {
+        width: 100%;
+    }
     .install-button {
         margin-top: 20px;
     }
@@ -1209,9 +1204,8 @@ body {
         padding-bottom: 15px;
         text-align: center;
     }
-    .lab-home-jumbotron-preview {
-        width: 360px;
-        float: center;
+    .navbar-text {
+        width: 100%;
     }
 }
 
