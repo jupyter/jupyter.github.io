@@ -76,6 +76,12 @@ permalink: /widgets
           </a>
         </li>
         <li>
+          <a href="#jupyter-gmaps" data-toggle="tab">
+            <p>jupyter-gmaps</p>
+            <p>Data visualization on Google Maps</p>
+          </a>
+        </li>
+        <li>
           <a href="#cookiecutter" data-toggle="tab">
             <p>cookiecutter</p>
             <p>Template widget project</p>
@@ -284,8 +290,43 @@ jupyter nbextension enable --py --sys-prefix ipyvolume{% endhighlight %}
           {% highlight bash %}conda install -c conda-forge beakerx ipywidgets{% endhighlight %}
           With pip:
           {% highlight bash %}pip install beakerx
-beakerx-install{% endhighlight %}
+          beakerx-install{% endhighlight %}
         </div>
+        <div class="tab-pane" id="jupyter-gmaps">
+            <div class="jupyter-widget-header">
+                <span class="gallery-title">jupyter-gmaps</span>
+                <span>
+                    <a href="https://github.com/pbugnion/gmaps">
+                        <img class="img-scaling" src="assets/github.svg" alt="GitHub">
+                    </a>
+                </span>
+            </div>
+            <p>
+                <a href="https://jupyter-gmaps.readthedocs.io">Gmaps</a> lets you
+                embed interactive Google maps in Jupyter notebooks. Visualize
+                your data with heatmaps, GeoJSON, symbols and markers, or plot
+                directions, traffic, or cycle routes. Let users draw on the map
+                and capture the coordiates of the markers or polygons they are
+                placing to build interactive applications entirely in Python.
+            </p>
+            <h3>Example</h3>
+            {% highlight python %}{% include_relative assets/jupyter-gmaps-example.py %}{% endhighlight %}
+            <script type="application/vnd.jupyter.widget-state+json">
+             {% include_relative assets/jupyter-gmaps-example.json %}
+            </script>
+            <script type="application/vnd.jupyter.widget-view+json">
+             {
+                 "model_id": "c3031eeeee3348ddb94c2f472822f829"
+             }
+            </script>
+            <h3>Installation</h3>
+            With conda:
+            {% highlight bash %}conda install -c conda-forge gmaps{% endhighlight %}
+            With pip:
+            {% highlight bash %}pip install gmaps
+jupyter nbextension enable --py --sys-prefix gmaps{% endhighlight %}
+        </div>
+
         <div class="tab-pane" id="cookiecutter">
           <div class="jupyter-widget-header">
             <span class="gallery-title">widget cookiecutter</span>
