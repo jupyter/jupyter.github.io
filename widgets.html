@@ -280,8 +280,7 @@ jupyter nbextension enable --py --sys-prefix ipyvolume{% endhighlight %}
           <script type="application/javascript">
               function adjustBeakerXTable() {
                   setTimeout(function() {
-                      var dtcontainer = document.querySelector('#beakerx .dtcontainer');
-                      dtcontainer && dtcontainer.dispatchEvent(new Event('update.bko-table'));
+                      window.dispatchEvent && window.dispatchEvent(new Event('resize'));
                   });
               }
           </script>
