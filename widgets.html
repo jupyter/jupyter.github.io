@@ -260,13 +260,17 @@ jupyter nbextension enable --py --sys-prefix ipyvolume{% endhighlight %}
           </div>
           <p>
           <a href="http://BeakerX.com">BeakerX</a> includes widgets
-          for interactive tables, plots, forms, and more.
+          for interactive tables, plots, forms, Apache Spark, and more.
           The table widget automatically recognizes pandas dataframes
           and allows you to search, sort, drag, filter, format,
           select, graph, hide, pin, and export to CSV or
           clipboard. This makes connecting to spreadsheets quick and
           easy.
           </p>
+            <p>
+            The table widget, shown below, is so fast because it's implemented with the PhosphorJS Data Grid,
+            part of Jupyter Lab's architecture.
+            </p>
           <h3>Example</h3>
           {% highlight python %}{% include_relative assets/beakerx-example.py %}{% endhighlight %}
           <script type="application/vnd.jupyter.widget-state+json">
@@ -280,8 +284,7 @@ jupyter nbextension enable --py --sys-prefix ipyvolume{% endhighlight %}
           <script type="application/javascript">
               function adjustBeakerXTable() {
                   setTimeout(function() {
-                      var dtcontainer = document.querySelector('#beakerx .dtcontainer');
-                      dtcontainer && dtcontainer.dispatchEvent(new Event('update.bko-table'));
+                      window.dispatchEvent && window.dispatchEvent(new Event('resize'));
                   });
               }
           </script>
