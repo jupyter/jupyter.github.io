@@ -16,5 +16,5 @@ highlighter: rouge
 
 exclude: [vendor]
 
-plugins:
+plugins_dir:
   - jekyll-redirect-from

@@ -4,17 +4,17 @@
             <div class="navbar-text">
                 <ul class="footer-text">
                     <li><a href="{{site.baseurl}}/index.html">Home</a></li>
-                    {%- for nav in site.data.nav.head %}
-                      {%- if nav.url %}
+                    {% for nav in site.data.nav.head %}
+                      {% if nav.url %}
                                <li><a href="{{site.baseurl}}{{nav.url}}" target="_blank">{{nav.title}}</a></li>
-                      {%- else %}
-                        {%- for target_page in site.pages %}
-                           {%- if nav contains target_page.title %}
+                      {% else %}
+                        {% for target_page in site.pages %}
+                           {% if nav contains target_page.title %}
                                <li><a href="{{site.baseurl}}{{target_page.url}}">{{target_page.title}}</a></li>
-                           {%- endif %}
-                           {%- endfor %}
-                      {%- endif %}
-                    {%- endfor %}
+                           {% endif %}
+                           {% endfor %}
+                      {% endif %}
+                    {% endfor %}
                     <!--{{ site.time}}-->
                 </ul>
                 <p>Copyright © {{site.time | date: '%Y' }}  Project Jupyter –
@@ -36,4 +36,5 @@
     <script src="{{site.baseurl}}/js/bootstrap.min.js"></script>
     <script src="{{site.baseurl}}/js/architecture.js"></script>
     <script src="{{site.baseurl}}/js/simon.js"></script>
+    <script src="{{site.baseurl}}/js/scroll.js"></script>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

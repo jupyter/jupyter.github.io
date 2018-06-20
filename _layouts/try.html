@@ -24,7 +24,7 @@ title: Try Jupyter
   <div class="top-section-border">
     <div class="container">
       <div class="row cardlist">
-        {%- for item in site.data.try -%}
+        {% for item in site.data.try %}
         <a href="{{ item['url'] }}" class="try-link">
           <div class="col-lg-4 col-md-6 col-sm-6 cardlist-col">
             <div class="cardlist-card try-card">
@@ -38,7 +38,7 @@ title: Try Jupyter
             </div>
           </div>
         </a>
-        {%- endfor -%}
+        {% endfor %}
       </div>
     </div>
   </div>
