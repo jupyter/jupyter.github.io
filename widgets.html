@@ -40,6 +40,12 @@ permalink: /widgets
     <div class="tabbable tabs-left">
       <ul class="nav nav-tabs">
         <li class="active">
+          <a href="#folium" data-toggle="tab">
+          <p>folium</p>
+          <p>Geo-spatial analytics</p>
+          </a>
+        </li>
+        <li>
           <a href="#ipyleaflet" data-toggle="tab">
           <p>ipyleaflet</p>
           <p>Geo-spatial analytics</p>
@@ -89,6 +95,32 @@ permalink: /widgets
         </li>
       </ul>
       <div class="tab-content">
+          <div class="tab-pane active" id="folium">
+            <div class="jupyter-widget-header">
+              <span class="gallery-title">folium</span>
+                <span>
+                  <a href="http://mybinder.org/repo/python-visualization/folium/notebooks/examples">
+                  <img class="img-scaling" src="assets/mybinder.svg" alt="Binder">
+                  </a>
+                  <a href="https://github.com/python-visualization/folium">
+                  <img class="img-scaling" src="assets/github.svg" alt="GitHub">
+                  </a>
+                </span>
+            </div>
+            <p>
+            A library for creating simple interactive maps with panning and
+            zooming, folium supports annotations such as polygons,
+            markers, clustered markers, and more generally any geojson-encoded geographical
+            data structure.
+            </p>
+            <h3>Example</h3>
+            {% highlight python %}{% include_relative assets/folium-example.py %}{% endhighlight %}
+            <h3>Installation</h3>
+            With conda:
+            {% highlight bash %}conda install folium{% endhighlight %}
+            With pip:
+            {% highlight bash %}pip install folium{% endhighlight %}
+        </div>
         <div class="tab-pane active" id="ipyleaflet">
           <div class="jupyter-widget-header">
             <span class="gallery-title">ipyleaflet</span>
