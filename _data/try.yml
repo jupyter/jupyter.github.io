@@ -24,3 +24,9 @@
   logo: R.svg
   url: https://mybinder.org/v2/gh/binder-examples/r/master?filepath=index.ipynb
 
+- title: Try Jupyter with C++
+  description: |
+    A basic example of using Jupyter with C++
+  logo: Cpp.svg
+  url: https://mybinder.org/v2/gh/QuantStack/xeus-cling/0.4.5?filepath=notebooks/xcpp.ipynb
+
