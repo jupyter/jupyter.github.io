@@ -28,5 +28,5 @@
   description: |
     A basic example of using Jupyter with C++
   logo: Cpp.svg
-  url: https://mybinder.org/v2/gh/QuantStack/xeus-cling/0.4.5?filepath=notebooks/xcpp.ipynb
+  url: https://mybinder.org/v2/gh/QuantStack/xeus-cling/8e941852143e59d4d2400a4da9673b092cddf10e?filepath=notebooks/xcpp.ipynb
 
