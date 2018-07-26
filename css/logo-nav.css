@@ -184,6 +184,74 @@ body {
     vertical-align: middle;
 }
 
+/* Convention banner */
+
+.con-jumbotron {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.con-container {
+    background-image: url('../assets/jupytercon-ny.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    text-align: right;
+}
+
+.con-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    float: none !important;
+}
+
+.con-title {
+    float: right;
+    clear: both;
+}
+
+.con-subtitle {
+    float: right;
+    clear: both;
+    margin: 0;
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+    margin-right: 25px;
+}
+
+.con-date {
+    font-family: "Helvetica Neue";
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    float: right;
+    margin-right: 25px;
+    margin-top: 36px;
+    margin-bottom: -10px
+}
+
+.con-copy {
+    font-family: "Helvetica Neue";
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: right;
+    float: right;
+    width: 460px;
+    height: 66px;
+    clear: both;
+    margin-right: 28px;
+    margin-bottom: 29px;
+}
+
+.con-button {
+    float: right;
+    clear: both;
+    margin-right: 28px !important;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
 /* Reusable elements */
 
 /* Header section of each page */
@@ -944,5 +1012,28 @@ body {
     .footer {
         padding-bottom: 15px;
         text-align: center;
+    }
+    .con-subtitle {
+        font-size: 20px
+    }
+}
+
+@media(max-width: 992px) {
+    .con-container {
+        background-image: url('../assets/jupytercon-ny.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 500px;
+        text-align: right;
+    }
+    .con-subtitle {
+        color: #FFFFFF
+    }
+}
+
+@media(max-width: 768px) {
+    .con-copy {
+        height: auto;
+        width: auto;
     }
 }
