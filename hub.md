@@ -11,7 +11,7 @@ permalink: /hub
 ## What is JupyterHub?
 
 JupyterHub provides remote access to Jupyter servers on shared infrastructure
-in ordre to make computational environments and resources more accessible to
+in order to make computational environments and resources more accessible to
 students, researchers, and data scientists.
 
 JupyterHub runs in the cloud or on your own hardware, and makes it possible
