@@ -3,3 +3,13 @@ div.page_content img {
   width: 60%;
   margin: 0px 20%;
 }
+
+div.page_content {
+  max-width: 700px;
+}
+
+img.title_image {
+  max-height: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
