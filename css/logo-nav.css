@@ -963,13 +963,6 @@ body {
 
 }
 
-/* So the nav bar doesn't overlap with the logo */
-@media (max-width: 1200px) {
-    .nav>li>a {
-      font-size: 12px;
-    }
-}
-
 @media (max-width: 768px) {
 
     
