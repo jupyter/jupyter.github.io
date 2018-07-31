@@ -257,7 +257,7 @@ body {
 /* Header section of each page */
 .header {
     padding-top: 42px;
-    padding-bottom: 42px; 
+    padding-bottom: 42px;
     text-align: center;
 }
 
@@ -937,6 +937,14 @@ body {
     }
     .navbar-toggle {
         margin-top: 20px;
+    }
+
+}
+
+/* So the nav bar doesn't overlap with the logo */
+@media (max-width: 1200px) {
+    .nav>li>a {
+      font-size: 12px;
     }
 }
 

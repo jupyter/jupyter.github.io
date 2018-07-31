@@ -51,7 +51,7 @@ public URL.
 
 **[Zero to JupyterHub for Kubernetes](https://z2jh.jupyter.org)** deploys
 JupyterHub on Kubernetes using Docker, allowing it to be scaled and
-maintained efficiently for large numbers of users. Zero to JupyterHub
+maintained efficiently for **large numbers of users**. Zero to JupyterHub
 is a Helm Chart for deploying JupyterHub quickly, as well as a semi-complete
 guide to deploying and configuring your JupyterHub on Kubernetes.
 
