@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div class="post">
+  <header class="post-header header header-grey">
+    {% if page.title_image %}
+    <img src="{{ page.title_image }}" class="title_image" />
+    {% else %}
+    <h2>{{ page.title }}</h2>
+    {% endif %}
+    <p>{{ page.tagline }}</p>
+  </header>
+
+  <article class="post-content">
+    <div class="section-white top-section-border">
+      <div class="page_content container">
+        {{ content }}
+      </div>
+    </div>
+  </article>
+
+</div>
