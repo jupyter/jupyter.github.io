@@ -235,15 +235,30 @@ body {
     font-family: "Helvetica Neue";
     font-size: 18px;
     line-height: 21px;
-    font-weight: 400;
+    font-weight: 200;
     color: #FFFFFF;
     text-align: right;
     float: right;
     width: 460px;
-    height: 66px;
+    height: 44px;
     clear: both;
     margin-right: 28px;
-    margin-bottom: 29px;
+    margin-bottom: 8px;
+}
+
+.con-big-copy {
+    font-family: "Helvetica Neue";
+    font-size: 28px;
+    line-height: 33px;
+    font-weight: 200;
+    color: #FFFFFF;
+    text-align: right;
+    float: right;
+    width: 460px;
+    height: 34px;
+    clear: both;
+    margin-right: 28px;
+    margin-bottom: 27px;
 }
 
 .con-button {
@@ -1058,12 +1073,17 @@ body {
         text-align: right;
     }
     .con-subtitle {
-        color: #FFFFFF
+        color: #FFFFFF;
+        font-weight: 400;
     }
 }
 
 @media(max-width: 768px) {
     .con-copy {
+        height: auto;
+        width: auto;
+    }
+    .con-big-copy {
         height: auto;
         width: auto;
     }
