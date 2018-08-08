@@ -1,15 +1,46 @@
+/* Page content */
 div.page_content img {
   height:200px;
   width: 60%;
   margin: 0px 20%;
 }
 
-div.page_content {
-  max-width: 700px;
+div.page_content, div.post_content {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px 20px;
 }
 
 img.title_image {
   max-height: 200px;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.clear {
+  clear: both;
+}
+
+/*Styling for the community section */
+/* Style for inter-repo links */
+.link1 {
+  stroke: white;
+  stroke-width: 1;
+}
+
+/* Style for repo-contributor links */
+.link2 {
+  stroke: #e6e6e6;
+  stroke-width: 2;
+}
+
+.node text {
+  pointer-events: none;
+  font: 0px sans-serif;
+}
+
+img.section-icon {
+  max-width:60px;
+  max-height:60px;
+  margin:auto !important;
 }
