@@ -6,9 +6,18 @@ div.page_content img {
 }
 
 div.page_content, div.post_content {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px 20px;
+  margin: 0;
+  padding: 0;
+}
+
+div.page_content.container > p,
+div.page_content.container > h1,
+div.page_content.container > h2,
+div.page_content.container > h3,
+div.page_content.container > div.highlighter-rouge
+{
+    padding-left:30px;
+    padding-right: 30px;
 }
 
 img.title_image {
