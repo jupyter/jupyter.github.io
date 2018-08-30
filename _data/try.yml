@@ -29,3 +29,9 @@
     A basic example of using Jupyter with C++
   logo: Cpp.svg
   url: https://mybinder.org/v2/gh/QuantStack/xeus-cling/stable?filepath=notebooks/xcpp.ipynb
+
+- title: Try Jupyter with Scheme
+  description: |
+    Explore the Calysto Scheme programming language, featuring integration with Python
+  logo: Scheme.png
+  url: https://mybinder.org/v2/gh/Calysto/calysto_scheme/master?filepath=notebooks/Reference%20Guide%20for%20Calysto%20Scheme.ipynb
