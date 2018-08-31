@@ -11,6 +11,7 @@ before_install:
 
 install:
  - npm install -g csslint
+ - pip install codespell --user
  - bundle install
 
 script:
@@ -18,6 +19,7 @@ script:
  - csslint _site/css/gallery.css
  - csslint _site/css/logo-nav.css
  - csslint _site/css/syntax.css
+ - codespell -q3 --skip='.git,*.svg,*.json,*.yml,*.lock,_site'
 
 # branch whitelist, only for GitHub Pages
 
