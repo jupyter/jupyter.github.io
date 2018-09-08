@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-set -e # halt script on error
+set -Exeuo pipefail # -e halt script on error, -u uset variable is error,
+                  # -o pipefail carry errors up, -x print each line
+                  # -E catch signals
 
 bundle exec jekyll build
 bundle exec htmlproofer ./_site
