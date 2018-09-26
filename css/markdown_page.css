@@ -6,8 +6,9 @@ div.page_content img {
 }
 
 div.page_content, div.post_content {
-  margin: 0;
   padding: 0;
+  margin: 0px auto;
+  max-width: 980px;
 }
 
 div.page_content.container > p,

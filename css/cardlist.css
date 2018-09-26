@@ -1,7 +1,8 @@
 /* cardlist used by documentation and try pages */
 
 .cardlist {
-  margin-bottom: 20px;
+  margin: 10px auto 20px auto;
+  max-width: 980px;
 }
 
 .cardlist-col {
@@ -18,13 +19,16 @@
 .card-heading {
   padding: 16px;
   /* color is on purpose not Jupyter Orange */
-  background: #1976D2;
+  background: #2e9be4;
   color: white;
-  font-size: 14px;
   font-weight: normal;
   line-height: 14px;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
+}
+
+.card-heading h4 {
+  font-size: 1.8em;
 }
 
 .card-body {
@@ -41,7 +45,7 @@
 .card-body li {
   list-style: none;
   padding: 4px 0px 4px 0px;
-  font-size: 14px;
+  font-size: 1.3em;
 }
 
 
@@ -77,4 +81,3 @@ img.try-logo {
   object-fit: contain;
   margin: 12px auto;
 }
-
