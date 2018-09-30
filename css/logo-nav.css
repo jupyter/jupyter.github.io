@@ -291,6 +291,10 @@ body {
   background-color: white;
 }
 
+.header p {
+  margin: 0 30%;
+}
+
 /* Section elements */
 /* Section classes used for particular sections within a page. Sections should differ in background color when used next to each other */
 .section-white {
