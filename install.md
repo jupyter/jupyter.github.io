@@ -51,3 +51,31 @@ jupyter notebook
 ```
 
 See [Running the Notebook](https://jupyter.readthedocs.io/en/latest/running.html#running) for more details.
+
+## Using Jupyter in a virtual environment
+If you would like to use jupyter from within a [virtual environment](https://virtualenv.pypa.io/en/stable/), 
+there are a few steps required to register the environment-specific kernel (see [this article](http://anbasile.github.io/programming/2017/06/25/jupyter-venv/)):
+
+Setup and activate your virtual environment:
+
+```bash
+$ python -m venv ENVNAME
+$ source /path/to/ENVNAME/bin/activate
+```
+
+Install ipython and jupyter within the environment:
+
+```bash
+(ENVNAME) $ pip install ipython ipykernel jupyter
+```
+
+Install the environment-specific kernel with the environment-specific name:
+
+```bash
+(ENVNAME) $ ipython kernel install --user --name=ENVNAME
+```
+
+Then, when you [run the notebook](https://jupyter.readthedocs.io/en/latest/running.html#running), 
+you will be able to select the named kernel at runtime, either when creating a new notebook, 
+or from within the notebook when it is running.
+
