@@ -15,7 +15,6 @@ REPOS = [
     ("ipython", "ipyparallel"), 
     ("jupyter", "nbconvert"), 
     ("jupyter", "nbformat"), 
-    ("jupyter", "tmpnb"),
     ("jupyter", "nbgrader"),
     ("jupyter", "qtconsole") 
 ]
