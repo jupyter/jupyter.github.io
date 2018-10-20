@@ -28,7 +28,7 @@
 }
 
 .card-heading h4 {
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 
 .card-body {
@@ -70,7 +70,7 @@ a.try-link:visited {
 
 /* try cards need to be a little taller */
 .cardlist-card.try-card {
-  height: 280px;
+  height: 320px;
 }
 
 /* shrink-to-fit logos */
