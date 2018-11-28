@@ -2,12 +2,12 @@
 
 [![Build Status](https://travis-ci.org/jupyter/jupyter.github.io.svg?branch=master)](https://travis-ci.org/jupyter/jupyter.github.io)
 
-This is the source to [Jupyter.org](http://jupyter.org/).
+This is the source to [Jupyter.org](https://jupyter.org/).
 
 # Build instructions
 
 The site is built using GitHub Pages Jekyll, see [Jekyll
-website](http://jekyllrb.com/) for customizing the build process, and detail on how
+website](https://jekyllrb.com/) for customizing the build process, and detail on how
 what where.
 
 # Quick local testing

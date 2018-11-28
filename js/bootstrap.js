@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v3.3.4 (http://getbootstrap.com)
+ * Bootstrap v3.3.4 (https://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
@@ -18,7 +18,7 @@ if (typeof jQuery === 'undefined') {
 
 /* ========================================================================
  * Bootstrap: transition.js v3.3.4
- * http://getbootstrap.com/javascript/#transitions
+ * https://getbootstrap.com/javascript/#transitions
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -33,7 +33,7 @@ if($('.navbar').length > 0){
 +function ($) {
   'use strict';
 
-  // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
+  // CSS TRANSITION SUPPORT (Shoutout: https://www.modernizr.com/)
   // ============================================================
 
   function transitionEnd() {
@@ -55,7 +55,7 @@ if($('.navbar').length > 0){
     return false // explicit for ie8 (  ._.)
   }
 
-  // http://blog.alexmaccaw.com/css-transitions
+  // https://blog.alexmaccaw.com/css-transitions
   $.fn.emulateTransitionEnd = function (duration) {
     var called = false
     var $el = this
@@ -83,7 +83,7 @@ if($('.navbar').length > 0){
 
 /* ========================================================================
  * Bootstrap: alert.js v3.3.4
- * http://getbootstrap.com/javascript/#alerts
+ * https://getbootstrap.com/javascript/#alerts
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -178,7 +178,7 @@ if($('.navbar').length > 0){
 
 /* ========================================================================
  * Bootstrap: button.js v3.3.4
- * http://getbootstrap.com/javascript/#buttons
+ * https://getbootstrap.com/javascript/#buttons
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -295,7 +295,7 @@ if($('.navbar').length > 0){
 
 /* ========================================================================
  * Bootstrap: carousel.js v3.3.4
- * http://getbootstrap.com/javascript/#carousel
+ * https://getbootstrap.com/javascript/#carousel
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -533,7 +533,7 @@ if($('.navbar').length > 0){
 
 /* ========================================================================
  * Bootstrap: collapse.js v3.3.4
- * http://getbootstrap.com/javascript/#collapse
+ * https://getbootstrap.com/javascript/#collapse
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -745,7 +745,7 @@ if($('.navbar').length > 0){
 
 /* ========================================================================
  * Bootstrap: dropdown.js v3.3.4
- * http://getbootstrap.com/javascript/#dropdowns
+ * https://getbootstrap.com/javascript/#dropdowns
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -907,7 +907,7 @@ if($('.navbar').length > 0){
 
 /* ========================================================================
  * Bootstrap: modal.js v3.3.4
- * http://getbootstrap.com/javascript/#modals
+ * https://getbootstrap.com/javascript/#modals
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -1247,7 +1247,7 @@ if($('.navbar').length > 0){
 
 /* ========================================================================
  * Bootstrap: tooltip.js v3.3.4
- * http://getbootstrap.com/javascript/#tooltip
+ * https://getbootstrap.com/javascript/#tooltip
  * Inspired by the original jQuery.tipsy by Jason Frame
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
@@ -1724,7 +1724,7 @@ if($('.navbar').length > 0){
 
 /* ========================================================================
  * Bootstrap: popover.js v3.3.4
- * http://getbootstrap.com/javascript/#popovers
+ * https://getbootstrap.com/javascript/#popovers
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -1833,7 +1833,7 @@ if($('.navbar').length > 0){
 
 /* ========================================================================
  * Bootstrap: scrollspy.js v3.3.4
- * http://getbootstrap.com/javascript/#scrollspy
+ * https://getbootstrap.com/javascript/#scrollspy
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -2006,7 +2006,7 @@ if($('.navbar').length > 0){
 
 /* ========================================================================
  * Bootstrap: tab.js v3.3.4
- * http://getbootstrap.com/javascript/#tabs
+ * https://getbootstrap.com/javascript/#tabs
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -2160,7 +2160,7 @@ if($('.navbar').length > 0){
 
 /* ========================================================================
  * Bootstrap: affix.js v3.3.4
- * http://getbootstrap.com/javascript/#affix
+ * https://getbootstrap.com/javascript/#affix
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)

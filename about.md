@@ -119,7 +119,7 @@ users and contributors to participate in the project with respect and safety.
   commensurate with your resources.
 
   All donations will be used strictly to fund the development of Project Jupyter's open source software, documentation
-  and community. Our donations are managed by the [NumFOCUS Foundation](http://numfocus.org), which is the
+  and community. Our donations are managed by the [NumFOCUS Foundation](https://numfocus.org), which is the
   legal and fiscal umbrella for the project.
 
   NumFOCUS is a 501(c)3 non-profit foundation; if you are subject to US Tax law, your contributions will be tax-deductible.
@@ -127,7 +127,7 @@ users and contributors to participate in the project with respect and safety.
 </div>
 
 <div class="col-md-12 donate-box">
-    <a href="http://numfocus.org">
+    <a href="https://numfocus.org">
       <img id="numfocus-logo" src="{{site.url}}/assets/numfocus_logo.png" class="img-responsive center-block" alt="numfocus logo">
     </a>
     <div id="donate-formatting">

@@ -142,10 +142,10 @@ For information on enforcement, please view the [*Enforcement
 Manual*](https://github.com/jupyter/governance/blob/master/conduct/enforcement.md).
 
 Original text courtesy of the [*Speak
-Up!*](http://web.archive.org/web/20141109123859/http://speakup.io/coc.html)
+Up!*](https://web.archive.org/web/20141109123859/https://speakup.io/coc.html)
 and [*Django*](https://www.djangoproject.com/conduct) Projects,
 modified by Project Jupyter.  We are grateful to those projects for contributing these materials under open licensing terms for us to easily reuse.
 
 All content on this page is licensed under a [*Creative Commons
-Attribution*](http://creativecommons.org/licenses/by/3.0/) license.
+Attribution*](https://creativecommons.org/licenses/by/3.0/) license.
 
