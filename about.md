@@ -25,6 +25,11 @@ steering:
     avatar: https://avatars0.githubusercontent.com/u/2397974?v=3&s=400
     affiliation: QuantStack
     gh_handle: 'sylvaincorlay'
+  - first: Afshin
+    last: Darian
+    avatar: https://avatars1.githubusercontent.com/u/159529?v=3&s=400
+    affiliation: Two Sigma
+    gh_handle: 'afshin'
   - first: Brian
     last: Granger
     avatar: https://avatars1.githubusercontent.com/u/27600?v=3&s=400
