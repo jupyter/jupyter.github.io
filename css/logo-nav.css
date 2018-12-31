@@ -907,7 +907,7 @@ body {
     .container {
         margin-left:10px;
         margin-right:10px;
-        width: 100%;
+        width: calc(100% - 20px);
     }
 
     .navbar-right {
@@ -929,9 +929,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
-
-
 
     p {
         font-size: 16px;
