@@ -9,6 +9,9 @@ head:
       url: https://nbviewer.jupyter.org
       newpage: true
     - JupyterHub
+    - title: Enterprise Gateway
+      # full url added as eg is an external website
+      url: https://jupyter.org/enterprise_gateway
     - Widgets
     - title: Blog
       url: https://blog.jupyter.org
