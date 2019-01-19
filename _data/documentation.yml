@@ -24,6 +24,7 @@ Kernels:
 Widgets:
   IPyWidgets/Jupyter Widgets: https://ipywidgets.readthedocs.io/en/latest/
   widget-cookiecutter: https://github.com/jupyter-widgets/widget-cookiecutter/
+  All Widget Projects...: https://github.com/jupyter-widgets
 
 Notebook Documents:
   nbconvert: https://nbconvert.readthedocs.io/en/latest/
