@@ -24,6 +24,7 @@ Kernels:
 Widgets:
   IPyWidgets/Jupyter Widgets: https://ipywidgets.readthedocs.io/en/latest/
   widget-cookiecutter: https://github.com/jupyter-widgets/widget-cookiecutter/
+  All Widget Projects...: https://github.com/jupyter-widgets
 
 Notebook Documents:
   nbconvert: https://nbconvert.readthedocs.io/en/latest/
@@ -39,6 +40,7 @@ JupyterHub:
 Deployment:
   Docker Stacks: https://github.com/jupyter/docker-stacks
   Kernel Gateway: https://jupyter-kernel-gateway.readthedocs.io/en/latest/
+  Enterprise Gateway: https://jupyter-enterprise-gateway.readthedocs.io/en/latest/
 
 Foundations:
   Jupyter Client: https://jupyter-client.readthedocs.io/en/latest/
