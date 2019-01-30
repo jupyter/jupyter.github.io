@@ -98,3 +98,11 @@ Travis will run and test:
 - html-proofer
 - csslint
 
+# Previewing a Pull Request
+
+Netlify is used to provide a link to a rendered website with the changes proposed
+in a PR. This convenience helps reviewers see how the change would look
+before it is deployed in production.
+
+The link is found in the GitHub PR status box. In the **deploy/netlify** section,
+click on the `Details` link.
