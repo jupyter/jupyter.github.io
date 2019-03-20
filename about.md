@@ -136,7 +136,7 @@ users and contributors to participate in the project with respect and safety.
       <img id="numfocus-logo" src="{{site.url}}/assets/numfocus_logo.png" class="img-responsive center-block" alt="numfocus logo">
     </a>
     <div id="donate-formatting">
-        <a href="https://www.flipcause.com/secure/cause_pdetails/MjI1OQ==" class="orange-button" id="donate-link">
+        <a href="https://numfocus.salsalabs.org/donate-to-jupyter/index.html" class="orange-button" id="donate-link">
             Support Project Jupyter
         </a>
     </div>
