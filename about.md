@@ -33,7 +33,7 @@ steering:
   - first: Brian
     last: Granger
     avatar: https://avatars1.githubusercontent.com/u/27600?v=3&s=400
-    affiliation: Cal Poly, San Luis Obispo
+    affiliation: Amazon Web Services
     gh_handle: 'ellisonbg'
   - first: Jason
     last: Grout
