@@ -3,11 +3,29 @@ div.sponsor img {
     margin: 16px 0 !important;
 }
 
+div.sponsor {
+    display: inline-block;
+}
+
 img.company-logo {
     height: auto !important;
     width: 75% !important;
 }
 
+.about-section .row {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#donate-link {
+    margin: 20px auto 0px auto;
+    width: 240px;
+    display: block;
+}
+
+#donate .row p {
+    margin: 15px;
+}
 
 /* .Card-header, .card-info, .card-link, and .material are used for cards within the steering council section of the page. */
 div.page_content img.council-member-photo {
