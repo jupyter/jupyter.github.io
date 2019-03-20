@@ -3,6 +3,34 @@ layout: page_md
 title: "About Us"
 tagline: Some information about the Jupyter Project and Community
 permalink: /about
+partners:
+  - url: https://www.anaconda.com/
+    logo: /assets/anaconda-logo-colors.svg
+    alt: "anaconda inc logo"
+  - url: https://www.bloomberg.com/
+    logo: /assets/bloomberg-color.svg
+    alt: "bloomberg logo"
+  - url: https://techblog.netflix.com
+    logo: /assets/netflix-color.svg
+    alt: "netflix logo"
+  - url: https://www.calpoly.edu/
+    logo: /assets/poly-color.svg
+    alt: "cal poly logo"
+  - url: https://www.berkeley.edu/
+    logo: /assets/berkeley-color.svg
+    alt: "UC Berkeley logo"
+  - url: https://quantstack.net/
+    logo: /assets/quantstack-color.svg
+    alt: "QuantStack logo"
+  - url: https://www.jpmorganchase.com/
+    logo: /assets/jpmc_logo.png
+    alt: "JPMorgan Chase logo"
+  - url: https://www.twosigma.com/
+    logo: /assets/two-sigma.svg
+    alt: "Two Sigma logo"
+  - url: https://www.ucmerced.edu
+    logo: /assets/UC_Merced_logo.svg
+    alt: "merced logo"
 steering:
   - first: Ana
     last: Ruvalcaba

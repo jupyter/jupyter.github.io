@@ -1,13 +1,34 @@
 /* Styling for the Sponsor logos on About page*/
-div.sponsor img {
-    margin: 16px 0 !important;
+
+.sponsor {
+    /* border: solid blue 1px; */
+}
+.sponsor a{
+    /* border: solid red 1px; */
 }
 
-img.company-logo {
-    height: auto !important;
-    width: 75% !important;
+ .sponsor img {
+    /* border: solid green 1px; */
 }
 
+.sponsor a {
+    vertical-align: middle;
+    display: block;
+    width: 100%; 
+    height: 100px;
+    margin: 0; 
+    padding: 0;
+}
+
+.sponsor img.company-logo {
+    vertical-align: middle;
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    
+
+}
 
 /* .Card-header, .card-info, .card-link, and .material are used for cards within the steering council section of the page. */
 div.page_content img.council-member-photo {
