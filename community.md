@@ -14,7 +14,7 @@ or simply sharing your work with your colleagues and friends.
 ## Join the Jupyter community
 
 If you're interested in joining the Jupyter community (yay!) we recommend
-checking out the Jupyter [Contributing guide](https://github.com/jupyter/help/blob/master/CONTRIBUTING.md). This contains
+checking out the Jupyter [Contributing guide](TBD WHERE THIS NOW LIVES). This contains
 information about the different projects in the Jupyter ecosystem, the tools
 and skills that are useful for each project, and other ways that you can
 become a part of the Jupyter community.
