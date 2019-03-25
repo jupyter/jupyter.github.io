@@ -33,7 +33,7 @@ steering:
   - first: Brian
     last: Granger
     avatar: https://avatars1.githubusercontent.com/u/27600?v=3&s=400
-    affiliation: Cal Poly, San Luis Obispo
+    affiliation: Amazon Web Services
     gh_handle: 'ellisonbg'
   - first: Jason
     last: Grout
@@ -109,35 +109,7 @@ users and contributors to participate in the project with respect and safety.
 {% include steering.html %}
 
 {% include sponsors.html %}
+
 {% include partners.html %}
 
-<div class="section-grey top-section-border" markdown="1">
-
-  ![]({{site.url}}/assets/donations-icon2.svg){:.section-icon}
-
-  {:.section-header}
-  <h3>Donations</h3>
-
-  Jupyter will always be 100% open source software, free for all to use and
-  released under the liberal terms of the [modified BSD license](https://opensource.org/licenses/BSD-3-Clause).
-  If you have found Project Jupyter to be useful in your work, research or company, please consider making a donation to the project
-  commensurate with your resources.
-
-  All donations will be used strictly to fund the development of Project Jupyter's open source software, documentation
-  and community. Our donations are managed by the [NumFOCUS Foundation](https://numfocus.org), which is the
-  legal and fiscal umbrella for the project.
-
-  NumFOCUS is a 501(c)3 non-profit foundation; if you are subject to US Tax law, your contributions will be tax-deductible.
-
-</div>
-
-<div class="col-md-12 donate-box">
-    <a href="https://numfocus.org">
-      <img id="numfocus-logo" src="{{site.url}}/assets/numfocus_logo.png" class="img-responsive center-block" alt="numfocus logo">
-    </a>
-    <div id="donate-formatting">
-        <a href="https://numfocus.salsalabs.org/donate-to-jupyter/index.html" class="orange-button" id="donate-link">
-            Support Project Jupyter
-        </a>
-    </div>
-</div>
+{% include donate.html %}

@@ -1,44 +1,41 @@
-<div id="steering-council">
-    <div class="section-white top-section-border">
-        <div class="container">
-            <div class="row">
-            <img src="{{site.url}}/assets/steering.svg" class="section-icon img-responsive" alt="steering committee icon">
-                <h3 class="col-sm-12 section-header">Steering Council</h3>
-                <p class="col-sm-12 support-paragraph">
-                    The role of the Jupyter Steering Council is to ensure, through working with and serving the broader Jupyter community,
-                    the long-term well-being of the project, both technically and as a community. The Jupyter Steering Council currently consists
-                    of the following members (in alphabetical order).
-                </p>
+<div id="steering-council" class="about-section section-white top-section-border">
 
-
-            </div>
-        </div>
+    <div class="row">
+        <img src="{{site.url}}/assets/steering.svg" class="section-icon img-responsive" alt="steering committee icon">
+        <h3 class="col-sm-12 section-header">Steering Council</h3>
+        <p class="col-sm-12">
+        The role of the Jupyter Steering Council is to ensure, through working with and serving the broader Jupyter community,
+        the long-term well-being of the project, both technically and as a community. The Jupyter Steering Council currently consists
+        of the following members (in alphabetical order).
+        </p>
     </div>
-  <div class="col-md-12 section-content section-center">
-      {% assign sorted = page.steering | sort: "last" %}
-      {% for member in sorted %}
-      <div class="col-md-4 material">
-        <img class="council-member-photo" alt="{{member.first}} {{member.last}}'s avatar picture" src='{{member.avatar}}' />
-        <p class="card-header">{{member.first}} {{member.last}}</p>
-        <p class="card-info">{{member.affiliation}}<br><a href="https://github.com/{{member.gh_handle}}" target="_blank"><em>@{{member.gh_handle}}</em></a> on GitHub</p>
-      </div>
-      {% endfor %}
-  </div>
+    <div class="row">
+        {% assign sorted = page.steering | sort: "last" %}
+        {% for member in sorted %}
+        <div class="col-sm-3 col-xs-6 material section-content section-center">
+          <img class="council-member-photo" alt="{{member.first}} {{member.last}}'s avatar picture" src='{{member.avatar}}' />
+          <p class="card-header">{{member.first}} {{member.last}}</p>
+          <p class="card-info">{{member.affiliation}}<br><a href="https://github.com/{{member.gh_handle}}" target="_blank"><em>@{{member.gh_handle}}</em></a> on GitHub</p>
+        </div>
+        {% endfor %}
+    </div>
 
-{% if page.retired_steering %}
-  {% assign num = page.retired_steering | size %}
-  <h3 class="col-sm-12 section-header">Retired Steering Council Member{% if num > 1 %}s{% endif %}</h3>
-  <div class="col-md-12 section-content section-center">
-      {% assign sorted = page.retired_steering | sort: "last" %}
-      {% for member in sorted  %}
-      <div class="col-md-4 material">
-        <img class="council-member-photo" alt="{{member.first}} {{member.last}}'s avatar picture" src='{{member.avatar}}' />
-        <p class="card-header">{{member.first}} {{member.last}}</p>
-        <p class="card-info">Member: {{member.dates}}<br>
-        <a href="https://github.com/{{member.gh_handle}}" target="_blank"><em>@{{member.gh_handle}}</em></a> on GitHub</p>
-      </div>
-      {% endfor %}
-  </div>
-  <br class="clear" />
-{% endif %}
+    {% if page.retired_steering %}
+    {% assign num = page.retired_steering | size %}
+    <div class="row">
+        <h3 class="col-sm-12 section-header">Retired Steering Council Member{% if num > 1 %}s{% endif %}</h3>
+    </div>
+    <div class="row">
+        {% assign sorted = page.retired_steering | sort: "last" %}
+        {% for member in sorted  %}
+            <div class="col-sm-3 col-xs-6 material">
+                <img class="council-member-photo" alt="{{member.first}} {{member.last}}'s avatar picture" src='{{member.avatar}}' />
+                <p class="card-header">{{member.first}} {{member.last}}</p>
+                <p class="card-info">Member: {{member.dates}}<br>
+                <a href="https://github.com/{{member.gh_handle}}" target="_blank"><em>@{{member.gh_handle}}</em></a> on GitHub</p>
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
 </div>
