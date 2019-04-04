@@ -63,7 +63,7 @@ steering:
   - first: Peter
     last: Parente
     avatar: https://s.gravatar.com/avatar/c7d6948add10f2d0ea4928e4995d6b32?s=400
-    affiliation: Valassis Digital
+    affiliation: Thorn
     gh_handle: 'parente'
   - first: Fernando
     last: Perez
