@@ -40,4 +40,4 @@
   description: |
     A basic example of using Jupyter with Ruby.
   logo: ruby.png
-  url: https://mybinder.org/v2/gh/RubyData/docker-stacks/master?filepath=README.ipynb
+  url: https://mybinder.org/v2/gh/RubyData/binder/master?filepath=ruby-data.ipynb
