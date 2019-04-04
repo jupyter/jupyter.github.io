@@ -35,3 +35,9 @@
     Explore the Calysto Scheme programming language, featuring integration with Python
   logo: Scheme.png
   url: https://mybinder.org/v2/gh/Calysto/calysto_scheme/master?filepath=notebooks/Reference%20Guide%20for%20Calysto%20Scheme.ipynb
+
+- title: Try Jupyter with Ruby
+  description: |
+    A basic example of using Jupyter with Ruby.
+  logo: ruby.png
+  url: https://mybinder.org/v2/gh/RubyData/binder/master?filepath=ruby-data.ipynb
