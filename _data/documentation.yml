@@ -38,7 +38,7 @@ JupyterHub:
   All JupyterHub Projects...: https://github.com/jupyterhub
 
 Deployment:
-  Docker Stacks: https://github.com/jupyter/docker-stacks
+  Docker Stacks: https://jupyter-docker-stacks.readthedocs.io/en/latest/
   Kernel Gateway: https://jupyter-kernel-gateway.readthedocs.io/en/latest/
   Enterprise Gateway: https://jupyter-enterprise-gateway.readthedocs.io/en/latest/
 
