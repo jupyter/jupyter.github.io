@@ -1,0 +1,2 @@
+Contact: mailto:security@ipython.org
+Encryption: https://jupyter-notebook.readthedocs.io/en/stable/_downloads/ipython_security.asc

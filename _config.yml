@@ -15,6 +15,7 @@ markdown: kramdown
 highlighter: rouge
 
 exclude: [vendor]
+include: [".well-known"]
 
 plugins:
   - jekyll-redirect-from
