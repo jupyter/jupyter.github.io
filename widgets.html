@@ -155,11 +155,20 @@ jupyter nbextension enable --py --sys-prefix ipyleaflet{% endhighlight %}
 jupyter nbextension enable --py --sys-prefix nglview{% endhighlight %}
         </div>
         <div class="tab-pane" id="k3d">
-          <div class="jupyter-widget-header">
-            <span class="gallery-title">K3D-Jupyter</span>
-          </div>
+            <div class="jupyter-widget-header">
+                <span class="gallery-title">K3D-Jupyter</span>
+                <span>
+                <a href="https://github.com/K3D-tools/K3D-jupyter">
+                <img class="img-scaling" src="assets/github.svg" alt="GitHub">
+                </a>
+            </span>
+            </div>
           <p>
-            <a href="https://github.com/K3D-tools/K3D-jupyter">K3D</a> is a Jupyter widget to 3-D plotting using WebGL.
+            <a href="https://github.com/K3D-tools/K3D-jupyter">K3D</a> lets you create 3D plots backed by WebGL with
+              high-level API (surfaces, isosurfaces, voxels, mesh, cloud points, vtk objects, volume renderer,
+              colormaps, etc). The primary aim of K3D-jupyter is to be easy for use as stand alone package like
+              matplotlib, but also to allow interoperation with existing libraries as VTK. The power of ipywidgets
+              makes it also a fast and performant visualisation tool for HPC computing e.g. fluid dynamics.
           </p>
           <h3>Example</h3>
           {% highlight python %}{% include_relative assets/k3d-example.py %}{% endhighlight %}
