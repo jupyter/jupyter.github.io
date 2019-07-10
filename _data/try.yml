@@ -3,12 +3,12 @@
     JupyterLab is the new interface for Jupyter notebooks and is ready for testing.
     Give it a try!
   logo: jupyter.png
-  url: https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/master?urlpath=lab%2Ftree%2Fdemo%2FLorenz.ipynb
+  url: https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/master?urlpath=lab
 
-- title: Try Jupyter with Python
+- title: Try Classic Notebook
   description: |
     A tutorial introducing basic features of Jupyter notebooks
-    and the IPython kernel.
+    and the IPython kernel using Jupyter Notebook Classic.
   logo: python.svg
   url: https://mybinder.org/v2/gh/ipython/ipython-in-depth/master?filepath=binder/Index.ipynb
 
