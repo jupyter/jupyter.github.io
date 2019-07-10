@@ -1,6 +1,6 @@
 - title: Try JupyterLab
   description: |
-    JupyterLab is the new interface for Jupyter notebooks and is ready for use.
+    JupyterLab is the new interface for Jupyter notebooks and is ready for general use.
     Give it a try!
   logo: jupyter.png
   url: https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/master?urlpath=lab%2Ftree%2Fdemo%2FLorenz.ipynb
