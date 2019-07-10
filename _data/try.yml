@@ -3,7 +3,7 @@
     JupyterLab is the new interface for Jupyter notebooks and is ready for testing.
     Give it a try!
   logo: jupyter.png
-  url: https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/master?urlpath=lab
+  url: https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/try.jupyter.org?urlpath=lab
 
 - title: Try Classic Notebook
   description: |
