@@ -8,7 +8,7 @@
 - title: Try Jupyter Notebook Classic
   description: |
     A tutorial introducing basic features of Jupyter notebooks
-    and the IPython kernel using Jupyter Classic.
+    and the IPython kernel using Jupyter Notebook Classic.
   logo: python.svg
   url: https://mybinder.org/v2/gh/ipython/ipython-in-depth/master?filepath=binder/Index.ipynb
 
