@@ -1,4 +1,4 @@
-- title: Try Jupyter Notebook Classic
+- title: Try Jupyter Notebook
   description: |
     A tutorial introducing basic features of Jupyter notebooks
     and the IPython kernel using the classic Jupyter Notebook interface.
@@ -10,7 +10,7 @@
     JupyterLab is the new interface for Jupyter notebooks and is ready for general use.
     Give it a try!
   logo: jupyter.png
-  url: https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/master?urlpath=lab
+  url: https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/try.jupyter.org?urlpath=lab
 
 - title: Try Jupyter with Julia
   description: |
