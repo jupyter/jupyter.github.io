@@ -1,16 +1,16 @@
-- title: Try Jupyter with Python
-  description: |
-    A tutorial introducing basic features of Jupyter notebooks
-    and the IPython kernel.
-  logo: python.svg
-  url: https://mybinder.org/v2/gh/ipython/ipython-in-depth/master?filepath=binder/Index.ipynb
-
 - title: Try JupyterLab
   description: |
     JupyterLab is the new interface for Jupyter notebooks and is ready for testing.
     Give it a try!
   logo: jupyter.png
   url: https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/master?urlpath=lab%2Ftree%2Fdemo%2FLorenz.ipynb
+
+- title: Try Jupyter with Python
+  description: |
+    A tutorial introducing basic features of Jupyter notebooks
+    and the IPython kernel.
+  logo: python.svg
+  url: https://mybinder.org/v2/gh/ipython/ipython-in-depth/master?filepath=binder/Index.ipynb
 
 - title: Try Jupyter with Julia
   description: |
