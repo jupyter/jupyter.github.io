@@ -1,6 +1,6 @@
 $(function() {
 	$(".bt").click(function() {
-		$(".front").toggleClass("flipped");
+		$(".front1").toggleClass("flipped");
 	});
 });
 $(function() {

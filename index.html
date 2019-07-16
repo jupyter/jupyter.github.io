@@ -48,10 +48,10 @@ permalink: /
                     <div class="col-md-6 nb-highlight-text">
                         <h3>JupyterLab 1.0: Jupyter’s Next-Generation Notebook Interface</h3>
                         <h4 class="nb-desc">JupyterLab is a web-based interactive development environment for Jupyter notebooks, code, and data. JupyterLab is flexible: configure and arrange the user interface to support a wide range of workflows in data science, scientific computing, and machine learning. JupyterLab is extensible and modular: write plugins that add new components and integrate with existing ones.</h4>
-                    </div>
-                    <div>
-                        <a class="orange-button" href="try">Try it in your browser</a>
-                        <a class="orange-button install-button" href="install.html">Install JupyterLab</a>
+                        <div class="button-container">
+                            <a class="orange-button" href="try">Try it in your browser</a>
+                            <a class="orange-button install-button" href="install.html">Install JupyterLab</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,10 +71,10 @@ permalink: /
                         <h4 class="nb-desc">The Jupyter Notebook is an open-source web application that allows you to create and share
                             documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning
                             and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.</h4>
-                    </div>
-                    <div>
-                        <a class="orange-button" href="try">Try it in your browser</a>
-                        <a class="orange-button install-button" href="install.html">Install the Notebook</a>
+                        <div class="button-container">
+                            <a class="orange-button" href="try">Try it in your browser</a>
+                            <a class="orange-button install-button" href="install.html">Install the Notebook</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -194,15 +194,15 @@ permalink: /
                 <h3 class="section-header">Open Standards for Interactive Computing</h3>
                 <h4 class="support-paragraph">The Jupyter Notebook is based on a set of open standards for interactive computing. Think HTML and CSS for interactive computing on the web. These open standards can be leveraged by third party developers to build customized applications with embedded interactive computing.</h4>
             </div>
-            <div class="architecturecontent row col-md-12">
-                <div class="card col-md-4">
-                    <div class="arcfeature" id="arcfeature1">
-                        <div class="container">
-                            <div class="front">
+            <div class="architecturecontent row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="card">
+                        <div class="arcfeature" id="arcfeature1">
+                            <div class="front front1">
                                 <img src="assets/notebook-format.svg" alt="icon to represent notebook format">
                                 <a class="arc-button bt">Learn more</a>
                             </div>
-                            <div class="front flipped content-back">
+                            <div class="front front1 flipped content-back">
                                 <h3>The Notebook Document Format</h3>
                                 <p id="document">Jupyter Notebooks are an open document format based on JSON. They contain a complete record of the user's sessions and include code, narrative text, equations and rich output. </p>
                                 <a class="arc-button bt">Go back</a>
@@ -210,14 +210,14 @@ permalink: /
                         </div>
                     </div>
                 </div>
-                <div class="card col-md-4">
-                    <div class="arcfeature" id="protocol">
-                        <div class="container">
-                            <div class="front2">
+                <div class="col-sm-6 col-md-4">
+                    <div class="card">
+                        <div class="arcfeature" id="protocol">
+                            <div class="front front2">
                                 <img src="assets/protocol.svg" alt="icon to represent a protocol">
                                 <a class="arc-button bt1">Learn more</a>
                             </div>
-                            <div class="front2 flipped content-back">
+                            <div class="front front2 flipped content-back">
                                 <h3>Interactive Computing Protocol</h3>
                                 <p>The Notebook communicates with computational Kernels using the Interactive Computing Protocol, an open network protocol based on JSON data over ZMQ and WebSockets.</p>
                                 <a class="arc-button bt1">Go back</a>
@@ -225,14 +225,14 @@ permalink: /
                         </div>
                     </div>
                 </div>
-                <div class="card col-md-4">
-                    <div class="arcfeature" id="kernel">
-                        <div class="container">
-                            <div class="front3">
+                <div class="col-sm-12 col-md-4">
+                    <div class="card">
+                        <div class="arcfeature" id="kernel">
+                            <div class="front front3">
                                 <img src="assets/kernel.svg" alt="icon that looks like a terminal represents kernel">
                                 <a class="arc-button bt2">Learn more</a>
                             </div>
-                            <div class="front3 flipped content-back">
+                            <div class="front front3 flipped content-back">
                                 <h3>Kernels</h3>
                                 <p id="block3">Kernels are processes that run interactive code in a particular programming language and return output to the user. Kernels also respond to tab completion and introspection requests.</p>
                                 <a class="arc-button bt2">Go back</a>
