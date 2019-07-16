@@ -502,19 +502,18 @@ body {
 }
 
 /* Architecture section on front page */
-.arcfeature {
-    background-color: white;
-    border: 1px solid #CCC;
-    border-radius: 5px;
-    height: 300px;
-    margin: 0 auto;
-    text-align: center;
-    width: 300px;
+/* Some padding above the cards */
+.architecturecontent {
+    padding-top: 40px;
 }
 
-.arcfeature .front img, .arcfeature .front2 img, .arcfeature .front3 img {
+.arcfeature {
+    width: 100%;
+    height: 100%;
+}
+
+.arcfeature .front img {
     margin-bottom: 40px;
-    margin-top: 15px;
 }
 
 .arcfeature .back p {
@@ -535,12 +534,23 @@ body {
     background-color: #DB5106;
     box-shadow: 0 3px #863001;
 }
-
+/* Cards should get the border */
 .card {
     display: block;
     height: 100%;
-    margin: 0 auto;
     text-align: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    width: 250px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
 }
 /* Used to make cursor turn to link specific cursor when hovering over architecture buttons */
 .bt, .bt1, .bt2 {
@@ -548,17 +558,19 @@ body {
 }
 
 /* Styling for each card in the architecture section on front page. Each card needs it's own front class to work with the javascript associated with the cards */
-.card .front, .card .front2, .card .front3 {
+.card .front {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -o-backface-visibility: hidden;
     backface-visibility: hidden;
-    height: 275px;
     position: absolute;
     text-align: center;
     -webkit-transition: -webkit-transform 0.3s linear 0s;
     transition: transform 0.3s linear 0s;
-    width: 275px;
+    /* 25px less wide than the card, 12.5px margin-left to center */
+    max-width: 225px;
+    margin-left: 12.5px;
+    height: 275px;
 }
 
 .flipped {
@@ -566,12 +578,16 @@ body {
     transform: rotateY(180deg);
 }
 
-.content-back p{
+.content-back p {
     margin-bottom: 16px;
     margin-top: 10px;
 }
 
-.card .back{
+.content-back h3 {
+    margin-top: 0;
+}
+
+.card .back {
     text-align: center;
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
@@ -583,13 +599,8 @@ body {
 }
 
 .arcfeature img {
-    margin: 0 auto;
-    padding-bottom: 5%;
-    padding-top: 1%;
-}
-
-.arcfeature {
-    display: inline-block;
+    margin-bottom: 40px;
+    width: 100%;
 }
 
 /*About Page */
@@ -780,6 +791,12 @@ body {
         float: right;
         margin-top: 15px;
     }
+    .card {
+        width: 300px;
+    }
+    .card .front {
+        max-width: 275px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -902,7 +919,7 @@ body {
 }
 
 /* Small devices (tablets, 768px and up) */
-@media(min-width:768px) {
+@media (min-width: 768px) {
 
     .container {
         margin-left:10px;
@@ -913,8 +930,6 @@ body {
     .navbar-right {
         margin-right: 10px;
     }
-
-
 
     .navbar-fixed-top .navbar-brand {
         padding: 15px 0;
