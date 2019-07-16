@@ -99,6 +99,10 @@ body {
     text-decoration: none;
 }
 
+.footer a:hover, .footer a:active {
+    opacity: .8;
+}
+
 .footer li::after {
     content:" |";
 }
@@ -354,6 +358,9 @@ body {
     text-align: center;
     text-decoration: none;
     margin: 0px 4px 0px 4px;
+}
+.install-button {
+    margin-top: 20px;
 }
 
 .orange-button:hover {
@@ -755,8 +762,8 @@ body {
         font-size: 15pt;
         line-height: 25pt;
     }
-    .companies li{
-        width:23%;
+    .companies li {
+        width: 23%;
     }
 }
 
@@ -911,6 +918,12 @@ body {
     .navbar-text {
         margin-left: 0px;
     }
+    /* Container for buttons */
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .navbar-brand {
@@ -1001,9 +1014,6 @@ body {
 
 /* Extra small devices (these are mostly fixes to make sure elements act correctly to look good) */
 @media(max-width:509px) {
-    .install-button {
-        margin-top: 20px;
-    }
     .items {
         min-height:0;
         padding:10px;
@@ -1021,7 +1031,19 @@ body {
         font-size: 20px
     }
 }
-
+@media (min-width: 420px) {
+    .button-container {
+        flex-direction: row;
+    }
+    .install-button {
+        margin-top: 0;
+    }
+}
+@media (max-width: 420px) {
+    .button-container {
+        flex-direction: column;
+    }
+}
 @media(max-width: 992px) {
     .navbar-brand {
        width: 30px;
