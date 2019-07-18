@@ -16,7 +16,7 @@
   description: |
     A basic example of using Jupyter with Julia.
   logo: julia.svg
-  url: https://mybinder.org/v2/gh/binder-examples/julia-python/master?filepath=julia.ipynb
+  url: https://mybinder.org/v2/gh/binder-examples/demo-julia/master?filepath=demo.ipynb
 
 - title: Try Jupyter with R
   description: |
