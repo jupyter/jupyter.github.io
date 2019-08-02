@@ -8,11 +8,12 @@ permalink: /binder
 
 ## What is the Binder Project?
 
-The Binder Project is a community that builds free and open-source tools
-for reproducible, sharable scientific environments that are workflow- and platform-agnostic,
-and reward best practices.
+The Binder project brings the power of customisable and easy to share computing
+environments to everyone. It allows users to specify custom environments,
+automates their creation, and allows users to these environments with a single link.
+Use-cases involve workshops, scientific workflows and fast sharing of work in teams.
 
-It builds tools that reward best-practices in reproducible data
+The Binder Project builds tools that reward best-practices in reproducible data
 science by piggy-backing off of community-developed standards for
 reproducibility. If repositories follow these best-practices and are hosted in
 an online repository, then Binder will build the environment needed to run the
