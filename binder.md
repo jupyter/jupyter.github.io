@@ -20,11 +20,25 @@ an online repository, then Binder will build the environment needed to run the
 code and provide a link that allows others to interact with the results and
 reproduce analyses.
 
-Binder is entirely powered by an open-source infrastructure stack. Its main two
-tools are BinderHub, which is an open-source tool that deploys the Binder
-service in the cloud, and repo2docker, which generates reproducible Docker
-images from a git repository. The [Binder team](https://jupyterhub-team-compass.readthedocs.io/en/latest/team.html)
-also runs a public BinderHub deployment at mybinder.org as a free public service for the community.
+## What is Binder used for?
+
+* **Teaching and training** - Binder lets you share links to interactive data analytics environments
+  with your students. This is great for workshops, tutorials, and classes and allows
+  you to get students up-and-running with the code much more quickly. For example,
+  [Software Carpentry uses Binder links for their novice Python lesson](https://github.com/swcarpentry/python-novice-gapminder/blob/840d5249d8e8bb45e203b5d3a1b34e637e2889ef/README.md).
+* **Technical documentation** - Binder tools can be used to provide interactivity to documentation and
+  demonstrations of tools. It has been used extensively (Scipy and Pycon workshops. "do you also love spending the first half of your workshop sorting out how to install stuff?"). For
+  example, [the scikit-learn documentation uses Binder to let users try their examples](https://scikit-learn.org/dev/auto_examples/classification/plot_classifier_comparison.html).
+* **Open educational resources** - Want to share educational materials that use data
+  science and are publicly accessible? Binder can provide interactivity to readers,
+  allowing them a more rich experience with your content. For example,
+  [UC Berkeley uses Binder to let others interact with open data science textbooks](https://www.inferentialthinking.com/chapters/08/Functions_and_Tables.html).
+* **Reproducible scientific analysis** - Binder allows you to share an interactive
+  environment along with your code and analysis. You can share a link that lets
+  others reproduce and interact with your work. For example, the
+  [Neurolibre project](https://conp-pcno.github.io/) uses Binder to
+  [reproduce neuroscience analyses](https://qmrlab.org/t1_book/intro).
+
 
 ## Guiding Principles of the Binder Project
 
@@ -39,10 +53,13 @@ and the practices around it. This is a non-exhaustive list.
 
 In short, if you follow best-practices in computational science, your repository should work with Binder.
 
-## Major technical projects
+## What is in the Binder stack?
 
-These are the major technical open source projects and services associated with
-the Binder Project.
+Binder is entirely powered by an open-source infrastructure stack. Its main two
+tools are BinderHub, which is an open-source tool that deploys the Binder
+service in the cloud, and repo2docker, which generates reproducible Docker
+images from a git repository. The [Binder team](https://jupyterhub-team-compass.readthedocs.io/en/latest/team.html)
+also runs a public BinderHub deployment at mybinder.org as a free public service for the community.
 
 ### repo2docker
 
