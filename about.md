@@ -60,6 +60,11 @@ steering:
     avatar: https://avatars1.githubusercontent.com/u/836375?v=3&s=400
     affiliation: Netflix
     gh_handle: 'rgbkrk'
+  - first: M
+    last: Pacer
+    avatar: https://avatars1.githubusercontent.com/u/2482408?s=400&v=4
+    affiliation: Netflix
+    gh_handle: 'mpacer'
   - first: Peter
     last: Parente
     avatar: https://s.gravatar.com/avatar/c7d6948add10f2d0ea4928e4995d6b32?s=400

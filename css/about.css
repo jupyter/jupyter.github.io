@@ -42,6 +42,7 @@ div.page_content img.council-member-photo {
     font-size: 16px;
     margin-top: 10px;
     text-align: left;
+    width: 100%;
 }
 
 .card-info {
