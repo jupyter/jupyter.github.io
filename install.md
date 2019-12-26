@@ -37,6 +37,7 @@ While Jupyter runs code in many programming languages, Python is a requirement
 (Python 3.3 or greater, or Python 2.7) for installing the JupyterLab or the classic Jupyter Notebook.
 
 ### Installing Jupyter Notebook using Anaconda
+
 We **strongly recommend** installing Python and Jupyter using the [Anaconda Distribution](https://www.anaconda.com/downloads),
 which includes Python, the Jupyter Notebook, and other commonly used packages for scientific computing and data science.
 
@@ -53,6 +54,7 @@ jupyter notebook
 See [Running the Notebook](https://jupyter.readthedocs.io/en/latest/running.html#running) for more details.
 
 ### Installing Jupyter Notebook with pip
+
 As an existing or experienced Python user, you may wish to install Jupyter using Python’s package manager, pip, instead of Anaconda.
 
 If you have Python 3 installed (which is recommended):
@@ -77,3 +79,25 @@ jupyter notebook
 ```
 
 See [Running the Notebook](https://jupyter.readthedocs.io/en/latest/running.html#running) for more details.
+
+## Getting started with Voilà
+
+### Installation
+
+Voilà can be installed using `conda` or `pip`. For more detailed instructions, consult the [installation guide](https://voila.readthedocs.io/en/stable/install.html).
+
+### conda
+
+If you use `conda`, you can install it with:
+
+```shell
+conda install -c conda-forge voila
+```
+
+### pip
+
+If you use `pip`, you can install it with:
+
+```shell
+pip install voila
+```
