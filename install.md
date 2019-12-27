@@ -42,7 +42,7 @@ While Jupyter runs code in many programming languages, Python is a requirement
 
 We recommend installing Python and Jupyter using the conda package manager. The [miniconda](https://docs.conda.io/en/latest/miniconda.html) distribution includes a minimal Python and conda installation.
 
-Then you can install the notebook it with:
+Then you can install the notebook with:
 
 ```shell
 conda install -c conda-forge notebook
