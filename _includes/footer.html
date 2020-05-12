@@ -36,4 +36,16 @@
     <script src="{{site.baseurl}}/js/bootstrap.min.js"></script>
     <script src="{{site.baseurl}}/js/architecture.js"></script>
     <script src="{{site.baseurl}}/js/simon.js"></script>
+
+    {%- if page.title == "Documentation" %}
+        <!-- jQuery match height library -->
+        <!-- matchHeight makes the height of all selected elements exactly equal -->
+        <script src="{{site.baseurl}}/js/jquery.matchHeight.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('.cardlist-card').matchHeight();
+            });
+        </script>
+    {%- endif %}
+
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^https:/.test(d.location)?'https':'http';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
