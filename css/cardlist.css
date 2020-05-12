@@ -10,7 +10,7 @@
 }
 
 .cardlist-card {
-  min-height: 240px;
+  height: 240px;
   background: white;
   box-shadow: 0 3px 6px rgba(0, 0, 0, .24);
   border-radius: 2px;
