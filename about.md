@@ -18,7 +18,7 @@ steering:
   - first: Matthias
     last: Bussonnier
     avatar: https://avatars2.githubusercontent.com/u/335567?v=3&s=400
-    affiliation: UC Merced
+    affiliation: QuanSight
     gh_handle: 'Carreau'
   - first: Sylvain
     last: Corlay
