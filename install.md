@@ -33,7 +33,7 @@ If installing using `pip install --user`, you must add the user-level `bin` dire
 
 ### conda
 
-We recommend installing the notebook using the conda package manager. The [miniconda](https://docs.conda.io/en/latest/miniconda.html) and [miniforge](https://github.com/conda-forge/miniforge/) distributions include a minimal conda installation.
+We recommend installing the classic Jupyter Notebook using the conda package manager. Either the [miniconda](https://docs.conda.io/en/latest/miniconda.html) or the [miniforge](https://github.com/conda-forge/miniforge/) conda distributions include a minimal conda installation.
 
 Then you can install the notebook with:
 
