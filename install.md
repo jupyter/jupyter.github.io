@@ -29,7 +29,7 @@ pip install jupyterlab
 
 If installing using `pip install --user`, you must add the user-level `bin` directory to your `PATH` environment variable in order to launch `jupyter lab`.
 
-## Getting started with the Classic Notebook
+## Getting started with the classic Jupyter Notebook
 
 ### conda
 
