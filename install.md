@@ -31,16 +31,9 @@ If installing using `pip install --user`, you must add the user-level `bin` dire
 
 ## Getting started with the classic Jupyter Notebook
 
-### Prerequisite: Python
-
-While Jupyter runs code in many programming languages, Python is a requirement
-(Python 3.3 or greater, or Python 2.7) for installing the JupyterLab or the classic Jupyter Notebook.
-
-### Installing Jupyter Notebook using Conda
-
 ### conda
 
-We recommend installing Python and Jupyter using the conda package manager. The [miniconda](https://docs.conda.io/en/latest/miniconda.html) distribution includes a minimal Python and conda installation.
+We recommend installing the classic Jupyter Notebook using the conda package manager. Either the [miniconda](https://docs.conda.io/en/latest/miniconda.html) or the [miniforge](https://github.com/conda-forge/miniforge/) conda distributions include a minimal conda installation.
 
 Then you can install the notebook with:
 
