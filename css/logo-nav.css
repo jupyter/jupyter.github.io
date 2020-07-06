@@ -197,7 +197,7 @@ body {
 }
 
 .con-container {
-    background-image: url('../assets/jupytercon-ny.png');
+    background-image: url('../assets/jupytercon-planet.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
     min-height: 500px;
@@ -219,49 +219,46 @@ body {
     float: right;
     clear: both;
     margin: 0;
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 300;
-    margin-right: 25px;
 }
 
 .con-date {
-    font-family: "Helvetica Neue";
-    font-size: 18px;
-    line-height: 21px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 30px;
+    line-height: 34px;
     color: #FFFFFF;
     float: right;
-    margin-right: 25px;
+    margin-right: 10px;
     margin-top: 36px;
     margin-bottom: -10px
 }
 
 .con-copy {
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     line-height: 21px;
     font-weight: 200;
-    color: #FFFFFF;
+    color: black;
     text-align: right;
     float: right;
     width: 460px;
     height: 44px;
     clear: both;
-    margin-right: 28px;
     margin-bottom: 8px;
 }
 
 .con-big-copy {
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 28px;
     line-height: 33px;
     font-weight: 200;
-    color: #FFFFFF;
+    color: black;
     text-align: right;
     float: right;
     width: 460px;
     height: 34px;
     clear: both;
-    margin-right: 28px;
     margin-bottom: 27px;
 }
 
@@ -404,7 +401,7 @@ body {
 
 
 .jupytercon-section {
-    background: url('/assets/jupytercon-ny.jpg');
+    background: url('/assets/jupytercon-planet.jpg');
     background-size: 100%;
     color: white;
     border-bottom-color: #e0e0e0;
@@ -1047,14 +1044,14 @@ body {
     }
 
     .con-container {
-        background-image: url('../assets/jupytercon-ny.png');
+        background-image: url('../assets/jupytercon-planet.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         min-height: 500px;
         text-align: right;
     }
     .con-subtitle {
-        color: #FFFFFF;
+        color: black;
         font-weight: 400;
     }
 }
