@@ -24,7 +24,7 @@ can become a part of the Jupyter community.
 
 Many members of the Jupyter community host events to connect others that use
 Jupyter and other tools in the open data analytics stack. For example,
-[JupyterCon](https://conferences.oreilly.com/jupyter/jup-ny) is an annual conference that brings together many
+[JupyterCon](https://jupytercon.com/) is an annual conference that brings together many
 different groups represented in the Jupyter Community. **Jupyter Days**
 are smaller, locally-organized events for learning and connecting with one
 another. For example, [here's a post announcing Jupyter Days in Atlanta](https://blog.jupyter.org/announcing-jupyter-day-atlanta-spring-2018-d68ebee2c6cb).
