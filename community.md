@@ -15,7 +15,7 @@ or simply sharing your work with your colleagues and friends.
 
 If you're interested in joining the Jupyter community (yay!) we recommend
 checking out the Jupyter [Contributing
-guide](https://jupyter.readthedocs.io/en/latest/contributor/content-contributor.html).
+guide](https://jupyter.readthedocs.io/en/latest/contributing/content-contributor.html).
 This contains information about the different projects in the Jupyter ecosystem,
 the tools and skills that are useful for each project, and other ways that you
 can become a part of the Jupyter community.
