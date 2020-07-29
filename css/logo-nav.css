@@ -200,7 +200,7 @@ body {
     background-image: url('../assets/jupytercon-planet.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
-    min-height: 500px;
+    min-height: 300px;
     text-align: right;
 }
 
