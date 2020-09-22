@@ -6,6 +6,20 @@ cfp: true
 permalink: /
 ---
 
+<style>
+div#countdown {
+    display: block;
+    align-content: center;
+    text-align: center;
+    font-size: 36px;
+    color: white;
+    clear: both;
+}
+</style>
+
+
+
+
 <section>
 <div class="jumbotron con-jumbotron">	
         <div class="row">	
@@ -14,7 +28,11 @@ permalink: /
                     <div class="col-lg-8 con-content md-offset-2">	
                         <div class="con-date">October 5-17th</div>	
                         <img class="con-title img-responsive" srcset="assets/jupytercon-logo.png, assets/jupytercon-logo-white.png" />	
+                        <div class="con-program">
+                        <p>5-9 October: Tutorials – 12-16 October: Conference – 17 October: Sprints</p>
+                        </div>
                         <a class="orange-button con-button" href="https://jupytercon.com/" target="_blank">Learn more</a>	
+                        <div id="countdown"></div>
                     </div>	
                 </div>	
             </div>	
@@ -280,3 +298,38 @@ permalink: /
         </div>
     </div>
 </section>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Oct 9, 2020 00:00:00").getTime();
+
+// Update the count down every 1 second
+timer = function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="countdown"
+  document.getElementById("countdown").innerHTML = days + " Days " + hours + " Hours "
+  + minutes + " Minutes"; // + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "In Progress";
+  }
+}
+
+timer();
+
+var x = setInterval(timer, 10*1000)
+setTimeout(timer, 1000)
+</script>

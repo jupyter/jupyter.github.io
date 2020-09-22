@@ -200,7 +200,7 @@ body {
     background-image: url('../assets/jupytercon-planet.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
-    min-height: 300px;
+    min-height: 350px;
     text-align: right;
 }
 
@@ -223,6 +223,16 @@ body {
     margin: 0;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 300;
+}
+
+.con-program {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 30px;
+    line-height: 34px;
+    color: #FFFFFF;
+    float: right;
+    margin-right: 10px;
+    margin-bottom: -10px
 }
 
 .con-date {
