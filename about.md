@@ -71,7 +71,7 @@ steering:
     affiliation: Thorn
     gh_handle: 'parente'
   - first: Fernando
-    last: Perez
+    last: Pérez
     avatar: https://avatars3.githubusercontent.com/u/57394?v=3&s=400
     affiliation: UC Berkeley
     gh_handle: 'fperez'
@@ -96,6 +96,67 @@ retired_steering:
     avatar: https://avatars2.githubusercontent.com/u/3292874?v=3&s=400
     gh_handle: 'jdfreder'
     dates: '2016-2018'
+numfocus_subcomittee:
+  - first: Matthias
+    last: Bussonnier
+    avatar: https://avatars2.githubusercontent.com/u/335567?v=3&s=400
+    affiliation: QuanSight
+    gh_handle: 'Carreau'
+  - first: Stéfan
+    last: van der Walt
+    affiliation: UC Berkely, BIDS
+    avatar: https://avatars1.githubusercontent.com/u/45071?s=400&v=3
+    gh_handle: stefanv
+  - first: Ana
+    last: Ruvalcaba
+    avatar: https://avatars0.githubusercontent.com/u/16657753?s=460&v=4
+    affiliation: Cal Poly, San Luis Obispo
+    dates: 2018-
+    gh_handle: ruv7
+  - first: Fernando
+    last: Pérez
+    avatar: https://avatars3.githubusercontent.com/u/57394?v=3&s=400
+    affiliation: UC Berkeley
+    gh_handle: 'fperez'
+  - first: Thomas
+    last: Kluyver
+    avatar: https://avatars0.githubusercontent.com/u/327925?v=3&s=400
+    affiliation: University of Southampton
+    gh_handle: 'takluyver'
+
+trademark_subcomittee:
+  - first: Matthias
+    last: Bussonnier
+    avatar: https://avatars2.githubusercontent.com/u/335567?v=3&s=400
+    affiliation: QuanSight
+    gh_handle: 'Carreau'
+  - first: Jason
+    last: Grout
+    avatar: https://avatars1.githubusercontent.com/u/192614?v=3&s=400
+    affiliation: Bloomberg
+    gh_handle: 'jasongrout'
+  - first: Tim
+    last: George
+    avatar: https://avatars1.githubusercontent.com/u/22109376
+    affiliation: Cal Poly
+    gh_handle: 'tgeorgeux'
+  - first: Min
+    last: Ragan-Kelley
+    avatar: https://avatars0.githubusercontent.com/u/151929?v=3&s=400
+    affiliation: Simula Research Lab
+    gh_handle: 'minrk'
+  - first: Paul
+    last: Ivanov
+    avatar: https://avatars3.githubusercontent.com/u/118211?v=3&s=400
+    affiliation: Bloomberg
+    gh_handle: 'ivanov'
+  - first: Brian
+    last: Granger
+    avatar: https://avatars1.githubusercontent.com/u/27600?v=3&s=400
+    affiliation: Amazon Web Services
+    gh_handle: 'ellisonbg'
+
+ 
 ---
 
 Project Jupyter is a non-profit, open-source project, born out of the [IPython Project](https://ipython.org) in 2014 as
