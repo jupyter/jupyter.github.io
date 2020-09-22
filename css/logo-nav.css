@@ -520,34 +520,6 @@ body {
     padding-top: 40px;
 }
 
-.arcfeature {
-    width: 100%;
-    height: 100%;
-}
-
-.arcfeature .front img {
-    margin-bottom: 40px;
-}
-
-.arcfeature .back p {
-    margin-top: 40px;
-}
-
-/* Specific grey button used on each card in the Architecture section on the front page of the site */
-.arc-button {
-    background-color: #8D8D8D;
-    border-radius: 2px;
-    color: white;
-    font-size: 20px;
-    padding: 8px 26px;
-    text-decoration: none;
-}
-
-#arcfeature1 a:hover, #protocol a:hover, #kernel a:hover {
-    background-color: #DB5106;
-    box-shadow: 0 3px #863001;
-}
-/* Cards should get the border */
 .card {
     display: block;
     height: 100%;
@@ -565,55 +537,21 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-/* Used to make cursor turn to link specific cursor when hovering over architecture buttons */
-.bt, .bt1, .bt2 {
-    cursor: default;
-}
+
+.architecturecontent  .card {
+    height: 400px;
+   }
 
 /* Styling for each card in the architecture section on front page. Each card needs it's own front class to work with the javascript associated with the cards */
+.card .front p{
+    margin-top: 3rem;
+}
 .card .front {
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden;
     position: absolute;
     text-align: center;
-    -webkit-transition: -webkit-transform 0.3s linear 0s;
-    transition: transform 0.3s linear 0s;
-    /* 25px less wide than the card, 12.5px margin-left to center */
     max-width: 225px;
     margin-left: 12.5px;
     height: 275px;
-}
-
-.flipped {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-}
-
-.content-back p {
-    margin-bottom: 16px;
-    margin-top: 10px;
-}
-
-.content-back h3 {
-    margin-top: 0;
-}
-
-.card .back {
-    text-align: center;
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-}
-
-.arcfeature a {
-    color: white;
-    text-decoration: none;
-}
-
-.arcfeature img {
-    margin-bottom: 40px;
-    width: 100%;
 }
 
 /*About Page */
