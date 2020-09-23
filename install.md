@@ -31,7 +31,7 @@ If installing using `pip install --user`, you must add the user-level `bin` dire
 
 Once installed, launch JupyterLab with:
 
-```
+```shell
 jupyter-lab
 ```
 
