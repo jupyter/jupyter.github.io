@@ -1,4 +1,4 @@
-# Jupyter's main website
+# Jupyter's main website and  installation setup
 
 [![Build Status](https://travis-ci.org/jupyter/jupyter.github.io.svg?branch=master)](https://travis-ci.org/jupyter/jupyter.github.io)
 
