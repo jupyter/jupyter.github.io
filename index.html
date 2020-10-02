@@ -26,13 +26,13 @@ div#countdown {
             <div class="col-md-12">	
                 <div class="con-container img-responsive">	
                     <div class="col-lg-8 con-content md-offset-2">	
-                        <div class="con-date">October 5-17th</div>	
-                        <img class="con-title img-responsive" srcset="assets/jupytercon-logo.png, assets/jupytercon-logo-white.png" />	
+                        <div class="con-date dropshadow">October 5–17</div>	
+                        <img class="con-title dropshadow img-responsive" srcset="assets/jupytercon-logo.png, assets/jupytercon-logo-white.png" />	
                         <div class="con-program">
-                        <p>5-9 October: Tutorials – 12-16 October: Conference – 17 October: Sprints</p>
+                            <p class="dropshadow">Tutorials Oct 5–9 · Conference Oct 12–16 · Sprints 17 Oct</p>
                         </div>
                         <a class="orange-button con-button" href="https://jupytercon.com/" target="_blank">Learn more</a>	
-                        <div id="countdown"></div>
+                        <div id="countdown" class="dropshadow"></div>
                     </div>	
                 </div>	
             </div>	
@@ -285,7 +285,7 @@ div#countdown {
 </section>
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Oct 9, 2020 00:00:00").getTime();
+var countDownDate = new Date(Date.UTC(2020, 9, 5, 9, 0, 0)).getTime();
 
 // Update the count down every 1 second
 timer = function() {
