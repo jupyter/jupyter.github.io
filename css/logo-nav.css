@@ -213,7 +213,10 @@ body {
 .con-title {
     float: right;
     clear: both;
-    /* Make the logo image stand out from the background slightly */
+}
+
+.dropshadow {
+    /* Make the foreground stand out from the background slightly */
     filter: drop-shadow(0px 0px 8px rgba(0,0,0,0.3));
 }
 
@@ -227,12 +230,15 @@ body {
 
 .con-program {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 30px;
     line-height: 34px;
     color: #FFFFFF;
     float: right;
     margin-right: 10px;
     margin-bottom: -10px
+}
+
+.con-program p {
+    font-weight: normal;
 }
 
 .con-date {
