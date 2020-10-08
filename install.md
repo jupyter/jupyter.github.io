@@ -7,11 +7,9 @@ permalink: /install
 
 ## Getting started with JupyterLab
 
-### Installation
+_The [installation guide](http://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) contains more detailed instructions_
 
-JupyterLab can be installed using `conda` or `pip`. For more detailed instructions, consult the [installation guide](http://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html).
-
-### conda
+### Install with conda
 
 If you use `conda`, you can install it with:
 
@@ -19,7 +17,7 @@ If you use `conda`, you can install it with:
 conda install -c conda-forge jupyterlab
 ```
 
-### pip
+### Install with pip
 
 If you use `pip`, you can install it with:
 
@@ -28,6 +26,14 @@ pip install jupyterlab
 ```
 
 If installing using `pip install --user`, you must add the user-level `bin` directory to your `PATH` environment variable in order to launch `jupyter lab`. If you are using a Unix derivative (FreeBSD, GNU / Linux, OS X), you can achieve this by using ``export PATH="$HOME/.local/bin:$PATH"`` command.
+
+### Run JupyterLab
+
+Once installed, launch JupyterLab with:
+
+```shell
+jupyter-lab
+```
 
 ## Getting started with the classic Jupyter Notebook
 
