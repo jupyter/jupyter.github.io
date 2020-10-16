@@ -25,7 +25,7 @@ distinguished_special_election:
     twitter_handle: IanRRose
     personal: https://ian-r-rose.github.io/
   - name: Douglas Blank
-    photo: placeholder.png
+    photo: Douglas_Blank.png
     gh_handle: dsblank
     linkedin: https://linkedin.com/in/douglasblank/
     twitter_handle: DougBlank
