@@ -155,8 +155,128 @@ trademark_subcomittee:
     avatar: https://avatars1.githubusercontent.com/u/27600?v=3&s=400
     affiliation: Amazon Web Services
     gh_handle: 'ellisonbg'
+distinguished_contributors:
+  - first: Cameron
+    last: Oelsen
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
+  - first: Chris
+    last: Holdgraf
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
+  - first: Doug
+    last: Blank
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
+  - first: Erik
+    last: Sundell
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
+  - first: Georgiana 
+    last: Dolocan
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
+  - first: Grant
+    last: Nestor
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
+  - first: Ian
+    last: Rose
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
+  - first: Kevin
+    last: Bates
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
+  - first: Lindsey 
+    last: Heagy
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
+  - first: Lorena
+    last: Barba
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
+  - first: Luciano 
+    last: Resende
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
+  - first: Matthew 
+    last: Seal
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
+  - first: Nick 
+    last: Bollweg
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
+  - first: Safia 
+    last: Abdalla
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
+  - first: Saul 
+    last: Shanabrook
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
+  - first: Tim
+    last: Head
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
+  - first: Tony 
+    last: Fast
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
+  - first: Vidar 
+    last: Tonaas
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
+  - first: Yuvi 
+    last: Panda
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
+  - first: Zach
+    last:  Sailer
+    avatar:
+    affiliation:
+    gh_handle:
+    year: 2020
 
- 
 ---
 
 Project Jupyter is a non-profit, open-source project, born out of the [IPython Project](https://ipython.org) in 2014 as
