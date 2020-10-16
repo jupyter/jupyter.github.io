@@ -3,6 +3,95 @@ layout: page_md
 title: "About Us"
 tagline: Some information about the Jupyter Project and Community
 permalink: /about
+distinguished_special_election:
+  - name: Cameron Oelsen
+    photo: Cameron_Oelsen.png
+    personal: https://www.cameronoelsen.com/
+    linkedin: https://linkedin.com/in/cameronoelsen
+    gh_handle: CameronOelsen
+  - name: Matthew Seal
+    photo: Matthew_Seal.jpg
+    gh_handle: MSeal
+    linkedin: https://linkedin.com/in/matthew-seal-70a07932/
+    twitter_handle: codeseal
+  - name: Grant Nestor
+    photo: Grant_Nestor.jpg
+    gh_handle: gnestor
+    linkedin: https://linkedin.com/in/grantnestor/
+    twitter_handle: senornestor
+  - name: Ian Rose
+    photo: Ian_Rose.jpg
+    gh_handle: ian-r-rose
+    twitter_handle: IanRRose
+    personal: https://ian-r-rose.github.io/
+  - name: Douglas Blank
+    photo: Douglas_Blank.png
+    gh_handle: dsblank
+    linkedin: https://linkedin.com/in/douglasblank/
+    twitter_handle: DougBlank
+    personal: https://douglasblank.com/
+  - name: Tim Head
+    photo: Tim_Head.png
+    gh_handle: betatim
+    twitter_handle: betatim
+    personal: https://betatim.github.io/
+  - name: Chris Holdgraf
+    photo: Chris_Holdgraf.png
+    gh_handle: choldgraf
+    twitter_handle: choldgraf
+    personal: http://chrisholdgraf.com
+  - name: Nicholas Bollweg
+    photo: Nicholas_Bollweg.png
+    gh_handle: bollwyvl
+  - name: Tony Fast
+    photo: Tony_Fast.jpg
+    gh_handle: tonyfast
+    twitter_handle: docfast
+  - name: Safia Abdalla
+    photo: Safia_Abdalla.jpg
+    personal: https://safia.rocks
+  - name: Yuvi Panda
+    photo: Yuvi_Panda.jpg
+    personal: http://yuvi.in
+  - name: Georgiana Dolocan
+    photo: Georgiana_Dolocan.jpg
+    gh_handle: GeorgianaElena
+    twitter_handle: GeorgianaElenaD
+  - name: Lindsey Heagy
+    photo: Lindsey_Heagy.jpg
+    gh_handle: lheagy
+    twitter_handle: lindsey_jh
+    personal: https://lindseyjh.ca/
+  - name: Saul Shanabrook
+    photo: Saul_Shanabrook.jpg
+    gh_handle: saulshanabrook
+  - name: Erik Sundell
+    photo: Erik_Sundell.jpg
+    gh_handle: consideRatio
+    linkedin: https://linkedin.com/in/erik-sundell/
+    twitter_handle: e_Sundell
+    personal: http://sundellopensource.se/
+  - name: Zach Sailer
+    photo: Zach_Sailer.jpg
+    gh_handle: Zsailer
+    linkedin: https://linkedin.com/in/zach-sailer-8a1472151/
+    twitter_handle: zrsailer
+  - name: Luciano Resende
+    photo: Luciano_Resende.jpg
+    linkedin: https://linkedin.com/in/lresende/
+    twitter_handle: lresende1975
+  - name: Kevin Bates
+    photo: Kevin_Bates.jpg
+    gh_handle: kevin-bates
+  - name: Vidar T. Fauske
+    photo: Vidar_Fauske.jpg
+    gh_handle: vidartf
+    linkedin: https://linkedin.com/in/vidar-fauske-9bb61812/
+  - name: Lorena A. Barba
+    photo: Lorena_Barba.jpg
+    gh_handle: labarba
+    linkedin: https://linkedin.com/in/lorenabarba/
+    twitter_handle: LorenaABarba
 steering:
   - first: Ana
     last: Ruvalcaba
@@ -171,6 +260,8 @@ All online and in-person interactions and communications directly related to the
 [Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/master/conduct/code_of_conduct.md).
 This Code of Conduct sets expectations to enable a diverse community of
 users and contributors to participate in the project with respect and safety.
+
+{% include distinguished.html %}
 
 {% include steering.html %}
 
