@@ -214,11 +214,11 @@ numfocus_subcomittee:
     gh_handle: 'takluyver'
 
 trademark_subcomittee:
-  - first: Matthias
-    last: Bussonnier
-    avatar: https://avatars2.githubusercontent.com/u/335567?v=3&s=400
-    affiliation: QuanSight
-    gh_handle: 'Carreau'
+  - first: William
+    last: Stein
+    avatar: https://avatars0.githubusercontent.com/u/1276278
+    affiliation: SageMath
+    gh_handle: 'williamstein'
   - first: Jason
     last: Grout
     avatar: https://avatars1.githubusercontent.com/u/192614?v=3&s=400
