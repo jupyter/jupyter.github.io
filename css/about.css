@@ -76,3 +76,21 @@ div.page_content img.council-member-photo {
     transition: all 0.2s ease-in-out;
     width: 160px;
 }
+
+/* Styling for the call-to-Survey box*/
+.survey {
+    display: inline-block;
+    width: 100%;
+    margin: 10px;
+    background-color: #F27624;
+    color: #ffff;
+    text-align: center;
+}
+
+.survey.p {
+  padding-top: 10px;
+}
+
+.survey.a:active {
+  color: #ffff;
+}
