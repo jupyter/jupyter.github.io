@@ -31,6 +31,26 @@ another. For example, [here's a post announcing Jupyter Days in Atlanta](https:/
 If you'd like to organize a Jupyter Days event in your community, please
 reach out!
 
+## Explore our projects
+
+Jupyter has seen wonderful growth over the past decade. As we have grown the
+projects now span multiple GitHub organizations. Jupyter projects may be found
+in these organizations:
+
+- [jupyter](https://github.com/jupyter)
+- [ipython](https://github.com/ipython)
+- [jupyterhub](https://github.com/jupyterhub)
+- [jupyterlab](https://github.com/jupyterlab)
+- [jupyter-widgets](https://github.com/jupyter-widgets)
+- [jupyter-server](https://github.com/jupyter-server)
+- [jupyter-xeus](https://github.com/jupyter-xeus)
+- [voila-dashboards](https://github.com/voila-dashboards)
+- [binder-examples](https://github.com/binder-examples)
+- [jupyter-resources](https://github.com/jupyter-resources)
+
+Many organizations have a **team-compass** repo to provide detailed information
+about the sub-community, its meetings, and contribution tips. 
+
 ## Participate online
 
 Jupyter also has a number of online communication channels to help keep in touch.
