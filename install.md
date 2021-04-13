@@ -9,15 +9,23 @@ permalink: /install
 
 _The [installation guide](http://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) contains more detailed instructions_
 
-### Install with conda
+### Installation with mamba or conda
 
-If you use `conda`, you can install it with:
+JupyterLab can be installed with `mamba` and `conda`:
+
+```shell
+mamba install -c conda-forge jupyterlab
+```
+
+or
 
 ```shell
 conda install -c conda-forge jupyterlab
 ```
 
-### Install with pip
+Note: If you have not installed mamba or conda yet, you can get started with the [miniforge](https://github.com/conda-forge/miniforge#mambaforge) distribution.
+
+### Installation with pip
 
 If you use `pip`, you can install it with:
 
@@ -37,17 +45,21 @@ jupyter-lab
 
 ## Getting started with the classic Jupyter Notebook
 
-### conda
+### Installation with mamba or conda
 
-We recommend installing the classic Jupyter Notebook using the conda package manager. Either the [miniconda](https://docs.conda.io/en/latest/miniconda.html) or the [miniforge](https://github.com/conda-forge/miniforge/) conda distributions include a minimal conda installation.
+The classic notebook can be installed with `mamba` and `conda`:
 
-Then you can install the notebook with:
+```shell
+mamba install -c conda-forge notebook
+```
+
+or
 
 ```shell
 conda install -c conda-forge notebook
 ```
 
-### pip
+### Installation with pip
 
 If you use `pip`, you can install it with:
 
@@ -65,19 +77,23 @@ See [Running the Notebook](https://jupyter.readthedocs.io/en/latest/running.html
 
 ## Getting started with Voilà
 
-### Installation
+### Installation with mamba or conda
 
-Voilà can be installed using `conda` or `pip`. For more detailed instructions, consult the [installation guide](https://voila.readthedocs.io/en/stable/install.html).
+If you use `mamba` or `conda`, you can install it with:
 
-### conda
+```shell
+mamba install -c conda-forge voila
+```
 
-If you use `conda`, you can install it with:
+or
 
 ```shell
 conda install -c conda-forge voila
 ```
 
-### pip
+For more detailed instructions, consult the [installation guide](https://voila.readthedocs.io/en/stable/install.html).
+
+### Installation with pip
 
 If you use `pip`, you can install it with:
 
