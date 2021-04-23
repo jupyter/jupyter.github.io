@@ -3,6 +3,52 @@ layout: page_md
 title: "About Us"
 tagline: Some information about the Jupyter Project and Community
 permalink: /about
+distinguished_2020:
+  - name: Jeremy Tuloup
+    photo: Jeremy_Tuloup.png
+    gh_handle: jtpio
+    twitter_handle: jtpio
+    linkedin: https://linkedin.com/in/jtuloup
+    personal: https://jtp.io
+  - name: Jessica Zosa Forde
+    photo: Jessica_Forde.jpg
+    twitter_handle: in4dmatics
+    personal: https://jzf2101.github.io
+    gh_handle: jzf2101
+  - name: Johan Mabille
+    photo: Johan_Mabille.jpg
+    twitter_handle: JohanMabille
+    gh_handle: JohanMabille
+  - name: Martin Renou
+    photo: Martin_Renou.jpg
+    linkedin: https://www.linkedin.com/in/martin-renou
+    gh_handle: martinRenou
+    twitter_handle: martinRenou
+  - name: Maarten Breddels
+    photo: Maarten_Breddels.jpg
+    twitter_handle: maartenbreddels
+    gh_handle: maartenbreddels
+    linkedin: https://www.linkedin.com/in/maartenbreddels/
+    personal: https://www.maartenbreddels.com/
+  - name: Michał Krassowski
+    photo: Michal_Krassowski.jpg
+    twitter_handle: krassowski_m
+    gh_handle: krassowski
+    linkedin: https://www.linkedin.com/in/michal-krassowski/
+  - name: Simon Li
+    photo: Simon_Li.jpg
+    gh_handle: manics
+    linkedin: https://www.linkedin.com/in/1simon
+  - name: Tim George
+    photo: Tim_George.jpg
+    gh_handle: tgeorgeux
+    linkedin: https://linkedin.com/in/tgeorgeux
+    personal: https://tgeorgeux.com
+  - name: Tony Hirst
+    photo: Tony_Hirst.png
+    twitter_handle: psychemedia
+    gh_handle: psychemedia
+    personal: http://ouseful.info
 distinguished_special_election:
   - name: Cameron Oelsen
     photo: Cameron_Oelsen.png
@@ -245,7 +291,7 @@ trademark_subcomittee:
     affiliation: Amazon Web Services
     gh_handle: 'ellisonbg'
 
- 
+
 ---
 
 Project Jupyter is a non-profit, open-source project, born out of the [IPython Project](https://ipython.org) in 2014 as
