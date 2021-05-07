@@ -15,6 +15,37 @@
         </p>
     </div>
     <div class="row">
+      <h4 class="col-sm-12">2020 Cohort</h4>
+      {% assign sorted = page.distinguished_2020 | sort: "name" %}
+      {% for member in sorted %}
+      <div class="col-md-4 material section-content section-center">
+        <img
+          class="council-member-photo"
+          alt="{{member.name}}"
+          src='{{site.baseurl}}/assets/distinguished/{{member.photo}}' />
+        <div class="card-header text-nowrap">{{member.name}}</div>
+        <div>&nbsp;</div>
+        {% if member.personal %}
+          <a class="btn btn-xs btn-default" href="{{member.personal}}">Web</a>
+        {% endif %}
+        {% if member.gh_handle %}
+          <a class="btn btn-xs btn-default"
+              title="@{{member.gh_handle}}"
+              href="https://github.com/{{member.gh_handle}}">GitHub</a>
+        {% endif %}
+        {% if member.linkedin %}
+          <a class="btn btn-xs btn-default" href="{{member.linkedin}}">LinkedIn</a>
+        {% endif %}
+        {% if member.twitter_handle %}
+          <a class="btn btn-xs btn-default"
+              title="@{{member.twitter_handle}}"
+              href="https://twitter.com/{{member.twitter_handle}}">Twitter</a>
+        {% endif %}
+      </div>
+      {% endfor %}
+  </div>
+    <div class="row">
+        <h4 class="col-sm-12">Special Election Cohort</h4>
         {% assign sorted = page.distinguished_special_election | sort: "name" %}
         {% for member in sorted %}
         <div class="col-md-4 material section-content section-center">
