@@ -25,6 +25,7 @@
           src='{{site.baseurl}}/assets/distinguished/{{member.photo}}' />
         <div class="card-header text-nowrap">{{member.name}}</div>
         <div>&nbsp;</div>
+        <div class='badges'>
         {% if member.personal %}
           <a class="btn btn-xs btn-default" href="{{member.personal}}">Web</a>
         {% endif %}
@@ -40,7 +41,8 @@
           <a class="btn btn-xs btn-default"
               title="@{{member.twitter_handle}}"
               href="https://twitter.com/{{member.twitter_handle}}">Twitter</a>
-        {% endif %}
+      {% endif %}
+      </div>
       </div>
       {% endfor %}
   </div>
@@ -55,6 +57,7 @@
             src='{{site.baseurl}}/assets/distinguished/{{member.photo}}' />
           <div class="card-header text-nowrap">{{member.name}}</div>
           <div>&nbsp;</div>
+            <div class='badges'>
           {% if member.personal %}
             <a class="btn btn-xs btn-default" href="{{member.personal}}">Web</a>
           {% endif %}
@@ -71,6 +74,7 @@
                 title="@{{member.twitter_handle}}"
                 href="https://twitter.com/{{member.twitter_handle}}">Twitter</a>
           {% endif %}
+        </div>
         </div>
         {% endfor %}
     </div>
