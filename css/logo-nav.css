@@ -592,6 +592,13 @@ body {
     }
 }
 
+/* all elements in .containers that have a anchor 
+ * need to be scrolled by at least 3 em to not be behind the hidden header.
+ */
+.container *{
+    scroll-margin-top: 3em;
+}
+
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     p {
