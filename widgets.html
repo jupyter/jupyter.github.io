@@ -444,3 +444,6 @@ jupyter nbextension enable --py --sys-prefix gmaps{% endhighlight %}
     </div>
   </div>
 </section>
+
+<!-- Required for resetting the logo-nav CSS changed by the widgets -->
+<link rel="stylesheet" href="{{ "/css/logo-nav.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}">
