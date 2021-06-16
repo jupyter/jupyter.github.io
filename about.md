@@ -183,7 +183,7 @@ steering:
   - first: Paul
     last: Ivanov
     avatar: https://avatars3.githubusercontent.com/u/118211?v=3&s=400
-    affiliation: Bloomberg
+    affiliation: Noteable
     gh_handle: 'ivanov'
   - first: Thomas
     last: Kluyver
@@ -193,7 +193,7 @@ steering:
   - first: Kyle
     last: Kelley
     avatar: https://avatars1.githubusercontent.com/u/836375?v=3&s=400
-    affiliation: Netflix
+    affiliation: Noteable
     gh_handle: 'rgbkrk'
   - first: M
     last: Pacer
@@ -223,7 +223,7 @@ steering:
   - first: Carol
     last: Willing
     avatar: https://avatars1.githubusercontent.com/u/2680980?v=3&s=400
-    affiliation: Cal Poly
+    affiliation: Noteable
     gh_handle: 'willingc'
 retired_steering:
   - first: Jonathan
@@ -283,7 +283,7 @@ trademark_subcomittee:
   - first: Paul
     last: Ivanov
     avatar: https://avatars3.githubusercontent.com/u/118211?v=3&s=400
-    affiliation: Bloomberg
+    affiliation: Noteable
     gh_handle: 'ivanov'
   - first: Brian
     last: Granger
