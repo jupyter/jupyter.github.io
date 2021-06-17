@@ -108,7 +108,7 @@ permalink: /widgets
                 <a href="https://mybinder.org/v2/gh/jupyter-widgets/ipyleaflet/stable?filepath=examples">
                 <img class="img-scaling" src="assets/mybinder.svg" alt="Binder">
                 </a>
-                <a href="https://github.com/ellisonbg/ipyleaflet">
+                <a href="https://github.com/jupyter-widgets/ipyleaflet">
                 <img class="img-scaling" src="assets/github.svg" alt="GitHub">
                 </a>
               </span>
@@ -133,14 +133,23 @@ permalink: /widgets
           With conda:
           {% highlight bash %}conda install -c conda-forge ipyleaflet{% endhighlight %}
           With pip:
-          {% highlight bash %}pip install ipyleaflet
-jupyter nbextension enable --py --sys-prefix ipyleaflet{% endhighlight %}
-          If you are using JupyterLab, you will need to install the JupyterLab extension:
+          {% highlight bash %}pip install ipyleaflet{% endhighlight %}
+          If you are using the classic Jupyter Notebook &#60; 5.3 you need to run this extra command:
+          {% highlight bash %}jupyter nbextension enable --py --sys-prefix ipyleaflet{% endhighlight %}
+          If you are using JupyterLab ≤ 2, you will need to install the JupyterLab extension:
           {% highlight bash %}jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-leaflet{% endhighlight %}
         </div>
         <div class="tab-pane" id="nglview">
           <div class="jupyter-widget-header">
             <span class="gallery-title">nglview</span>
+             <span>
+              <a href="https://mybinder.org/v2/gh/hainm/nglview-binder/master?urlpath=lab/tree/nglview/notebooks">
+              <img class="img-scaling" src="assets/mybinder.svg" alt="Binder">
+              </a>
+                <a href="https://github.com/nglviewer/nglview">
+                <img class="img-scaling" src="assets/github.svg" alt="GitHub">
+                </a>
+            </span>
           </div>
           <p>
           A Jupyter widget to interactively view molecular structures and trajectories.
@@ -209,10 +218,10 @@ jupyter nbextension enable --py --sys-prefix k3d{% endhighlight %}
           <div class="jupyter-widget-header">
             <span class="gallery-title">bqplot</span>
             <span>
-                <a href="https://mybinder.org/v2/gh/bloomberg/bqplot/stable?filepath=examples">
+                <a href="https://mybinder.org/v2/gh/bqplot/bqplot/stable?filepath=examples">
                 <img class="img-scaling" src="assets/mybinder.svg" alt="Binder">
                 </a>
-                <a href="https://github.com/bloomberg/bqplot">
+                <a href="https://github.com/bqplot/bqplot">
                 <img class="img-scaling" src="assets/github.svg" alt="GitHub">
                 </a>
             </span>
@@ -236,20 +245,19 @@ jupyter nbextension enable --py --sys-prefix k3d{% endhighlight %}
           With conda:
           {% highlight bash %}conda install -c conda-forge bqplot{% endhighlight %}
           With pip:
-          {% highlight bash %}pip install bqplot
-jupyter nbextension enable --py --sys-prefix bqplot{% endhighlight %}
-          If you are using JupyterLab, you will need to install the JupyterLab extension:
+          {% highlight bash %}pip install bqplot{% endhighlight %}
+          If you are using the classic Jupyter Notebook &#60; 5.3 you need to run this extra command:
+          {% highlight bash %}jupyter nbextension enable --py --sys-prefix bqplot{% endhighlight %}
+          If you are using JupyterLab ≤ 2, you will need to install the JupyterLab extension:
           {% highlight bash %}jupyter labextension install @jupyter-widgets/jupyterlab-manager bqplot{% endhighlight %}
         </div>
         <div class="tab-pane" id="pythreejs">
           <div class="jupyter-widget-header">
             <span class="gallery-title">pythreejs</span>
             <span>
-              <!--
-              <a href="https://mybinder.org/repo/jupyter-widgets/pythreejs/examples">
+              <a href="https://mybinder.org/v2/gh/jupyter-widgets/pythreejs/HEAD?urlpath=lab%2Ftree%2Fexamples%2FExamples.ipynb">
               <img class="img-scaling" src="assets/mybinder.svg" alt="Binder">
               </a>
-              -->
               <a href="https://github.com/jupyter-widgets/pythreejs">
               <img class="img-scaling" src="assets/github.svg" alt="GitHub">
               </a>
@@ -273,9 +281,10 @@ jupyter nbextension enable --py --sys-prefix bqplot{% endhighlight %}
           With conda:
           {% highlight bash %}conda install -c conda-forge pythreejs{% endhighlight %}
           With pip:
-          {% highlight bash %}pip install pythreejs
-jupyter nbextension enable --py --sys-prefix pythreejs{% endhighlight %}
-          If you are using JupyterLab, you will need to install the JupyterLab extension:
+          {% highlight bash %}pip install pythreejs{% endhighlight %}
+          If you are using the classic Jupyter Notebook &#60; 5.3 you need to run this extra command:
+          {% highlight bash %}jupyter nbextension enable --py --sys-prefix pythreejs{% endhighlight %}
+          If you are using JupyterLab ≤ 2, you will need to install the JupyterLab extension:
           {% highlight bash %}jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-threejs{% endhighlight %}
         </div>
         <div class="tab-pane" id="ipyvolume">
