@@ -20,6 +20,15 @@
     line-height: 32px;
 }
 
+.tabs-left {
+  display: flex;
+}
+
+.tab-content {
+  lex-shrink: 0;
+  flex-grow: 1;
+}
+
 .tabs-left > .nav-tabs {
   border-bottom: 0;
 }
