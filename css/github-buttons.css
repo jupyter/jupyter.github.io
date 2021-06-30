@@ -5,7 +5,7 @@
     padding: 0 5px;
     outline: 0;
     border: 1px solid #d1d2d3;
-    border-radius: 0.25em;
+    border-radius: 0.50em;
     box-sizing: content-box;
     background-color: #eff3f6;
     background-image: -webkit-linear-gradient(top, #fafbfc, #e4ebf0);
@@ -13,7 +13,7 @@
     background-image: linear-gradient(to bottom, #fafbfc, #e4ebf0);
     background-repeat: repeat-x;
     background-size: 110% 110%;
-    color: #24292e;
+    color: #FF8C00;
     vertical-align: middle;
     text-decoration: none;
     white-space: nowrap;
