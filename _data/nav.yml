@@ -4,6 +4,8 @@ head:
     - About Us
     - title: Community
       url: /community
+    - title: Events
+      url: /events
     - Documentation
     - title: NBViewer
       url: https://nbviewer.jupyter.org
