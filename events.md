@@ -53,6 +53,7 @@ Individual workshops:
 
 Due to the COVID-19 pandemic, workshops were put on hold during 2020. Stay tuned for more details about workshops funded in round 3.
 
+<!--
 ## Jupyter Subproject Sprints
 
 A number of Jupyter subprojects have hosted in-person sprints open to the public to push forward on development priorities.
@@ -61,10 +62,14 @@ A number of Jupyter subprojects have hosted in-person sprints open to the public
 
 A number of smaller, locally-organized single-day Jupyter Days events have been hosted. For example, [here's a post announcing Jupyter Days in Atlanta](https://blog.jupyter.org/announcing-jupyter-day-atlanta-spring-2018-d68ebee2c6cb)
 
+-->
+
 ## Jupyter Community Calls
 
 [Jupyter Community Calls](https://jupyter.readthedocs.io/en/latest/community/content-community.html#jupyter-wide-meetings) provide a regular virtual forum for community-wide discussion and sharing.
 
+<!--
 ## Calendar
 
 Jupyter Community meetings are listed in the [Project Jupyter Calendar](https://jupyter.readthedocs.io/en/latest/community/content-community.html#jupyter-community-meetings)
+-->
