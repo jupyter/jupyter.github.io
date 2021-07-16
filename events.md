@@ -9,11 +9,11 @@ Project Jupyter events provide a forum for community members to come together in
 
 ## JupyterCon
 
-Global JupyterCon conferences provide opportunities for the entire Jupyter community to come together to learn and share.
+Global JupyterCon conferences provide opportunities for the Jupyter community to come together to learn and share.
 
 * [JupyterCon 2017](https://conferences.oreilly.com/jupyter/jup-ny-2017.html) ([videos](https://www.youtube.com/playlist?list=PL055Epbe6d5aP6Ru42r7hk68GTSaclYgi))
 * [JupyterCon 2018](https://conferences.oreilly.com/jupyter/jup-ny.html) ([videos](https://www.youtube.com/playlist?list=PL055Epbe6d5b572IRmYAHkUgcq3y6K3Ae))
-* [JupyterCon 2020](https://jupytercon.com/) ([videos](https://www.youtube.com/c/JupyterCon/videos))
+* [JupyterCon 2020 (virtual)](https://jupytercon.com/) ([videos](https://www.youtube.com/c/JupyterCon/videos))
 
 
 ## Jupyter Community Workshops
