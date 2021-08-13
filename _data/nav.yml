@@ -15,3 +15,5 @@ head:
     - title: Blog
       url: https://blog.jupyter.org
       newpage: true
+    - title: Security
+      url: /security
