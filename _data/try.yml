@@ -3,7 +3,7 @@
     A tutorial introducing basic features of Jupyter notebooks
     and the IPython kernel using the classic Jupyter Notebook interface.
   logo: python.svg
-  url: https://mybinder.org/v2/gh/ipython/ipython-in-depth/master?filepath=binder/Index.ipynb
+  url: https://mybinder.org/v2/gh/ipython/ipython-in-depth/master?urlpath=tree/binder/Index.ipynb
 
 - title: Try JupyterLab
   description: |
