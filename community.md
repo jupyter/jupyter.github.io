@@ -57,11 +57,4 @@ a way that makes the community thrive.
 Below is a short list of gitter channels, email listservs, and github repositories
 where you can get involved. **We always welcome participation in the Jupyter community**.
 
-## Report vulnerabilities
-
-If you believe you've found a security vulnerability in a Jupyter project,
-please report it to [security@ipython.org](mailto:security@ipython.org).
-If you prefer to encrypt your security reports,
-you can use [this PGP public key](assets/ipython_security.asc).
-
 {% include community_lists.html %}
