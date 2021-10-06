@@ -7,6 +7,14 @@ permalink: /events
 
 Project Jupyter events provide a forum for community members to come together in person or virtually to share and learn from each other.
 
+This page is for in person, one-of-a-kind events, for community engagement, see the community page. 
+
+## Calendar
+
+This is a calendar of regular online events.  It might not be exhaustive.
+
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=local&amp;src=ZGdwZDM2ZjQzZXQ5Z3JhYm42dGRpbjZwbWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=bTNoZWs2OWRhZzczODF1bXQ4a2NqZDc1dTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=YXFwa3VpNXE3b2kzMnBrOXRjcDUzaG5zc2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZDE4NzR1cjZmZGh1ajBzbmpuaWxhYzJubGNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=cGlhaGluZWpqcjZzc3ZpOGlrbWpqb3A2cm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23AD1457&amp;color=%23EF6C00&amp;color=%23616161&amp;color=%23F6BF26&amp;color=%239E69AF" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
 ## JupyterCon
 
 Global JupyterCon conferences provide opportunities for the Jupyter community to come together to learn and share.
