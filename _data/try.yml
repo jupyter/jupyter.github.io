@@ -41,3 +41,9 @@
     A basic example of using Jupyter with Ruby.
   logo: ruby.png
   url: https://mybinder.org/v2/gh/RubyData/binder/master?filepath=ruby-data.ipynb
+
+- title: Try Jupyter with Kotlin
+  description: |
+    A basic example of using Jupyter with Kotlin.
+  logo: kotlin.svg
+  url: https://mybinder.org/v2/gh/Kotlin/kotlin-jupyter/master?filepath=samples/LetsPlot.ipynb
