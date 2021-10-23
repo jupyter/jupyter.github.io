@@ -3,26 +3,26 @@
     A tutorial introducing basic features of Jupyter notebooks
     and the IPython kernel using the classic Jupyter Notebook interface.
   logo: python.svg
-  url: https://mybinder.org/v2/gh/ipython/ipython-in-depth/master?urlpath=tree/binder/Index.ipynb
+  url: https://mybinder.org/v2/gh/ipython/ipython-in-depth/HEAD?urlpath=tree/binder/Index.ipynb
 
 - title: Try JupyterLab
   description: |
     JupyterLab is the new interface for Jupyter notebooks and is ready for general use.
     Give it a try!
   logo: jupyter.png
-  url: https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/master?urlpath=lab/tree/demo
+  url: https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/HEAD?urlpath=lab/tree/demo
 
 - title: Try Jupyter with Julia
   description: |
     A basic example of using Jupyter with Julia.
   logo: julia.svg
-  url: https://mybinder.org/v2/gh/binder-examples/demo-julia/master?filepath=demo.ipynb
+  url: https://mybinder.org/v2/gh/binder-examples/demo-julia/HEAD?filepath=demo.ipynb
 
 - title: Try Jupyter with R
   description: |
     A basic example of using Jupyter with R.
   logo: R.svg
-  url: https://mybinder.org/v2/gh/binder-examples/r/master?filepath=index.ipynb
+  url: https://mybinder.org/v2/gh/binder-examples/r/HEAD?filepath=index.ipynb
 
 - title: Try Jupyter with C++
   description: |
@@ -34,10 +34,10 @@
   description: |
     Explore the Calysto Scheme programming language, featuring integration with Python
   logo: Scheme.png
-  url: https://mybinder.org/v2/gh/Calysto/calysto_scheme/master?filepath=notebooks/Reference%20Guide%20for%20Calysto%20Scheme.ipynb
+  url: https://mybinder.org/v2/gh/Calysto/calysto_scheme/HEAD?filepath=notebooks/Reference%20Guide%20for%20Calysto%20Scheme.ipynb
 
 - title: Try Jupyter with Ruby
   description: |
     A basic example of using Jupyter with Ruby.
   logo: ruby.png
-  url: https://mybinder.org/v2/gh/RubyData/binder/master?filepath=ruby-data.ipynb
+  url: https://mybinder.org/v2/gh/RubyData/binder/HEAD?filepath=ruby-data.ipynb
