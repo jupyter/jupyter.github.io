@@ -50,8 +50,8 @@ reasons, structured follow-up may be necessary and here we provide the means
 for that: we welcome reports by emailing
 [*conduct@jupyter.org*](mailto:conduct@jupyter.org) or by filling out [this
 form](https://goo.gl/forms/sJzOIie3zde9M71T2). For more details please see our
-Reporting Guidelines (for [online](reporting_online.md) and
-[in-person](reporting_events.md) contexts).
+Reporting Guidelines (for [online](https://jupyter.org/governance/conduct/reporting_online) and
+[in-person](https://jupyter.org/governance/conduct/reporting_events) contexts).
 
 This code applies equally to founders, developers, mentors and new community
 members, in all spaces managed by Project Jupyter (including IPython). This
