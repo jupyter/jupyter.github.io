@@ -74,29 +74,3 @@ jupyter notebook
 ```
 
 See [Running the Notebook](https://jupyter.readthedocs.io/en/latest/running.html#running) for more details.
-
-## Getting started with Voilà
-
-### Installation with mamba or conda
-
-If you use `mamba` or `conda`, you can install it with:
-
-```shell
-mamba install -c conda-forge voila
-```
-
-or
-
-```shell
-conda install -c conda-forge voila
-```
-
-For more detailed instructions, consult the [installation guide](https://voila.readthedocs.io/en/stable/install.html).
-
-### Installation with pip
-
-If you use `pip`, you can install it with:
-
-```shell
-pip install voila
-```
