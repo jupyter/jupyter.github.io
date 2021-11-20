@@ -6,7 +6,7 @@
                     <li><a href="{{site.baseurl}}/index.html">Home</a></li>
                     {%- for nav in site.data.nav.head %}
                       {%- if nav.url %}
-                               <li><a href="{{site.baseurl}}{{nav.url}}">{{nav.title}}</a></li>
+                               <li><a href="{{site.baseurl}}{{nav.url}}" target="_blank">{{nav.title}}</a></li>
                       {%- else %}
                         {%- for target_page in site.pages %}
                            {%- if nav contains target_page.title %}
