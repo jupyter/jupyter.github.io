@@ -84,18 +84,18 @@ body {
 }
 
 .footer p {
-    color: white;
+    color: #040404;
     padding-top: 10px;
 }
 
 .footer li {
-    color: white;
+    color: #040404;
     display: inline-block;
     text-decoration: none;
 }
 
 .footer a {
-    color: white;
+    color: #040404;
     text-decoration: none;
 }
 
@@ -230,6 +230,10 @@ body {
   padding: 56px 0;
 }
 
+.section-grey p a {
+  color: #3174AE;
+}
+
 /* Used to specifying when a section is at the top or bottom of the page to apply appropriate border */
 .top-section-border {
     border-top: 1px solid #E0E0E0;
@@ -268,7 +272,7 @@ body {
 .orange-button {
     background-color: #E46E2E;
     border-radius: 2px;
-    color: white;
+    color: #292929;
     display: inline-block;
     font-size: 16px;
     padding: 13px 26px;
@@ -542,7 +546,7 @@ body {
 .resource-button a {
     background-color: #E46E2E;
     border-radius: 2px;
-    color: white;
+    color: #292929;
     letter-spacing: 1px;
     padding: 13px 60px;
     text-decoration: none;

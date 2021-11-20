@@ -20,14 +20,14 @@
   padding: 16px;
   /* color is on purpose not Jupyter Orange */
   background: #2e9be4;
-  color: white;
+  color: #2D2D2D;
   font-weight: normal;
   line-height: 14px;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
 }
 
-.card-heading h4 {
+.card-heading h2 {
   font-size: 1.6em;
 }
 
