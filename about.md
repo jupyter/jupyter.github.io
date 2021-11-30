@@ -218,7 +218,7 @@ steering:
   - first: Steven
     last: Silvester
     avatar: https://avatars2.githubusercontent.com/u/2096628?v=3&s=400
-    affiliation: Apple
+    affiliation: MongoDB
     gh_handle: 'blink1073'
   - first: Carol
     last: Willing
