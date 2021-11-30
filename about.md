@@ -173,7 +173,7 @@ steering:
   - first: Jason
     last: Grout
     avatar: https://avatars1.githubusercontent.com/u/192614?v=3&s=400
-    affiliation: Bloomberg
+    affiliation: Databricks
     gh_handle: 'jasongrout'
   - first: Jessica
     last: Hamrick
@@ -268,7 +268,7 @@ trademark_subcomittee:
   - first: Jason
     last: Grout
     avatar: https://avatars1.githubusercontent.com/u/192614?v=3&s=400
-    affiliation: Bloomberg
+    affiliation: Databricks
     gh_handle: 'jasongrout'
   - first: Tim
     last: George
