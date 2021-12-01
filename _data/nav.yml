@@ -7,9 +7,6 @@ head:
     - title: Events
       url: /events
     - Documentation
-    - title: NBViewer
-      url: https://nbviewer.jupyter.org
-      newpage: true
     - JupyterHub
     - Widgets
     - title: Blog
