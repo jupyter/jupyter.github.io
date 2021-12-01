@@ -28,6 +28,7 @@ Widgets:
 
 Notebook Documents:
   nbconvert: https://nbconvert.readthedocs.io/en/latest/
+  nbclient: https://nbclient.readthedocs.io/en/latest/
   nbformat: https://nbformat.readthedocs.io/en/latest/
   nbviewer: https://github.com/jupyter/nbviewer/
 
@@ -45,4 +46,5 @@ Deployment:
 Foundations:
   Jupyter Client: https://jupyter-client.readthedocs.io/en/latest/
   Jupyter Core: https://jupyter-core.readthedocs.io/en/latest/
+  Jupyter Server: https://jupyter-server.readthedocs.io/
   Jupyter Alabaster Theme: https://jupyter-alabaster-theme.readthedocs.io/en/latest/

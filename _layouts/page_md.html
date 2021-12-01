@@ -4,7 +4,7 @@ layout: default
 <div class="post">
   <header class="post-header header header-grey">
     {% if page.title_image %}
-    <img src="{{ page.title_image }}" class="title_image" alt="{{ page.title_image_alt }}" />
+    <img src="{{ page.title_image }}" class="title_image" {% if page.title_image_alt %}alt="{{ page.title_image_alt }}"{% endif %} />
     {% else %}
     <h2>{{ page.title }}</h2>
     {% endif %}
