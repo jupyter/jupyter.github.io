@@ -1,7 +1,7 @@
 ---
 layout: page_md
-title: Stay Connected
-tagline: Project Jupyter sponsors a number of events for individuals interested in using and contributing to the project.
+title: Events
+tagline: Sponsored gatherings of Project Jupyter users and contributors
 permalink: /events
 ---
 
