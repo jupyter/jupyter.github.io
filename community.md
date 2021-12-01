@@ -1,7 +1,7 @@
 ---
 layout: page_md
-title: Stay Connected
-tagline: Project Jupyter offers a number of communication channels available to individuals interested in using and contributing to the project.
+title: Community
+tagline: How to get involved with Project Jupyter
 permalink: /community
 ---
 
