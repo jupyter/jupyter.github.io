@@ -37,7 +37,7 @@
                            {%- if nav contains targetpage.title -%}
                               {%- if page.title == targetpage.title %}
                                <li>
-                                   <a href  class="tab navbar-active">{{targetpage.title}}</a>
+                                   <a href="{{site.baseurl}}{{targetpage.url}}" class="tab navbar-active">{{targetpage.title}}</a>
                                </li>
                                {%- else %}
                                <li>
