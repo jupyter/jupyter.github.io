@@ -46,4 +46,5 @@ Deployment:
 Foundations:
   Jupyter Client: https://jupyter-client.readthedocs.io/en/latest/
   Jupyter Core: https://jupyter-core.readthedocs.io/en/latest/
+  Jupyter Server: https://jupyter-server.readthedocs.io/
   Jupyter Alabaster Theme: https://jupyter-alabaster-theme.readthedocs.io/en/latest/
