@@ -1,7 +1,7 @@
 ---
 layout: page_md
 title: "About Us"
-tagline: Some information about the Jupyter Project and Community
+tagline: Project Jupyter’s origins and governance
 permalink: /about
 distinguished_2020:
   - name: Jeremy Tuloup

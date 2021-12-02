@@ -260,8 +260,9 @@ body {
 .support-paragraph {
     font-size: 15px;
     line-height: 1.5;
-    margin-bottom: 16px;
     text-align: center;
+    max-width: 630px;
+    margin: 0 auto 16px auto;
 }
 
 /* Orange action button */

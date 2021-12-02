@@ -3,14 +3,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta itemprop="description" name="description" content="{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.description }}{% endif %}" />
 
     <title>{{ site.title }} {% if page.title %}| {{ page.title }}{% endif %}</title>
     <meta property="og:title" content="Project Jupyter" />
     <meta property="og:description" content="{{ site.description }}">
     <meta property="og:url" content="https://www.jupyter.org" />
     <meta property="og:image" content="https://jupyter.org/assets/homepage.png" />
+    <link rel="canonical" href="{{ page.url | prepend: site.url }}">
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/css/logo-nav.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}">

@@ -27,7 +27,8 @@
   border-top-right-radius: 2px;
 }
 
-.card-heading h4 {
+.card-heading h2 {
+   line-height: 1.22;
   font-size: 1.6em;
 }
 

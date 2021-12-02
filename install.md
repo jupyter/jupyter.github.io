@@ -1,7 +1,7 @@
 ---
 layout: page_md
-title: Installing the Jupyter Software
-tagline: Get up and running with the JupyterLab or the classic Jupyter Notebook on your computer within minutes!
+title: Installing Jupyter Software
+tagline: Get up and running with JupyterLab or the classic Jupyter Notebook.
 permalink: /install
 ---
 
