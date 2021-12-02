@@ -44,6 +44,6 @@
 
 - title: Try Jupyter with Kotlin
   description: |
-    A basic example of using Jupyter with Kotlin.
+    Titanic example with LetsPlot and Dataframe libraries.
   logo: kotlin.svg
-  url: https://mybinder.org/v2/gh/Kotlin/kotlin-jupyter/master?filepath=samples/LetsPlot.ipynb
+  url: https://mybinder.org/v2/gh/Kotlin/dataframe/master?filepath=examples/jupyter-notebooks/titanic/Titanic.ipynb
