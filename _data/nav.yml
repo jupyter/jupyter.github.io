@@ -11,7 +11,7 @@ head:
       url: https://nbviewer.jupyter.org
       newpage: true
     - Widgets
-    - title: Blog
+    - title: News
       url: https://blog.jupyter.org
       newpage: true
     - title: Security
