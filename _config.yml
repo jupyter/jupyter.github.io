@@ -19,3 +19,7 @@ include: [".well-known"]
 
 plugins:
   - jekyll-redirect-from
+
+sass:
+  sass_dir: _sass
+  style: compact
