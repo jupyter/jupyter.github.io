@@ -8,7 +8,7 @@ head:
       url: /events
     - Documentation
     - Widgets
-    - title: Blog
+    - title: News
       url: https://blog.jupyter.org
       newpage: true
     - title: Security
