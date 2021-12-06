@@ -12,6 +12,11 @@
   logo: jupyter.png
   url: https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/HEAD?urlpath=lab/tree/demo
 
+- title: Try Voilà
+  description: An example with a variety of notebook dashboards.
+  logo: voila.svg
+  url: https://mybinder.org/v2/gh/voila-dashboards/voila/stable?urlpath=voila%2Ftree%2Fnotebooks
+
 - title: Try Jupyter with Julia
   description: |
     A basic example of using Jupyter with Julia.
@@ -47,3 +52,4 @@
     Titanic example with LetsPlot and Dataframe libraries.
   logo: kotlin.svg
   url: https://mybinder.org/v2/gh/Kotlin/dataframe/master?filepath=examples/jupyter-notebooks/titanic/Titanic.ipynb
+
