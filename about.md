@@ -148,7 +148,7 @@ steering:
   - first: Damian
     last: Avila
     avatar: https://avatars3.githubusercontent.com/u/1640669?v=3&s=400
-    affiliation: Anaconda, Inc.
+    affiliation: UMSI & 2i2c
     gh_handle: 'damianavila'
   - first: Matthias
     last: Bussonnier
