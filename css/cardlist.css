@@ -10,10 +10,16 @@
 }
 
 .cardlist-card {
-  min-height: 240px;
+  width: 275px;
+  min-height: 300px;
   background: white;
   box-shadow: 0 3px 6px rgba(0, 0, 0, .24);
   border-radius: 2px;
+}
+@media(max-width: 544px) {
+    .cardlist-card {
+        min-height: 240px;
+    }
 }
 
 .card-heading {
