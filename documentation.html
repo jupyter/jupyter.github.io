@@ -1,0 +1,40 @@
+---
+layout: default
+title: Documentation
+description: A comprehensive list of Jupyter projects, subprojects and repositories
+permalink: /documentation
+---
+
+<div class="post">
+  <header class="post-header header header-grey">
+    <div class="container">
+      <h2>{{ page.title }}</h2>
+      <p>
+        {{ page.description }}
+      </p>
+    </div>
+  </header>
+
+    <article class="post-content">
+      <div class="section-white top-section-border">
+        <div class="container">
+        <div class="row cardlist">
+          {%- for card in site.data.documentation -%}
+            <div class="col-lg-4 col-md-6 col-sm-6 cardlist-col">
+              <div class="cardlist-card doc-card">
+                <div class="card-heading">
+                  <h2>{{card[0]}}</h2>
+                </div>
+                <div class="card-body">
+                  <ul>
+                    {%- for item in card[1] %}
+                    <li><a href="{{item[1]}}">{{item[0]}}</a></li>
+                    {%- endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+    </article>
+</div>
