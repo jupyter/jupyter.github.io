@@ -1,17 +1,17 @@
 ---
-layout: markdown
+layout: page_md
+title: Code of Conduct
+tagline: Expected behavior in the Project Jupyter community
+permalink: /conduct
 ---
 
 Jupyter Code of Conduct can be found on the [Jupyter/Governance GitHub
 Repository](https://github.com/jupyter/governance). For convenience it has been
 replicated here. 
 
-In case of difference,  the version on the [Jupyter/Governance GitHub
+In case of difference, the version on the [Jupyter/Governance GitHub
 Repository](https://github.com/jupyter/governance) is the canonical one, and
 the one present here should be updated accordingly.
-
-
-
 
 ------------------------
 

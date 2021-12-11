@@ -4,7 +4,6 @@ title: JupyterHub
 title_image: assets/hublogo.svg
 title_image_alt: JupyterHub logo
 tagline: A multi-user version of the notebook designed for companies, classrooms and research labs
-navbar_jupytercon: true
 cfp: true
 permalink: /hub
 ---
