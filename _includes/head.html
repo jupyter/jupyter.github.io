@@ -6,7 +6,7 @@
 
     <title>{{ site.title }} {% if page.title %}| {{ page.title }}{% endif %}</title>
     <meta property="og:title" content="Project Jupyter" />
-    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:description" content="{{ site.description|strip_html }}">
     <meta property="og:url" content="https://www.jupyter.org" />
     <meta property="og:image" content="https://jupyter.org/assets/homepage.png" />
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
