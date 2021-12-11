@@ -19,3 +19,4 @@ include: [".well-known"]
 
 plugins:
   - jekyll-redirect-from
+  - jekyll-sitemap
