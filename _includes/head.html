@@ -1,16 +1,15 @@
 <head>
 
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta itemprop="description" name="description" content="{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.description }}{% endif %}" />
 
     <title>{{ site.title }} {% if page.title %}| {{ page.title }}{% endif %}</title>
     <meta property="og:title" content="Project Jupyter" />
-    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:description" content="{{ site.description|strip_html }}">
     <meta property="og:url" content="https://www.jupyter.org" />
     <meta property="og:image" content="https://jupyter.org/assets/homepage.png" />
-    <link rel="canonical" href="{{ page.url | prepend: site.url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/css/logo-nav.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}">
@@ -26,6 +25,5 @@
     <link href="{{site.baseurl}}/assets/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
     <link href="{{site.baseurl}}/assets/icon-hires.png" rel="icon" sizes="192x192" />
     <link href="{{site.baseurl}}/assets/icon-normal.png" rel="icon" sizes="128x128" />
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <script>console.log('Welcome to Project Jupyter! Explore the various tools available and their corresponding documentation. If you are interested in contributing to the platform, please visit the community resources section at https://jupyter.org/community.html.')</script>
 </head>
