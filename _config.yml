@@ -19,6 +19,7 @@ include: [".well-known"]
 
 plugins:
   - jekyll-redirect-from
+  - jekyll-sitemap
 
 sass:
   sass_dir: _sass

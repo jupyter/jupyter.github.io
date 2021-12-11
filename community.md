@@ -1,7 +1,7 @@
 ---
 layout: page_md
-title: Community
-tagline: How to get involved with Project Jupyter
+title: Get Involved
+tagline: How to join the Project Jupyter community
 permalink: /community
 ---
 
