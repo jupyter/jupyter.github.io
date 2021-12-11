@@ -118,7 +118,7 @@ body {
 }
 
 /*Main logo animation on the front page of the Jupyter website */
-#main-logo {
+.main-logo {
 	height: calc(100% - 20px);
 	margin-top: 10px;
     padding-left: 20px;
