@@ -6,7 +6,8 @@ head:
       url: /community
     - title: Events
       url: /events
-    - Documentation
+    - title: Docs
+      url: /documentation
     - Widgets
     - title: News
       url: https://blog.jupyter.org
