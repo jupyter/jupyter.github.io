@@ -1,7 +1,6 @@
 head:
     - title: Install
       url: /install
-    - About Us
     - title: Get Involved
       url: /community
     - title: Events
@@ -13,3 +12,5 @@ head:
       newpage: true
     - title: Security
       url: /security
+    - title: About
+      url: /about
