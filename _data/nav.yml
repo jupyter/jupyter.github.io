@@ -7,7 +7,6 @@ head:
     - title: Events
       url: /events
     - Documentation
-    - Widgets
     - title: News
       url: https://blog.jupyter.org
       newpage: true
