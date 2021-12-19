@@ -10,16 +10,22 @@
 }
 
 .cardlist-card {
-  min-height: 240px;
+  width: 275px;
+  min-height: 300px;
   background: white;
   box-shadow: 0 3px 6px rgba(0, 0, 0, .24);
   border-radius: 2px;
+}
+@media(max-width: 544px) {
+    .cardlist-card {
+        min-height: 240px;
+    }
 }
 
 .card-heading {
   padding: 16px;
   /* color is on purpose not Jupyter Orange */
-  background: #2e9be4;
+  background: #0C7BC6;
   color: white;
   font-weight: normal;
   line-height: 14px;
