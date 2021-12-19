@@ -6,7 +6,9 @@ head:
       url: /community
     - title: Events
       url: /events
-    - Documentation
+    - title: Documentation
+      url: https://jupyter.readthedocs.io/
+      newpage: true
     - Widgets
     - title: News
       url: https://blog.jupyter.org
