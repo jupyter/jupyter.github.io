@@ -1,3 +1,10 @@
+---
+layout: page_md
+title: Projects
+tagline: A comprehensive list of Jupyter projects, subprojects and repositories
+permalink: /projects
+---
+
 <section>
     <div class="top-section-border">
         <div class="container">
