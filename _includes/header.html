@@ -25,7 +25,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     {%- for nav in site.data.nav.head -%}
                     <li>
-                        <a href="{{site.baseurl}}{{nav.url}}"
+                        <a href="{{nav.url}}"
                            {%- if nav.newpage %}target="_blank" rel="noopener noreferrer"{% endif %}
                            class="tab {% if nav.url == page.url %}navbar-active{% endif %}"
                         >
