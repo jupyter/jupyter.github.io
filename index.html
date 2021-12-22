@@ -124,15 +124,18 @@ open_standards:
     alt: icon to represent jupyter architecture
     src: assets/voilapreview.png
   features:
-  - description: Jupyter Notebooks are an open document format based on JSON. They contain a complete record of the user's sessions and include code, narrative text, equations and rich output.
+  - headline: Notebook Document Format
+    description: Jupyter Notebooks are an open document format based on JSON. They contain a complete record of the user's sessions and include code, narrative text, equations and rich output.
     image:
       alt: icon to represent notebook format
       src: assets/notebook-format.svg
-  - description: The Notebook communicates with computational Kernels using the Interactive Computing Protocol, an open network protocol based on JSON data over ZMQ and WebSockets.
+  - headline: Interactive Computing Protocol
+    description: The Notebook communicates with computational Kernels using the Interactive Computing Protocol, an open network protocol based on JSON data over ZMQ and WebSockets.
     image:
       alt: icon to represent a protocol
       src: assets/protocol.svg
-  - description: Kernels are processes that run interactive code in a particular programming language and return output to the user. Kernels also respond to tab completion and introspection requests.
+  - headline: The Kernel
+    description: Kernels are processes that run interactive code in a particular programming language and return output to the user. Kernels also respond to tab completion and introspection requests.
     image:
       alt: icon that looks like a terminal represents kernel
       src: assets/kernel.svg
@@ -405,7 +408,8 @@ in_use:
                         <div class="arcfeature" id="arcfeature1">
                             <div class="front">
                                 <img src="{{ feat.image.src }}" alt="{{ feat.image.alt }}">
-                                <p id="document">{{ feat.description }}</p>
+                                <h4>{{ feat.headline }}</h4>
+                                <p>{{ feat.description }}</p>
                             </div>
                         </div>
                     </div>
