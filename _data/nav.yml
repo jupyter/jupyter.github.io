@@ -1,13 +1,16 @@
 head:
     - title: Install
       url: /install
-    - About Us
+    - title: About Us
+      url: /about
     - title: Get Involved
       url: /community
     - title: Events
       url: /events
-    - Documentation
-    - Widgets
+    - title: Documentation
+      url: /documentation
+    - title: Widgets
+      url: /widgets
     - title: News
       url: https://blog.jupyter.org
       newpage: true
