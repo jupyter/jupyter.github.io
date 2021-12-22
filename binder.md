@@ -10,11 +10,11 @@ permalink: /binder
 
 The Binder project offers an easy place to share computing environments to everyone.
 It allows users to specify custom environments and share them with a single link.
-Use-cases involve workshops, scientific workflows and streamline sharing among teams.
+Use cases involve workshops, scientific workflows and streamline sharing among teams.
 
-The Binder Project builds tools that reward best-practices in reproducible data
+The Binder Project builds tools that reward best practices in reproducible data
 science by utilizing community-developed standards for
-reproducibility. When repositories follow these best-practices and are hosted in
+reproducibility. When repositories follow these best practices and are hosted in
 an online repository, then Binder automatically builds a linkable environment anybody can access.
 
 
