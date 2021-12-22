@@ -4,3 +4,4 @@ Gemfile.lock
 .jekyll-metadata
 vendor
 .bundle
+.sass-cache

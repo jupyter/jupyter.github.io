@@ -85,6 +85,7 @@ in these organizations:
 - [jupyter-widgets](https://github.com/jupyter-widgets)
 - [jupyter-server](https://github.com/jupyter-server)
 - [jupyter-xeus](https://github.com/jupyter-xeus)
+- [jupyter-lsp](https://github.com/jupyter-lsp)
 - [voila-dashboards](https://github.com/voila-dashboards)
 - [binder-examples](https://github.com/binder-examples)
 - [jupyter-resources](https://github.com/jupyter-resources)
