@@ -3,6 +3,7 @@ layout: page_md
 title: "About Us"
 tagline: Project Jupyter’s origins and governance
 permalink: /about
+
 distinguished_2020:
   - name: Jeremy Tuloup
     photo: Jeremy_Tuloup.png
@@ -49,6 +50,7 @@ distinguished_2020:
     twitter_handle: psychemedia
     gh_handle: psychemedia
     personal: http://ouseful.info
+
 distinguished_special_election:
   - name: Cameron Oelsen
     photo: Cameron_Oelsen.png
@@ -138,6 +140,7 @@ distinguished_special_election:
     gh_handle: labarba
     linkedin: https://linkedin.com/in/lorenabarba/
     twitter_handle: LorenaABarba
+
 steering:
   - first: Ana
     last: Ruvalcaba
@@ -225,12 +228,14 @@ steering:
     avatar: https://avatars1.githubusercontent.com/u/2680980?v=3&s=400
     affiliation: Noteable
     gh_handle: 'willingc'
+
 retired_steering:
   - first: Jonathan
     last: Frederic
     avatar: https://avatars2.githubusercontent.com/u/3292874?v=3&s=400
     gh_handle: 'jdfreder'
     dates: '2016-2018'
+
 numfocus_subcomittee:
   - first: Matthias
     last: Bussonnier
@@ -291,7 +296,81 @@ trademark_subcomittee:
     affiliation: Amazon Web Services
     gh_handle: 'ellisonbg'
 
+sponsors:
+  - url: https://helmsleytrust.org
+    src: /assets/helmsley.svg
+    alt: helmsley trust logo
+  - url: https://www.sloan.org/
+    src: /assets/alfred.svg
+    alt: sloan logo
+  - url: https://www.moore.org/
+    src: /assets/moore.svg
+    alt: moore foundation logo
+  - url: https://www.google.com/
+    src: /assets/google-color.svg
+    alt: google logo
+  - url: https://developer.rackspace.com/
+    src: /assets/rackspace-color.svg
+    alt: rackspace logo
+  - url: https://www.fastly.com/
+    src: /assets/fastly.svg
+    alt: fastly logo
+  - url: https://opendreamkit.org/
+    src: /assets/EC-H2020.svg
+    alt: EU logo
+  - url: https://www.microsoft.com/
+    src: /assets/microsoft-color.svg
+    alt: microsoft logo
+  - url: https://www.quansight.com/
+    src: /assets/quansight.svg
+    alt: Quansight logo
+  - url: https://schmidtfutures.com/
+    src: /assets/schmidt.png
+    alt: Schmidt log
 
+partners:
+  - url: https://apple.com/
+    src: /assets/apple.svg
+    alt: apple inc logo
+  - url: https://www.bloomberg.com/
+    src: /assets/bloomberg-color.svg
+    alt: bloomberg logo
+  - url: https://techblog.netflix.com
+    src: /assets/netflix-color.svg
+    alt: netflix logo
+  - url: https://www.calpoly.edu/
+    src: /assets/poly-color.svg
+    alt: cal poly logo
+  - url: https://www.berkeley.edu/
+    src: /assets/berkeley-color.svg
+    alt: UC Berkeley logo
+  - url: https://quantstack.net/
+    src: /assets/quantstack-color.svg
+    alt: QuantStack logo
+  - url: https://www.twosigma.com/
+    src: /assets/two-sigma.svg
+    alt: Two Sigma logo
+  - url: https://www.simula.no/
+    src: /assets/simula.png
+    alt: Simula logo
+  - url: https://www.quansight.com/
+    src: /assets/quansight.svg
+    alt: Quansight logo
+  - url: https://aws.amazon.com/
+    src: /assets/aws.svg
+    alt: AWS logo
+  - url: https://databricks.com/
+    src: /assets/databricks.png
+    alt: Databricks logo
+  - url: https://www.mongodb.com/
+    src: /assets/MongoDB.png
+    alt: MongoDB logo
+  - url: https://www.si.umich.edu/
+    src: /assets/siumich.jpg
+    alt: UMSI logo
+  - url: https://2i2c.org/
+    src: /assets/2i2c.png
+    alt: 2i2c logo
 ---
 
 Project Jupyter is a non-profit, open-source project, born out of the [IPython Project](https://ipython.org) in 2014 as
@@ -307,12 +386,173 @@ All online and in-person interactions and communications directly related to the
 This Code of Conduct sets expectations to enable a diverse community of
 users and contributors to participate in the project with respect and safety.
 
-{% include distinguished.html %}
+<div class="about-section section-white top-section-border">
+    <div class="row">
+    <h3 class="col-sm-12 section-header">Distinguished Contributors</h3>
+    <p class="col-sm-12">
+      Project Jupyter <a href="https://jupyter.org/governance/distinguished_contributors.html">Distinguished
+      Contributors</a> are recognized for their substantial contributions
+      to Jupyter itself in both quality and quantity over at least two
+      years. Contributions may include code, code review, infrastructure
+      work, mailing list and chat participation, community help/building,
+      education and outreach, fundraising, branding, marketing, inclusion
+      and diversity, UX design and research, etc. Up to 10 new
+      Distinguished Contributors are selected each year by the cumulative
+      body of Distinguished Contributors.
+    </p>
+    </div>
+    {% include cards.html cohort_name="2020 Cohort" cohort=page.distinguished_2020 %}
+    {% include cards.html cohort_name="Special Election Cohort" cohort=page.distinguished_special_election %}
+</div>
 
-{% include steering.html %}
+<div id="steering-council" class="about-section section-white top-section-border">
+    <div class="row">
+        <img src="{{site.url}}/assets/steering.svg" class="section-icon img-responsive" alt="steering committee icon">
+        <h3 class="col-sm-12 section-header">Steering Council</h3>
+        <p class="col-sm-12">
+        The role of the Jupyter Steering Council is to ensure, through working with and serving the broader Jupyter community,
+        the long-term well-being of the project, both technically and as a community. The Jupyter Steering Council currently consists
+        of the following members (in alphabetical order).
+        </p>
+    </div>
+    <div class="row">
+        {% assign sorted = page.steering | sort: "last" %}
+        {% for member in sorted %}
+        <div class="col-sm-3 col-xs-6 material section-content section-center">
+          <img class="council-member-photo" alt="{{member.first}} {{member.last}}'s avatar picture" src='{{member.avatar}}' />
+          <p class="card-header">{{member.first}} {{member.last}}</p>
+          <p class="card-info">{{member.affiliation}}<br><a href="https://github.com/{{member.gh_handle}}" target="_blank"><em>@{{member.gh_handle}}</em></a> on GitHub</p>
+        </div>
+        {% endfor %}
+    </div>
 
-{% include sponsors.html %}
+    <hr>
+    {% assign num = page.numfocus_subcomittee | size %}
+    <div class="row">
+        <h3 class="col-sm-12 section-header">NumFOCUS Subcommittee Member{% if num > 1 %}s{% endif %}</h3>
+    </div>
+    <div class="row">
+        {% assign sorted = page.numfocus_subcomittee | sort: "last" %}
+        {% for member in sorted  %}
+            <div class="col-sm-3 col-xs-6 material">
+                <img class="council-member-photo" alt="{{member.first}} {{member.last}}'s avatar picture" src='{{member.avatar}}' />
+                <p class="card-header">{{member.first}} {{member.last}}</p>
+                <p class="card-info">
+                <a href="https://github.com/{{member.gh_handle}}" target="_blank"><em>@{{member.gh_handle}}</em></a> on GitHub</p>
+            </div>
+        {% endfor %}
+    </div>
 
-{% include partners.html %}
+    <hr>
+    {% assign num = page.trademark_subcomittee | size %}
+    <div class="row">
+        <h3 class="col-sm-12 section-header">Trademark Subcommittee Member{% if num > 1 %}s{% endif %}</h3>
+    </div>
+    <div class="row">
+        {% assign sorted = page.trademark_subcomittee | sort: "last" %}
+        {% for member in sorted  %}
+            <div class="col-sm-3 col-xs-6 material">
+                <img class="council-member-photo" alt="{{member.first}} {{member.last}}'s avatar picture" src='{{member.avatar}}' />
+                <p class="card-header">{{member.first}} {{member.last}}</p>
+                <p class="card-info">
+                <a href="https://github.com/{{member.gh_handle}}" target="_blank"><em>@{{member.gh_handle}}</em></a> on GitHub</p>
+            </div>
+        {% endfor %}
+    </div>
 
-{% include donate.html %}
+    <hr>
+    {% assign num = page.retired_steering | size %}
+    <div class="row">
+        <h3 class="col-sm-12 section-header">Retired Steering Council Member{% if num > 1 %}s{% endif %}</h3>
+    </div>
+    <div class="row">
+        {% assign sorted = page.retired_steering | sort: "last" %}
+        {% for member in sorted  %}
+            <div class="col-sm-3 col-xs-6 material">
+                <img class="council-member-photo" alt="{{member.first}} {{member.last}}'s avatar picture" src='{{member.avatar}}' />
+                <p class="card-header">{{member.first}} {{member.last}}</p>
+                <p class="card-info">Member: {{member.dates}}<br>
+                <a href="https://github.com/{{member.gh_handle}}" target="_blank"><em>@{{member.gh_handle}}</em></a> on GitHub</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div id="sponsors" class="about-section section-grey top-section-border">
+    <div class="row">
+        <img src="{{site.baseurl}}/assets/sponsors2.svg" class="section-icon img-responsive" alt="sponsors">
+        <h3 class="col-sm-12 section-header">Sponsors</h3>
+        <p class="support-paragraph">Project Jupyter receives direct funding from the following sources</p>
+    </div>
+    <div class="row">
+        {% for obj in page.sponsors %}
+        <div class="col-md-3 col-xs-12 sponsor">
+            <a href="{{ obj.url }}">
+                <img src="{{ obj.src }}" class="company-logo" alt="{{ obj.alt }}" />
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div id="partners" class="about-section section-white top-section-border">
+    <div class="row section-header">
+        <img src="{{site.baseurl}}/assets/institutional_partners2.svg" class="section-icon img-responsive" alt="institutional partners">
+        <h3 class="col-sm-12 section-header">Institutional Partners</h3>
+        <p class="support-paragraph">
+            Institutional Partners are organizations that support the project by employing Jupyter Steering Council members.
+            Current Institutional Partners include:
+        </p>
+    </div>
+    <div class="row">
+        {% for obj in page.partners %}
+        <div class="col-sm-3 col-xs-6 sponsor">
+            <a href="{{ obj.url }}">
+                <img src="{{ obj.src }}" class="company-logo" alt="{{ obj.alt }}">
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div id="donate" class="about-section section-grey">
+    <div class="row">
+        <img src="{{site.url}}/assets/donations-icon2.svg" class="section-icon img-responsive" alt="Donate">
+        <h3 class="col-sm-12 section-header">Donate</h3>
+        <p>
+            Jupyter will always be 100% open source software, free for all
+            to use and released under the liberal terms of the <a
+            href="https://opensource.org/licenses/BSD-3-Clause">modified BSD
+            license</a>. If you have found Project Jupyter to be useful in
+            your work, research or company, please consider making a
+            donation to the project commensurate with your resources.
+        </p>
+        <p>
+            All donations will be used strictly to fund the development of
+            Project Jupyter's open source software, documentation and
+            community. Our donations are managed by the <a
+            href="https://numfocus.org">NumFOCUS Foundation</a>, which is
+            the legal and fiscal umbrella for the project.
+        </p>
+        <p>
+            NumFOCUS is a 501(c)3 non-profit foundation; if you are subject to US Tax law,
+            your contributions will be tax-deductible.
+        </p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <a href="https://numfocus.org">
+                <img id="numfocus-logo" src="{{site.url}}/assets/numfocus_logo.png" class="img-responsive center-block" alt="numfocus logo">
+            </a>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div id="col-md-12 donate-formatting">
+            <a href="https://numfocus.salsalabs.org/donate-to-jupyter/index.html" class="orange-button" id="donate-link">
+                Support Project Jupyter
+            </a>
+        </div>
+    </div>
+</div>
