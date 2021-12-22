@@ -2,7 +2,7 @@
 
 .cardlist {
   margin: 10px auto 20px auto;
-  max-width: 980px;
+  max-width: 930px;
 }
 
 .cardlist-col {
@@ -10,8 +10,7 @@
 }
 
 .cardlist-card {
-  width: 275px;
-  min-height: 300px;
+  min-height: 320px;
   background: white;
   box-shadow: 0 3px 6px rgba(0, 0, 0, .24);
   border-radius: 2px;
@@ -76,8 +75,8 @@ a.try-link:visited {
 }
 
 /* try cards need to be a little taller */
-.cardlist-card.try-card {
-  height: 320px;
+.cardlist-card.try-card  {
+  height: 340px;
 }
 
 /* shrink-to-fit logos */
