@@ -360,7 +360,7 @@ partners:
     src: /assets/aws.svg
     alt: AWS logo
   - url: https://databricks.com/
-    src: /assets/databricks.png
+    src: /assets/databricks.svg
     alt: Databricks logo
   - url: https://www.mongodb.com/
     src: /assets/MongoDB.png
