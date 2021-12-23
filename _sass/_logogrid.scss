@@ -1,0 +1,31 @@
+/* A grid layout of logos for supporters, partners, etc. */
+
+ul.logogrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    li {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 2%;
+        padding: 3%;
+        vertical-align: middle;
+        width: 23%;
+        @media (max-width: 768px) {
+            width: 30%;
+            padding: 4%;
+        }
+        img {
+            display: block;
+            width: 100%;
+            max-height: 60px;
+            margin: 0;
+        }
+    }
+}

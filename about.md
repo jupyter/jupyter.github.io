@@ -484,15 +484,15 @@ users and contributors to participate in the project with respect and safety.
         <h3 class="col-sm-12 section-header">Sponsors</h3>
         <p class="support-paragraph">Project Jupyter receives direct funding from the following sources</p>
     </div>
-    <div class="row">
+    <ul class="logogrid">
         {% for obj in page.sponsors %}
-        <div class="col-md-3 col-xs-12 sponsor">
+        <li>
             <a href="{{ obj.url }}">
-                <img src="{{ obj.src }}" class="company-logo" alt="{{ obj.alt }}" />
+                <img src="{{ obj.src }}" alt="{{ obj.alt }}" />
             </a>
-        </div>
+        </li>
         {% endfor %}
-    </div>
+    </ul>
 </div>
 
 <div id="partners" class="about-section section-white top-section-border">
@@ -504,15 +504,15 @@ users and contributors to participate in the project with respect and safety.
             Current Institutional Partners include:
         </p>
     </div>
-    <div class="row">
+    <ul class="logogrid">
         {% for obj in page.partners %}
-        <div class="col-sm-3 col-xs-6 sponsor">
+        <li>
             <a href="{{ obj.url }}">
-                <img src="{{ obj.src }}" class="company-logo" alt="{{ obj.alt }}">
+                <img src="{{ obj.src }}" alt="{{ obj.alt }}">
             </a>
-        </div>
+        </li>
         {% endfor %}
-    </div>
+    </ul>
 </div>
 
 <div id="donate" class="about-section section-grey">
