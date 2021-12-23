@@ -363,7 +363,7 @@ partners:
     src: /assets/databricks.svg
     alt: Databricks logo
   - url: https://www.mongodb.com/
-    src: /assets/MongoDB.png
+    src: /assets/mongodb.svg
     alt: MongoDB logo
   - url: https://www.si.umich.edu/
     src: /assets/siumich.jpg
