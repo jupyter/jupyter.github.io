@@ -2619,12 +2619,6 @@ tbody.collapse.in {
 .container-fluid:after,
 .row:before,
 .row:after,
-.form-horizontal .form-group:before,
-.form-horizontal .form-group:after,
-.btn-toolbar:before,
-.btn-toolbar:after,
-.btn-group-vertical > .btn-group:before,
-.btn-group-vertical > .btn-group:after,
 .nav:before,
 .nav:after,
 .navbar:before,
@@ -2632,9 +2626,7 @@ tbody.collapse.in {
 .navbar-header:before,
 .navbar-header:after,
 .navbar-collapse:before,
-.navbar-collapse:after,
-.pager:before,
-.pager:after {
+.navbar-collapse:after {
   display: table;
   content: " ";
 }
@@ -2643,14 +2635,10 @@ tbody.collapse.in {
 .container:after,
 .container-fluid:after,
 .row:after,
-.form-horizontal .form-group:after,
-.btn-toolbar:after,
-.btn-group-vertical > .btn-group:after,
 .nav:after,
 .navbar:after,
 .navbar-header:after,
-.navbar-collapse:after,
-.pager:after {
+.navbar-collapse:after {
   clear: both;
 }
 .center-block {
