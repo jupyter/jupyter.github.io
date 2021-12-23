@@ -7,16 +7,11 @@
     <title>{{ site.title }} {% if page.title %}| {{ page.title }}{% endif %}</title>
     <meta property="og:title" content="Project Jupyter" />
     <meta property="og:description" content="{{ site.description|strip_html }}">
-    <meta property="og:url" content="https://www.jupyter.org" />
-    <meta property="og:image" content="https://jupyter.org/assets/homepage.png" />
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:image" content="{{ "/assets/homepage.png" | prepend: site.url }}" />
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/logo-nav.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}">
-    <link rel="stylesheet" href="{{ "/css/cardlist.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/github-buttons.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/markdown_page.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/about.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/css/bootstrap.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
     <link rel="icon" type="image/png" href="favicon.ico" />
     <link href="{{site.baseurl}}/assets/apple-touch-icon.png" rel="apple-touch-icon" />
     <link href="{{site.baseurl}}/assets/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
@@ -25,12 +20,5 @@
     <link href="{{site.baseurl}}/assets/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
     <link href="{{site.baseurl}}/assets/icon-hires.png" rel="icon" sizes="192x192" />
     <link href="{{site.baseurl}}/assets/icon-normal.png" rel="icon" sizes="128x128" />
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
     <script>console.log('Welcome to Project Jupyter! Explore the various tools available and their corresponding documentation. If you are interested in contributing to the platform, please visit the community resources section at https://jupyter.org/community.html.')</script>
 </head>
