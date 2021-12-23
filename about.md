@@ -351,7 +351,7 @@ partners:
     src: /assets/two-sigma.svg
     alt: Two Sigma logo
   - url: https://www.simula.no/
-    src: /assets/simula.png
+    src: /assets/simula.svg
     alt: Simula logo
   - url: https://www.quansight.com/
     src: /assets/quansight.svg
@@ -366,10 +366,10 @@ partners:
     src: /assets/mongodb.svg
     alt: MongoDB logo
   - url: https://www.si.umich.edu/
-    src: /assets/siumich.jpg
+    src: /assets/michigan.svg
     alt: UMSI logo
   - url: https://2i2c.org/
-    src: /assets/2i2c.png
+    src: /assets/2i2c.svg
     alt: 2i2c logo
 ---
 

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="93.344772mm"
+   height="43.814999mm"
+   viewBox="0 0 93.344772 43.814999"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="2i2c.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.75187991"
+     inkscape:cx="332.49991"
+     inkscape:cy="343.8049"
+     inkscape:window-width="1866"
+     inkscape:window-height="1016"
+     inkscape:window-x="54"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="632.26337"
+       y="467.91614"
+       width="15.437217"
+       height="5.4149346"
+       id="rect6178" />
+    <rect
+       x="62.57399"
+       y="199.28207"
+       width="582.19672"
+       height="269.83139"
+       id="rect2916" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-16.873595,-57.806497)">
+    <g
+       aria-label="2i2c"
+       transform="scale(0.26458333)"
+       id="text2914"
+       style="font-size:200px;line-height:1.25;font-family:KisFBDisplay;-inkscape-font-specification:'KisFBDisplay, Normal';white-space:pre;shape-inside:url(#rect2916)">
+      <path
+         d="m 110.17422,242.68125 q 14.6,0 25,5.2 10.6,5.2 16,14 5.6,8.8 5.6,19.4 0,10.8 -4.4,20.6 -4.4,9.8 -15.6,22.6 -11.2,12.6 -32.6,32 h 55.4 l -3.2,24.2 H 68.374219 v -22.4 q 24.6,-24.2 35.800001,-36.4 11.2,-12.4 15.6,-20.6 4.6,-8.2 4.6,-16.8 0,-8.2 -4.8,-12.8 -4.6,-4.8 -12.6,-4.8 -7.200001,0 -12.800001,3.4 -5.6,3.2 -11.8,10.6 l -18.6,-14.8 q 8.4,-11 20,-17.2 11.8,-6.2 26.400001,-6.2 z"
+         style="font-weight:bold;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#4e4e4e"
+         id="path12026" />
+      <path
+         d="m 209.97388,274.48125 v 106.2 h -31.6 v -106.2 z m -16,-56 q 8.2,0 13.4,5.2 5.4,5 5.4,12.8 0,7.8 -5.4,13 -5.2,5 -13.4,5 -8.2,0 -13.4,-5 -5.2,-5.2 -5.2,-13 0,-7.8 5.2,-12.8 5.2,-5.2 13.4,-5.2 z"
+         style="font-weight:bold;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#4e4e4e"
+         id="path12028" />
+      <path
+         d="m 269.97379,242.68125 q 14.6,0 25,5.2 10.6,5.2 16,14 5.6,8.8 5.6,19.4 0,10.8 -4.4,20.6 -4.4,9.8 -15.6,22.6 -11.2,12.6 -32.6,32 h 55.4 l -3.2,24.2 h -88 v -22.4 q 24.6,-24.2 35.8,-36.4 11.2,-12.4 15.6,-20.6 4.6,-8.2 4.6,-16.8 0,-8.2 -4.8,-12.8 -4.6,-4.8 -12.6,-4.8 -7.2,0 -12.8,3.4 -5.6,3.2 -11.8,10.6 l -18.6,-14.8 q 8.4,-11 20,-17.2 11.8,-6.2 26.4,-6.2 z"
+         style="font-weight:bold;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#4e4e4e"
+         id="path12030" />
+      <path
+         d="m 380.17338,271.08125 q 11,0 19.8,3.2 8.8,3.2 16.6,9.8 l -13.6,18.8 q -10,-7.6 -20.2,-7.6 -10.6,0 -16,7.8 -5.4,7.8 -5.4,25.2 0,16.8 5.4,23.8 5.4,7 15.6,7 5.4,0 9.8,-1.6 4.4,-1.8 10.6,-5.6 l 13.8,19.6 q -15.8,12.6 -35.8,12.6 -16.2,0 -28,-6.8 -11.8,-7 -18.2,-19.4 -6.4,-12.6 -6.4,-29.4 0,-16.8 6.4,-29.8 6.4,-13 18.2,-20.2 11.8,-7.4 27.4,-7.4 z"
+         style="font-weight:bold;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#4e4e4e"
+         id="path12032" />
+    </g>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text6176"
+       style="font-size:5.33333px;line-height:1.25;font-family:KisFBDisplay;-inkscape-font-specification:'KisFBDisplay, Normal';white-space:pre;shape-inside:url(#rect6178)" />
+  </g>
+</svg>
