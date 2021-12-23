@@ -1,4 +1,6 @@
 head:
+    - title: Try
+      url: /try
     - title: Install
       url: /install
     - title: Get Involved
