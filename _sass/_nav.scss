@@ -431,13 +431,17 @@ body {
     margin-right: auto;
 }
 
-.architecturecontent  .card {
-    height: 400px;
-   }
+.architecturecontent .card {
+    height: 340px;
+}
+
+.architecturecontent .card h4 {
+    margin-top: 20px;
+}
 
 /* Styling for each card in the architecture section on front page. Each card needs it's own front class to work with the javascript associated with the cards */
-.card .front p{
-    margin-top: 3rem;
+.card .front p {
+    margin-top: 2rem;
 }
 .card .front {
     position: absolute;
