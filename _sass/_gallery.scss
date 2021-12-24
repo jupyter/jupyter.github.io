@@ -75,9 +75,7 @@
   border-color: #eeeeee #dddddd #eeeeee #eeeeee;
 }
 
-.tabs-left > .nav-tabs .active > a,
-.tabs-left > .nav-tabs .active > a:hover,
-.tabs-left > .nav-tabs .active > a:focus {
+.tabs-left > .nav-tabs a.active {
   border-color: #ddd transparent #ddd #ddd;
   *border-right-color: #ffffff;
 }
