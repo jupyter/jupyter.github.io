@@ -1,7 +1,7 @@
 ---
 layout: page_md
-title: Community
-tagline: How to get involved with Project Jupyter
+title: Get Involved
+tagline: How to join the Project Jupyter community
 permalink: /community
 ---
 
@@ -38,6 +38,7 @@ in these organizations:
 - [jupyter-widgets](https://github.com/jupyter-widgets)
 - [jupyter-server](https://github.com/jupyter-server)
 - [jupyter-xeus](https://github.com/jupyter-xeus)
+- [jupyter-lsp](https://github.com/jupyter-lsp)
 - [voila-dashboards](https://github.com/voila-dashboards)
 - [binder-examples](https://github.com/binder-examples)
 - [jupyter-resources](https://github.com/jupyter-resources)

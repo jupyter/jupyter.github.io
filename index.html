@@ -1,39 +1,247 @@
 ---
 layout: default
 title: Home
-navbar_jupytercon: true
 cfp: true
 permalink: /
+
+jumbotron:
+  text: Project Jupyter develops open-source software, open standards, and services for interactive computing across dozens of programming languages.
+  images:
+    - class: fade-in one
+      alt: circle of programming language icons
+      src: assets/circle1.svg
+    - class: fade-in two
+      alt: circle of programming language icons
+      src: assets/circle2.svg
+    - class: fade-in three
+      alt: circle of programming language icons
+      src: assets/circle3.svg
+    - class: main-logo
+      alt: jupyter logo
+      src: assets/main-logo.svg
+
+jupyterlab:
+  headline: 'JupyterLab: A Next-Generation Notebook Interface'
+  description: JupyterLab is a web-based interactive development environment for notebooks, code, and data. Its flexible interface allows users to configure and arrange workflows in data science, scientific computing, computational journalism, and machine learning. A modular design allows for extensions that expand and enrich functionality.
+  image:
+    alt: examples of jupyterlab workspaces in single document and multiple document workspaces
+    src: assets/labpreview.png
+  buttons:
+  - class:
+    href: try
+    text: Try it in your browser
+  - class: install-button
+    href: install
+    text: Install JupyterLab
+
+notebook:
+  headline: 'Jupyter Notebook: The Classic Notebook Interface'
+  description: The Jupyter Notebook is a web application for creating and sharing documents that contain code, visualizations, and text. It can be used for data science, statistical modeling, machine learning, and much more.
+  image:
+    alt: example notebook of Lorenz differential equations
+    src: assets/jupyterpreview.png
+  buttons:
+  - class:
+    href: try
+    text: Try it in your browser
+  - class: install-button
+    href: install
+    text: Install the Notebook
+  features:
+  - headline: Language of choice
+    description: Jupyter supports over 40 programming languages, including Python, R, Julia, and Scala.
+    image:
+      alt: icon to represent a language
+      src: assets/language.svg
+  - headline: Share notebooks
+    description: 'Notebooks can be shared with others using email, Dropbox, GitHub and the <a href="https://nbviewer.jupyter.org/">Jupyter Notebook Viewer</a>.'
+    image:
+      alt: icon to represent sharing a notebook
+      src: assets/share.svg
+  - headline: Interactive output
+    description: 'Your code can produce rich, interactive output: HTML, images, videos, LaTeX, and custom MIME types.'
+    image:
+      alt: icon to represent an interactive widget
+      src: assets/widget.svg
+  - headline: Big data integration
+    description: Leverage big data tools, such as Apache Spark, from Python, R and Scala. Explore that same data with pandas, scikit-learn, ggplot2, TensorFlow.
+    image:
+      alt: spark logo to represent big data
+      src: assets/spark.svg
+
+jupyterhub:
+  image:
+    alt: jupyterhub logo
+    src: assets/hublogo.svg
+  description: A multi-user version of the notebook designed for companies, classrooms and research labs
+  features:
+  - class: feature1
+    headline: Pluggable authentication
+    description: Manage users and authentication with PAM, OAuth or integrate with your own directory service system.
+    image:
+      alt: authentication icon
+      src: assets/authentication.svg
+  - class: feature-middle
+    headline: Centralized deployment
+    description: Deploy the Jupyter Notebook to thousands of users in your organization on centralized infrastructure on- or off-site.
+    image:
+      alt: icon to represent centralized deployment
+      src: assets/central.svg
+  - class: feature-middle
+    headline: Container friendly
+    description: Use Docker and Kubernetes to scale your deployment, isolate user processes, and simplify software installation.
+    image:
+      alt: container icon
+      src: assets/container.svg
+  - class: feature4
+    headline: Code meets data
+    description: Deploy the Notebook next to your data to provide unified software management and data access within your organization.
+    image:
+      alt: icon to represent data
+      src: assets/data.svg
+  button:
+    href: hub
+    text: Learn more about JupyterHub
+
+voila:
+  headline: 'Communicate your results with Voilà.'
+  description: Voilà helps communicate insights by transforming notebooks into secure, stand-alone web applications that you can customize and share.
+  image:
+    alt: examples of Voilà dashboards
+    src: assets/voilapreview.png
+  buttons:
+  - class:
+    href: try
+    text: Try it in your browser
+  - class: install-button
+    href: install
+    text: Install Voilà
+
+open_standards:
+  headline: Open Standards for Interactive Computing
+  description: The Jupyter Notebook is based on a set of open standards for interactive computing. Think HTML and CSS for interactive computing on the web. These open standards can be leveraged by third party developers to build customized applications with embedded interactive computing.
+  image:
+    alt: icon to represent jupyter architecture
+    src: assets/voilapreview.png
+  features:
+  - description: Jupyter Notebooks are an open document format based on JSON. They contain a complete record of the user's sessions and include code, narrative text, equations and rich output.
+    image:
+      alt: icon to represent notebook format
+      src: assets/notebook-format.svg
+  - description: The Notebook communicates with computational Kernels using the Interactive Computing Protocol, an open network protocol based on JSON data over ZMQ and WebSockets.
+    image:
+      alt: icon to represent a protocol
+      src: assets/protocol.svg
+  - description: Kernels are processes that run interactive code in a particular programming language and return output to the user. Kernels also respond to tab completion and introspection requests.
+    image:
+      alt: icon that looks like a terminal represents kernel
+      src: assets/kernel.svg
+
+in_use:
+  headline: Currently in use at
+  companies:
+    - href: https://www.google.com
+      src: assets/google.svg
+      alt: Google
+    - href: https://www.microsoft.com
+      src: assets/Microsoft.svg
+      alt: Microsoft
+    - href: https://www.ibm.com
+      src: assets/IBM.svg
+      alt: IBM
+    - href: https://www.bloomberg.com
+      src: assets/bloomberg.svg
+      alt: Bloomberg
+    - href: https://www.oreilly.com
+      src: assets/oreilly.svg
+      alt: OReilly
+    - href: https://www.anaconda.com
+      src: assets/anaconda.svg
+      alt: Anaconda
+    - href: https://developer.rackspace.com
+      src: assets/rackspace.svg
+      alt: Rackspace
+    - href: https://www.soundcloud.com
+      src: assets/soundcloud.svg
+      alt: SoundCloud
+    - href: https://www.quantopian.com
+      src: assets/quantopian.svg
+      alt: Quantopian
+    - href: https://www.netapp.com/us/
+      src: assets/netapp.svg
+      alt: NetApp
+    - href: https://software-carpentry.org
+      src: assets/carpentry.svg
+      alt: Carpentry
+    - href: https://www.janelia.org
+      src: assets/janelia.svg
+      alt: Janelia
+    - href: https://codeneuro.org
+      src: assets/codeneuro.svg
+      alt: CodeNeuro
+    - href: https://www.linkedin.com/company/nsite-llc/about/
+      src: assets/nsite.svg
+      alt: NSite
+    - href: https://cocalc.com
+      src: assets/cocalc.svg
+      alt: CoCalc
+    - href: https://www.brynmawr.edu
+      src: assets/brynmawr.svg
+      alt: BrynMawr
+    - href: https://www.calpoly.edu
+      src: assets/calpoly.svg
+      alt: CalPoly
+    - href: https://www.berkeley.edu
+      src: assets/Berkeley.svg
+      alt: Berkeley
+    - href: https://www.sheffield.ac.uk
+      src: assets/sheffield.svg
+      alt: Sheffield
+    - href: https://www.gwu.edu
+      src: assets/washington.svg
+      alt: Washington
+    - href: https://www.clemson.edu
+      src: assets/clemson.svg
+      alt: Clemson
+    - href: https://msu.edu
+      src: assets/michigan-state.svg
+      alt: Michigan State University
+    - href: https://www.northwestern.edu
+      src: assets/northwestern.svg
+      alt: Northwestern University
+    - href: https://www.nyu.edu
+      src: assets/NYU.svg
+      alt: NYU
+    - href: https://www.nasa.gov
+      src: assets/NASA.svg
+      alt: NASA
+    - href: https://ayasdi.com
+      src: assets/ayasdi.svg
+      alt: Ayasdi
+    - href: https://www.thedataincubator.com
+      src: assets/tdi.svg
+      alt: The Data Incubator
+    - href: https://quantstack.net
+      src: assets/quantstack.svg
+      alt: QuantStack
+    - href: https://www.latimes.com
+      src: assets/latimes.svg
+      alt: Los Angeles Times
 ---
-
-<style>
-div#countdown {
-    display: block;
-    align-content: center;
-    text-align: center;
-    font-size: 36px;
-    color: white;
-    clear: both;
-}
-</style>
-
 
 <section>
     <div class="jumbotron">
         <div class="row">
             <div class="col-md-12">
+                {% for img in page.jumbotron.images %}
                 <div class="img-container">
-                    <span><img class="img-responsive fade-in one" src="assets/circle1.svg" alt="circle of programming language icons"></span>
+                    <span>
+                        <img class="img-responsive {{ img.class }}"
+                             src="{{ img.src }}"
+                             alt="{{ img.alt }}">
+                    </span>
                 </div>
-                <div class="img-container">
-                    <span><img class="img-responsive fade-in two" src="assets/circle2.svg" alt="circle of programming language icons"></span>
-                </div>
-                <div class="img-container">
-                    <span><img class="img-responsive fade-in three" src="assets/circle3.svg" alt="circle of programming language icons"></span>
-                </div>
-                <div class="img-container">
-                    <img class="img-responsive" id="main-logo" src="assets/main-logo.svg" alt="jupyter logo">
-                </div>
+                {% endfor %}
                 <img class="img-responsive" src="assets/white-background.svg" alt="white background">
             </div>
         </div>
@@ -42,8 +250,7 @@ div#countdown {
         <div class="row">
             <div class="col-md-12">
                 <div class="col-md-8 col-md-offset-2">
-                <h4 class="jumbotron-text">Project Jupyter develops open-source software, open standards,
-                    and services for interactive computing across dozens of programming languages.</h4>
+                <h4 class="jumbotron-text">{{ page.jumbotron.text }}</h4>
                 </div>
              </div>
         </div>
@@ -55,14 +262,19 @@ div#countdown {
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="img-responsive" src="assets/labpreview.png" id="portal" alt="examples of jupyterlab workspaces in single document and multiple document workspaces"/>
+                        <img class="img-responsive"
+                             src="{{ page.jupyterlab.image.src }}"
+                             id="portal"
+                             alt="{{ page.jupyterlab.image.alt }}"/>
                     </div>
                     <div class="col-md-6 nb-highlight-text">
-                        <h3>JupyterLab: A Next-Generation Notebook Interface</h3>
-                        <h4 class="nb-desc">JupyterLab is a web-based interactive development environment for notebooks, code, and data. Its flexible interface allows users to configure and arrange workflows in data science, scientific computing, computational journalism, and machine learning. A modular design allows for extensions that expand and enrich functionality.</h4>
+                        <h3>{{ page.jupyterlab.headline }}</h3>
+                        <h4 class="nb-desc">{{ page.jupyterlab.description }}</h4>
                         <div class="button-container">
-                            <a class="orange-button" href="try">Try it in your browser</a>
-                            <a class="orange-button install-button" href="install.html">Install JupyterLab</a>
+                            {% for btn in page.jupyterlab.buttons %}
+                            <a class="orange-button {{ btn.class }}"
+                               href="{{ btn.href }}">{{ btn.text }}</a>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -76,15 +288,19 @@ div#countdown {
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="img-responsive" src="assets/jupyterpreview.png" id="portal" alt="example notebook of Lorenz differential equations"/>
+                        <img class="img-responsive"
+                             src="{{ page.notebook.image.src }}"
+                             id="portal"
+                             alt="{{ page.notebook.image.alt }}"/>
                     </div>
                     <div class="col-md-6 nb-highlight-text">
-                        <h3>Jupyter Notebook: The Classic Notebook Interface</h3>
-                        <h4 class="nb-desc">The Jupyter Notebook is a web application for creating and sharing
-                            documents that contain code, visualizations, and text. It can be used for data science, statistical modeling, machine learning, and much more.</h4>
+                        <h3>{{ page.notebook.headline }}</h3>
+                        <h4 class="nb-desc">{{ page.notebook.description }}</h4>
                         <div class="button-container">
-                            <a class="orange-button" href="try">Try it in your browser</a>
-                            <a class="orange-button install-button" href="install.html">Install the Notebook</a>
+                            {% for btn in page.notebook.buttons %}
+                            <a class="orange-button {{ btn.class }}"
+                               href="{{ btn.href }}">{{ btn.text }}</a>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -93,26 +309,13 @@ div#countdown {
         <div class="notebook-features">
             <div class="container">
                 <div class="row">
+                    {% for feat in page.notebook.features %}
                     <div class="col-md-3 notebook-feature">
-                        <img class="img-responsive language" src="assets/language.svg" id="feature" alt="icon to represent a language">
-                        <h4>Language of choice</h4>
-                        <p>Jupyter supports over 40 programming languages, including Python, R, Julia, and Scala.</p>
+                        <img class="img-responsive" src="{{ feat.image.src }}" id="feature" alt="{{ feat.image.alt }}">
+                        <h4>{{ feat.headline }}</h4>
+                        <p>{{ feat.description }}</p>
                     </div>
-                    <div class="col-md-3 notebook-feature">
-                        <img class="img-responsive share" src="assets/share.svg" alt="icon to represent sharing a notebook">
-                        <h4>Share notebooks</h4>
-                        <p> Notebooks can be shared with others using email, Dropbox, GitHub and the <a href="https://nbviewer.jupyter.org/">Jupyter Notebook Viewer</a>.</p>
-                    </div>
-                    <div class="col-md-3 notebook-feature">
-                        <img class="img-responsive widget" src="assets/widget.svg" alt="icon to represent an interactive widget">
-                        <h4>Interactive output</h4>
-                        <p>Your code can produce rich, interactive output: HTML, images, videos, LaTeX, and custom MIME types.</p>
-                    </div>
-                    <div class="col-md-3 notebook-feature">
-                        <img class="img-responsive data" src="assets/spark.svg" alt="spark logo to represent big data">
-                        <h4> Big data integration</h4>
-                        <p>Leverage big data tools, such as Apache Spark, from Python, R and Scala. Explore that same data with pandas, scikit-learn, ggplot2, TensorFlow.</p>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -124,36 +327,24 @@ div#countdown {
             <div class="row">
             <div>
                 <div class="hublogo col-md-offset-4 col-md-4 col-md-offset-4">
-                    <img src="assets/hublogo.svg" class="img-responsive" style="margin:0 auto;" id="hublogo" alt="jupyterhub logo">
+                    <img src="{{ page.jupyterhub.image.src }}" class="img-responsive" style="margin:0 auto;" id="hublogo"
+                         alt="{{ page.jupyterhub.image.alt }}">
                 </div>
                 <div class="col-md-offset-3 col-md-6 col-md-offset-3" style="margin-bottom:-36px">
-                    <p style="padding-top:24px; text-align: center">A multi-user version of the notebook designed for companies, classrooms and research labs</p>
+                    <p style="padding-top:24px; text-align: center">{{ page.jupyterhub.description }}</p>
                 </div>
             </div>
             <div class="hubfeatures col-md-12">
-                <div class="feature1 hubfeature col-md-3 authentication">
-                    <img src="assets/authentication.svg" class="img-responsive" alt="authentication icon">
-                    <h4>Pluggable authentication</h4>
-                    <p>Manage users and authentication with PAM, OAuth or integrate with your own directory service system.</p>
+                {% for feat in page.jupyterhub.features %}
+                <div class="{{ feat.class }} hubfeature col-md-3">
+                    <img src="{{ feat.image.src }}" class="img-responsive" alt="{{ feat.image.alt }}">
+                    <h4>{{ feat.headline }}</h4>
+                    <p>{{ feat.description }}</p>
                 </div>
-                <div class="feature-middle hubfeature col-md-3">
-                    <img src="assets/central.svg" class="img-responsive" alt="icon to represent centralized deployment">
-                    <h4>Centralized deployment</h4>
-                    <p>Deploy the Jupyter Notebook to thousands of users in your organization on centralized infrastructure on- or off-site.</p>
-                </div>
-                <div class="feature-middle hubfeature col-md-3">
-                    <img src="assets/container.svg" class="img-responsive" alt="container icon">
-                    <h4>Container friendly</h4>
-                    <p>Use Docker and Kubernetes to scale your deployment, isolate user processes, and simplify software installation.</p>
-                </div>
-                <div class="feature4 hubfeature col-md-3">
-                    <img src="assets/data.svg" class="img-responsive" id="data" alt="icon to represent data">
-                    <h4>Code meets data</h4>
-                    <p>Deploy the Notebook next to your data to provide unified software management and data access within your organization.</p>
-                </div>
+                {% endfor %}
             </div>
             <div class="col-md-12" style="text-align: center; margin-top: 24px;">
-                <a class="orange-button" href="/hub">Learn more about JupyterHub</a>
+                <a class="orange-button" href="{{ page.jupyterhub.button.href }}">{{ page.jupyterhub.button.text }}</a>
             </div>
             </div>
         </div>
@@ -165,15 +356,18 @@ div#countdown {
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="img-responsive" src="assets/voilapreview.png" id="portal" alt="examples of Voilà dashboards"/>
+                        <img class="img-responsive" src="{{ page.voila.image.src }}" id="portal" alt="{{ page.voila.image.alt }}"/>
                     </div>
                     <div class="col-md-6 nb-highlight-text">
-                        <h3>Communicate your results with Voilà.</h3>
+                        <h3>{{ page.voila.headline }}</h3>
                         <h4 class="nb-desc">
-                            Voilà helps communicate insights by transforming notebooks into secure, stand-alone web applications that you can customize and share.
+                            {{ page.voila.description }}
                         </h4>
                         <div class="button-container">
-                            <a class="orange-button install-button" href="install.html">Install Voilà</a>
+                            {% for btn in page.voila.buttons %}
+                            <a class="orange-button {{ btn.class }}"
+                               href="{{ btn.href }}">{{ btn.text }}</a>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -185,36 +379,15 @@ div#countdown {
     <div class="section-grey">
         <div class="container">
             <div class="row">
-                <h3 class="section-header">Currently in use at</h3>
+                <h3 class="section-header">{{ page.in_use.headline }}</h3>
                 <ul class="companies">
-                    <li class="col"><a href="https://www.google.com"><img src="assets/google.svg" class="greydout" alt="Google"></a></li>
-                    <li class="col"><a href="https://www.microsoft.com"><img src="assets/Microsoft.svg" class="greydout" alt="Microsoft"></a></li>
-                    <li class="col"><a href="https://www.ibm.com"><img src="assets/IBM.svg" class="greydout" alt="IBM"></a></li>
-                    <li class="col"><a href="https://www.bloomberg.com"><img src="assets/bloomberg.svg" class="greydout" alt="Bloomberg"></a></li>
-                    <li class="col"><a href="https://www.oreilly.com"><img src="assets/oreilly.svg" class="greydout" alt="OReilly"></a></li>
-                    <li class="col"><a href="https://www.anaconda.com/"><img src="assets/anaconda.svg" class="greydout" alt="Anaconda"></a></li>
-                    <li class="col"><a href="https://developer.rackspace.com"><img src="assets/rackspace.svg" class="greydout" alt="Rackspace"></a></li>
-                    <li class="col"><a href="https://www.soundcloud.com"><img src="assets/soundcloud.svg" class="greydout" alt="SoundCloud"></a></li>
-                    <li class="col"><a href="https://www.quantopian.com/"><img src="assets/quantopian.svg" class="greydout" alt="Quantopian"></a></li>
-                    <li class="col"><a href="https://www.netapp.com/us/"><img src="assets/netapp.svg" class="greydout" alt="NetApp"></a></li>
-                    <li class="col"><a href="https://software-carpentry.org"><img src="assets/carpentry.svg" class="greydout" alt="Carpentry"></a></li>
-                    <li class="col"><a href="https://www.janelia.org/"><img src="assets/janelia.svg" class="greydout" alt="Janelia"></a></li>
-                    <li class="col"><a href="https://codeneuro.org/"><img src="assets/codeneuro.svg" class="greydout" alt="CodeNeuro"></a></li>
-                    <li class="col"><a href="https://www.linkedin.com/company/nsite-llc/about/"><img src="assets/nsite.svg" class="greydout" alt="NSite"></a></li>
-                    <li class="col"><a href="https://cocalc.com/"><img src="assets/cocalc.svg" class="greydout" alt="CoCalc"></a></li>
-                    <li class="col"><a href="https://www.brynmawr.edu"><img src="assets/brynmawr.svg" class="greydout" alt="BrynMawr"></a></li>
-                    <li class="col"><a href="https://www.calpoly.edu"><img src="assets/calpoly.svg" class="greydout" alt="CalPoly"></a></li>
-                    <li class="col"><a href="https://www.berkeley.edu"><img src="assets/Berkeley.svg" class="greydout" alt="Berkeley"></a></li>
-                    <li class="col"><a href="https://www.sheffield.ac.uk/"><img src="assets/sheffield.svg" class="greydout" alt="Sheffield"></a></li>
-                    <li class="col"><a href="https://www.gwu.edu/"><img src="assets/washington.svg" class="greydout" alt="Washington"></a></li>
-                    <li class="col"><a href="https://www.clemson.edu/"><img src="assets/clemson.svg" class="greydout" alt="Clemson"></a></li>
-                    <li class="col"><a href="https://msu.edu/"><img src="assets/michigan-state.svg" class="greydout" alt="Michigan State University"></a></li>
-                    <li class="col"><a href="https://www.northwestern.edu/"><img src="assets/northwestern.svg" class="greydout" alt="Northwestern University"></a></li>
-                    <li class="col"><a href="https://www.nyu.edu"><img src="assets/NYU.svg" class="greydout" alt="NYU"></a></li>
-                    <li class="col"><a href="https://www.nasa.gov"><img src="assets/NASA.svg" class="greydout" alt="NASA"></a></li>
-                    <li class="col"><a href="https://ayasdi.com"><img src="assets/ayasdi.svg" class="greydout" alt="Ayasdi"></a></li>
-                    <li class="col"><a href="https://www.thedataincubator.com"><img src="assets/tdi.svg" class="greydout" alt="The Data Incubator"></a></li>
-                    <li class="col"><a href="https://quantstack.net"><img src="assets/quantstack.svg" class="greydout" alt="QuantStack"></a></li>
+                {% for li in page.in_use.companies %}
+                <li class="col">
+                    <a href="{{ li.href }}">
+                        <img src="{{ li.src }}" class="greydout" alt="{{ li.alt }}">
+                    </a>
+                </li>
+                {% endfor %}
                 </ul>
             </div>
         </div>
@@ -225,40 +398,22 @@ div#countdown {
         <div class="container">
             <div class="architecturedescription">
                 <img src="assets/architectureicon2.svg" class="section-icon" alt="icon to represent jupyter architecture">
-                <h3 class="section-header">Open Standards for Interactive Computing</h3>
-                <h4 class="support-paragraph">The Jupyter Notebook is based on a set of open standards for interactive computing. Think HTML and CSS for interactive computing on the web. These open standards can be leveraged by third party developers to build customized applications with embedded interactive computing.</h4>
+                <h3 class="section-header">{{ page.open_standards.headline }}</h3>
+                <h4 class="support-paragraph">{{ page.open_standards.description }}</h4>
             </div>
             <div class="architecturecontent row">
+                {% for feat in page.open_standards.features %}
                 <div class="col-sm-6 col-md-4">
                     <div class="card">
                         <div class="arcfeature" id="arcfeature1">
                             <div class="front">
-                                <img src="assets/notebook-format.svg" alt="icon to represent notebook format">
-                                <p id="document">Jupyter Notebooks are an open document format based on JSON. They contain a complete record of the user's sessions and include code, narrative text, equations and rich output. </p>
+                                <img src="{{ feat.image.src }}" alt="{{ feat.image.alt }}">
+                                <p id="document">{{ feat.description }}</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="card">
-                        <div class="arcfeature" id="protocol">
-                            <div class="front">
-                                <img src="assets/protocol.svg" alt="icon to represent a protocol">
-                                <p>The Notebook communicates with computational Kernels using the Interactive Computing Protocol, an open network protocol based on JSON data over ZMQ and WebSockets.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4">
-                    <div class="card">
-                        <div class="" id="kernel">
-                            <div class="front">
-                                <img src="assets/kernel.svg" alt="icon that looks like a terminal represents kernel">
-                                <p id="block3">Kernels are processes that run interactive code in a particular programming language and return output to the user. Kernels also respond to tab completion and introspection requests.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

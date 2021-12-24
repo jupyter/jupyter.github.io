@@ -148,7 +148,7 @@ steering:
   - first: Damian
     last: Avila
     avatar: https://avatars3.githubusercontent.com/u/1640669?v=3&s=400
-    affiliation: Anaconda, Inc.
+    affiliation: UMSI & 2i2c
     gh_handle: 'damianavila'
   - first: Matthias
     last: Bussonnier
@@ -173,7 +173,7 @@ steering:
   - first: Jason
     last: Grout
     avatar: https://avatars1.githubusercontent.com/u/192614?v=3&s=400
-    affiliation: Bloomberg
+    affiliation: Databricks
     gh_handle: 'jasongrout'
   - first: Jessica
     last: Hamrick
@@ -218,7 +218,7 @@ steering:
   - first: Steven
     last: Silvester
     avatar: https://avatars2.githubusercontent.com/u/2096628?v=3&s=400
-    affiliation: Apple
+    affiliation: MongoDB
     gh_handle: 'blink1073'
   - first: Carol
     last: Willing
@@ -268,7 +268,7 @@ trademark_subcomittee:
   - first: Jason
     last: Grout
     avatar: https://avatars1.githubusercontent.com/u/192614?v=3&s=400
-    affiliation: Bloomberg
+    affiliation: Databricks
     gh_handle: 'jasongrout'
   - first: Tim
     last: George
