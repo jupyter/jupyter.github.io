@@ -20,11 +20,6 @@ This contains information about the different projects in the Jupyter ecosystem,
 the tools and skills that are useful for each project, and other ways that you
 can become a part of the Jupyter community.
 
-### Events
-
-Many members of the Jupyter community host and attend events to connect others that use
-Jupyter and other tools in the open data analytics stack, such as JupyterCon, Jupyter Community Workshops, JupyterDays, and other events. See the [Project Jupyter Events](/events) for more details.
-
 ## Explore our projects
 
 Jupyter has seen wonderful growth over the past decade. As we have grown the
