@@ -25,7 +25,7 @@ jupyterlab:
   description: JupyterLab is a web-based interactive development environment for notebooks, code, and data. Its flexible interface allows users to configure and arrange workflows in data science, scientific computing, computational journalism, and machine learning. A modular design allows for extensions that expand and enrich functionality.
   image:
     alt: examples of jupyterlab workspaces in single document and multiple document workspaces
-    src: assets/labpreview.png
+    src: assets/labpreview
   buttons:
   - class:
     href: try
@@ -39,7 +39,7 @@ notebook:
   description: The Jupyter Notebook is a web application for creating and sharing documents that contain code, visualizations, and text. It can be used for data science, statistical modeling, machine learning, and much more.
   image:
     alt: example notebook of Lorenz differential equations
-    src: assets/jupyterpreview.png
+    src: assets/jupyterpreview
   buttons:
   - class:
     href: try
@@ -108,7 +108,7 @@ voila:
   description: Voilà helps communicate insights by transforming notebooks into secure, stand-alone web applications that you can customize and share.
   image:
     alt: examples of Voilà dashboards
-    src: assets/voilapreview.png
+    src: assets/voilapreview
   buttons:
   - class:
     href: try
@@ -120,9 +120,6 @@ voila:
 open_standards:
   headline: Open Standards for Interactive Computing
   description: The Jupyter Notebook is based on a set of open standards for interactive computing. Think HTML and CSS for interactive computing on the web. These open standards can be leveraged by third party developers to build customized applications with embedded interactive computing.
-  image:
-    alt: icon to represent jupyter architecture
-    src: assets/voilapreview.png
   features:
   - headline: Notebook Document Format
     description: Jupyter Notebooks are an open document format based on JSON. They contain a complete record of the user's sessions and include code, narrative text, equations and rich output.
@@ -265,10 +262,13 @@ in_use:
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="img-responsive"
-                             src="{{ page.jupyterlab.image.src }}"
-                             id="portal"
-                             alt="{{ page.jupyterlab.image.alt }}"/>
+                        <picture>
+                            <source type="image/webp" srcset="{{ page.jupyterlab.image.src }}.webp">
+                            <img src="{{ page.jupyterlab.image.src }}.jpg"
+                                 alt="{{ page.jupyterlab.image.alt }}"
+                                 class="img-responsive"
+                                 id="portal" />
+                        </picture>
                     </div>
                     <div class="col-md-6 nb-highlight-text">
                         <h3>{{ page.jupyterlab.headline }}</h3>
@@ -291,10 +291,13 @@ in_use:
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="img-responsive"
-                             src="{{ page.notebook.image.src }}"
-                             id="portal"
-                             alt="{{ page.notebook.image.alt }}"/>
+                        <picture>
+                            <source type="image/webp" srcset="{{ page.notebook.image.src }}.webp">
+                            <img src="{{ page.notebook.image.src }}.jpg"
+                                 alt="{{ page.notebook.image.alt }}"
+                                 class="img-responsive"
+                                 id="portal" />
+                        </picture>
                     </div>
                     <div class="col-md-6 nb-highlight-text">
                         <h3>{{ page.notebook.headline }}</h3>
@@ -359,7 +362,13 @@ in_use:
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="img-responsive" src="{{ page.voila.image.src }}" id="portal" alt="{{ page.voila.image.alt }}"/>
+                        <picture>
+                            <source type="image/webp" srcset="{{ page.voila.image.src }}.webp">
+                            <img src="{{ page.voila.image.src }}.jpg"
+                                 alt="{{ page.voila.image.alt }}"
+                                 class="img-responsive"
+                                 id="portal" />
+                        </picture>
                     </div>
                     <div class="col-md-6 nb-highlight-text">
                         <h3>{{ page.voila.headline }}</h3>
