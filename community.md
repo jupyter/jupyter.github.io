@@ -3,6 +3,53 @@ layout: page_md
 title: Get Involved
 tagline: How to join the Project Jupyter community
 permalink: /community
+
+channels:
+  - title: Jupyter GitHub
+    description: A place where the community collaborates on the development of Jupyter software.
+    src: assets/github.svg
+    alt: github icon
+    url: https://github.com/jupyter/
+  - title: Jupyter Discourse
+    description: A Discourse Forum for a multitude of Jupyter topics
+    src: assets/mail-list.svg
+    alt: mailing list icon
+    url: https://discourse.jupyter.org/
+  - title: Jupyter General Mailing List
+    description: A Google Group for general discussions of Jupyter's use.
+    src: assets/mail-list.svg
+    alt: mailing list icon
+    url: https://groups.google.com/forum/#!forum/jupyter
+  - title: Jupyter in Education Mailing List
+    description: A Google Group for general discussions of Jupyter's use in education.
+    src: assets/mail-education.svg
+    alt: education mailing list icon
+    url: https://groups.google.com/forum/#!forum/jupyter-education
+  - title: Jupyter for Research Facilities
+    description: A Google Group for discussions of Jupyter's use at scientific research facilities (such as X-ray light sources, observatories, supercomputers, etc.).
+    src: assets/mail-list.svg
+    alt: mailing list icon
+    url: https://groups.google.com/forum/?pli=1#!forum/jupyter-research-facilities
+  - title: Jupyter Gitter Chatroom
+    description: A real-time chatroom, for general development related discussions.
+    src: assets/gitter.svg
+    alt: gitter icon
+    url: https://gitter.im/jupyter/jupyter
+  - title: Jupyter on Stack Overflow
+    description: A popular third party site for programmers to ask and answer questions about Jupyter.
+    src: assets/stack-overflow.svg
+    alt: stack overflow icon
+    url: https://stackoverflow.com/questions/tagged/jupyter
+  - title: Jupyter Community Guides
+    description: Information about community, communications and governance.
+    src: assets/documentation.svg
+    alt: documentation icon
+    url: https://jupyter.readthedocs.io/en/latest/community/content-community.html
+  - title: Jupyter Contributor Guides
+    description: Contribution guidelines
+    src: assets/documentation.svg
+    alt: documentation icon
+    url: https://jupyter.readthedocs.io/en/latest/contributing/content-contributor.html
 ---
 
 Jupyter is a community of data enthusiasts who believe in the power of open
@@ -19,11 +66,6 @@ guide](https://jupyter.readthedocs.io/en/latest/contributing/content-contributor
 This contains information about the different projects in the Jupyter ecosystem,
 the tools and skills that are useful for each project, and other ways that you
 can become a part of the Jupyter community.
-
-### Events
-
-Many members of the Jupyter community host and attend events to connect others that use
-Jupyter and other tools in the open data analytics stack, such as JupyterCon, Jupyter Community Workshops, JupyterDays, and other events. See the [Project Jupyter Events](/events) for more details.
 
 ## Explore our projects
 
@@ -58,4 +100,27 @@ a way that makes the community thrive.
 Below is a short list of gitter channels, email listservs, and github repositories
 where you can get involved. **We always welcome participation in the Jupyter community**.
 
-{% include community_lists.html %}
+<section>
+<div class="section-white top-section-border">
+    <div class="container">
+    <div class="row">
+        {% for obj in page.channels %}
+        <div class="col-sm-6 col-md-12 resource-section">
+            <div class="resource-content">
+                <div class="col-md-2">
+                    <img src="{{ obj.src }}" class="resource-logo" alt="{{ obj.alt }}">
+                </div>
+                <div class="col-md-8 resource-text">
+                    <h3 class="resource-name">{{ obj.title }}</h3>
+                    <p class="resource-desc">{{ obj.description }}</p>
+                </div>
+                <div class="col-md-2 resource-button">
+                    <a href="{{ obj.url }}">View</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+</div>
+</section>
