@@ -1,5 +1,7 @@
 ---
-# this ensures Jekyll reads the file to be transformed into CSS later
+# This ensures Jekyll reads the file to be transformed into CSS later
 # only Main files contain this front matter, not partials.
+
+# Look in _sass/bootstrap/_index.scss to find and edit the CSS
 ---
 @import "bootstrap";
