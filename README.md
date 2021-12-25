@@ -2,44 +2,51 @@
 
 This is the source to [Jupyter.org](https://jupyter.org/).
 
-# Build instructions
+## Build the site locally
 
-The site is built using GitHub Pages Jekyll, see [Jekyll
-website](https://jekyllrb.com/) for customizing the build process, and detail on how
-what where.
+The site is built with Jekyll, see [the Jekyll website](https://jekyllrb.com/) for how to customize the build process.
 
-# Quick local testing
+The easiest way to build the site locally is by using the [`nox` command line tool](https://nox.thea.codes/). This tool makes it easy to automate commands in a repository, and we have included a `build` command to quickly install the dependencies and build the site.
 
-Clone this repository locally, and cd into it:
+To build and preview the site locally, follow these steps:
 
-```
-git clone https://github.com/jupyter/jupyter.github.io
-cd jupyter.github.io
-```
+1. **Clone this repository**.
+   
+   ```console
+   $ git clone https://github.com/jupyter/jupyter.github.io
+   $ cd jupyter.github.io
+   ```
+2. **Install `nox`**
 
-Install `bundler`, and use it to install the dependencies to build the website:
+   ```console
+   $ pip install nox
+   ```
+3. **Run the `build` command**
+   
+   ```console
+   $ nox -s build
+   ```
 
-```
-gem install bundler
-bundle install
-```
 
-Now you can ask Jekyll to build the website.
+This will install the needed dependencies in a virtual environment using [the `conda` package manager](https://docs.conda.io/en/latest/). 
 
-```
-bundle exec jekyll serve liveserve
-```
+**When the build is finished, go to `localhost:4000`**. When Jekyll finishes building your site, it will open a port on your computer and serve the website there so that you may preview it.
 
-Open your browser to localhost:4000.
-
-Edit the various parts, the `liveserve` option should automatically rebuild and
-refresh the pages when changes occur.
+**You can make changes and watch the preview auto-update**. When you make changes to the website, they will automatically be updated in your preview in the browser.
 
 To stop serving the website, press **`Ctrl`**-`C` in your terminal
 
-Enjoy.
+### Build the site manually
 
-# What is where
+To build the site manually, check out the installation commands that are in `noxfile.py`. These use `nox` syntax, but they should give you a clear idea of which packages must be installed in order to build the documentation.
+
+## Where the site is hosted
+
+The site is automatically built with [Netlify](https://netlify.com), a hosting service for static websites. When any changes are merged into the `master` branch, Netlify will automatically build them and update the website at [jupyter.org](https://jupyter.org).
+
+**You can preview changes in Pull Requests**. Netlify will automatically build a preview of the website in an open Pull Request. To see this, click on the **`Show all checks`** button just above the comment box in the Pull Request window. Then click on **`deploy/netlify`** to see a preview of the built site.
+
+## Structure of this website
 
 Most pages are located at the place where their URL is, nothing fancy.  Headers
 and footer are in `_includes/head.html`, `_includes/header.html`,
@@ -47,7 +54,7 @@ and footer are in `_includes/head.html`, `_includes/header.html`,
 
 The **navbar** is in `_data/nav.yml` and looks like that:
 
-```
+```yaml
 head:
     - Home
     - title: Install
@@ -70,7 +77,7 @@ which means, insert in order the following links into the navbar:
 The navbar will automatically target `_blank` pages where the url is explicit,
 and mark the correct link as the "current" one.
 
-# How do I create a new page?
+## Create a new page
 
 Create `my_page.html` (will have url `https://jupyter.org/my_page.html`)
 or `my_page/index.html` (will have url `https://jupyter.org/my_page/`), start with the following:
@@ -88,7 +95,7 @@ You cannot do it yet with .md file, but you will be able soon.
 
 Add commit (and don't forget to add to `_data/nav.yml`).
 
-# Previewing a Pull Request
+## Preview a Pull Request
 
 Netlify is used to provide a link to a rendered website with the changes proposed
 in a PR. This convenience helps reviewers see how the change would look
