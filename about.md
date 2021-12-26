@@ -297,6 +297,7 @@ trademark_subcomittee:
     gh_handle: 'ellisonbg'
 
 # All sponsor and partner SVGs should be 300x60 pixels
+# And entries ordered according to A-Z,1-9
 sponsors:
   - url: https://opendreamkit.org/
     src: /assets/EC-H2020.svg
