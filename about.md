@@ -296,78 +296,80 @@ trademark_subcomittee:
     affiliation: Amazon Web Services
     gh_handle: 'ellisonbg'
 
+# All sponsor and partner SVGs should be 300x60 pixels
 sponsors:
-  - url: https://helmsleytrust.org
-    src: /assets/helmsley.svg
-    alt: helmsley trust logo
-  - url: https://www.sloan.org/
-    src: /assets/alfred.svg
-    alt: sloan logo
-  - url: https://www.moore.org/
-    src: /assets/moore.svg
-    alt: moore foundation logo
-  - url: https://www.google.com/
-    src: /assets/google-color.svg
-    alt: google logo
-  - url: https://developer.rackspace.com/
-    src: /assets/rackspace-color.svg
-    alt: rackspace logo
-  - url: https://www.fastly.com/
-    src: /assets/fastly.svg
-    alt: fastly logo
   - url: https://opendreamkit.org/
     src: /assets/EC-H2020.svg
     alt: EU logo
+  - url: https://www.fastly.com/
+    src: /assets/fastly.svg
+    alt: fastly logo
+  - url: https://www.google.com/
+    src: /assets/google-color.svg
+    alt: google logo
+  - url: https://helmsleytrust.org
+    src: /assets/helmsley.svg
+    alt: helmsley trust logo
   - url: https://www.microsoft.com/
     src: /assets/microsoft-color.svg
     alt: microsoft logo
+  - url: https://www.moore.org/
+    src: /assets/moore.svg
+    alt: moore foundation logo
   - url: https://www.quansight.com/
     src: /assets/quansight.svg
     alt: Quansight logo
+  - url: https://developer.rackspace.com/
+    src: /assets/rackspace-color.svg
+    alt: rackspace logo
   - url: https://schmidtfutures.com/
-    src: /assets/schmidt.png
-    alt: Schmidt log
+    src: /assets/schmidt.svg
+    alt: schmidt futures logo
+  - url: https://www.sloan.org/
+    src: /assets/alfred.svg
+    alt: sloan logo
+
 
 partners:
   - url: https://apple.com/
     src: /assets/apple.svg
     alt: apple inc logo
-  - url: https://www.bloomberg.com/
-    src: /assets/bloomberg-color.svg
-    alt: bloomberg logo
-  - url: https://techblog.netflix.com
-    src: /assets/netflix-color.svg
-    alt: netflix logo
-  - url: https://www.calpoly.edu/
-    src: /assets/poly-color.svg
-    alt: cal poly logo
-  - url: https://www.berkeley.edu/
-    src: /assets/berkeley-color.svg
-    alt: UC Berkeley logo
-  - url: https://quantstack.net/
-    src: /assets/quantstack-color.svg
-    alt: QuantStack logo
-  - url: https://www.twosigma.com/
-    src: /assets/two-sigma.svg
-    alt: Two Sigma logo
-  - url: https://www.simula.no/
-    src: /assets/simula.svg
-    alt: Simula logo
-  - url: https://www.quansight.com/
-    src: /assets/quansight.svg
-    alt: Quansight logo
   - url: https://aws.amazon.com/
     src: /assets/aws.svg
     alt: AWS logo
+  - url: https://www.berkeley.edu/
+    src: /assets/berkeley-color.svg
+    alt: UC Berkeley logo
+  - url: https://www.bloomberg.com/
+    src: /assets/bloomberg-color.svg
+    alt: bloomberg logo
+  - url: https://www.calpoly.edu/
+    src: /assets/poly-color.svg
+    alt: cal poly logo
   - url: https://databricks.com/
     src: /assets/databricks.svg
     alt: Databricks logo
-  - url: https://www.mongodb.com/
-    src: /assets/mongodb.svg
-    alt: MongoDB logo
   - url: https://www.si.umich.edu/
     src: /assets/michigan.svg
     alt: UMSI logo
+  - url: https://www.mongodb.com/
+    src: /assets/mongodb.svg
+    alt: MongoDB logo
+  - url: https://techblog.netflix.com
+    src: /assets/netflix-color.svg
+    alt: netflix logo
+  - url: https://www.quansight.com/
+    src: /assets/quansight.svg
+    alt: Quansight logo
+  - url: https://quantstack.net/
+    src: /assets/quantstack-color.svg
+    alt: QuantStack logo
+  - url: https://www.simula.no/
+    src: /assets/simula.svg
+    alt: Simula logo
+  - url: https://www.twosigma.com/
+    src: /assets/two-sigma.svg
+    alt: Two Sigma logo
   - url: https://2i2c.org/
     src: /assets/2i2c.svg
     alt: 2i2c logo
@@ -488,7 +490,10 @@ users and contributors to participate in the project with respect and safety.
         {% for obj in page.sponsors %}
         <li>
             <a href="{{ obj.url }}">
-                <img src="{{ obj.src }}" alt="{{ obj.alt }}" />
+                <img src="{{ obj.src }}"
+                     width=300
+                     height=90
+                     alt="{{ obj.alt }}" />
             </a>
         </li>
         {% endfor %}
@@ -497,7 +502,9 @@ users and contributors to participate in the project with respect and safety.
 
 <div id="partners" class="about-section section-white top-section-border">
     <div class="row section-header">
-        <img src="{{site.baseurl}}/assets/institutional_partners2.svg" class="section-icon img-responsive" alt="institutional partners">
+        <img src="{{site.baseurl}}/assets/institutional_partners2.svg"
+             class="section-icon img-responsive"
+             alt="institutional partners" />
         <h3 class="col-sm-12 section-header">Institutional Partners</h3>
         <p class="support-paragraph">
             Institutional Partners are organizations that support the project by employing Jupyter Steering Council members.
@@ -508,7 +515,10 @@ users and contributors to participate in the project with respect and safety.
         {% for obj in page.partners %}
         <li>
             <a href="{{ obj.url }}">
-                <img src="{{ obj.src }}" alt="{{ obj.alt }}">
+                <img src="{{ obj.src }}"
+                     width=300
+                     height=90
+                     alt="{{ obj.alt }}" />
             </a>
         </li>
         {% endfor %}
