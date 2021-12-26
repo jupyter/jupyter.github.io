@@ -1,47 +1,96 @@
 # Jupyter's main website
 
-[![Build Status](https://travis-ci.org/jupyter/jupyter.github.io.svg?branch=master)](https://travis-ci.org/jupyter/jupyter.github.io)
-
 This is the source to [Jupyter.org](https://jupyter.org/).
 
-# Build instructions
+## Build the site locally
 
-The site is built using GitHub Pages Jekyll, see [Jekyll
-website](https://jekyllrb.com/) for customizing the build process, and detail on how
-what where.
+The site is built with Jekyll, see [the Jekyll website](https://jekyllrb.com/) for how to customize the build process.
 
-# Quick local testing
+There are a few ways to build the site locally, see the sections below.
 
-Clone this repository locally, and cd into it:
+### Build the site automatically with `nox`
 
-```
-git clone https://github.com/jupyter/jupyter.github.io
-cd jupyter.github.io
-```
+The easiest way to build the site locally is by using the [`nox` command line tool](https://nox.thea.codes/). This tool makes it easy to automate commands in a repository, and we have included a `build` command to quickly install the dependencies and build the site.
 
-Install `bundler`, and use it to install the dependencies to build the website:
+To build and preview the site locally, follow these steps:
 
-```
-gem install bundler
-bundle install
-```
+1. **Clone this repository**.
+   
+   ```console
+   $ git clone https://github.com/jupyter/jupyter.github.io
+   $ cd jupyter.github.io
+   ```
+2. **Install `nox`**
 
-Now you can ask Jekyll to build the website.
+   ```console
+   $ pip install nox
+   ```
+3. **Run the `build` command**
+   
+   ```console
+   $ nox -s build
+   ```
 
-```
-bundle exec jekyll serve liveserve
-```
 
-Open your browser to localhost:4000.
+This will install the needed dependencies in a virtual environment using [the `conda` package manager](https://docs.conda.io/en/latest/). 
 
-Edit the various parts, the `liveserve` option should automatically rebuild and
-refresh the pages when changes occur.
+**When the build is finished, go to `localhost:4000`**. When Jekyll finishes building your site, it will open a port on your computer and serve the website there so that you may preview it.
+
+**You can make changes and watch the preview auto-update**. When you make changes to the website, they will automatically be updated in your preview in the browser.
 
 To stop serving the website, press **`Ctrl`**-`C` in your terminal
 
-Enjoy.
+### Build the site manually
 
-# What is where
+To build the site manually, you'll need Ruby, Jekyll, and the packages that Jekyll uses to build the site (these are defined in [`Gemfile`](Gemfile)).
+
+Follow these steps:
+
+1. **Install Jekyll**. You have two options:
+   - [Follow the Jekyll installation instructions](https://jekyllrb.com/docs/#instructions). These steps will guide you through installing Ruby and Jekyll locally.
+   - Use [the anaconda distribution](https://conda.io) and [conda-forge](https://conda-forge.org/).
+
+     First [install miniconda](https://conda.io/miniconda.html), then run the following command:
+
+     ```console
+     $ conda install -c conda-forge ruby c-compiler compilers cxx-compiler
+     ```
+
+     Finally install Jekyll and Bundler, which will let you install the site's dependencies:
+
+     ```console
+     $ gem install jekyll bundler
+     ```
+2. **Install the site's build dependencies**. These are specified in [`Gemfile`](Gemfile).
+   
+   ```console
+   $ bundle install
+   ```
+
+   This step might take a few moments as it must download and install a number of local extensions. It will create a local file called `Gemfile.lock`. These are the "frozen" dependencies and their version numbers needed to build the site.
+
+3. **Build the site locally**.
+   
+   ```console
+   $ bundle exec jekyll serve liveserve
+   ```
+
+   This will build the site's HTML and open a server at `localhost:4000` for you to preview the site.
+
+
+## Where the site is hosted
+
+The site is automatically built with [Netlify](https://netlify.com), a hosting service for static websites. When any changes are merged into the `master` branch, Netlify will automatically build them and update the website at [jupyter.org](https://jupyter.org).
+
+## Preview changes in a Pull Request
+
+Netlify will automatically build a preview of the website in an open Pull Request. To see this, click on the **`Show all checks`** button just above the comment box in the Pull Request window. Then click on the **`details`** link on the **`deploy/netlify`** row to see a preview of the built site.
+
+Here's an image of this box on a GitHub PR page:
+
+![Netlify Preview Button](.github/images/netlify-preview.png)
+
+## Structure of this website
 
 Most pages are located at the place where their URL is, nothing fancy.  Headers
 and footer are in `_includes/head.html`, `_includes/header.html`,
@@ -49,7 +98,7 @@ and footer are in `_includes/head.html`, `_includes/header.html`,
 
 The **navbar** is in `_data/nav.yml` and looks like that:
 
-```
+```yaml
 head:
     - Home
     - title: Install
@@ -72,7 +121,7 @@ which means, insert in order the following links into the navbar:
 The navbar will automatically target `_blank` pages where the url is explicit,
 and mark the correct link as the "current" one.
 
-# How do I create a new page?
+## Create a new page
 
 Create `my_page.html` (will have url `https://jupyter.org/my_page.html`)
 or `my_page/index.html` (will have url `https://jupyter.org/my_page/`), start with the following:
@@ -90,19 +139,20 @@ You cannot do it yet with .md file, but you will be able soon.
 
 Add commit (and don't forget to add to `_data/nav.yml`).
 
-# Continuous integration testing on Travis
+## Site quirks and tips
 
-Travis will run and test:
+### Lazy loading of images
 
-- jekyll build
-- html-proofer
-- csslint
+The Jupyter website uses [lazy loading of images](https://web.dev/browser-level-image-lazy-loading/). In general, images that are "below the fold" (below the browser window on page load) for laptop-sized screen sizes are encouraged to be configured for "lazy loading".
 
-# Previewing a Pull Request
+Add lazy loading to an image by adding a `loading="lazy"` configuration to the `<img>` element. For example:
 
-Netlify is used to provide a link to a rendered website with the changes proposed
-in a PR. This convenience helps reviewers see how the change would look
-before it is deployed in production.
+```html
+<img class="my-class" src="my/src.png" loading="lazy" />
+```
 
-The link is found in the GitHub PR status box. In the **deploy/netlify** section,
-click on the `Details` link.
+For images that are "above the fold" (that will be seen by users immediately after page load), use "eager" loading to make sure they are loaded immediately. For example:
+
+```html
+<img class="my-class" src="my/src.png" loading="eager" />
+```
