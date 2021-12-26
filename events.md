@@ -27,7 +27,6 @@ Global JupyterCon conferences provide opportunities for the Jupyter community to
 * [JupyterCon 2018](https://conferences.oreilly.com/jupyter/jup-ny.html) ([videos](https://www.youtube.com/playlist?list=PL055Epbe6d5b572IRmYAHkUgcq3y6K3Ae))
 * [JupyterCon 2020 (virtual)](https://jupytercon.com/) ([videos](https://www.youtube.com/c/JupyterCon/videos))
 
-
 ## Jupyter Community Workshops
 
 [Jupyter Community Workshops](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549) bring together small groups (approximately 12 to 24 people) of Jupyter community members and core contributors for high-impact strategic work and community engagement on focused topics.
@@ -42,7 +41,6 @@ Individual workshops:
 - [Jupyter Widgets workshop](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549)
 - [Jupyter Hackathon in Hawaii](https://blog.jupyter.org/jupyter-hackathon-series-in-hawaii-97b3d1fbce68)
 - [Teaching and Learning with Jupyter](https://blog.jupyter.org/teaching-and-learning-with-jupyter-c1d965f7b93a)
-
 
 ### Round 2: 2019
 
@@ -65,23 +63,7 @@ Individual workshops:
 
 Due to the COVID-19 pandemic, workshops were put on hold during 2020. Stay tuned for more details about workshops funded in round 3.
 
-<!--
-## Jupyter Subproject Sprints
-
-A number of Jupyter subprojects have hosted in-person sprints open to the public to push forward on development priorities.
-
-## JupyterDays
-
-A number of smaller, locally-organized single-day Jupyter Days events have been hosted. For example, [here's a post announcing Jupyter Days in Atlanta](https://blog.jupyter.org/announcing-jupyter-day-atlanta-spring-2018-d68ebee2c6cb)
-
--->
-
 ## Jupyter Community Calls
 
 [Jupyter Community Calls](https://jupyter.readthedocs.io/en/latest/community/content-community.html#jupyter-wide-meetings) provide a regular virtual forum for community-wide discussion and sharing.
 
-<!--
-## Calendar
-
-Jupyter Community meetings are listed in the [Project Jupyter Calendar](https://jupyter.readthedocs.io/en/latest/community/content-community.html#jupyter-community-meetings)
--->
