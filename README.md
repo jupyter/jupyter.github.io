@@ -1,7 +1,5 @@
 # Jupyter's main website
 
-[![Build Status](https://travis-ci.org/jupyter/jupyter.github.io.svg?branch=master)](https://travis-ci.org/jupyter/jupyter.github.io)
-
 This is the source to [Jupyter.org](https://jupyter.org/).
 
 # Build instructions
@@ -89,14 +87,6 @@ write some html here (consider you are already inside `<body></body>`)
 You cannot do it yet with .md file, but you will be able soon.
 
 Add commit (and don't forget to add to `_data/nav.yml`).
-
-# Continuous integration testing on Travis
-
-Travis will run and test:
-
-- jekyll build
-- html-proofer
-- csslint
 
 # Previewing a Pull Request
 
