@@ -5,8 +5,6 @@ head:
       url: /community
     - title: Documentation
       url: /documentation
-    - title: Widgets
-      url: /widgets
     - title: News
       url: https://blog.jupyter.org
       newpage: true
