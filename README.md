@@ -6,6 +6,10 @@ This is the source to [Jupyter.org](https://jupyter.org/).
 
 The site is built with Jekyll, see [the Jekyll website](https://jekyllrb.com/) for how to customize the build process.
 
+There are a few ways to build the site locally, see the sections below.
+
+### Build the site automatically with `nox`
+
 The easiest way to build the site locally is by using the [`nox` command line tool](https://nox.thea.codes/). This tool makes it easy to automate commands in a repository, and we have included a `build` command to quickly install the dependencies and build the site.
 
 To build and preview the site locally, follow these steps:
@@ -38,13 +42,53 @@ To stop serving the website, press **`Ctrl`**-`C` in your terminal
 
 ### Build the site manually
 
-To build the site manually, check out the installation commands that are in `noxfile.py`. These use `nox` syntax, but they should give you a clear idea of which packages must be installed in order to build the documentation.
+To build the site manually, you'll need Ruby, Jekyll, and the packages that Jekyll uses to build the site (these are defined in [`Gemfile`](Gemfile)).
+
+Follow these steps:
+
+1. **Install Jekyll**. You have two options:
+   - [Follow the Jekyll installation instructions](https://jekyllrb.com/docs/#instructions). These steps will guide you through installing Ruby and Jekyll locally.
+   - Use [the anaconda distribution](https://conda.io) and [conda-forge](https://conda-forge.org/).
+
+     First [install miniconda](https://conda.io/miniconda.html), then run the following command:
+
+     ```console
+     $ conda install -c conda-forge ruby c-compiler compilers cxx-compiler
+     ```
+
+     Finally install Jekyll and Bundler, which will let you install the site's dependencies:
+
+     ```console
+     $ gem install jekyll bundler
+     ```
+2. **Install the site's build dependencies**. These are specified in [`Gemfile`](Gemfile).
+   
+   ```console
+   $ bundle install
+   ```
+
+   This step might take a few moments as it must download and install a number of local extensions. It will create a local file called `Gemfile.lock`. These are the "frozen" dependencies and their version numbers needed to build the site.
+
+3. **Build the site locally**.
+   
+   ```console
+   $ bundle exec jekyll serve liveserve
+   ```
+
+   This will build the site's HTML and open a server at `localhost:4000` for you to preview the site.
+
 
 ## Where the site is hosted
 
 The site is automatically built with [Netlify](https://netlify.com), a hosting service for static websites. When any changes are merged into the `master` branch, Netlify will automatically build them and update the website at [jupyter.org](https://jupyter.org).
 
-**You can preview changes in Pull Requests**. Netlify will automatically build a preview of the website in an open Pull Request. To see this, click on the **`Show all checks`** button just above the comment box in the Pull Request window. Then click on **`deploy/netlify`** to see a preview of the built site.
+## Preview changes in a Pull Request
+
+Netlify will automatically build a preview of the website in an open Pull Request. To see this, click on the **`Show all checks`** button just above the comment box in the Pull Request window. Then click on the **`details`** link on the **`deploy/netlify`** row to see a preview of the built site.
+
+Here's an image of this box on a GitHub PR page:
+
+![Netlify Preview Button](.github/images/netlify-preview.png)
 
 ## Structure of this website
 
@@ -94,12 +138,3 @@ write some html here (consider you are already inside `<body></body>`)
 You cannot do it yet with .md file, but you will be able soon.
 
 Add commit (and don't forget to add to `_data/nav.yml`).
-
-## Preview a Pull Request
-
-Netlify is used to provide a link to a rendered website with the changes proposed
-in a PR. This convenience helps reviewers see how the change would look
-before it is deployed in production.
-
-The link is found in the GitHub PR status box. In the **deploy/netlify** section,
-click on the `Details` link.
