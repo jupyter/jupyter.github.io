@@ -3,7 +3,7 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     {% if page.url == '/' or page.url == '/index.html' %}
                       <span class="icon-bar white-icon-bar"></span>
@@ -24,34 +24,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     {%- for nav in site.data.nav.head -%}
-                      {%- if nav.url %}
-                               <li>
-                                 {%- if nav.newpage %}
-                                 <a href="{{site.baseurl}}{{nav.url}}" class="tab" target="_blank" rel="noopener noreferrer">{{nav.title}}</a>
-                                 {%- else %}
-                                 <a href="{{site.baseurl}}{{nav.url}}" class="tab">{{nav.title}}</a>
-                                 {%- endif %}
-                               </li>
-                      {%- else -%}
-                        {%- for targetpage in site.pages %}
-                           {%- if nav contains targetpage.title -%}
-                              {%- if page.title == targetpage.title %}
-                               <li>
-                                   <a href="{{site.baseurl}}{{targetpage.url}}" class="tab navbar-active">{{targetpage.title}}</a>
-                               </li>
-                               {%- else %}
-                               <li>
-                                   <a href="{{site.baseurl}}{{targetpage.url}}" class="tab">{{targetpage.title}}</a>
-                               </li>
-                               {%- endif -%}
-                           {%- endif -%}
-                           {%- endfor -%}
-                      {%- endif -%}
+                    <li>
+                        <a href="{{nav.url}}"
+                           {%- if nav.newpage %}target="_blank" rel="noopener noreferrer"{% endif %}
+                           class="tab {% if nav.url == page.url %}navbar-active{% endif %}">
+                           {{nav.title}}
+                       </a>
+                    </li>
                     {%- endfor %}
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </div>
 </nav>

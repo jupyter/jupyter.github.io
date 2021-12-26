@@ -345,17 +345,27 @@ body {
     text-align: center;
 }
 
+.companies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
 .companies li {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-block;
-    padding: 2%;
+    padding: 3%;
     vertical-align: middle;
     width: 18%;
 }
 
-.companies .col img{
+.companies .col img {
     display: block;
     width: 100%;
     max-height: 60px;
@@ -421,13 +431,17 @@ body {
     margin-right: auto;
 }
 
-.architecturecontent  .card {
-    height: 400px;
-   }
+.architecturecontent .card {
+    height: 340px;
+}
+
+.architecturecontent .card h4 {
+    margin-top: 20px;
+}
 
 /* Styling for each card in the architecture section on front page. Each card needs it's own front class to work with the javascript associated with the cards */
-.card .front p{
-    margin-top: 3rem;
+.card .front p {
+    margin-top: 2rem;
 }
 .card .front {
     position: absolute;
@@ -834,6 +848,7 @@ body {
     }
     .companies li {
         width: 30%;
+        padding: 4%;
     }
     body {
         padding-top: 50px;

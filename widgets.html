@@ -4,14 +4,13 @@ title: Widgets
 permalink: /widgets
 ---
 
-<link href="css/gallery.css" rel="stylesheet">
-<link href="css/syntax.css" rel="stylesheet">
 <script
         src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"
         integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA="
         crossorigin="anonymous">
 </script>
 <script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
+
 <section>
   <div class="header header-grey">
     <div class="container">
@@ -38,63 +37,63 @@ permalink: /widgets
 <section>
   <div class="container">
     <div class="tabbable tabs-left">
-      <ul class="nav nav-tabs">
-        <li class="active">
-          <a href="#ipyleaflet" data-toggle="tab">
+      <ul id="widgetTabs" class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a href="#ipyleaflet" class="active" data-bs-toggle="tab">
           <p>ipyleaflet</p>
           <p>Geo-spatial analytics</p>
           </a>
         </li>
-        <li>
-          <a href="#bqplot" data-toggle="tab">
+        <li class="nav-item">
+          <a href="#bqplot" data-bs-toggle="tab">
             <p>bqplot</p>
             <p>2-D interactive data visualization</p>
           </a>
         </li>
-        <li>
-          <a href="#pythreejs" data-toggle="tab">
+        <li class="nav-item">
+          <a href="#pythreejs" data-bs-toggle="tab">
             <p>pythreejs</p>
             <p>3-D data visualization</p>
           </a>
         </li>
-        <li>
-          <a href="#ipyvolume" data-toggle="tab">
+        <li class="nav-item">
+          <a href="#ipyvolume" data-bs-toggle="tab">
             <p>ipyvolume</p>
             <p>3-D plotting</p>
           </a>
         </li>
-        <li>
-          <a href="#nglview" data-toggle="tab">
+        <li class="nav-item">
+          <a href="#nglview" data-bs-toggle="tab">
             <p>nglview</p>
             <p>3-D interactive molecular visualization</p>
           </a>
         </li>
-        <li>
-          <a href="#k3d" data-toggle="tab" onclick="adjustK3D()">
+        <li class="nav-item">
+          <a href="#k3d" data-bs-toggle="tab" onclick="adjustK3D()">
             <p>K3D-Jupyter</p>
             <p>3-D data visualization</p>
           </a>
         </li>
-        <li>
-          <a href="#beakerx" data-toggle="tab" onclick="adjustBeakerXTable()">
+        <li class="nav-item">
+          <a href="#beakerx" data-bs-toggle="tab" onclick="adjustBeakerXTable()">
             <p>BeakerX</p>
             <p>tables, plotting, forms</p>
           </a>
         </li>
-        <li>
-          <a href="#jupyter-gmaps" data-toggle="tab">
+        <li class="nav-item">
+          <a href="#jupyter-gmaps" data-bs-toggle="tab">
             <p>jupyter-gmaps</p>
             <p>Data visualization on Google Maps</p>
           </a>
         </li>
-        <li>
-          <a href="#cookiecutter" data-toggle="tab">
+        <li class="nav-item">
+          <a href="#cookiecutter" data-bs-toggle="tab">
             <p>cookiecutter</p>
             <p>Template widget project</p>
           </a>
         </li>
-        <li>
-          <a href="#perspective" data-toggle="tab">
+        <li class="nav-item">
+          <a href="#perspective" data-bs-toggle="tab">
             <p>perspective</p>
             <p>Real-time Dataset Visualization</p>
           </a>
@@ -453,6 +452,3 @@ jupyter nbextension enable --py --sys-prefix gmaps{% endhighlight %}
     </div>
   </div>
 </section>
-
-<!-- Required for resetting the logo-nav CSS changed by the widgets -->
-<link rel="stylesheet" href="{{ "/css/logo-nav.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}">
