@@ -138,3 +138,21 @@ write some html here (consider you are already inside `<body></body>`)
 You cannot do it yet with .md file, but you will be able soon.
 
 Add commit (and don't forget to add to `_data/nav.yml`).
+
+## Site quirks and tips
+
+### Lazy loading of images
+
+The Jupyter website uses [lazy loading of images](https://web.dev/browser-level-image-lazy-loading/). In general, images that are "below the fold" (below the browser window on page load) for laptop-sized screen sizes are encouraged to be configured for "lazy loading".
+
+Add lazy loading to an image by adding a `loading="lazy"` configuration to the `<img>` element. For example:
+
+```html
+<img class="my-class" src="my/src.png" loading="lazy" />
+```
+
+For images that are "above the fold" (that will be seen by users immediately after page load), use "eager" loading to make sure they are loaded immediately. For example:
+
+```html
+<img class="my-class" src="my/src.png" loading="eager" />
+```
