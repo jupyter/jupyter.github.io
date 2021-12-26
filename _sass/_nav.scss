@@ -79,44 +79,6 @@ body {
     color: #E46E2E;
 }
 
-.footer {
-    background-color: #757575;
-}
-
-.footer p {
-    color: white;
-    padding-top: 10px;
-}
-
-.footer li {
-    color: white;
-    display: inline-block;
-    text-decoration: none;
-}
-
-.footer a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer a:hover, .footer a:active {
-    opacity: .8;
-}
-
-.footer li::after {
-    content:" |";
-}
-
-.footer li:last-of-type::after {
-    content:"";
-}
-
-.footer-text {
-    font-size: 16px;
-    margin-left: 0;
-    padding-left: 0;
-}
-
 /*Main logo animation on the front page of the Jupyter website */
 .main-logo {
 	height: calc(100% - 20px);
@@ -868,10 +830,6 @@ body {
         float: none;
         display: block;
         margin: 0 auto;
-    }
-    .footer {
-        padding-bottom: 15px;
-        text-align: center;
     }
 }
 @media (min-width: 420px) {
