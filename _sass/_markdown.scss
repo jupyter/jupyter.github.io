@@ -15,11 +15,21 @@ div.page_content.container > p,
 div.page_content.container > h1,
 div.page_content.container > h2,
 div.page_content.container > h3,
+div.page_content.container > h4,
 div.page_content.container > div.highlighter-rouge
 {
     padding-left:30px;
     padding-right: 30px;
 }
+
+div.page_content.container > iframe {
+    margin-left: 30px;
+}
+
+div.page_content.container > ul {
+    padding-left: 50px;
+}
+
 
 img.title_image {
   max-height: 200px;

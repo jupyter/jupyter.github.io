@@ -3,12 +3,8 @@ head:
       url: /install
     - title: Get Involved
       url: /community
-    - title: Events
-      url: /events
     - title: Documentation
       url: /documentation
-    - title: Widgets
-      url: /widgets
     - title: News
       url: https://blog.jupyter.org
       newpage: true
