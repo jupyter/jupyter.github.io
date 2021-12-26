@@ -359,16 +359,16 @@ in_use:
         </div>
     </div>
 </section>
-<section id="jupyterhub">
+<section class="jupyterhub">
     <div class="section-grey">
         <div class="container">
             <div class="row">
             <div>
-                <div class="hublogo col-md-offset-4 col-md-4 col-md-offset-4">
-                    <img src="{{ page.jupyterhub.image.src }}" class="img-responsive" style="margin:0 auto;" id="hublogo"
+                <div class="hublogo">
+                    <img src="{{ page.jupyterhub.image.src }}" class="img-responsive"
                          alt="{{ page.jupyterhub.image.alt }}" loading="lazy" />
                 </div>
-                <div class="col-md-offset-3 col-md-6 col-md-offset-3" style="margin-bottom:-36px">
+                <div class="col-md-offset-3 col-md-6 col-md-offset-3" class="hubdescription">
                     <p style="padding-top:24px; text-align: center">{{ page.jupyterhub.description }}</p>
                 </div>
             </div>
@@ -381,7 +381,7 @@ in_use:
                 </div>
                 {% endfor %}
             </div>
-            <div class="col-md-12" style="text-align: center; margin-top: 24px;">
+            <div class="col-md-12 hubbutton">
                 <a class="orange-button" href="{{ page.jupyterhub.button.href }}">{{ page.jupyterhub.button.text }}</a>
             </div>
             </div>

@@ -315,28 +315,6 @@ body {
     opacity: 0.65;
 }
 
-/* JupyterHub section on front page */
-/* Feature-middle is for the JupyterHub features that are in the middle that need to be offset to sit on the track */
-.feature-middle {
-    margin-top: 40px;
-}
-
-.hubfeature {
-    text-align: center;
-}
-
-.hubfeature img {
-    margin: 0 auto;
-}
-
-.hubfeatures {
-    background: url("../assets/line.svg");
-    background-position:  top center;
-    background-repeat: no-repeat;
-    /* Padding that is used to make the hubfeature circles sit on track */
-    padding-top: 48px;
-}
-
 /* Architecture section on front page */
 /* Some padding above the cards */
 .architecturecontent {
@@ -640,17 +618,8 @@ body {
     .notebook-feature {
         padding-top: 40px;
     }
-    .hubfeatures{
-        background: none;
-    }
     #data {
         padding-top: 40px;
-    }
-    .hubfeature h2 {
-        text-align: center;
-    }
-    #hublogo {
-        width: 60%;
     }
     .architecturedescription h2 {
         text-align: center;
