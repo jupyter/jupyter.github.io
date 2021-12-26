@@ -207,15 +207,15 @@ in_use:
     - href: https://www.nyu.edu
       src: assets/NYU.svg
       alt: NYU
+    - href: https://www.oreilly.com
+      src: assets/oreilly.svg
+      alt: OReilly
     - href: https://www.quantopian.com
       src: assets/quantopian.svg
       alt: Quantopian
     - href: https://quantstack.net
       src: assets/quantstack.svg
       alt: QuantStack
-    - href: https://www.oreilly.com
-      src: assets/oreilly.svg
-      alt: OReilly
     - href: https://developer.rackspace.com
       src: assets/rackspace.svg
       alt: Rackspace
@@ -405,7 +405,12 @@ in_use:
                 {% for li in page.in_use.companies %}
                 <li class="small">
                     <a href="{{ li.href }}">
-                        <img src="{{ li.src }}" class="greydout" alt="{{ li.alt }}" loading="lazy">
+                        <img src="{{ li.src }}"
+                             class="greydout"
+                             width=300
+                             height=90
+                             alt="{{ li.alt }}"
+                             loading="lazy" />
                     </a>
                 </li>
                 {% endfor %}
