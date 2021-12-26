@@ -401,9 +401,9 @@ in_use:
         <div class="container">
             <div class="row">
                 <h3 class="section-header">{{ page.in_use.headline }}</h3>
-                <ul class="companies">
+                <ul class="logogrid">
                 {% for li in page.in_use.companies %}
-                <li class="col">
+                <li class="small">
                     <a href="{{ li.href }}">
                         <img src="{{ li.src }}" class="greydout" alt="{{ li.alt }}" loading="lazy">
                     </a>

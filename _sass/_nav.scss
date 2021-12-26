@@ -338,53 +338,6 @@ body {
     margin-bottom: 16px;
 }
 
-/* Companies section for only "Currently in use" (this section acts differently than customer logos in the "About" section of the site) */
-
-/*Section-center is used to center the companies on the home page & get rid of padding on left associated with ul*/
-.section-center {
-    text-align: center;
-}
-
-.companies {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-}
-
-.companies li {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    display: inline-block;
-    padding: 3%;
-    vertical-align: middle;
-    width: 18%;
-}
-
-.companies .col img {
-    display: block;
-    width: 100%;
-    max-height: 60px;
-}
-
-.greydout {
-    -webkit-transition: all .05s ease;
-    -moz-transition: all .05s ease;
-    -ms-transition: all .05s ease;
-    -o-transition: all .05s ease;
-    transition: all .05s ease;
-}
-
-.greydout:hover {
-    -webkit-opacity: 0.65;
-    -moz-opacity: 0.65;
-    opacity: 0.65;
-}
-
 /* JupyterHub section on front page */
 /* Feature-middle is for the JupyterHub features that are in the middle that need to be offset to sit on the track */
 .feature-middle {
@@ -602,9 +555,6 @@ body {
     .notebook-preview p {
         font-size: 15pt;
         line-height: 25pt;
-    }
-    .companies li {
-        width: 23%;
     }
 }
 

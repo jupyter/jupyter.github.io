@@ -16,6 +16,9 @@ ul.logogrid {
         padding: 3%;
         vertical-align: middle;
         width: 23%;
+        &.small {
+            width: 18%;
+        }
         @media (max-width: 768px) {
             width: 30%;
             padding: 4%;
@@ -26,5 +29,17 @@ ul.logogrid {
             height: auto;
             margin: 0;
         }
+    }
+    .greydout {
+        -webkit-transition: all .05s ease;
+        -moz-transition: all .05s ease;
+        -ms-transition: all .05s ease;
+        -o-transition: all .05s ease;
+        transition: all .05s ease;
+    }
+    .greydout:hover {
+        -webkit-opacity: 0.65;
+        -moz-opacity: 0.65;
+        opacity: 0.65;
     }
 }
