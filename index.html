@@ -10,15 +10,23 @@ jumbotron:
     - class: fade-in one
       alt: circle of programming language icons
       src: assets/circle1.svg
+      width: 677
+      height: 286
     - class: fade-in two
       alt: circle of programming language icons
       src: assets/circle2.svg
+      width: 677
+      height: 286
     - class: fade-in three
       alt: circle of programming language icons
       src: assets/circle3.svg
+      width: 677
+      height: 286
     - class: main-logo
       alt: jupyter logo
       src: assets/main-logo.svg
+      width: 677
+      height: 286
 
 jupyterlab:
   headline: 'JupyterLab: A Next-Generation Notebook Interface'
@@ -26,6 +34,8 @@ jupyterlab:
   image:
     alt: examples of jupyterlab workspaces in single document and multiple document workspaces
     src: assets/labpreview
+    width: 885
+    height: 627
   buttons:
   - class:
     href: try
@@ -40,6 +50,8 @@ notebook:
   image:
     alt: example notebook of Lorenz differential equations
     src: assets/jupyterpreview
+    width: 1018
+    height: 721
   buttons:
   - class:
     href: try
@@ -109,6 +121,8 @@ voila:
   image:
     alt: examples of Voilà dashboards
     src: assets/voilapreview
+    width: 885
+    height: 716
   buttons:
   - class:
     href: try
@@ -234,16 +248,23 @@ in_use:
         <div class="row">
             <div class="col-md-12">
                 {% for img in page.jumbotron.images %}
-                <div class="img-container">
+                <div class="jumbotron-image-container">
                     <span>
                         <img class="img-responsive {{ img.class }}"
                              src="{{ img.src }}"
+                             width={{ img.width }}
+                             height={{ img.height }}
                              alt="{{ img.alt }}"
                              loading="eager" />
                     </span>
                 </div>
                 {% endfor %}
-                <img class="img-responsive" src="assets/white-background.svg" alt="white background" loading="eager">
+                <img class="img-responsive"
+                     src="assets/white-background.svg"
+                     width=747
+                     height=313
+                     alt="white background"
+                     loading="eager" />
             </div>
         </div>
     </div>
@@ -267,6 +288,8 @@ in_use:
                             <source type="image/webp" srcset="{{ page.jupyterlab.image.src }}.webp">
                             <img src="{{ page.jupyterlab.image.src }}.jpg"
                                  alt="{{ page.jupyterlab.image.alt }}"
+                                 width={{ page.jupyterlab.image.width }}
+                                 height={{ page.jupyterlab.image.height }}
                                  class="img-responsive"
                                  id="portal"
                                  loading="lazy" />
@@ -297,6 +320,8 @@ in_use:
                             <source type="image/webp" srcset="{{ page.notebook.image.src }}.webp">
                             <img src="{{ page.notebook.image.src }}.jpg"
                                  alt="{{ page.notebook.image.alt }}"
+                                 width={{ page.notebook.image.width }}
+                                 height={{ page.notebook.image.height }}
                                  class="img-responsive"
                                  id="portal"
                                  loading="lazy" />
@@ -373,6 +398,8 @@ in_use:
                             <source type="image/webp" srcset="{{ page.voila.image.src }}.webp">
                             <img src="{{ page.voila.image.src }}.jpg"
                                  alt="{{ page.voila.image.alt }}"
+                                 width={{ img.width }}
+                                 height={{ img.height }}
                                  class="img-responsive"
                                  id="portal" 
                                  loading="lazy" />
