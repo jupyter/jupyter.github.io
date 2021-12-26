@@ -16,12 +16,16 @@ ul.logogrid {
         padding: 3%;
         vertical-align: middle;
         width: 23%;
-        &.small {
-            width: 18%;
-        }
         @media (max-width: 768px) {
             width: 30%;
             padding: 4%;
+        }
+        &.small {
+            width: 18%;
+            @media (max-width: 768px) {
+                width: 30%;
+                padding: 4%;
+            }
         }
         img {
             display: block;
