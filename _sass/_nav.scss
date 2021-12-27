@@ -4,11 +4,6 @@ body {
     padding-top: 70px;
 }
 
-/* Navbar and footer (global) styling */
-.navbar-fixed-top .nav {
-    padding: 15px 0;
-}
-
 .navbar {
     border-width: thin;
     -webkit-transition: .2s;
@@ -19,11 +14,6 @@ body {
 
 .navbar a {
     color: black;
-}
-
-.navbar-fixed-top .navbar-brand {
-    padding: 5px 0px;
-    margin-left: 15px;
 }
 
 .navbar-header .icon-bar {
@@ -599,10 +589,6 @@ body {
 
     .navbar-right {
         margin-right: 10px;
-    }
-
-    .navbar-fixed-top .navbar-brand {
-        padding: 15px 0;
     }
     .tab {
         text-align: center;
