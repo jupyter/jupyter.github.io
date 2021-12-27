@@ -79,116 +79,6 @@ body {
     color: #E46E2E;
 }
 
-.footer {
-    background-color: #757575;
-}
-
-.footer p {
-    color: white;
-    padding-top: 10px;
-}
-
-.footer li {
-    color: white;
-    display: inline-block;
-    text-decoration: none;
-}
-
-.footer a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer a:hover, .footer a:active {
-    opacity: .8;
-}
-
-.footer li::after {
-    content:" |";
-}
-
-.footer li:last-of-type::after {
-    content:"";
-}
-
-.footer-text {
-    font-size: 16px;
-    margin-left: 0;
-    padding-left: 0;
-}
-
-/*Main logo animation on the front page of the Jupyter website */
-.main-logo {
-	height: calc(100% - 20px);
-	margin-top: 10px;
-    padding-left: 20px;
-}
-
-@-webkit-keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
-/*This entire section related to fading is for the front page with the Jupyter logo*/
-.fade-in {
-    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animation ease-in and repeat it only 1 time */
-    -moz-animation:fadeIn ease-in 1;
-    animation:fadeIn ease-in 1;
-
-    -webkit-animation-duration:1s;
-    -moz-animation-duration:1s;
-    animation-duration:1s;
-
-    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
-
-    opacity:0;  /* make things invisible upon start */
-}
-
-.fade-in.one {
-    -webkit-animation-delay: 0.3s;
-    -moz-animation-delay: 0.3s;
-    animation-delay: 0.3s;
-}
-
-.fade-in.two {
-    -webkit-animation-delay: 0.7s;
-    -moz-animation-delay:0.7s;
-    animation-delay: 0.7s;
-}
-
-.fade-in.three {
-    -webkit-animation-delay: 1.1s;
-    -moz-animation-delay: 1.1s;
-    animation-delay: 1.1s;
-}
-
-.jumbotron {
-    background-color: white;
-    margin-top:30px;
-    overflow: hidden;
-}
-
-.jumbotron img {
-    margin: 0 auto;
-}
-
-.jumbotron-text {
-    padding-bottom: 32px;
-    text-align: center;
-}
-
-.img-container {
-    height: 100%;
-    margin: 0 auto;
-    position: absolute;
-    text-align: center;
-    width: 95%;
-}
-
-.img-container img {
-    vertical-align: middle;
-}
-
 /* Reusable elements */
 
 /* Header section of each page */
@@ -336,28 +226,6 @@ body {
 
 .prompt-header {
     margin-bottom: 16px;
-}
-
-/* JupyterHub section on front page */
-/* Feature-middle is for the JupyterHub features that are in the middle that need to be offset to sit on the track */
-.feature-middle {
-    margin-top: 40px;
-}
-
-.hubfeature {
-    text-align: center;
-}
-
-.hubfeature img {
-    margin: 0 auto;
-}
-
-.hubfeatures {
-    background: url("../assets/line.svg");
-    background-position:  top center;
-    background-repeat: no-repeat;
-    /* Padding that is used to make the hubfeature circles sit on track */
-    padding-top: 48px;
 }
 
 /* Architecture section on front page */
@@ -660,17 +528,8 @@ body {
     .notebook-feature {
         padding-top: 40px;
     }
-    .hubfeatures{
-        background: none;
-    }
     #data {
         padding-top: 40px;
-    }
-    .hubfeature h2 {
-        text-align: center;
-    }
-    #hublogo {
-        width: 60%;
     }
     .architecturedescription h2 {
         text-align: center;
@@ -755,7 +614,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
     p {
         font-size: 16px;
         font-weight: 400;
@@ -803,9 +661,6 @@ body {
     body {
         padding-top: 50px;
     }
-    .jumbotron {
-        margin-right: 5%;
-    }
 }
 
 /* Extra small devices (these are mostly fixes to make sure elements act correctly to look good) */
@@ -818,10 +673,6 @@ body {
         float: none;
         display: block;
         margin: 0 auto;
-    }
-    .footer {
-        padding-bottom: 15px;
-        text-align: center;
     }
 }
 @media (min-width: 420px) {

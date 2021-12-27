@@ -141,6 +141,18 @@ Add commit (and don't forget to add to `_data/nav.yml`).
 
 ## Site quirks and tips
 
+### SCSS variables
+
+Shortcuts with colors and other common variables can be found in `_sass/settings`. They can be used in SCSS files.
+
+```scss
+@import "settings/colors"
+
+a {
+    color: $orange;
+}
+```
+
 ### Lazy loading of images
 
 The Jupyter website uses [lazy loading of images](https://web.dev/browser-level-image-lazy-loading/). In general, images that are "below the fold" (below the browser window on page load) for laptop-sized screen sizes are encouraged to be configured for "lazy loading".
