@@ -1,0 +1,9 @@
+@import "settings/colors";
+
+.footer {
+    background-color: $orange;
+    p {
+        color: $black;
+        padding-top: 10px;
+    }
+}

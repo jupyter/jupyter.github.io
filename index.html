@@ -5,27 +5,37 @@ cfp: true
 permalink: /
 
 jumbotron:
-  text: Project Jupyter develops open-source software, open standards, and services for interactive computing across dozens of programming languages.
+  text: Open-source software, open standards, and services for interactive computing across dozens of programming languages
   images:
     - class: fade-in one
       alt: circle of programming language icons
       src: assets/circle1.svg
+      width: 677
+      height: 286
     - class: fade-in two
       alt: circle of programming language icons
       src: assets/circle2.svg
+      width: 677
+      height: 286
     - class: fade-in three
       alt: circle of programming language icons
       src: assets/circle3.svg
+      width: 677
+      height: 286
     - class: main-logo
       alt: jupyter logo
       src: assets/main-logo.svg
+      width: 677
+      height: 286
 
 jupyterlab:
   headline: 'JupyterLab: A Next-Generation Notebook Interface'
-  description: JupyterLab is a web-based interactive development environment for notebooks, code, and data. Its flexible interface allows users to configure and arrange workflows in data science, scientific computing, computational journalism, and machine learning. A modular design allows for extensions that expand and enrich functionality.
+  description: JupyterLab is the latest web-based interactive development environment for notebooks, code, and data. Its flexible interface allows users to configure and arrange workflows in data science, scientific computing, computational journalism, and machine learning. A modular design invites extensions to expand and enrich functionality.
   image:
     alt: examples of jupyterlab workspaces in single document and multiple document workspaces
-    src: assets/labpreview.png
+    src: assets/labpreview
+    width: 885
+    height: 627
   buttons:
   - class:
     href: try
@@ -36,10 +46,12 @@ jupyterlab:
 
 notebook:
   headline: 'Jupyter Notebook: The Classic Notebook Interface'
-  description: The Jupyter Notebook is a web application for creating and sharing documents that contain code, visualizations, and text. It can be used for data science, statistical modeling, machine learning, and much more.
+  description: The Jupyter Notebook is the original web application for creating and sharing computational documents. It offers a simple, streamlined, document-centric experience.
   image:
     alt: example notebook of Lorenz differential equations
-    src: assets/jupyterpreview.png
+    src: assets/jupyterpreview
+    width: 885
+    height: 627
   buttons:
   - class:
     href: try
@@ -104,11 +116,13 @@ jupyterhub:
     text: Learn more about JupyterHub
 
 voila:
-  headline: 'Communicate your results with Voilà.'
+  headline: 'Voilà: Share your results'
   description: Voilà helps communicate insights by transforming notebooks into secure, stand-alone web applications that you can customize and share.
   image:
     alt: examples of Voilà dashboards
-    src: assets/voilapreview.png
+    src: assets/voilapreview
+    width: 885
+    height: 716
   buttons:
   - class:
     href: try
@@ -119,20 +133,20 @@ voila:
 
 open_standards:
   headline: Open Standards for Interactive Computing
-  description: The Jupyter Notebook is based on a set of open standards for interactive computing. Think HTML and CSS for interactive computing on the web. These open standards can be leveraged by third party developers to build customized applications with embedded interactive computing.
-  image:
-    alt: icon to represent jupyter architecture
-    src: assets/voilapreview.png
+  description: Project Jupyter promotes open standards that third-party developers can leverage to build customized applications. Think HTML and CSS for interactive computing on the web.
   features:
-  - description: Jupyter Notebooks are an open document format based on JSON. They contain a complete record of the user's sessions and include code, narrative text, equations and rich output.
+  - headline: Notebook Document Format
+    description: Jupyter Notebooks are an open document format based on JSON. They contain a complete record of the user's sessions and include code, narrative text, equations and rich output.
     image:
       alt: icon to represent notebook format
       src: assets/notebook-format.svg
-  - description: The Notebook communicates with computational Kernels using the Interactive Computing Protocol, an open network protocol based on JSON data over ZMQ and WebSockets.
+  - headline: Interactive Computing Protocol
+    description: The Notebook communicates with computational Kernels using the Interactive Computing Protocol, an open network protocol based on JSON data over ZMQ and WebSockets.
     image:
       alt: icon to represent a protocol
       src: assets/protocol.svg
-  - description: Kernels are processes that run interactive code in a particular programming language and return output to the user. Kernels also respond to tab completion and introspection requests.
+  - headline: The Kernel
+    description: Kernels are processes that run interactive code in a particular programming language and return output to the user. Kernels also respond to tab completion and introspection requests.
     image:
       alt: icon that looks like a terminal represents kernel
       src: assets/kernel.svg
@@ -234,15 +248,23 @@ in_use:
         <div class="row">
             <div class="col-md-12">
                 {% for img in page.jumbotron.images %}
-                <div class="img-container">
+                <div class="jumbotron-image-container">
                     <span>
                         <img class="img-responsive {{ img.class }}"
                              src="{{ img.src }}"
-                             alt="{{ img.alt }}">
+                             width={{ img.width }}
+                             height={{ img.height }}
+                             alt="{{ img.alt }}"
+                             loading="eager" />
                     </span>
                 </div>
                 {% endfor %}
-                <img class="img-responsive" src="assets/white-background.svg" alt="white background">
+                <img class="img-responsive"
+                     src="assets/white-background.svg"
+                     width=747
+                     height=313
+                     alt="white background"
+                     loading="eager" />
             </div>
         </div>
     </div>
@@ -262,10 +284,16 @@ in_use:
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="img-responsive"
-                             src="{{ page.jupyterlab.image.src }}"
-                             id="portal"
-                             alt="{{ page.jupyterlab.image.alt }}"/>
+                        <picture>
+                            <source type="image/webp" srcset="{{ page.jupyterlab.image.src }}.webp">
+                            <img src="{{ page.jupyterlab.image.src }}.jpg"
+                                 alt="{{ page.jupyterlab.image.alt }}"
+                                 width={{ page.jupyterlab.image.width }}
+                                 height={{ page.jupyterlab.image.height }}
+                                 class="img-responsive"
+                                 id="portal"
+                                 loading="eager" />
+                        </picture>
                     </div>
                     <div class="col-md-6 nb-highlight-text">
                         <h3>{{ page.jupyterlab.headline }}</h3>
@@ -288,10 +316,16 @@ in_use:
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="img-responsive"
-                             src="{{ page.notebook.image.src }}"
-                             id="portal"
-                             alt="{{ page.notebook.image.alt }}"/>
+                        <picture>
+                            <source type="image/webp" srcset="{{ page.notebook.image.src }}.webp">
+                            <img src="{{ page.notebook.image.src }}.jpg"
+                                 alt="{{ page.notebook.image.alt }}"
+                                 width={{ page.notebook.image.width }}
+                                 height={{ page.notebook.image.height }}
+                                 class="img-responsive"
+                                 id="portal"
+                                 loading="lazy" />
+                        </picture>
                     </div>
                     <div class="col-md-6 nb-highlight-text">
                         <h3>{{ page.notebook.headline }}</h3>
@@ -311,7 +345,11 @@ in_use:
                 <div class="row">
                     {% for feat in page.notebook.features %}
                     <div class="col-md-3 notebook-feature">
-                        <img class="img-responsive" src="{{ feat.image.src }}" id="feature" alt="{{ feat.image.alt }}">
+                        <img class="img-responsive"
+                             src="{{ feat.image.src }}"
+                             id="feature"
+                             alt="{{ feat.image.alt }}"
+                             loading="lazy" />
                         <h4>{{ feat.headline }}</h4>
                         <p>{{ feat.description }}</p>
                     </div>
@@ -321,29 +359,29 @@ in_use:
         </div>
     </div>
 </section>
-<section id="jupyterhub">
+<section class="jupyterhub">
     <div class="section-grey">
         <div class="container">
             <div class="row">
             <div>
-                <div class="hublogo col-md-offset-4 col-md-4 col-md-offset-4">
-                    <img src="{{ page.jupyterhub.image.src }}" class="img-responsive" style="margin:0 auto;" id="hublogo"
-                         alt="{{ page.jupyterhub.image.alt }}">
+                <div class="hublogo">
+                    <img src="{{ page.jupyterhub.image.src }}" class="img-responsive"
+                         alt="{{ page.jupyterhub.image.alt }}" loading="lazy" />
                 </div>
-                <div class="col-md-offset-3 col-md-6 col-md-offset-3" style="margin-bottom:-36px">
+                <div class="col-md-offset-3 col-md-6 col-md-offset-3" class="hubdescription">
                     <p style="padding-top:24px; text-align: center">{{ page.jupyterhub.description }}</p>
                 </div>
             </div>
             <div class="hubfeatures col-md-12">
                 {% for feat in page.jupyterhub.features %}
                 <div class="{{ feat.class }} hubfeature col-md-3">
-                    <img src="{{ feat.image.src }}" class="img-responsive" alt="{{ feat.image.alt }}">
+                    <img src="{{ feat.image.src }}" class="img-responsive" alt="{{ feat.image.alt }}" loading="lazy">
                     <h4>{{ feat.headline }}</h4>
                     <p>{{ feat.description }}</p>
                 </div>
                 {% endfor %}
             </div>
-            <div class="col-md-12" style="text-align: center; margin-top: 24px;">
+            <div class="col-md-12 hubbutton">
                 <a class="orange-button" href="{{ page.jupyterhub.button.href }}">{{ page.jupyterhub.button.text }}</a>
             </div>
             </div>
@@ -356,7 +394,16 @@ in_use:
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="img-responsive" src="{{ page.voila.image.src }}" id="portal" alt="{{ page.voila.image.alt }}"/>
+                        <picture>
+                            <source type="image/webp" srcset="{{ page.voila.image.src }}.webp">
+                            <img src="{{ page.voila.image.src }}.jpg"
+                                 alt="{{ page.voila.image.alt }}"
+                                 width={{ img.width }}
+                                 height={{ img.height }}
+                                 class="img-responsive"
+                                 id="portal" 
+                                 loading="lazy" />
+                        </picture>
                     </div>
                     <div class="col-md-6 nb-highlight-text">
                         <h3>{{ page.voila.headline }}</h3>
@@ -384,7 +431,7 @@ in_use:
                 {% for li in page.in_use.companies %}
                 <li class="col">
                     <a href="{{ li.href }}">
-                        <img src="{{ li.src }}" class="greydout" alt="{{ li.alt }}">
+                        <img src="{{ li.src }}" class="greydout" alt="{{ li.alt }}" loading="lazy">
                     </a>
                 </li>
                 {% endfor %}
@@ -397,7 +444,7 @@ in_use:
     <div class="section-white">
         <div class="container">
             <div class="architecturedescription">
-                <img src="assets/architectureicon2.svg" class="section-icon" alt="icon to represent jupyter architecture">
+                <img src="assets/architectureicon2.svg" class="section-icon" alt="icon to represent jupyter architecture" loading="lazy">
                 <h3 class="section-header">{{ page.open_standards.headline }}</h3>
                 <h4 class="support-paragraph">{{ page.open_standards.description }}</h4>
             </div>
@@ -407,8 +454,9 @@ in_use:
                     <div class="card">
                         <div class="arcfeature" id="arcfeature1">
                             <div class="front">
-                                <img src="{{ feat.image.src }}" alt="{{ feat.image.alt }}">
-                                <p id="document">{{ feat.description }}</p>
+                                <img src="{{ feat.image.src }}" alt="{{ feat.image.alt }}" loading="lazy">
+                                <h4>{{ feat.headline }}</h4>
+                                <p>{{ feat.description }}</p>
                             </div>
                         </div>
                     </div>
