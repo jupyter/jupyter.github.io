@@ -1,19 +1,18 @@
 ---
 layout: default
 ---
-  <header class="header header-grey">
-    {% if page.title_image %}
-    <img src="{{ page.title_image }}" class="title_image" {% if page.title_image_alt %}alt="{{ page.title_image_alt }}"{% endif %} />
-    {% else %}
-    <h2>{{ page.title }}</h2>
-    {% endif %}
-    <p>{{ page.tagline }}</p>
-  </header>
 
-  <article class="post-content">
-    <div class="section-white top-section-border">
-      <div class="page_content container">
-        {{ content }}
-      </div>
+{% include page-header.html
+    title=page.title
+    tagline=page.tagline
+    image=page.title_image
+    image_alt=page.title_image_alt
+%}
+
+<article class="post-content">
+  <div class="section-white top-section-border">
+    <div class="page_content container">
+      {{ content }}
     </div>
-  </article>
+  </div>
+</article>

@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Widgets
+title: Interactive Widgets
+tagline: Jupyter widgets enable interactive data visualization in the Jupyter notebooks.
 permalink: /widgets
 ---
 
@@ -11,18 +12,12 @@ permalink: /widgets
 </script>
 <script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
 
-<section>
-  <div class="header header-grey">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <h2>Interactive Widgets</h2>
-                <p>Jupyter widgets enable interactive data visualization in the Jupyter notebooks.</p>
-            </div>
-        </div>
-    </div>
-  </div>
-</section>
+{% include page-header.html
+    title=page.title
+    tagline=page.tagline
+    image=page.title_image
+    image_alt=page.title_image_alt
+%}
 
 <section>
   <div class="section-white top-section-border">
