@@ -3,6 +3,61 @@ layout: default
 title: Try Jupyter
 description: 'You can try Jupyter out right now, without installing anything. Select an example below and you will get a temporary Jupyter server just for you, running on <a href="https://mybinder.org">mybinder.org</a>. If you like it, you can <a href="https://jupyter.org/install.html">install Jupyter</a> yourself.'
 permalink: /try
+
+boxes:
+    - title: Try Classic Notebook
+      description: |
+        A tutorial introducing basic features of the classic Jupyter Notebook interface.
+      logo: python.svg
+      url: https://mybinder.org/v2/gh/ipython/ipython-in-depth/HEAD?urlpath=tree/binder/Index.ipynb
+
+    - title: Try JupyterLab
+      description: |
+        JupyterLab is the new interface for Jupyter notebooks and is ready for general use.
+        Give it a try!
+      logo: jupyter.png
+      url: https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/HEAD?urlpath=lab/tree/demo
+
+    - title: Try Voilà
+      description: An example with a variety of notebook dashboards.
+      logo: voila.svg
+      url: https://mybinder.org/v2/gh/voila-dashboards/voila/stable?urlpath=voila%2Ftree%2Fnotebooks
+
+    - title: Try Jupyter with Julia
+      description: |
+        A basic example of using Jupyter with Julia.
+      logo: julia.svg
+      url: https://mybinder.org/v2/gh/binder-examples/demo-julia/HEAD?filepath=demo.ipynb
+
+    - title: Try Jupyter with R
+      description: |
+        A basic example of using Jupyter with R.
+      logo: R.svg
+      url: https://mybinder.org/v2/gh/binder-examples/r/HEAD?filepath=index.ipynb
+
+    - title: Try Jupyter with C++
+      description: |
+        A basic example of using Jupyter with C++
+      logo: Cpp.svg
+      url: https://mybinder.org/v2/gh/QuantStack/xeus-cling/stable?filepath=notebooks/xcpp.ipynb
+
+    - title: Try Jupyter with Scheme
+      description: |
+        Explore the Calysto Scheme programming language, featuring integration with Python
+      logo: Scheme.png
+      url: https://mybinder.org/v2/gh/Calysto/calysto_scheme/HEAD?filepath=notebooks/Reference%20Guide%20for%20Calysto%20Scheme.ipynb
+
+    - title: Try Jupyter with Ruby
+      description: |
+        A basic example of using Jupyter with Ruby.
+      logo: ruby.png
+      url: https://mybinder.org/v2/gh/RubyData/binder/HEAD?filepath=ruby-data.ipynb
+
+    - title: Try Jupyter with Kotlin
+      description: |
+        Titanic example with LetsPlot and Dataframe libraries.
+      logo: kotlin.svg
+      url: https://mybinder.org/v2/gh/Kotlin/dataframe/master?filepath=examples/jupyter-notebooks/titanic/Titanic.ipynb
 ---
 
 <div class="post">
@@ -19,7 +74,7 @@ permalink: /try
       <div class="section-white top-section-border">
         <div class="container">
           <div class="row cardlist">
-            {%- for item in site.data.try -%}
+            {%- for item in page.boxes -%}
             <a href="{{ item['url'] }}" class="try-link">
               <div class="col-lg-4 col-md-6 col-sm-6 cardlist-col">
                 <div class="cardlist-card try-card">
