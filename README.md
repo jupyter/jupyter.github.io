@@ -92,34 +92,7 @@ Here's an image of this box on a GitHub PR page:
 
 ## Structure of this website
 
-Most pages are located at the place where their URL is, nothing fancy.  Headers
-and footer are in `_includes/head.html`, `_includes/header.html`,
-`_includes/footer.html`.
-
-The **navbar** is in `_data/nav.yml` and looks like that:
-
-```yaml
-head:
-    - Home
-    - title: Install
-      url: https://jupyter.readthedocs.io/en/latest/install.html
-    - About
-    - title: Documentation
-      url: https://jupyter.readthedocs.io/en/latest/install.html
-    - title: Blog
-      url: https://blog.jupyter.org
-    - Donate
-```
-
-which means, insert in order the following links into the navbar:
-
-    - Link to `Home` page, guess the url by yourself. 
-    - link to `Install` page, the url is...
-    - Link to `About`, guess the url by yourself, 
-    -  ... etc.
-
-The navbar will automatically target `_blank` pages where the url is explicit,
-and mark the correct link as the "current" one.
+Most pages are located at the place where their URL is, nothing fancy. Some are written in HTML. Others are written in Markdown. The homepage is in `index.html. The about page is in `about.md`.
 
 ## Create a new page
 

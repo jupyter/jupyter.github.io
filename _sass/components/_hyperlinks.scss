@@ -1,10 +1,12 @@
+@import "settings/colors";
+
 a {
-  color: #337ab7;
+  color: $orange;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
+  opacity: 0.8;
   text-decoration: underline;
 }
 a:focus {
