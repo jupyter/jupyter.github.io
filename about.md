@@ -422,7 +422,7 @@ users and contributors to participate in the project with respect and safety.
         {% assign sorted = page.steering | sort: "last" %}
         {% for member in sorted %}
         <div class="col-sm-3 col-xs-6 material section-content section-center">
-          <img class="council-member-photo" alt="{{member.first}} {{member.last}}'s avatar picture" src='{{member.avatar}}' />
+          <img class="council-member-photo" loading="lazy" alt="{{member.first}} {{member.last}}'s avatar picture" src='{{member.avatar}}' />
           <p class="card-header">{{member.first}} {{member.last}}</p>
           <p class="card-info">{{member.affiliation}}<br><a href="https://github.com/{{member.gh_handle}}" target="_blank"><em>@{{member.gh_handle}}</em></a> on GitHub</p>
         </div>
@@ -438,7 +438,7 @@ users and contributors to participate in the project with respect and safety.
         {% assign sorted = page.numfocus_subcomittee | sort: "last" %}
         {% for member in sorted  %}
             <div class="col-sm-3 col-xs-6 material">
-                <img class="council-member-photo" alt="{{member.first}} {{member.last}}'s avatar picture" src='{{member.avatar}}' />
+                <img class="council-member-photo" loading="lazy" alt="{{member.first}} {{member.last}}'s avatar picture" src='{{member.avatar}}' />
                 <p class="card-header">{{member.first}} {{member.last}}</p>
                 <p class="card-info">
                 <a href="https://github.com/{{member.gh_handle}}" target="_blank"><em>@{{member.gh_handle}}</em></a> on GitHub</p>
@@ -455,7 +455,7 @@ users and contributors to participate in the project with respect and safety.
         {% assign sorted = page.trademark_subcomittee | sort: "last" %}
         {% for member in sorted  %}
             <div class="col-sm-3 col-xs-6 material">
-                <img class="council-member-photo" alt="{{member.first}} {{member.last}}'s avatar picture" src='{{member.avatar}}' />
+                <img class="council-member-photo" loading="lazy" alt="{{member.first}} {{member.last}}'s avatar picture" src='{{member.avatar}}' />
                 <p class="card-header">{{member.first}} {{member.last}}</p>
                 <p class="card-info">
                 <a href="https://github.com/{{member.gh_handle}}" target="_blank"><em>@{{member.gh_handle}}</em></a> on GitHub</p>
@@ -472,7 +472,7 @@ users and contributors to participate in the project with respect and safety.
         {% assign sorted = page.retired_steering | sort: "last" %}
         {% for member in sorted  %}
             <div class="col-sm-3 col-xs-6 material">
-                <img class="council-member-photo" alt="{{member.first}} {{member.last}}'s avatar picture" src='{{member.avatar}}' />
+                <img class="council-member-photo" loading="lazy" alt="{{member.first}} {{member.last}}'s avatar picture" src='{{member.avatar}}' />
                 <p class="card-header">{{member.first}} {{member.last}}</p>
                 <p class="card-info">Member: {{member.dates}}<br>
                 <a href="https://github.com/{{member.gh_handle}}" target="_blank"><em>@{{member.gh_handle}}</em></a> on GitHub</p>
@@ -483,7 +483,7 @@ users and contributors to participate in the project with respect and safety.
 
 <div id="sponsors" class="about-section section-grey top-section-border">
     <div class="row">
-        <img src="{{site.baseurl}}/assets/sponsors2.svg" class="section-icon img-responsive" alt="sponsors">
+        <img src="{{site.baseurl}}/assets/sponsors2.svg" class="section-icon img-responsive" loading="lazy" alt="sponsors">
         <h3 class="col-sm-12 section-header">Sponsors</h3>
         <p class="support-paragraph">Project Jupyter receives direct funding from the following sources</p>
     </div>
@@ -494,6 +494,7 @@ users and contributors to participate in the project with respect and safety.
                 <img src="{{ obj.src }}"
                      width=300
                      height=90
+                     loading="lazy"
                      alt="{{ obj.alt }}" />
             </a>
         </li>
@@ -519,6 +520,7 @@ users and contributors to participate in the project with respect and safety.
                 <img src="{{ obj.src }}"
                      width=300
                      height=90
+                     loading="lazy"
                      alt="{{ obj.alt }}" />
             </a>
         </li>
@@ -528,7 +530,7 @@ users and contributors to participate in the project with respect and safety.
 
 <div id="donate" class="about-section section-grey">
     <div class="row">
-        <img src="{{site.url}}/assets/donations-icon2.svg" class="section-icon img-responsive" alt="Donate">
+        <img src="{{site.url}}/assets/donations-icon2.svg" class="section-icon img-responsive" loading="lazy" alt="Donate">
         <h3 class="col-sm-12 section-header">Donate</h3>
         <p>
             Jupyter will always be 100% open source software, free for all
@@ -554,7 +556,7 @@ users and contributors to participate in the project with respect and safety.
     <div class="row">
         <div class="col-md-12">
             <a href="https://numfocus.org">
-                <img id="numfocus-logo" src="{{site.url}}/assets/numfocus_logo.png" class="img-responsive center-block" alt="numfocus logo">
+                <img id="numfocus-logo" src="{{site.url}}/assets/numfocus_logo.png" class="img-responsive center-block" loading="lazy" alt="numfocus logo">
             </a>
         </div>
     </div>
