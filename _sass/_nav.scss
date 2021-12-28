@@ -17,29 +17,6 @@ body {
     color: black;
 }
 
-.nav > li > a {
-    font-size: 16px;
-    padding: 12px 12px 10px;
-}
-
-.nav > li > a:hover {
-    background-color: transparent;
-    color: #E46E2E;
-    -webkit-transition: .2s;
-}
-
-.nav > li > a:focus {
-    background-color: white;
-}
-
-.nav > li > a:active {
-    background-color: #F8F8F8;
-}
-
-.nav > li > a:visited {
-    background-color: #F8F8F8;
-}
-
 .tab:hover {
     background-color: transparent;
     color: #E46E2E;
@@ -516,12 +493,6 @@ body {
         padding-top: 0;
         text-align: center;
     }
-    .nav>li>a {
-        letter-spacing: .8px;
-        font-size: 13px;
-        padding-left: 8px;
-        padding-right: 8px;
-    }
     .follow {
         float: left;
         margin-bottom: 20px;
@@ -543,9 +514,6 @@ body {
         margin-left:10px;
         margin-right:10px;
         width: calc(100% - 20px);
-    }
-    .navbar-right {
-        margin-right: 10px;
     }
     .tab {
         text-align: center;
@@ -577,11 +545,6 @@ body {
         font-size: 32px;
         font-weight: 500;
         line-height: 1.25em;
-    }
-    .nav>li>a {
-        letter-spacing: 1px;
-        padding-left: 16px;
-        padding-right: 16px;
     }
     .companies li {
         width: 30%;
