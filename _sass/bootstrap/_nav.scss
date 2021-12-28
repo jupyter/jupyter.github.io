@@ -53,11 +53,6 @@
     border-radius: 4px;
   }
 }
-@media (min-width: 768px) {
-  .navbar-header {
-    float: left;
-  }
-}
 .navbar-collapse {
   padding-right: 15px;
   padding-left: 15px;
@@ -98,22 +93,6 @@
 @media (max-device-width: 480px) and (orientation: landscape) {
   .navbar-fixed-bottom .navbar-collapse {
     max-height: 200px;
-  }
-}
-.container > .navbar-header,
-.container-fluid > .navbar-header,
-.container > .navbar-collapse,
-.container-fluid > .navbar-collapse {
-  margin-right: -15px;
-  margin-left: -15px;
-}
-@media (min-width: 768px) {
-  .container > .navbar-header,
-  .container-fluid > .navbar-header,
-  .container > .navbar-collapse,
-  .container-fluid > .navbar-collapse {
-    margin-right: 0;
-    margin-left: 0;
   }
 }
 .navbar-static-top {
