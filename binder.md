@@ -1,5 +1,5 @@
 ---
-layout: page_md
+layout: page
 title: The Binder Project
 title_image: assets/logo_binder.svg
 tagline: Reproducible, sharable, interactive computing environments

@@ -1,2 +1,8 @@
+# Our security address
 Contact: mailto:security@ipython.org
-Encryption: https://jupyter-notebook.readthedocs.io/en/stable/_downloads/ipython_security.asc
+
+# Our OpenPGP key
+Encryption: https://jupyter.org/assets/ipython_security.asc
+
+# Our security policy
+Policy: https://jupyter.org/security

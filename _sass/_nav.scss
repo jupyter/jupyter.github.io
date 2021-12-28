@@ -81,31 +81,6 @@ body {
 
 /* Reusable elements */
 
-/* Header section of each page */
-.header {
-    padding-top: 42px;
-    padding-bottom: 42px;
-    text-align: center;
-}
-
-.header-darkgray {
-  /* Only using dark gray for documentation page, add padding top to center in header */
-  background-color: #757575;
-  color: white;
-}
-
-.header-grey {
-  background-color: #f5f5f5;
-}
-
-.header-white {
-  background-color: white;
-}
-
-.header p {
-  margin: 0 30%;
-}
-
 /* Section elements */
 /* Section classes used for particular sections within a page. Sections should differ in background color when used next to each other */
 .section-white {
@@ -226,53 +201,6 @@ body {
 
 .prompt-header {
     margin-bottom: 16px;
-}
-
-/* Companies section for only "Currently in use" (this section acts differently than customer logos in the "About" section of the site) */
-
-/*Section-center is used to center the companies on the home page & get rid of padding on left associated with ul*/
-.section-center {
-    text-align: center;
-}
-
-.companies {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-}
-
-.companies li {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    display: inline-block;
-    padding: 3%;
-    vertical-align: middle;
-    width: 18%;
-}
-
-.companies .col img {
-    display: block;
-    width: 100%;
-    max-height: 60px;
-}
-
-.greydout {
-    -webkit-transition: all .05s ease;
-    -moz-transition: all .05s ease;
-    -ms-transition: all .05s ease;
-    -o-transition: all .05s ease;
-    transition: all .05s ease;
-}
-
-.greydout:hover {
-    -webkit-opacity: 0.65;
-    -moz-opacity: 0.65;
-    opacity: 0.65;
 }
 
 /* Architecture section on front page */
@@ -471,9 +399,6 @@ body {
         font-size: 15pt;
         line-height: 25pt;
     }
-    .companies li {
-        width: 23%;
-    }
 }
 
 /* all elements in .containers that have a anchor 
@@ -504,11 +429,6 @@ body {
         font-size: 36px;
         font-weight: 500;
         line-height: 1.25;
-    }
-    h1 {
-        font-size: 48px;
-        font-weight: 500;
-        line-height: 1.05em;
     }
     .follow {
         float: right;
@@ -542,11 +462,6 @@ body {
         font-size: 26px;
         font-weight: 500;
         line-height: 1.153em;
-    }
-    h1 {
-        font-size: 32px;
-        font-weight: 500;
-        line-height: 1.25em;
     }
     .nb-highlight-text {
         text-align: center;
@@ -683,11 +598,6 @@ body {
         font-size: 26px;
         font-weight: 500;
         line-height: 1.153em;
-    }
-    h1 {
-        font-size: 32px;
-        font-weight: 500;
-        line-height: 1.25em;
     }
     .nav>li>a {
         letter-spacing: 1px;

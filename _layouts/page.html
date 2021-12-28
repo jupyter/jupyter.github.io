@@ -1,14 +1,18 @@
 ---
 layout: default
 ---
-<div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
+{% include page-header.html
+    title=page.title
+    tagline=page.tagline
+    image=page.title_image
+    image_alt=page.title_image_alt
+%}
 
-  <article class="post-content">
-    {{ content }}
-  </article>
-
-</div>
+<article class="post-content">
+  <div class="section-white top-section-border">
+    <div class="page_content container">
+      {{ content }}
+    </div>
+  </div>
+</article>
