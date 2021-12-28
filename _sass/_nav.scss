@@ -563,11 +563,6 @@ body {
     }
 }
 
-.navbar-brand {
-    height: 60px;
-    overflow: hidden;
-}
-
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     .container {
@@ -650,11 +645,6 @@ body {
 @media (max-width: 420px) {
     .button-container {
         flex-direction: column;
-    }
-}
-@media(max-width: 992px) {
-    .navbar-brand {
-       width: 30px;
     }
 }
 
