@@ -1,0 +1,10 @@
+<header class="page-header">
+  {% if include.image %}
+    <img src="{{ include.image }}"
+         {% if include.image_alt %}alt="{{ include.image_alt }}"{% endif %}
+         loading="eager" />
+  {% else %}
+    <h1>{{ include.title }}</h1>
+  {% endif %}
+  <p>{{ include.tagline }}</p>
+</header>

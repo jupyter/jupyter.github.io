@@ -4,15 +4,6 @@ body {
     padding-top: 70px;
 }
 
-.navbar-scroll {
-  background-color: white;
-    animation-duration: 2s;
-    animation-name: smooth;
-    -moz-box-shadow: 1px 1px 1px #999;
-    -webkit-box-shadow: 1px 1px 1px #999;
-    box-shadow: 1px 1px 1px #999;
-}
-
 .jupytercon-nav > li > .black-tab {
     color: black;
 }
@@ -23,31 +14,6 @@ body {
 }
 
 /* Reusable elements */
-
-/* Header section of each page */
-.header {
-    padding-top: 42px;
-    padding-bottom: 42px;
-    text-align: center;
-}
-
-.header-darkgray {
-  /* Only using dark gray for documentation page, add padding top to center in header */
-  background-color: #757575;
-  color: white;
-}
-
-.header-grey {
-  background-color: #f5f5f5;
-}
-
-.header-white {
-  background-color: white;
-}
-
-.header p {
-  margin: 0 30%;
-}
 
 /* Section elements */
 /* Section classes used for particular sections within a page. Sections should differ in background color when used next to each other */
@@ -390,11 +356,6 @@ body {
         font-weight: 500;
         line-height: 1.25;
     }
-    h1 {
-        font-size: 48px;
-        font-weight: 500;
-        line-height: 1.05em;
-    }
     .follow {
         float: right;
         margin-top: 15px;
@@ -427,11 +388,6 @@ body {
         font-size: 26px;
         font-weight: 500;
         line-height: 1.153em;
-    }
-    h1 {
-        font-size: 32px;
-        font-weight: 500;
-        line-height: 1.25em;
     }
     .nb-highlight-text {
         text-align: center;
@@ -497,9 +453,6 @@ body {
         float: left;
         margin-bottom: 20px;
     }
-    .navbar-text {
-        margin-left: 0px;
-    }
     /* Container for buttons */
     .button-container {
         display: flex;
@@ -540,11 +493,6 @@ body {
         font-size: 26px;
         font-weight: 500;
         line-height: 1.153em;
-    }
-    h1 {
-        font-size: 32px;
-        font-weight: 500;
-        line-height: 1.25em;
     }
     .companies li {
         width: 30%;
