@@ -1,19 +1,16 @@
 ---
 layout: default
 title: Documentation
-description: A comprehensive list of Jupyter projects, subprojects and repositories
+tagline: A comprehensive list of Jupyter projects, subprojects and repositories
 permalink: /documentation
 ---
 
 <div class="post">
-  <header class="post-header header header-grey">
-    <div class="container">
-      <h2>{{ page.title }}</h2>
-      <p>
-        {{ page.description }}
-      </p>
-    </div>
-  </header>
+
+    {% include page-header.html
+        title=page.title
+        tagline=page.tagline
+    %}
 
     <article class="post-content">
       <div class="section-white top-section-border">
