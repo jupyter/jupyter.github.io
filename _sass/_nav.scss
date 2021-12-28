@@ -4,24 +4,6 @@ body {
     padding-top: 70px;
 }
 
-.navbar {
-    border-width: thin;
-    -webkit-transition: .2s;
-    background-color: white;
-    border-bottom: 1px solid #e0e0e0;
-    background-color: white;
-}
-
-.navbar a {
-    color: black;
-}
-
-
-
-.navbar-nav > li > .navbar-active {
-    color: #E46E2E;
-}
-
 .navbar-scroll {
   background-color: white;
     animation-duration: 2s;
