@@ -378,14 +378,6 @@ body {
     background-color: #F27624;
 }
 
-.navbar-toggle > .white-icon-bar {
-    background-color: black;
-}
-
-.navbar-fixed-top .navbar-collapse {
-    max-height: 440px;
-}
-
 .jupytercon-button {
     padding: 16px;
 }
@@ -578,23 +570,17 @@ body {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
     .container {
         margin-left:10px;
         margin-right:10px;
         width: calc(100% - 20px);
     }
-
     .navbar-right {
         margin-right: 10px;
     }
     .tab {
         text-align: center;
     }
-    .navbar-toggle {
-        margin-top: 20px;
-    }
-
 }
 
 @media (max-width: 768px) {
@@ -627,9 +613,6 @@ body {
         letter-spacing: 1px;
         padding-left: 16px;
         padding-right: 16px;
-    }
-    .navbar-toggle {
-        padding-top: 10px;
     }
     .navbar-logo {
         height: 40px;
