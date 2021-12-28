@@ -146,4 +146,18 @@
        width: 30px;
     }
 }
-
+.navbar-logo {
+    height: 45px;
+}
+@media (max-width: 992px) {
+    .navbar-logo {
+      height: 36px;
+      margin-top: 4px;
+    }
+}
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 40px;
+        margin-top: 6px;
+    }
+}
