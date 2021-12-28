@@ -1,5 +1,5 @@
 ---
-layout: page_md
+layout: page
 title: Installing Jupyter Software
 tagline: Get up and running with JupyterLab or the classic Jupyter Notebook.
 permalink: /install

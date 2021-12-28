@@ -1,5 +1,5 @@
 ---
-layout: page_md
+layout: page
 title: Get Involved
 tagline: How to join the Project Jupyter community
 permalink: /community

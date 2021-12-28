@@ -1,5 +1,5 @@
 ---
-layout: page_md
+layout: page
 title: "About Us"
 tagline: Project Jupyter’s origins and governance
 permalink: /about
