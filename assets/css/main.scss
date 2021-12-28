@@ -4,11 +4,13 @@
 ---
 @import "nav";
 @import "cards";
-@import "github";
 @import "markdown";
 @import "about";
 @import "gallery";
 @import "syntax";
+@import "components/logogrid";
+@import "components/hyperlinks";
 @import "components/footer";
 @import "components/jumbotron";
 @import "components/jupyterhub";
+@import "components/page-header";

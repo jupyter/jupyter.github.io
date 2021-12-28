@@ -1,5 +1,5 @@
 ---
-layout: page_md
+layout: page
 title: JupyterHub
 title_image: assets/hublogo.svg
 title_image_alt: JupyterHub logo

@@ -1,5 +1,5 @@
 ---
-layout: page_md
+layout: page
 title: Security
 tagline: Project Jupyter is committed to reducing risk in using, deploying, operating, or developing Jupyter software.
 permalink: /security
