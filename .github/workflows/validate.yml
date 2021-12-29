@@ -21,12 +21,14 @@ jobs:
 
     - name: Build the site in the Jekyll/builder container
       run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
-        
+        pip install nox
+        nox -s build_no_serve
+
     - name: List result of Jekyll build
       run: ls _site/ -l
+
+    - name: Copy assets
+      run: cp -r assets _site/assets
 
     - name: Publish built site
       uses: actions/upload-artifact@v2
@@ -70,9 +72,6 @@ jobs:
         name: Built site ${{ github.run_number }}
         path: ./_site
 
-    - name: Copy assets
-      run: cp -r assets _site/assets
-
     # TODO: we are not checking absolute links as pytest plugins does not support them
     - name: Check links
       run: |
@@ -86,8 +85,6 @@ jobs:
     needs: [build]
 
     steps:
-      - name: Fetch repository
-        uses: actions/checkout@v2
       - name: Fetch built site
         uses: actions/download-artifact@v2
         with:
