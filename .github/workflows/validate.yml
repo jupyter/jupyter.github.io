@@ -21,8 +21,9 @@ jobs:
 
     - name: Build the site in the Jekyll/builder container
       run: |
-        pip install nox
-        nox -s build_no_serve
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
 
     - name: List result of Jekyll build
       run: ls _site/ -l
