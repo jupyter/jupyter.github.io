@@ -28,7 +28,7 @@ To build and preview the site locally, follow these steps:
 3. **Run the `build` command**
    
    ```console
-   $ nox -s build
+   $ nox -s build-live
    ```
 
 
