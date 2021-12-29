@@ -26,10 +26,12 @@ jobs:
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
 
     - name: List result of Jekyll build
-      run: ls _site/ -l
+      run: |
+        ls _site/ -l
+        ls _site/assets -l
 
-    - name: Copy assets
-      run: cp -r assets _site/assets
+    # - name: Copy assets
+    # run: cp -r assets _site/assets
 
     - name: Publish built site
       uses: actions/upload-artifact@v2
