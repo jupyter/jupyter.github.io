@@ -79,7 +79,10 @@ jobs:
     - name: Check links
       run: |
         pip install pytest-check-links
-        pytest _site/ --check-links --check-links-ignore "https://.*linkedin.com/.*" --check-links-ignore "/"
+        pytest _site/ --check-links \
+           --check-links-ignore "https://.*linkedin.com/.*" \
+           --check-links-ignore "/" \
+           --check-links-ignore= ".github/images/netlify-preview.png"
 
   lighthouse:
 
