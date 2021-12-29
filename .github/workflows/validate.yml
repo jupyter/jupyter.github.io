@@ -1,4 +1,4 @@
-name: Test website
+name: Test
 
 on:
   push:
@@ -75,19 +75,21 @@ jobs:
         name: Built site ${{ github.run_number }}
         path: ./_site
 
+    - name: Install link check dependencies
+      run: pip install pytest-check-links
+
     # TODO: we are not checking absolute links as pytest plugins does not support them
     - name: Check links
       run: |
-        pip install pytest-check-links
         pytest _site/ --check-links \
            --check-links-ignore "https://.*linkedin.com/.*" \
            --check-links-ignore "/" \
-           --check-links-ignore= ".github/images/netlify-preview.png"
+           --check-links-ignore ".github/images/netlify-preview.png"
 
   lighthouse:
 
     runs-on: ubuntu-latest
-    name: Check quality with Lighthouse
+    name: Audit with Lighthouse
     needs: [build]
 
     steps:
