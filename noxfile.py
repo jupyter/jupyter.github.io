@@ -20,4 +20,4 @@ def build(session):
 @nox.session(venv_backend='conda')
 def build_no_serve(session):
     install_deps(session)
-    session.run(*"bundle exec jekyll".split())
+    session.run(*"bundle exec jekyll build".split())

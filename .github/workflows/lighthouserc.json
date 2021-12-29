@@ -1,8 +1,21 @@
 {
   "ci": {
-    "url": ["http://localhost/", "http://localhost/install", "http://localhost/about", "http://localhost/community"],
     "collect": {
-      "staticDistDir": "./_site"
+      "staticDistDir": "./_site",
+      "autodiscoverUrlBlocklist": [
+        "conduct.html"
+      ],
+      "settings": {
+        "skipAudits": ["canonical"]
+      }
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance": ["error", { "minScore": 0.95 }],
+        "categories:accessibility": ["error", { "minScore": 0.95 }],
+        "categories:best-practices": ["error", { "minScore": 0.95 }],
+        "categories:seo": ["error", { "minScore": 0.95 }]
+      }
     }
   }
 }
