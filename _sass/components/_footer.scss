@@ -2,6 +2,10 @@
 
 .footer {
     background-color: $orange;
+    padding: 15px;
+    @media (max-width:767px) {
+        padding: 15px 0;
+    }
     p {
         color: $black;
         padding-top: 10px;

@@ -4,74 +4,8 @@ body {
     padding-top: 70px;
 }
 
-/* Navbar and footer (global) styling */
-.navbar-fixed-top .nav {
-    padding: 15px 0;
-}
-
-.navbar {
-    border-width: thin;
-    -webkit-transition: .2s;
-    background-color: white;
-    border-bottom: 1px solid #e0e0e0;
-    background-color: white;
-}
-
-.navbar a {
-    color: black;
-}
-
-.navbar-fixed-top .navbar-brand {
-    padding: 5px 0px;
-    margin-left: 15px;
-}
-
-.navbar-header .icon-bar {
-    background-color: black;
-}
-
-.navbar-nav > li > .navbar-active {
-    color: #E46E2E;
-}
-
-.navbar-scroll {
-  background-color: white;
-    animation-duration: 2s;
-    animation-name: smooth;
-    -moz-box-shadow: 1px 1px 1px #999;
-    -webkit-box-shadow: 1px 1px 1px #999;
-    box-shadow: 1px 1px 1px #999;
-}
-
 .jupytercon-nav > li > .black-tab {
     color: black;
-}
-
-.navbar-logo {
-    height: 45px;
-}
-
-.nav > li > a {
-    font-size: 16px;
-    padding: 12px 12px 10px;
-}
-
-.nav > li > a:hover {
-    background-color: transparent;
-    color: #E46E2E;
-    -webkit-transition: .2s;
-}
-
-.nav > li > a:focus {
-    background-color: white;
-}
-
-.nav > li > a:active {
-    background-color: #F8F8F8;
-}
-
-.nav > li > a:visited {
-    background-color: #F8F8F8;
 }
 
 .tab:hover {
@@ -365,14 +299,6 @@ body {
     background-color: #F27624;
 }
 
-.navbar-toggle > .white-icon-bar {
-    background-color: black;
-}
-
-.navbar-fixed-top .navbar-collapse {
-    max-height: 440px;
-}
-
 .jupytercon-button {
     padding: 16px;
 }
@@ -523,22 +449,9 @@ body {
         padding-top: 0;
         text-align: center;
     }
-    .navbar-logo {
-      height: 36px;
-      margin-top: 4px;
-    }
-    .nav>li>a {
-        letter-spacing: .8px;
-        font-size: 13px;
-        padding-left: 8px;
-        padding-right: 8px;
-    }
     .follow {
         float: left;
         margin-bottom: 20px;
-    }
-    .navbar-text {
-        margin-left: 0px;
     }
     /* Container for buttons */
     .button-container {
@@ -548,34 +461,16 @@ body {
     }
 }
 
-.navbar-brand {
-    height: 60px;
-    overflow: hidden;
-}
-
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
     .container {
         margin-left:10px;
         margin-right:10px;
         width: calc(100% - 20px);
     }
-
-    .navbar-right {
-        margin-right: 10px;
-    }
-
-    .navbar-fixed-top .navbar-brand {
-        padding: 15px 0;
-    }
     .tab {
         text-align: center;
     }
-    .navbar-toggle {
-        margin-top: 20px;
-    }
-
 }
 
 @media (max-width: 768px) {
@@ -598,21 +493,6 @@ body {
         font-size: 26px;
         font-weight: 500;
         line-height: 1.153em;
-    }
-    .nav>li>a {
-        letter-spacing: 1px;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-    .navbar-header {
-        margin-bottom: 0;
-    }
-    .navbar-toggle {
-        padding-top: 10px;
-    }
-    .navbar-logo {
-        height: 40px;
-        margin-top: 6px;
     }
     .companies li {
         width: 30%;
@@ -646,11 +526,6 @@ body {
 @media (max-width: 420px) {
     .button-container {
         flex-direction: column;
-    }
-}
-@media(max-width: 992px) {
-    .navbar-brand {
-       width: 30px;
     }
 }
 
