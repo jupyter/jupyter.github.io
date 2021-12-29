@@ -1,0 +1,19 @@
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 75%; /* 4:3 Aspect Ratio */
+  @media (max-width: 767px) {
+    padding-top: 130%; /* A custom aspect ratio for Google Calendar */
+  }
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
