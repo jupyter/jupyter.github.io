@@ -5,16 +5,13 @@ tagline: A comprehensive list of Jupyter projects, subprojects and repositories
 permalink: /documentation
 ---
 
-<div class="post">
-
     {% include page-header.html
         title=page.title
         tagline=page.tagline
     %}
 
-    <article class="post-content">
+    <article class="container content content--wide">
       <div class="section-white top-section-border">
-        <div class="container">
         <div class="row cardlist">
           {%- for card in site.data.documentation -%}
             <div class="col-lg-4 col-md-6 col-sm-6 cardlist-col">
@@ -32,6 +29,4 @@ permalink: /documentation
               </div>
             </div>
           {%- endfor -%}
-        </div>
     </article>
-</div>

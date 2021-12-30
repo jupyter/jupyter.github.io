@@ -1,0 +1,16 @@
+.article {
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.content {
+  margin-right: auto;
+  margin-left: auto;
+  &.content--copy {
+     max-width: 630px;
+  }
+  &.content--wide {
+     max-width: 930px;
+  }
+}
