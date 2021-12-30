@@ -1,0 +1,108 @@
+name: Test
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build Jekyll site for testing
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build the site in the Jekyll/builder container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+
+    - name: List result of Jekyll build
+      run: |
+        ls _site/ -l
+        ls _site/assets -l
+
+    # - name: Copy assets
+    # run: cp -r assets _site/assets
+
+    - name: Publish built site
+      uses: actions/upload-artifact@v2
+      with:
+        name: Built site ${{ github.run_number }}
+        path: ./_site
+        if-no-files-found: error
+
+  validate:
+
+    runs-on: ubuntu-latest
+    name: Validate HTML
+    needs: [build]
+
+    steps:
+    - name: Fetch built site
+      uses: actions/download-artifact@v2
+      with:
+        name: Built site ${{ github.run_number }}
+        path: ./_site
+
+    # just to satisfy the `Cyb3r-Jak3/html5validator-action` action
+    - name: Create dummy git repository
+      run: git init
+
+    - name: HTML5 Validator
+      uses: Cyb3r-Jak3/html5validator-action@44696509d19bec6bd00e5ebf29bbeda320562aac
+      with:
+        root: _site/
+
+  check-links:
+
+    runs-on: ubuntu-latest
+    name: Check links
+    needs: [build]
+
+    steps:
+    - name: Fetch built site
+      uses: actions/download-artifact@v2
+      with:
+        name: Built site ${{ github.run_number }}
+        path: ./_site
+
+    - name: Install link check dependencies
+      run: pip install pytest-check-links
+
+    # TODO: we are not checking absolute links as pytest plugins does not support them
+    - name: Check links
+      run: |
+        pytest _site/ --check-links \
+           --check-links-ignore "https://.*linkedin.com/.*" \
+           --check-links-ignore "/" \
+           --check-links-ignore ".github/images/netlify-preview.png"
+
+  lighthouse:
+
+    runs-on: ubuntu-latest
+    name: Audit with Lighthouse
+    needs: [build]
+
+    steps:
+      - name: Fetch repository for `lighthouserc.json`
+        uses: actions/checkout@v2
+      - name: Fetch built site
+        uses: actions/download-artifact@v2
+        with:
+          name: Built site ${{ github.run_number }}
+          path: ./_site
+      - name: Audit with Lighthouse
+        uses: treosh/lighthouse-ci-action@v8
+        with:
+          configPath: ".github/workflows/lighthouserc.json"
+          temporaryPublicStorage: true
+          uploadArtifacts: true
