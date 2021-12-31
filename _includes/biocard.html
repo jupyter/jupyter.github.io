@@ -1,0 +1,22 @@
+<section class="biocard">
+  <img
+    class="biocard-photo"
+    alt="{{ include.name }}"
+    src="/assets/bios/{{ include.photo }}"
+    loading="{% if include.loading %}{{ include.loading }}{% else %}lazy{% endif %}" />
+  <div class="biocard-header">{{ include.name }}</div>
+  <div class='biocard-badges'>
+    {% if include.personal %}
+      <a href="{{ include.personal }}">Web</a>
+    {% endif %}
+    {% if include.gh_handle %}
+      <a href="https://github.com/{{ include.gh_handle }}">GitHub</a>
+    {% endif %}
+    {% if include.linkedin %}
+      <a href="{{ include.linkedin }}">LinkedIn</a>
+    {% endif %}
+    {% if include.twitter_handle %}
+      <a href="https://twitter.com/{{ include.twitter_handle }}">Twitter</a>
+    {% endif %}
+  </div>
+</section>

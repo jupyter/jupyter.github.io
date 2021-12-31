@@ -404,8 +404,28 @@ users and contributors to participate in the project with respect and safety.
       body of Distinguished Contributors.
     </p>
     </div>
-    {% include cards.html cohort_name="2020 Cohort" cohort=page.distinguished_2020 %}
-    {% include cards.html cohort_name="Special Election Cohort" cohort=page.distinguished_special_election %}
+    <h4>2020 Cohort</h4>
+    {% for bio in page.distinguished_2020 %}
+        {% include biocard.html
+            name=bio.name
+            photo=bio.photo
+            personal=bio.person
+            gh_handle=bio.gh_handle
+            linkedin=bio.linkedin
+            twitter_handle=bio.twitter_handle
+        %}
+    {% endfor %}
+    <h4>Special Election Cohort</h4>
+    {% for bio in page.distinguished_special_election %}
+        {% include biocard.html
+            name=bio.name
+            photo=bio.photo
+            personal=bio.person
+            gh_handle=bio.gh_handle
+            linkedin=bio.linkedin
+            twitter_handle=bio.twitter_handle
+        %}
+    {% endfor %}
 </div>
 
 <div id="steering-council" class="about-section section-white top-section-border">
