@@ -1,9 +1,3 @@
-body {
-    font-weight: 400;
-    /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
-    padding-top: 70px;
-}
-
 .jupytercon-nav > li > .black-tab {
     color: black;
 }
@@ -290,7 +284,7 @@ body {
     border-radius: 2px;
     color: white;
     letter-spacing: 1px;
-    padding: 13px 60px;
+    padding: 13px;
     text-decoration: none;
     -webkit-transition: .2s;
 }
@@ -325,13 +319,6 @@ body {
         font-size: 15pt;
         line-height: 25pt;
     }
-}
-
-/* all elements in .containers that have a anchor 
- * need to be scrolled by at least 3 em to not be behind the hidden header.
- */
-.container *{
-    scroll-margin-top: 3em;
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -463,11 +450,6 @@ body {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    .container {
-        margin-left:10px;
-        margin-right:10px;
-        width: calc(100% - 20px);
-    }
     .tab {
         text-align: center;
     }
@@ -493,13 +475,6 @@ body {
         font-size: 26px;
         font-weight: 500;
         line-height: 1.153em;
-    }
-    .companies li {
-        width: 30%;
-        padding: 4%;
-    }
-    body {
-        padding-top: 50px;
     }
 }
 

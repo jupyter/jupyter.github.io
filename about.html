@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "About Us"
 tagline: Project Jupyter’s origins and governance
 permalink: /about
@@ -376,23 +376,28 @@ partners:
     alt: 2i2c logo
 ---
 
-Project Jupyter is a non-profit, open-source project, born out of the [IPython Project](https://ipython.org) in 2014 as
-it evolved to support interactive data science and scientific computing across all programming languages. Jupyter will
-always be 100% open-source software, free for all to use and released under the liberal terms of the
-[modified BSD license](https://opensource.org/licenses/BSD-3-Clause).
+{% include page-header.html
+    title=page.title
+    tagline=page.tagline
+%}
 
-Jupyter is developed in the open on GitHub, through the consensus of the Jupyter community. For more information on our
-governance approach, please see our [Governance Document](https://github.com/jupyter/governance/blob/master/governance.md).
+<article class="container">
+  <div class="section-white top-section-border">
+    <div class="content content--copy">
 
-All online and in-person interactions and communications directly related to the project are covered by the
-[Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/master/conduct/code_of_conduct.md).
-This Code of Conduct sets expectations to enable a diverse community of
-users and contributors to participate in the project with respect and safety.
+        <p>Project Jupyter is a non-profit, open-source project, born out of the <a href="https://ipython.org">IPython Project</a> in 2014 as it evolved to support interactive data science and scientific computing across all programming languages. Jupyter will always be 100% open-source software, free for all to use and released under the liberal terms of the <a href="https://opensource.org/licenses/BSD-3-Clause">modified BSD license</a>.</p>
+
+        <p>Jupyter is developed in the open on GitHub, through the consensus of the Jupyter community. For more information on our governance approach, please see our <a href="https://github.com/jupyter/governance/blob/master/governance.md">Governance Document</a>.</p>
+
+   <p>All online and in-person interactions and communications directly related to the project are covered by the <a href="https://github.com/jupyter/governance/blob/master/conduct/code_of_conduct.md">Jupyter Code of Conduct</a>. This Code of Conduct sets expectations to enable a diverse community of users and contributors to participate in the project with respect and safety.</p>
+
+    </div>
+</div>
 
 <div class="about-section section-white top-section-border">
-    <div class="row">
-    <h3 class="col-sm-12 section-header">Distinguished Contributors</h3>
-    <p class="col-sm-12">
+    <div class="row content content--copy">
+    <h3 class="section-header">Distinguished Contributors</h3>
+    <p>
       Project Jupyter <a href="https://jupyter.org/governance/distinguished_contributors.html">Distinguished
       Contributors</a> are recognized for their substantial contributions
       to Jupyter itself in both quality and quantity over at least two
@@ -409,16 +414,16 @@ users and contributors to participate in the project with respect and safety.
 </div>
 
 <div id="steering-council" class="about-section section-white top-section-border">
-    <div class="row">
+    <div class="row content content--copy">
         <img src="{{site.url}}/assets/steering.svg" class="section-icon img-responsive" alt="steering committee icon">
-        <h3 class="col-sm-12 section-header">Steering Council</h3>
-        <p class="col-sm-12">
+        <h3 class="section-header">Steering Council</h3>
+        <p>
         The role of the Jupyter Steering Council is to ensure, through working with and serving the broader Jupyter community,
         the long-term well-being of the project, both technically and as a community. The Jupyter Steering Council currently consists
         of the following members (in alphabetical order).
         </p>
     </div>
-    <div class="row">
+    <div class="row content content--wide">
         {% assign sorted = page.steering | sort: "last" %}
         {% for member in sorted %}
         <div class="col-sm-3 col-xs-6 material section-content section-center">
@@ -431,10 +436,10 @@ users and contributors to participate in the project with respect and safety.
 
     <hr>
     {% assign num = page.numfocus_subcomittee | size %}
-    <div class="row">
-        <h3 class="col-sm-12 section-header">NumFOCUS Subcommittee Member{% if num > 1 %}s{% endif %}</h3>
+    <div class="row content content--copy">
+        <h3 class="section-header">NumFOCUS Subcommittee Member{% if num > 1 %}s{% endif %}</h3>
     </div>
-    <div class="row">
+    <div class="row content content--wide">
         {% assign sorted = page.numfocus_subcomittee | sort: "last" %}
         {% for member in sorted  %}
             <div class="col-sm-3 col-xs-6 material">
@@ -448,10 +453,10 @@ users and contributors to participate in the project with respect and safety.
 
     <hr>
     {% assign num = page.trademark_subcomittee | size %}
-    <div class="row">
-        <h3 class="col-sm-12 section-header">Trademark Subcommittee Member{% if num > 1 %}s{% endif %}</h3>
+    <div class="row content content--copy">
+        <h3 class="section-header">Trademark Subcommittee Member{% if num > 1 %}s{% endif %}</h3>
     </div>
-    <div class="row">
+    <div class="row content content--wide">
         {% assign sorted = page.trademark_subcomittee | sort: "last" %}
         {% for member in sorted  %}
             <div class="col-sm-3 col-xs-6 material">
@@ -465,10 +470,10 @@ users and contributors to participate in the project with respect and safety.
 
     <hr>
     {% assign num = page.retired_steering | size %}
-    <div class="row">
-        <h3 class="col-sm-12 section-header">Retired Steering Council Member{% if num > 1 %}s{% endif %}</h3>
+    <div class="row content content--copy">
+        <h3 class="section-header">Retired Steering Council Member{% if num > 1 %}s{% endif %}</h3>
     </div>
-    <div class="row">
+    <div class="row content content--wide">
         {% assign sorted = page.retired_steering | sort: "last" %}
         {% for member in sorted  %}
             <div class="col-sm-3 col-xs-6 material">
@@ -481,10 +486,10 @@ users and contributors to participate in the project with respect and safety.
     </div>
 </div>
 
-<div id="sponsors" class="about-section section-grey top-section-border">
+<div id="sponsors" class="about-section section-grey top-section-border content content--wide">
     <div class="row">
         <img src="{{site.baseurl}}/assets/sponsors2.svg" class="section-icon img-responsive" loading="lazy" alt="sponsors">
-        <h3 class="col-sm-12 section-header">Sponsors</h3>
+        <h3 class="section-header">Sponsors</h3>
         <p class="support-paragraph">Project Jupyter receives direct funding from the following sources</p>
     </div>
     <ul class="logogrid">
@@ -502,7 +507,7 @@ users and contributors to participate in the project with respect and safety.
     </ul>
 </div>
 
-<div id="partners" class="about-section section-white top-section-border">
+<div id="partners" class="about-section section-white top-section-border content content--wide">
     <div class="row section-header">
         <img src="{{site.baseurl}}/assets/institutional_partners2.svg"
              class="section-icon img-responsive"
@@ -528,8 +533,8 @@ users and contributors to participate in the project with respect and safety.
     </ul>
 </div>
 
-<div id="donate" class="about-section section-grey">
-    <div class="row">
+<div id="donate" class="about-section section-grey content content--wide">
+    <div class="row content content--copy">
         <img src="{{site.url}}/assets/donations-icon2.svg" class="section-icon img-responsive" loading="lazy" alt="Donate">
         <h3 class="col-sm-12 section-header">Donate</h3>
         <p>
@@ -561,7 +566,7 @@ users and contributors to participate in the project with respect and safety.
         </div>
     </div>
     
-    <div class="row">
+    <div class="row content">
         <div id="col-md-12 donate-formatting">
             <a href="https://numfocus.salsalabs.org/donate-to-jupyter/index.html" class="orange-button" id="donate-link">
                 Support Project Jupyter
@@ -569,3 +574,4 @@ users and contributors to participate in the project with respect and safety.
         </div>
     </div>
 </div>
+</article>
