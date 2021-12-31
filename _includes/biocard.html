@@ -13,16 +13,16 @@
   {% endif %}
   <div class='biocard-badges'>
     {% if include.personal %}
-      <a href="{{ include.personal }}">Web</a>
+      <a href="{{ include.personal }}" rel="noopener noreferrer">Web</a>
     {% endif %}
     {% if include.gh_handle %}
-      <a href="https://github.com/{{ include.gh_handle }}">GitHub</a>
+      <a href="https://github.com/{{ include.gh_handle }}" rel="noopener noreferrer">GitHub</a>
     {% endif %}
     {% if include.linkedin %}
-      <a href="{{ include.linkedin }}">LinkedIn</a>
+      <a href="{{ include.linkedin }}" rel="noopener noreferrer">LinkedIn</a>
     {% endif %}
     {% if include.twitter_handle %}
-      <a href="https://twitter.com/{{ include.twitter_handle }}">Twitter</a>
+      <a href="https://twitter.com/{{ include.twitter_handle }}" rel="noopener noreferrer">Twitter</a>
     {% endif %}
   </div>
   </div>
