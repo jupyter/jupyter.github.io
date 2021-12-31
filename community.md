@@ -101,8 +101,7 @@ Below is a short list of gitter channels, email listservs, and github repositori
 where you can get involved. **We always welcome participation in the Jupyter community**.
 
 <section>
-<div class="section-white top-section-border">
-    <div class="container">
+<div class="top-section-border">
     <div class="row">
         {% for obj in page.channels %}
         <div class="col-sm-6 col-md-12 resource-section">
@@ -120,7 +119,6 @@ where you can get involved. **We always welcome participation in the Jupyter com
             </div>
         </div>
         {% endfor %}
-    </div>
     </div>
 </div>
 </section>
