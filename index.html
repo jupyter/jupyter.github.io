@@ -9,24 +9,25 @@ jumbotron:
   images:
     - class: fade-in one
       alt: circle of programming language icons
-      src: assets/homepage/circle1.svg
+      src: circle1.svg
       width: 677
       height: 286
     - class: fade-in two
       alt: circle of programming language icons
-      src: assets/homepage/circle2.svg
+      src: circle2.svg
       width: 677
       height: 286
     - class: fade-in three
       alt: circle of programming language icons
-      src: assets/homepage/circle3.svg
+      src: circle3.svg
       width: 677
       height: 286
     - class: main-logo
       alt: jupyter logo
-      src: assets/homepage/main-logo.svg
+      src: main-logo.svg
       width: 677
       height: 286
+  background: white-background.svg
 
 jupyterlab:
   headline: 'JupyterLab: A Next-Generation Notebook Interface'
@@ -252,7 +253,7 @@ in_use:
                 <div class="jumbotron-image-container">
                     <span>
                         <img class="img-responsive {{ img.class }}"
-                             src="{{ img.src }}"
+                             src="/assets/homepage/{{ img.src }}"
                              width={{ img.width }}
                              height={{ img.height }}
                              alt="{{ img.alt }}"
@@ -261,7 +262,7 @@ in_use:
                 </div>
                 {% endfor %}
                 <img class="img-responsive"
-                     src="assets/white-background.svg"
+                     src="/assets/homepage/{{ page.jumbotron.background }}"
                      width=747
                      height=313
                      alt="white background"
