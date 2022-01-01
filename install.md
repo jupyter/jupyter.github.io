@@ -13,13 +13,13 @@ _The [installation guide](http://jupyterlab.readthedocs.io/en/stable/getting_sta
 
 JupyterLab can be installed with `mamba` and `conda`:
 
-```shell
+```bash
 mamba install -c conda-forge jupyterlab
 ```
 
 or
 
-```shell
+```bash
 conda install -c conda-forge jupyterlab
 ```
 
@@ -29,7 +29,7 @@ Note: If you have not installed mamba or conda yet, you can get started with the
 
 If you use `pip`, you can install it with:
 
-```shell
+```bash
 pip install jupyterlab
 ```
 
@@ -39,7 +39,7 @@ If installing using `pip install --user`, you must add the user-level `bin` dire
 
 Once installed, launch JupyterLab with:
 
-```shell
+```bash
 jupyter-lab
 ```
 
@@ -49,13 +49,13 @@ jupyter-lab
 
 The classic notebook can be installed with `mamba` and `conda`:
 
-```shell
+```bash
 mamba install -c conda-forge notebook
 ```
 
 or
 
-```shell
+```bash
 conda install -c conda-forge notebook
 ```
 
@@ -63,7 +63,7 @@ conda install -c conda-forge notebook
 
 If you use `pip`, you can install it with:
 
-```shell
+```bash
 pip install notebook
 ```
 
@@ -81,13 +81,13 @@ See [Running the Notebook](https://jupyter.readthedocs.io/en/latest/running.html
 
 If you use `mamba` or `conda`, you can install it with:
 
-```shell
+```bash
 mamba install -c conda-forge voila
 ```
 
 or
 
-```shell
+```bash
 conda install -c conda-forge voila
 ```
 
@@ -97,6 +97,6 @@ For more detailed instructions, consult the [installation guide](https://voila.r
 
 If you use `pip`, you can install it with:
 
-```shell
+```bash
 pip install voila
 ```
