@@ -156,91 +156,91 @@ in_use:
   headline: Currently in use at
   companies:
     - href: https://www.anaconda.com
-      src: assets/anaconda.svg
+      src: anaconda.svg
       alt: Anaconda
     - href: https://ayasdi.com
-      src: assets/ayasdi.svg
+      src: ayasdi.svg
       alt: Ayasdi
     - href: https://www.berkeley.edu
-      src: assets/Berkeley.svg
+      src: Berkeley.svg
       alt: Berkeley
     - href: https://www.bloomberg.com
-      src: assets/bloomberg.svg
+      src: bloomberg.svg
       alt: Bloomberg
     - href: https://www.brynmawr.edu
-      src: assets/brynmawr.svg
+      src: brynmawr.svg
       alt: BrynMawr
     - href: https://www.calpoly.edu
-      src: assets/calpoly.svg
+      src: calpoly.svg
       alt: CalPoly
     - href: https://www.clemson.edu
-      src: assets/clemson.svg
+      src: clemson.svg
       alt: Clemson
     - href: https://cocalc.com
-      src: assets/cocalc.svg
+      src: cocalc.svg
       alt: CoCalc
     - href: https://codeneuro.org
-      src: assets/codeneuro.svg
+      src: codeneuro.svg
       alt: CodeNeuro
     - href: https://www.thedataincubator.com
-      src: assets/tdi.svg
+      src: tdi.svg
       alt: The Data Incubator
     - href: https://www.gwu.edu
-      src: assets/washington.svg
+      src: washington.svg
       alt: George Washington University
     - href: https://www.google.com
-      src: assets/google.svg
+      src: google.svg
       alt: Google
     - href: https://www.ibm.com
-      src: assets/IBM.svg
+      src: IBM.svg
       alt: IBM
     - href: https://www.janelia.org
-      src: assets/janelia.svg
+      src: janelia.svg
       alt: Janelia
     - href: https://www.latimes.com
-      src: assets/latimes.svg
+      src: latimes.svg
       alt: Los Angeles Times
     - href: https://msu.edu
-      src: assets/michigan-state.svg
+      src: michigan-state.svg
       alt: Michigan State University
     - href: https://www.microsoft.com
-      src: assets/Microsoft.svg
+      src: Microsoft.svg
       alt: Microsoft
     - href: https://www.nasa.gov
-      src: assets/NASA.svg
+      src: NASA.svg
       alt: NASA
     - href: https://www.netapp.com/us/
-      src: assets/netapp.svg
+      src: netapp.svg
       alt: NetApp
     - href: https://www.linkedin.com/company/nsite-llc/about/
-      src: assets/nsite.svg
+      src: nsite.svg
       alt: NSite
     - href: https://www.northwestern.edu
-      src: assets/northwestern.svg
+      src: northwestern.svg
       alt: Northwestern University
     - href: https://www.nyu.edu
-      src: assets/NYU.svg
+      src: NYU.svg
       alt: NYU
     - href: https://www.oreilly.com
-      src: assets/oreilly.svg
+      src: oreilly.svg
       alt: OReilly
     - href: https://www.quantopian.com
-      src: assets/quantopian.svg
+      src: quantopian.svg
       alt: Quantopian
     - href: https://quantstack.net
-      src: assets/quantstack.svg
+      src: quantstack.svg
       alt: QuantStack
     - href: https://developer.rackspace.com
-      src: assets/rackspace.svg
+      src: rackspace.svg
       alt: Rackspace
     - href: https://www.sheffield.ac.uk
-      src: assets/sheffield.svg
+      src: sheffield.svg
       alt: Sheffield
     - href: https://software-carpentry.org
-      src: assets/carpentry.svg
+      src: carpentry.svg
       alt: Software Carpentry
     - href: https://www.soundcloud.com
-      src: assets/soundcloud.svg
+      src: soundcloud.svg
       alt: SoundCloud
 ---
 
@@ -432,7 +432,7 @@ in_use:
                 {% for li in page.in_use.companies %}
                 <li class="small">
                     <a href="{{ li.href }}">
-                        <img src="{{ li.src }}"
+                        <img src="/assets/logos/{{ li.src }}"
                              class="greydout"
                              width=300
                              height=90

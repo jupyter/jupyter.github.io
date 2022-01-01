@@ -268,79 +268,79 @@ trademark_subcomittee:
 # And entries ordered according to A-Z,1-9
 sponsors:
   - url: https://opendreamkit.org/
-    src: /assets/EC-H2020.svg
+    src: EC-H2020.svg
     alt: EU logo
   - url: https://www.fastly.com/
-    src: /assets/fastly.svg
+    src: fastly.svg
     alt: fastly logo
   - url: https://www.google.com/
-    src: /assets/google-color.svg
+    src: google-color.svg
     alt: google logo
   - url: https://helmsleytrust.org
-    src: /assets/helmsley.svg
+    src: helmsley.svg
     alt: helmsley trust logo
   - url: https://www.microsoft.com/
-    src: /assets/microsoft-color.svg
+    src: microsoft-color.svg
     alt: microsoft logo
   - url: https://www.moore.org/
-    src: /assets/moore.svg
+    src: moore.svg
     alt: moore foundation logo
   - url: https://www.quansight.com/
-    src: /assets/quansight.svg
+    src: quansight.svg
     alt: Quansight logo
   - url: https://developer.rackspace.com/
-    src: /assets/rackspace-color.svg
+    src: rackspace-color.svg
     alt: rackspace logo
   - url: https://schmidtfutures.com/
-    src: /assets/schmidt.svg
+    src: schmidt.svg
     alt: schmidt futures logo
   - url: https://www.sloan.org/
-    src: /assets/alfred.svg
+    src: alfred.svg
     alt: sloan logo
 
 
 partners:
   - url: https://apple.com/
-    src: /assets/apple.svg
+    src: apple.svg
     alt: apple inc logo
   - url: https://aws.amazon.com/
-    src: /assets/aws.svg
+    src: aws.svg
     alt: AWS logo
   - url: https://www.berkeley.edu/
-    src: /assets/berkeley-color.svg
+    src: berkeley-color.svg
     alt: UC Berkeley logo
   - url: https://www.bloomberg.com/
-    src: /assets/bloomberg-color.svg
+    src: bloomberg-color.svg
     alt: bloomberg logo
   - url: https://www.calpoly.edu/
-    src: /assets/poly-color.svg
+    src: poly-color.svg
     alt: cal poly logo
   - url: https://databricks.com/
-    src: /assets/databricks.svg
+    src: databricks.svg
     alt: Databricks logo
   - url: https://www.si.umich.edu/
-    src: /assets/michigan.svg
+    src: michigan.svg
     alt: UMSI logo
   - url: https://www.mongodb.com/
-    src: /assets/mongodb.svg
+    src: mongodb.svg
     alt: MongoDB logo
   - url: https://techblog.netflix.com
-    src: /assets/netflix-color.svg
+    src: netflix-color.svg
     alt: netflix logo
   - url: https://www.quansight.com/
-    src: /assets/quansight.svg
+    src: quansight.svg
     alt: Quansight logo
   - url: https://quantstack.net/
-    src: /assets/quantstack-color.svg
+    src: quantstack-color.svg
     alt: QuantStack logo
   - url: https://www.simula.no/
-    src: /assets/simula.svg
+    src: simula.svg
     alt: Simula logo
   - url: https://www.twosigma.com/
-    src: /assets/two-sigma.svg
+    src: two-sigma.svg
     alt: Two Sigma logo
   - url: https://2i2c.org/
-    src: /assets/2i2c.svg
+    src: 2i2c.svg
     alt: 2i2c logo
 ---
 
@@ -512,7 +512,7 @@ partners:
         {% for obj in page.sponsors %}
         <li>
             <a href="{{ obj.url }}">
-                <img src="{{ obj.src }}"
+                <img src="/assets/logos/{{ obj.src }}"
                      width=300
                      height=90
                      loading="lazy"
@@ -538,7 +538,7 @@ partners:
         {% for obj in page.partners %}
         <li>
             <a href="{{ obj.url }}">
-                <img src="{{ obj.src }}"
+                <img src="/assets/logos/{{ obj.src }}"
                      width=300
                      height=90
                      loading="lazy"
