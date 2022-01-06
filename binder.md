@@ -103,10 +103,10 @@ about the deployment. Here are a few useful resources in case you're interested:
   information about the BinderHub deployment at mybinder.org
 * [The mybinder.org billing repository](https://github.com/jupyterhub/binder-billing) has
   information about the cloud cost associated with running mybinder.org
-* [The mybinder.org site reliability guide](mybinder-sre.readthedocs.io/) is a resource
+* [The mybinder.org site reliability guide](https://mybinder-sre.readthedocs.io/en/latest/) is a resource
   for the operations team and the community to share best-practices and information about
   running the public BinderHub deployment at mybinder.org
-* [The mybinder.org incident reports page](mybinder-sre.readthedocs.io/en/latest/#incident-reports)
+* [The mybinder.org incident reports page](https://mybinder-sre.readthedocs.io/en/latest/#incident-reports)
   contains a list of incidents that have happened in the public deployment, as well as
   steps taken to resolve them.
 
@@ -123,7 +123,7 @@ to join our community and contribute code, time, comments, or appreciation.
   the current members of the JupyterHub and Binder teams.
 * [**The JupyterHub Contributing guide**](https://jupyterhub-team-compass.readthedocs.io/en/latest/contributing.html) is
   a great place to start learning how you can contribute to the Binder Project.
-* [**The Binder Gitter Channel**](https://gitter.im/binder) is where a lot of real-time
+* [**The Binder Gitter Channel**](https://gitter.im/jupyterhub/binder) is where a lot of real-time
   conversations happen in the Binder community.
 * [**The Binder Community Forum**](https://discourse.jupyter.org/c/binder) has a lot of
   community interaction and useful information about using, running, and contributing to Binder.

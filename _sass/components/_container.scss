@@ -1,0 +1,19 @@
+@import "settings/spacing";
+
+.container {
+  padding-right: $size;
+  padding-left: $size;
+}
+
+/* all elements in .containers that have a anchor 
+ * need to be scrolled by at least 3 em to not be behind the hidden header.
+ */
+.container * {
+  scroll-margin-top: 3em;
+}
+
+.content {
+  max-width: 640px;
+  margin-right: auto;
+  margin-left: auto;
+}

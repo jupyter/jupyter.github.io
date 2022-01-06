@@ -1,0 +1,378 @@
+/* Reusable elements */
+
+/* Section elements */
+/* Section classes used for particular sections within a page. Sections should differ in background color when used next to each other */
+.section-white {
+    background-color: white;
+    padding: 56px 0;
+}
+
+.section-grey {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #E0E0E0;
+  border-top: 1px solid #E0E0E0;
+  padding: 56px 0;
+}
+
+/* Icon above section header */
+.section-icon {
+    display: block;
+    margin: 0 auto;
+}
+
+img.section-icon {
+    max-width:60px;
+    max-height:60px;
+    margin:auto !important;
+}
+
+/* Header for each section */
+.section-header {
+    margin: 12px auto 8px;
+    text-align: center;
+}
+
+/* Used for descriptions of sections underneath section headers*/
+.support-paragraph {
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 630px;
+    margin: 0 auto 16px auto;
+}
+
+/* Orange action button */
+.orange-button {
+    background-color: #E46E2E;
+    border-radius: 2px;
+    color: white;
+    text-shadow: 0px 0px 4px black;
+    display: inline-block;
+    font-size: 16px;
+    padding: 13px 26px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0px 4px 0px 4px;
+}
+.install-button {
+    margin-top: 20px;
+}
+
+.orange-button:hover {
+    background-color: #F27624;
+    color: white;
+    text-decoration: none;
+}
+
+.orange-button:active, .orange-button:focus {
+    background-color: #DC601C;
+    color: white;
+    text-decoration: none;
+}
+
+/* Jupyter Notebook highlight section on front page */
+.nb-highlight-text {
+    margin-top: 60px;
+}
+
+/* Give space between the notebook features (4 features) on front page and the     img + description */
+.notebook-features {
+    margin-top: 32px;
+}
+
+.notebook-features p{
+    padding-top: 16px;
+}
+
+.nb-desc {
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 32px;
+}
+
+/* Architecture section on front page */
+/* Some padding above the cards */
+.architecturecontent {
+    padding-top: 40px;
+}
+
+.card {
+    display: block;
+    height: 100%;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    width: 250px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.architecturecontent .card {
+    height: 340px;
+}
+
+.architecturecontent .card h4 {
+    margin-top: 20px;
+}
+
+/* Styling for each card in the architecture section on front page. Each card needs it's own front class to work with the javascript associated with the cards */
+.card .front p {
+    margin-top: 2rem;
+}
+.card .front {
+    position: absolute;
+    text-align: center;
+    max-width: 225px;
+    margin-left: 12.5px;
+    height: 275px;
+}
+
+#donate-formatting {
+    width: 100%;
+    text-align: center;
+}
+
+#donate-formatting a {
+    width: 250px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#donate-link {
+    margin: 20px auto 0px auto;
+    width: 240px;
+    display: block;
+}
+
+#donate .row p {
+    margin: 15px;
+}
+
+#numfocus-logo {
+    height: 100px;
+    width: auto;
+    margin: auto;
+}
+
+/*Community Resources Page */
+
+/* Resource section is used to create a new resource on the community resources page. */
+.resource-section {
+    border-bottom: 1px solid #E8E8E8;
+    padding: 16px;
+    vertical-align: middle;
+}
+
+/* Used to specify that the last resource should not have a border underneath it's content */
+.resource-section:last-child {
+    border-bottom: none;
+}
+
+.resource-text {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.resource-logo {
+    display: block;
+    height: 80px !important;
+    margin: 0 auto;
+}
+
+.resource-name {
+     margin-top: 6px;
+}
+
+.resource-button {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.resource-button a {
+    background-color: #E46E2E;
+    border-radius: 2px;
+    color: white;
+    letter-spacing: 1px;
+    padding: 13px;
+    text-decoration: none;
+    -webkit-transition: .2s;
+}
+
+.resource-button a:hover {
+    background-color: #F27624;
+}
+
+/* Bootstrap Breakpoint Media Queries */
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .section-white, .section-grey {
+    padding: 5% 0;
+  }
+}
+
+@media (max-width: 1200px) {
+    .nb-highlight-text {
+        margin-top: 32px;
+    }
+    .notebook-features #feature {
+        padding-top: 4px;
+    }
+    .notebook-preview p {
+        font-size: 15pt;
+        line-height: 25pt;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.375;
+    }
+    h4 {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.22;
+    }
+    h3 {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 1.25;
+    }
+    h2 {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 1.25;
+    }
+    .card {
+        width: 300px;
+    }
+    .card .front {
+        max-width: 275px;
+    }
+}
+
+@media (max-width: 992px) {
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.25em;
+    }
+    h4 {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.11em;
+    }
+    h3 {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.136em;
+    }
+    h2 {
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 1.153em;
+    }
+    .nb-highlight-text {
+        text-align: center;
+    }
+    .notebook-features {
+        margin-top: 0;
+    }
+    .notebook-preview img {
+        margin: 0 auto;
+    }
+    .notebook-preview h1 {
+        text-align: center;
+    }
+    .notebook-features  img {
+        margin: 0 auto;
+        width: 125px;
+    }
+    .notebook-features {
+        text-align: center;
+    }
+    .notebook-feature {
+        padding-top: 40px;
+    }
+    .architecturedescription h2 {
+        text-align: center;
+    }
+    .architecturedescription p {
+        text-align: center;
+    }
+    .resource-section {
+        height: 400px;
+        padding: 10px 0 30px;
+    }
+    .resource-section:nth-child(even) {
+        border-left: 1px solid #E8E8E8;
+    }
+    .resource-section img {
+        margin-top: 15px;
+        padding-bottom: 0;
+    }
+    .resource-content {
+        padding-top: 48px;
+    }
+    .resource-text {
+        padding-top: 0;
+        text-align: center;
+    }
+    /* Container for buttons */
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.25em;
+    }
+    h4 {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.11em;
+    }
+    h3 {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.136em;
+    }
+    h2 {
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 1.153em;
+    }
+}
+
+/* Extra small devices (these are mostly fixes to make sure elements act correctly to look good) */
+@media (min-width: 420px) {
+    .button-container {
+        flex-direction: row;
+    }
+    .install-button {
+        margin-top: 0;
+    }
+}
+@media (max-width: 420px) {
+    .button-container {
+        flex-direction: column;
+    }
+}

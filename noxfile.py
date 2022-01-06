@@ -12,7 +12,12 @@ def install_deps(session):
     session.run(*"bundle install".split())
     
 
+@nox.session(name="build-live", venv_backend='conda')
+def build_live(session):
+    install_deps(session)
+    session.run(*"bundle exec jekyll serve liveserve".split())
+
 @nox.session(venv_backend='conda')
 def build(session):
     install_deps(session)
-    session.run(*"bundle exec jekyll serve liveserve".split())
+    session.run(*"bundle exec jekyll build".split())

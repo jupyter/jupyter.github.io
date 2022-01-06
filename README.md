@@ -28,7 +28,7 @@ To build and preview the site locally, follow these steps:
 3. **Run the `build` command**
    
    ```console
-   $ nox -s build
+   $ nox -s build-live
    ```
 
 
@@ -141,3 +141,16 @@ For images that are "above the fold" (that will be seen by users immediately aft
 ```html
 <img class="my-class" src="my/src.png" loading="eager" />
 ```
+
+### Automated quality checks
+
+A workflow on GitHub Actions is run at every push and for every pull request to ensure basic integrity of the website:
+- [validating](https://validator.w3.org/docs/help.html#validation_basics) the structure of the HTML using [Nu validator](https://validator.github.io/validator/) to ensure compliance with HTML standards
+- checking linked URLs for errors (including expired certificates)
+- running [Lighthouse](https://github.com/GoogleChrome/lighthouse) audits to ensure performance, accessibility, SEO optimization and best practices
+
+If pre-defined quality targets are not met, the jobs will fail.
+Click on "Details" link for the failing job to see what caused the failure.
+
+The detailed results will be available in the logs (which are only shown to users logged in on GitHub),
+including links to full Lighthouse reports on public temporary storage (the links will expire after 7 days).

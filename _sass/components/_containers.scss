@@ -1,0 +1,14 @@
+.container {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+.content {
+  margin-right: auto;
+  margin-left: auto;
+  &.content--copy {
+     max-width: 630px;
+  }
+  &.content--wide {
+     max-width: 930px;
+  }
+}

@@ -5,43 +5,44 @@ cfp: true
 permalink: /
 
 jumbotron:
-  text: Open-source software, open standards, and services for interactive computing across dozens of programming languages
+  text: Free software, open standards, and web services for interactive computing across all programming languages
   images:
     - class: fade-in one
       alt: circle of programming language icons
-      src: assets/circle1.svg
+      src: circle1.svg
       width: 677
       height: 286
     - class: fade-in two
       alt: circle of programming language icons
-      src: assets/circle2.svg
+      src: circle2.svg
       width: 677
       height: 286
     - class: fade-in three
       alt: circle of programming language icons
-      src: assets/circle3.svg
+      src: circle3.svg
       width: 677
       height: 286
     - class: main-logo
       alt: jupyter logo
-      src: assets/main-logo.svg
+      src: main-logo.svg
       width: 677
       height: 286
+  background: white-background.svg
 
 jupyterlab:
   headline: 'JupyterLab: A Next-Generation Notebook Interface'
   description: JupyterLab is the latest web-based interactive development environment for notebooks, code, and data. Its flexible interface allows users to configure and arrange workflows in data science, scientific computing, computational journalism, and machine learning. A modular design invites extensions to expand and enrich functionality.
   image:
     alt: examples of jupyterlab workspaces in single document and multiple document workspaces
-    src: assets/labpreview
+    src: assets/homepage/labpreview
     width: 885
     height: 627
   buttons:
   - class:
-    href: try
+    href: /try
     text: Try it in your browser
   - class: install-button
-    href: install
+    href: /install
     text: Install JupyterLab
 
 notebook:
@@ -49,42 +50,42 @@ notebook:
   description: The Jupyter Notebook is the original web application for creating and sharing computational documents. It offers a simple, streamlined, document-centric experience.
   image:
     alt: example notebook of Lorenz differential equations
-    src: assets/jupyterpreview
+    src: assets/homepage/jupyterpreview
     width: 885
     height: 627
   buttons:
   - class:
-    href: try
+    href: /try
     text: Try it in your browser
   - class: install-button
-    href: install
+    href: /install
     text: Install the Notebook
   features:
   - headline: Language of choice
     description: Jupyter supports over 40 programming languages, including Python, R, Julia, and Scala.
     image:
       alt: icon to represent a language
-      src: assets/language.svg
+      src: assets/homepage/language.svg
   - headline: Share notebooks
     description: 'Notebooks can be shared with others using email, Dropbox, GitHub and the <a href="https://nbviewer.jupyter.org/">Jupyter Notebook Viewer</a>.'
     image:
       alt: icon to represent sharing a notebook
-      src: assets/share.svg
+      src: assets/homepage/share.svg
   - headline: Interactive output
     description: 'Your code can produce rich, interactive output: HTML, images, videos, LaTeX, and custom MIME types.'
     image:
       alt: icon to represent an interactive widget
-      src: assets/widget.svg
+      src: assets/homepage/widget.svg
   - headline: Big data integration
     description: Leverage big data tools, such as Apache Spark, from Python, R and Scala. Explore that same data with pandas, scikit-learn, ggplot2, TensorFlow.
     image:
       alt: spark logo to represent big data
-      src: assets/spark.svg
+      src: assets/homepage/spark.svg
 
 jupyterhub:
   image:
     alt: jupyterhub logo
-    src: assets/hublogo.svg
+    src: assets/homepage/hublogo.svg
   description: A multi-user version of the notebook designed for companies, classrooms and research labs
   features:
   - class: feature1
@@ -92,27 +93,27 @@ jupyterhub:
     description: Manage users and authentication with PAM, OAuth or integrate with your own directory service system.
     image:
       alt: authentication icon
-      src: assets/authentication.svg
+      src: assets/homepage/authentication.svg
   - class: feature-middle
     headline: Centralized deployment
     description: Deploy the Jupyter Notebook to thousands of users in your organization on centralized infrastructure on- or off-site.
     image:
       alt: icon to represent centralized deployment
-      src: assets/central.svg
+      src: assets/homepage/central.svg
   - class: feature-middle
     headline: Container friendly
     description: Use Docker and Kubernetes to scale your deployment, isolate user processes, and simplify software installation.
     image:
       alt: container icon
-      src: assets/container.svg
+      src: assets/homepage/container.svg
   - class: feature4
     headline: Code meets data
     description: Deploy the Notebook next to your data to provide unified software management and data access within your organization.
     image:
       alt: icon to represent data
-      src: assets/data.svg
+      src: assets/homepage/data.svg
   button:
-    href: hub
+    href: /hub
     text: Learn more about JupyterHub
 
 voila:
@@ -120,15 +121,15 @@ voila:
   description: Voilà helps communicate insights by transforming notebooks into secure, stand-alone web applications that you can customize and share.
   image:
     alt: examples of Voilà dashboards
-    src: assets/voilapreview
+    src: assets/homepage/voilapreview
     width: 885
     height: 716
   buttons:
   - class:
-    href: try
+    href: /try
     text: Try it in your browser
   - class: install-button
-    href: install
+    href: /install
     text: Install Voilà
 
 open_standards:
@@ -139,108 +140,108 @@ open_standards:
     description: Jupyter Notebooks are an open document format based on JSON. They contain a complete record of the user's sessions and include code, narrative text, equations and rich output.
     image:
       alt: icon to represent notebook format
-      src: assets/notebook-format.svg
+      src: assets/homepage/notebook-format.svg
   - headline: Interactive Computing Protocol
     description: The Notebook communicates with computational Kernels using the Interactive Computing Protocol, an open network protocol based on JSON data over ZMQ and WebSockets.
     image:
       alt: icon to represent a protocol
-      src: assets/protocol.svg
+      src: assets/homepage/protocol.svg
   - headline: The Kernel
     description: Kernels are processes that run interactive code in a particular programming language and return output to the user. Kernels also respond to tab completion and introspection requests.
     image:
       alt: icon that looks like a terminal represents kernel
-      src: assets/kernel.svg
+      src: assets/homepage/kernel.svg
 
 # Images should be grayscale SVGs at 300x90 pixels and sorted alphabetically
 in_use:
   headline: Currently in use at
   companies:
     - href: https://www.anaconda.com
-      src: assets/anaconda.svg
+      src: anaconda.svg
       alt: Anaconda
     - href: https://ayasdi.com
-      src: assets/ayasdi.svg
+      src: ayasdi.svg
       alt: Ayasdi
     - href: https://www.berkeley.edu
-      src: assets/Berkeley.svg
+      src: Berkeley.svg
       alt: Berkeley
     - href: https://www.bloomberg.com
-      src: assets/bloomberg.svg
+      src: bloomberg.svg
       alt: Bloomberg
     - href: https://www.brynmawr.edu
-      src: assets/brynmawr.svg
+      src: brynmawr.svg
       alt: BrynMawr
     - href: https://www.calpoly.edu
-      src: assets/calpoly.svg
+      src: calpoly.svg
       alt: CalPoly
     - href: https://www.clemson.edu
-      src: assets/clemson.svg
+      src: clemson.svg
       alt: Clemson
     - href: https://cocalc.com
-      src: assets/cocalc.svg
+      src: cocalc.svg
       alt: CoCalc
     - href: https://codeneuro.org
-      src: assets/codeneuro.svg
+      src: codeneuro.svg
       alt: CodeNeuro
     - href: https://www.thedataincubator.com
-      src: assets/tdi.svg
+      src: tdi.svg
       alt: The Data Incubator
     - href: https://www.gwu.edu
-      src: assets/washington.svg
+      src: washington.svg
       alt: George Washington University
     - href: https://www.google.com
-      src: assets/google.svg
+      src: google.svg
       alt: Google
     - href: https://www.ibm.com
-      src: assets/IBM.svg
+      src: IBM.svg
       alt: IBM
     - href: https://www.janelia.org
-      src: assets/janelia.svg
+      src: janelia.svg
       alt: Janelia
     - href: https://www.latimes.com
-      src: assets/latimes.svg
+      src: latimes.svg
       alt: Los Angeles Times
     - href: https://msu.edu
-      src: assets/michigan-state.svg
+      src: michigan-state.svg
       alt: Michigan State University
     - href: https://www.microsoft.com
-      src: assets/Microsoft.svg
+      src: Microsoft.svg
       alt: Microsoft
     - href: https://www.nasa.gov
-      src: assets/NASA.svg
+      src: NASA.svg
       alt: NASA
     - href: https://www.netapp.com/us/
-      src: assets/netapp.svg
+      src: netapp.svg
       alt: NetApp
     - href: https://www.linkedin.com/company/nsite-llc/about/
-      src: assets/nsite.svg
+      src: nsite.svg
       alt: NSite
     - href: https://www.northwestern.edu
-      src: assets/northwestern.svg
+      src: northwestern.svg
       alt: Northwestern University
     - href: https://www.nyu.edu
-      src: assets/NYU.svg
+      src: NYU.svg
       alt: NYU
     - href: https://www.oreilly.com
-      src: assets/oreilly.svg
+      src: oreilly.svg
       alt: OReilly
     - href: https://www.quantopian.com
-      src: assets/quantopian.svg
+      src: quantopian.svg
       alt: Quantopian
     - href: https://quantstack.net
-      src: assets/quantstack.svg
+      src: quantstack.svg
       alt: QuantStack
     - href: https://developer.rackspace.com
-      src: assets/rackspace.svg
+      src: rackspace.svg
       alt: Rackspace
     - href: https://www.sheffield.ac.uk
-      src: assets/sheffield.svg
+      src: sheffield.svg
       alt: Sheffield
     - href: https://software-carpentry.org
-      src: assets/carpentry.svg
+      src: carpentry.svg
       alt: Software Carpentry
     - href: https://www.soundcloud.com
-      src: assets/soundcloud.svg
+      src: soundcloud.svg
       alt: SoundCloud
 ---
 
@@ -252,7 +253,7 @@ in_use:
                 <div class="jumbotron-image-container">
                     <span>
                         <img class="img-responsive {{ img.class }}"
-                             src="{{ img.src }}"
+                             src="/assets/homepage/{{ img.src }}"
                              width={{ img.width }}
                              height={{ img.height }}
                              alt="{{ img.alt }}"
@@ -261,7 +262,7 @@ in_use:
                 </div>
                 {% endfor %}
                 <img class="img-responsive"
-                     src="assets/white-background.svg"
+                     src="/assets/homepage/{{ page.jumbotron.background }}"
                      width=747
                      height=313
                      alt="white background"
@@ -287,7 +288,7 @@ in_use:
                     <div class="col-md-6">
                         <picture>
                             <source type="image/webp" srcset="{{ page.jupyterlab.image.src }}.webp">
-                            <img src="{{ page.jupyterlab.image.src }}.jpg"
+                            <img src="{{ page.jupyterlab.image.src }}.png"
                                  alt="{{ page.jupyterlab.image.alt }}"
                                  width={{ page.jupyterlab.image.width }}
                                  height={{ page.jupyterlab.image.height }}
@@ -319,7 +320,7 @@ in_use:
                     <div class="col-md-6">
                         <picture>
                             <source type="image/webp" srcset="{{ page.notebook.image.src }}.webp">
-                            <img src="{{ page.notebook.image.src }}.jpg"
+                            <img src="{{ page.notebook.image.src }}.png"
                                  alt="{{ page.notebook.image.alt }}"
                                  width={{ page.notebook.image.width }}
                                  height={{ page.notebook.image.height }}
@@ -397,10 +398,10 @@ in_use:
                     <div class="col-md-6">
                         <picture>
                             <source type="image/webp" srcset="{{ page.voila.image.src }}.webp">
-                            <img src="{{ page.voila.image.src }}.jpg"
+                            <img src="{{ page.voila.image.src }}.png"
                                  alt="{{ page.voila.image.alt }}"
-                                 width={{ img.width }}
-                                 height={{ img.height }}
+                                 width={{ page.voila.image.width }}
+                                 height={{ page.voila.image.height }}
                                  class="img-responsive"
                                  id="portal" 
                                  loading="lazy" />
@@ -432,7 +433,7 @@ in_use:
                 {% for li in page.in_use.companies %}
                 <li class="small">
                     <a href="{{ li.href }}">
-                        <img src="{{ li.src }}"
+                        <img src="/assets/logos/{{ li.src }}"
                              class="greydout"
                              width=300
                              height=90

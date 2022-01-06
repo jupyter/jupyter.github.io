@@ -1,5 +1,7 @@
 ---
 nav:
+  - title: Try
+    url: /try
   - title: Install
     url: /install
   - title: Get Involved
@@ -11,8 +13,7 @@ nav:
     url: https://blog.jupyter.org
     newpage: true
   - title: Governance
-    url: https://jupyter.org/governance/
-    newpage: true
+    url: /governance/
   - title: Security
     url: /security
   - title: About
@@ -23,64 +24,61 @@ nav:
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta itemprop="description" name="description" content="{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.description }}{% endif %}" />
+    <meta itemprop="description" name="description" content="{% if page.tagline %}{{ page.tagline|strip_html }}{% else %}{{ site.description|strip_html }}{% endif %}" />
     <title>{{ site.title }} {% if page.title %}| {{ page.title }}{% endif %}</title>
     <meta property="og:title" content="Project Jupyter" />
     <meta property="og:description" content="{{ site.description|strip_html }}">
     <meta property="og:url" content="{{ site.url }}" />
     <meta property="og:image" content="{{ "/assets/share.png" | prepend: site.url }}" />
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="stylesheet" href="{{ "/assets/css/bootstrap.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
-    <link rel="icon" type="image/png" href="favicon.ico" />
-    <link href="{{ site.baseurl }}/assets/apple-touch-icon.png" rel="apple-touch-icon" />
-    <link href="{{ site.baseurl }}/assets/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
-    <link href="{{ site.baseurl }}/assets/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
-    <link href="{{ site.baseurl }}/assets/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
-    <link href="{{ site.baseurl }}/assets/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
-    <link href="{{ site.baseurl }}/assets/icon-hires.png" rel="icon" sizes="192x192" />
-    <link href="{{ site.baseurl }}/assets/icon-normal.png" rel="icon" sizes="128x128" />
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/assets/favicons/apple-touch-icon-167x167.png">
     <script>console.log('Welcome to Project Jupyter! Explore the various tools available and their corresponding documentation. If you are interested in contributing to the platform, please visit the community resources section at https://jupyter.org/community.html.')</script>
   </head>
   <body>
-    <nav class="navbar navbar-fixed-top" role="navigation" id="navbar" >
-        <div class="navbar-inner">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    {% if page.url == '/' or page.url == '/index.html' %}
-                      <span class="icon-bar white-icon-bar"></span>
-                      <span class="icon-bar white-icon-bar"></span>
-                      <span class="icon-bar white-icon-bar"></span>
-                    {% else %}
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                    {% endif %}
-                </button>
-                <a class="navbar-brand" href="{{ site.baseurl }}/index.html">
-                    <img id="jupyter-nav-logo" class="navbar-logo" src="{{ site.baseurl }}/assets/nav_logo.svg" alt="Jupyter logo">
-                </a>
-            </div>
-            <div class="blur"></div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    {%- for nav in layout.nav -%}
-                    <li>
-                        <a href="{{nav.url}}"
-                           {%- if nav.newpage %}target="_blank" rel="noopener noreferrer"{% endif %}
-                           class="tab {% if nav.url == page.url %}navbar-active{% endif %}">
-                           {{nav.title}}
-                       </a>
-                    </li>
-                    {%- endfor %}
-                </ul>
-            </div>
+    <nav class="navbar" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">
+               <picture>
+                <source media="(max-width: 767px)" srcset="/assets/logos/logomark-orangebody-greyplanets.svg">
+                <source media="(min-width: 768px)" srcset="/assets/logos/rectanglelogo-greytext-orangebody-greymoons.svg">
+                <img class="navbar-logo"
+                     src="/assets/logos/rectanglelogo-greytext-orangebody-greymoons.svg"
+                     alt="Jupyter logo"
+                     height=40
+                     loading="eager" />
+               </picture>
+            </a>
         </div>
-    </div>
+        <button type="button"
+                class="hamburger"
+                data-bs-toggle="collapse"
+                data-bs-target="#bs-navbar-collapse" />
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar white-icon-bar"></span>
+            <span class="icon-bar white-icon-bar"></span>
+            <span class="icon-bar white-icon-bar"></span>
+        </button>
+        <div class="mobile-clearfix"></div>
+        <div class="collapse navbar-collapse" id="bs-navbar-collapse">
+            <ul class="navbar-links">
+            {%- for nav in layout.nav -%}
+            <li>
+                <a href="{{nav.url}}"
+                   {%- if nav.newpage %}target="_blank" rel="noopener noreferrer"{% endif %}
+                   class="{% if nav.url == page.url %}navbar-active{% endif %}">
+                   {{nav.title}}
+               </a>
+            </li>
+            {%- endfor %}
+            </ul>
+        </div>
     </nav>
     <section>
       {{ content }}
@@ -99,6 +97,6 @@ nav:
         </div>
       </div>
     </footer>
-    <script src="{{site.baseurl}}/assets/js/bootstrap-native.min.js" defer></script>
+    <script src="/assets/js/bootstrap-native.min.js" defer></script>
   </body>
 </html>
