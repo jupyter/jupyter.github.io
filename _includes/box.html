@@ -1,0 +1,13 @@
+<section class="box">
+  <a href="{{ include.url }}" class="box-link">
+    <h2 class="box-title">{{ include.title }}</h2>
+    <div class="box-body">
+      <img class="box-logo"
+           alt="{{ include.alt }}"
+           src="/assets/{{ include.src }}"
+           height=100
+           loading="{% if include.loading %}{{ include.loading }}{% else %}lazy{% endif %}" />
+      <p>{{ include.description }}</p>
+    </div>
+  </a>
+</section>
