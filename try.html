@@ -5,88 +5,78 @@ tagline: 'You can try Jupyter out right now, without installing anything. Select
 permalink: /try
 
 boxes:
-    - title: Try Classic Notebook
-      description: |
-        A tutorial introducing basic features of the classic Jupyter Notebook interface.
-      logo: python.svg
+    - title: Jupyter Notebook
+      description: A tutorial introducing basic features of the classic Jupyter Notebook interface.
+      src: try/python.svg
+      alt: Jupyter Notebook
       url: https://mybinder.org/v2/gh/ipython/ipython-in-depth/HEAD?urlpath=tree/binder/Index.ipynb
 
-    - title: Try JupyterLab
-      description: |
-        JupyterLab is the new interface for Jupyter notebooks and is ready for general use.
-        Give it a try!
-      logo: jupyter.png
+    - title: JupyterLab
+      description: JupyterLab is the new interface for Jupyter notebooks and is ready for general use.
+      src: try/jupyter.png
+      alt: JupyterLab
       url: https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/HEAD?urlpath=lab/tree/demo
 
-    - title: Try Voilà
+    - title: Voilà
       description: An example with a variety of notebook dashboards.
-      logo: voila.svg
+      src: try/voila.svg
+      alt: Voilà
       url: https://mybinder.org/v2/gh/voila-dashboards/voila/stable?urlpath=voila%2Ftree%2Fnotebooks
 
-    - title: Try Jupyter with Julia
-      description: |
-        A basic example of using Jupyter with Julia.
-      logo: julia.svg
+    - title: Julia
+      description: A basic example of using Jupyter with Julia.
+      src: try/julia.svg
+      alt: Julia
       url: https://mybinder.org/v2/gh/binder-examples/demo-julia/HEAD?filepath=demo.ipynb
 
-    - title: Try Jupyter with R
-      description: |
-        A basic example of using Jupyter with R.
-      logo: R.svg
+    - title: R
+      description: A basic example of using Jupyter with R.
+      src: try/R.svg
+      alt: R
       url: https://mybinder.org/v2/gh/binder-examples/r/HEAD?filepath=index.ipynb
 
-    - title: Try Jupyter with C++
-      description: |
-        A basic example of using Jupyter with C++
-      logo: Cpp.svg
+    - title: C++
+      description: A basic example of using Jupyter with C++
+      src: try/Cpp.svg
+      alt: C++
       url: https://mybinder.org/v2/gh/QuantStack/xeus-cling/stable?filepath=notebooks/xcpp.ipynb
 
-    - title: Try Jupyter with Scheme
-      description: |
-        Explore the Calysto Scheme programming language, featuring integration with Python
-      logo: Scheme.png
+    - title: Scheme
+      description: Explore the Calysto Scheme programming language, featuring integration with Python
+      src: try/Scheme.png
+      alt: Scheme
       url: https://mybinder.org/v2/gh/Calysto/calysto_scheme/HEAD?filepath=notebooks/Reference%20Guide%20for%20Calysto%20Scheme.ipynb
 
-    - title: Try Jupyter with Ruby
-      description: |
-        A basic example of using Jupyter with Ruby.
-      logo: ruby.png
+    - title: Ruby
+      description: A basic example of using Jupyter with Ruby.
+      src: try/ruby.png
+      alt: Ruby
       url: https://mybinder.org/v2/gh/RubyData/binder/HEAD?filepath=ruby-data.ipynb
 
-    - title: Try Jupyter with Kotlin
-      description: |
-        Titanic example with LetsPlot and Dataframe libraries.
-      logo: kotlin.svg
+    - title: Kotlin
+      description: Titanic example with LetsPlot and Dataframe libraries.
+      src: try/kotlin.svg
+      alt: Kotlin
       url: https://mybinder.org/v2/gh/Kotlin/dataframe/master?filepath=examples/jupyter-notebooks/titanic/Titanic.ipynb
 ---
 
-<div class="post">
-    {% include page-header.html
-        title=page.title
-        tagline=page.tagline
-    %}
+{% include page-header.html
+    title=page.title
+    tagline=page.tagline
+%}
 
-    <article class="post-content">
-      <div class="section-white top-section-border">
-        <div class="container">
-          <div class="row cardlist">
-            {%- for item in page.boxes -%}
-            <a href="{{ item['url'] }}" class="try-link">
-              <div class="col-lg-4 col-md-6 col-sm-6 cardlist-col">
-                <div class="cardlist-card try-card">
-                  <div class="card-heading">
-                    <h4>{{ item['title'] }}</h4>
-                  </div>
-                  <div class="card-body text-center">
-                    <img class="try-logo" src="{{ site.baseurl }}/assets/try/{{ item['logo'] }}"/>
-                    <p>{{ item['description'] }}</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-            {%- endfor -%}
-          </div>
-        </div>
-      </div>
-    </article>
-</div>
+<article>
+  <div class="section-white top-section-border">
+    <div class="container content content--wide boxlist">
+      {%- for obj in page.boxes -%}
+        {% include box.html
+            url=obj.url
+            title=obj.title
+            src=obj.src
+            alt=obj.alt
+            description=obj.description
+        %}
+      {%- endfor -%}
+    </div>
+  </div>
+</article>
