@@ -92,7 +92,7 @@
   }
   &.openstandards-section {
     width: 100%;
-    @media (max-width: 767px) {
+    @media (max-width: 900px) {
       padding: 1em 1em 0 1em;
     }
     .description {
@@ -107,7 +107,7 @@
       align-items: center;
       flex-direction: row;
       margin: 4em 0 0 0;
-      @media (max-width: 767px) {
+      @media (max-width: 900px) {
         margin: 2em 0 0 0;
         align-items: start;
         flex-direction: column;
@@ -121,7 +121,7 @@
         height: auto;
         padding: 2em;
         margin: 0 auto 2em auto;
-        @media (max-width: 767px) {
+        @media (max-width: 900px) {
           width: 275px;
         }
         h3 {
