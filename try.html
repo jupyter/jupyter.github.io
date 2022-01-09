@@ -4,7 +4,21 @@ title: Try Jupyter
 tagline: Use our tools without installing anything
 permalink: /try
 
-intro: Select an example below to start a temporary server just for you at <a href="https://mybinder.org">mybinder.org</a>. If you like it, you can install Jupyter yourself with <a href="/install">our detailed intructions</a>.
+intro: |
+    Jupyter builds tools, standards, and services for many different usecases. This page
+    has links to interactive demos that allow you to try some of these tools for free online.
+    These use <a href="https://mybinder.org">mybinder.org</a>, a free public service that the Jupyter
+    team runs for the community.
+
+products: |
+    The Jupyter team builds several end-user products that facilitate interactive computing workflows.
+    Click the boxes below to learn how they work and to learn more.
+    If you like one, you can find <a href="/install">installation instructions here</a>.
+
+kernels: |
+    Jupyter kernels allow you to use Jupyter interfaces and tools with <bold>any programming language</bold>.
+    Below are interactive demos for a few languages to help demonstrate. You can also find
+    <a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">a community-curated list of Jupyter kernels here</a>.
 
 boxes:
     - title: JupyterLab
@@ -12,54 +26,63 @@ boxes:
       src: try/jupyter.png
       alt: JupyterLab
       url: https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/HEAD?urlpath=lab/tree/demo
+      kind: product
 
     - title: Jupyter Notebook
       description: The original web application for creating and sharing computational documents
       src: try/python.svg
       alt: Jupyter Notebook
       url: https://mybinder.org/v2/gh/ipython/ipython-in-depth/HEAD?urlpath=tree/binder/Index.ipynb
+      kind: product
 
     - title: Voilà
       description: Share insights by converting notebooks into interactive dashboards
       src: try/voila.svg
       alt: Voilà
       url: https://mybinder.org/v2/gh/voila-dashboards/voila/stable?urlpath=voila%2Ftree%2Fnotebooks
+      kind: product
 
     - title: C++
       description: How to use Jupyter with C++
       src: try/Cpp.svg
       alt: C++
       url: https://mybinder.org/v2/gh/QuantStack/xeus-cling/stable?filepath=notebooks/xcpp.ipynb
+      kind: kernel
 
     - title: Julia
       description: How to use Jupyter with Julia
       src: try/julia.svg
       alt: Julia
       url: https://mybinder.org/v2/gh/binder-examples/demo-julia/HEAD?filepath=demo.ipynb
+      kind: kernel
 
     - title: Kotlin
       description: How to use Jupyter with Kotlin
       src: try/kotlin.svg
       alt: Kotlin
       url: https://mybinder.org/v2/gh/Kotlin/dataframe/master?filepath=examples/jupyter-notebooks/titanic/Titanic.ipynb
+      kind: kernel
 
     - title: R
       description: How to use Jupyter with R
       src: try/R.svg
       alt: R
       url: https://mybinder.org/v2/gh/binder-examples/r/HEAD?filepath=index.ipynb
+      kind: kernel
 
     - title: Ruby
       description: How to use Jupyter with Ruby
       src: try/ruby.png
       alt: Ruby
       url: https://mybinder.org/v2/gh/RubyData/binder/HEAD?filepath=ruby-data.ipynb
+      kind: kernel
 
     - title: Scheme
       description: How to use Jupyter with Calysto Scheme
       src: try/Scheme.png
       alt: Scheme
       url: https://mybinder.org/v2/gh/Calysto/calysto_scheme/HEAD?filepath=notebooks/Reference%20Guide%20for%20Calysto%20Scheme.ipynb
+      kind: kernel
 ---
 
 {% include page-header.html
@@ -72,8 +95,13 @@ boxes:
     <div class="content content--copy">
       <p>{{ page.intro }}</p>
     </div>
+    <!-- Products section -->
+    <div class="content content--copy">
+      <p>{{ page.products }}</p>
+    </div>
     <div class="content content--wide boxlist">
       {%- for obj in page.boxes -%}
+        {%- if obj.kind == "product" -%}
         {% include box.html
             url=obj.url
             title=obj.title
@@ -81,6 +109,24 @@ boxes:
             alt=obj.alt
             description=obj.description
         %}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+    <!-- Kernels section -->
+    <div class="content content--copy">
+      <p>{{ page.kernels }}</p>
+    </div>
+    <div class="content content--wide boxlist">
+      {%- for obj in page.boxes -%}
+        {%- if obj.kind == "kernel" -%}
+        {% include box.html
+            url=obj.url
+            title=obj.title
+            src=obj.src
+            alt=obj.alt
+            description=obj.description
+        %}
+        {%- endif -%}
       {%- endfor -%}
     </div>
   </div>
