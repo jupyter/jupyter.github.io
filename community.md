@@ -141,8 +141,7 @@ This is a calendar of regular online events.  It might not be exhaustive.
           style="border:solid 1px #777"
           width="800"
           height="600"
-          frameborder="0"
-          scrolling="no"></iframe>
+          style="border: 0; scrolling: no;"></iframe>
 </div>
 <script>document.getElementById("calendariframe").src = document.getElementById("calendariframe").src.replace("ctz=local", "ctz=" + Intl.DateTimeFormat().resolvedOptions().timeZone)</script>
 
