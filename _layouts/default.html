@@ -71,7 +71,7 @@ nav:
             {%- for nav in layout.nav -%}
             <li>
                 <a href="{{nav.url}}"
-                   {%- if nav.newpage %}target="_blank" rel="noopener noreferrer"{% endif %}
+                   {%- if nav.newpage %} target="_blank" rel="noopener noreferrer" {% endif %}
                    class="{% if nav.url == page.url %}navbar-active{% endif %}">
                    {{nav.title}}
                </a>
