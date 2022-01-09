@@ -10,8 +10,8 @@ intro: |
     These use <a href="https://mybinder.org">mybinder.org</a>, a free public service that the Jupyter
     team runs for the community.
 
-products: |
-    The Jupyter team builds several end-user products that facilitate interactive computing workflows.
+applications: |
+    The Jupyter team builds several end-user applications that facilitate interactive computing workflows.
     Click the boxes below to learn how they work and to learn more.
     If you like one, you can find <a href="/install">installation instructions here</a>.
 
@@ -26,21 +26,21 @@ boxes:
       src: try/jupyter.png
       alt: JupyterLab
       url: https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/HEAD?urlpath=lab/tree/demo
-      kind: product
+      kind: application
 
     - title: Jupyter Notebook
       description: The original web application for creating and sharing computational documents
       src: try/python.svg
       alt: Jupyter Notebook
       url: https://mybinder.org/v2/gh/ipython/ipython-in-depth/HEAD?urlpath=tree/binder/Index.ipynb
-      kind: product
+      kind: application
 
     - title: Voilà
       description: Share insights by converting notebooks into interactive dashboards
       src: try/voila.svg
       alt: Voilà
       url: https://mybinder.org/v2/gh/voila-dashboards/voila/stable?urlpath=voila%2Ftree%2Fnotebooks
-      kind: product
+      kind: application
 
     - title: C++
       description: How to use Jupyter with C++
@@ -95,14 +95,13 @@ boxes:
     <div class="content content--copy">
       <p>{{ page.intro }}</p>
     </div>
-    <!-- Products section -->
+    <!-- Applications section -->
     <div class="content content--copy">
-      <h2>Products</h2>
-      <p>{{ page.products }}</p>
+      <p>{{ page.applications }}</p>
     </div>
     <div class="content content--wide boxlist">
       {%- for obj in page.boxes -%}
-        {%- if obj.kind == "product" -%}
+        {%- if obj.kind == "application" -%}
         {% include box.html
             url=obj.url
             title=obj.title
@@ -115,7 +114,6 @@ boxes:
     </div>
     <!-- Kernels section -->
     <div class="content content--copy">
-      <h2>Kernels</h2>
       <p>{{ page.kernels }}</p>
     </div>
     <div class="content content--wide boxlist">
