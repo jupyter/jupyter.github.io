@@ -2,49 +2,58 @@
 /* Feature-middle is for the JupyterHub features that are in the middle that need to be offset to sit on the track */
 
 .jupyterhub {
-    .feature-middle {
-        margin-top: 40px;
-    }
+  .feature-middle {
+    margin-top: 40px;
+  }
 
+  .hublogo {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+  }
+
+  .hubfeature {
+    text-align: center;
+    img {
+      margin: 0 auto;
+    }
+    h3 {
+      font-size: 1.275em;
+      margin: 0.25em 0 0.5em 0;
+    }
+    p {
+      font-size: 1em;
+      margin: 0;
+    }
+  }
+
+  .hubdescription {
+    margin-bottom: -36px;
+  }
+
+  .hubfeatures {
+    background: url("/assets/line.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    /* Padding that is used to make the hubfeature circles sit on track */
+    padding-top: 48px;
+    margin-bottom: 2em;
+  }
+
+  .hubbutton {
+    text-align: center;
+    margin-top: 24px;
+  }
+
+  @media (max-width: 992px) {
     .hublogo {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 600px;
+      max-width: 80%;
     }
-
-    .hubfeature {
-        text-align: center;
-        img {
-                margin: 0 auto;
-        }
-    }
-    
-    .hubdescription {
-        margin-bottom: -36px;
-    }
-
     .hubfeatures {
-        background: url("/assets/line.svg");
-        background-position:  top center;
-        background-repeat: no-repeat;
-        /* Padding that is used to make the hubfeature circles sit on track */
-        padding-top: 48px;
+      background: none;
     }
-
-    .hubbutton {
-        text-align: center;
-        margin-top: 24px;
+    .hubfeature h2 {
+      text-align: center;
     }
-
-    @media (max-width: 992px) {
-        .hublogo {
-            max-width: 80%;
-        }
-        .hubfeatures{
-            background: none;
-        }
-        .hubfeature h2 {
-            text-align: center;
-        }
-    }
+  }
 }
