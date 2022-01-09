@@ -3,7 +3,8 @@
     "collect": {
       "staticDistDir": "./_site",
       "autodiscoverUrlBlocklist": [
-        "conduct.html"
+        "conduct.html",
+        "documentation.html"
       ],
       "settings": {
         "skipAudits": ["canonical"]
