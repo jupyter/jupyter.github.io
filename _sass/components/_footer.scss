@@ -6,15 +6,15 @@
   }
   .linklists {
     background-color: lighten($orange, 12.5%);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: start;
-    align-items: start;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    @media (max-width: 420px) {
-      flex-direction: column;
+    .content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: start;
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
     }
     .footer-links {
       color: $black;
@@ -31,7 +31,7 @@
         padding: 0;
       }
       ul {
-        margin: 0 10em 0 0;
+        margin: 0 0 0 0;
         padding: 0;
         list-style-type: none;
         li {
