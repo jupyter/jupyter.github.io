@@ -1,7 +1,7 @@
 ---
 layout: page
 title: JupyterHub
-title_image: assets/hublogo.svg
+title_image: assets/homepage/hublogo.svg
 title_image_alt: JupyterHub logo
 tagline: A multi-user version of the notebook designed for companies, classrooms and research labs
 cfp: true
