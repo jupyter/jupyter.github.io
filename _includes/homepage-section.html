@@ -1,0 +1,44 @@
+<section class="homepage-section {{ include.class }}">
+  <section class="showcase">
+    <div class="col-md-6">
+      <picture>
+        <source type="image/webp" srcset="{{ include.image.src }}.webp" />
+        <img
+          src="{{ include.image.src }}.png"
+          alt="{{ include.image.alt }}"
+          width="{{ include.image.width }}"
+          height="{{ include.image.height }}"
+          class="img-responsive"
+          loading="{% if include.image.loading %}{{ include.image.loading }}{% else %}lazy{% endif %}"
+        />
+      </picture>
+    </div>
+    <div class="col-md-6 description">
+      <h2>{{ include.headline }}</h2>
+      <p>{{ include.description }}</p>
+      <div class="button-container">
+        {% for btn in include.buttons %}
+        <a class="orange-button {{ btn.class }}" href="{{ btn.href }}">{{ btn.text }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% if include.features %}
+  <section class="featurelist col-md-12">
+    {% for feat in include.features %}
+    <div class="feature">
+      <img
+        class="img-responsive"
+        src="{{ feat.image.src }}"
+        alt="{{ feat.image.alt }}"
+        width="81"
+        height="81"
+        loading="lazy"
+      />
+      <h3>{{ feat.headline }}</h3>
+      <p>{{ feat.description }}</p>
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+</section>
