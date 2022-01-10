@@ -10,79 +10,71 @@ intro: |
     These use <a href="https://mybinder.org">mybinder.org</a>, a free public service that the Jupyter
     team runs for the community.
 
-applications: |
+applications_copy: |
     The Jupyter team builds several end-user applications that facilitate interactive computing workflows.
     Click the boxes below to learn how they work and to learn more.
     If you like one, you can find <a href="/install">installation instructions here</a>.
 
-kernels: |
+kernels_copy: |
     Jupyter kernels allow you to use Jupyter interfaces and tools with <b>any programming language</b>.
     Below are interactive demos for a few languages to help demonstrate. You can also find
     <a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">a community-curated list of Jupyter kernels here</a>.
 
-boxes:
+application_boxes:
     - title: JupyterLab
       description: The latest web-based interactive development environment for notebooks, code, and data
       src: try/jupyter.png
       alt: JupyterLab
       url: https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/HEAD?urlpath=lab/tree/demo
-      kind: application
 
     - title: Jupyter Notebook
       description: The original web application for creating and sharing computational documents
       src: try/python.svg
       alt: Jupyter Notebook
       url: https://mybinder.org/v2/gh/ipython/ipython-in-depth/HEAD?urlpath=tree/binder/Index.ipynb
-      kind: application
 
     - title: Voilà
       description: Share insights by converting notebooks into interactive dashboards
       src: try/voila.svg
       alt: Voilà
       url: https://mybinder.org/v2/gh/voila-dashboards/voila/stable?urlpath=voila%2Ftree%2Fnotebooks
-      kind: application
 
+kernel_boxes:
     - title: C++
       description: How to use Jupyter with C++
       src: try/Cpp.svg
       alt: C++
       url: https://mybinder.org/v2/gh/QuantStack/xeus-cling/stable?filepath=notebooks/xcpp.ipynb
-      kind: kernel
 
     - title: Julia
       description: How to use Jupyter with Julia
       src: try/julia.svg
       alt: Julia
       url: https://mybinder.org/v2/gh/binder-examples/demo-julia/HEAD?filepath=demo.ipynb
-      kind: kernel
 
     - title: Kotlin
       description: How to use Jupyter with Kotlin
       src: try/kotlin.svg
       alt: Kotlin
       url: https://mybinder.org/v2/gh/Kotlin/dataframe/master?filepath=examples/jupyter-notebooks/titanic/Titanic.ipynb
-      kind: kernel
 
     - title: R
       description: How to use Jupyter with R
       src: try/R.svg
       alt: R
       url: https://mybinder.org/v2/gh/binder-examples/r/HEAD?filepath=index.ipynb
-      kind: kernel
 
     - title: Ruby
       description: How to use Jupyter with Ruby
       src: try/ruby.png
       alt: Ruby
       url: https://mybinder.org/v2/gh/RubyData/binder/HEAD?filepath=ruby-data.ipynb
-      kind: kernel
 
     - title: Scheme
       description: How to use Jupyter with Calysto Scheme
       src: try/Scheme.png
       alt: Scheme
       url: https://mybinder.org/v2/gh/Calysto/calysto_scheme/HEAD?filepath=notebooks/Reference%20Guide%20for%20Calysto%20Scheme.ipynb
-      kind: kernel
 ---
 
 {% include page-header.html
@@ -97,11 +89,11 @@ boxes:
     </div>
     <!-- Applications section -->
     <div class="content content--copy">
-      <p>{{ page.applications }}</p>
+      <h2>Applications</h2>
+      <p>{{ page.applications_copy }}</p>
     </div>
     <div class="content content--wide boxlist">
-      {%- for obj in page.boxes -%}
-        {%- if obj.kind == "application" -%}
+      {%- for obj in page.application_boxes -%}
         {% include box.html
             url=obj.url
             title=obj.title
@@ -109,16 +101,15 @@ boxes:
             alt=obj.alt
             description=obj.description
         %}
-        {%- endif -%}
       {%- endfor -%}
     </div>
     <!-- Kernels section -->
     <div class="content content--copy">
-      <p>{{ page.kernels }}</p>
+      <h2>Kernels</h2>
+      <p>{{ page.kernels_copy }}</p>
     </div>
     <div class="content content--wide boxlist">
-      {%- for obj in page.boxes -%}
-        {%- if obj.kind == "kernel" -%}
+      {%- for obj in page.kernel_boxes -%}
         {% include box.html
             url=obj.url
             title=obj.title
@@ -126,7 +117,6 @@ boxes:
             alt=obj.alt
             description=obj.description
         %}
-        {%- endif -%}
       {%- endfor -%}
     </div>
   </div>
