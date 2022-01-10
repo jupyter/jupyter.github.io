@@ -9,4 +9,5 @@ gem "html-proofer"
 
 group :jekyll_plugins do
   gem 'hawkins'
+  gem "jekyll-minifier"
 end
