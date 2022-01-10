@@ -17,7 +17,7 @@ def build_live(session):
     install_deps(session)
     session.run(*"bundle exec jekyll serve liveserve".split())
 
-@nox.session(venv_backend='conda')
+@nox.session(venv_backend='conda', env={'JEKYLL_ENV': 'production'})
 def build(session):
     install_deps(session)
     session.run(*"bundle exec jekyll build".split())
