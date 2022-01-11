@@ -100,27 +100,16 @@ for guidance on how to interact with others in a way that makes the community th
 Below is a short list of Gitter channels, mailing lists, and GitHub repositories
 where you can get involved. **We always welcome participation in the Jupyter community**.
 
-<section>
-<div class="top-section-border">
-    <div class="row">
-        {% for obj in page.channels %}
-        <div class="col-sm-6 col-md-12 resource-section">
-            <div class="resource-content">
-                <div class="col-md-2">
-                    <img src="{{ obj.src }}" class="resource-logo" alt="{{ obj.alt }}">
-                </div>
-                <div class="col-md-8 resource-text">
-                    <h3 class="resource-name">{{ obj.title }}</h3>
-                    <p class="resource-desc">{{ obj.description }}</p>
-                </div>
-                <div class="col-md-2 resource-button">
-                    <a href="{{ obj.url }}">View</a>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</div>
+<section class="resourcelist">
+  {% for obj in page.channels %}
+    {% include community-resource.html
+         title=obj.title
+         description=obj.description
+         url=obj.url
+         src=obj.src
+         alt=obj.alt
+    %}
+  {% endfor %}
 </section>
 
 ## Live events

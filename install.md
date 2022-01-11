@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Installing Jupyter Software
+title: Installing Jupyter
 tagline: Get up and running with JupyterLab or the classic Jupyter Notebook.
 permalink: /install
 ---
