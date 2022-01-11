@@ -14,7 +14,6 @@ github_username:  Jupyter
 markdown: kramdown
 highlighter: rouge
 
-exclude: [vendor]
 include: [".well-known"]
 
 plugins:
