@@ -5,7 +5,7 @@
     border-bottom: 1px solid darken($light-gray, 10%);
     background-color: $white;
     padding: 15px 25px;
-    @media (max-width: 768px) {
+    @media (max-width: 880px) {
         padding: 0.5em 1em;
     }
     .navbar-header {
@@ -19,7 +19,7 @@
       text-decoration: none;
     }
     .mobile-clearfix {
-        @media (max-width: 768px) {
+        @media (max-width: 880px) {
             clear: both;
         }
     }
@@ -31,7 +31,7 @@
               box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
     }
     .collapse {
-        @media (max-width: 768px) {
+        @media (max-width: 880px) {
             display: none;
         }
     }
@@ -72,7 +72,7 @@
         .navbar-active {
             color: $dark-orange;
         }
-        @media (max-width: 767px) {
+        @media (max-width: 880px) {
             margin-top: 10px;
             float: left;
             clear: both;
@@ -94,7 +94,7 @@
                 color: $dark-orange;
                 text-decoration: none;
             }
-            @media (max-width: 767px) {
+            @media (max-width: 880px) {
                 padding: 12px 0;
                 font-size: 13px;
                 letter-spacing: 1px;
@@ -123,7 +123,7 @@
         .icon-bar + .icon-bar {
             margin-top: 4px;
         }
-        @media (min-width: 768px) {
+        @media (min-width: 880px) {
             display: none;
         }
     }
