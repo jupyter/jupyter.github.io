@@ -3,7 +3,6 @@
 # only Main files contain this front matter, not partials.
 ---
 @import "gallery";
-@import "syntax";
 @import "leftovers";
 @import "components/box";
 @import "components/copy";
@@ -19,5 +18,6 @@
 @import "components/containers";
 @import "components/biocard";
 @import "components/homepage";
+@import "components/syntax";
 @import "components/sections";
 @import "components/community-resource";
