@@ -104,7 +104,7 @@ social:
     <section>
       {{ content }}
     </section>
-    <footer class="footer" role="navigation">
+    <footer class="footer">
       <section class="linklists">
         <div class="content content--wide">
         <div class="footer-links">
@@ -113,7 +113,7 @@ social:
             {%- for obj in layout.nav -%}
             <li>
                 <a href="{{ obj.url }}"
-                    {%- if obj.newpage %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                    {%- if obj.newpage %} target="_blank" rel="noopener noreferrer" {% endif %}>
                     {{ obj.title }}
                 </a>
             </li>
@@ -126,7 +126,7 @@ social:
             {%- for obj in layout.projects -%}
             <li>
               <a href="{{ obj.url }}"
-                  {%- if obj.newpage %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                  {%- if obj.newpage %} target="_blank" rel="noopener noreferrer" {% endif %}>
                   {{ obj.title }}
               </a>
             </li>
