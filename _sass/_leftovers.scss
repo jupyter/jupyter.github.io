@@ -54,54 +54,6 @@
   margin: auto;
 }
 
-/*Community Resources Page */
-
-/* Resource section is used to create a new resource on the community resources page. */
-.resource-section {
-  border-bottom: 1px solid #e8e8e8;
-  padding: 16px;
-  vertical-align: middle;
-}
-
-/* Used to specify that the last resource should not have a border underneath it's content */
-.resource-section:last-child {
-  border-bottom: none;
-}
-
-.resource-text {
-  text-align: left;
-  vertical-align: middle;
-}
-
-.resource-logo {
-  display: block;
-  height: 80px !important;
-  margin: 0 auto;
-}
-
-.resource-name {
-  margin-top: 6px;
-}
-
-.resource-button {
-  margin-top: 32px;
-  text-align: center;
-}
-
-.resource-button a {
-  background-color: #e46e2e;
-  border-radius: 2px;
-  color: white;
-  letter-spacing: 1px;
-  padding: 13px;
-  text-decoration: none;
-  -webkit-transition: 0.2s;
-}
-
-.resource-button a:hover {
-  background-color: #f27624;
-}
-
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   p {
@@ -146,24 +98,6 @@
     font-size: 26px;
     font-weight: 500;
     line-height: 1.153em;
-  }
-  .resource-section {
-    height: 400px;
-    padding: 10px 0 30px;
-  }
-  .resource-section:nth-child(even) {
-    border-left: 1px solid #e8e8e8;
-  }
-  .resource-section img {
-    margin-top: 15px;
-    padding-bottom: 0;
-  }
-  .resource-content {
-    padding-top: 48px;
-  }
-  .resource-text {
-    padding-top: 0;
-    text-align: center;
   }
 }
 
