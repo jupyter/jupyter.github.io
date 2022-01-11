@@ -1,0 +1,31 @@
+p {
+  margin: 0 0 10px;
+}
+
+@media (min-width: 992px) {
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.375;
+  }
+}
+
+@media (max-width: 992px) {
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25em;
+  }
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25em;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
