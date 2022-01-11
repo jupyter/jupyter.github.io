@@ -4,6 +4,17 @@ title: "About Us"
 tagline: Project Jupyter’s origins and governance
 permalink: /about
 
+intro:
+  - Project Jupyter is a non-profit, open-source project, born out of the <a href="https://ipython.org">IPython Project</a> in 2014 as it evolved to support interactive data science and scientific computing across all programming languages. Jupyter will always be 100% open-source software, free for all to use and released under the liberal terms of the <a href="https://opensource.org/licenses/BSD-3-Clause">modified BSD license</a>.
+  - Jupyter is developed in the open on GitHub, through the consensus of the Jupyter community. For more information on our governance approach, please see our <a href="https://github.com/jupyter/governance/blob/master/governance.md">Governance Document</a>.
+  - All online and in-person interactions and communications directly related to the project are covered by the <a href="https://github.com/jupyter/governance/blob/master/conduct/code_of_conduct.md">Jupyter Code of Conduct</a>. This Code of Conduct sets expectations to enable a diverse community of users and contributors to participate in the project with respect and safety.
+
+contributors_copy: |
+  Project Jupyter <a href="https://jupyter.org/governance/distinguished_contributors.html">Distinguished Contributors</a> are recognized for their substantial contributions to Jupyter itself in both quality and quantity over at least two years. Contributions may include code, code review, infrastructure work, mailing list and chat participation, community help/building, education and outreach, fundraising, branding, marketing, inclusion and diversity, UX design and research, etc. Up to 10 new Distinguished Contributors are selected each year by the cumulative body of Distinguished Contributors.
+
+steering_copy: |
+  The role of the Jupyter Steering Council is to ensure, through working with and serving the broader Jupyter community, the long-term well-being of the project, both technically and as a community. The Jupyter Steering Council currently consists of the following members (in alphabetical order).
+
 # All bio photos should go in assets/bios cut at 160x160px
 distinguished_2020:
   - name: Maarten Breddels
@@ -351,35 +362,24 @@ partners:
 <article class="container">
   <div class="section-white">
     <div class="content content--copy">
-
-        <p>Project Jupyter is a non-profit, open-source project, born out of the <a href="https://ipython.org">IPython Project</a> in 2014 as it evolved to support interactive data science and scientific computing across all programming languages. Jupyter will always be 100% open-source software, free for all to use and released under the liberal terms of the <a href="https://opensource.org/licenses/BSD-3-Clause">modified BSD license</a>.</p>
-
-        <p>Jupyter is developed in the open on GitHub, through the consensus of the Jupyter community. For more information on our governance approach, please see our <a href="https://github.com/jupyter/governance/blob/master/governance.md">Governance Document</a>.</p>
-
-   <p>All online and in-person interactions and communications directly related to the project are covered by the <a href="https://github.com/jupyter/governance/blob/master/conduct/code_of_conduct.md">Jupyter Code of Conduct</a>. This Code of Conduct sets expectations to enable a diverse community of users and contributors to participate in the project with respect and safety.</p>
-
+        {% for graf in page.intro %}
+            <p>{{ graf }}</p>
+        {% endfor %}
     </div>
-</div>
+  </div>
 
-<div class="about-section section-white">
-    <div class="row content content--copy">
-    <h3 class="section-header">Distinguished Contributors</h3>
-    <p>
-      Project Jupyter <a href="https://jupyter.org/governance/distinguished_contributors.html">Distinguished
-      Contributors</a> are recognized for their substantial contributions
-      to Jupyter itself in both quality and quantity over at least two
-      years. Contributions may include code, code review, infrastructure
-      work, mailing list and chat participation, community help/building,
-      education and outreach, fundraising, branding, marketing, inclusion
-      and diversity, UX design and research, etc. Up to 10 new
-      Distinguished Contributors are selected each year by the cumulative
-      body of Distinguished Contributors.
-    </p>
+  <hr>
+
+  <div class="section-white top-section-border">
+    <div class="content content--copy">
+      <h3 class="section-header">Distinguished Contributors</h3>
+      <p>{{ page.contributors_copy }}</p>
     </div>
+
     <div class="content content--wide">
-    <h4>2020 Cohort</h4>
-    <div class="biocard-wrapper">
-    {% for bio in page.distinguished_2020 %}
+      <h4>2020 Cohort</h4>
+      <div class="biocard-wrapper">
+      {% for bio in page.distinguished_2020 %}
         {% include biocard.html
             name=bio.name
             photo=bio.photo
@@ -389,11 +389,12 @@ partners:
             linkedin=bio.linkedin
             twitter_handle=bio.twitter_handle
         %}
-    {% endfor %}
-    </div>
-    <h4>Special Election Cohort</h4>
-    <div class="biocard-wrapper">
-    {% for bio in page.distinguished_special_election %}
+      {% endfor %}
+      </div>
+
+      <h4>Special Election Cohort</h4>
+      <div class="biocard-wrapper">
+      {% for bio in page.distinguished_special_election %}
         {% include biocard.html
             name=bio.name
             photo=bio.photo
@@ -402,19 +403,16 @@ partners:
             linkedin=bio.linkedin
             twitter_handle=bio.twitter_handle
         %}
-    {% endfor %}
+      {% endfor %}
+      </div>
     </div>
-    </div>
-</div>
+  </div>
+
 
 <div id="steering-council" class="about-section section-white">
     <div class="row content content--copy">
         <h3 class="section-header">Steering Council</h3>
-        <p>
-        The role of the Jupyter Steering Council is to ensure, through working with and serving the broader Jupyter community,
-        the long-term well-being of the project, both technically and as a community. The Jupyter Steering Council currently consists
-        of the following members (in alphabetical order).
-        </p>
+        <p>{{ page.steering_copy }}</p>
     </div>
     <div class="content content--wide">
         <div class="biocard-wrapper">
@@ -431,7 +429,7 @@ partners:
         {% endfor %}
         </div>
     </div>
-</div>
+  </div>
 
     <hr>
 
