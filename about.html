@@ -4,6 +4,17 @@ title: "About Us"
 tagline: Project Jupyter’s origins and governance
 permalink: /about
 
+intro:
+  - Project Jupyter is a non-profit, open-source project, born out of the <a href="https://ipython.org">IPython Project</a> in 2014 as it evolved to support interactive data science and scientific computing across all programming languages. Jupyter will always be 100% open-source software, free for all to use and released under the liberal terms of the <a href="https://opensource.org/licenses/BSD-3-Clause">modified BSD license</a>.
+  - Jupyter is developed in the open on GitHub, through the consensus of the Jupyter community. For more information on our governance approach, please see our <a href="https://github.com/jupyter/governance/blob/master/governance.md">Governance Document</a>.
+  - All online and in-person interactions and communications directly related to the project are covered by the <a href="https://github.com/jupyter/governance/blob/master/conduct/code_of_conduct.md">Jupyter Code of Conduct</a>. This Code of Conduct sets expectations to enable a diverse community of users and contributors to participate in the project with respect and safety.
+
+contributors_copy: |
+  Project Jupyter <a href="https://jupyter.org/governance/distinguished_contributors.html">Distinguished Contributors</a> are recognized for their substantial contributions to Jupyter itself in both quality and quantity over at least two years. Contributions may include code, code review, infrastructure work, mailing list and chat participation, community help/building, education and outreach, fundraising, branding, marketing, inclusion and diversity, UX design and research, etc. Up to 10 new Distinguished Contributors are selected each year by the cumulative body of Distinguished Contributors.
+
+steering_copy: |
+  The role of the Jupyter Steering Council is to ensure, through working with and serving the broader Jupyter community, the long-term well-being of the project, both technically and as a community. The Jupyter Steering Council currently consists of the following members (in alphabetical order).
+
 # All bio photos should go in assets/bios cut at 160x160px
 distinguished_2020:
   - name: Maarten Breddels
@@ -69,7 +80,7 @@ distinguished_special_election:
     gh_handle: dsblank
     linkedin: https://linkedin.com/in/douglasblank/
     twitter_handle: DougBlank
-    personal: https://douglasblank.com/
+    personal: https://cs.brynmawr.edu/~dblank/
   - name: Nicholas Bollweg
     photo: Nicholas_Bollweg.png
     gh_handle: bollwyvl
@@ -112,7 +123,7 @@ distinguished_special_election:
     gh_handle: CameronOelsen
   - name: Yuvi Panda
     photo: Yuvi_Panda.jpg
-    personal: http://yuvi.in
+    personal: https://words.yuvi.in/
   - name: Luciano Resende
     photo: Luciano_Resende.jpg
     linkedin: https://linkedin.com/in/lresende/
@@ -293,7 +304,7 @@ sponsors:
   - url: https://schmidtfutures.com/
     src: schmidt.svg
     alt: schmidt futures logo
-  - url: https://www.sloan.org/
+  - url: https://sloan.org/
     src: alfred.svg
     alt: sloan logo
 
@@ -323,7 +334,7 @@ partners:
   - url: https://www.mongodb.com/
     src: mongodb.svg
     alt: MongoDB logo
-  - url: https://techblog.netflix.com
+  - url: https://netflixtechblog.com/
     src: netflix-color.svg
     alt: netflix logo
   - url: https://www.quansight.com/
@@ -349,37 +360,26 @@ partners:
 %}
 
 <article class="container">
+  <div class="section-white">
+    <div class="content content--copy">
+        {% for graf in page.intro %}
+            <p>{{ graf }}</p>
+        {% endfor %}
+    </div>
+  </div>
+
+  <hr>
+
   <div class="section-white top-section-border">
     <div class="content content--copy">
-
-        <p>Project Jupyter is a non-profit, open-source project, born out of the <a href="https://ipython.org">IPython Project</a> in 2014 as it evolved to support interactive data science and scientific computing across all programming languages. Jupyter will always be 100% open-source software, free for all to use and released under the liberal terms of the <a href="https://opensource.org/licenses/BSD-3-Clause">modified BSD license</a>.</p>
-
-        <p>Jupyter is developed in the open on GitHub, through the consensus of the Jupyter community. For more information on our governance approach, please see our <a href="https://github.com/jupyter/governance/blob/master/governance.md">Governance Document</a>.</p>
-
-   <p>All online and in-person interactions and communications directly related to the project are covered by the <a href="https://github.com/jupyter/governance/blob/master/conduct/code_of_conduct.md">Jupyter Code of Conduct</a>. This Code of Conduct sets expectations to enable a diverse community of users and contributors to participate in the project with respect and safety.</p>
-
+      <h3 class="section-header">Distinguished Contributors</h3>
+      <p>{{ page.contributors_copy }}</p>
     </div>
-</div>
 
-<div class="about-section section-white top-section-border">
-    <div class="row content content--copy">
-    <h3 class="section-header">Distinguished Contributors</h3>
-    <p>
-      Project Jupyter <a href="https://jupyter.org/governance/distinguished_contributors.html">Distinguished
-      Contributors</a> are recognized for their substantial contributions
-      to Jupyter itself in both quality and quantity over at least two
-      years. Contributions may include code, code review, infrastructure
-      work, mailing list and chat participation, community help/building,
-      education and outreach, fundraising, branding, marketing, inclusion
-      and diversity, UX design and research, etc. Up to 10 new
-      Distinguished Contributors are selected each year by the cumulative
-      body of Distinguished Contributors.
-    </p>
-    </div>
     <div class="content content--wide">
-    <h4>2020 Cohort</h4>
-    <div class="biocard-wrapper">
-    {% for bio in page.distinguished_2020 %}
+      <h4>2020 Cohort</h4>
+      <div class="biocard-wrapper">
+      {% for bio in page.distinguished_2020 %}
         {% include biocard.html
             name=bio.name
             photo=bio.photo
@@ -389,11 +389,12 @@ partners:
             linkedin=bio.linkedin
             twitter_handle=bio.twitter_handle
         %}
-    {% endfor %}
-    </div>
-    <h4>Special Election Cohort</h4>
-    <div class="biocard-wrapper">
-    {% for bio in page.distinguished_special_election %}
+      {% endfor %}
+      </div>
+
+      <h4>Special Election Cohort</h4>
+      <div class="biocard-wrapper">
+      {% for bio in page.distinguished_special_election %}
         {% include biocard.html
             name=bio.name
             photo=bio.photo
@@ -402,19 +403,16 @@ partners:
             linkedin=bio.linkedin
             twitter_handle=bio.twitter_handle
         %}
-    {% endfor %}
+      {% endfor %}
+      </div>
     </div>
-    </div>
-</div>
+  </div>
 
-<div id="steering-council" class="about-section section-white top-section-border">
+
+<div id="steering-council" class="about-section section-white">
     <div class="row content content--copy">
         <h3 class="section-header">Steering Council</h3>
-        <p>
-        The role of the Jupyter Steering Council is to ensure, through working with and serving the broader Jupyter community,
-        the long-term well-being of the project, both technically and as a community. The Jupyter Steering Council currently consists
-        of the following members (in alphabetical order).
-        </p>
+        <p>{{ page.steering_copy }}</p>
     </div>
     <div class="content content--wide">
         <div class="biocard-wrapper">
@@ -431,12 +429,12 @@ partners:
         {% endfor %}
         </div>
     </div>
-</div>
+  </div>
 
     <hr>
-    {% assign num = page.numfocus_subcomittee | size %}
+
     <div class="row content content--copy">
-        <h3 class="section-header">NumFOCUS Subcommittee Member{% if num > 1 %}s{% endif %}</h3>
+        <h3 class="section-header">NumFOCUS Subcommittee Members</h3>
     </div>
     <div class="content content--wide">
         <div class="biocard-wrapper">
@@ -457,7 +455,7 @@ partners:
     <hr>
 
     <div class="row content content--copy">
-        <h3 class="section-header">Trademark Subcommittee Member{% if num > 1 %}s{% endif %}</h3>
+        <h3 class="section-header">Trademark Subcommittee Members</h3>
     </div>
 
     <div class="content content--wide">
@@ -479,7 +477,7 @@ partners:
     <hr>
 
     <div class="row content content--copy">
-        <h3 class="section-header">Retired Steering Council Member{% if num > 1 %}s{% endif %}</h3>
+        <h3 class="section-header">Retired Steering Council Members</h3>
     </div>
 
     <div class="content content--wide">
@@ -497,8 +495,6 @@ partners:
         {% endfor %}
         </div>
     </div>
-
-</div>
 
 <div id="sponsors" class="about-section section-grey content content--wide">
     <div class="row">
@@ -581,7 +577,7 @@ partners:
     </div>
     
     <div class="row content">
-        <div id="col-md-12 donate-formatting">
+        <div class="col-md-12 donate-formatting">
             <a href="https://numfocus.salsalabs.org/donate-to-jupyter/index.html" class="orange-button" id="donate-link">
                 Support Project Jupyter
             </a>

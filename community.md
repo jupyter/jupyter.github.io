@@ -11,7 +11,7 @@ channels:
     alt: github icon
     url: https://github.com/jupyter/
   - title: Jupyter Discourse
-    description: A Discourse Forum for a multitude of Jupyter topics
+    description: A Discourse Forum for a multitude of Jupyter topics.
     src: assets/mail-list.svg
     alt: mailing list icon
     url: https://discourse.jupyter.org/
@@ -41,12 +41,12 @@ channels:
     alt: stack overflow icon
     url: https://stackoverflow.com/questions/tagged/jupyter
   - title: Jupyter Community Guides
-    description: Information about community, communications and governance.
+    description: Information about community, communication and governance.
     src: assets/documentation.svg
     alt: documentation icon
     url: https://jupyter.readthedocs.io/en/latest/community/content-community.html
   - title: Jupyter Contributor Guides
-    description: Contribution guidelines
+    description: Contribution guidelines.
     src: assets/documentation.svg
     alt: documentation icon
     url: https://jupyter.readthedocs.io/en/latest/contributing/content-contributor.html
@@ -69,7 +69,7 @@ can become a part of the Jupyter community.
 
 ## Explore our projects
 
-Jupyter has seen wonderful growth over the past decade. As we have grown the
+Jupyter has seen wonderful growth over the past decade. As we have grown, the
 projects now span multiple GitHub organizations. Jupyter projects may be found
 in these organizations:
 
@@ -94,40 +94,30 @@ Jupyter also has a number of online communication channels to help keep in touch
 
 As you interact with others in the Jupyter ecosystem, remember that we have a strong
 commitment to being an **open, inclusive, and positive community**. Please read the
-[Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/master/conduct/code_of_conduct.md) for guidance on how to interact with others in
-a way that makes the community thrive.
+[Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/master/conduct/code_of_conduct.md)
+for guidance on how to interact with others in a way that makes the community thrive.
 
-Below is a short list of gitter channels, email listservs, and github repositories
+Below is a short list of Gitter channels, mailing lists, and GitHub repositories
 where you can get involved. **We always welcome participation in the Jupyter community**.
 
-<section>
-<div class="top-section-border">
-    <div class="row">
-        {% for obj in page.channels %}
-        <div class="col-sm-6 col-md-12 resource-section">
-            <div class="resource-content">
-                <div class="col-md-2">
-                    <img src="{{ obj.src }}" class="resource-logo" alt="{{ obj.alt }}">
-                </div>
-                <div class="col-md-8 resource-text">
-                    <h3 class="resource-name">{{ obj.title }}</h3>
-                    <p class="resource-desc">{{ obj.description }}</p>
-                </div>
-                <div class="col-md-2 resource-button">
-                    <a href="{{ obj.url }}">View</a>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</div>
+<section class="resourcelist">
+  {% for obj in page.channels %}
+    {% include community-resource.html
+         title=obj.title
+         description=obj.description
+         url=obj.url
+         src=obj.src
+         alt=obj.alt
+    %}
+  {% endfor %}
 </section>
 
 ## Live events
 
-Project Jupyter events provide a forum for community members to come together in person or virtually to share and learn from each other.
+Project Jupyter events provide a forum for community members to come together in person
+or virtually to share and learn from each other.
 
-This page is for in person, one-of-a-kind events, for community engagement, see the community page. 
+This page is for in-person, one-of-a-kind events; for community engagement, see the community page. 
 
 ### Calendar
 
@@ -138,16 +128,14 @@ This is a calendar of regular online events.  It might not be exhaustive.
           class="responsive-iframe"
           id="calendariframe"
           src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=local&amp;src=ZGdwZDM2ZjQzZXQ5Z3JhYm42dGRpbjZwbWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=bTNoZWs2OWRhZzczODF1bXQ4a2NqZDc1dTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=YXFwa3VpNXE3b2kzMnBrOXRjcDUzaG5zc2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZDE4NzR1cjZmZGh1ajBzbmpuaWxhYzJubGNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=cGlhaGluZWpqcjZzc3ZpOGlrbWpqb3A2cm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23AD1457&amp;color=%23EF6C00&amp;color=%23616161&amp;color=%23F6BF26&amp;color=%239E69AF"
-          style="border:solid 1px #777"
           width="800"
           height="600"
-          frameborder="0"
-          scrolling="no"></iframe>
+          style="border: 0; overflow: hidden;"></iframe>
 </div>
 <script>document.getElementById("calendariframe").src = document.getElementById("calendariframe").src.replace("ctz=local", "ctz=" + Intl.DateTimeFormat().resolvedOptions().timeZone)</script>
 
 See [this page](https://jupyter.readthedocs.io/en/latest/community/content-community.html#jupyter-wide-meetings) for
-more informations.
+more information.
 
 ### JupyterCon
 
@@ -159,9 +147,14 @@ Global JupyterCon conferences provide opportunities for the Jupyter community to
 
 ### Jupyter Community Workshops
 
-[Jupyter Community Workshops](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549) bring together small groups (approximately 12 to 24 people) of Jupyter community members and core contributors for high-impact strategic work and community engagement on focused topics.
+[Jupyter Community Workshops](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549)
+bring together small groups (approximately 12 to 24 people) of Jupyter community members and
+core contributors for high-impact strategic work and community engagement on focused topics.
 
-Much of Jupyter’s work is accomplished through remote, online collaboration; yet, over the years, we have found deep value in focused in-person work over a few days. These in-person events are particularly useful for tackling challenging development and design projects, growing the community of contributors, and strengthening collaborations.
+Much of Jupyter's work is accomplished through remote, online collaboration; yet, over the years,
+we have found deep value in focused in-person work over a few days. These in-person events are
+particularly useful for tackling challenging development and design projects, growing the community
+of contributors, and strengthening collaborations.
 
 #### Round 1: 2018
 
@@ -191,9 +184,11 @@ Individual workshops:
 
 - [Round 3: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-call-for-proposals-for-jan-aug-2020-710f687e30f4)
 
-Due to the COVID-19 pandemic, workshops were put on hold during 2020. Stay tuned for more details about workshops funded in round 3.
+Due to the COVID-19 pandemic, workshops were put on hold during 2020.
+Stay tuned for more details about workshops funded in round 3.
 
 ### Jupyter Community Calls
 
-[Jupyter Community Calls](https://jupyter.readthedocs.io/en/latest/community/content-community.html#jupyter-wide-meetings) provide a regular virtual forum for community-wide discussion and sharing.
+[Jupyter Community Calls](https://jupyter.readthedocs.io/en/latest/community/content-community.html#jupyter-wide-meetings)
+provide a regular virtual forum for community-wide discussion and sharing.
 

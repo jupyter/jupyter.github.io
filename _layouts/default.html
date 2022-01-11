@@ -45,7 +45,7 @@ social:
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta itemprop="description" name="description" content="{% if page.tagline %}{{ page.tagline|strip_html }}{% else %}{{ site.description|strip_html }}{% endif %}" />
+    <meta name="description" content="{% if page.tagline %}{{ page.tagline|strip_html }}{% else %}{{ site.description|strip_html }}{% endif %}" />
     <title>{{ site.title }} {% if page.title %}| {{ page.title }}{% endif %}</title>
     <meta property="og:title" content="Project Jupyter" />
     <meta property="og:description" content="{{ site.description|strip_html }}">
@@ -63,7 +63,7 @@ social:
     <script>console.log('Welcome to Project Jupyter! Explore the various tools available and their corresponding documentation. If you are interested in contributing to the platform, please visit the community resources section at https://jupyter.org/community.html.')</script>
   </head>
   <body>
-    <nav class="navbar" role="navigation">
+    <nav class="navbar">
         <div class="navbar-header">
             <a class="navbar-brand" href="/">
                <picture>
@@ -80,7 +80,7 @@ social:
         <button type="button"
                 class="hamburger"
                 data-bs-toggle="collapse"
-                data-bs-target="#bs-navbar-collapse" />
+                data-bs-target="#bs-navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar white-icon-bar"></span>
             <span class="icon-bar white-icon-bar"></span>
@@ -92,7 +92,7 @@ social:
             {%- for nav in layout.nav -%}
             <li>
                 <a href="{{nav.url}}"
-                   {%- if nav.newpage %}target="_blank" rel="noopener noreferrer"{% endif %}
+                   {%- if nav.newpage %} target="_blank" rel="noopener noreferrer" {% endif %}
                    class="{% if nav.url == page.url %}navbar-active{% endif %}">
                    {{nav.title}}
                </a>

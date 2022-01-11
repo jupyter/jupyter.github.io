@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Home
-cfp: true
 permalink: /
 
 jumbotron:
@@ -32,11 +31,13 @@ jumbotron:
 jupyterlab:
   headline: 'JupyterLab: A Next-Generation Notebook Interface'
   description: JupyterLab is the latest web-based interactive development environment for notebooks, code, and data. Its flexible interface allows users to configure and arrange workflows in data science, scientific computing, computational journalism, and machine learning. A modular design invites extensions to expand and enrich functionality.
+  class: section-grey
   image:
     alt: examples of jupyterlab workspaces in single document and multiple document workspaces
     src: assets/homepage/labpreview
     width: 885
     height: 627
+    loading: eager
   buttons:
   - class:
     href: /try
@@ -48,6 +49,7 @@ jupyterlab:
 notebook:
   headline: 'Jupyter Notebook: The Classic Notebook Interface'
   description: The Jupyter Notebook is the original web application for creating and sharing computational documents. It offers a simple, streamlined, document-centric experience.
+  class: section-white
   image:
     alt: example notebook of Lorenz differential equations
     src: assets/homepage/jupyterpreview
@@ -119,6 +121,7 @@ jupyterhub:
 voila:
   headline: 'Voilà: Share your results'
   description: Voilà helps communicate insights by transforming notebooks into secure, stand-alone web applications that you can customize and share.
+  class: section-white
   image:
     alt: examples of Voilà dashboards
     src: assets/homepage/voilapreview
@@ -180,7 +183,7 @@ in_use:
     - href: https://cocalc.com
       src: cocalc.svg
       alt: CoCalc
-    - href: https://codeneuro.org
+    - href: http://codeneuro.org
       src: codeneuro.svg
       alt: CodeNeuro
     - href: https://www.thedataincubator.com
@@ -219,15 +222,12 @@ in_use:
     - href: https://www.northwestern.edu
       src: northwestern.svg
       alt: Northwestern University
-    - href: https://www.nyu.edu
+    - href: https://www.nyu.edu/
       src: NYU.svg
       alt: NYU
     - href: https://www.oreilly.com
       src: oreilly.svg
       alt: OReilly
-    - href: https://www.quantopian.com
-      src: quantopian.svg
-      alt: Quantopian
     - href: https://quantstack.net
       src: quantstack.svg
       alt: QuantStack
@@ -245,231 +245,124 @@ in_use:
       alt: SoundCloud
 ---
 
-<section>
+<header>
     <div class="jumbotron">
-        <div class="row">
-            <div class="col-md-12">
-                {% for img in page.jumbotron.images %}
-                <div class="jumbotron-image-container">
-                    <span>
-                        <img class="img-responsive {{ img.class }}"
-                             src="/assets/homepage/{{ img.src }}"
-                             width={{ img.width }}
-                             height={{ img.height }}
-                             alt="{{ img.alt }}"
-                             loading="eager" />
-                    </span>
-                </div>
-                {% endfor %}
-                <img class="img-responsive"
-                     src="/assets/homepage/{{ page.jumbotron.background }}"
-                     width=747
-                     height=313
-                     alt="white background"
-                     loading="eager" />
-            </div>
-        </div>
+      <div class="col-md-12">
+          {% for img in page.jumbotron.images %}
+          <div class="jumbotron-image-container">
+              <span>
+                  <img class="img-responsive {{ img.class }}"
+                        src="/assets/homepage/{{ img.src }}"
+                        width={{ img.width }}
+                        height={{ img.height }}
+                        alt="{{ img.alt }}"
+                        loading="eager" />
+              </span>
+          </div>
+          {% endfor %}
+          <img class="img-responsive"
+                src="/assets/homepage/{{ page.jumbotron.background }}"
+                width=747
+                height=313
+                alt="white background"
+                loading="eager" />
+      </div>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="col-md-8 col-md-offset-2">
-                <h4 class="jumbotron-text">{{ page.jumbotron.text }}</h4>
-                </div>
-             </div>
+      <div class="col-md-12">
+          <div class="col-md-8 col-md-offset-2">
+          <h4 class="jumbotron-text">{{ page.jumbotron.text }}</h4>
+          </div>
+      </div>
+    </div>
+</header>
+
+<article>
+  {% include homepage-section.html
+      class=page.jupyterlab.class
+      headline=page.jupyterlab.headline
+      description=page.jupyterlab.description
+      image=page.jupyterlab.image
+      buttons=page.jupyterlab.buttons
+  %}
+
+  {% include homepage-section.html
+      class=page.notebook.class
+      headline=page.notebook.headline
+      description=page.notebook.description
+      image=page.notebook.image
+      buttons=page.notebook.buttons
+      features=page.notebook.features
+  %}
+
+  <section class="jupyterhub section-grey homepage-section">
+    <div>
+        <div class="hublogo">
+            <img src="{{ page.jupyterhub.image.src }}" class="img-responsive"
+                  alt="{{ page.jupyterhub.image.alt }}" loading="lazy" />
+        </div>
+        <div class="col-md-offset-3 col-md-6 col-md-offset-3 hubdescription">
+            <p style="padding-top:24px; text-align: center">{{ page.jupyterhub.description }}</p>
         </div>
     </div>
-</section>
-<section id="jupyterlab">
-    <div class="section-grey">
-        <div class="lab-preview">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <picture>
-                            <source type="image/webp" srcset="{{ page.jupyterlab.image.src }}.webp">
-                            <img src="{{ page.jupyterlab.image.src }}.png"
-                                 alt="{{ page.jupyterlab.image.alt }}"
-                                 width={{ page.jupyterlab.image.width }}
-                                 height={{ page.jupyterlab.image.height }}
-                                 class="img-responsive"
-                                 id="portal"
-                                 loading="eager" />
-                        </picture>
-                    </div>
-                    <div class="col-md-6 nb-highlight-text">
-                        <h3>{{ page.jupyterlab.headline }}</h3>
-                        <h4 class="nb-desc">{{ page.jupyterlab.description }}</h4>
-                        <div class="button-container">
-                            {% for btn in page.jupyterlab.buttons %}
-                            <a class="orange-button {{ btn.class }}"
-                               href="{{ btn.href }}">{{ btn.text }}</a>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="hubfeatures col-md-12">
+        {% for feat in page.jupyterhub.features %}
+        <div class="{{ feat.class }} hubfeature col-md-3">
+            <img src="{{ feat.image.src }}"
+                 class="img-responsive"
+                 alt="{{ feat.image.alt }}"
+                 width="81"
+                 height="81"
+                 loading="lazy">
+            <h3>{{ feat.headline }}</h3>
+            <p>{{ feat.description }}</p>
         </div>
+        {% endfor %}
     </div>
-</section>
-<section id="about-notebook">
-    <div class="section-white">
-        <div class="notebook-preview">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <picture>
-                            <source type="image/webp" srcset="{{ page.notebook.image.src }}.webp">
-                            <img src="{{ page.notebook.image.src }}.png"
-                                 alt="{{ page.notebook.image.alt }}"
-                                 width={{ page.notebook.image.width }}
-                                 height={{ page.notebook.image.height }}
-                                 class="img-responsive"
-                                 id="portal"
-                                 loading="lazy" />
-                        </picture>
-                    </div>
-                    <div class="col-md-6 nb-highlight-text">
-                        <h3>{{ page.notebook.headline }}</h3>
-                        <h4 class="nb-desc">{{ page.notebook.description }}</h4>
-                        <div class="button-container">
-                            {% for btn in page.notebook.buttons %}
-                            <a class="orange-button {{ btn.class }}"
-                               href="{{ btn.href }}">{{ btn.text }}</a>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="notebook-features">
-            <div class="container">
-                <div class="row">
-                    {% for feat in page.notebook.features %}
-                    <div class="col-md-3 notebook-feature">
-                        <img class="img-responsive"
-                             src="{{ feat.image.src }}"
-                             id="feature"
-                             alt="{{ feat.image.alt }}"
-                             loading="lazy" />
-                        <h4>{{ feat.headline }}</h4>
-                        <p>{{ feat.description }}</p>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
+    <div class="col-md-12 hubbutton">
+        <a class="orange-button" href="{{ page.jupyterhub.button.href }}">{{ page.jupyterhub.button.text }}</a>
     </div>
-</section>
-<section class="jupyterhub">
-    <div class="section-grey">
-        <div class="container">
-            <div class="row">
-            <div>
-                <div class="hublogo">
-                    <img src="{{ page.jupyterhub.image.src }}" class="img-responsive"
-                         alt="{{ page.jupyterhub.image.alt }}" loading="lazy" />
-                </div>
-                <div class="col-md-offset-3 col-md-6 col-md-offset-3" class="hubdescription">
-                    <p style="padding-top:24px; text-align: center">{{ page.jupyterhub.description }}</p>
-                </div>
-            </div>
-            <div class="hubfeatures col-md-12">
-                {% for feat in page.jupyterhub.features %}
-                <div class="{{ feat.class }} hubfeature col-md-3">
-                    <img src="{{ feat.image.src }}" class="img-responsive" alt="{{ feat.image.alt }}" loading="lazy">
-                    <h4>{{ feat.headline }}</h4>
-                    <p>{{ feat.description }}</p>
-                </div>
-                {% endfor %}
-            </div>
-            <div class="col-md-12 hubbutton">
-                <a class="orange-button" href="{{ page.jupyterhub.button.href }}">{{ page.jupyterhub.button.text }}</a>
-            </div>
-            </div>
-        </div>
+  </section>
+
+  {% include homepage-section.html
+      class=page.voila.class
+      headline=page.voila.headline
+      description=page.voila.description
+      image=page.voila.image
+      buttons=page.voila.buttons
+  %}
+
+  <section class="section-grey homepage-section">
+    <h3 class="section-header">{{ page.in_use.headline }}</h3>
+    <ul class="logogrid">
+    {% for li in page.in_use.companies %}
+    <li class="small">
+        <a href="{{ li.href }}">
+            <img src="/assets/logos/{{ li.src }}"
+                  class="greydout"
+                  width=300
+                  height=90
+                  alt="{{ li.alt }}"
+                  loading="lazy" />
+        </a>
+    </li>
+    {% endfor %}
+    </ul>
+  </section>
+
+  <section class="section-white homepage-section openstandards-section">
+    <div class="description">
+        <h2>{{ page.open_standards.headline }}</h2>
+        <p>{{ page.open_standards.description }}</p>
     </div>
-</section>
-<section id="voila">
-    <div class="section-white">
-        <div class="voila-preview">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <picture>
-                            <source type="image/webp" srcset="{{ page.voila.image.src }}.webp">
-                            <img src="{{ page.voila.image.src }}.png"
-                                 alt="{{ page.voila.image.alt }}"
-                                 width={{ page.voila.image.width }}
-                                 height={{ page.voila.image.height }}
-                                 class="img-responsive"
-                                 id="portal" 
-                                 loading="lazy" />
-                        </picture>
-                    </div>
-                    <div class="col-md-6 nb-highlight-text">
-                        <h3>{{ page.voila.headline }}</h3>
-                        <h4 class="nb-desc">
-                            {{ page.voila.description }}
-                        </h4>
-                        <div class="button-container">
-                            {% for btn in page.voila.buttons %}
-                            <a class="orange-button {{ btn.class }}"
-                               href="{{ btn.href }}">{{ btn.text }}</a>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="cardlist">
+        {% for feat in page.open_standards.features %}
+        <div class="card">
+          <img src="{{ feat.image.src }}" alt="{{ feat.image.alt }}" loading="lazy">
+          <h3>{{ feat.headline }}</h3>
+          <p>{{ feat.description }}</p>
         </div>
+        {% endfor %}
     </div>
-</section>
-<section id="current-use">
-    <div class="section-grey">
-        <div class="container">
-            <div class="row">
-                <h3 class="section-header">{{ page.in_use.headline }}</h3>
-                <ul class="logogrid">
-                {% for li in page.in_use.companies %}
-                <li class="small">
-                    <a href="{{ li.href }}">
-                        <img src="/assets/logos/{{ li.src }}"
-                             class="greydout"
-                             width=300
-                             height=90
-                             alt="{{ li.alt }}"
-                             loading="lazy" />
-                    </a>
-                </li>
-                {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="architecture">
-    <div class="section-white">
-        <div class="container">
-            <div class="architecturedescription">
-                <img src="assets/architectureicon2.svg" class="section-icon" alt="icon to represent jupyter architecture" loading="lazy">
-                <h3 class="section-header">{{ page.open_standards.headline }}</h3>
-                <h4 class="support-paragraph">{{ page.open_standards.description }}</h4>
-            </div>
-            <div class="architecturecontent row">
-                {% for feat in page.open_standards.features %}
-                <div class="col-sm-6 col-md-4">
-                    <div class="card">
-                        <div class="arcfeature" id="arcfeature1">
-                            <div class="front">
-                                <img src="{{ feat.image.src }}" alt="{{ feat.image.alt }}" loading="lazy">
-                                <h4>{{ feat.headline }}</h4>
-                                <p>{{ feat.description }}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</section>
+  </section>
+</article>

@@ -2,6 +2,7 @@
 layout: page
 title: The Binder Project
 title_image: assets/logo_binder.svg
+title_image_alt: binder logo
 tagline: Reproducible, sharable, interactive computing environments
 permalink: /binder
 ---
@@ -94,7 +95,7 @@ One example of a BinderHub deployment lives at [mybinder.org](https://mybinder.o
 [**Here's a link to mybinder.org**](https://mybinder.org).
 
 The BinderHub deployment at mybinder.org is a free public service that the Binder Community
-manages for the community. It is actually a [federation of many BinderHub deployments](https://binderhub.readthedocs.io/en/latest/federation/federation.html)
+manages for the community. It is actually a [federation of many BinderHub deployments](https://mybinder.readthedocs.io/en/latest/about/federation.html)
 that is run as an experiment in open, community-led infrastructure. We run mybinder.org
 as a radically transparent public service, and as such there is a lot of information out there
 about the deployment. Here are a few useful resources in case you're interested:
@@ -106,7 +107,7 @@ about the deployment. Here are a few useful resources in case you're interested:
 * [The mybinder.org site reliability guide](https://mybinder-sre.readthedocs.io/en/latest/) is a resource
   for the operations team and the community to share best-practices and information about
   running the public BinderHub deployment at mybinder.org
-* [The mybinder.org incident reports page](https://mybinder-sre.readthedocs.io/en/latest/#incident-reports)
+* [The mybinder.org incident reports page](https://mybinder-sre.readthedocs.io/en/latest/incident-reports/)
   contains a list of incidents that have happened in the public deployment, as well as
   steps taken to resolve them.
 
