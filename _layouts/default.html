@@ -18,6 +18,27 @@ nav:
     url: /security
   - title: About
     url: /about
+projects:
+  - title: Binder
+    url: /binder
+  - title: JupyterHub
+    url: /hub
+  - title: JupyterLab
+    url: https://jupyterlab.readthedocs.io/
+    newpage: true
+  - title: Jupyter Notebook
+    url: https://jupyter-notebook.readthedocs.io/
+    newpage: true
+  - title: Voilà
+    url: https://voila.readthedocs.io/
+    newpage: true
+  - title: Widgets
+    url: /widgets
+social:
+  - title: GitHub
+    url: https://github.com/jupyter/
+  - title: Twitter
+    url: https://twitter.com/projectjupyter
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -83,19 +104,58 @@ nav:
     <section>
       {{ content }}
     </section>
-    <footer>
-      <div class="footer" role="navigation">
-        <div class="container">
-            <div class="navbar-text">
-                <p>
-                    Copyright © {{site.time | date: '%Y' }}  Project Jupyter
-                </p>
-                <p>
-                    The Jupyter Trademark is registered with the U.S. Patent & Trademark Office.
-                </p>
-            </div>
+    <footer class="footer">
+      <section class="linklists">
+        <div class="content content--wide">
+        <div class="footer-links">
+          <h2>Project Jupyter</h2>
+          <ul>
+            {%- for obj in layout.nav -%}
+            <li>
+                <a href="{{ obj.url }}"
+                    {%- if obj.newpage %} target="_blank" rel="noopener noreferrer" {% endif %}>
+                    {{ obj.title }}
+                </a>
+            </li>
+            {%- endfor %}
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h2>Subprojects</h2>
+          <ul>
+            {%- for obj in layout.projects -%}
+            <li>
+              <a href="{{ obj.url }}"
+                  {%- if obj.newpage %} target="_blank" rel="noopener noreferrer" {% endif %}>
+                  {{ obj.title }}
+              </a>
+            </li>
+            {%- endfor %}
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h2>Follow us</h2>
+          <ul>
+            {%- for obj in layout.social -%}
+            <li>
+              <a href="{{ obj.url }}"
+                  target="_blank" rel="noopener noreferrer">
+                  {{ obj.title }}
+              </a>
+            </li>
+            {%- endfor %}
+          </ul>
         </div>
       </div>
+      </section>
+      <section class="footer-text">
+        <div class="content content--wide">
+          <img src="/assets/logos/rectanglelogo-blacktext-blackbody-blackplanets.svg" width="189" height="51" alt="project jupyter logo">
+          <p>
+              The Jupyter Trademark is registered with the U.S. Patent & Trademark Office. © {{site.time | date: '%Y' }}
+          </p>
+        </div>
+      </section>
     </footer>
     <script src="/assets/js/bootstrap-native.min.js" defer></script>
   </body>

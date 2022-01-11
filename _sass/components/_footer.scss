@@ -1,13 +1,59 @@
 @import "settings/colors";
 
 .footer {
+  section {
+    padding: 2em;
+  }
+  .linklists {
+    background-color: lighten($orange, 12.5%);
+    .content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: start;
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+    }
+    .footer-links {
+      color: $black;
+      @media (max-width: 420px) {
+        margin-top: 2em;
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
+      h2 {
+        font-size: 1.1em;
+        font-weight: bold;
+        margin: 0 0 1em 0;
+        padding: 0;
+      }
+      ul {
+        margin: 0 0 0 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+          padding: 0;
+          margin: 0 0 0.75em 0;
+          a {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+  .footer-text {
     background-color: $orange;
-    padding: 15px;
-    @media (max-width:767px) {
-        padding: 15px 0;
+    img {
+      margin: 1em 0;
+      color: $black;
     }
     p {
-        color: $black;
-        padding-top: 10px;
+      color: $black;
+      padding-top: 10px;
+      font-size: 0.9em;
     }
+  }
 }
