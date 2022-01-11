@@ -8,6 +8,21 @@ The site is built with Jekyll, see [the Jekyll website](https://jekyllrb.com/) f
 
 There are a few ways to build the site locally, see the sections below.
 
+## Where the site is hosted
+
+There are two ways that this site is built:
+
+- **Pull Request previews** are built with [Netlify](https://netlify.com), a hosting service for static websites. See the section below for more information.
+- **Hosting for jupyter.org** is done via [GitHub Pages](https://pages.github.com/). GitHub will automatically use Jekyll to build the HTML for this site and host it at `jupyter.github.io`, which connects with [jupyter.org](https://jupyter.org).
+
+## Preview changes in a Pull Request
+
+Netlify will automatically build a preview of the website in an open Pull Request. To see this, click on the **`Show all checks`** button just above the comment box in the Pull Request window. Then click on the **`details`** link on the **`deploy/netlify`** row to see a preview of the built site.
+
+Here's an image of this box on a GitHub PR page:
+
+![Netlify Preview Button](.github/images/netlify-preview.png)
+
 ### Build the site automatically with `nox`
 
 The easiest way to build the site locally is by using the [`nox` command line tool](https://nox.thea.codes/). This tool makes it easy to automate commands in a repository, and we have included a `build` command to quickly install the dependencies and build the site.
@@ -76,19 +91,6 @@ Follow these steps:
    ```
 
    This will build the site's HTML and open a server at `localhost:4000` for you to preview the site.
-
-
-## Where the site is hosted
-
-The site is automatically built with [Netlify](https://netlify.com), a hosting service for static websites. When any changes are merged into the `master` branch, Netlify will automatically build them and update the website at [jupyter.org](https://jupyter.org).
-
-## Preview changes in a Pull Request
-
-Netlify will automatically build a preview of the website in an open Pull Request. To see this, click on the **`Show all checks`** button just above the comment box in the Pull Request window. Then click on the **`details`** link on the **`deploy/netlify`** row to see a preview of the built site.
-
-Here's an image of this box on a GitHub PR page:
-
-![Netlify Preview Button](.github/images/netlify-preview.png)
 
 ## Structure of this website
 
