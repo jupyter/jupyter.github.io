@@ -274,6 +274,10 @@ trademark_subcomittee:
     affiliation: SageMath
     gh_handle: williamstein
 
+sponsor_box:
+  headline: Sponsors
+  description: 'Project Jupyter receives direct funding from the following sources:'
+
 # All sponsor and partner SVGs should be 300x60 pixels
 # And entries ordered according to A-Z,1-9
 sponsors:
@@ -308,6 +312,9 @@ sponsors:
     src: alfred.svg
     alt: sloan logo
 
+partner_box:
+  headline: Institutional Partners
+  description: 'Institutional Partners are organizations that support the project by employing Jupyter Steering Council members. Current partners include:'
 
 partners:
   - url: https://apple.com/
@@ -352,6 +359,13 @@ partners:
   - url: https://2i2c.org/
     src: 2i2c.svg
     alt: 2i2c logo
+
+donate_box:
+  headline: Donate
+  description:
+    - Jupyter will always be 100% open source software, free for all to use and released under the liberal terms of the <a href="https://opensource.org/licenses/BSD-3-Clause">modified BSD license</a>. If you have found Project Jupyter to be useful in your work, research or company, please consider making a donation to the project commensurate with your resources.
+    - All donations will be used strictly to fund the development of Project Jupyter's open source software, documentation and community. Our donations are managed by the <a href="https://numfocus.org">NumFOCUS Foundation</a>, which is the legal and fiscal umbrella for the project.
+    - NumFOCUS is a 501(c)3 non-profit foundation; if you are subject to US Tax law, your contributions will be tax-deductible.
 ---
 
 {% include page-header.html
@@ -360,19 +374,19 @@ partners:
 %}
 
 <article class="container">
-  <div class="section-white">
-    <div class="content content--copy">
-        {% for graf in page.intro %}
-            <p>{{ graf }}</p>
-        {% endfor %}
-    </div>
+
+  <!-- INTRO -->
+  <div class="content content--copy">
+  {% for graf in page.intro %}
+      <p>{{ graf }}</p>
+  {% endfor %}
   </div>
 
-  <hr>
+  {% include hr.html %}
 
-  <div class="section-white top-section-border">
+  <!-- DISTINGUISHED CONTRIBUTORS -->
     <div class="content content--copy">
-      <h3 class="section-header">Distinguished Contributors</h3>
+      <h3 class="text-center">Distinguished Contributors</h3>
       <p>{{ page.contributors_copy }}</p>
     </div>
 
@@ -406,12 +420,12 @@ partners:
       {% endfor %}
       </div>
     </div>
-  </div>
 
+  {% include hr.html %}
 
-<div id="steering-council" class="about-section section-white">
-    <div class="row content content--copy">
-        <h3 class="section-header">Steering Council</h3>
+  <!-- STEERING COUNCIL -->
+    <div class="content content--copy">
+        <h3 class="text-center">Steering Council</h3>
         <p>{{ page.steering_copy }}</p>
     </div>
     <div class="content content--wide">
@@ -429,12 +443,12 @@ partners:
         {% endfor %}
         </div>
     </div>
-  </div>
 
-    <hr>
+  {% include hr.html %}
 
-    <div class="row content content--copy">
-        <h3 class="section-header">NumFOCUS Subcommittee Members</h3>
+    <!-- NUMFOCUS MEMBERS -->
+    <div class="content content--copy">
+        <h3 class="text-center">NumFOCUS Subcommittee Members</h3>
     </div>
     <div class="content content--wide">
         <div class="biocard-wrapper">
@@ -452,10 +466,11 @@ partners:
         </div>
     </div>
 
-    <hr>
+  {% include hr.html %}
 
-    <div class="row content content--copy">
-        <h3 class="section-header">Trademark Subcommittee Members</h3>
+    <!-- TRADEMARK MEMBERS -->
+    <div class="content content--copy">
+        <h3 class="text-center">Trademark Subcommittee Members</h3>
     </div>
 
     <div class="content content--wide">
@@ -474,10 +489,11 @@ partners:
         </div>
     </div>
 
-    <hr>
+  {% include hr.html %}
 
-    <div class="row content content--copy">
-        <h3 class="section-header">Retired Steering Council Members</h3>
+    <!-- RETIRED STEERING COUNCIL -->
+    <div class="content content--copy">
+        <h3 class="text-center">Retired Steering Council Members</h3>
     </div>
 
     <div class="content content--wide">
@@ -496,12 +512,12 @@ partners:
         </div>
     </div>
 
-<div id="sponsors" class="about-section section-grey content content--wide">
-    <div class="row">
-        <img src="{{site.baseurl}}/assets/sponsors2.svg" class="section-icon img-responsive" loading="lazy" alt="sponsors">
-        <h3 class="section-header">Sponsors</h3>
-        <p class="support-paragraph">Project Jupyter receives direct funding from the following sources</p>
-    </div>
+  <!-- SPONSORS BOX -->
+  <div class="about-box section-grey content content--wide">
+    <h3 class="text-center">{{ page.sponsor_box.headline }}</h3>
+    <p class="content content--copy text-center">
+        {{ page.sponsor_box.description }}
+    </p>
     <ul class="logogrid">
         {% for obj in page.sponsors %}
         <li>
@@ -515,19 +531,14 @@ partners:
         </li>
         {% endfor %}
     </ul>
-</div>
+  </div>
 
-<div id="partners" class="about-section section-white content content--wide">
-    <div class="row section-header">
-        <img src="{{site.baseurl}}/assets/institutional_partners2.svg"
-             class="section-icon img-responsive"
-             alt="institutional partners" />
-        <h3 class="col-sm-12 section-header">Institutional Partners</h3>
-        <p class="support-paragraph">
-            Institutional Partners are organizations that support the project by employing Jupyter Steering Council members.
-            Current Institutional Partners include:
-        </p>
-    </div>
+  <!-- PARTNERS BOX -->
+  <div class="about-box section-white content content--wide">
+    <h3 class="text-center">{{ page.partner_box.headline }}</h3>
+    <p class="content content--copy text-center">
+        {{ page.partner_box.description }}
+    </p>
     <ul class="logogrid">
         {% for obj in page.partners %}
         <li>
@@ -541,47 +552,32 @@ partners:
         </li>
         {% endfor %}
     </ul>
-</div>
+  </div>
 
-<div id="donate" class="about-section section-grey content content--wide">
-    <div class="row content content--copy">
-        <img src="{{site.url}}/assets/donations-icon2.svg" class="section-icon img-responsive" loading="lazy" alt="Donate">
-        <h3 class="col-sm-12 section-header">Donate</h3>
-        <p>
-            Jupyter will always be 100% open source software, free for all
-            to use and released under the liberal terms of the <a
-            href="https://opensource.org/licenses/BSD-3-Clause">modified BSD
-            license</a>. If you have found Project Jupyter to be useful in
-            your work, research or company, please consider making a
-            donation to the project commensurate with your resources.
-        </p>
-        <p>
-            All donations will be used strictly to fund the development of
-            Project Jupyter's open source software, documentation and
-            community. Our donations are managed by the <a
-            href="https://numfocus.org">NumFOCUS Foundation</a>, which is
-            the legal and fiscal umbrella for the project.
-        </p>
-        <p>
-            NumFOCUS is a 501(c)3 non-profit foundation; if you are subject to US Tax law,
-            your contributions will be tax-deductible.
-        </p>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <a href="https://numfocus.org">
-                <img id="numfocus-logo" src="{{site.url}}/assets/numfocus_logo.png" class="img-responsive center-block" loading="lazy" alt="numfocus logo">
-            </a>
-        </div>
-    </div>
+  <!-- DONATE BOX -->
+  <div class="about-box section-grey content content--wide">
+    <h3 class="text-center">{{ page.donate_box.headline }}</h3>
+    {% for graf in page.donate_box.description %}
+    <p class="content content--copy">
+        {{ graf }}
+    </p>
+    {% endfor %}
+    <p>
+        <a href="https://numfocus.org">
+            <img src="/assets/logos/numfocus.png"
+                 class="img-responsive center-block"
+                 width=300
+                 height=100
+                 loading="lazy"
+                 alt="numfocus logo">
+        </a>
+    </p>
     
-    <div class="row content">
-        <div class="col-md-12 donate-formatting">
-            <a href="https://numfocus.salsalabs.org/donate-to-jupyter/index.html" class="orange-button" id="donate-link">
-                Support Project Jupyter
-            </a>
-        </div>
+    <div class="orange-button">
+        <a href="https://numfocus.salsalabs.org/donate-to-jupyter/index.html" target="noopener noreferrer">
+            Support Project Jupyter
+        </a>
     </div>
-</div>
+  </div>
+  
 </article>
