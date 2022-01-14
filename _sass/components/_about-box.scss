@@ -1,0 +1,50 @@
+@import "settings/colors";
+
+.about-box {
+    padding: 2em;
+    margin: 2em auto;
+    display: table;
+    width: 100%;
+    h3 {
+        margin: 0 0 0.5em 0;
+        padding: 0;
+    }
+  .orange-button {
+    font-size: 1.2em;
+    background-color: $button-orange;
+    border-radius: 2px;
+    padding: 0.75em 1.25em;
+    margin: 0 auto;
+    width: 240px;
+    text-align: center;
+    display: table;
+    a {
+        color: $white;
+        text-shadow: 0px 0px 4px $black;
+        text-decoration: none;
+        &:hover {
+          background-color: $button-hover;
+          color: $white;
+          text-decoration: none;
+        }
+        &:active,
+        &:focus {
+          background-color: $button-active;
+          color: $white;
+          text-decoration: none;
+        }
+    }
+  }
+}
+
+#donate-link {
+  margin: 20px auto 0px auto;
+  width: 240px;
+  display: block;
+}
+
+#numfocus-logo {
+  height: 100px;
+  width: auto;
+  margin: auto;
+}

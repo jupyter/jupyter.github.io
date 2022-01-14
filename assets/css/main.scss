@@ -2,8 +2,6 @@
 # this ensures Jekyll reads the file to be transformed into CSS later
 # only Main files contain this front matter, not partials.
 ---
-@import "gallery";
-@import "leftovers";
 @import "components/box";
 @import "components/copy";
 @import "components/headlines";
@@ -21,3 +19,6 @@
 @import "components/syntax";
 @import "components/sections";
 @import "components/community-resource";
+@import "components/about-box";
+@import "components/widgets";
+@import "components/hr";
