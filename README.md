@@ -128,6 +128,12 @@ a {
 }
 ```
 
+### Minifying images
+
+We recommend minifying images whenever adding them to this website.
+This helps keep the page load times of our website down.
+There are many minifying services out there, but [the `squoosh.app` service](https://squoosh.app/) is a lightweight and easy-to-use option.
+
 ### Lazy loading of images
 
 The Jupyter website uses [lazy loading of images](https://web.dev/browser-level-image-lazy-loading/). In general, images that are "below the fold" (below the browser window on page load) for laptop-sized screen sizes are encouraged to be configured for "lazy loading".
