@@ -12,18 +12,11 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: start;
-      @media (max-width: 767px) {
-        flex-direction: column;
-      }
     }
     .footer-links {
       color: $black;
-      @media (max-width: 420px) {
-        margin-top: 2em;
-        &:first-of-type {
-          margin-top: 0;
-        }
-      }
+      min-width: 150px;
+      margin: 0.5em 0;
       h2 {
         font-size: 1.1em;
         font-weight: bold;
