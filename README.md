@@ -130,9 +130,7 @@ a {
 
 ### Minifying images
 
-We recommend minifying images whenever adding them to this website.
-This helps keep the page load times of our website down.
-There are many minifying services out there, but [the `squoosh.app` service](https://squoosh.app/) is a lightweight and easy-to-use option.
+We recommend minifying images whenever adding them to this website. This helps keep the page load times of our website down. There are many minifying services out there, but [the `squoosh.app` service](https://squoosh.app/) is a lightweight and easy-to-use option.
 
 ### Lazy loading of images
 
