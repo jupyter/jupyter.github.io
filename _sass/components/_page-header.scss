@@ -7,11 +7,6 @@
   background-color: $light-gray;
   h1 {
     margin: 0;
-    font-size: 2.5em;
-    line-height: 1.3;
-    @media (max-width: 767px) {
-      font-size: 2em;
-    }
   }
   img {
     max-height: 200px;
