@@ -1,4 +1,5 @@
 @import "settings/colors";
+@import "settings/breakpoints";
 
 .resourcelist {
   display: table;
@@ -45,7 +46,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: $breakpoint-l) {
   .resource {
     height: 400px;
     padding: 10px 0 30px;

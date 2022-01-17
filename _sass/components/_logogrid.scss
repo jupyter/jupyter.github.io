@@ -1,49 +1,50 @@
-/* A grid layout of logos for supporters, partners, etc. */
+@import "settings/breakpoints";
 
+/* A grid layout of logos for supporters, partners, etc. */
 ul.logogrid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    li {
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        display: inline-block;
-        padding: 3%;
-        vertical-align: middle;
-        width: 23%;
-        @media (max-width: 768px) {
-            width: 30%;
-            padding: 4%;
-        }
-        &.small {
-            width: 18%;
-            @media (max-width: 768px) {
-                width: 30%;
-                padding: 4%;
-            }
-        }
-        img {
-            display: block;
-            width: 100%;
-            height: auto;
-            margin: 0;
-        }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  li {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3%;
+    vertical-align: middle;
+    width: 23%;
+    @media (max-width: $breakpoint-m) {
+      width: 30%;
+      padding: 4%;
     }
-    .greydout {
-        -webkit-transition: all .05s ease;
-        -moz-transition: all .05s ease;
-        -ms-transition: all .05s ease;
-        -o-transition: all .05s ease;
-        transition: all .05s ease;
+    &.small {
+      width: 18%;
+      @media (max-width: $breakpoint-m) {
+        width: 30%;
+        padding: 4%;
+      }
     }
-    .greydout:hover {
-        -webkit-opacity: 0.65;
-        -moz-opacity: 0.65;
-        opacity: 0.65;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
     }
+  }
+  .greydout {
+    -webkit-transition: all 0.05s ease;
+    -moz-transition: all 0.05s ease;
+    -ms-transition: all 0.05s ease;
+    -o-transition: all 0.05s ease;
+    transition: all 0.05s ease;
+  }
+  .greydout:hover {
+    -webkit-opacity: 0.65;
+    -moz-opacity: 0.65;
+    opacity: 0.65;
+  }
 }

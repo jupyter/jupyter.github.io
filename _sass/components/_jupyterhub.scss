@@ -1,6 +1,7 @@
+@import "settings/breakpoints";
+
 /* JupyterHub section on front page */
 /* Feature-middle is for the JupyterHub features that are in the middle that need to be offset to sit on the track */
-
 .jupyterhub {
   .feature-middle {
     margin-top: 40px;
@@ -45,7 +46,7 @@
     margin-top: 24px;
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: $breakpoint-l) {
     .hublogo {
       max-width: 80%;
     }

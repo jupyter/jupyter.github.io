@@ -1,9 +1,10 @@
-// Formatting for the text that is displayed in content sections of a page.
+@import "settings/breakpoints";
+
 p {
   margin: 0 0 10px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: $breakpoint-l) {
   p {
     font-size: 16px;
     font-weight: 400;
@@ -11,7 +12,7 @@ p {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: $breakpoint-l) {
   p {
     font-size: 16px;
     font-weight: 400;
@@ -19,7 +20,7 @@ p {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-m) {
   p {
     font-size: 16px;
     font-weight: 400;
