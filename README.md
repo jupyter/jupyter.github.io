@@ -57,7 +57,7 @@ To stop serving the website, press **`Ctrl`**-`C` in your terminal
 
 ### Build the site manually
 
-To build the site manually, you'll need Ruby, Jekyll, and the packages that Jekyll uses to build the site (these are defined in [`Gemfile`](Gemfile)).
+To build the site manually, you'll need Ruby, Jekyll, and the packages that Jekyll uses to build the site (these are defined in `Gemfile`).
 
 Follow these steps:
 
