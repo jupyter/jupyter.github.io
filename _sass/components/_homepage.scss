@@ -3,12 +3,15 @@
 .homepage-section {
   display: table;
   padding: 7em 0;
+  width: 100%;
   @media (max-width: 420px) {
     padding: 3em 0;
   }
   .showcase {
     display: table;
     clear: both;
+    max-width: 2200px;
+    margin: 0 auto;
   }
   .description {
     margin-top: 2em;
