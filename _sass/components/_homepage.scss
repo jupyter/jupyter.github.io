@@ -1,9 +1,10 @@
 @import "settings/colors";
+@import "settings/breakpoints";
 
 .homepage-section {
   display: table;
   padding: 7em 0;
-  @media (max-width: 420px) {
+  @media (max-width: $breakpoint-s) {
     padding: 3em 0;
   }
   .showcase {
@@ -14,7 +15,7 @@
     margin-top: 2em;
     h2 {
       margin: 0;
-      @media (max-width: 420px) {
+      @media (max-width: $breakpoint-s) {
         font-size: 1.8em;
       }
     }
@@ -29,7 +30,7 @@
     justify-content: start;
     align-items: center;
     flex-direction: row;
-    @media (max-width: 420px) {
+    @media (max-width: $breakpoint-s) {
       align-items: start;
       flex-direction: column;
     }
@@ -56,7 +57,7 @@
       text-decoration: none;
     }
     &:first-of-type {
-      @media (max-width: 420px) {
+      @media (max-width: $breakpoint-s) {
         margin-bottom: 1em;
       }
     }
@@ -68,14 +69,14 @@
     justify-content: start;
     align-items: center;
     flex-direction: row;
-    @media (max-width: 420px) {
+    @media (max-width: $breakpoint-s) {
       margin-top: 1em;
       align-items: start;
       flex-direction: column;
     }
     .feature {
       margin: 0 2em;
-      @media (max-width: 420px) {
+      @media (max-width: $breakpoint-s) {
         margin: 0 0 2em 0;
       }
       h3 {
@@ -90,7 +91,7 @@
   }
   &.openstandards-section {
     width: 100%;
-    @media (max-width: 900px) {
+    @media (max-width: $breakpoint-l) {
       padding: 1em 1em 0 1em;
     }
     .description {
@@ -105,7 +106,7 @@
       align-items: center;
       flex-direction: row;
       margin: 4em 0 0 0;
-      @media (max-width: 900px) {
+      @media (max-width: $breakpoint-l) {
         margin: 2em 0 0 0;
         align-items: start;
         flex-direction: column;
@@ -119,7 +120,7 @@
         height: auto;
         padding: 2em;
         margin: 0 auto 2em auto;
-        @media (max-width: 900px) {
+        @media (max-width: $breakpoint-l) {
           width: 275px;
         }
         h3 {
