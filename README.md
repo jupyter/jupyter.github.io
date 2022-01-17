@@ -76,7 +76,7 @@ Follow these steps:
      ```console
      $ gem install jekyll bundler
      ```
-2. **Install the site's build dependencies**. These are specified in [`Gemfile`](Gemfile).
+2. **Install the site's build dependencies**. These are specified in `Gemfile`.
    
    ```console
    $ bundle install
