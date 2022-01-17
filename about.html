@@ -385,12 +385,12 @@ donate_box:
 
   <!-- DISTINGUISHED CONTRIBUTORS -->
     <div class="content content--copy">
-      <h3 class="text-center">Distinguished Contributors</h3>
+      <h2 class="text-center">Distinguished Contributors</h2>
       <p>{{ page.contributors_copy }}</p>
     </div>
 
     <div class="content content--wide">
-      <h4>2020 Cohort</h4>
+      <h3>2020 Cohort</h3>
       <div class="biocard-wrapper">
       {% for bio in page.distinguished_2020 %}
         {% include biocard.html
@@ -405,7 +405,7 @@ donate_box:
       {% endfor %}
       </div>
 
-      <h4>Special Election Cohort</h4>
+      <h3>Special Election Cohort</h3>
       <div class="biocard-wrapper">
       {% for bio in page.distinguished_special_election %}
         {% include biocard.html
@@ -424,7 +424,7 @@ donate_box:
 
   <!-- STEERING COUNCIL -->
     <div class="content content--copy">
-        <h3 class="text-center">Steering Council</h3>
+        <h2 class="text-center">Steering Council</h2>
         <p>{{ page.steering_copy }}</p>
     </div>
     <div class="content content--wide">
@@ -447,7 +447,7 @@ donate_box:
 
     <!-- NUMFOCUS MEMBERS -->
     <div class="content content--copy">
-        <h3 class="text-center">NumFOCUS Subcommittee Members</h3>
+        <h2 class="text-center">NumFOCUS Subcommittee Members</h2>
     </div>
     <div class="content content--wide">
         <div class="biocard-wrapper">
@@ -469,7 +469,7 @@ donate_box:
 
     <!-- TRADEMARK MEMBERS -->
     <div class="content content--copy">
-        <h3 class="text-center">Trademark Subcommittee Members</h3>
+        <h2 class="text-center">Trademark Subcommittee Members</h2>
     </div>
 
     <div class="content content--wide">
@@ -492,7 +492,7 @@ donate_box:
 
     <!-- RETIRED STEERING COUNCIL -->
     <div class="content content--copy">
-        <h3 class="text-center">Retired Steering Council Members</h3>
+        <h2 class="text-center">Retired Steering Council Members</h2>
     </div>
 
     <div class="content content--wide">
@@ -513,7 +513,7 @@ donate_box:
 
   <!-- SPONSORS BOX -->
   <div class="about-box section-grey content content--wide">
-    <h3 class="text-center">{{ page.sponsor_box.headline }}</h3>
+    <h2 class="text-center">{{ page.sponsor_box.headline }}</h2>
     <p class="content content--copy text-center">
         {{ page.sponsor_box.description }}
     </p>
@@ -534,7 +534,7 @@ donate_box:
 
   <!-- PARTNERS BOX -->
   <div class="about-box section-white content content--wide">
-    <h3 class="text-center">{{ page.partner_box.headline }}</h3>
+    <h2 class="text-center">{{ page.partner_box.headline }}</h2>
     <p class="content content--copy text-center">
         {{ page.partner_box.description }}
     </p>
@@ -555,7 +555,7 @@ donate_box:
 
   <!-- DONATE BOX -->
   <div class="about-box section-grey content content--wide">
-    <h3 class="text-center">{{ page.donate_box.headline }}</h3>
+    <h2 class="text-center">{{ page.donate_box.headline }}</h2>
     {% for graf in page.donate_box.description %}
     <p class="content content--copy">
         {{ graf }}
