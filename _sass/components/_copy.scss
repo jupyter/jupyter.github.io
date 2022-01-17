@@ -1,31 +1,11 @@
-@import "settings/breakpoints";
+@import "settings/fonts";
 
 p {
+  font-family: $font-family-sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
   margin: 0 0 10px;
-}
-
-@media (min-width: $breakpoint-l) {
-  p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.375;
-  }
-}
-
-@media (max-width: $breakpoint-l) {
-  p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.25em;
-  }
-}
-
-@media (max-width: $breakpoint-m) {
-  p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.25em;
-  }
 }
 
 .text-center {
