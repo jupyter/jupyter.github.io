@@ -1,130 +1,131 @@
 @import "settings/colors";
+@import "settings/breakpoints";
 
 .navbar {
+  display: block;
+  border-bottom: 1px solid darken($light-gray, 10%);
+  background-color: $white;
+  padding: 15px 25px;
+  @media (max-width: $breakpoint-l) {
+    padding: 0.5em 1em;
+  }
+  .navbar-header {
+    float: left;
+  }
+  .navbar-brand img {
     display: block;
-    border-bottom: 1px solid darken($light-gray, 10%);
-    background-color: $white;
-    padding: 15px 25px;
-    @media (max-width: 880px) {
-        padding: 0.5em 1em;
+  }
+  .navbar-brand:hover,
+  .navbar-brand:focus {
+    text-decoration: none;
+  }
+  .mobile-clearfix {
+    @media (max-width: $breakpoint-l) {
+      clear: both;
     }
-    .navbar-header {
-        float: left;
+  }
+  .navbar-collapse {
+    overflow-x: visible;
+    -webkit-overflow-scrolling: touch;
+    border-top: 1px solid transparent;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .collapse {
+    @media (max-width: $breakpoint-l) {
+      display: none;
     }
-    .navbar-brand  img {
-        display: block;
+  }
+  .show {
+    display: block !important;
+  }
+  .fade {
+    opacity: 0;
+    -webkit-transition: opacity 0.15s linear;
+    -o-transition: opacity 0.15s linear;
+    transition: opacity 0.15s linear;
+  }
+  .fade.in {
+    opacity: 1;
+  }
+  .collapse.in {
+    display: block;
+  }
+  .collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+    -webkit-transition-duration: 0.35s;
+    -o-transition-duration: 0.35s;
+    transition-duration: 0.35s;
+    -webkit-transition-property: height, visibility;
+    -o-transition-property: height, visibility;
+    transition-property: height, visibility;
+  }
+  .navbar-links {
+    list-style: none;
+    float: right;
+    padding: 0;
+    margin: 0;
+    .navbar-active {
+      color: $dark-orange;
     }
-    .navbar-brand:hover,
-    .navbar-brand:focus {
-      text-decoration: none;
+    @media (max-width: $breakpoint-l) {
+      margin-top: 10px;
+      float: left;
+      clear: both;
     }
-    .mobile-clearfix {
-        @media (max-width: 880px) {
-            clear: both;
-        }
-    }
-    .navbar-collapse {
-        overflow-x: visible;
-        -webkit-overflow-scrolling: touch;
-        border-top: 1px solid transparent;
-        -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
-              box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
-    }
-    .collapse {
-        @media (max-width: 880px) {
-            display: none;
-        }
-    }
-    .show {
-      display: block !important;
-    }
-    .fade {
-      opacity: 0;
-      -webkit-transition: opacity .15s linear;
-           -o-transition: opacity .15s linear;
-              transition: opacity .15s linear;
-    }
-    .fade.in {
-      opacity: 1;
-    }
-    .collapse.in {
-      display: block;
-    }
-    .collapsing {
+    li {
+      float: left;
       position: relative;
-      height: 0;
-      overflow: hidden;
-      -webkit-transition-timing-function: ease;
-           -o-transition-timing-function: ease;
-              transition-timing-function: ease;
-      -webkit-transition-duration: .35s;
-           -o-transition-duration: .35s;
-              transition-duration: .35s;
-      -webkit-transition-property: height, visibility;
-           -o-transition-property: height, visibility;
-              transition-property: height, visibility;
+      display: block;
+      font-size: 16px;
+      padding: 12px 12px 0;
+      line-height: 20px;
+      &:last-of-type {
+        padding-right: 0;
+      }
+      a {
+        color: $black;
+      }
+      a:hover {
+        color: $dark-orange;
+        text-decoration: none;
+      }
+      @media (max-width: $breakpoint-l) {
+        padding: 12px 0;
+        font-size: 13px;
+        letter-spacing: 1px;
+        clear: both;
+      }
     }
-    .navbar-links {
-        list-style: none;
-        float: right;
-        padding: 0;
-        margin: 0;
-        .navbar-active {
-            color: $dark-orange;
-        }
-        @media (max-width: 880px) {
-            margin-top: 10px;
-            float: left;
-            clear: both;
-        }
-        li {
-            float: left;
-            position: relative;
-            display: block;
-            font-size: 16px;
-            padding: 12px 12px 0;
-            line-height: 20px;
-            &:last-of-type {
-                padding-right: 0;
-            }
-            a {
-                color: $black;
-            }
-            a:hover {
-                color: $dark-orange;
-                text-decoration: none;
-            }
-            @media (max-width: 880px) {
-                padding: 12px 0;
-                font-size: 13px;
-                letter-spacing: 1px;
-                clear: both;
-            }
-        }
+  }
+  .hamburger {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin: 0;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    height: 40px;
+    .icon-bar {
+      background-color: black;
+      display: block;
+      width: 22px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: black;
     }
-    .hamburger {
-        position: relative;
-        float: right;
-        padding: 9px 10px;
-        margin: 0;
-        background-color: transparent;
-        background-image: none;
-        border: 1px solid transparent;
-        border-radius: 4px;
-        height: 40px;
-        .icon-bar {
-            background-color: black;
-            display: block;
-            width: 22px;
-            height: 2px;
-            border-radius: 1px;
-            background-color: black;
-        }
-        .icon-bar + .icon-bar {
-            margin-top: 4px;
-        }
-        @media (min-width: 880px) {
-            display: none;
-        }
+    .icon-bar + .icon-bar {
+      margin-top: 4px;
     }
+    @media (min-width: $breakpoint-l) {
+      display: none;
+    }
+  }
 }

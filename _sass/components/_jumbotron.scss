@@ -1,66 +1,90 @@
-/*Main logo animation on the front page of the Jupyter website */
+@import "settings/breakpoints";
 
-@-webkit-keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
+/*Main logo animation on the front page of the Jupyter website */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*This entire section related to fading is for the front page with the Jupyter logo*/
 .fade-in {
-    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animation ease-in and repeat it only 1 time */
-    -moz-animation:fadeIn ease-in 1;
-    animation:fadeIn ease-in 1;
+  -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animation ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
 
-    -webkit-animation-duration:1s;
-    -moz-animation-duration:1s;
-    animation-duration:1s;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
 
-    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 
-    opacity:0;  /* make things invisible upon start */
+  opacity: 0; /* make things invisible upon start */
 }
 
 .jumbotron {
-    background-color: white;
-    margin-top:30px;
-    overflow: hidden;
-    @media (max-width: 768px) {
-        margin-right: 5%;
+  background-color: white;
+  margin-top: 30px;
+  overflow: hidden;
+  @media (max-width: $breakpoint-m) {
+    margin-right: 5%;
+  }
+  .main-logo {
+    height: calc(100% - 20px);
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  .fade-in.one {
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+  }
+  .fade-in.two {
+    -webkit-animation-delay: 0.7s;
+    -moz-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+  }
+  .fade-in.three {
+    -webkit-animation-delay: 1.1s;
+    -moz-animation-delay: 1.1s;
+    animation-delay: 1.1s;
+  }
+  .jumbotron-image-container {
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    text-align: center;
+    width: 95%;
+    img {
+      margin: 0 auto;
+      vertical-align: middle;
     }
-    .main-logo {
-        height: calc(100% - 20px);
-        margin-top: 10px;
-        padding-left: 20px;
-    }
-    .fade-in.one {
-        -webkit-animation-delay: 0.3s;
-        -moz-animation-delay: 0.3s;
-        animation-delay: 0.3s;
-    }
-    .fade-in.two {
-        -webkit-animation-delay: 0.7s;
-        -moz-animation-delay:0.7s;
-        animation-delay: 0.7s;
-    }
-    .fade-in.three {
-        -webkit-animation-delay: 1.1s;
-        -moz-animation-delay: 1.1s;
-        animation-delay: 1.1s;
-    }
-    .jumbotron-image-container {
-        height: 100%;
-        margin: 0 auto;
-        position: absolute;
-        text-align: center;
-        width: 95%;
-        img {
-            margin: 0 auto;
-            vertical-align: middle;
-        }
-    }
+  }
 }
 
 .jumbotron-text {
-    padding-bottom: 32px;
-    text-align: center;
+  padding-bottom: 32px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.3;
 }
