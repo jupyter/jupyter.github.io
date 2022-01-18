@@ -11,6 +11,8 @@ Which one you use is up to you. Pipenv is the default recommended by the [Python
 
 ## JupyterLab
 
+Install JupyterLab with one of the following:
+
 ```bash
 pipenv install jupyterlab
 mamba install -c conda-forge jupyterlab
@@ -25,6 +27,8 @@ jupyter-lab
 
 ## Jupyter Notebook
 
+Install the classic Jupyter Note with one of the following:
+
 ```bash
 pipenv install notebook
 conda install -c conda-forge notebook
@@ -38,6 +42,8 @@ jupyter notebook
 ```
 
 ## Voilà
+
+Install Voilà with one of the following:
 
 ```bash
 pipenv install voila
