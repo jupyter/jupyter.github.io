@@ -35,7 +35,7 @@ conda install -c conda-forge notebook
 mamba install -c conda-forge notebook
 ```
 
-To run the notebook, run the following command:
+To run the notebook:
 
 ```bash
 jupyter notebook
