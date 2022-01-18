@@ -107,3 +107,4 @@ jobs:
           configPath: ".github/workflows/lighthouserc.json"
           temporaryPublicStorage: true
           uploadArtifacts: true
+          runs: 5  # Average 5 runs so that we get more stable results
