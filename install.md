@@ -27,7 +27,7 @@ jupyter-lab
 
 ## Jupyter Notebook
 
-Install the classic Jupyter Note with one of the following:
+Install the classic Jupyter Notebook with one of the following:
 
 ```bash
 pipenv install notebook
