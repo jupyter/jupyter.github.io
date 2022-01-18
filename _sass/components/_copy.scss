@@ -2,7 +2,8 @@
 
 p {
   font-family: $font-family-sans-serif;
-  font-size: 16px;
+  // Increase font size for easier reading + a11y
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
   margin: 0 0 10px;
