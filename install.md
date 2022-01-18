@@ -5,9 +5,9 @@ tagline: Get up and running on your computer
 permalink: /install
 ---
 
-Project Jupyter's tools are available for installation via the [Python Package Index](https://pypi.org/), the leading repository of software created for the Python programming language. Its offerings can be installed with a variety of package management tools, including [conda](https://docs.conda.io/), [mamba](https://mamba.readthedocs.io/) and [pipenv](https://pipenv.pypa.io/). 
+Project Jupyter's tools are available for installation via the [Python Package Index](https://pypi.org/), the leading repository of software created for the Python programming language. Its offerings can be installed with a variety of package management tools that run via a [command-line interface](https://en.wikipedia.org/wiki/Command-line_interface), including [conda](https://docs.conda.io/), [mamba](https://mamba.readthedocs.io/) and [pipenv](https://pipenv.pypa.io/).
 
-Which one you use is up to you. Pipenv is the default recommended by the [Python Packaging Authority](https://www.pypa.io/). Conda and mamba are preferred by many members of [PyData](https://pydata.org/) and can by acquired via [miniforge](https://github.com/conda-forge/miniforge#mambaforge).
+Which one you use is up to you. Pipenv is recommended by the [Python Packaging Authority](https://www.pypa.io/). Conda and mamba are preferred by many members of [PyData](https://pydata.org/) and can by acquired via [miniforge](https://github.com/conda-forge/miniforge#mambaforge).
 
 ## JupyterLab
 
