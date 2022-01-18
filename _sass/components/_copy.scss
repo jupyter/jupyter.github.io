@@ -2,7 +2,9 @@
 
 p {
   font-family: $font-family-sans-serif;
-  font-size: 18px;
+  // Unset the font size to let the system choose it, for a11y purposes
+  // ref: https://css-tricks.com/accessible-font-sizing-explained/#aa-avoid-setting-a-base-font-size
+  font-size: unset;
   font-weight: 400;
   line-height: 1.5;
   margin: 0 0 10px;
