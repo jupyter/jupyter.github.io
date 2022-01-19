@@ -31,9 +31,7 @@ jupyter-lab
 Install the classic Jupyter Notebook with one of the following:
 
 ```bash
-pipenv install notebook
-conda install -c conda-forge notebook
-mamba install -c conda-forge notebook
+pip install notebook
 ```
 
 To run the notebook:
