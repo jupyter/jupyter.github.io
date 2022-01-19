@@ -12,7 +12,7 @@ Which one you use is up to you. Pipenv is recommended by the [Python Packaging A
 
 ## JupyterLab
 
-Install JupyterLab with one of the following:
+Install JupyterLab with `pip`:
 
 ```bash
 pipenv install jupyterlab
