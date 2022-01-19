@@ -15,7 +15,7 @@ Which one you use is up to you. Pipenv is recommended by the [Python Packaging A
 Install JupyterLab with `pip`:
 
 ```bash
-pipenv install jupyterlab
+pip install jupyterlab
 mamba install -c conda-forge jupyterlab
 conda install -c conda-forge jupyterlab
 ```
