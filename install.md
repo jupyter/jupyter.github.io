@@ -1,43 +1,22 @@
 ---
 layout: page
 title: Installing Jupyter
-tagline: Get up and running with JupyterLab or the classic Jupyter Notebook.
+tagline: Get up and running on your computer
 permalink: /install
 ---
 
-## Getting started with JupyterLab
+Project Jupyter's tools are available for installation via the [Python Package Index](https://pypi.org/), the leading repository of software created for the Python programming language.
 
-_The [installation guide](http://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) contains more detailed instructions_
+This page uses instructions with [pip](https://pip.pypa.io/en/stable/), [the recommended installation tool for Python](https://packaging.python.org/en/latest/guides/tool-recommendations/#installation-tool-recommendations). If you require _environment management_ as opposed to just installation, look into [conda](https://docs.conda.io/), [mamba](https://mamba.readthedocs.io/), and [pipenv](https://pipenv.pypa.io/).
 
-### Installation with mamba or conda
+## JupyterLab
 
-JupyterLab can be installed with `mamba` and `conda`:
-
-```bash
-mamba install -c conda-forge jupyterlab
-```
-
-or
-
-```bash
-conda install -c conda-forge jupyterlab
-```
-
-Note: If you have not installed mamba or conda yet, you can get started with the [miniforge](https://github.com/conda-forge/miniforge#mambaforge) distribution.
-
-### Installation with pip
-
-If you use `pip`, you can install it with:
+Install JupyterLab with `pip`:
 
 ```bash
 pip install jupyterlab
 ```
-
-If you are using a system such as macOS that includes both Python 2 and Python 3, run `pip3` instead of `pip`.
-
-If installing using `pip install --user`, you must add the user-level `bin` directory to your `PATH` environment variable in order to launch `jupyter lab`. If you are using a Unix derivative (e.g., FreeBSD, GNU/Linux, macOS), you can do this by running ``export PATH="$HOME/.local/bin:$PATH"``.
-
-### Run JupyterLab
+> **note**: If you install JupyterLab with conda or mamba, we recommend using [the conda-forge channel](https://conda-forge.org/).
 
 Once installed, launch JupyterLab with:
 
@@ -45,59 +24,23 @@ Once installed, launch JupyterLab with:
 jupyter-lab
 ```
 
-## Getting started with the classic Jupyter Notebook
+## Jupyter Notebook
 
-### Installation with mamba or conda
-
-The classic notebook can be installed with `mamba` and `conda`:
-
-```bash
-mamba install -c conda-forge notebook
-```
-
-or
-
-```bash
-conda install -c conda-forge notebook
-```
-
-### Installation with pip
-
-If you use `pip`, you can install it with:
+Install the classic Jupyter Notebook with:
 
 ```bash
 pip install notebook
 ```
 
-Congratulations, you have installed Jupyter Notebook! To run the notebook, run the following command at the Terminal (Mac/Linux) or Command Prompt (Windows):
+To run the notebook:
 
 ```bash
 jupyter notebook
 ```
 
-See [Running the Notebook](https://jupyter.readthedocs.io/en/latest/running.html#running) for more details.
+## Voilà
 
-## Getting started with Voilà
-
-### Installation with mamba or conda
-
-If you use `mamba` or `conda`, you can install it with:
-
-```bash
-mamba install -c conda-forge voila
-```
-
-or
-
-```bash
-conda install -c conda-forge voila
-```
-
-For more detailed instructions, consult the [installation guide](https://voila.readthedocs.io/en/stable/install.html).
-
-### Installation with pip
-
-If you use `pip`, you can install it with:
+Install Voilà with:
 
 ```bash
 pip install voila
