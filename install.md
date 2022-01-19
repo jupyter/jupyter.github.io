@@ -16,7 +16,7 @@ Install JupyterLab with `pip`:
 ```bash
 pip install jupyterlab
 ```
-> **note**: If you install JupyterLab with conda or mamba, we recommend using [the conda-forge channel](https://conda-forge.org/).
+**Note**: If you install JupyterLab with conda or mamba, we recommend using [the conda-forge channel](https://conda-forge.org/).
 
 Once installed, launch JupyterLab with:
 
