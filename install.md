@@ -47,7 +47,7 @@ jupyter notebook
 Install Voilà with one of the following:
 
 ```bash
-pipenv install voila
+pip install voila
 mamba install -c conda-forge voila
 conda install -c conda-forge voila
 ```
