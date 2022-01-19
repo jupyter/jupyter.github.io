@@ -49,11 +49,6 @@
   @media (max-width: $breakpoint-m) {
     margin-right: 5%;
   }
-  .main-logo {
-    height: calc(100% - 20px);
-    margin-top: 10px;
-    padding-left: 20px;
-  }
   .fade-in.one {
     -webkit-animation-delay: 0.3s;
     -moz-animation-delay: 0.3s;
@@ -76,8 +71,13 @@
     text-align: center;
     width: 95%;
     img {
-      margin: inherit auto;
+      margin: 0 auto;
       vertical-align: middle;
+      &.main-logo {
+        height: calc(100% - 20px);
+        margin-top: 10px;
+        padding-left: 20px;
+      }
     }
   }
 }
