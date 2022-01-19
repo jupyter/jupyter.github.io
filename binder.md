@@ -2,7 +2,7 @@
 layout: page
 title: The Binder Project
 title_image: assets/logos/binder.svg
-title_image_alt: binder logo
+title_image_alt: binder logo 
 tagline: Reproducible, sharable, interactive computing environments
 permalink: /binder
 ---

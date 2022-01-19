@@ -8,47 +8,47 @@ channels:
   - title: Jupyter GitHub
     description: A place where the community collaborates on the development of Jupyter software.
     src: assets/widgets/github.svg
-    alt: github icon
+    alt: github icon 
     url: https://github.com/jupyter/
   - title: Jupyter Discourse
     description: A Discourse Forum for a multitude of Jupyter topics.
     src: assets/community/mail-list.svg
-    alt: mailing list icon
+    alt: mailing list icon 
     url: https://discourse.jupyter.org/
   - title: Jupyter General Mailing List
     description: A Google Group for general discussions of Jupyter's use.
     src: assets/community/mail-list.svg
-    alt: mailing list icon
+    alt: mailing list icon 
     url: https://groups.google.com/forum/#!forum/jupyter
   - title: Jupyter in Education Mailing List
     description: A Google Group for general discussions of Jupyter's use in education.
     src: assets/community/mail-education.svg
-    alt: education mailing list icon
+    alt: education mailing list icon 
     url: https://groups.google.com/forum/#!forum/jupyter-education
   - title: Jupyter for Research Facilities
     description: A Google Group for discussions of Jupyter's use at scientific research facilities (such as X-ray light sources, observatories, supercomputers, etc.).
     src: assets/community/mail-list.svg
-    alt: mailing list icon
+    alt: mailing list icon 
     url: https://groups.google.com/forum/?pli=1#!forum/jupyter-research-facilities
   - title: Jupyter Gitter Chatroom
     description: A real-time chatroom, for general development related discussions.
     src: assets/community/gitter.svg
-    alt: gitter icon
+    alt: gitter icon 
     url: https://gitter.im/jupyter/jupyter
   - title: Jupyter on Stack Overflow
     description: A popular third party site for programmers to ask and answer questions about Jupyter.
     src: assets/community/stack-overflow.svg
-    alt: stack overflow icon
+    alt: stack overflow icon 
     url: https://stackoverflow.com/questions/tagged/jupyter
   - title: Jupyter Community Guides
     description: Information about community, communication and governance.
     src: assets/community/documentation.svg
-    alt: documentation icon
+    alt: documentation icon 
     url: https://jupyter.readthedocs.io/en/latest/community/content-community.html
   - title: Jupyter Contributor Guides
     description: Contribution guidelines.
     src: assets/community/documentation.svg
-    alt: documentation icon
+    alt: documentation icon 
     url: https://jupyter.readthedocs.io/en/latest/contributing/content-contributor.html
 ---
 
