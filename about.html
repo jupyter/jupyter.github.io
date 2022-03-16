@@ -16,6 +16,52 @@ steering_copy: |
   The role of the Jupyter Steering Council is to ensure, through working with and serving the broader Jupyter community, the long-term well-being of the project, both technically and as a community. The Jupyter Steering Council currently consists of the following members (in alphabetical order).
 
 # All bio photos should go in assets/bios cut at 160x160px
+distinguished_2021:
+  - name: Mehmet Bektas
+    photo: Mehmet_Bektas.jpg
+    twitter_handle: https://twitter.com/mbektash
+    gh_handle: https://github.com/mbektas
+    linkedin: https://www.linkedin.com/in/mehmet-bektas/
+  - name: David Brochart
+    photo: David_Brochart.jpg
+    twitter_handle: https://twitter.com/davidbrochart
+    gh_handle: https://github.com/davidbrochart
+    linkedin: https://www.linkedin.com/in/david-brochart-4208721/
+  - name: Chris Colbert
+    photo: Chris_Colbert.jpg
+    gh_handle: https://github.com/sccolbert
+    linkedin: https://www.linkedin.com/in/chris-colbert-89699b7/
+  - name: Frédéric Collonval
+    photo: Frederic_Collonval.jpg
+    gh_handle: https://github.com/fcollonval
+    linkedin: https://www.linkedin.com/in/frederic-collonval-41147955/
+  - name: Marthe Cryan
+    photo: Marthe_Cryan.jpg
+    gh_handle: http://github.com/marthacryan
+  - name: Wayne Decatur
+    photo: Wayne_Decatur.jpg
+    twitter_handle: https://twitter.com/Fomightez
+    gh_handle: https://github.com/fomightez
+  - name: Sarah Gibson
+    photo: Sarah_Gibson.jpg
+    twitter_handle: https://twitter.com/drsarahlgibson
+    gh_handle: https://github.com/sgibson91
+    linkedin: https://www.linkedin.com/in/drsarahlgibson/
+    personal: https://sgibson91.github.io/
+  - name: Mariana Meireles
+    photo: Mariana_Meireles.jpg
+    twitter_handle: https://twitter.com/mari_meir
+    gh_handle: https://github.com/marimeireles/
+    linkedin: https://www.linkedin.com/in/mariana-meireles/
+  - name: Isabela Presedo-Floyd
+    photo: Isabela_Presedo-Floyd.jpg
+    gh_handle: https://github.com/isabela-pf
+    linkedin: https://www.linkedin.com/in/isabela-presedo-floyd-32b99a160/
+    twitter_handle: https://twitter.com/isabelapf2
+  - name: Nicolas Thiéry
+    photo: Nicolas_Thiery.jpg
+    gh_handle: https://github.com/nthiery
+
 distinguished_2020:
   - name: Maarten Breddels
     photo: Maarten_Breddels.jpg
@@ -390,6 +436,21 @@ donate_box:
     </div>
 
     <div class="content content--wide">
+      <h3>2021 Cohort</h3>
+      <div class="biocard-wrapper">
+      {% for bio in page.distinguished_2021 %}
+        {% include biocard.html
+            name=bio.name
+            photo=bio.photo
+            loading='eager' 
+            personal=bio.personal
+            gh_handle=bio.gh_handle
+            linkedin=bio.linkedin
+            twitter_handle=bio.twitter_handle
+        %}
+      {% endfor %}
+      </div>
+
       <h3>2020 Cohort</h3>
       <div class="biocard-wrapper">
       {% for bio in page.distinguished_2020 %}
