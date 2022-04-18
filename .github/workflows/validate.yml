@@ -54,7 +54,7 @@ jobs:
         path: ./_site
 
     - name: HTML5 Validator
-      uses: Cyb3r-Jak3/html5validator-action@v7.1.0
+      uses: Cyb3r-Jak3/html5validator-action@v7.1.1
       with:
         root: _site/
         skip_git_check: true
