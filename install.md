@@ -38,6 +38,16 @@ To run the notebook:
 jupyter notebook
 ```
 
+To install Jupyter in a [Julia](https://julialang.org) environment, open the REPL and type "]" to enter the package manager and then:
+```julia
+add IJulia
+```
+followed by:
+```julia
+notebook()
+```
+You can read more about installing Jupyter with Julia in this [quick start guide](https://github.com/JuliaLang/IJulia.jl#quick-start)
+
 ## Voilà
 
 Install Voilà with:
