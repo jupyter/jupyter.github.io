@@ -39,7 +39,7 @@ For discussion, please use the special Discourse [security topic](https://discou
 
 ----
 
-Below is the copy of the vulnerability handling procedure that can be found on the [security repository](https://github.com/jupyter/security).
+Below is a copy of the vulnerability handling procedure that can be found on the [security repository](https://github.com/jupyter/security).
 
 # Jupyter Vulnerability Handling Process
 
