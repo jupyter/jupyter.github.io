@@ -45,3 +45,9 @@ Install Voilà with:
 ```bash
 pip install voila
 ```
+
+Once installed, launch Voilà with:
+
+```bash
+voila
+```
