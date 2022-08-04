@@ -57,7 +57,7 @@ In short, if you follow best-practices in computational science, your repository
 Binder is entirely powered by an open-source infrastructure stack. Its main two
 tools are BinderHub, which is an open-source tool that deploys the Binder
 service in the cloud, and repo2docker, which generates reproducible Docker
-images from a git repository. The [Binder team](https://jupyterhub-team-compass.readthedocs.io/en/latest/team.html)
+images from a git repository. The [Binder team](https://jupyterhub-team-compass.readthedocs.io/en/latest/team/index.html)
 also runs a public BinderHub deployment at mybinder.org as a free public service for the community.
 
 ### repo2docker
@@ -120,9 +120,9 @@ to join our community and contribute code, time, comments, or appreciation.
 
 * [**The JupyterHub Team Compass**](https://jupyterhub-team-compass.readthedocs.io/en/latest/) is a resource
   for the JupyterHub community to share information, team practices, and important information.
-* [**The JupyterHub Teams Page**](https://jupyterhub-team-compass.readthedocs.io/en/latest/team.html) lists
+* [**The JupyterHub Teams Page**](https://jupyterhub-team-compass.readthedocs.io/en/latest/team/index.html) lists
   the current members of the JupyterHub and Binder teams.
-* [**The JupyterHub Contributing guide**](https://jupyterhub-team-compass.readthedocs.io/en/latest/contributing.html) is
+* [**The JupyterHub Contributing guide**](https://jupyterhub-team-compass.readthedocs.io/en/latest/contribute/index.html) is
   a great place to start learning how you can contribute to the Binder Project.
 * [**The Binder Gitter Channel**](https://gitter.im/jupyterhub/binder) is where a lot of real-time
   conversations happen in the Binder community.
