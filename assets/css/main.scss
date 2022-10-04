@@ -22,3 +22,146 @@
 @import "components/about-box";
 @import "components/widgets";
 @import "components/hr";
+
+
+/* Convention banner */
+
+.con-jumbotron {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.con-container {
+    background-image: url('../assets/jupytercon-planet.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: 350px;
+    text-align: right;
+}
+
+.con-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    float: none !important;
+}
+
+.con-title {
+    float: right;
+    clear:both;
+    max-width: 500px;
+}
+
+.dropshadow {
+    /* Make the foreground stand out from the background slightly */
+    filter: drop-shadow(0px 0px 8px rgba(0,0,0,0.3));
+}
+
+
+.con-subtitle {
+    float: right;
+    clear: both;
+    margin: 0;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+}
+
+.con-program {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 34px;
+    color: #FFFFFF;
+    float: right;
+    clear: both;
+    margin-right: 10px;
+    margin-bottom: -10px;
+
+}
+
+.con-program p {
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.con-date {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 30px;
+    line-height: 34px;
+    color: #FFFFFF;
+    float: right;
+    margin-right: 10px;
+    margin-top: 36px;
+    margin-bottom: -10px
+}
+
+.con-copy {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 200;
+    color: black;
+    text-align: right;
+    float: right;
+    width: 460px;
+    height: 44px;
+    clear: both;
+    margin-bottom: 8px;
+}
+
+.con-big-copy {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 28px;
+    line-height: 33px;
+    font-weight: 200;
+    color: black;
+    text-align: right;
+    float: right;
+    width: 460px;
+    height: 34px;
+    clear: both;
+    margin-bottom: 27px;
+}
+
+.con-button {
+    float: right;
+    clear: both;
+    margin-right: 28px !important;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.jupytercon-section {
+    background: url('../jupytercon-planet.jpg');
+    background-size: 100%;
+    color: white;
+    border-bottom-color: #e0e0e0;
+    border-left-style: none;
+    border-style: solid;
+    border-top-color: #e0e0e0;
+    border-width: thin;
+    border-right: 0px;
+    padding: 24px 0 42px 0;
+    text-align: center;
+    min-height: 300px;
+    padding-top: 55px;
+}
+
+.jupytercon-section p{
+  margin-bottom: 40px;
+
+}
+.jupytercon-section p a{
+    color: white;
+    text-decoration: underline;
+}
+
+
+.con-container {
+    background-image: url('../jupytercon-planet.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: right;
+}
+.con-subtitle {
+    color: black;
+    font-weight: 400;
+}
