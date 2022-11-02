@@ -32,22 +32,25 @@
 }
 
 .con-container {
-    background-image: url('../assets/jupytercon-planet.jpg');
-    background-size: 100%;
+    background: rgba(0, 0, 0, 0.5) url("../jupytercon-paris.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
-    min-height: 350px;
-    text-align: right;
+    background-blend-mode: darken;
+    text-align: center;
 }
 
 .con-content {
     max-width: 1200px;
     margin: 0 auto;
     float: none !important;
+    padding: 40px;
 }
 
 .con-title {
-    float: right;
+    margin-left: auto;
+    margin-right: auto;
     clear:both;
+    width: 100%;
     max-width: 500px;
 }
 
@@ -55,7 +58,6 @@
     /* Make the foreground stand out from the background slightly */
     filter: drop-shadow(0px 0px 8px rgba(0,0,0,0.3));
 }
-
 
 .con-subtitle {
     float: right;
@@ -69,11 +71,11 @@
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 34px;
     color: #FFFFFF;
-    float: right;
     clear: both;
-    margin-right: 10px;
-    margin-bottom: -10px;
-
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .con-program p {
@@ -86,10 +88,10 @@
     font-size: 30px;
     line-height: 34px;
     color: #FFFFFF;
-    float: right;
-    margin-right: 10px;
-    margin-top: 36px;
-    margin-bottom: -10px
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px
 }
 
 .con-copy {
@@ -98,7 +100,7 @@
     line-height: 21px;
     font-weight: 200;
     color: black;
-    text-align: right;
+    text-align: center;
     float: right;
     width: 460px;
     height: 44px;
@@ -112,7 +114,7 @@
     line-height: 33px;
     font-weight: 200;
     color: black;
-    text-align: right;
+    text-align: center;
     float: right;
     width: 460px;
     height: 34px;
@@ -154,13 +156,6 @@
     text-decoration: underline;
 }
 
-
-.con-container {
-    background-image: url('../jupytercon-planet.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: right;
-}
 .con-subtitle {
     color: black;
     font-weight: 400;
