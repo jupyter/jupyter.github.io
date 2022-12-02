@@ -51,3 +51,7 @@ Once installed, launch Voilà with:
 ```bash
 voila
 ```
+
+### Installation tips
+
+You may get error messages that suggest the `pip` command does not work. This could be because you do not have `pip` installed. Or, you have Python3 (instead of Python2) and need to use `pip3` for installation. For example, try installing with `pip3 install jupyter-lab` instead.
