@@ -324,6 +324,12 @@ sponsor_box:
 # All sponsor and partner SVGs should be 300x60 pixels
 # And entries ordered according to A-Z,1-9
 sponsors:
+  - url: https://aws.amazon.com/
+    src: aws.svg
+    alt: Amazon Web Services - Home Page
+  - url: https://www.bloomberg.com/
+    src: bloomberg-color.svg
+    alt: Bloomberg - Home Page
   - url: https://opendreamkit.org/
     src: EC-H2020.svg
     alt: Horizon 2020 European Union funding for Research and Innovation logo - OpenDreamkit funded project - Home Page
@@ -552,27 +558,6 @@ donate_box:
     </p>
     <ul class="logogrid">
         {% for obj in page.sponsors %}
-        <li>
-            <a href="{{ obj.url }}">
-                <img src="/assets/logos/{{ obj.src }}"
-                     width=300
-                     height=90
-                     loading="lazy"
-                     alt="{{ obj.alt }}" />
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
-  </div>
-
-  <!-- PARTNERS BOX -->
-  <div class="about-box section-white content content--wide">
-    <h2 class="text-center">{{ page.partner_box.headline }}</h2>
-    <p class="content content--copy text-center">
-        {{ page.partner_box.description }}
-    </p>
-    <ul class="logogrid">
-        {% for obj in page.partners %}
         <li>
             <a href="{{ obj.url }}">
                 <img src="/assets/logos/{{ obj.src }}"
