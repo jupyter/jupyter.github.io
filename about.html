@@ -195,6 +195,78 @@ distinguished_special_election:
     linkedin: https://linkedin.com/in/erik-sundell/
     twitter_handle: e_Sundell
 
+executive_council:
+  - name: Afshin Darian
+    photo: AfshinDarian.jpeg
+    affiliation: QuantStack
+    gh_handle: afshin
+  - name: Brian Granger
+    photo: BrianGranger.jpeg
+    affiliation: Amazon Web Services
+    gh_handle: ellisonbg
+  - name: Fernando Pérez
+    photo: FernandoPerez.jpeg
+    affiliation: UC Berkeley
+    gh_handle: fperez
+
+software_steering_council:
+  - name: Eric Charles
+    photo:
+    twitter_handle:
+    gh_handle: echarles
+    subproject: Jupyter Notebook
+  - name: Frédéric Collonval
+    photo: Frederic_Collonval.jpg
+    gh_handle: fcollonval
+    linkedin: https://www.linkedin.com/in/frederic-collonval-41147955/
+    subproject: JupyterLab
+  - name: Sylvain Corlay
+    photo: SylvainCorlay.png
+    affiliation: QuantStack
+    gh_handle: sylvaincorlay
+    subproject: Voilà
+  - name: Itay Dafna
+    photo:
+    twitter_handle:
+    gh_handle: ibdafna
+    subproject: Jupyter Widgets
+  - name: Paul Ivanov
+    photo: PaulIvanov.jpeg
+    affiliation: Noteable
+    gh_handle: ivanov
+    subproject: Jupyter Foundations
+  - name: Johan Mabille
+    photo: Johan_Mabille.jpg
+    twitter_handle: JohanMabille
+    gh_handle: JohanMabille
+    subproject: Jupyter Kernels
+  - name: Isabela Presedo-Floyd
+    photo: Isabela_Presedo-Floyd.jpg
+    gh_handle: isabela-pf
+    twitter_handle: isabelapf2
+    linkedin: https://www.linkedin.com/in/isabela-presedo-floyd-32b99a160/
+    subproject: Jupyter Accessibility
+  - name: Min Ragan-Kelley
+    photo: MinRaganKelley.jpeg
+    affiliation: Simula Research Lab
+    gh_handle: minrk
+    subproject: JupyterHub and Binder
+  - name: Zach Sailer
+    photo: Zach_Sailer.jpg
+    gh_handle: Zsailer
+    linkedin: https://linkedin.com/in/zach-sailer-8a1472151/
+    twitter_handle: zrsailer
+    subproject: Jupyter Server
+  - name: Rick Wagner
+    photo:
+    twitter_handle:
+    gh_handle: rpwagner
+    subproject: Jupyter Security
+  - name: Carol Willing
+    photo: CarolWilling.jpeg
+    affiliation: Noteable
+    gh_handle: willingc
+    subproject: Jupyter Standards
 
 retired_steering:
   - name: Damian Avila
@@ -405,6 +477,54 @@ donate_box:
       <p>{{ graf }}</p>
   {% endfor %}
   </div>
+
+  {% include hr.html %}
+
+    <!-- Executive Council -->
+    <div class="content content--copy">
+        <h2 class="text-center">Executive Council Members</h2>
+    </div>
+
+    <div class="content content--wide">
+        <div class="biocard-wrapper">
+        {% for bio in page.executive_council %}
+            {% include biocard.html
+                name=bio.name
+                photo=bio.photo
+                affiliation=bio.affiliation
+                personal=bio.personal
+                gh_handle=bio.gh_handle
+                linkedin=bio.linkedin
+                twitter_handle=bio.twitter_handle
+            %}
+        {% endfor %}
+        </div>
+    </div>
+
+    {% include hr.html %}
+
+    <!-- Software Steering Council -->
+    <div class="content content--copy">
+        <h2 class="text-center">Software Steering Council Members</h2>
+    </div>
+
+    <div class="content content--wide">
+        <div class="biocard-wrapper">
+        {% for bio in page.software_steering_council %}
+            {% include biocard.html
+                name=bio.name
+                photo=bio.photo
+                affiliation=bio.affiliation
+                personal=bio.personal
+                gh_handle=bio.gh_handle
+                linkedin=bio.linkedin
+                twitter_handle=bio.twitter_handle
+            %}
+            <div class="ssc-subproject">Representing {{ bio.subproject }}</div>
+        {% endfor %}
+        </div>
+    </div>
+
 
   {% include hr.html %}
 
