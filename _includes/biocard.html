@@ -1,11 +1,13 @@
 <section class="biocard">
-  <img
-    class="biocard-photo"
-    alt="{{ include.name }}"
-    width=160
-    height=160
-    src="/assets/bios/{{ include.photo }}"
-    loading="{% if include.loading %}{{ include.loading }}{% else %}lazy{% endif %}" />
+  {% if include.photo %}
+    <img
+      class="biocard-photo"
+      alt="{{ include.name }}"
+      width=160
+      height=160
+      src="/assets/bios/{{ include.photo }}"
+      loading="{% if include.loading %}{{ include.loading }}{% else %}lazy{% endif %}" />
+    {% endif %}
   <div class="biocard-copy">
     <div class="biocard-header">{{ include.name }}</div>
     {% if include.affiliation %}
