@@ -24,6 +24,9 @@
       {% if include.twitter_handle %}
         <a href="https://twitter.com/{{ include.twitter_handle }}" rel="noopener noreferrer">Twitter</a>
       {% endif %}
+      {% if include.subproject %}
+        <div class="biocard-subproject">{{ include.subproject }}</div>
+      {% endif %}
     </div>
   </div>
 </section>
