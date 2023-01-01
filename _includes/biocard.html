@@ -13,19 +13,19 @@
     {% endif %}
     <div class='biocard-badges'>
       {% if include.personal %}
-        <a href="{{ include.personal }}" rel="noopener noreferrer"><img src="/assets/badges/1f310.svg" alt="Personal Website"></a>
+        <a href="{{ include.personal }}" rel="noopener noreferrer"><img src="/assets/badges/1f310.svg" alt="Personal Website" title="Personal Website"></a>
       {% endif %}
       {% if include.gh_handle %}
-        <a href="https://github.com/{{ include.gh_handle }}" rel="noopener noreferrer"><img src="/assets/badges/github.svg" alt="GitHub"></a>
+        <a href="https://github.com/{{ include.gh_handle }}" rel="noopener noreferrer"><img src="/assets/badges/github.svg" alt="GitHub" title="GitHub"></a>
       {% endif %}
       {% if include.linkedin %}
-        <a href="{{ include.linkedin }}" rel="noopener noreferrer"><img src="/assets/badges/linkedin.png" alt="LinkedIn"></a>
+        <a href="{{ include.linkedin }}" rel="noopener noreferrer"><img src="/assets/badges/linkedin.png" alt="LinkedIn" title="LinkedIn"></a>
       {% endif %}
       {% if include.mastodon %}
-        <a href="{{ include.mastodon }}" rel="noopener noreferrer"><img src="/assets/badges/mastodon.svg" alt="Mastodon"></a>
+        <a href="{{ include.mastodon }}" rel="noopener noreferrer"><img src="/assets/badges/mastodon.svg" alt="Mastodon" title="Mastodon"></a>
       {% endif %}
       {% if include.twitter_handle %}
-        <a href="https://twitter.com/{{ include.twitter_handle }}" rel="noopener noreferrer"><img src="/assets/badges/twitter.svg" alt="Twitter"></a>
+        <a href="https://twitter.com/{{ include.twitter_handle }}" rel="noopener noreferrer"><img src="/assets/badges/twitter.svg" alt="Twitter" title="Twitter"></a>
       {% endif %}
       {% if include.subproject %}
         <div class="biocard-subproject">{{ include.subproject }}</div>
