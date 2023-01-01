@@ -11,7 +11,7 @@ of security issues.
 
 ## Reporting vulnerabilities
 
-If you believe you've found a security vulnerability in a Jupyter project,
+If you believe you've found a security vulnerability in a [Jupyter Subproject](https://jupyter.org/governance/list_of_subprojects.html),
 please report it to [security@ipython.org](mailto:security@ipython.org).
 If you prefer to encrypt your security reports,
 you can use [this PGP public key](assets/ipython_security.asc).
