@@ -269,28 +269,6 @@ retired_steering:
     affiliation: Noteable
     gh_handle: willingc
 
-numfocus_subcomittee:
-  - name: Matthias Bussonnier
-    photo: Matthias_Bussonnier.png
-    affiliation: QuanSight
-    gh_handle: Carreau
-  - name: Thomas Kluyver
-    photo: ThomasKluyver.jpeg
-    affiliation: University of Southampton
-    gh_handle: takluyver
-  - name: Fernando Pérez
-    photo: FernandoPerez.jpeg
-    affiliation: UC Berkeley
-    gh_handle: fperez
-  - name: Ana Ruvalcaba
-    photo: Ana_Ruvalcaba.jpg
-    affiliation: Cal Poly, San Luis Obispo
-    gh_handle: ruv7
-  - name: Stéfan van der Walt
-    affiliation: UC Berkely, BIDS
-    photo: StefanvanderWalt.jpeg
-    gh_handle: stefanv
-
 trademark_subcomittee:
   - name: Brian Granger
     photo: BrianGranger.jpeg
@@ -480,28 +458,6 @@ donate_box:
         %}
       {% endfor %}
       </div>
-    </div>
-
-  {% include hr.html %}
-
-    <!-- NUMFOCUS MEMBERS -->
-    <div class="content content--copy">
-        <h2 class="text-center">NumFOCUS Subcommittee Members</h2>
-    </div>
-    <div class="content content--wide">
-        <div class="biocard-wrapper">
-        {% for bio in page.numfocus_subcomittee %}
-            {% include biocard.html
-                name=bio.name
-                photo=bio.photo
-                affiliation=bio.affiliation
-                personal=bio.personal
-                gh_handle=bio.gh_handle
-                linkedin=bio.linkedin
-                twitter_handle=bio.twitter_handle
-            %}
-        {% endfor %}
-        </div>
     </div>
 
   {% include hr.html %}
