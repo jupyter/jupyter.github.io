@@ -195,7 +195,8 @@ distinguished_special_election:
     linkedin: https://linkedin.com/in/erik-sundell/
     twitter_handle: e_Sundell
 
-steering:
+
+retired_steering:
   - name: Damian Avila
     photo: Damian_Avila.jpeg
     affiliation: UMSI & 2i2c
@@ -212,6 +213,9 @@ steering:
     photo: AfshinDarian.jpeg
     affiliation: QuantStack
     gh_handle: afshin
+  - name: Jonathan Frederic
+    photo: JonathanFrederic.jpeg
+    gh_handle: 'jdfreder'
   - name: Brian Granger
     photo: BrianGranger.jpeg
     affiliation: Amazon Web Services
@@ -264,11 +268,6 @@ steering:
     photo: CarolWilling.jpeg
     affiliation: Noteable
     gh_handle: willingc
-
-retired_steering:
-  - name: Jonathan Frederic
-    photo: JonathanFrederic.jpeg
-    gh_handle: 'jdfreder'
 
 numfocus_subcomittee:
   - name: Matthias Bussonnier
@@ -475,29 +474,6 @@ donate_box:
         %}
       {% endfor %}
       </div>
-    </div>
-
-  {% include hr.html %}
-
-  <!-- STEERING COUNCIL -->
-    <div class="content content--copy">
-        <h2 class="text-center">Steering Council</h2>
-        <p>{{ page.steering_copy }}</p>
-    </div>
-    <div class="content content--wide">
-        <div class="biocard-wrapper">
-        {% for bio in page.steering %}
-            {% include biocard.html
-                name=bio.name
-                photo=bio.photo
-                affiliation=bio.affiliation
-                personal=bio.personal
-                gh_handle=bio.gh_handle
-                linkedin=bio.linkedin
-                twitter_handle=bio.twitter_handle
-            %}
-        {% endfor %}
-        </div>
     </div>
 
   {% include hr.html %}
