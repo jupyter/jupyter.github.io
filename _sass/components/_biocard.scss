@@ -42,7 +42,9 @@
         font-size: 14px;
 
         img {
-            height: 24px;
+            max-height: 22px;
+            max-width: 22px;
+            margin: 2px;
         }
     }
 }
