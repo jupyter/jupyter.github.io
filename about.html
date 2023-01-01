@@ -195,6 +195,79 @@ distinguished_special_election:
     linkedin: https://linkedin.com/in/erik-sundell/
     twitter_handle: e_Sundell
 
+distinguished_inaugural:
+  - name: Damian Avila
+    photo: Damian_Avila.jpeg
+    affiliation: UMSI & 2i2c
+    gh_handle: damianavila
+  - name: Matthias Bussonnier
+    photo: Matthias_Bussonnier.png
+    affiliation: Quansight
+    gh_handle: Carreau
+  - name: Sylvain Corlay
+    photo: SylvainCorlay.png
+    affiliation: QuantStack
+    gh_handle: sylvaincorlay
+  - name: Afshin Darian
+    photo: AfshinDarian.jpeg
+    affiliation: QuantStack
+    gh_handle: afshin
+  - name: Jonathan Frederic
+    photo: JonathanFrederic.jpeg
+    gh_handle: 'jdfreder'
+  - name: Brian Granger
+    photo: BrianGranger.jpeg
+    affiliation: Amazon Web Services
+    gh_handle: ellisonbg
+  - name: Jason Grout
+    photo: JasonGrout.jpeg
+    affiliation: Databricks
+    gh_handle: jasongrout
+  - name: Jessica Hamrick
+    photo: JessicaHamrick.jpeg
+    affiliation: DeepMind
+    gh_handle: jhamrick
+  - name: Paul Ivanov
+    photo: PaulIvanov.jpeg
+    affiliation: Noteable
+    gh_handle: ivanov
+  - name: Thomas Kluyver
+    photo: ThomasKluyver.jpeg
+    affiliation: University of Southampton
+    gh_handle: takluyver
+  - name: Kyle Kelley
+    photo: KyleKelley.jpeg
+    affiliation: Noteable
+    gh_handle: rgbkrk
+  - name: M Pacer
+    photo: MPacer.jpeg
+    affiliation: Netflix
+    gh_handle: mpacer
+  - name: Peter Parente
+    photo: PeterParente.jpeg
+    affiliation: Thorn
+    gh_handle: parente
+  - name: Fernando Pérez
+    photo: FernandoPerez.jpeg
+    affiliation: UC Berkeley
+    gh_handle: fperez
+  - name: Min Ragan-Kelley
+    photo: MinRaganKelley.jpeg
+    affiliation: Simula Research Lab
+    gh_handle: minrk
+  - name: Ana Ruvalcaba
+    photo: Ana_Ruvalcaba.jpg
+    affiliation: Cal Poly, San Luis Obispo
+    gh_handle: ruv7
+  - name: Steven Silvester
+    photo: StevenSilvester.jpeg
+    affiliation: MongoDB
+    gh_handle: blink1073
+  - name: Carol Willing
+    photo: CarolWilling.jpeg
+    affiliation: Noteable
+    gh_handle: willingc
+
 executive_council:
   - name: Afshin Darian
     photo: AfshinDarian.jpeg
@@ -267,79 +340,6 @@ software_steering_council:
     affiliation: Noteable
     gh_handle: willingc
     subproject: Jupyter Standards
-
-retired_steering:
-  - name: Damian Avila
-    photo: Damian_Avila.jpeg
-    affiliation: UMSI & 2i2c
-    gh_handle: damianavila
-  - name: Matthias Bussonnier
-    photo: Matthias_Bussonnier.png
-    affiliation: Quansight
-    gh_handle: Carreau
-  - name: Sylvain Corlay
-    photo: SylvainCorlay.png
-    affiliation: QuantStack
-    gh_handle: sylvaincorlay
-  - name: Afshin Darian
-    photo: AfshinDarian.jpeg
-    affiliation: QuantStack
-    gh_handle: afshin
-  - name: Jonathan Frederic
-    photo: JonathanFrederic.jpeg
-    gh_handle: 'jdfreder'
-  - name: Brian Granger
-    photo: BrianGranger.jpeg
-    affiliation: Amazon Web Services
-    gh_handle: ellisonbg
-  - name: Jason Grout
-    photo: JasonGrout.jpeg
-    affiliation: Databricks
-    gh_handle: jasongrout
-  - name: Jessica Hamrick
-    photo: JessicaHamrick.jpeg
-    affiliation: DeepMind
-    gh_handle: jhamrick
-  - name: Paul Ivanov
-    photo: PaulIvanov.jpeg
-    affiliation: Noteable
-    gh_handle: ivanov
-  - name: Thomas Kluyver
-    photo: ThomasKluyver.jpeg
-    affiliation: University of Southampton
-    gh_handle: takluyver
-  - name: Kyle Kelley
-    photo: KyleKelley.jpeg
-    affiliation: Noteable
-    gh_handle: rgbkrk
-  - name: M Pacer
-    photo: MPacer.jpeg
-    affiliation: Netflix
-    gh_handle: mpacer
-  - name: Peter Parente
-    photo: PeterParente.jpeg
-    affiliation: Thorn
-    gh_handle: parente
-  - name: Fernando Pérez
-    photo: FernandoPerez.jpeg
-    affiliation: UC Berkeley
-    gh_handle: fperez
-  - name: Min Ragan-Kelley
-    photo: MinRaganKelley.jpeg
-    affiliation: Simula Research Lab
-    gh_handle: minrk
-  - name: Ana Ruvalcaba
-    photo: Ana_Ruvalcaba.jpg
-    affiliation: Cal Poly, San Luis Obispo
-    gh_handle: ruv7
-  - name: Steven Silvester
-    photo: StevenSilvester.jpeg
-    affiliation: MongoDB
-    gh_handle: blink1073
-  - name: Carol Willing
-    photo: CarolWilling.jpeg
-    affiliation: Noteable
-    gh_handle: willingc
 
 trademark_subcomittee:
   - name: Brian Granger
@@ -578,6 +578,20 @@ donate_box:
         %}
       {% endfor %}
       </div>
+
+      <h3>Inaugural Cohort (Former Steering Council Members)</h3>
+      <div class="biocard-wrapper">
+      {% for bio in page.distinguished_inaugural %}
+        {% include biocard.html
+            name=bio.name
+            photo=bio.photo
+            personal=bio.personal
+            gh_handle=bio.gh_handle
+            linkedin=bio.linkedin
+            twitter_handle=bio.twitter_handle
+        %}
+      {% endfor %}
+      </div>
     </div>
 
   {% include hr.html %}
@@ -590,29 +604,6 @@ donate_box:
     <div class="content content--wide">
         <div class="biocard-wrapper">
         {% for bio in page.trademark_subcomittee %}
-            {% include biocard.html
-                name=bio.name
-                photo=bio.photo
-                affiliation=bio.affiliation
-                personal=bio.personal
-                gh_handle=bio.gh_handle
-                linkedin=bio.linkedin
-                twitter_handle=bio.twitter_handle
-            %}
-        {% endfor %}
-        </div>
-    </div>
-
-  {% include hr.html %}
-
-    <!-- RETIRED STEERING COUNCIL -->
-    <div class="content content--copy">
-        <h2 class="text-center">Retired Steering Council Members</h2>
-    </div>
-
-    <div class="content content--wide">
-        <div class="biocard-wrapper">
-        {% for bio in page.retired_steering %}
             {% include biocard.html
                 name=bio.name
                 photo=bio.photo
