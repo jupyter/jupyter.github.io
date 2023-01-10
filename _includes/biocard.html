@@ -1,11 +1,13 @@
 <section class="biocard">
-  <img
-    class="biocard-photo"
-    alt="{{ include.name }}"
-    width=160
-    height=160
-    src="/assets/bios/{{ include.photo }}"
-    loading="{% if include.loading %}{{ include.loading }}{% else %}lazy{% endif %}" />
+  {% if include.photo %}
+    <img
+      class="biocard-photo"
+      alt="{{ include.name }}"
+      width=160
+      height=160
+      src="/assets/bios/{{ include.photo }}"
+      loading="{% if include.loading %}{{ include.loading }}{% else %}lazy{% endif %}" />
+    {% endif %}
   <div class="biocard-copy">
     <div class="biocard-header">{{ include.name }}</div>
     {% if include.affiliation %}
@@ -13,16 +15,22 @@
     {% endif %}
     <div class='biocard-badges'>
       {% if include.personal %}
-        <a href="{{ include.personal }}" rel="noopener noreferrer">Web</a>
+        <a href="{{ include.personal }}" rel="noopener noreferrer"><img src="/assets/badges/1f310.svg" alt="Personal Website" title="Personal Website"></a>
       {% endif %}
       {% if include.gh_handle %}
-        <a href="https://github.com/{{ include.gh_handle }}" rel="noopener noreferrer">GitHub</a>
+        <a href="https://github.com/{{ include.gh_handle }}" rel="noopener noreferrer"><img src="/assets/badges/github.svg" alt="GitHub" title="GitHub"></a>
       {% endif %}
       {% if include.linkedin %}
-        <a href="{{ include.linkedin }}" rel="noopener noreferrer">LinkedIn</a>
+        <a href="{{ include.linkedin }}" rel="noopener noreferrer"><img src="/assets/badges/linkedin.png" alt="LinkedIn" title="LinkedIn"></a>
+      {% endif %}
+      {% if include.mastodon %}
+        <a href="{{ include.mastodon }}" rel="noopener noreferrer"><img src="/assets/badges/mastodon.svg" alt="Mastodon" title="Mastodon"></a>
       {% endif %}
       {% if include.twitter_handle %}
-        <a href="https://twitter.com/{{ include.twitter_handle }}" rel="noopener noreferrer">Twitter</a>
+        <a href="https://twitter.com/{{ include.twitter_handle }}" rel="noopener noreferrer"><img src="/assets/badges/twitter.svg" alt="Twitter" title="Twitter"></a>
+      {% endif %}
+      {% if include.subproject %}
+        <div class="biocard-subproject">{{ include.subproject }}</div>
       {% endif %}
     </div>
   </div>

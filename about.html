@@ -6,14 +6,18 @@ permalink: /about
 
 intro:
   - Project Jupyter is a non-profit, open-source project, born out of the <a href="https://ipython.org">IPython Project</a> in 2014 as it evolved to support interactive data science and scientific computing across all programming languages. Jupyter will always be 100% open-source software, free for all to use and released under the liberal terms of the <a href="https://opensource.org/licenses/BSD-3-Clause">modified BSD license</a>.
-  - Jupyter is developed in the open on GitHub, through the consensus of the Jupyter community. For more information on our governance approach, please see our <a href="https://github.com/jupyter/governance/blob/master/governance.md">Governance Document</a>.
-  - All online and in-person interactions and communications directly related to the project are covered by the <a href="https://github.com/jupyter/governance/blob/master/conduct/code_of_conduct.md">Jupyter Code of Conduct</a>. This Code of Conduct sets expectations to enable a diverse community of users and contributors to participate in the project with respect and safety.
+  - Jupyter is developed in the open on GitHub, through the consensus of the Jupyter community. For more information on our governance, please see our <a href="https://jupyter.org/governance/">governance documentation</a>.
+  - All online and in-person interactions and communications directly related to the project are covered by the <a href="https://jupyter.org/governance/conduct/code_of_conduct.html">Jupyter Code of Conduct</a>. This Code of Conduct sets expectations to enable a diverse community of users and contributors to participate in the project with respect and safety.
+
+ec_copy: |
+  The <a href="https://jupyter.org/governance/executive_council.html">Executive Council</a> (EC) is ultimately responsible for all dimensions of the Project (including, but not limited to, software, legal, financial, community, operations, inclusion and diversity, etc.). The members of the EC actively work to carry out the Project’s mission in accordance with its values and to support operations through delegation to the Software Steering Council (SSC), Software Subprojects, Standing Committees, and Working Groups. These other bodies will report to the EC, and the EC is expected to support, oversee, manage, and ensure the success of operations across Jupyter.
+
+ssc_copy: |
+  The Jupyter <a href="https://jupyter.org/governance/software_steering_council.html">Software Steering Council</a> (SSC) has jurisdiction over software-related decisions across Project Jupyter, with a primary focus on coordination across projects and decisions that have impact across many Jupyter Subprojects. It is also a mechanism for representatives of each project to share information and expertise. Technical decisions and processes where the SSC isn’t explicitly involved are automatically delegated to the individual projects to manage their day-to-day activities, create new repositories in their orgs, etc., with independence and autonomy.
 
 contributors_copy: |
   Project Jupyter <a href="https://jupyter.org/governance/distinguished_contributors.html">Distinguished Contributors</a> are recognized for their substantial contributions to Jupyter itself in both quality and quantity over at least two years. Contributions may include code, code review, infrastructure work, mailing list and chat participation, community help/building, education and outreach, fundraising, branding, marketing, inclusion and diversity, UX design and research, etc. Up to 10 new Distinguished Contributors are selected each year by the cumulative body of Distinguished Contributors.
 
-steering_copy: |
-  The role of the Jupyter Steering Council is to ensure, through working with and serving the broader Jupyter community, the long-term well-being of the project, both technically and as a community. The Jupyter Steering Council currently consists of the following members (in alphabetical order).
 
 # All bio photos should go in assets/bios cut at 160x160px
 distinguished_2021:
@@ -195,7 +199,7 @@ distinguished_special_election:
     linkedin: https://linkedin.com/in/erik-sundell/
     twitter_handle: e_Sundell
 
-steering:
+distinguished_inaugural:
   - name: Damian Avila
     photo: Damian_Avila.jpeg
     affiliation: UMSI & 2i2c
@@ -212,6 +216,9 @@ steering:
     photo: AfshinDarian.jpeg
     affiliation: QuantStack
     gh_handle: afshin
+  - name: Jonathan Frederic
+    photo: JonathanFrederic.jpeg
+    gh_handle: 'jdfreder'
   - name: Brian Granger
     photo: BrianGranger.jpeg
     affiliation: Amazon Web Services
@@ -220,6 +227,8 @@ steering:
     photo: JasonGrout.jpeg
     affiliation: Databricks
     gh_handle: jasongrout
+    mastodon: https://fosstodon.org/@jasongrout
+    personal: https://jasongrout.org/
   - name: Jessica Hamrick
     photo: JessicaHamrick.jpeg
     affiliation: DeepMind
@@ -265,20 +274,21 @@ steering:
     affiliation: Noteable
     gh_handle: willingc
 
-retired_steering:
-  - name: Jonathan Frederic
-    photo: JonathanFrederic.jpeg
-    gh_handle: 'jdfreder'
-
-numfocus_subcomittee:
-  - name: Matthias Bussonnier
-    photo: Matthias_Bussonnier.png
-    affiliation: QuanSight
-    gh_handle: Carreau
-  - name: Thomas Kluyver
-    photo: ThomasKluyver.jpeg
-    affiliation: University of Southampton
-    gh_handle: takluyver
+executive_council:
+  - name: Afshin Darian
+    photo: AfshinDarian.jpeg
+    affiliation: QuantStack
+    gh_handle: afshin
+  - name: Brian Granger
+    photo: BrianGranger.jpeg
+    affiliation: Amazon Web Services
+    gh_handle: ellisonbg
+  - name: Jason Grout
+    photo: JasonGrout.jpeg
+    affiliation: Databricks
+    gh_handle: jasongrout
+    mastodon: https://fosstodon.org/@jasongrout
+    personal: https://jasongrout.org/
   - name: Fernando Pérez
     photo: FernandoPerez.jpeg
     affiliation: UC Berkeley
@@ -287,10 +297,66 @@ numfocus_subcomittee:
     photo: Ana_Ruvalcaba.jpg
     affiliation: Cal Poly, San Luis Obispo
     gh_handle: ruv7
-  - name: Stéfan van der Walt
-    affiliation: UC Berkely, BIDS
-    photo: StefanvanderWalt.jpeg
-    gh_handle: stefanv
+  - name: Steven Silvester
+    photo: StevenSilvester.jpeg
+    affiliation: MongoDB
+    gh_handle: blink1073
+
+software_steering_council:
+  - name: Eric Charles
+    photo: EricCharles.png
+    gh_handle: echarles
+    subproject: Jupyter Notebook
+  - name: Frédéric Collonval
+    photo: Frederic_Collonval.jpg
+    gh_handle: fcollonval
+    linkedin: https://www.linkedin.com/in/frederic-collonval-41147955/
+    subproject: JupyterLab
+  - name: Sylvain Corlay
+    photo: SylvainCorlay.png
+    affiliation: QuantStack
+    gh_handle: sylvaincorlay
+    subproject: Voilà
+  - name: Itay Dafna
+    photo: ItayDafna.jpg
+    gh_handle: ibdafna
+    subproject: Jupyter Widgets
+  - name: Paul Ivanov
+    photo: PaulIvanov.jpeg
+    affiliation: Noteable
+    gh_handle: ivanov
+    subproject: Jupyter Foundations
+  - name: Johan Mabille
+    photo: Johan_Mabille.jpg
+    twitter_handle: JohanMabille
+    gh_handle: JohanMabille
+    subproject: Jupyter Kernels
+  - name: Isabela Presedo-Floyd
+    photo: Isabela_Presedo-Floyd.jpg
+    gh_handle: isabela-pf
+    twitter_handle: isabelapf2
+    linkedin: https://www.linkedin.com/in/isabela-presedo-floyd-32b99a160/
+    subproject: Jupyter Accessibility
+  - name: Min Ragan-Kelley
+    photo: MinRaganKelley.jpeg
+    affiliation: Simula Research Lab
+    gh_handle: minrk
+    subproject: JupyterHub and Binder
+  - name: Zach Sailer
+    photo: Zach_Sailer.jpg
+    gh_handle: Zsailer
+    linkedin: https://linkedin.com/in/zach-sailer-8a1472151/
+    twitter_handle: zrsailer
+    subproject: Jupyter Server
+  - name: Rick Wagner
+    photo: placeholder.png
+    gh_handle: rpwagner
+    subproject: Jupyter Security
+  - name: Carol Willing
+    photo: CarolWilling.jpeg
+    affiliation: Noteable
+    gh_handle: willingc
+    subproject: Jupyter Standards
 
 trademark_subcomittee:
   - name: Brian Granger
@@ -301,6 +367,8 @@ trademark_subcomittee:
     photo: JasonGrout.jpeg
     affiliation: Databricks
     gh_handle: jasongrout
+    mastodon: https://fosstodon.org/@jasongrout
+    personal: https://jasongrout.org/
   - name: Tim George
     photo: TimGeorge.jpeg
     affiliation: Cal Poly
@@ -325,6 +393,12 @@ sponsor_box:
 # All sponsor and partner SVGs should be 300x60 pixels
 # And entries ordered according to A-Z,1-9
 sponsors:
+  - url: https://aws.amazon.com/
+    src: aws.svg
+    alt: Amazon Web Services - Home Page
+  - url: https://www.bloomberg.com/
+    src: bloomberg-color.svg
+    alt: Bloomberg - Home Page
   - url: https://opendreamkit.org/
     src: EC-H2020.svg
     alt: Horizon 2020 European Union funding for Research and Innovation logo - OpenDreamkit funded project - Home Page
@@ -425,9 +499,61 @@ donate_box:
 
   {% include hr.html %}
 
+    <!-- Executive Council -->
+    <div class="content content--copy">
+        <h2 class="text-center"><a href="https://jupyter.org/governance/executive_council.html">Executive Council Members</a></h2>
+        <p>{{ page.ec_copy }}</p>
+    </div>
+
+    <div class="content content--wide">
+        <div class="biocard-wrapper">
+        {% for bio in page.executive_council %}
+            {% include biocard.html
+                name=bio.name
+                photo=bio.photo
+                affiliation=bio.affiliation
+                personal=bio.personal
+                gh_handle=bio.gh_handle
+                linkedin=bio.linkedin
+                twitter_handle=bio.twitter_handle
+                mastodon=bio.mastodon
+            %}
+        {% endfor %}
+        </div>
+    </div>
+
+    {% include hr.html %}
+
+    <!-- Software Steering Council -->
+    <div class="content content--copy">
+        <h2 class="text-center"><a href="https://jupyter.org/governance/software_steering_council.html">Software Steering Council Members</a></h2>
+        <p>{{ page.ssc_copy }}</p>
+    </div>
+
+    <div class="content content--wide">
+        <div class="biocard-wrapper">
+        {% for bio in page.software_steering_council %}
+            {% include biocard.html
+                name=bio.name
+                photo=bio.photo
+                affiliation=bio.affiliation
+                personal=bio.personal
+                gh_handle=bio.gh_handle
+                linkedin=bio.linkedin
+                twitter_handle=bio.twitter_handle
+                mastodon=bio.mastodon
+                subproject=bio.subproject
+            %}
+        {% endfor %}
+        </div>
+    </div>
+
+
+  {% include hr.html %}
+
   <!-- DISTINGUISHED CONTRIBUTORS -->
     <div class="content content--copy">
-      <h2 class="text-center">Distinguished Contributors</h2>
+      <h2 class="text-center"><a href="https://jupyter.org/governance/distinguished_contributors.html">Distinguished Contributors</a></h2>
       <p>{{ page.contributors_copy }}</p>
     </div>
 
@@ -443,6 +569,7 @@ donate_box:
             gh_handle=bio.gh_handle
             linkedin=bio.linkedin
             twitter_handle=bio.twitter_handle
+            mastodon=bio.mastodon
         %}
       {% endfor %}
       </div>
@@ -458,6 +585,7 @@ donate_box:
             gh_handle=bio.gh_handle
             linkedin=bio.linkedin
             twitter_handle=bio.twitter_handle
+            mastodon=bio.mastodon
         %}
       {% endfor %}
       </div>
@@ -472,54 +600,25 @@ donate_box:
             gh_handle=bio.gh_handle
             linkedin=bio.linkedin
             twitter_handle=bio.twitter_handle
+            mastodon=bio.mastodon
         %}
       {% endfor %}
       </div>
-    </div>
 
-  {% include hr.html %}
-
-  <!-- STEERING COUNCIL -->
-    <div class="content content--copy">
-        <h2 class="text-center">Steering Council</h2>
-        <p>{{ page.steering_copy }}</p>
-    </div>
-    <div class="content content--wide">
-        <div class="biocard-wrapper">
-        {% for bio in page.steering %}
-            {% include biocard.html
-                name=bio.name
-                photo=bio.photo
-                affiliation=bio.affiliation
-                personal=bio.personal
-                gh_handle=bio.gh_handle
-                linkedin=bio.linkedin
-                twitter_handle=bio.twitter_handle
-            %}
-        {% endfor %}
-        </div>
-    </div>
-
-  {% include hr.html %}
-
-    <!-- NUMFOCUS MEMBERS -->
-    <div class="content content--copy">
-        <h2 class="text-center">NumFOCUS Subcommittee Members</h2>
-    </div>
-    <div class="content content--wide">
-        <div class="biocard-wrapper">
-        {% for bio in page.numfocus_subcomittee %}
-            {% include biocard.html
-                name=bio.name
-                photo=bio.photo
-                affiliation=bio.affiliation
-                personal=bio.personal
-                gh_handle=bio.gh_handle
-                linkedin=bio.linkedin
-                twitter_handle=bio.twitter_handle
-            %}
-        {% endfor %}
-        </div>
+      <h3>Inaugural Cohort (Former Steering Council Members)</h3>
+      <div class="biocard-wrapper">
+      {% for bio in page.distinguished_inaugural %}
+        {% include biocard.html
+            name=bio.name
+            photo=bio.photo
+            personal=bio.personal
+            gh_handle=bio.gh_handle
+            linkedin=bio.linkedin
+            twitter_handle=bio.twitter_handle
+            mastodon=bio.mastodon
+        %}
+      {% endfor %}
+      </div>
     </div>
 
   {% include hr.html %}
@@ -540,29 +639,7 @@ donate_box:
                 gh_handle=bio.gh_handle
                 linkedin=bio.linkedin
                 twitter_handle=bio.twitter_handle
-            %}
-        {% endfor %}
-        </div>
-    </div>
-
-  {% include hr.html %}
-
-    <!-- RETIRED STEERING COUNCIL -->
-    <div class="content content--copy">
-        <h2 class="text-center">Retired Steering Council Members</h2>
-    </div>
-
-    <div class="content content--wide">
-        <div class="biocard-wrapper">
-        {% for bio in page.retired_steering %}
-            {% include biocard.html
-                name=bio.name
-                photo=bio.photo
-                affiliation=bio.affiliation
-                personal=bio.personal
-                gh_handle=bio.gh_handle
-                linkedin=bio.linkedin
-                twitter_handle=bio.twitter_handle
+                mastodon=bio.mastodon
             %}
         {% endfor %}
         </div>
@@ -576,27 +653,6 @@ donate_box:
     </p>
     <ul class="logogrid">
         {% for obj in page.sponsors %}
-        <li>
-            <a href="{{ obj.url }}">
-                <img src="/assets/logos/{{ obj.src }}"
-                     width=300
-                     height=90
-                     loading="lazy"
-                     alt="{{ obj.alt }}" />
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
-  </div>
-
-  <!-- PARTNERS BOX -->
-  <div class="about-box section-white content content--wide">
-    <h2 class="text-center">{{ page.partner_box.headline }}</h2>
-    <p class="content content--copy text-center">
-        {{ page.partner_box.description }}
-    </p>
-    <ul class="logogrid">
-        {% for obj in page.partners %}
         <li>
             <a href="{{ obj.url }}">
                 <img src="/assets/logos/{{ obj.src }}"
@@ -635,5 +691,5 @@ donate_box:
         </a>
     </div>
   </div>
-
+  <!-- The globe icon is originally from https://github.com/twitter/twemoji/blob/ad3d3d669bb3697946577247ebb15818f09c6c91/assets/svg/1f310.svg, licensed CC-by-4.0 -->
 </article>
