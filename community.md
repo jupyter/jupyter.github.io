@@ -184,8 +184,19 @@ Individual workshops:
 
 - [Round 3: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-call-for-proposals-for-jan-aug-2020-710f687e30f4)
 
-Due to the COVID-19 pandemic, workshops were put on hold during 2020.
-Stay tuned for more details about workshops funded in round 3.
+Individual workshops:
+- Africa Jupyter Community Workshop: (Narcisse Mbunzama)
+- [Building the Jupyter Community in Musculoskeletal Imaging Research](https://blog.jupyter.org/report-on-the-jupyter-community-workshop-77016ab1d49b): (Serena Bonaretti)
+- [An accessibility audit and roadmap for the Jupyter ecosystem](https://blog.jupyter.org/jupyter-accessibility-workshops-wrap-up-8649dfe5f89): (Tania Allard, Isabela Presedo-Floyd)
+
+#### Round 4: 2022-2023
+- [Round 4: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-c7491a3cca00)
+
+Individual workshops:
+- [Jupyter Widgets workshop](https://blog.jupyter.org/jupyter-community-workshop-the-future-of-jupyter-widgets-475f67288da0)
+- [JupyterLite community workshop](https://blog.jupyter.org/report-on-the-jupyterlite-community-workshop-aafaefe254ef)
+- [Jupyter in Education workshop](https://blog.jupyter.org/jupyter-community-workshop-jupyter-for-education-82af9e34b510)
+- [Jupyter Notebook Format workshop](https://blog.jupyter.org/jupyter-community-workshop-the-notebook-file-format-8133ed606118)
 
 ### Jupyter Community Calls
 
