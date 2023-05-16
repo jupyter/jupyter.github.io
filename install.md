@@ -21,7 +21,7 @@ pip install jupyterlab
 Once installed, launch JupyterLab with:
 
 ```bash
-jupyter-lab
+jupyter lab
 ```
 
 ## Jupyter Notebook
