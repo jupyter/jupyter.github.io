@@ -23,37 +23,6 @@
 @import "components/widgets";
 @import "components/hr";
 
-
-/* Convention banner */
-
-.con-jumbotron {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.con-container {
-    background: rgba(0, 0, 0, 0.5) url("../jupytercon-paris.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: darken;
-    text-align: center;
-}
-
-.con-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    float: none !important;
-    padding: 40px;
-}
-
-.con-title {
-    margin-left: auto;
-    margin-right: auto;
-    clear:both;
-    width: 100%;
-    max-width: 500px;
-}
-
 .dropshadow {
     /* Make the foreground stand out from the background slightly */
     filter: drop-shadow(0px 0px 8px rgba(0,0,0,0.3));
