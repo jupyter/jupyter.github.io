@@ -83,7 +83,6 @@ in these organizations:
 - [jupyter-lsp](https://github.com/jupyter-lsp)
 - [voila-dashboards](https://github.com/voila-dashboards)
 - [binder-examples](https://github.com/binder-examples)
-- [jupyter-resources](https://github.com/jupyter-resources)
 
 Many organizations have a **team-compass** repo to provide detailed information
 about the sub-community, its meetings, and contribution tips. 
