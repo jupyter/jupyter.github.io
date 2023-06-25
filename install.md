@@ -7,7 +7,7 @@ permalink: /install
 
 Project Jupyter's tools are available for installation via the [Python Package Index](https://pypi.org/), the leading repository of software created for the Python programming language.
 
-This page uses instructions with [pip](https://pip.pypa.io/en/stable/), [the recommended installation tool for Python](https://packaging.python.org/en/latest/guides/tool-recommendations/#installation-tool-recommendations). If you require _environment management_ as opposed to just installation, look into [conda](https://docs.conda.io/), [mamba](https://mamba.readthedocs.io/), and [pipenv](https://pipenv.pypa.io/).
+This page uses instructions with [pip](https://pip.pypa.io/en/stable/), [the recommended installation tool for Python](https://packaging.python.org/en/latest/guides/tool-recommendations/#installation-tool-recommendations). If you require _environment management_ as opposed to just installation, look into [Homebrew](https://brew.sh), [conda](https://docs.conda.io/), [mamba](https://mamba.readthedocs.io/), and [pipenv](https://pipenv.pypa.io/).
 
 ## JupyterLab
 
