@@ -447,6 +447,29 @@ trademark_subcomittee:
     affiliation: SageMath
     gh_handle: williamstein
 
+community_building:
+- name: Martha Cryan
+  photo: Martha_Cryan.jpg
+  gh_handle: marthacryan
+  affiliation: Mito
+- name: Jason Grout
+  photo: JasonGrout.jpeg
+  affiliation: Databricks
+  gh_handle: jasongrout
+  mastodon: https://fosstodon.org/@jasongrout
+  personal: https://jasongrout.org/
+- name: Ana Ruvalcaba
+  photo: Ana_Ruvalcaba.jpg
+  affiliation: Cal Poly, San Luis Obispo
+  gh_handle: ruv7
+- name: Rollin Thomas
+  photo: Rollin_Thomas.jpg
+  linkedin: https://www.linkedin.com/in/rollin-thomas-507185b5/
+  personal: https://www.nersc.gov/about/nersc-staff/programming-environments-and-models/rollin-thomas/
+  gh_handle: rcthomas
+  twitter_handle: r_c_thomas
+  affiliation: Berkeley Lab
+
 sponsor_box:
   headline: Sponsors
   description: 'Project Jupyter receives direct funding from the following sources:'
@@ -701,6 +724,30 @@ donate_box:
         %}
       {% endfor %}
       </div>
+    </div>
+
+  {% include hr.html %}
+
+    <!-- COMMUNITY COMMITTEE MEMBERS -->
+    <div class="content content--copy">
+        <h2 class="text-center"><a href="https://jupyter.org/governance/communitybuildingworkinggroup.html">Community Building Working Group Members</a></h2>
+    </div>
+
+    <div class="content content--wide">
+        <div class="biocard-wrapper">
+        {% for bio in page.community_building %}
+            {% include biocard.html
+                name=bio.name
+                photo=bio.photo
+                affiliation=bio.affiliation
+                personal=bio.personal
+                gh_handle=bio.gh_handle
+                linkedin=bio.linkedin
+                twitter_handle=bio.twitter_handle
+                mastodon=bio.mastodon
+            %}
+        {% endfor %}
+        </div>
     </div>
 
   {% include hr.html %}
