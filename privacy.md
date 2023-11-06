@@ -1,93 +1,101 @@
 ---
 layout: page
 title: Data Privacy
-tagline: Data Privacy information for Jupyter Related software
+tagline: Data privacy information for Jupyter related software
 permalink: /privacy
 ---
 
 
-# F.A.Q
+# F.A.Q.
 
-This page tried to answer regularly asked question about Jupyter and Data Privacy.
+This page answers frequently asked questions about Jupyter and data privacy.
 
-## Does Project Jupyter **Software** Collect information ? 
+## Do Project Jupyter software programs collect information ? 
 
 Project Jupyter Software does not collect any information about its installation or usage. 
 
-All the software that is developed by the Jupyter Project are free of tracking
-code. When you install and deploy Jupyter add related libraries on your own
-computer or servers no informations is collected not exchanged with the Jupyter
-Developer.
+All software developed by the Jupyter Project, other than purpose-built telemetry libraries,
+is free of tracking
+code. When you install and deploy Jupyter software and libraries on your own
+computers and servers, no information is collected by or sent to
+Project Jupyter's developers.
 
-We can only guaranty this is true when you use Jupyter Directly and not via a
-Third Party Vendor that provide hosted Jupyter Notebook, if you have questions
-about hosted Jupyter please see your vendor documentation and privacy sections.
+Jupyter's privacy policy does not apply to third-party vendors that host Jupyter
+products for remote or cloud usage. If you have questions about hosted Jupyter
+products, please consult your vendor's documentation and privacy policy.
 
-You can also look at the [JupyterLab specific privacy
-page](https://jupyterlab.readthedocs.io/en/stable/privacy_policies.html).
+Some projects have their own privacy policies.
+The [JupyterLab privacy policy](https://jupyterlab.readthedocs.io/en/stable/privacy_policies.html)
+is one example.
 
-## Does Jupyter Project **services** Collect information ?
+## Do Project Jupyter services collect information?
 
-Project Jupyter run a few free services related to Jupyter, this is include but
-not limited to nbviewer, Binder, and JupyterLite. 
+Project Jupyter runs a few free services related to Jupyter. These include, but are
+not limited to, nbviewer, Binder, and JupyterLite. 
 
 Those services are not designed to stored any user data on Jupyter ownd
 infrastructure. Though being publicly accessible we caution user to not use
 those services to process sensitive informations.
 
-## Do Jupyter Project Forums (discourse, zulip,...) Collect information ?
+## Do Project Jupyter community services collect information?
 
-Jupyter is providing a few platform for users to communicate with each others, 
-this can take multiple forms, like mailing list, forums, chat... 
+Jupyter has a [community page](https://jupyter.org/community) that
+recommends mailing lists, forums, chat rooms, and videoconference calls for
+users to meet and discuss Jupyter software. Some of these communities are
+managed by third-party companies not directly affiliated with Project Jupyter
+or NumFOCUS.
 
 You should not need to create an account on any on those platforms to _read_ any
-public content, and should never be required to create an account on those
-platform to _use_ jupyter software.
+public content. You do not need to create an account on any community
+platform to _use_ Jupyter software.
 
-We do not host those software, and do not fully control the data collections
-of those platforms. We advise you to read the privacy policy of those platforms,
-and contact them if you have any concern or questions about data collection. 
+Except where noted, Jupyter does not host its community platforms, and we
+do not control the data collection of these community platforms. Users should
+read the privacy policy of each community platforms before they decide to join,
+and users should contact the platform's operator if they have any concerns
+or questions about their data collection practices. 
 
-## I a Data Privacy information form to be filled for my organisation to use Jupyter.
+## Who can fill out my organization's data privacy information form on behalf of Project Jupyter?
 
-It is likely that as part of Jupyter deployment in your company you might be
-asked to fill a form or ask a vendor to fill a form about the Data Processing
-that Project Jupyter does.
+Your organization may require software vendors to disclose required information
+about their software's data processing.
 
-This often include but is not limited to:
+This often includes, but is not limited to:
 
- - which data is collected
+ - What data is collected
  - How is billing information secured
- - Is there a background check for people having access to this information.
- - ...
+ - Background check requirements for people having access to this information
 
-Project Jupyter **is not a service provider**, **supplier** or **vendor** and so
-generally **cannot** fill out those checklist or forms, both for a **legal** and 
-often **technical** perspective.
+**Project Jupyter is not a service provider, supplier, or vendor** and so
+generally **cannot** fill out these forms, for **legal** and **technical** reasons.
 
 We maintain open source tools that your institution or others may install and
-operate, and it would be these entities (your it department, your vendor) that
-you contract with who are responsible for privacy of their data collection.
+operate. Entities who operate Jupyter services for your organization, and with
+whom you have a contract, are responsible for the privacy of your data.
 
-As we do not have a business relationship with you or you institution we do not
-have customer database, we do not have billing information, and in general you
+As we do not have a business relationship with you or your institution, we do not
+have a customer database, we do not have billing information, and in general you
 cannot sign a contract with us.
 
-## who is my Jupyter Vendor ?
+## Who is my Jupyter vendor?
 
-There are generally two ways to use Jupyter software:
- - In the cloud
- - Installed on your own machines
+There are two broad ways to deploy Jupyter software:
 
-If you are using Jupyter in the cloud then look at the URL you use to access
-Jupyter, this will likely indicate who your vendor is. 
+1. Hosted by a third-party computing service provider (in the cloud)
+2. Installed on your own computers on premises that your organization controls (on-premise)
+
+If you are using Jupyter in the cloud, then look at the URL you use to access
+Jupyter. This will likely indicate who your vendor is. 
 
 If you are using Jupyter on your own machine, the way you installed Jupyter will
-tell you who your vendor is.
+tell you who your vendor is. If you installed open source packages from a
+freely-available repository, you probably do not have a vendor. If you installed
+open source packages from a commercial vendor that provides support, contact
+that vendor for support.
 
-## I have more questions
+## How do I ask questions about privacy not covered by this FAQ?
 
-You can ask the [Jupyter Executive Council](https://executive-council-team-compass.readthedocs.io/en/latest/). 
+You can ask the [Jupyter Executive Council](https://executive-council-team-compass.readthedocs.io). 
 
 
 
