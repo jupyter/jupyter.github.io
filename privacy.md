@@ -12,7 +12,7 @@ This page answers frequently asked questions about Jupyter and data privacy.
 
 ## Do Project Jupyter software programs collect information ? 
 
-Project Jupyter Software does not collect any information about its installation or usage. 
+By design, most Project Jupyter software does not collect any information about its installation or usage. Telemetry is an opt-in feature available through libraries such as [Jupyter Telemetry](https://github.com/jupyter/telemetry).
 
 All software developed by the Jupyter Project, other than purpose-built telemetry libraries,
 is free of tracking
