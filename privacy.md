@@ -33,9 +33,9 @@ is one example.
 Project Jupyter runs a few free services related to Jupyter. These include, but are
 not limited to, nbviewer, Binder, and JupyterLite. 
 
-Those services are not designed to stored any user data on Jupyter ownd
-infrastructure. Though being publicly accessible we caution user to not use
-those services to process sensitive informations.
+These services do not store any user data on Jupyter-owned
+systems. Because these services are publicly accessible, we caution users not to use
+those services to process sensitive information.
 
 ## Do Project Jupyter community services collect information?
 
