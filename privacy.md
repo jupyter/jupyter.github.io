@@ -96,24 +96,3 @@ that vendor for support.
 ## How do I ask questions about privacy not covered by this FAQ?
 
 You can ask the [Jupyter Executive Council](https://executive-council-team-compass.readthedocs.io). 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
