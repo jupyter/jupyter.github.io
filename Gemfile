@@ -5,5 +5,6 @@ gem "jekyll-redirect-from"
 gem "jekyll-sitemap"
 
 group :jekyll_plugins do
+  gem 'jekyll-content-security-policy-generator'
   gem 'hawkins'
 end
