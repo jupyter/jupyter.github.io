@@ -99,7 +99,7 @@ jobs:
           name: Built site ${{ github.run_number }}
           path: ./_site
       - name: Audit with Lighthouse
-        uses: treosh/lighthouse-ci-action@v8
+        uses: treosh/lighthouse-ci-action@v10
         with:
           configPath: ".github/workflows/lighthouserc.json"
           temporaryPublicStorage: true
