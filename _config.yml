@@ -17,7 +17,6 @@ include: [".well-known"]
 plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
-  - jekyll-content-security-policy-generator
 
 sass:
   sass_dir: _sass
