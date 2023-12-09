@@ -93,7 +93,7 @@ Jupyter also has a number of online communication channels to help keep in touch
 
 As you interact with others in the Jupyter ecosystem, remember that we have a strong
 commitment to being an **open, inclusive, and positive community**. Please read the
-[Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/master/conduct/code_of_conduct.md)
+[Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/main/conduct/code_of_conduct.md)
 for guidance on how to interact with others in a way that makes the community thrive.
 
 Below is a short list of Gitter channels, mailing lists, and GitHub repositories
