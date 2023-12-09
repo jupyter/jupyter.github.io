@@ -25,7 +25,7 @@ Here is an example of a potential structure:
 Blog Post Examples:
 - Shorter post: [European Commission Funds Jupyter Bug Bounty Program](https://blog.jupyter.org/european-commission-funds-jupyter-bug-bounty-program-b7b96f9831e6)
 - Longer post: [Generative AI in Jupyter](https://blog.jupyter.org/generative-ai-in-jupyter-3f7174824862)
-- Post using the Jupyter Voice: [JupyterLab is Ready for Users](JupyterLab is Ready for Users )
+- Post using the Jupyter Voice: [JupyterLab is Ready for Users](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)
 
 ## Submission Process
 - *Create a Medium account*. If you are new to Medium, create an account by following these [instructions](https://help.medium.com/hc/en-us/articles/115004915268-Sign-in-or-sign-up-to-Medium).
