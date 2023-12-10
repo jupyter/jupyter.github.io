@@ -8,7 +8,7 @@ permalink: /social
 The Jupyter Media Strategy Working Group (JMS) exists to ensure that communications in Jupyter official channels are strategic and benefit Project Jupyter.  Please see our [charter](https://jupyter.org/governance/charters/MediaStrategyCharter.html) as and [current list of constituents](https://jupyter.org/governance/people.html#jupyter-media-strategy-working-group) for more information.
 
 ## Jupyter Blog
-The Jupyter [blog](https://blog.jupyter.org) is designed for community members to share valuable, educational content, including news and tutorials, about Jupyter.  Please see the Jupyter Blog Submission [Guidelines](./blog_guidelines) for details on creating a post.
+The Jupyter [blog](https://blog.jupyter.org) is designed for community members to share valuable, educational content, including news and tutorials, about Jupyter.  Please see the Jupyter Blog Submission [Guidelines](/blog_guidelines) for details on creating a post.
 
 ## Jupyter Discourse Forum 
 The Discourse [forum](https://discourse.jupyter.org) is meant to be a welcoming place for discussion about Project Jupyter.  Members are encouraged to ask and answer questions, and highlight wins. If you are interested to be a part of the Jupyter Discourse moderation team, please reach out to us at jupyter-media-strategy@googlegroups.com.

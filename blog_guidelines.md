@@ -34,7 +34,7 @@ Blog Post Examples:
 - *Request review*. Email the JMS at jupyter-media-strategy@googlegroups.com confirming you have submitted the story.  and provide suggested social media text and image.
 
 ## Social media amplification of blog post
-If you would like  to have a post about your work on [Project Jupyter social media](./social), please provide the following:
+If you would like  to have a post about your work on [Project Jupyter social media](/social), please provide the following:
 - Post content  (500 characters maximum)
 - Github link (this will auto-generate an image)
 - Or an image to use
