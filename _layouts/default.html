@@ -39,6 +39,11 @@ social:
     url: https://github.com/jupyter/
   - title: Mastodon
     url: https://hachyderm.io/@ProjectJupyter
+legal:
+  - title: Privacy
+    url: /privacy
+
+
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -146,6 +151,18 @@ social:
             </li>
             {%- endfor %}
           </ul>
+          <h2>Legal</h2>
+          <ul>
+            {%- for obj in layout.legal -%}
+            <li>
+              <a href="{{ obj.url }}">
+                  {{ obj.title }}
+              </a>
+            </li>
+            {%- endfor %}
+          </ul>
+
+
         </div>
       </div>
       </section>
