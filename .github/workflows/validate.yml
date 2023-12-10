@@ -82,7 +82,7 @@ jobs:
            --check-links-ignore "https://.*linkedin.com/.*" \
            --check-links-ignore "/" \
            --check-links-ignore "https://www.nyu.edu/" \
-           --check-links-ignore ".github/images/netlify-preview.png"
+           --check-links-ignore ".github/images/netlify-preview.png" \
            --check-links-ignore ".*help.medium.com.*"
 
   lighthouse:
