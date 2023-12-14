@@ -18,7 +18,7 @@ The JMS maintains a list of official Project Jupyter social media accounts to su
 
 If you are organizing a Jupyter event or have something Jupyter-related that should be boosted by the official Jupyter account, please reach out to us at jupyter-media-strategy@googlegroups.com.
 
-List of channels currently maintained by JMS in alphabetical order:
+List of channels actively maintained by JMS in alphabetical order:
 
 - Discourse: https://discourse.jupyter.org
 - LinkedIn: https://linkedin.com/company/project-jupyter
