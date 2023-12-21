@@ -1,9 +1,12 @@
 ---
 layout: page
-title: Blog Guidelines
-tagline: Guidelines for Submitting a Post to the Jupyter Blog.
-permalink: /blog_guidelines
+title: Submission Guidelines
+tagline: Project Jupyter Media Submission Guidelines
+permalink: /media_submissions
 ---
+
+## Editorial Principles
+Read more about our [editorial principles](https://jupyter.org/governance/charters/MediaStrategyCharter.html) in our charter.
 
 ## Content Guidelines
 The Project Jupyter blog is designed for community members to share valuable and educational content about Jupyter. Blog posts can be about various topics, for example how you got started with Jupyter, the latest extension you built around Jupyter, a quick tutorial on how to use a specific feature, and more. This channel is powered by our community members so there are no particular requirements for how the blog post has to be written. 
@@ -27,17 +30,23 @@ Blog Post Examples:
 - Longer post: [Generative AI in Jupyter](https://blog.jupyter.org/generative-ai-in-jupyter-3f7174824862)
 - Post using the Jupyter Voice: [JupyterLab is Ready for Users](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)
 
-## Submission Process
+## RESPONSE TIME: Volunteer working group
+Please note that we will vet content against our current editorial review backlog, and follow up with you if there are any issues. Plan ahead. We are primarily a group of volunteers and we will review requests for publication on a weekly basis.
+
+## BLOG: Submission process (blog.jupyter.org)
 - *Create a Medium account*. If you are new to Medium, create an account by following these [instructions](https://help.medium.com/hc/en-us/articles/115004915268-Sign-in-or-sign-up-to-Medium).
 - *Request permissions*. Email the Jupyter Media Strategy working group (JMS)  at jupyter-media-strategy@googlegroups.com  to have your Medium account to be added as the writer of the blog. Once you are added as the authorized writer, you should receive an email that allows you to upload your blog. 
 - *Submit your story*. For step by step instructions see the following Medium [article](https://help.medium.com/hc/en-us/articles/213904978-Add-a-draft-or-post-to-publication).
 - *Request review*. Email the JMS at jupyter-media-strategy@googlegroups.com confirming you have submitted the story.  and provide suggested social media text and image.
 
-## Social media amplification of blog post
-If you would like  to have a post about your work on [Project Jupyter social media](/social), please provide the following:
-- Post content  (500 characters maximum)
-- Github link (this will auto-generate an image)
-- Or an image to use
-- Social handles to include
+## BLOG: Social media amplification
+Project Jupyter has various [social media channels](/social), provide the following information when requesting review:
+- Content (max 500 characters for Mastodon, 280 characters for Twitter/X)
+- Image for the post if one is available
+- Social handles to include (for @mentions)
 
-Please note that we will vet this content against our current editorial review backlog, and follow up with you if there are any issues.
+## MASTODON: Amplification of a message on Mastodon
+The Jupyter blog is the primary channel with which Jupyter communicates with the community. However, occasionally there are messages for which no blog post exists and the JMS will consider amplifying posts on Mastodon.  Mastodon is our preferred channel as it best reflects the values of Project Jupyter.
+- Content - max 500 characters or a link to another Mastodon post
+- Image for the post (if one is available)
+- Link to your work, for example a Github link (this will auto-generate an image)
