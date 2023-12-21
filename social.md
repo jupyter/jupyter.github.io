@@ -16,7 +16,7 @@ The Discourse [forum](https://discourse.jupyter.org) is meant to be a welcoming 
 ## Social Media Accounts
 The JMS maintains a list of official Project Jupyter social media accounts to support and promote our organization's interests.  We primarily use our Mastodon account for interactive social media engagement, but will also broadcast messages about the blog or Jupyter events on other channels. 
 
-If you are organizing a Jupyter event or have something Jupyter-related that should be boosted by the official Jupyter account, please reach out to us at jupyter-media-strategy@googlegroups.com.
+If you are organizing a Jupyter event or have something Jupyter-related that should be boosted by the official Jupyter account, please reach out to us at jupyter-media-strategy@googlegroups.com. Please see our Submission [Guidelines](/media_submissions#blog-social-media-amplification) for more information.
 
 List of channels actively maintained by JMS in alphabetical order:
 
