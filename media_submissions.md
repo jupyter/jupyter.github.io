@@ -35,7 +35,7 @@ Please note that we will vet content against our current editorial review backlo
 
 ## BLOG: Submission process (blog.jupyter.org)
 - *Create a Medium account*. If you are new to Medium, create an account by following these [instructions](https://help.medium.com/hc/en-us/articles/115004915268-Sign-in-or-sign-up-to-Medium).
-- *Request permissions*. Email the Jupyter Media Strategy working group (JMS)  at jupyter-media-strategy@googlegroups.com  to have your Medium account to be added as the writer of the blog. Once you are added as the authorized writer, you should receive an email that allows you to upload your blog. 
+- *Request permissions*. Email the Jupyter Media Strategy working group (JMS)  at jupyter-media-strategy@googlegroups.com with your Medium handle to be added as a writer of the blog. Once you are added as the authorized writer, you should receive an email that allows you to upload your blog.
 - *Submit your story*. For step by step instructions see the following Medium [article](https://help.medium.com/hc/en-us/articles/213904978-Add-a-draft-or-post-to-publication).
 - *Request review*. Email the JMS at jupyter-media-strategy@googlegroups.com confirming you have submitted the story.  and provide suggested social media text and image.
 

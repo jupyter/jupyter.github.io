@@ -5,7 +5,7 @@ tagline: Jupyter Media Strategy
 permalink: /social
 ---
 
-The Jupyter Media Strategy Working Group (JMS) exists to ensure that communications in Jupyter official channels are strategic and benefit Project Jupyter.  Please see our [charter](https://jupyter.org/governance/charters/MediaStrategyCharter.html) as and [current list of constituents](https://jupyter.org/governance/people.html#jupyter-media-strategy-working-group) for more information.
+The Jupyter Media Strategy Working Group (JMS) exists to ensure that communications in Jupyter official channels are strategic and benefit Project Jupyter.  Please see our [charter](https://jupyter.org/governance/charters/MediaStrategyCharter.html) and [current list of constituents](https://jupyter.org/governance/people.html#jupyter-media-strategy-working-group) for more information.
 
 ## Jupyter Blog
 The Jupyter [blog](https://blog.jupyter.org) is designed for community members to share valuable, educational content, including news and tutorials, about Jupyter.  Please see the Jupyter Media Submission [Guidelines](/media_submissions) for details on creating a post.
