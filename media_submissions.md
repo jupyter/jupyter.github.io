@@ -6,7 +6,7 @@ permalink: /media_submissions
 ---
 
 ## Editorial Principles
-Read more about our [editorial principles](https://jupyter.org/governance/charters/MediaStrategyCharter.html) in our charter.
+Read more about our [editorial principles](https://jupyter.org/governance/charters/MediaStrategyCharter.html#editorial-principles) in our charter.
 
 ## Content Guidelines
 The Project Jupyter blog is designed for community members to share valuable and educational content about Jupyter. Blog posts can be about various topics, for example how you got started with Jupyter, the latest extension you built around Jupyter, a quick tutorial on how to use a specific feature, and more. This channel is powered by our community members so there are no particular requirements for how the blog post has to be written. 
