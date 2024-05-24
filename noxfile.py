@@ -2,7 +2,7 @@ import nox
 
 nox.options.reuse_existing_virtualenvs = True
 
-CONDA_DEPS = ["c-compiler", "compilers", "cxx-compiler", "ruby", "python=3.8"]
+CONDA_DEPS = ["c-compiler", "compilers", "cxx-compiler", "ruby", "python=3.10"]
 
 def install_deps(session):
     # Jekyll w/ Conda installation instructions roughly pulled from
