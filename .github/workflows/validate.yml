@@ -85,7 +85,10 @@ jobs:
            --check-links-ignore ".github/images/netlify-preview.png" \
            --check-links-ignore ".*help.medium.com.*" \
            --check-links-ignore "https://twitter.com/.*" \
-           --check-links-ignore "https://jupytercon.com"
+           --check-links-ignore "https://jupytercon.com" \
+           # got 429 too many requests from GitHub when checking user's profile
+           # existence in about.html
+           --check-links-ignore "https://github.com/.*"
 
   lighthouse:
 
