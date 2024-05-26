@@ -12,7 +12,11 @@ of security issues.
 ## Reporting vulnerabilities
 
 If you believe you've found a security vulnerability in a [Jupyter Subproject](https://jupyter.org/governance/list_of_subprojects.html),
-please report it to [security@ipython.org](mailto:security@ipython.org).
+you can either:
+ - directly open a GitHub Security Advisory (GHSA) in the relevant repository
+ - report it to [security@ipython.org](mailto:security@ipython.org) if opening a GHSA is not possible, or you are unsure
+   where it will belong.
+
 If you prefer to encrypt your security reports,
 you can use [this PGP public key](assets/ipython_security.asc).
 

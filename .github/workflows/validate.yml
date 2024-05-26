@@ -85,7 +85,9 @@ jobs:
            --check-links-ignore ".github/images/netlify-preview.png" \
            --check-links-ignore ".*help.medium.com.*" \
            --check-links-ignore "https://twitter.com/.*" \
-           --check-links-ignore "https://jupytercon.com"
+           --check-links-ignore "https://jupytercon.com" \
+           --check-links-ignore "https://www.netapp.com" \
+           --check-links-ignore "https://github.com/[^/]+/?$"   # 429 too many requests checking GitHub user profiles in about.html
 
   lighthouse:
 
