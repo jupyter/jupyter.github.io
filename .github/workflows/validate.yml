@@ -86,9 +86,7 @@ jobs:
            --check-links-ignore ".*help.medium.com.*" \
            --check-links-ignore "https://twitter.com/.*" \
            --check-links-ignore "https://jupytercon.com" \
-           # got 429 too many requests from GitHub when checking user's profile
-           # existence in about.html
-           --check-links-ignore "https://github.com/.*"
+           --check-links-ignore "https://github.com/[^/]+/?$"   # 429 too many requests checking GitHub user profiles in about.html
 
   lighthouse:
 
