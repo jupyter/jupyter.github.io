@@ -26,7 +26,7 @@ List of channels actively maintained by JMS in alphabetical order:
 - Mastodon:  https://hachyderm.io/@ProjectJupyter
 - Slack JupyterLab: https://jupyterlabworkspace.slack.com
 - X/Twitter Jupyter: https://twitter.com/ProjectJupyter
-- YouTube: https://youtube.com/@ipython
+- YouTube: https://youtube.com/@projectjupyter
 
 List of channels considered inactive but managed by the JMS:
 
