@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 gem 'github-pages'
-gem "jekyll"
+gem "jekyll", "3.9.4"
 gem "jekyll-redirect-from"
 gem "jekyll-sitemap"
 

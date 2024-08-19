@@ -18,6 +18,30 @@ ssc_copy: |
 contributors_copy: |
   Project Jupyter <a href="https://jupyter.org/governance/distinguished_contributors.html">Distinguished Contributors</a> are a group of Jupyter community members that have gone above-and-beyond in their support of the project over the years, making substantial and sustained contributions in any area of activity (software development, governance, community engagement, events, etc.). The Jupyter community confers membership in this group as a way of recognizing their effort and saying "thank you."
 
+# All bio photos should go in assets/bios cut at 160x160px
+distinguished_2023:
+- name: Nicolas Brichet
+  photo: Nicolas_Brichet.png
+  twitter_handle: NicolasBrichet_
+  gh_handle: brichet
+  linkedin: https://www.linkedin.com/in/nicolas-brichet-a26369150/
+
+- name: Piyush Jain
+  photo: Piyush_Jain.png
+  gh_handle: 3coins
+  linkedin: https://www.linkedin.com/in/piyush-jain-4883bb4/
+
+- name: Duc Trung Le
+  photo: Duc_Trung_Le.png
+  twitter_handle: trung_leduc
+  gh_handle: trungleduc
+  linkedin: https://www.linkedin.com/in/ductrung-le/
+
+- name: Jason Weill
+  photo: Jason_Weill.png
+  twitter_handle: J2XL
+  gh_handle: JasonWeill
+  linkedin: https://www.linkedin.com/in/jweill/
 
 distinguished_2022:
 - name: Tania Allard
@@ -73,7 +97,6 @@ distinguished_2022:
   linkedin: https://www.linkedin.com/in/mathbunnyru/
   gh_handle: mathbunnyru
 
-# All bio photos should go in assets/bios cut at 160x160px
 distinguished_2021:
   - name: Mehmet Bektas
     photo: Mehmet_Bektas.jpg
@@ -640,6 +663,24 @@ donate_box:
     <div class="content content--copy">
       <h2 class="text-center"><a href="https://jupyter.org/governance/distinguished_contributors.html">Distinguished Contributors</a></h2>
       <p>{{ page.contributors_copy }}</p>
+    </div>
+
+    <div class="content content--wide">
+      <h3>2023 Cohort</h3>
+      <div class="biocard-wrapper">
+      {% for bio in page.distinguished_2023 %}
+        {% include biocard.html
+            name=bio.name
+            photo=bio.photo
+            loading='eager'
+            personal=bio.personal
+            gh_handle=bio.gh_handle
+            linkedin=bio.linkedin
+            twitter_handle=bio.twitter_handle
+            mastodon=bio.mastodon
+        %}
+      {% endfor %}
+      </div>
     </div>
 
     <div class="content content--wide">
