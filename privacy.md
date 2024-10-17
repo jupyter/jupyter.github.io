@@ -42,8 +42,7 @@ those services to process sensitive information.
 Jupyter has a [community page](https://jupyter.org/community) that
 recommends mailing lists, forums, chat rooms, and videoconference calls for
 users to meet and discuss Jupyter software. Some of these communities are
-managed by third-party companies not directly affiliated with Project Jupyter
-or NumFOCUS.
+managed by third-party companies not directly affiliated with Project Jupyter.
 
 You should not need to create an account on any on those platforms to _read_ any
 public content. You do not need to create an account on any community
