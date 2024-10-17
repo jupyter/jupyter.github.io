@@ -76,6 +76,8 @@ jobs:
       run: pip install pytest-check-links
 
     # TODO: we are not checking absolute links as pytest plugins does not support them
+    # ignore github requests as we get 429 too many requests checking GitHub user profiles in about.html
+    # ignore opensource.org since we are getting a 403 forbidden from this check run on github
     - name: Check links
       run: |
         pytest _site/ --check-links \
@@ -87,8 +89,8 @@ jobs:
            --check-links-ignore "https://twitter.com/.*" \
            --check-links-ignore "https://jupytercon.com" \
            --check-links-ignore "https://www.netapp.com" \
-           --check-links-ignore "https://github.com/[^/]+/?$"   # 429 too many requests checking GitHub user profiles in about.html \
-           --check-links-ignore "https://opensource.org/licenses/BSD-3-Clause" # 403 forbidden from github
+           --check-links-ignore "https://github.com/[^/]+/?$" \
+           --check-links-ignore "https://opensource.org/licenses/BSD-3-Clause"
 
   lighthouse:
 
