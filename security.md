@@ -41,3 +41,34 @@ We are working to identify and coordinate security efforts across the Jupyter co
 The [Jupyter Security](https://github.com/jupyter/security) GitHub repo has information how to participate and contribute.
 For discussion, please use the special Discourse [security topic](https://discourse.jupyter.org/c/special-topics/security/48) on the Jupyter Discourse server.
 
+
+## vendor assessments
+
+Jupyter cannot provide, or fill in "Plan-Risk Assessment", "Hecvat", "Vpat" and
+similar vendor assessing questionnaire.
+
+You likely have been redirected to this section after contacting the  Jupyter
+security team to fill in a questionnaire about the security best practice of your
+Jupyter "vendor", and to assess the Jupyter "product".
+
+The Jupyter Team and Jupyter Security team are not vendors, and cannot act as
+a vendor. To be a vendor Jupyter would need to have a contractual relationship
+with you, which we do not have.
+
+Your questionnaire also likely ask how your 'vendor' store your informations
+(user information, billing information, contact...); who has access to it; and
+how they are vetted... etc. The Jupyter team does not have any contact or
+billing information; nor do we collect; store or have access to any of the
+information about how your Jupyter user use Jupyter, or what they do in Jupyter;
+the Jupyter Team　is not aware either of who installs Jupyter.
+
+ - If you use a service provider for Jupyter; they are your vendor, and can
+   answer those questions.
+
+ - If you self-host Jupyter, then it is likely to your IT team to fill in those
+   assessment as all the data is controlled by your IT team.
+
+ - If you still do need a vendor assessment we advise you to contact one of the
+   many companies that provide Jupyter support; We cannot unfortunately give you
+   names out of fairness.
+
