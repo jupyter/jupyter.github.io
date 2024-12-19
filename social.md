@@ -20,6 +20,7 @@ If you are organizing a Jupyter event or have something Jupyter-related that sho
 
 List of channels actively maintained by JMS in alphabetical order:
 
+- Bluesky: https://bsky.app/profile/projectjupyter.bsky.social
 - Discourse: https://discourse.jupyter.org
 - LinkedIn: https://linkedin.com/company/project-jupyter
 - Medium: https://blog.jupyter.org
