@@ -158,8 +158,6 @@ of contributors, and strengthening collaborations.
 #### Round 1: 2018
 
 - [Round 1: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549)
-
-Individual workshops:
 - [Jupyter Widgets workshop](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549)
 - [Jupyter Hackathon in Hawaii](https://blog.jupyter.org/jupyter-hackathon-series-in-hawaii-97b3d1fbce68)
 - [Teaching and Learning with Jupyter](https://blog.jupyter.org/teaching-and-learning-with-jupyter-c1d965f7b93a)
@@ -169,8 +167,6 @@ Individual workshops:
 - [Round 2: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-call-for-proposals-26a8417e5b6a)
 - [Round 2: Announcement of Workshops](https://blog.jupyter.org/jupyter-community-workshops-a7f1dca1735e)
 - [Round 2: 2019 Year in Review](https://blog.jupyter.org/jupyter-community-workshops-2019-year-in-review-8876336924e4)
-
-Individual workshops:
 - [Jupyter Server Design and Roadmap Workshop](https://blog.jupyter.org/jupyter-community-workshop-jupyter-server-design-and-roadmap-workshop-6e6760cc5098): (Luciano Resende)
 - [Building upon the Jupyter Kernel Protocol](https://blog.jupyter.org/field-report-on-the-kernel-community-workshop-a4ad73a1a718) (Sylvain Corlay)
 - [Jupyter nbgrader Hackathon/Code Sprint](https://blog.jupyter.org/https-blog-jupyter-org-university-of-edinburgh-jupyter-community-nbgrader-hackathon-2eff14df298a): (James Slack)
@@ -182,16 +178,12 @@ Individual workshops:
 #### Round 3: 2020-2022
 
 - [Round 3: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-call-for-proposals-for-jan-aug-2020-710f687e30f4)
-
-Individual workshops:
 - Africa Jupyter Community Workshop: (Narcisse Mbunzama)
 - [Building the Jupyter Community in Musculoskeletal Imaging Research](https://blog.jupyter.org/report-on-the-jupyter-community-workshop-77016ab1d49b): (Serena Bonaretti)
 - [An accessibility audit and roadmap for the Jupyter ecosystem](https://blog.jupyter.org/jupyter-accessibility-workshops-wrap-up-8649dfe5f89): (Tania Allard, Isabela Presedo-Floyd)
 
 #### Round 4: 2022-2023
 - [Round 4: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-c7491a3cca00)
-
-Individual workshops:
 - [Jupyter Widgets workshop](https://blog.jupyter.org/jupyter-community-workshop-the-future-of-jupyter-widgets-475f67288da0)
 - [JupyterLite community workshop](https://blog.jupyter.org/report-on-the-jupyterlite-community-workshop-aafaefe254ef)
 - [Jupyter in Education workshop](https://blog.jupyter.org/jupyter-community-workshop-jupyter-for-education-82af9e34b510)
