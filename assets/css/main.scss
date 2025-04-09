@@ -152,16 +152,19 @@
     max-width: 500px;
 }
 
-.con-button button {
-    background-color: #f37726;
-    color: white;
-    margin: 0 .5em;
-    padding: 1em;
-    border-radius: 5px;
-    border: none;
-    font-size: 1em;
-    font-weight: 600;
-    cursor: pointer;
+div.con-buttons {
+    margin-top: 2em;
+    a.con-button {
+        background-color: #f37726;
+        color: white;
+        font-size: 1em;
+        font-weight: 600;
+        margin: 0 .5em;
+        padding: 1em;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
 }
 
 
