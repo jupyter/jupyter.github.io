@@ -2,11 +2,6 @@
 
 This is the source to [Jupyter.org](https://jupyter.org/).
 
-## Build the site locally
-
-The site is built with Jekyll, see [the Jekyll website](https://jekyllrb.com/) for how to customize the build process.
-
-There are a few ways to build the site locally, see the sections below.
 
 ## Where the site is hosted
 
@@ -22,6 +17,12 @@ Netlify will automatically build a preview of the website in an open Pull Reques
 Here's an image of this box on a GitHub PR page:
 
 ![Netlify Preview Button](.github/images/netlify-preview.png)
+
+## Build the site locally
+
+See the sections below for a few ways to build the site locally.
+
+The site is built with Jekyll, see [the Jekyll website](https://jekyllrb.com/) for how to customize the build process.
 
 ### Build the site automatically with `nox`
 
@@ -45,7 +46,6 @@ To build and preview the site locally, follow these steps:
    ```console
    $ nox -s build-live
    ```
-
 
 This will install the needed dependencies in a virtual environment using [the `conda` package manager](https://docs.conda.io/en/latest/). 
 
