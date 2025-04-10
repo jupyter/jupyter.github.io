@@ -92,6 +92,7 @@ jobs:
            --check-links-ignore "https://github.com/[^/]+/?$" \
            --check-links-ignore "https://sloan.org" \
            --check-links-ignore "https://www.bloomberg.com" \
+           --check-links-ignore "https://www.oracle.com" \
            --check-links-ignore "https://opensource.org/licenses/BSD-3-Clause"
 
   lighthouse:
