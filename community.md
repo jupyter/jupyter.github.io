@@ -187,7 +187,7 @@ of contributors, and strengthening collaborations.
 - [Jupyter Widgets workshop](https://blog.jupyter.org/jupyter-community-workshop-the-future-of-jupyter-widgets-475f67288da0)
 - [JupyterLite community workshop](https://blog.jupyter.org/report-on-the-jupyterlite-community-workshop-aafaefe254ef)
 - [Jupyter in Education workshop](https://blog.jupyter.org/jupyter-community-workshop-jupyter-for-education-82af9e34b510)
-- [Jupyter Notebook Format workshop](https://blog.jupyter.org/jupyter-community-workshop-the-notebook-file-format-8133ed606118)
+- [Jupyter Notebook Format workshop](https://blog.jupyter.org/jupyter-notebook-format-workshop-outcomes-c45faf113018)
 
 ### Jupyter Community Calls
 
