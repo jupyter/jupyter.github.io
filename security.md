@@ -17,8 +17,38 @@ you can either:
  - report it to [security@ipython.org](mailto:security@ipython.org) if opening a GHSA is not possible, or you are unsure
    where it will belong.
 
+
+We do not currently run bug bounty programs, and do not currently reward
+vulnerability discovery.
+
 If you prefer to encrypt your security reports,
 you can use [this PGP public key](assets/ipython_security.asc).
+
+
+### Reports to avoid
+
+If you are unsure it is always best to contact us, though as an open source
+project maintained on volunteer time, we only have limited resources to spare,
+so please be mindful of our time.
+
+ - Avoid sending bare report of website scanning tools without some limited
+   understanding saying you found a vulnerability:
+
+    - Example: we receive regular report of js vulnerability or wrong CORS on
+      static websites, mostly jupyter.org and other documentation on
+      `*.readthedocs.io`. As static website those are not affected.
+    - Better:
+      - You ran a tool and think there is vulnerability because you are
+        learning, include you uncertainty in the object/body of the message.
+      - You are a security researcher: Verify the tool claim and try to develop
+        a POC of exploiting the vulnerability/fixing it.
+
+ - Avoid sending mass email to security@ipython.org,
+   (especially with dozen of other emails from bug bounty program in CC)
+
+ - Avoid asking us if we run a bug bounty program on private channel, or reward
+   discovery, discuss it on the public forum.
+
 
 ## Vulnerability information
 
