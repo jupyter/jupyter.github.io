@@ -39,7 +39,7 @@ so please be mindful of our time.
       `*.readthedocs.io`. As static website those are not affected.
     - Better:
       - You ran a tool and think there is vulnerability because you are
-        learning, include you uncertainty in the object/body of the message.
+        learning, include your uncertainty in the object/body of the message.
       - You are a security researcher: Verify the tool claim and try to develop
         a POC of exploiting the vulnerability/fixing it.
 
