@@ -9,16 +9,34 @@ The Jupyter Security Subproject exists to provide help and advice to Jupyter
 users, operators, and developers on security topics and to help coordinate handling
 of security issues.
 
-## Reporting vulnerabilities
+## How to report vulnerabilities
 
 If you believe you've found a security vulnerability in a [Jupyter Subproject](https://jupyter.org/governance/list_of_subprojects.html),
 you can either:
+
  - directly open a GitHub Security Advisory (GHSA) in the relevant repository
  - report it to [security@ipython.org](mailto:security@ipython.org) if opening a GHSA is not possible, or you are unsure
    where it will belong.
 
-If you prefer to encrypt your security reports,
-you can use [this PGP public key](assets/ipython_security.asc).
+**We do not currently run bug bounty programs, and do not currently reward
+vulnerability discovery.**
+
+If you prefer to encrypt your security reports, use [this PGP public key](assets/ipython_security.asc).
+
+### Guidelines for reporting vulnerabilities
+
+- If you are unsure, it is always best to contact us.
+- Remember we are an open source project maintained by volunteers, we have limited resources to spare. Please be mindful of our time.
+- **Avoid** sending basic reports that just use website scanning tools without context or understanding of the problem:
+   - Example: we often receive minimalist reports of JavaScript vulnerability or incorrect CORS on
+     _static_ websites (mostly on jupyter.org and documentation on `*.readthedocs.io`). Static website are not affected by these kinds of issues.
+   - Examples of how to do this more effectively:
+     - You ran a tool and think there is vulnerability because you are learning. In the body of your message, include your analysis and your uncertainty about the problem.
+     - You are a security researcher: Verify the tool claim and try to develop
+       a POC showing how the vulnerability could be exploited, and the fix that could resolve the problem.
+- **Avoid** sending mass emails to `security@ipython.org` (especially when cc'ing dozens of other emails from bug bounty programs)
+- **Avoid** asking if we run a bug bounty programs or reward discovery in a private channel, discuss it in the public forum.
+
 
 ## Vulnerability information
 
@@ -41,8 +59,7 @@ We are working to identify and coordinate security efforts across the Jupyter co
 The [Jupyter Security](https://github.com/jupyter/security) GitHub repo has information how to participate and contribute.
 For discussion, please use the special Discourse [security topic](https://discourse.jupyter.org/c/special-topics/security/48) on the Jupyter Discourse server.
 
-
-## vendor assessments
+## Vendor assessments
 
 Jupyter cannot provide, or fill in "Plan-Risk Assessment", "Hecvat", "Vpat" and
 similar vendor assessing questionnaire.
