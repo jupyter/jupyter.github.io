@@ -30,6 +30,11 @@ channels:
     src: assets/community/mail-list.svg
     alt: Mailing list
     url: https://groups.google.com/forum/?pli=1#!forum/jupyter-research-facilities
+  - title: JupyteLabr Matrix Chatroom
+    description: Matrix Chatroom for Jupyter.
+    src: assets/community/matrix-logo.svg
+    alt: Matrix logo
+    url: https://matrix.to/#/#jupyterlab_jupyterlab:gitter.im
   - title: Jupyter Gitter Chatroom
     description: A real-time chatroom, for general development related discussions.
     src: assets/community/gitter.svg
@@ -122,16 +127,20 @@ This page is for in-person, one-of-a-kind events; for community engagement, see 
 
 This is a calendar of regular online events.  It might not be exhaustive.
 
+## Calendar of Events
 <div class="iframe-container">
   <iframe title="Calendar of Project Jupyter events"
           class="responsive-iframe"
           id="calendariframe"
-          src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=local&amp;src=bTNoZWs2OWRhZzczODF1bXQ4a2NqZDc1dTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZGdwZDM2ZjQzZXQ5Z3JhYm42dGRpbjZwbWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=YXFwa3VpNXE3b2kzMnBrOXRjcDUzaG5zc2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=cGlhaGluZWpqcjZzc3ZpOGlrbWpqb3A2cm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23AD1457&amp;color=%23EF6C00&amp;color=%23616161&amp;color=%23F6BF26&amp;color=%239E69AF"
+          src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=local&amp;src=bTNoZWs2OWRhZzczODF1bXQ4a2NqZDc1dTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23AD1457"
           width="800"
           height="600"
           style="border: 0; overflow: hidden;"></iframe>
 </div>
-<script>document.getElementById("calendariframe").src = document.getElementById("calendariframe").src.replace("ctz=local", "ctz=" + Intl.DateTimeFormat().resolvedOptions().timeZone)</script>
+
+<script>
+  document.getElementById("calendariframe").src = document.getElementById("calendariframe").src.replace("ctz=local", "ctz=" + Intl.DateTimeFormat().resolvedOptions().timeZone)
+</script>
 
 See [this page](https://jupyter.readthedocs.io/en/latest/community/content-community.html#jupyter-wide-meetings) for
 more information.
