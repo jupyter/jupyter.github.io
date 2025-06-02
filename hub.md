@@ -71,6 +71,6 @@ Like all Project Jupyter efforts, JupyterHub is an
 open-source and community-driven project. We'd love for you
 to join our community and contribute code, time, comments, or appreciation.
 
-**[The JupyterHub Gitter Channel](https://gitter.im/jupyterhub/jupyterhub)**
+**[The JupyterHub Zulip Channel](https://jupyter.zulipchat.com/#narrow/channel/469744-jupyterhub)**
 is a place where the JupyterHub community discuses developments in the
 JupyterHub technology, as well as best-practices in deploying and debugging.
