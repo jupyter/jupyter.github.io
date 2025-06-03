@@ -8,7 +8,7 @@ channels:
   - title: Jupyter Forum
     description: A forum for asynchronous communication across the Jupyter community and many of its subprojects.
     src: assets/community/discourse.svg
-    alt: Mailing list
+    alt: Discourse logo
     url: https://discourse.jupyter.org/
   - title: Jupyter Chatroom
     description: For real-time discussion project-wide. Also used by several sub-projects for their team conversation.
