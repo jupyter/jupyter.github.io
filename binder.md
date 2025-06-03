@@ -118,13 +118,12 @@ Like all Project Jupyter efforts, the Binder Project is an
 open-source and community-driven project. We'd love for you
 to join our community and contribute code, time, comments, or appreciation.
 
+* [**The Binder Zulip Channel**](https://jupyter.zulipchat.com/#narrow/channel/469744-jupyterhub) is where real-time conversations happen in the Binder community. This is shared with the JupyterHub project.
+* [**The Binder Community Forum**](https://discourse.jupyter.org/c/binder) has a lot of
+  community interaction and useful information about using, running, and contributing to Binder.
+* [**The JupyterHub Contributing guide**](https://jupyterhub-team-compass.readthedocs.io/en/latest/contribute/index.html) is
+  a great place to start learning how you can contribute to the Binder Project.
 * [**The JupyterHub Team Compass**](https://jupyterhub-team-compass.readthedocs.io/en/latest/) is a resource
   for the JupyterHub community to share information, team practices, and important information.
 * [**The JupyterHub Teams Page**](https://jupyterhub-team-compass.readthedocs.io/en/latest/team/index.html) lists
   the current members of the JupyterHub and Binder teams.
-* [**The JupyterHub Contributing guide**](https://jupyterhub-team-compass.readthedocs.io/en/latest/contribute/index.html) is
-  a great place to start learning how you can contribute to the Binder Project.
-* [**The Binder Gitter Channel**](https://gitter.im/jupyterhub/binder) is where a lot of real-time
-  conversations happen in the Binder community.
-* [**The Binder Community Forum**](https://discourse.jupyter.org/c/binder) has a lot of
-  community interaction and useful information about using, running, and contributing to Binder.

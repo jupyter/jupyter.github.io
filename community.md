@@ -1,25 +1,30 @@
 ---
 layout: page
-title: Get Involved
-tagline: How to join the Project Jupyter community
+title: Get Involved in the Community
+tagline: How to learn about and join our open source community
 permalink: /community
 
 channels:
-  - title: Jupyter GitHub
-    description: A place where the community collaborates on the development of Jupyter software.
-    src: assets/widgets/github.svg
-    alt: GitHub logo
-    url: https://github.com/jupyter/
-  - title: Jupyter Discourse
-    description: A Discourse Forum for a multitude of Jupyter topics.
-    src: assets/community/mail-list.svg
+  - title: Jupyter Forum
+    description: A forum for asynchronous communication across the Jupyter community and many of its subprojects.
+    src: assets/community/discourse.svg
     alt: Mailing list
     url: https://discourse.jupyter.org/
+  - title: Jupyter Chatroom
+    description: For real-time discussion project-wide. Also used by several sub-projects for their team conversation.
+    src: assets/community/zulip-icon.svg
+    alt: Zulip logo
+    url: https://jupyter.zulipchat.com
   - title: Jupyter General Mailing List
     description: A Google Group for general discussions of Jupyter's use.
     src: assets/community/mail-list.svg
     alt: Mailing list
     url: https://groups.google.com/forum/#!forum/jupyter
+  - title: Jupyter GitHub
+    description: A place where the community collaborates on the development of Jupyter software.
+    src: assets/widgets/github.svg
+    alt: GitHub logo
+    url: https://github.com/jupyter/
   - title: Jupyter in Education Mailing List
     description: A Google Group for general discussions of Jupyter's use in education.
     src: assets/community/mail-education.svg
@@ -30,11 +35,6 @@ channels:
     src: assets/community/mail-list.svg
     alt: Mailing list
     url: https://groups.google.com/forum/?pli=1#!forum/jupyter-research-facilities
-  - title: Jupyter Gitter Chatroom
-    description: A real-time chatroom, for general development related discussions.
-    src: assets/community/gitter.svg
-    alt: Gitter logo
-    url: https://gitter.im/jupyter/jupyter
   - title: Jupyter on Stack Overflow
     description: A popular third party site for programmers to ask and answer questions about Jupyter.
     src: assets/community/stack-overflow.svg
@@ -52,52 +52,24 @@ channels:
     url: https://jupyter.readthedocs.io/en/latest/contributing/content-contributor.html
 ---
 
-Jupyter is a community of data enthusiasts who believe in the power of open
-tools and standards for education, research, and data analytics. We welcome
-contributions and contributors of all kinds - whether they come as contributions
-to code, participation in the community, opening issues and pointing out bugs,
-or simply sharing your work with your colleagues and friends.
+Jupyter is an open community of data enthusiasts who believe in the power of open
+tools and standards for education, research, and data analytics.
 
-## Join the Jupyter community
+## Where to learn
 
-If you're interested in joining the Jupyter community (yay!) we recommend
-checking out the Jupyter [Contributing
-guide](https://jupyter.readthedocs.io/en/latest/contributing/content-contributor.html).
-This contains information about the different projects in the Jupyter ecosystem,
-the tools and skills that are useful for each project, and other ways that you
-can become a part of the Jupyter community.
+We welcome contributions and contributors of all kinds - whether they come as contributions to code, participation in the community, opening issues and pointing out bugs, or simply sharing your work with your colleagues and friends.
 
-## Explore our projects
+To learn more about contributing, see the [Jupyter Contributing guide](https://docs.jupyter.org/en/latest/contributing/content-contributor.html).
 
-Jupyter has seen wonderful growth over the past decade. As we have grown, the
-projects now span multiple GitHub organizations. Jupyter projects may be found
-in these organizations:
+Jupyter is organized into sub-projects, each of which has their own goals, practices, and spaces for communication. 
+To get started, see [this list of Jupyter Subprojects](https://jupyter.org/governance/list_of_subprojects.html).
 
-- [jupyter](https://github.com/jupyter)
-- [ipython](https://github.com/ipython)
-- [jupyterhub](https://github.com/jupyterhub)
-- [jupyterlab](https://github.com/jupyterlab)
-- [jupyter-widgets](https://github.com/jupyter-widgets)
-- [jupyter-server](https://github.com/jupyter-server)
-- [jupyter-xeus](https://github.com/jupyter-xeus)
-- [jupyter-lsp](https://github.com/jupyter-lsp)
-- [voila-dashboards](https://github.com/voila-dashboards)
-- [binder-examples](https://github.com/binder-examples)
+## Where to talk
 
-Many organizations have a **team-compass** repo to provide detailed information
-about the sub-community, its meetings, and contribution tips. 
+Jupyter has a number of online communication channels to help keep in touch. Here are several of the most-prominent ones.
 
-## Participate online
-
-Jupyter also has a number of online communication channels to help keep in touch.
-
-As you interact with others in the Jupyter ecosystem, remember that we have a strong
-commitment to being an **open, inclusive, and positive community**. Please read the
-[Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/main/conduct/code_of_conduct.md)
-for guidance on how to interact with others in a way that makes the community thrive.
-
-Below is a short list of Gitter channels, mailing lists, and GitHub repositories
-where you can get involved. **We always welcome participation in the Jupyter community**.
+Remember that we have a strong commitment to being an **open, inclusive, and positive community**. Please read the [Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/main/conduct/code_of_conduct.md)
+for guidance on how to interact with others.
 
 <section class="resourcelist">
   {% for obj in page.channels %}
