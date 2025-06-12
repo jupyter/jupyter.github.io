@@ -14,8 +14,8 @@ of security issues.
 If you believe you've found a security vulnerability in a [Jupyter Subproject](https://jupyter.org/governance/list_of_subprojects.html),
 you can either:
 
- - directly open a GitHub Security Advisory (GHSA) in the relevant repository
- - report it to [security@ipython.org](mailto:security@ipython.org) if opening a GHSA is not possible, or you are unsure
+ - directly open a GitHub Security Advisory (GHSA) in the relevant repository (this is the preferred approach)
+ - report it to [security@jupyter.org](mailto:security@jupyter.org) if opening a GHSA is not possible, or you are unsure
    where it will belong.
 
 **We do not currently run bug bounty programs, and do not currently reward
