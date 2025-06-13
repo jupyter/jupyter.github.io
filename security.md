@@ -11,11 +11,11 @@ of security issues.
 
 ## How to report vulnerabilities
 
-If you believe you've found a security vulnerability in a [Jupyter Subproject](https://jupyter.org/governance/list_of_subprojects.html),
-you can either:
+To report a security vulnerability in a [Jupyter Subproject](https://jupyter.org/governance/list_of_subprojects.html),
+take one of these two actions:
 
- - directly open a GitHub Security Advisory (GHSA) in the relevant repository (this is the preferred approach)
- - report it to [security@jupyter.org](mailto:security@jupyter.org) if opening a GHSA is not possible, or you are unsure
+ 1. **Open a GitHub Security Advisory** (GHSA) in the relevant repository (preferred approach). See [the GitHub instructions for opening security advisories](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability#privately-reporting-a-security-vulnerability).
+ 2. **Send an e-mail to [security@jupyter.org](mailto:security@jupyter.org)** reporting the vulnerability. Only do this if opening a GHSA is not possible, or you are unsure what to do.
    where it will belong.
 
 **We do not currently run bug bounty programs, and do not currently reward
