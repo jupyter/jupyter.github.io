@@ -16,6 +16,7 @@ Install JupyterLab with `pip`:
 ```bash
 pip install jupyterlab
 ```
+
 **Note**: If you install JupyterLab with conda or mamba, we recommend using [the conda-forge channel](https://conda-forge.org/).
 
 Once installed, launch JupyterLab with:
@@ -37,6 +38,16 @@ To run the notebook:
 ```bash
 jupyter notebook
 ```
+
+## Jupyter Desktop
+
+Install Jupyter Desktop with:
+
+```bash
+winget install jupyterlab
+```
+
+**Note**: you can also install Jupyter Desktop by visiting [JupyterLab Desktop Releases](https://github.com/jupyterlab/jupyterlab-desktop/releases) page.
 
 ## Voilà
 
