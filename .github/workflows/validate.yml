@@ -94,7 +94,8 @@ jobs:
            --check-links-ignore "https://www.bloomberg.com" \
            --check-links-ignore "https://www.oracle.com" \
            --check-links-ignore "https://stackoverflow.com" \
-           --check-links-ignore "https://opensource.org/licenses/BSD-3-Clause"
+           --check-links-ignore "https://opensource.org/licenses/BSD-3-Clause" \
+           --check-links-ignore "https://www.cvedetails.com/vulnerability-list/vendor_id-15653/Jupyter.html"
 
   lighthouse:
 
