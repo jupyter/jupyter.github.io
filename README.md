@@ -18,6 +18,16 @@ Here's an image of this box on a GitHub PR page:
 
 ![Netlify Preview Button](.github/images/netlify-preview.png)
 
+## Web analytics (experimental)
+
+We are experimenting with [Plausible.io](https://plausible.io/) for web analytics.
+Access it at this link, using the [1Password](https://ec.jupyter.org/accounts/#password) for login credentials.
+
+Plausible dashboard link: https://plausible.io/jupyter.org/
+
+- See [this issue for updates](https://github.com/jupyter/jupyter.github.io/issues/815).
+- [Here's the change that adds the Plausible script](https://github.com/jupyter/jupyter.github.io/pull/816/files#diff-7c00ab81dd0968f6fb395b5986f71fd56704c48a71f0b9583058f5aaaad03aa7R17).
+
 ## Build the site locally
 
 See the sections below for a few ways to build the site locally.
