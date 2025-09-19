@@ -135,35 +135,6 @@ legal:
             </div>
         </div>
     </div>
-    <div class="jumbotron">
-      <div class="col-md-12">
-          {% for img in page.jumbotron.images %}
-          <div class="jumbotron-image-container">
-              <span>
-                  <img class="img-responsive {{ img.class }}"
-                        src="/assets/homepage/{{ img.src }}"
-                        width={{ img.width }}
-                        height={{ img.height }}
-                        alt="{{ img.alt }}"
-                        loading="eager" />
-              </span>
-          </div>
-          {% endfor %}
-          <img class="img-responsive"
-                src="/assets/homepage/{{ page.jumbotron.background }}"
-                width=747
-                height=313
-                alt="white background"
-                loading="eager" />
-      </div>
-    </div>
-    <div class="container">
-      <div class="col-md-12">
-          <div class="col-md-8 col-md-offset-2">
-          <div class="jumbotron-text">{{ page.jumbotron.text }}</div>
-          </div>
-      </div>
-    </div>
 </header>
     <section>
       {{ content }}
