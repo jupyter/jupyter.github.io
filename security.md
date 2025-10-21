@@ -61,7 +61,7 @@ For discussion, please use the special Discourse [security topic](https://discou
 
 ## Vendor assessments
 
-Jupyter cannot provide, or fill in "Plan-Risk Assessment", "Hecvat", "Vpat" and
+Jupyter cannot provide, or fill in "Plan-Risk Assessment", "Hecvat", "Vpat", "SOC2", "SOC3" and
 similar vendor assessing questionnaire.
 
 You likely have been redirected to this section after contacting the  Jupyter
