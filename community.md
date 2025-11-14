@@ -161,6 +161,9 @@ of contributors, and strengthening collaborations.
 - [Jupyter in Education workshop](https://blog.jupyter.org/jupyter-community-workshop-jupyter-for-education-82af9e34b510)
 - [Jupyter Notebook Format workshop](https://blog.jupyter.org/jupyter-notebook-format-workshop-outcomes-c45faf113018)
 
+#### Round 5: 2025-2026
+- [Round 5: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-are-back-3cca15d02975)
+
 ### Jupyter Community Calls
 
 [Jupyter Community Calls](https://jupyter.readthedocs.io/en/latest/community/content-community.html#jupyter-wide-meetings)
