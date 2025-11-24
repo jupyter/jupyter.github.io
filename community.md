@@ -163,6 +163,7 @@ of contributors, and strengthening collaborations.
 
 #### Round 5: 2025-2026
 - [Round 5: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-are-back-3cca15d02975)
+- [Round 5: Announcement of Workshops](https://blog.jupyter.org/jupyter-community-workshops-early-2026-a9ce9670ba19)
 
 ### Jupyter Community Calls
 
