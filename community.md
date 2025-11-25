@@ -95,13 +95,8 @@ This page is for in-person, one-of-a-kind events; for community engagement, see 
 This is a calendar of regular online events.  It might not be exhaustive.
 
 <div class="iframe-container">
-  <iframe title="Calendar of Project Jupyter events"
-          class="responsive-iframe"
-          id="calendariframe"
-          src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=local&amp;src=m3hek69dag7381umt8kcjd75u4&amp;src=aqpkui5q7oi32pk9tcp53hnssc&amp;src=c_8ab1765b6586745d8b75e92bdc7ca6e46caa12a5f8d950d5f73f326f976144d7&amp;color=%23AD1457&amp;color=%23EF6C00&amp;color=%23616161"
-          width="800"
-          height="600"
-          style="border: 0; overflow: hidden;"></iframe>
+  <iframe title="Calendar of Project Jupyter events" class="responsive-iframe" id="calendariframe" src="https://calendar.google.com/calendar/embed?height=600&
+wkst=1&title=Project%20Jupyter&showPrint=0&src=bTNoZWs2OWRhZzczODF1bXQ4a2NqZDc1dTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=Y184YWIxNzY1YjY1ODY3NDVkOGI3NWU5MmJkYzdjYTZlNDZjYWExMmE1ZjhkOTUwZDVmNzNmMzI2Zjk3NjE0NGQ3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=YXFwa3VpNXE3b2kzMnBrOXRjcDUzaG5zc2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23AD1457&color=%239E69AF&color=%23616161" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
 <script>document.getElementById("calendariframe").src = document.getElementById("calendariframe").src.replace("ctz=local", "ctz=" + Intl.DateTimeFormat().resolvedOptions().timeZone)</script>
 
