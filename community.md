@@ -112,9 +112,11 @@ more information.
 
 Global JupyterCon conferences provide opportunities for the Jupyter community to come together to learn and share.
 
-* [JupyterCon 2017](https://conferences.oreilly.com/jupyter/jup-ny-2017.html) ([videos](https://www.youtube.com/playlist?list=PL055Epbe6d5aP6Ru42r7hk68GTSaclYgi))
-* [JupyterCon 2018](https://conferences.oreilly.com/jupyter/jup-ny.html) ([videos](https://www.youtube.com/playlist?list=PL055Epbe6d5b572IRmYAHkUgcq3y6K3Ae))
+* [JupyterCon 2017 (New York)](https://conferences.oreilly.com/jupyter/jup-ny-2017.html) ([videos](https://www.youtube.com/playlist?list=PL055Epbe6d5aP6Ru42r7hk68GTSaclYgi))
+* [JupyterCon 2018 (New York)](https://conferences.oreilly.com/jupyter/jup-ny.html) ([videos](https://www.youtube.com/playlist?list=PL055Epbe6d5b572IRmYAHkUgcq3y6K3Ae))
 * [JupyterCon 2020 (virtual)](https://jupytercon.com/) ([videos](https://www.youtube.com/c/JupyterCon/videos))
+* [JupyterCon 2023 (Paris)](https://web.archive.org/web/20230715062821/https://www.jupytercon.com) ([videos](https://youtube.com/playlist?list=PL_1BH3ug7n1Ih_Yy2TmM7MZ2zogSLZvzE&si=drGUpsbcpZihlo-t))
+* [JupyterCon 2025 (San Diego)](https://events.linuxfoundation.org/jupytercon/) ([videos](https://youtube.com/playlist?list=PL_1BH3ug7n1LbTQg67bUAK5qEBB3LVgbT&si=no6qhQNXMesAnMDt))
 
 ### Jupyter Community Workshops
 
