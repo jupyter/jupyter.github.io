@@ -104,7 +104,7 @@ data and personal information are stored and used.
  - If you use or plan on using a service provider for Jupyter; they are your
    vendor, and can answer those questions.
 
- - If you self-host or plan on self hosting Jupyter, then it is likely to your
+ - If you self-host or plan on self hosting Jupyter, then it is likely up to your
    IT team to decide and enforce policies as all the data is controlled by your
    IT team.
 
