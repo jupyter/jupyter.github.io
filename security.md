@@ -108,7 +108,7 @@ data and personal information are stored and used.
    IT team to decide and enforce policies as all the data is controlled by your
    IT team.
 
- - If each user deploy on their own machine, then it's up to how each user uses
+ - If each user deploys on their own machine, then it's up to how each user uses
    Jupyter and the method they used to install Jupyter.
 
 ### Jupyter.org/try
