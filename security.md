@@ -89,3 +89,40 @@ the Jupyter Team　is not aware either of who installs Jupyter.
    many companies that provide Jupyter support; We cannot unfortunately give you
    names out of fairness.
 
+## Data retention and Personal informations
+
+This section is similar to the vendor assessment above but is more targeted at
+institutions which are planning to use Jupyter. In particular you may have been
+redirected here if you are from a k-12 institution planning to use Jupyter.
+
+### Jupyter Notebook, JupyterLab, JupyterHub and Similar
+
+The Jupyter team does not provide Jupyter as a service, thus we usually are not
+the right group to contact if you have questions on how your (or your users')
+data and personal information are stored and used. 
+
+ - If you use or plan on using a service provider for Jupyter; they are your
+   vendor, and can answer those questions.
+
+ - If you self-host or plan on self hosting Jupyter, then it is likely up to your
+   IT team to decide and enforce policies as all the data is controlled by your
+   IT team.
+
+ - If each user deploys on their own machine, then it's up to how each user uses
+   Jupyter and the method they used to install Jupyter.
+
+### Jupyter.org/try
+
+The usage of any instances of https://jupyter.org/try is meant only for evaluation of
+Jupyter and not long term usage. Theses instances are ephemeral and do not
+persist any data, or only store data in users' browsers which can be deleted by
+clearing the browser's cache. 
+
+
+### Forums and Chat
+
+The Jupyter community self organised around multiple platforms, in particular
+https://discourse.jupyter.org/ and https://jupyter.zulipchat.com/. Having an
+account on any of those platforms is neither required nor encouraged to use the
+Jupyter Software, and data collection on those platforms are governed by their
+respective platforms.
