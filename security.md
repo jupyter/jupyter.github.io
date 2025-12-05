@@ -123,6 +123,6 @@ clearing the browser's cache.
 
 The Jupyter community self organised around multiple platforms, in particular
 https://discourse.jupyter.org/ and https://jupyter.zulipchat.com/. Having an
-account on any of those platforms is neither required not encouraged to use the
+account on any of those platforms is neither required nor encouraged to use the
 Jupyter Software, and data collection on those platforms are governed by their
 respective platforms.
