@@ -84,6 +84,21 @@ notebook:
       alt: spark logo to represent big data
       src: assets/homepage/spark.svg
 
+binder:
+  headline: 'Binder: Run notebooks from a Git repository'
+  description: Binder lets you turn Git repositories into live, shareable computing environments in the cloud so anyone can run your notebooks without installing anything.
+  class: section-grey
+  image:
+    alt: example Binder session running in a browser
+    src: assets/homepage/jupyterpreview
+    width: 885
+    height: 627
+    loading: lazy
+  buttons:
+  - class:
+    href: /binder
+    text: Learn more about Binder
+
 jupyterhub:
   image:
     alt: jupyterhub logo
@@ -293,6 +308,13 @@ in_use:
       image=page.notebook.image
       buttons=page.notebook.buttons
       features=page.notebook.features
+  %}
+  {% include homepage-section.html
+      class=page.binder.class
+      headline=page.binder.headline
+      description=page.binder.description
+      image=page.binder.image
+      buttons=page.binder.buttons
   %}
 
   <section class="jupyterhub section-grey homepage-section">
