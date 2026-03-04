@@ -179,16 +179,33 @@ legal:
 
         </div>
       </div>
-      <!-- Newsletter subscription -->
-      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-      <script>
-        hbspt.forms.create({
-          portalId: "8112310",
-          formId: "3a79d744-5260-4a98-b069-39defccc8f42",
-          region: "na1"
-        });
-      </script>
-
+      </section>
+      <section class="newsletter">
+          <div class="content content--wide">
+            <h2>Subscribe for updates, event info, webinars, and the latest community news</h2>
+            <!-- Newsletter subscription -->
+            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+            <script>
+              hbspt.forms.create({
+                portalId: "8112310",
+                formId: "3a79d744-5260-4a98-b069-39defccc8f42",
+                region: "na1",
+                css: "\
+                  .hs-form { display: flex; flex-wrap: wrap; gap: 1em; align-items: flex-end; }\
+                  .hs-form-field { flex: 1 1 200px; position: relative; padding-bottom: 1.5em; }\
+                  .hs-form-field .input { margin: 0 !important; }\
+                  .hs-input { width: 100% !important; background: transparent !important; border: none !important; border-bottom: 2px solid #4d4d4d !important; padding: 0.6em 0 !important; margin: 0 !important; outline: none !important; box-shadow: none !important; }\
+                  .hs-input:focus { border-bottom-color: #000 !important; }\
+                  .hs-input.error { border-bottom-style: dashed !important; }\
+                  select.hs-input { appearance: auto; }\
+                  .hs-richtext { flex: 1 1 300px; color: #4d4d4d; font-size: 0.85em; line-height: 1.5; }\
+                  .hs-submit { flex: 0 0 auto; }\
+                  .hs-button { background: #f37626 !important; color: #fff !important; border: none !important; padding: 0.75em 3em; font-size: 1.1em; font-weight: 600; cursor: pointer; border-radius: 4px; }\
+                  .hs-error-msgs { position: absolute; left: 0; bottom: 0; color: #4d4d4d; list-style: none; padding: 0; margin: 0; font-size: 0.8em; }\
+                "
+              });
+            </script>
+          </div>
       </section>
       <section class="footer-text">
         <div class="content content--wide">
