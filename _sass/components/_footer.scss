@@ -48,11 +48,6 @@
       padding: 0;
     }
     // Form renders in iframe; styles injected via css param in hbspt.forms.create()
-    // Fixed height prevents iframe resize when error messages appear
-    iframe {
-      width: 100%;
-      height: 200px;
-    }
   }
   .footer-text {
     background-color: $orange;
