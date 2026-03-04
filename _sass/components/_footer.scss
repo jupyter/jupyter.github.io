@@ -64,6 +64,10 @@
       color: $black;
       padding-top: 10px;
       font-size: 0.9em;
+      a {
+        color: $black;
+        text-decoration: underline;
+      }
     }
   }
 }
