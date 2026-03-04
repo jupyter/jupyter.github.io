@@ -75,6 +75,13 @@ legal:
     <link rel="apple-touch-icon" sizes="167x167" href="/assets/favicons/apple-touch-icon-167x167.png">
     <link rel="me" href="https://hachyderm.io/@ProjectJupyter">
     <script>console.log('Welcome to Project Jupyter! Explore the various tools available and their corresponding documentation. If you are interested in contributing to the platform, please visit the community resources section at https://jupyter.org/community.html.')</script>
+    <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(event) {
+        anchors.add();
+      });
+    </script>
+
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://plausible.io/js/pa-B75UO5--FNXYQSG7GBWkf.js"></script>
     <script>
@@ -182,7 +189,7 @@ legal:
       </section>
       <section class="newsletter">
           <div class="content content--wide">
-            <h2>Subscribe for updates, event info, webinars, and the latest community news</h2>
+            <h2 id="newsletter">Subscribe for updates, event info, webinars, and the latest community news</h2>
             <!-- Newsletter subscription -->
             <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
             <script>
