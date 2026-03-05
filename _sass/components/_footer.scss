@@ -38,6 +38,17 @@
       }
     }
   }
+  .newsletter {
+    background-color: lighten($orange, 24%);
+    h2 {
+      color: $black;
+      font-size: 1.3em;
+      font-weight: bold;
+      margin: 0 0 1.5em 0;
+      padding: 0;
+    }
+    // Form renders in iframe; styles injected via css param in hbspt.forms.create()
+  }
   .footer-text {
     background-color: $orange;
     img {
@@ -48,6 +59,10 @@
       color: $black;
       padding-top: 10px;
       font-size: 0.9em;
+      a {
+        color: $black;
+        text-decoration: underline;
+      }
     }
   }
 }
