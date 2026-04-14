@@ -27,6 +27,7 @@ It is a combination of earlier-stage projects that undergo more rapid developmen
 ## Where to discuss AI in the Jupyter community?
 
 For asynchronous chat, the [JupyterLab channel in Zulip](https://jupyter.zulipchat.com/#narrow/channel/469762-jupyterlab) is your best bet.
+Synchronous conversations and demos happen during the weekly Jupyter AI meeting (see [calendar](https://jupyter.org/community#calendar)) and [community workshops](https://jupyter.org/community#jupyter-community-workshops).
 Because the Jupyter AI project is incubating within the Jupyter Frontends subproject, this channel is the best place to have developer-related conversations about AI.
 
 ## Frequently Asked Questions
