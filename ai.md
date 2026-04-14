@@ -22,7 +22,7 @@ It is a combination of earlier-stage projects that undergo more rapid developmen
 
 ### JupyterLite AI
 
-[jupyterlite/ai](https://github.com/jupyterlite/ai) provides AI-assisted features for [JupyterLite](https://jupyterlite.readthedocs.io/), the in-browser Jupyter distribution. It is maintained within the [JupyterLite organization](https://github.com/jupyterlite).
+[jupyterlite/ai](https://github.com/jupyterlite/ai) provides AI code completions and chat for JupyterLab, Notebook 7 and JupyterLite. It is maintained within the [JupyterLite organization](https://github.com/jupyterlite).
 
 ## Where to discuss AI in the Jupyter community?
 
