@@ -17,7 +17,7 @@ The goal of this page is to point you in the right direction to learn more about
 
 ### Jupyter AI Contrib
 
-[jupyter-ai-contrib](https://github.com/jupyter-ai-contrib) is a community organization hosting extensions, integrations, and experiments that build on Jupyter AI.
+[jupyter-ai-contrib](https://github.com/jupyter-ai-contrib) is a community organization hosting extensions, integrations, and experiments that compose or build on Jupyter AI.
 It is a combination of earlier-stage projects that undergo more rapid development and prototyping, and community-maintained projects.
 
 ### JupyterLite AI
