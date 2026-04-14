@@ -13,7 +13,7 @@ The goal of this page is to point you in the right direction to learn more about
 
 ### Jupyter AI
 
-[Jupyter AI](https://github.com/jupyterlab/jupyter-ai) is an ecosystem of tools for working with AI and LLMs in Jupyter interfaces. It is currently incubating as a part of the [Jupyter-Frontends subproject](https://github.com/jupyterlab/frontends-team-compass).
+[Jupyter AI](https://github.com/jupyterlab/jupyter-ai) is an extension providing a set of tools for working with AI and LLMs in Jupyter interfaces. It is currently incubating as a part of the [Jupyter-Frontends subproject](https://github.com/jupyterlab/frontends-team-compass).
 
 ### Jupyter AI Contrib
 
