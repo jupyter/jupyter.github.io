@@ -32,6 +32,10 @@ Because the Jupyter AI project is incubating within the Jupyter Frontends subpro
 
 ## Frequently Asked Questions
 
+### What is the difference between `jupyter-ai` and `jupyterlite/ai`
+
+Both projects integrate AI features into JupyterLab and Notebook v7+ interfaces. `jupyterlite/ai` does not depend on a server component which makes it possible to use it with JupyterLite, the in-browser Jupyter distribution. `jupyter-ai` enables agentic workflows that can continue to run on the server even when the browser is closed or disconnected. Server dependency distinction aside, the set of features overlaps, with both packages implementing agentic workflows and tool calling. Notably, `jupyterlite/ai` also implements AI code completion, and `jupyter-ai` implements multi-agent workflow.
+
 ### Does Jupyter have an AI contribution policy?
 
 Not yet - Jupyter is primarily organized into semi-independent subprojects, each of which has their own practices and policies for contributing.
