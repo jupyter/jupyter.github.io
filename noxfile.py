@@ -2,7 +2,7 @@ import nox
 
 nox.options.reuse_existing_virtualenvs = True
 
-CONDA_DEPS = ["c-compiler", "compilers", "cxx-compiler", "ruby", "python=3.10"]
+CONDA_DEPS = ["c-compiler", "compilers", "cxx-compiler", "ruby<4", "python=3.10"]
 
 def install_deps(session):
     # Jekyll w/ Conda installation instructions roughly pulled from
@@ -12,12 +12,12 @@ def install_deps(session):
     session.run(*"bundle install".split())
     
 
-@nox.session(name="build-live", venv_backend='conda')
+@nox.session(name="build-live", venv_backend='micromamba|mamba|conda')
 def build_live(session):
     install_deps(session)
     session.run(*"bundle exec jekyll serve liveserve".split())
 
-@nox.session(venv_backend='conda')
+@nox.session(venv_backend='micromamba|mamba|conda')
 def build(session):
     install_deps(session)
     session.run(*"bundle exec jekyll build".split())
