@@ -1,12 +1,14 @@
 @import "settings/colors";
 
 .footer {
+  font-size:18px;
+  line-height:1.2;
   margin-top: 30px;
   section {
     padding: 2em;
   }
   .linklists {
-    background-color: lighten($orange, 12.5%);
+    background-color: $medium-dark-gray;
     .content {
       display: flex;
       flex-direction: row;
@@ -15,7 +17,7 @@
       align-items: start;
     }
     .footer-links {
-      color: $black;
+      color: $white;
       min-width: 150px;
       margin: 0.5em 0;
       h2 {
@@ -23,25 +25,27 @@
         font-weight: bold;
         margin: 0 0 1em 0;
         padding: 0;
+        &:not(:first-child) {
+          margin-top: 2em;
+        }
       }
       ul {
-        margin: 0 0 0 0;
         padding: 0;
         list-style-type: none;
         li {
           padding: 0;
           margin: 0 0 0.75em 0;
           a {
-            color: $black;
+            color: $white;
           }
         }
       }
     }
   }
   .newsletter {
-    background-color: lighten($orange, 24%);
+    background-color: $dark-gray;
     h2 {
-      color: $black;
+      color: $white;
       font-size: 1.3em;
       font-weight: bold;
       margin: 0 0 1.5em 0;
@@ -50,17 +54,17 @@
     // Form renders in iframe; styles injected via css param in hbspt.forms.create()
   }
   .footer-text {
-    background-color: $orange;
+    background-color: $dark-gray;
     img {
       margin: 1em 0;
       color: $black;
     }
     p {
-      color: $black;
+      color: $white;
       padding-top: 10px;
       font-size: 0.9em;
       a {
-        color: $black;
+        color: $white;
         text-decoration: underline;
       }
     }

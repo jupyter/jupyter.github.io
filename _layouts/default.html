@@ -69,6 +69,7 @@ legal:
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
     <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-touch-icon-120x120.png">
@@ -96,10 +97,10 @@ legal:
         <div class="navbar-header">
             <a class="navbar-brand" href="/">
                <picture>
-                <source media="(max-width: 767px)" srcset="/assets/logos/logomark-orangebody-greyplanets.svg">
-                <source media="(min-width: 768px)" srcset="/assets/logos/rectanglelogo-greytext-orangebody-greymoons.svg">
+                <source media="(max-width: 767px)" srcset="/assets/jupyter/logo/logomark-orangebody-greyplanets.svg">
+                <source media="(min-width: 768px)" srcset="/assets/jupyter/logo/rectanglelogo-greytext-orangebody-greymoons.svg">
                 <img class="navbar-logo"
-                     src="/assets/logos/rectanglelogo-greytext-orangebody-greymoons.svg"
+                     src="/assets/jupyter/logo/rectanglelogo-greytext-orangebody-greymoons.svg"
                      alt="Jupyter Home"
                      height=40
                      loading="eager" />
@@ -202,15 +203,19 @@ legal:
                 css: "\
                   .hs-form { display: flex; flex-wrap: wrap; gap: 1em; align-items: flex-end; }\
                   .hs-form-field { flex: 1 1 200px; position: relative; padding-bottom: 1.5em; }\
+                  .hs-form-field label { color: #fff !important; }\
                   .hs-form-field .input { margin: 0 !important; }\
-                  .hs-input { width: 100% !important; background: transparent !important; border: none !important; border-bottom: 2px solid #4d4d4d !important; padding: 0.6em 0 !important; margin: 0 !important; outline: none !important; box-shadow: none !important; }\
-                  .hs-input:focus { border-bottom-color: #000 !important; }\
+                  .hs-input { width: 100% !important; background: transparent !important; color: #fff !important; border: none !important; border-bottom: 2px solid #b3b3b3 !important; padding: 0.6em 0 !important; margin: 0 !important; outline: none !important; box-shadow: none !important; }\
+                  .hs-input::placeholder { color: #d9d9d9 !important; opacity: 1 !important; }\
+                  .hs-input:focus { border-bottom-color: #fff !important; }\
                   .hs-input.error { border-bottom-style: dashed !important; }\
-                  select.hs-input { appearance: auto; }\
-                  .hs-richtext { flex: 1 1 300px; color: #000; font-size: 0.85em; line-height: 1.5; }\
+                  select.hs-input { appearance: auto; color: #fff !important; }\
+                  select.hs-input option { color: #000; }\
+                  .hs-richtext { flex: 1 1 300px; color: #fff; font-size: 0.85em; line-height: 1.5; }\
+                  .hs-richtext a { color: inherit; text-decoration: underline; }\
                   .hs-submit { flex: 0 0 auto; }\
                   .hs-button { background: #f37626 !important; color: #fff !important; text-shadow: 0px 0px 4px #000 !important; border: none !important; padding: 0.75em 3em; font-size: 1.1em; font-weight: 600; cursor: pointer; border-radius: 4px; }\
-                  .hs-error-msgs { position: absolute; left: 0; bottom: 0; color: #000; list-style: none; padding: 0; margin: 0; font-size: 0.8em; }\
+                  .hs-error-msgs { position: absolute; left: 0; bottom: 0; color: #ffb3b3; list-style: none; padding: 0; margin: 0; font-size: 0.8em; }\
                 "
               });
             </script>
@@ -218,7 +223,6 @@ legal:
       </section>
       <section class="footer-text">
         <div class="content content--wide">
-          <img src="/assets/logos/rectanglelogo-blacktext-blackbody-blackplanets.svg" width="189" height="51" alt="Project Jupyter logo">
           <p>
               The Jupyter® and Jupyter Logo® trademarks are registered with the U.S. Patent & Trademark Office by <a href="https://lf-charities.org/">LF Charities</a>. © {{site.time | date: '%Y' }}
           </p>
