@@ -21,8 +21,6 @@ take one of these two actions:
 **We do not currently run bug bounty programs, and do not currently reward
 vulnerability discovery.**
 
-If you prefer to encrypt your security reports, use [this PGP public key](assets/ipython_security.asc).
-
 ### Guidelines for reporting vulnerabilities
 
 - If you are unsure, it is always best to contact us.
