@@ -37,7 +37,7 @@ Please note that we will vet content against our current editorial review backlo
 - *Create a Medium account*. If you are new to Medium, create an account by following these [instructions](https://help.medium.com/hc/en-us/articles/115004915268-Sign-in-or-sign-up-to-Medium).
 - *Request permissions*. Email the Jupyter Media Strategy working group (JMS)  at jupyter-media-strategy@googlegroups.com with your Medium handle to be added as a writer of the blog. Once you are added as the authorized writer, you should receive an email that allows you to upload your blog.
 - *Submit your story*. For step by step instructions see the following Medium [article](https://help.medium.com/hc/en-us/articles/213904978-Add-a-draft-or-post-to-publication).
-- *Request review*. Email the JMS at jupyter-media-strategy@googlegroups.com confirming you have submitted the story.  and provide suggested social media text and image.
+- *Request review*. Email the JMS at jupyter-media-strategy@googlegroups.com confirming you have submitted the story, and provide suggested social media text and image.
 
 ## BLOG: Social media amplification
 Project Jupyter has various [social media channels](/social), provide the following information when requesting review:
@@ -49,4 +49,4 @@ Project Jupyter has various [social media channels](/social), provide the follow
 The Jupyter blog is the primary channel with which Jupyter communicates with the community. However, occasionally there are messages for which no blog post exists and the JMS will consider amplifying posts on Mastodon.  Mastodon is our preferred channel as it best reflects the values of Project Jupyter.
 - Content - max 500 characters or a link to another Mastodon post
 - Image for the post (if one is available)
-- Link to your work, for example a Github link (this will auto-generate an image)
+- Link to your work, for example a GitHub link (this will auto-generate an image)
