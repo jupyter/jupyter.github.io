@@ -21,8 +21,6 @@ take one of these two actions:
 **We do not currently run bug bounty programs, and do not currently reward
 vulnerability discovery.**
 
-If you prefer to encrypt your security reports, use [this PGP public key](assets/ipython_security.asc).
-
 ### Guidelines for reporting vulnerabilities
 
 - If you are unsure, it is always best to contact us.
@@ -34,7 +32,7 @@ If you prefer to encrypt your security reports, use [this PGP public key](assets
      - You ran a tool and think there is vulnerability because you are learning. In the body of your message, include your analysis and your uncertainty about the problem.
      - You are a security researcher: Verify the tool claim and try to develop
        a POC showing how the vulnerability could be exploited, and the fix that could resolve the problem.
-- **Avoid** sending mass emails to `security@ipython.org` (especially when cc'ing dozens of other emails from bug bounty programs)
+- **Avoid** sending mass emails to `security@jupyter.org` (especially when cc'ing dozens of other emails from bug bounty programs)
 - **Avoid** asking if we run a bug bounty programs or reward discovery in a private channel, discuss it in the public forum.
 
 
