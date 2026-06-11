@@ -33,4 +33,3 @@ List of channels considered inactive but managed by the JMS:
 
 - Facebook: <https://facebook.com/projectjupyter>
 - Slack JupyterCon 2023: <https://jupyterconworkspace.slack.com>
-- Slack JupyterLab: <https://jupyterlabworkspace.slack.com>
