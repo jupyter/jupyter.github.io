@@ -127,6 +127,26 @@ legal:
                    {{nav.title}}
                </a>
             </li>
+            {%- if nav.title == "Community" %}
+            <li class="navbar-dropdown dropdown">
+                <button type="button"
+                        class="navbar-dropdown-toggle"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                    Subprojects
+                </button>
+                <ul class="navbar-dropdown-menu dropdown-menu">
+                {%- for obj in layout.projects -%}
+                <li>
+                    <a href="{{ obj.url }}"
+                       {%- if obj.newpage %} target="_blank" rel="noopener noreferrer" {% endif %}>
+                        {{ obj.title }}
+                    </a>
+                </li>
+                {%- endfor %}
+                </ul>
+            </li>
+            {%- endif %}
             {%- endfor %}
             </ul>
         </div>

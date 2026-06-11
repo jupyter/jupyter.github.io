@@ -102,6 +102,77 @@
         clear: both;
       }
     }
+    .navbar-dropdown-toggle {
+      background: transparent;
+      border: 0;
+      color: $black;
+      cursor: pointer;
+      font: inherit;
+      padding: 0;
+      transition: color 0.15s linear;
+      &:hover,
+      &:focus {
+        color: $dark-orange;
+      }
+      &::after {
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid currentColor;
+        content: "";
+        display: inline-block;
+        margin-left: 6px;
+        vertical-align: middle;
+      }
+    }
+    .navbar-dropdown-menu {
+      background-color: $white;
+      border: 1px solid $light-gray;
+      left: 0;
+      list-style: none;
+      margin: 8px 0 0;
+      min-width: 190px;
+      opacity: 0;
+      padding: 8px 0;
+      pointer-events: none;
+      position: absolute;
+      top: 100%;
+      transition: opacity 0.15s linear, visibility 0.15s linear;
+      visibility: hidden;
+      z-index: 1000;
+      &.show {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+      }
+      li {
+        clear: none;
+        float: none;
+        padding: 0;
+      }
+      a {
+        display: block;
+        padding: 8px 16px;
+        white-space: nowrap;
+      }
+      @media (max-width: $breakpoint-l) {
+        background-color: transparent;
+        border: 0;
+        margin: 8px 0 0 12px;
+        max-height: 0;
+        min-width: 0;
+        overflow: hidden;
+        padding: 0;
+        position: static;
+        transition: max-height 0.35s ease, opacity 0.15s linear, visibility 0.15s linear;
+        &.show {
+          max-height: 20em;
+        }
+        a {
+          padding: 6px 0;
+          white-space: normal;
+        }
+      }
+    }
   }
   .hamburger {
     position: relative;
