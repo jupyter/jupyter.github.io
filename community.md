@@ -27,7 +27,7 @@ channels:
     url: https://groups.google.com/forum/#!forum/jupyter
 ---
 
-Jupyter is an open community of data enthusiasts who believe in the power of open
+Jupyter is an open community including educators, developers, scientists, and data enthusiasts who believe in the power of open
 tools and standards for education, research, and data analytics.
 
 ## Where to learn
