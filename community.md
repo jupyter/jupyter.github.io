@@ -17,7 +17,7 @@ channels:
     url: https://discourse.jupyter.org/
   - title: Jupyter GitHub
     description: A place where the community collaborates on the development of Jupyter software.
-    src: assets/widgets/github.svg
+    src: assets/widgets/GitHub_Invertocat_Black.svg
     alt: GitHub logo
     url: https://github.com/jupyter/
   - title: Jupyter General Mailing List
