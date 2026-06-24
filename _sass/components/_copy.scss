@@ -1,6 +1,7 @@
 @import "settings/fonts";
 
-p {
+p,
+summary {
   font-family: $font-family-sans-serif;
   // Increase font size for easier reading + a11y
   font-size: 18px;

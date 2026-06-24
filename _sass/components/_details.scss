@@ -1,0 +1,7 @@
+// Restore the disclosure triangle on <summary>.
+// Bootstrap's normalize sets `summary { display: block }`, which suppresses
+// the marker the browser only draws when summary is `display: list-item`.
+summary {
+  display: list-item;
+  cursor: pointer;
+}

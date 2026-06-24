@@ -5,55 +5,32 @@ tagline: How to learn about and join our open source community
 permalink: /community
 
 channels:
-  - title: Jupyter Forum
-    description: A forum for asynchronous communication across the Jupyter community and many of its subprojects.
-    src: assets/community/discourse.svg
-    alt: Discourse logo
-    url: https://discourse.jupyter.org/
   - title: Jupyter Chatroom
     description: For real-time discussion project-wide. Also used by several sub-projects for their team conversation.
     src: assets/community/zulip-icon.svg
     alt: Zulip logo
     url: https://jupyter.zulipchat.com
+  - title: Jupyter Forum
+    description: A forum for asynchronous communication across the Jupyter community and many of its subprojects.
+    src: assets/community/discourse.svg
+    alt: Discourse logo
+    url: https://discourse.jupyter.org/
+  - title: Jupyter GitHub
+    description: A place where the community collaborates on the development of Jupyter software.
+    src: assets/widgets/GitHub_Invertocat_Black.svg
+    alt: GitHub logo
+    url: https://github.com/jupyter/
   - title: Jupyter General Mailing List
     description: A Google Group for general discussions of Jupyter's use.
     src: assets/community/mail-list.svg
     alt: Mailing list
     url: https://groups.google.com/forum/#!forum/jupyter
-  - title: Jupyter GitHub
-    description: A place where the community collaborates on the development of Jupyter software.
-    src: assets/widgets/github.svg
-    alt: GitHub logo
-    url: https://github.com/jupyter/
-  - title: Jupyter in Education Mailing List
-    description: A Google Group for general discussions of Jupyter's use in education.
-    src: assets/community/mail-education.svg
-    alt: Education
-    url: https://groups.google.com/forum/#!forum/jupyter-education
-  - title: Jupyter for Research Facilities
-    description: A Google Group for discussions of Jupyter's use at scientific research facilities (such as X-ray light sources, observatories, supercomputers, etc.).
-    src: assets/community/mail-list.svg
-    alt: Mailing list
-    url: https://groups.google.com/forum/?pli=1#!forum/jupyter-research-facilities
-  - title: Jupyter on Stack Overflow
-    description: A popular third party site for programmers to ask and answer questions about Jupyter.
-    src: assets/community/stack-overflow.svg
-    alt: Stack Overflow logo
-    url: https://stackoverflow.com/questions/tagged/jupyter
-  - title: Jupyter Community Guides
-    description: Information about community, communication and governance.
-    src: assets/community/documentation.svg
-    alt: Documentation
-    url: https://jupyter.readthedocs.io/en/latest/community/content-community.html
-  - title: Jupyter Contributor Guides
-    description: Contribution guidelines.
-    src: assets/community/documentation.svg
-    alt: Documentation
-    url: https://jupyter.readthedocs.io/en/latest/contributing/content-contributor.html
 ---
 
-Jupyter is an open community of data enthusiasts who believe in the power of open
+Jupyter is an open community including educators, developers, scientists, and data enthusiasts who believe in the power of open
 tools and standards for education, research, and data analytics.
+
+In our community, we have [online spaces](#where-to-talk) and [virtual and in-person meetings](#live-events).
 
 ## Where to learn
 
@@ -66,7 +43,7 @@ To get started, see [this list of Jupyter Subprojects](https://jupyter.org/gover
 
 ## Where to talk
 
-Jupyter has a number of online communication channels to help keep in touch. Here are several of the most-prominent ones.
+Jupyter has a number of online communication channels as well as regular virtual and in-person events. To learn more about the Jupyter community, see the [Jupyter Community Guide](https://docs.jupyter.org/en/latest/community/content-community.html).
 
 Remember that we have a strong commitment to being an **open, inclusive, and positive community**. Please read the [Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/main/conduct/code_of_conduct.md)
 for guidance on how to interact with others.
@@ -88,11 +65,9 @@ for guidance on how to interact with others.
 Project Jupyter events provide a forum for community members to come together in person
 or virtually to share and learn from each other.
 
-This page is for in-person, one-of-a-kind events; for community engagement, see the community page. 
-
 ### Calendar
 
-This is a calendar of regular online events.  It might not be exhaustive.
+This is a calendar of regular online and in-person events.
 
 <div class="iframe-container">
   <iframe title="Calendar of Project Jupyter events" class="responsive-iframe" id="calendariframe" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&title=Project%20Jupyter&src=bTNoZWs2OWRhZzczODF1bXQ4a2NqZDc1dTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=Y184YWIxNzY1YjY1ODY3NDVkOGI3NWU5MmJkYzdjYTZlNDZjYWExMmE1ZjhkOTUwZDVmNzNmMzI2Zjk3NjE0NGQ3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=YXFwa3VpNXE3b2kzMnBrOXRjcDUzaG5zc2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23AD1457&color=%239E69AF&color=%23616161" style="border:0;overflow:hidden" width="800" height="600"></iframe>
@@ -122,6 +97,9 @@ Much of Jupyter's work is accomplished through remote, online collaboration; yet
 we have found deep value in focused in-person work over a few days. These in-person events are
 particularly useful for tackling challenging development and design projects, growing the community
 of contributors, and strengthening collaborations.
+
+<details markdown="1">
+<summary>See past community workshops.</summary>
 
 #### Round 1: 2018
 
@@ -161,6 +139,8 @@ of contributors, and strengthening collaborations.
 - [Round 5: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-are-back-3cca15d02975)
 - [Round 5: Announcement of Workshops](https://blog.jupyter.org/jupyter-community-workshops-early-2026-a9ce9670ba19)
 - [Round 5: Workshop Submission and List of Workshops](https://events.linuxfoundation.org/jupyter-workshops/)
+
+</details>
 
 ### Jupyter Community Calls
 
