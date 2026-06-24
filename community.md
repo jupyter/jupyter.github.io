@@ -30,6 +30,8 @@ channels:
 Jupyter is an open community including educators, developers, scientists, and data enthusiasts who believe in the power of open
 tools and standards for education, research, and data analytics.
 
+In our community, we have [online spaces](#where-to-talk) and [virtual and in-person meetings](#live-events).
+
 ## Where to learn
 
 We welcome contributions and contributors of all kinds - whether they come as contributions to code, participation in the community, opening issues and pointing out bugs, or simply sharing your work with your colleagues and friends.
