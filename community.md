@@ -98,6 +98,9 @@ we have found deep value in focused in-person work over a few days. These in-per
 particularly useful for tackling challenging development and design projects, growing the community
 of contributors, and strengthening collaborations.
 
+<details markdown="1">
+<summary>See past community workshops.</summary>
+
 #### Round 1: 2018
 
 - [Round 1: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549)
@@ -136,6 +139,8 @@ of contributors, and strengthening collaborations.
 - [Round 5: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-are-back-3cca15d02975)
 - [Round 5: Announcement of Workshops](https://blog.jupyter.org/jupyter-community-workshops-early-2026-a9ce9670ba19)
 - [Round 5: Workshop Submission and List of Workshops](https://events.linuxfoundation.org/jupyter-workshops/)
+
+</details>
 
 ### Jupyter Community Calls
 
