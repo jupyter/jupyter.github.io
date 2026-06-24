@@ -5,51 +5,26 @@ tagline: How to learn about and join our open source community
 permalink: /community
 
 channels:
-  - title: Jupyter Forum
-    description: A forum for asynchronous communication across the Jupyter community and many of its subprojects.
-    src: assets/community/discourse.svg
-    alt: Discourse logo
-    url: https://discourse.jupyter.org/
   - title: Jupyter Chatroom
     description: For real-time discussion project-wide. Also used by several sub-projects for their team conversation.
     src: assets/community/zulip-icon.svg
     alt: Zulip logo
     url: https://jupyter.zulipchat.com
-  - title: Jupyter General Mailing List
-    description: A Google Group for general discussions of Jupyter's use.
-    src: assets/community/mail-list.svg
-    alt: Mailing list
-    url: https://groups.google.com/forum/#!forum/jupyter
+  - title: Jupyter Forum
+    description: A forum for asynchronous communication across the Jupyter community and many of its subprojects.
+    src: assets/community/discourse.svg
+    alt: Discourse logo
+    url: https://discourse.jupyter.org/
   - title: Jupyter GitHub
     description: A place where the community collaborates on the development of Jupyter software.
     src: assets/widgets/github.svg
     alt: GitHub logo
     url: https://github.com/jupyter/
-  - title: Jupyter in Education Mailing List
-    description: A Google Group for general discussions of Jupyter's use in education.
-    src: assets/community/mail-education.svg
-    alt: Education
-    url: https://groups.google.com/forum/#!forum/jupyter-education
-  - title: Jupyter for Research Facilities
-    description: A Google Group for discussions of Jupyter's use at scientific research facilities (such as X-ray light sources, observatories, supercomputers, etc.).
+  - title: Jupyter General Mailing List
+    description: A Google Group for general discussions of Jupyter's use.
     src: assets/community/mail-list.svg
     alt: Mailing list
-    url: https://groups.google.com/forum/?pli=1#!forum/jupyter-research-facilities
-  - title: Jupyter on Stack Overflow
-    description: A popular third party site for programmers to ask and answer questions about Jupyter.
-    src: assets/community/stack-overflow.svg
-    alt: Stack Overflow logo
-    url: https://stackoverflow.com/questions/tagged/jupyter
-  - title: Jupyter Community Guides
-    description: Information about community, communication and governance.
-    src: assets/community/documentation.svg
-    alt: Documentation
-    url: https://jupyter.readthedocs.io/en/latest/community/content-community.html
-  - title: Jupyter Contributor Guides
-    description: Contribution guidelines.
-    src: assets/community/documentation.svg
-    alt: Documentation
-    url: https://jupyter.readthedocs.io/en/latest/contributing/content-contributor.html
+    url: https://groups.google.com/forum/#!forum/jupyter
 ---
 
 Jupyter is an open community of data enthusiasts who believe in the power of open
@@ -66,7 +41,7 @@ To get started, see [this list of Jupyter Subprojects](https://jupyter.org/gover
 
 ## Where to talk
 
-Jupyter has a number of online communication channels to help keep in touch. Here are several of the most-prominent ones.
+Jupyter has a number of online communication channels to help keep in touch. Here are several of the most prominent ones. To learn more about the Jupyter community, see the [Jupyter Community Guide](https://docs.jupyter.org/en/latest/community/content-community.html).
 
 Remember that we have a strong commitment to being an **open, inclusive, and positive community**. Please read the [Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/main/conduct/code_of_conduct.md)
 for guidance on how to interact with others.
