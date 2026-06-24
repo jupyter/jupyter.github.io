@@ -41,7 +41,7 @@ To get started, see [this list of Jupyter Subprojects](https://jupyter.org/gover
 
 ## Where to talk
 
-Jupyter has a number of online communication channels to help keep in touch. Here are several of the most prominent ones. To learn more about the Jupyter community, see the [Jupyter Community Guide](https://docs.jupyter.org/en/latest/community/content-community.html).
+Jupyter has a number of online communication channels as well as regular virtual and in-person events. To learn more about the Jupyter community, see the [Jupyter Community Guide](https://docs.jupyter.org/en/latest/community/content-community.html).
 
 Remember that we have a strong commitment to being an **open, inclusive, and positive community**. Please read the [Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/main/conduct/code_of_conduct.md)
 for guidance on how to interact with others.
@@ -63,11 +63,9 @@ for guidance on how to interact with others.
 Project Jupyter events provide a forum for community members to come together in person
 or virtually to share and learn from each other.
 
-This page is for in-person, one-of-a-kind events; for community engagement, see the community page. 
-
 ### Calendar
 
-This is a calendar of regular online events.  It might not be exhaustive.
+This is a calendar of regular online and in-person events.
 
 <div class="iframe-container">
   <iframe title="Calendar of Project Jupyter events" class="responsive-iframe" id="calendariframe" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&title=Project%20Jupyter&src=bTNoZWs2OWRhZzczODF1bXQ4a2NqZDc1dTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=Y184YWIxNzY1YjY1ODY3NDVkOGI3NWU5MmJkYzdjYTZlNDZjYWExMmE1ZjhkOTUwZDVmNzNmMzI2Zjk3NjE0NGQ3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=YXFwa3VpNXE3b2kzMnBrOXRjcDUzaG5zc2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23AD1457&color=%239E69AF&color=%23616161" style="border:0;overflow:hidden" width="800" height="600"></iframe>
