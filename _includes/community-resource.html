@@ -1,14 +1,11 @@
   <div class="resource col-sm-6 col-md-12">
     <div class="resource-content">
       <div class="col-md-2">
-        <img src="{{ include.src }}" class="resource-logo" alt="{{ include.alt }}">
+        <a href="{{ include.url }}"><img src="{{ include.src }}" class="resource-logo" alt="{{ include.alt }}"></a>
       </div>
       <div class="col-md-8 resource-text">
-        <h3 class="resource-name">{{ include.title }}</h3>
+        <h3 class="resource-name"><a href="{{ include.url }}">{{ include.title }}</a></h3>
         <p class="resource-desc">{{ include.description }}</p>
-      </div>
-      <div class="col-md-2 resource-button">
-        <a href="{{ include.url }}">View</a>
       </div>
     </div>
   </div>
