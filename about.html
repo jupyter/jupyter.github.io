@@ -20,6 +20,24 @@ contributors_copy: |
   Project Jupyter <a href="https://jupyter.org/governance/distinguished_contributors.html">Distinguished Contributors</a> are a group of Jupyter community members that have gone above-and-beyond in their support of the project over the years, making substantial and sustained contributions in any area of activity (software development, governance, community engagement, events, etc.). The Jupyter community confers membership in this group as a way of recognizing their effort and saying "thank you."
 
 # All bio photos should go in assets/bios cut at 160x160px
+distinguished_2025:
+  - name: James Colliander
+    photo: James_Colliander.jpeg
+    gh_handle: https://github.com/colliand
+    linkedin: https://linkedin.com/in/james-colliander-9bb02465
+  - name: Florence Haudin
+    photo: HaudinFlorence.jpg
+    gh_handle: https://github.com/HaudinFlorence
+    linkedin: https://www.linkedin.com/in/florence-haudin-fr/
+  - name: Greg Mooney
+    photo: Greg_Mooney.jpg
+    gh_handle: https://github.com/gjmooney
+    linkedin: https://www.linkedin.com/in/gjmooney/
+  - name: Kirstie Whitaker
+    photo: Kirstie_Whitaker.jpg
+    gh_handle: https://github.com/KirstieJane
+    linkedin: https://www.linkedin.com/in/kirstiewhitaker
+
 distinguished_2024:
   - name: Denisa Checiu
     photo: Denisa_Checiu.jpg
@@ -712,6 +730,25 @@ donate_box:
     <div class="content content--copy">
       <h2 class="text-center"><a href="https://jupyter.org/governance/distinguished_contributors.html">Distinguished Contributors</a></h2>
       <p>{{ page.contributors_copy }}</p>
+    </div>
+
+    <div class="content content--wide">
+      <h3>2025 Cohort</h3>
+      <div class="biocard-wrapper">
+      {% for bio in page.distinguished_2025 %}
+        {% include biocard.html
+            name=bio.name
+            photo=bio.photo
+            loading='eager'
+            personal=bio.personal
+            gh_handle=bio.gh_handle
+            linkedin=bio.linkedin
+            twitter_handle=bio.twitter_handle
+            mastodon=bio.mastodon
+            bluesky_handle=bio.bluesky_handle
+        %}
+      {% endfor %}
+      </div>
     </div>
 
     <div class="content content--wide">
