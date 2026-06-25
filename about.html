@@ -733,6 +733,25 @@ donate_box:
     </div>
 
     <div class="content content--wide">
+      <h3>2025 Cohort</h3>
+      <div class="biocard-wrapper">
+      {% for bio in page.distinguished_2025 %}
+        {% include biocard.html
+            name=bio.name
+            photo=bio.photo
+            loading='eager'
+            personal=bio.personal
+            gh_handle=bio.gh_handle
+            linkedin=bio.linkedin
+            twitter_handle=bio.twitter_handle
+            mastodon=bio.mastodon
+            bluesky_handle=bio.bluesky_handle
+        %}
+      {% endfor %}
+      </div>
+    </div>
+
+    <div class="content content--wide">
       <h3>2024 Cohort</h3>
       <div class="biocard-wrapper">
       {% for bio in page.distinguished_2024 %}
