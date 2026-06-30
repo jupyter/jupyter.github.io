@@ -24,30 +24,6 @@
 @import "components/hr";
 @import "components/details";
 
-/* Styling for the call-to-survey banner */
-.survey-banner {
-    background-color: $orange;
-    color: $white;
-    text-align: center;
-    padding: 0.6em 1em;
-}
-
-.survey-banner p {
-    margin: 0;
-}
-
-.survey-banner a {
-    color: $white;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-}
-
-.survey-banner a:hover,
-.survey-banner a:focus,
-.survey-banner a:active {
-    color: $white;
-}
-
 .dropshadow {
     /* Make the foreground stand out from the background slightly */
     filter: drop-shadow(0px 0px 8px rgba(0,0,0,0.3));
