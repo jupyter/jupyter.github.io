@@ -2,36 +2,41 @@
 @import "settings/breakpoints";
 
 .resourcelist {
-  display: table;
-  clear: both;
+  display: grid;
+  grid-template-columns: 1fr;
+  // The container background shows through the gaps between the white
+  // cards, drawing the divider lines between cards but not around them.
+  gap: 1px;
+  background-color: #e8e8e8;
 }
 
 .resource {
-  border-bottom: 1px solid #e8e8e8;
+  background-color: #fff;
   padding: 16px;
-  vertical-align: middle;
-  &:last-child {
-    border-bottom: none;
-  }
-  .resource-text {
-    text-align: left;
-    vertical-align: middle;
+  // Stack the logo, text, and button vertically, with the button pushed
+  // to the bottom so buttons line up across equal-height grid cells.
+  .resource-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
   }
   .resource-logo {
     display: block;
-    height: 80px !important;
+    height: 80px;
     margin: 0 auto;
   }
   .resource-name {
     margin-top: 6px;
   }
   .resource-button {
-    margin-top: 32px;
-    text-align: center;
+    margin-top: auto;
+    padding-top: 16px;
     a {
       background-color: $button-orange;
       border-radius: 2px;
       color: white;
+      display: inline-block;
       letter-spacing: 1px;
       padding: 13px;
       text-decoration: none;
@@ -46,23 +51,28 @@
   }
 }
 
-@media (max-width: $breakpoint-l) {
+// Two columns on tablet-sized screens; grid keeps the cards in each row
+// the same height without any fixed heights.
+@media (min-width: $breakpoint-m) and (max-width: $breakpoint-l) {
+  .resourcelist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// On wide screens each resource is a single horizontal row:
+// logo | text | button.
+@media (min-width: $breakpoint-l) {
   .resource {
-    height: 400px;
-    padding: 10px 0 30px;
-    &:nth-child(even) {
-      border-left: 1px solid #e8e8e8;
-    }
-    img {
-      margin-top: 15px;
-      padding-bottom: 0;
-    }
     .resource-content {
-      padding-top: 48px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 24px;
+      text-align: left;
     }
-    .resource-text {
+    .resource-button {
+      margin-top: 0;
       padding-top: 0;
-      text-align: center;
     }
   }
 }
