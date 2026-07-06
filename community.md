@@ -154,8 +154,8 @@ The Jupyter Community Building Committee (JCB) is a
 that **grows, builds, connects, and sustains a diverse, equitable, and inclusive Jupyter
 community** of users and contributors.
 
-You can learn more about the JCB at our [team
-compass](https://jupyter.org/community-committee/)
+You can learn more about the JCB at our
+[team compass](https://jupyter.org/community-committee/)
 ([source repo](https://github.com/jupyter/community-committee)).
 
 You can interact with the JCB by opening an issue in the
