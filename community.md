@@ -160,4 +160,4 @@ You can learn more about the JCB at our
 
 You can interact with the JCB by opening an issue in the
 [team compass repo](https://github.com/jupyter/community-committee) or by emailing
-<TODO>.
+<jupyter-community-building-working-group@googlegroups.com>.
