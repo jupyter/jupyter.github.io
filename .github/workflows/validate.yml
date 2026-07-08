@@ -62,6 +62,8 @@ jobs:
       with:
         root: _site/
         skip_git_check: true
+        # banner.html is an HTML fragment so it can be fetched and included in a page
+        blacklist: banner.html
 
   check-links:
 
