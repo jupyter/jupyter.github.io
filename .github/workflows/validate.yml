@@ -20,10 +20,14 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Build the site in the Jekyll/builder container
+      # Newer jekyll/builder images no longer run `bundle install`
+      # automatically, so install the Gemfile's gems (github-pages etc.)
+      # explicitly and build with `bundle exec` so the pinned Jekyll version
+      # is used instead of the image's own.
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && cd /srv/jekyll && bundle install && bundle exec jekyll build --future"
 
     - name: List result of Jekyll build
       run: |
