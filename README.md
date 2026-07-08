@@ -20,13 +20,14 @@ Here's an image of this box on a GitHub PR page:
 
 ## Site-wide announcement banner
 
-The file [`assets/banner.html`](assets/banner.html) controls an announcement
-banner that is shown at the top of jupyter.org **and** at the top of Jupyter
-documentation sites that subscribe to it (see below). It is served at
-<https://jupyter.org/assets/banner.html>.
+The file [`_includes/banner.html`](_includes/banner.html) controls an
+announcement banner that is shown at the top of jupyter.org **and** at the top
+of Jupyter documentation sites that subscribe to it (see below). At build time
+the content is embedded into every jupyter.org page and also published at
+<https://jupyter.org/assets/banner.html> for documentation sites.
 
 - **To show a banner**: open a PR that puts a short HTML fragment in
-  `assets/banner.html`, for example:
+  `_includes/banner.html`, for example:
 
   ```html
   <p>
@@ -36,9 +37,8 @@ documentation sites that subscribe to it (see below). It is served at
   </p>
   ```
 
-- **To remove the banner**: open a PR that empties `assets/banner.html`
-  (the file must be completely empty — even an HTML comment counts as content
-  and would show an empty banner on documentation sites).
+- **To remove the banner**: open a PR that empties `_includes/banner.html`
+  (empty the file, but do not delete it — the site build references it).
 
 Notes:
 
@@ -46,10 +46,6 @@ Notes:
   own banner container and styling: jupyter.org styles it with the
   `.global-banner` component, and documentation sites style it with their
   theme's announcement banner.
-- Changes take effect on jupyter.org when the site is rebuilt (a few minutes
-  after merging), and on documentation sites at the next page load — no
-  documentation rebuilds are needed, and previously published documentation
-  versions pick up the change too.
 
 ### Subscribing a documentation site to the banner
 

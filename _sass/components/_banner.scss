@@ -2,9 +2,9 @@
 
 /* Site-wide announcement banner.
  *
- * The banner content is loaded at page load from /assets/banner.html
- * (see _layouts/default.html). If that file is empty, no banner is shown.
- * See README.md ("Site-wide announcement banner") for details.
+ * The banner content comes from _includes/banner.html and is embedded at
+ * build time (see _layouts/default.html). If that file is empty, no banner
+ * is shown. See README.md ("Site-wide announcement banner") for details.
  */
 .global-banner {
     background-color: $orange;

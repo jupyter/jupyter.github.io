@@ -1,6 +1,7 @@
-  <p>
-    The Jupyter Foundation <a href="https://blog.jupyter.org/2026-jupyter-community-call-for-funding-proposals-f938928a1b8e">call for funding proposals</a> is now open.
-    <a href="https://jupyterfoundation.org/community-funding-proposals/submit-a-proposal/">
-      Submit a proposal
-    </a> for improving Jupyter.
-  </p>
+---
+# Publishes the shared announcement banner content at
+# https://jupyter.org/assets/banner.html for Jupyter documentation sites.
+# Do not edit the banner here: the content lives in _includes/banner.html.
+layout: null
+---
+{% capture banner %}{% include banner.html %}{% endcapture %}{{ banner | strip }}
