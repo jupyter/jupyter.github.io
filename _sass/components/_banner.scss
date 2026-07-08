@@ -18,7 +18,8 @@
         margin: 0;
     }
 
-    a {
+    a, a:hover, a:focus {
+        opacity: 1;
         color: $white;
         text-decoration: underline;
         text-decoration-thickness: 2px;
