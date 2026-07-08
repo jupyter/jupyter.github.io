@@ -151,6 +151,23 @@ legal:
             </ul>
         </div>
     </nav>
+    <!-- Site-wide announcement banner. The content is loaded from
+         /assets/banner.html; leave that file empty to show no banner.
+         The same file feeds the announcement banner on Jupyter documentation
+         sites. See the "Site-wide announcement banner" section in README.md. -->
+    <div id="global-banner" class="global-banner" hidden></div>
+    <script>
+      fetch('/assets/banner.html')
+        .then(function (response) { return response.ok ? response.text() : ''; })
+        .then(function (html) {
+          html = html.trim();
+          if (!html) { return; }
+          var banner = document.getElementById('global-banner');
+          banner.innerHTML = html;
+          banner.hidden = false;
+        })
+        .catch(function () { /* no banner on error */ });
+    </script>
     <section>
       {{ content }}
     </section>

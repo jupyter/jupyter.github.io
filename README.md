@@ -18,6 +18,51 @@ Here's an image of this box on a GitHub PR page:
 
 ![Netlify Preview Button](.github/images/netlify-preview.png)
 
+## Site-wide announcement banner
+
+The file [`assets/banner.html`](assets/banner.html) controls an announcement
+banner that is shown at the top of jupyter.org **and** at the top of Jupyter
+documentation sites that subscribe to it (see below). It is served at
+<https://jupyter.org/assets/banner.html>.
+
+- **To show a banner**: open a PR that puts a short HTML fragment in
+  `assets/banner.html`, for example:
+
+  ```html
+  <p>
+    <a href="https://example.org/survey" target="_blank" rel="noopener noreferrer">
+      Take the short Jupyter User Survey
+    </a> to give feedback on how to improve Jupyter.
+  </p>
+  ```
+
+- **To remove the banner**: open a PR that empties `assets/banner.html`
+  (the file must be completely empty — even an HTML comment counts as content
+  and would show an empty banner on documentation sites).
+
+Notes:
+
+- Keep the fragment to plain content (text and links). Each site provides its
+  own banner container and styling: jupyter.org styles it with the
+  `.global-banner` component, and documentation sites style it with their
+  theme's announcement banner.
+- Changes take effect on jupyter.org when the site is rebuilt (a few minutes
+  after merging), and on documentation sites at the next page load — no
+  documentation rebuilds are needed, and previously published documentation
+  versions pick up the change too.
+
+### Subscribing a documentation site to the banner
+
+Documentation sites using the pydata-sphinx-theme, which has an [announcements](https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/announcements.html) feature, can subscribe by including the following code in their `conf.py`:
+
+```python
+html_theme_options = {
+    # Default: show the shared Jupyter announcement banner; content is managed
+    # at https://github.com/jupyter/jupyter.github.io (assets/banner.html).
+    "announcement": "https://jupyter.org/assets/banner.html",
+}
+```
+
 ## Web analytics (experimental)
 
 We are experimenting with [Plausible.io](https://plausible.io/) for web analytics.
