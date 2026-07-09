@@ -1,16 +1,9 @@
 @import "settings/colors";
 
-/* Site-wide announcement banner.
- *
- * The banner content comes from _includes/banner.html and is embedded at
- * build time (see _layouts/default.html). If that file is empty, no banner
- * is shown. See README.md ("Site-wide announcement banner") for details.
- */
 .global-banner {
     position: relative;
     background-color: $orange;
     color: $white;
-    // Increase contrast to make white text more readable
     text-shadow: 0px 0px 4px $black;
     text-align: center;
     // Symmetric horizontal padding keeps the text centered while leaving

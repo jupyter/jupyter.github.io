@@ -93,11 +93,6 @@ legal:
     </script>
   </head>
   <body>
-    {%- comment %} Site-wide announcement banner. The content lives in
-         _includes/banner.html; leave that file empty to show no banner.
-         The same content feeds the announcement banner on Jupyter
-         documentation sites, via /assets/banner.html. See the "Site-wide
-         announcement banner" section in README.md. {% endcomment %}
     {%- capture banner_content %}{% include banner.html %}{% endcapture %}
     {%- assign banner_content = banner_content | strip %}
     {%- if banner_content != "" %}
@@ -106,7 +101,7 @@ legal:
       <button type="button" class="global-banner-dismiss" aria-label="Dismiss this announcement">&times;</button>
     </div>
     <script>
-      // Hide the banner if this exact banner text was dismissed before.
+      // Hide the banner if the normalized banner text was dismissed before.
       (function () {
         var banner = document.getElementById('global-banner');
         var key = 'jupyter-banner-dismissal';
