@@ -46,6 +46,10 @@ Notes:
   own banner container and styling: jupyter.org styles it with the
   `.global-banner` component, and documentation sites style it with their
   theme's announcement banner.
+- On jupyter.org the banner can be dismissed. A dismissal remembers a normalized
+  text of the most recent dismissal, so publishing a banner with different text
+  shows the banner again. Since the text is normalized, though, just changing an
+  html link without changing the text will not show the banner again.
 
 ### Subscribing a documentation site to the banner
 
