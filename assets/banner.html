@@ -1,0 +1,7 @@
+---
+# Publishes the shared announcement banner content at
+# https://jupyter.org/assets/banner.html for Jupyter documentation sites.
+# Do not edit the banner here: the content lives in _includes/banner.html.
+layout: null
+---
+{% capture banner %}{% include banner.html %}{% endcapture %}{{ banner | strip }}

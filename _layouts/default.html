@@ -151,6 +151,16 @@ legal:
             </ul>
         </div>
     </nav>
+    <!-- Site-wide announcement banner. The content lives in
+         _includes/banner.html; leave that file empty to show no banner.
+         The same content feeds the announcement banner on Jupyter
+         documentation sites, via /assets/banner.html. See the "Site-wide
+         announcement banner" section in README.md. -->
+    {%- capture banner_content %}{% include banner.html %}{% endcapture %}
+    {%- assign banner_content = banner_content | strip %}
+    {%- if banner_content != "" %}
+    <div id="global-banner" class="global-banner">{{ banner_content }}</div>
+    {%- endif %}
     <section>
       {{ content }}
     </section>

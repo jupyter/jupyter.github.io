@@ -18,6 +18,47 @@ Here's an image of this box on a GitHub PR page:
 
 ![Netlify Preview Button](.github/images/netlify-preview.png)
 
+## Site-wide announcement banner
+
+The file [`_includes/banner.html`](_includes/banner.html) controls an
+announcement banner that is shown at the top of jupyter.org **and** at the top
+of Jupyter documentation sites that subscribe to it (see below). At build time
+the content is embedded into every jupyter.org page and also published at
+<https://jupyter.org/assets/banner.html> for documentation sites.
+
+- **To show a banner**: open a PR that puts a short HTML fragment in
+  `_includes/banner.html`, for example:
+
+  ```html
+  <p>
+    <a href="https://example.org/survey" target="_blank" rel="noopener noreferrer">
+      Take the short Jupyter User Survey
+    </a> to give feedback on how to improve Jupyter.
+  </p>
+  ```
+
+- **To remove the banner**: open a PR that empties `_includes/banner.html`
+  (empty the file, but do not delete it — the site build references it).
+
+Notes:
+
+- Keep the fragment to plain content (text and links). Each site provides its
+  own banner container and styling: jupyter.org styles it with the
+  `.global-banner` component, and documentation sites style it with their
+  theme's announcement banner.
+
+### Subscribing a documentation site to the banner
+
+Documentation sites using the pydata-sphinx-theme, which has an [announcements](https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/announcements.html) feature, can subscribe by including the following code in their `conf.py`:
+
+```python
+html_theme_options = {
+    # Default: show the shared Jupyter announcement banner; content is managed
+    # at https://github.com/jupyter/jupyter.github.io (assets/banner.html).
+    "announcement": "https://jupyter.org/assets/banner.html",
+}
+```
+
 ## Web analytics (experimental)
 
 We are experimenting with [Plausible.io](https://plausible.io/) for web analytics.
