@@ -113,6 +113,7 @@ legal:
             banner.remove();
             return;
           }
+          localStorage.removeItem(key);
         } catch (e) {}
         banner.querySelector('.global-banner-dismiss').addEventListener('click', function () {
           try {
