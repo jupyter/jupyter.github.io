@@ -117,7 +117,7 @@ legal:
         } catch (e) {}
         banner.querySelector('.global-banner-dismiss').addEventListener('click', function () {
           try {
-            localStorage.setItem(key, JSON.stringify({ text: text, date: new Date().toISOString() }));
+            localStorage.setItem(key, JSON.stringify({ text: text }));
           } catch (e) {}
           banner.remove();
         });
