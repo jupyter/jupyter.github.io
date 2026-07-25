@@ -142,7 +142,7 @@ Follow these steps:
 3. **Build the site locally**.
    
    ```console
-   $ bundle exec jekyll serve liveserve
+   $ bundle exec jekyll serve --livereload
    ```
 
    This will build the site's HTML and open a server at `localhost:4000` for you to preview the site.

@@ -21,3 +21,14 @@ plugins:
 sass:
   sass_dir: _sass
   style: compressed
+
+# Keep local build/tooling directories out of the site and, more importantly,
+# out of `jekyll serve --livereload`'s watch list -- the conda envs under .nox
+# contain enough files to swamp the watcher.
+exclude:
+  - .nox
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - noxfile.py
+  - README.md
