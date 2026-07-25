@@ -1,0 +1,292 @@
+---
+layout: default
+title: Pulse
+tagline: Recent activity across Jupyter's GitHub organizations.
+permalink: /pulse/
+# Where the activity JSON feed lives. Precedence at view time:
+#   ?data=<url> query param  >  this page's data_url  >  site.pulse_data_url  >  default
+# Point it at any URL that serves permissive CORS (e.g. a GitHub Pages site).
+data_url:
+---
+
+{% include page-header.html title=page.title tagline=page.tagline %}
+
+<article>
+  <div class="section-white">
+    <div class="container" id="pulse">
+      <p class="pulse-meta" id="pulse-status">Loading activity data…</p>
+
+      <div class="pulse-controls">
+        <input id="q" type="search" placeholder="Filter by org / repo…" autocomplete="off">
+        <span class="pulse-count" id="count"></span>
+      </div>
+      <div class="pulse-controls" id="colToggles"><span class="muted">Columns:</span></div>
+
+      <div class="pulse-wrap">
+        <table id="t">
+          <thead>
+            <tr>
+              <th data-key="full_name" data-type="text">Repository <span class="arrow"></span></th>
+              <th data-key="archived" data-type="bool">Archived <span class="arrow"></span></th>
+              <th data-key="open_issue_count" data-type="num">Open issues <span class="arrow"></span></th>
+              <th data-key="open_pr_count" data-type="num">Open PRs <span class="arrow"></span></th>
+              <th data-key="last_commit" data-type="date">Last commit <span class="arrow"></span></th>
+              <th data-key="last_open_issue" data-type="date">Last open issue <span class="arrow"></span></th>
+              <th data-key="last_open_pr" data-type="date">Last open PR <span class="arrow"></span></th>
+              <th data-key="last_maintainer_action" data-type="date">Last maintainer action <span class="arrow"></span></th>
+              <th data-key="last_release" data-type="date">Last release <span class="arrow"></span></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="pulse-meta" id="pulse-note"></p>
+    </div>
+  </div>
+</article>
+
+<script>
+  // Build-time default from Jekyll config/front matter (empty string if unset).
+  window.PULSE_DATA_URL = "{{ page.data_url | default: site.pulse_data_url | default: '/assets/pulse.json' }}";
+</script>
+
+{% raw %}
+<style>
+  /* Base font-size on this site is 10px (1rem = 10px). Size the table close to
+     the site's body text so it reads consistently with the rest of the pages. */
+  #pulse { max-width: 1320px; margin: 0 auto; font-size: 1.5rem; line-height: 1.45; }
+  #pulse .pulse-meta { color: #57606a; font-size: 1.4rem; margin: .3em 0; }
+  #pulse .pulse-meta a { color: #0969da; }
+  #pulse .pulse-controls { display: flex; flex-wrap: wrap; gap: .6rem 1.4rem;
+    align-items: center; margin: 1.2em 0 .8em; }
+  #pulse #colToggles { font-size: 1.35rem; row-gap: .3rem; }
+  #pulse #colToggles label { display: inline-flex; align-items: center; gap: .3rem; }
+  #pulse #colToggles .muted { margin-right: .3rem; font-weight: 600; color: #57606a; }
+  #pulse input[type=search] { font: inherit; padding: .5rem .8rem; min-width: 20rem;
+    border: 1px solid #d0d7de; border-radius: 6px; background: #fff; }
+  #pulse input[type=search]:focus { outline: none; border-color: #0969da;
+    box-shadow: 0 0 0 3px rgba(9,105,218,.15); }
+  #pulse label { user-select: none; color: #57606a; font-weight: 400; }
+  #pulse .pulse-count { color: #6a737d; margin-left: auto; font-size: 1.4rem;
+    font-variant-numeric: tabular-nums; }
+  #pulse .pulse-wrap { overflow-x: auto; border: 1px solid #d8dee4; border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(27,31,36,.06); }
+  #pulse table { border-collapse: collapse; width: 100%; margin: 0; }
+  #pulse th, #pulse td { text-align: left; padding: .7rem 1rem;
+    border-bottom: 1px solid #eaeef2; white-space: nowrap; }
+  #pulse td { font-variant-numeric: tabular-nums; }
+  #pulse tbody tr:last-child td { border-bottom: none; }
+  #pulse thead th { position: sticky; top: 0; z-index: 1; background: #f6f8fa;
+    cursor: pointer; user-select: none; border-bottom: 2px solid #d0d7de;
+    font-weight: 600; color: #24292f; }
+  #pulse thead th:hover { background: #eceff2; }
+  #pulse th .arrow { color: #57606a; font-size: .85em; margin-left: .15em; }
+  #pulse tbody tr:nth-child(even) { background: #fbfcfd; }
+  #pulse tbody tr:hover { background: #f1f8ff; }
+  #pulse a { color: #0969da; text-decoration: none; font-weight: 500; }
+  #pulse a:hover { text-decoration: underline; }
+  #pulse .tag { font-size: .82em; padding: .1rem .55rem; border-radius: 999px;
+    border: 1px solid #d0d7de; color: #57606a; }
+  #pulse .muted { color: #8b949e; }
+  #pulse td.never { color: #a0a8b0; font-style: italic; }
+  #pulse td.stale { color: #9a6700; }
+  #pulse .delta { font-size: .85em; margin-left: .1em; }
+  #pulse .delta-fresh { color: #1a7f37; }
+  #pulse .delta-mid   { color: #9a6700; }
+  #pulse .delta-old   { color: #bc4c00; }
+  #pulse .delta-stale { color: #cf222e; }
+</style>
+<style id="colStyle"></style>
+
+<script>
+(function () {
+  // Where the activity JSON lives. It is produced by `tools/repo_activity.py
+  // --json` in the jupyter/security repo, in the shape:
+  //   { generated_at, count, note, repositories: [ {org, repo, full_name, url,
+  //     visibility, archived, open_issue_count, open_pr_count, last_commit,
+  //     last_open_issue, last_open_pr, last_maintainer_action,
+  //     maintainer_actor, maintainer_event}, ... ] }
+  // Precedence: ?data=<url> (runtime) > build-time config > default.
+  const params = new URLSearchParams(location.search);
+  const DATA_URL = params.get("data") || window.PULSE_DATA_URL || "/assets/pulse.json";
+
+  // The maintainer-action signal comes from GitHub's public events feed, which
+  // only spans roughly this many days. A null value therefore means "no such
+  // action within the window", i.e. it has been at least this long.
+  const EVENTS_WINDOW_DAYS = 90;
+
+  let DATA = [];
+  let sortKey = "last_commit", sortDir = -1;
+  // Columns hidden by default (users can re-enable them via the toggles).
+  // "archived" also filters out archived repos while hidden (see render()).
+  const hiddenCols = new Set(
+    ["archived", "last_open_issue", "last_open_pr", "last_maintainer_action"]);
+
+  const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g,
+    c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const ts = v => v ? Date.parse(v) : -Infinity;
+  const DATE_KEYS = new Set(
+    ["last_commit","last_open_issue","last_open_pr","last_maintainer_action","last_release"]);
+
+  // Day-granular relative time (no hours/minutes); tooltip keeps the exact time.
+  function rel(v) {
+    if (!v) return {text: "never", cls: "never", title: ""};
+    const d = Date.parse(v), now = Date.now();
+    let s = Math.max(0, Math.floor((now - d) / 1000));
+    const units = [["year",31536000],["month",2592000],["day",86400]];
+    for (const [name, secs] of units) {
+      const n = Math.floor(s / secs);
+      if (n >= 1) return {text: n + " " + name + (n>1?"s":"") + " ago", cls: "date", title: new Date(d).toISOString()};
+    }
+    return {text: "today", cls: "date", title: new Date(d).toISOString()};
+  }
+
+  function fmtDelta(laterMs, refMs) {
+    const diff = laterMs - refMs;
+    const sign = diff >= 0 ? "+" : "−";
+    let s = Math.abs(Math.round(diff / 1000));
+    const units = [["y",31536000],["mo",2592000],["d",86400]];
+    for (const [name, secs] of units) {
+      const n = Math.floor(s / secs);
+      if (n >= 1) return sign + n + name;
+    }
+    return "0d";
+  }
+
+  const WEEK = 604800000;
+  function deltaClass(absMs) {
+    if (absMs < 2 * WEEK) return "delta-fresh";
+    if (absMs < 8 * WEEK) return "delta-mid";
+    if (absMs < 16 * WEEK) return "delta-old";
+    return "delta-stale";
+  }
+  function deltaSpan(key, row) {
+    if (!DATE_KEYS.has(sortKey) || key === sortKey) return "";
+    if (!row[key] || !row[sortKey]) return "";
+    const diff = Date.parse(row[key]) - Date.parse(row[sortKey]);
+    return ` <span class="delta ${deltaClass(Math.abs(diff))}">(${fmtDelta(Date.parse(row[key]), Date.parse(row[sortKey]))})</span>`;
+  }
+
+  function applyCols() {
+    document.getElementById("colStyle").textContent =
+      [...hiddenCols].map(k => `.col-${k}{display:none}`).join("");
+  }
+
+  function render() {
+    const q = document.getElementById("q").value.trim().toLowerCase();
+    // The Archived column toggle doubles as the archived-repo filter: while the
+    // column is hidden, archived repos are filtered out; showing it reveals them.
+    const showArchived = !hiddenCols.has("archived");
+
+    let rows = DATA.filter(r => {
+      if (q && !r.full_name.toLowerCase().includes(q)) return false;
+      if (!showArchived && r.archived) return false;
+      return true;
+    });
+
+    const type = document.querySelector(`th[data-key="${sortKey}"]`).dataset.type;
+    rows.sort((a, b) => {
+      let av, bv;
+      if (type === "date") { av = ts(a[sortKey]); bv = ts(b[sortKey]); }
+      else if (type === "num") { av = a[sortKey]||0; bv = b[sortKey]||0; }
+      else if (type === "bool") { av = a[sortKey]?1:0; bv = b[sortKey]?1:0; }
+      else { av = (a[sortKey]||"").toLowerCase(); bv = (b[sortKey]||"").toLowerCase(); }
+      if (av < bv) return -1 * sortDir;
+      if (av > bv) return 1 * sortDir;
+      return a.full_name.localeCompare(b.full_name);
+    });
+
+    const tb = document.querySelector("#t tbody");
+    tb.innerHTML = "";
+    for (const r of rows) {
+      const tr = document.createElement("tr");
+      const arch = r.archived
+        ? '<span class="tag">yes</span>'
+        : '<span class="muted">no</span>';
+      const cells = [];
+      cells.push(`<td class="col-full_name"><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.full_name)}</a></td>`);
+      cells.push(`<td class="col-archived">${arch}</td>`);
+      cells.push(`<td class="col-open_issue_count" style="text-align:right">${r.open_issue_count}</td>`);
+      cells.push(`<td class="col-open_pr_count" style="text-align:right">${r.open_pr_count}</td>`);
+      for (const k of ["last_commit","last_open_issue","last_open_pr"]) {
+        const x = rel(r[k]);
+        cells.push(`<td class="col-${k} ${x.cls}" title="${x.title}">${x.text}${deltaSpan(k, r)}</td>`);
+      }
+      const m = r.last_maintainer_action ? rel(r.last_maintainer_action) : {
+        text: `&gt;${EVENTS_WINDOW_DAYS} days`, cls: "stale",
+        title: `No maintainer action found within the public events window (~${EVENTS_WINDOW_DAYS} days).`};
+      cells.push(`<td class="col-last_maintainer_action ${m.cls}" title="${m.title}">${m.text}${deltaSpan("last_maintainer_action", r)}</td>`);
+      const packages = r.packages || [];
+      const rr = rel(r.last_release);
+      const pkgs = packages.map(p => p.name + (p.version ? " " + p.version : "")).join(", ");
+      // Link the date to the PyPI project page when exactly one package maps.
+      let relText = rr.text;
+      if (packages.length === 1 && r.last_release) {
+        const purl = "https://pypi.org/project/" + encodeURIComponent(packages[0].name) + "/";
+        relText = `<a href="${esc(purl)}" target="_blank" rel="noopener">${rr.text}</a>`;
+      }
+      const pkgTag = packages.length > 1 ? ` <span class="muted">(${packages.length})</span>` : "";
+      cells.push(`<td class="col-last_release ${rr.cls}" title="${rr.title || esc(pkgs) || 'no mapped PyPI package'}">${relText}${deltaSpan("last_release", r)}${pkgTag}</td>`);
+      tr.innerHTML = cells.join("");
+      tb.appendChild(tr);
+    }
+    document.getElementById("count").textContent = rows.length + " / " + DATA.length + " repos";
+    document.querySelectorAll("th .arrow").forEach(a => a.textContent = "");
+    const th = document.querySelector(`th[data-key="${sortKey}"] .arrow`);
+    if (th) th.textContent = sortDir === -1 ? "▼" : "▲";
+  }
+
+  // Wire up interactions.
+  document.querySelectorAll("#t th").forEach(th => {
+    th.classList.add("col-" + th.dataset.key);
+    th.addEventListener("click", () => {
+      const k = th.dataset.key;
+      if (k === sortKey) sortDir *= -1;
+      else { sortKey = k; sortDir = th.dataset.type === "date" ? -1 : 1; }
+      render();
+    });
+  });
+  document.getElementById("q").addEventListener("input", render);
+
+  const colWrap = document.getElementById("colToggles");
+  document.querySelectorAll("#t thead th").forEach(th => {
+    const key = th.dataset.key;
+    const label = th.textContent.replace(/[▲▼]/g, "").trim();
+    const lbl = document.createElement("label");
+    const cb = document.createElement("input");
+    cb.type = "checkbox"; cb.checked = !hiddenCols.has(key);
+    cb.addEventListener("change", () => {
+      if (cb.checked) hiddenCols.delete(key); else hiddenCols.add(key);
+      applyCols();
+      // The Archived toggle also changes which rows are shown, so re-render.
+      if (key === "archived") render();
+    });
+    lbl.appendChild(cb);
+    lbl.appendChild(document.createTextNode(" " + label));
+    colWrap.appendChild(lbl);
+  });
+  applyCols();
+
+  // Load the data.
+  fetch(DATA_URL, {cache: "no-cache"})
+    .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(payload => {
+      DATA = payload.repositories || [];
+      const gen = payload.generated_at
+        ? new Date(payload.generated_at).toLocaleString() : "unknown";
+      document.getElementById("pulse-status").textContent =
+        `Data as of ${gen} · ${DATA.length} repositories · times are relative to now (hover for exact timestamp).`;
+      if (payload.note) document.getElementById("pulse-note").textContent = payload.note;
+      render();
+    })
+    .catch(err => {
+      document.getElementById("pulse-status").innerHTML =
+        `Activity data isn't available yet (${esc(String(err.message))}). ` +
+        `This page reads a JSON feed produced by ` +
+        `<a href="https://github.com/jupyter/security">jupyter/security</a>'s ` +
+        `<code>tools/repo_activity.py</code>; once that feed is published to ` +
+        `<code>${esc(DATA_URL)}</code> the table below will populate.`;
+    });
+})();
+</script>
+{% endraw %}

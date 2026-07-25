@@ -149,25 +149,43 @@ Follow these steps:
 
 ## Structure of this website
 
-Most pages are located at the place where their URL is, nothing fancy. Some are written in HTML. Others are written in Markdown. The homepage is in `index.html. The about page is in `about.md`.
+Most pages are located at the place where their URL is, nothing fancy. Some are written in HTML. Others are written in Markdown. The homepage is in `index.html`. The about page is in `about.html`.
 
 ## Create a new page
 
-Create `my_page.html` (will have url `https://jupyter.org/my_page.html`)
-or `my_page/index.html` (will have url `https://jupyter.org/my_page/`), start with the following:
+Pages can be written in either HTML or Markdown.
 
-```
+- **HTML**: create `my_page.html` (url `https://jupyter.org/my_page.html`) or
+  `my_page/index.html` (url `https://jupyter.org/my_page/`).
+- **Markdown**: create `my_page.md` (kramdown). Most existing pages, such as
+  `security.md` and `community.md`, are written this way.
+
+Start the file with YAML front matter. For a standard content page use the
+`page` layout (it renders a page header from `title`/`tagline`); for a fully
+custom page use the `default` layout. You can set an explicit URL with
+`permalink`:
+
+```yaml
 ---
-layout: default
+layout: page
 title: My Page
+tagline: A short one-line description shown under the title.
+permalink: /my-page
 ---
 
-write some html here (consider you are already inside `<body></body>`)
+Write your content here (for `default`, assume you are already inside
+`<body></body>`).
 ```
 
-You cannot do it yet with .md file, but you will be able soon.
+**Navigation and footer links** are defined in the front matter of
+`_layouts/default.html`, not in a data file. Edit the relevant list there:
 
-Add commit (and don't forget to add to `_data/nav.yml`).
+- `nav` — top navigation bar (also mirrored in the footer's "Project Jupyter" column)
+- `projects` — footer "Subprojects" column
+- `social` / `legal` — footer "Follow us" / "Legal" columns
+- `footer_extra` — footer-only links (shown under "Project Jupyter" but not in the top nav)
+
+Then commit your new page along with the navigation change.
 
 ## Site quirks and tips
 
