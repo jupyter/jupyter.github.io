@@ -91,6 +91,8 @@ data_url:
   #pulse td.never { color: #a0a8b0; font-style: italic; }
   #pulse td.stale { color: #9a6700; }
   #pulse .delta { font-size: .85em; margin-left: .1em; }
+  #pulse .pkg-row { display: block; }
+  #pulse .pkg-row + .pkg-row { margin-top: .15em; }
   #pulse .delta-fresh { color: #1a7f37; }
   #pulse .delta-mid   { color: #9a6700; }
   #pulse .delta-old   { color: #bc4c00; }
@@ -217,16 +219,27 @@ data_url:
         title: `No maintainer action found within the public events window (~${EVENTS_WINDOW_DAYS} days).`};
       cells.push(`<td class="col-last_maintainer_action ${m.cls}" title="${m.title}">${m.text}${deltaSpan("last_maintainer_action", r)}</td>`);
       const packages = r.packages || [];
-      const rr = rel(r.last_release);
-      const pkgs = packages.map(p => p.name + (p.version ? " " + p.version : "")).join(", ");
-      // Link the date to the PyPI project page when exactly one package maps.
-      let relText = rr.text;
-      if (packages.length === 1 && r.last_release) {
-        const purl = "https://pypi.org/project/" + encodeURIComponent(packages[0].name) + "/";
-        relText = `<a href="${esc(purl)}" target="_blank" rel="noopener">${rr.text}</a>`;
+      const pypi = n => "https://pypi.org/project/" + encodeURIComponent(n) + "/";
+      if (packages.length === 0) {
+        cells.push(`<td class="col-last_release never" title="no mapped PyPI package">never</td>`);
+      } else if (packages.length === 1) {
+        // Single package: the date links to the PyPI project page.
+        const p = packages[0], rr = rel(p.last_release);
+        const inner = p.last_release
+          ? `<a href="${esc(pypi(p.name))}" target="_blank" rel="noopener">${rr.text}</a>`
+          : rr.text;
+        cells.push(`<td class="col-last_release ${rr.cls}" title="${esc(p.name + (p.version ? " " + p.version : ""))}">${inner}${deltaSpan("last_release", r)}</td>`);
+      } else {
+        // Multiple packages: one linked name + its own release date per line.
+        const lines = packages.map(p => {
+          const pr = rel(p.last_release);
+          const date = p.last_release
+            ? `<span class="${pr.cls}" title="${pr.title}">${pr.text}</span>`
+            : `<span class="never">never</span>`;
+          return `<span class="pkg-row"><a href="${esc(pypi(p.name))}" target="_blank" rel="noopener">${esc(p.name)}</a> ${date}</span>`;
+        }).join("");
+        cells.push(`<td class="col-last_release">${lines}</td>`);
       }
-      const pkgTag = packages.length > 1 ? ` <span class="muted">(${packages.length})</span>` : "";
-      cells.push(`<td class="col-last_release ${rr.cls}" title="${rr.title || esc(pkgs) || 'no mapped PyPI package'}">${relText}${deltaSpan("last_release", r)}${pkgTag}</td>`);
       tr.innerHTML = cells.join("");
       tb.appendChild(tr);
     }
