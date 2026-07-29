@@ -139,6 +139,10 @@ of contributors, and strengthening collaborations.
 - [Round 5: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-are-back-3cca15d02975)
 - [Round 5: Announcement of Workshops](https://blog.jupyter.org/jupyter-community-workshops-early-2026-a9ce9670ba19)
 - [Round 5: Workshop Submission and List of Workshops](https://events.linuxfoundation.org/jupyter-workshops/)
+- Roadmap Workshop for JupyterHub and Binder
+- AI in Jupyter: Building Extensible AI Capabilities for Interactive Computing
+- [Security Tooling Sprint](https://blog.jupyter.org/jupyter-security-sprint-march-31st-5a2293de5cd5)
+- [Demystifying MyST Markdown in Education](https://blog.jupyter.org/navigating-the-post-workshop-fog-a-path-to-myst-6aaaaa6bf81f)
 
 </details>
 
