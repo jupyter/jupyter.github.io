@@ -6,17 +6,53 @@
 # site without secrets, and this workflow only handles the resulting static
 # files -- it never checks out or executes PR code.
 #
+# This two-workflow split follows GitHub's guidance for acting with
+# privileges on untrusted pull request code:
+# - "Preventing pwn requests" (GitHub Security Lab), which describes this
+#   exact pattern, including passing the PR number through the artifact:
+#   https://securitylab.github.com/resources/github-actions-preventing-pwn-requests/
+# - GitHub's secure-use reference, which requires workflow_run workflows to
+#   never check out untrusted code and to treat artifacts from other
+#   workflows as untrusted input:
+#   https://docs.github.com/en/actions/reference/security/secure-use
+# - The workflow_run event reference, whose example demonstrates this same
+#   artifact handoff:
+#   https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#workflow_run
+#
 # Cloudflare only hosts these previews (via a "Direct Upload" Pages project
 # with no custom domain attached). The production site at jupyter.org is
 # still built and served by GitHub Pages from the master branch.
 #
-# Required repository secrets:
-#   CLOUDFLARE_API_TOKEN  - API token with the "Cloudflare Pages: Edit"
-#                           permission
-#   CLOUDFLARE_ACCOUNT_ID - the Cloudflare account that owns the Pages
-#                           project
-# See the "Previewing a Pull Request" section of the README for setup
-# instructions.
+# We upload directly instead of using Cloudflare Pages' Git integration
+# because the Git integration does not build preview deployments for pull
+# requests from forks, which is how nearly all contributions to this repo
+# arrive:
+# https://developers.cloudflare.com/pages/configuration/git-integration/github-integration/
+# Feature request for fork PR support in the Git integration:
+# https://community.cloudflare.com/t/pages-preview-deployments-not-triggered-by-prs-from-forks/251385
+#
+# One-time setup (for maintainers):
+#
+# 1. In the Cloudflare account that will host the previews, create a
+#    "Direct Upload" Pages project named after CLOUDFLARE_PROJECT_NAME
+#    below:
+#
+#        npx wrangler pages project create jupyter-website-previews
+#
+#    (or in the Cloudflare dashboard: Workers & Pages > Create > Pages >
+#    Upload assets). Do not connect the project to a Git repository and do
+#    not attach a custom domain.
+#
+# 2. Create an API token (Cloudflare dashboard: My Profile > API Tokens)
+#    with the "Cloudflare Pages: Edit" account permission, scoped to that
+#    account.
+#
+# 3. Find the account ID on the Cloudflare dashboard's account overview
+#    page.
+#
+# 4. In this repository's Settings > Secrets and variables > Actions, add:
+#      CLOUDFLARE_API_TOKEN  - the API token from step 2
+#      CLOUDFLARE_ACCOUNT_ID - the account ID from step 3
 
 name: Deploy PR preview
 
@@ -51,16 +87,48 @@ jobs:
           run-id: ${{ github.event.workflow_run.id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Read PR number
+      - name: Read and verify PR number
         id: pr
-        # The artifact comes from an untrusted PR, so accept only digits.
-        run: |
-          number="$(tr -cd '0-9' < preview/pr-number.txt)"
-          if [ -z "$number" ]; then
-            echo "No PR number found in artifact" >&2
-            exit 1
-          fi
-          echo "number=$number" >> "$GITHUB_OUTPUT"
+        uses: actions/github-script@v9
+        with:
+          script: |
+            // The artifact comes from an untrusted PR, so the recorded PR
+            // number is only a claim: a malicious PR could name some other
+            // PR to misdirect the preview. Verify the claim by checking
+            // that the named PR's head really is what this workflow run
+            // built. (The head commit alone can't identify the PR: the same
+            // commit can head several PRs at once.)
+            const fs = require('fs');
+            const claimed = Number(
+              (fs.readFileSync('preview/pr-number.txt', 'utf8').match(/\d+/) ?? [])[0]
+            );
+            if (!Number.isInteger(claimed)) {
+              core.setFailed('No PR number found in artifact');
+              return;
+            }
+            const run = context.payload.workflow_run;
+            let pr;
+            try {
+              ({ data: pr } = await github.rest.pulls.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: claimed,
+              }));
+            } catch (e) {
+              core.setFailed(`Could not look up PR #${claimed}: ${e.message}`);
+              return;
+            }
+            if (
+              pr.head.sha !== run.head_sha ||
+              pr.head.repo.full_name !== run.head_repository.full_name ||
+              pr.head.ref !== run.head_branch
+            ) {
+              core.setFailed(
+                `PR #${claimed} does not match the head commit this workflow run built`
+              );
+              return;
+            }
+            core.setOutput('number', String(pr.number));
 
       - name: Deploy to Cloudflare Pages
         id: deploy

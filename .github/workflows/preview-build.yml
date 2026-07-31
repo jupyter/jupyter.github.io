@@ -31,9 +31,10 @@ jobs:
         run: bundle exec jekyll build
 
       - name: Stage preview artifact
-        # The PR number rides along with the built site so that
-        # preview-deploy.yml (a workflow_run workflow, which has no direct
-        # pull_request context) knows which PR to comment on.
+        # Record which PR this build came from. preview-deploy.yml (a
+        # workflow_run workflow, which has no direct pull_request context)
+        # treats this number as an untrusted claim and verifies it against
+        # the workflow run's head commit before using it.
         run: |
           mkdir preview
           mv _site preview/site

@@ -7,16 +7,22 @@ This is the source to [Jupyter.org](https://jupyter.org/).
 
 There are two ways that this site is built:
 
-- **Pull Request previews** are built with [Netlify](https://netlify.com), a hosting service for static websites. See the section below for more information.
+- **Pull Request previews** are built by GitHub Actions and hosted on [Cloudflare Pages](https://pages.cloudflare.com/). See the section below for more information.
 - **Hosting for jupyter.org** is done via [GitHub Pages](https://pages.github.com/). GitHub will automatically use Jekyll to build the HTML for this site and host it at `jupyter.github.io`, which connects with [jupyter.org](https://jupyter.org).
 
 ## Preview changes in a Pull Request
 
-Netlify will automatically build a preview of the website in an open Pull Request. To see this, click on the **`Show all checks`** button just above the comment box in the Pull Request window. Then click on the **`details`** link on the **`deploy/netlify`** row to see a preview of the built site.
+When you open a Pull Request, the site is automatically built and deployed as
+a preview. A few minutes after each push, a bot comment appears on the Pull
+Request with a link to the preview site; the same comment is updated in place
+as you push new commits.
 
-Here's an image of this box on a GitHub PR page:
+The preview shows exactly what the site will look like with your changes,
+using the same Jekyll toolchain that builds the production site.
 
-![Netlify Preview Button](.github/images/netlify-preview.png)
+(Maintainers: the Cloudflare project and repository secrets that previews
+require are documented in
+[`.github/workflows/preview-deploy.yml`](.github/workflows/preview-deploy.yml).)
 
 ## Site-wide announcement banner
 
