@@ -1,0 +1,82 @@
+# Deletes old Cloudflare Pages preview deployments.
+#
+# Cloudflare Pages never expires deployments on its own -- every PR preview
+# deployment stays published forever unless deleted (an open feature request:
+# https://community.cloudflare.com/t/deleting-old-deployments-feature-request/496069).
+# This workflow deletes preview deployments older than RETENTION_DAYS,
+# roughly matching the automatic deploy expiration Netlify used to provide
+# for this site's previews:
+# https://www.netlify.com/blog/automated-deploy-cleanup-and-new-deploy-retention-policies/
+#
+# Uses the same repository secrets as preview-deploy.yml (see the setup
+# instructions there). If the secrets are not configured (e.g. in a fork),
+# the job skips quietly rather than failing every week.
+
+name: Clean up old PR previews
+
+on:
+  schedule:
+    - cron: '17 4 * * 0' # weekly, Sunday 04:17 UTC
+  workflow_dispatch:
+
+permissions: {}
+
+env:
+  # Keep in sync with CLOUDFLARE_PROJECT_NAME in preview-deploy.yml.
+  CLOUDFLARE_PROJECT_NAME: jupyter-website-previews
+  RETENTION_DAYS: 90
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete preview deployments older than the retention period
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "Cloudflare secrets are not configured; nothing to clean up."
+            exit 0
+          fi
+
+          api="https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}/deployments"
+          auth=(-H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}")
+          cutoff="$(date -u -d "${RETENTION_DAYS} days ago" +%s)"
+
+          # Collect the ids of expired preview deployments across all pages
+          # first, then delete, so deletions don't shift the pagination.
+          expired=()
+          page=1
+          while :; do
+            resp="$(curl -sf "${auth[@]}" "${api}?page=${page}&per_page=25")"
+            batch="$(jq -r '.result[] | select(.environment == "preview")
+                             | [.id, .created_on] | @tsv' <<<"$resp")"
+            [ -n "$batch" ] || [ "$(jq '.result | length' <<<"$resp")" -gt 0 ] || break
+            while IFS=$'\t' read -r id created; do
+              [ -n "$id" ] || continue
+              if [ "$(date -d "$created" +%s)" -lt "$cutoff" ]; then
+                expired+=("$id")
+              fi
+            done <<<"$batch"
+            page=$((page + 1))
+          done
+
+          echo "Found ${#expired[@]} preview deployment(s) older than ${RETENTION_DAYS} days."
+
+          deleted=0
+          for id in "${expired[@]}"; do
+            # force=true also deletes deployments that a pr-N alias points
+            # at (the final deployment of a stale PR). Failures (e.g. a
+            # deployment Cloudflare refuses to delete) are warnings, not
+            # errors, so one stubborn deployment doesn't block the rest.
+            if curl -sf "${auth[@]}" -X DELETE "${api}/${id}?force=true" > /dev/null; then
+              deleted=$((deleted + 1))
+            else
+              echo "::warning::Could not delete deployment ${id}"
+            fi
+          done
+
+          echo "Deleted ${deleted} deployment(s)."

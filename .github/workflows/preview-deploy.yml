@@ -8,8 +8,7 @@
 #
 # This two-workflow split follows GitHub's guidance for acting with
 # privileges on untrusted pull request code:
-# - "Preventing pwn requests" (GitHub Security Lab), which describes this
-#   exact pattern, including passing the PR number through the artifact:
+# - "Preventing pwn requests" (GitHub Security Lab), which describes the pattern
 #   https://securitylab.github.com/resources/github-actions-preventing-pwn-requests/
 # - GitHub's secure-use reference, which requires workflow_run workflows to
 #   never check out untrusted code and to treat artifacts from other
