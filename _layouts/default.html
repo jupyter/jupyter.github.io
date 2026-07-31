@@ -277,6 +277,11 @@ legal:
           <p>
               The Jupyter® and Jupyter Logo® trademarks are registered with the U.S. Patent & Trademark Office by <a href="https://lf-charities.org/">LF Charities</a>. © {{site.time | date: '%Y' }}
           </p>
+          {%- if site.netlify %}
+          <p>
+              This site is powered by <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify</a>.
+          </p>
+          {%- endif %}
         </div>
       </section>
     </footer>
