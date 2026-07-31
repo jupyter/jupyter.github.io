@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download built site
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: preview
           path: preview
@@ -64,7 +64,7 @@ jobs:
 
       - name: Deploy to Cloudflare Pages
         id: deploy
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -75,7 +75,7 @@ jobs:
             --commit-hash=${{ github.event.workflow_run.head_sha }}
 
       - name: Comment preview URL on PR
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           PR_NUMBER: ${{ steps.pr.outputs.number }}
           PREVIEW_URL: ${{ steps.deploy.outputs.pages-deployment-alias-url || steps.deploy.outputs.deployment-url }}
