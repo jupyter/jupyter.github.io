@@ -1,0 +1,46 @@
+# Builds the Jekyll site for a pull request and saves the result as an
+# artifact. This workflow runs with no access to repository secrets, so it is
+# safe to run on pull requests from forks. The companion
+# preview-deploy.yml workflow picks up the artifact and publishes it to
+# Cloudflare Pages.
+
+name: Build PR preview
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: preview-build-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Build site
+        run: bundle exec jekyll build
+
+      - name: Stage preview artifact
+        # The PR number rides along with the built site so that
+        # preview-deploy.yml (a workflow_run workflow, which has no direct
+        # pull_request context) knows which PR to comment on.
+        run: |
+          mkdir preview
+          mv _site preview/site
+          echo "${{ github.event.pull_request.number }}" > preview/pr-number.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: preview
+          path: preview
+          retention-days: 3

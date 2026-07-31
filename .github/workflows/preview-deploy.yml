@@ -1,0 +1,119 @@
+# Publishes a PR preview to Cloudflare Pages and comments the preview URL on
+# the pull request.
+#
+# This runs via workflow_run (not pull_request) so that the Cloudflare API
+# token is never exposed to code from forks: preview-build.yml builds the
+# site without secrets, and this workflow only handles the resulting static
+# files -- it never checks out or executes PR code.
+#
+# Cloudflare only hosts these previews (via a "Direct Upload" Pages project
+# with no custom domain attached). The production site at jupyter.org is
+# still built and served by GitHub Pages from the master branch.
+#
+# Required repository secrets:
+#   CLOUDFLARE_API_TOKEN  - API token with the "Cloudflare Pages: Edit"
+#                           permission
+#   CLOUDFLARE_ACCOUNT_ID - the Cloudflare account that owns the Pages
+#                           project
+# See the "Previewing a Pull Request" section of the README for setup
+# instructions.
+
+name: Deploy PR preview
+
+on:
+  workflow_run:
+    workflows: ["Build PR preview"]
+    types: [completed]
+
+permissions:
+  actions: read
+  pull-requests: write
+
+env:
+  CLOUDFLARE_PROJECT_NAME: jupyter-website-previews
+
+concurrency:
+  group: preview-deploy-${{ github.event.workflow_run.head_repository.full_name }}-${{ github.event.workflow_run.head_branch }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    if: >-
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download built site
+        uses: actions/download-artifact@v4
+        with:
+          name: preview
+          path: preview
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Read PR number
+        id: pr
+        # The artifact comes from an untrusted PR, so accept only digits.
+        run: |
+          number="$(tr -cd '0-9' < preview/pr-number.txt)"
+          if [ -z "$number" ]; then
+            echo "No PR number found in artifact" >&2
+            exit 1
+          fi
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy to Cloudflare Pages
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: >-
+            pages deploy preview/site
+            --project-name=${{ env.CLOUDFLARE_PROJECT_NAME }}
+            --branch=pr-${{ steps.pr.outputs.number }}
+            --commit-hash=${{ github.event.workflow_run.head_sha }}
+
+      - name: Comment preview URL on PR
+        uses: actions/github-script@v7
+        env:
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+          PREVIEW_URL: ${{ steps.deploy.outputs.pages-deployment-alias-url || steps.deploy.outputs.deployment-url }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        with:
+          script: |
+            const marker = '<!-- cloudflare-pages-preview -->';
+            const prNumber = Number(process.env.PR_NUMBER);
+            const body = [
+              marker,
+              '### <img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Favicon/favicon.svg" width="16"> Preview for this PR',
+              '',
+              `:mag: **Preview**: ${process.env.PREVIEW_URL}`,
+              '',
+              `Built from commit ${process.env.HEAD_SHA}. The preview updates automatically on new commits.`,
+            ].join('\n');
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              per_page: 100,
+            });
+            const existing = comments.find(
+              (c) => c.user.type === 'Bot' && c.body.includes(marker)
+            );
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body,
+              });
+            }
