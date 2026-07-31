@@ -68,7 +68,6 @@ on:
 
 permissions:
   actions: read
-  deployments: write
   pull-requests: write
 
 env:
@@ -161,37 +160,6 @@ jobs:
             --project-name=${{ env.CLOUDFLARE_PROJECT_NAME }}
             --branch=pr-${{ steps.pr.outputs.number }}
             --commit-hash=${{ github.event.workflow_run.head_sha }}
-
-      - name: Record GitHub deployment
-        # Surfaces the preview in the PR's "Deployments" panel with a
-        # "View deployment" button, in addition to the comment below.
-        uses: actions/github-script@v9
-        env:
-          PR_NUMBER: ${{ steps.pr.outputs.number }}
-          PREVIEW_URL: ${{ steps.deploy.outputs.pages-deployment-alias-url || steps.deploy.outputs.deployment-url }}
-        with:
-          script: |
-            const run = context.payload.workflow_run;
-            const { data: deployment } = await github.rest.repos.createDeployment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              ref: run.head_sha,
-              environment: 'preview',
-              transient_environment: true,
-              production_environment: false,
-              auto_merge: false,
-              required_contexts: [],
-              description: `Cloudflare Pages preview for PR #${process.env.PR_NUMBER}`,
-            });
-            await github.rest.repos.createDeploymentStatus({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              deployment_id: deployment.id,
-              state: 'success',
-              environment_url: process.env.PREVIEW_URL,
-              log_url: `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
-              description: 'Preview deployed to Cloudflare Pages',
-            });
 
       - name: Comment preview URL on PR
         uses: actions/github-script@v9
