@@ -151,3 +151,17 @@ of contributors, and strengthening collaborations.
 [Jupyter Community Calls](https://jupyter.readthedocs.io/en/latest/community/content-community.html#jupyter-wide-meetings)
 provide a regular virtual forum for community-wide discussion and sharing.
 
+### Jupyter Community Building Committee (JCB)
+
+The Jupyter Community Building Committee (JCB) is a
+[Standing Committee](https://jupyter.org/governance/standing-committees-and-working-groups/#standing-committees)
+that **grows, builds, connects, and sustains a diverse, equitable, and inclusive Jupyter
+community** of users and contributors.
+
+You can learn more about the JCB at our
+[team compass](https://jupyter.org/community-committee/)
+([source repo](https://github.com/jupyter/community-committee)).
+
+You can interact with the JCB by opening an issue in the
+[team compass repo](https://github.com/jupyter/community-committee) or by emailing
+<jupyter-community-building-working-group@googlegroups.com>.
