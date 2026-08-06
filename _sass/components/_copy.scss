@@ -1,12 +1,19 @@
 @import "settings/fonts";
 
 p,
-summary {
+summary,
+li {
   font-family: $font-family-sans-serif;
   // Increase font size for easier reading + a11y
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
+}
+
+// Margin is kept off list items so navigation and other tight lists
+// keep their own spacing.
+p,
+summary {
   margin: 0 0 10px;
 }
 
