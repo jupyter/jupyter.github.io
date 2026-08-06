@@ -27,9 +27,3 @@ List of channels actively maintained by JMS in alphabetical order:
 - Mastodon:  <https://hachyderm.io/@ProjectJupyter>
 - YouTube: <https://youtube.com/@projectjupyter>
 - Zulip: <https://jupyter.zulipchat.com>
-
-
-List of channels considered inactive but managed by the JMS:
-
-- Facebook: <https://facebook.com/projectjupyter>
-- Slack JupyterCon 2023: <https://jupyterconworkspace.slack.com>
