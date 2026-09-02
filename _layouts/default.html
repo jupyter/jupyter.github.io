@@ -283,7 +283,7 @@ legal:
       </section>
     </footer>
     <!-- same UMD hazard as anchor.js above, but ordering cannot fix this one: the tag
-         necessarily follows {{ content }}, so it always runs after the RequireJS that
+         necessarily follows the page content, so it always runs after the RequireJS that
          /widgets loads. Hiding `define` keeps it on its browser-global branch. -->
     <script>window.__amdDefine = window.define; window.define = undefined;</script>
     <script src="/assets/js/bootstrap-native.min.js"></script>
