@@ -185,6 +185,12 @@ jupyter nbextension enable --py --sys-prefix nglview{% endhighlight %}
             </p>
           <h3>Example</h3>
           {% highlight python %}{% include_relative assets/widgets/k3d-example.py %}{% endhighlight %}
+          <script>
+            // k3d publishes an AMD bundle, so point RequireJS straight at it. Without this the
+            // snapshot below first tries a relative ./k3d.js, 404s, and has to recover inside
+            // RequireJS error handling - which does not survive the other examples throwing.
+            require.config({ paths: { k3d: 'https://unpkg.com/k3d@3.0.1/dist/standalone' } });
+          </script>
           {% include k3d-example.html %}
           <script type="application/javascript">
               function adjustK3D() {
