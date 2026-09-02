@@ -173,25 +173,19 @@ jupyter nbextension enable --py --sys-prefix nglview{% endhighlight %}
             </span>
             </div>
           <p>
-            <a href="https://github.com/K3D-tools/K3D-jupyter">K3D</a> lets you create 3D plots backed by WebGL with
-              high-level API (surfaces, isosurfaces, voxels, mesh, cloud points, vtk objects, volume renderer,
-              colormaps, etc). The primary aim of K3D-jupyter is to be easy for use as stand alone package like
-              matplotlib, but also to allow interoperation with existing libraries as VTK. The power of ipywidgets
-              makes it also a fast and performant visualisation tool for HPC computing e.g. fluid dynamics.
+            <a href="https://github.com/K3D-tools/K3D-jupyter">K3D-jupyter</a> is a WebGL 3D plotting widget:
+              meshes, isosurfaces, volumes, voxels, point clouds, lines and VTK objects, from plain NumPy arrays.
+              It aims to be as direct to use as matplotlib while interoperating with existing libraries such as
+              VTK and PyVista, and it scales to the array sizes HPC work produces - the example below is a CT
+              volume rendered on the GPU. Since 3.0.0 the front end is an
+              <a href="https://anywidget.dev">anywidget</a>.
           </p>
             <p>
                 Showcase gallery: <a href="https://k3d-jupyter.org/gallery/index.html">https://k3d-jupyter.org/gallery/index.html</a>.
             </p>
           <h3>Example</h3>
           {% highlight python %}{% include_relative assets/widgets/k3d-example.py %}{% endhighlight %}
-          <script type="application/vnd.jupyter.widget-state+json">
-              {% include_relative assets/widgets/k3d-example.json %}
-          </script>
-          <script type="application/vnd.jupyter.widget-view+json">
-          {
-              "model_id": "d3a24bac28644484b2aad2bdf34f31bf"
-          }
-          </script>
+          {% include_relative assets/widgets/k3d-example.html %}
           <script type="application/javascript">
               function adjustK3D() {
                   setTimeout(function() {
@@ -201,10 +195,13 @@ jupyter nbextension enable --py --sys-prefix nglview{% endhighlight %}
           </script>
           <h3>Installation</h3>
           With pip:
-          {% highlight bash %}pip install k3d
-jupyter nbextension enable --py --sys-prefix k3d{% endhighlight %}
-          If you are using JupyterLab, you will need to install the JupyterLab extension:
-          {% highlight bash %}jupyter labextension install @jupyter-widgets/jupyterlab-manager k3d{% endhighlight %}
+          {% highlight bash %}pip install k3d{% endhighlight %}
+          With conda:
+          {% highlight bash %}conda install -c conda-forge k3d{% endhighlight %}
+          <p>
+            Since 3.0.0 there is no extension to install or enable: the same package works in
+            JupyterLab, Jupyter Notebook, Google Colab and VS Code.
+          </p>
         </div>
         <div class="tab-pane" id="bqplot">
           <div class="jupyter-widget-header">
