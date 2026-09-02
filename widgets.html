@@ -196,6 +196,11 @@ jupyter nbextension enable --py --sys-prefix nglview{% endhighlight %}
               function adjustK3D() {
                   setTimeout(function() {
                       window.dispatchEvent && window.dispatchEvent(new Event('resize'));
+                      // the pane is hidden when the plot is built, so its canvas starts at the
+                      // 300x150 default; a window resize alone does not fix that, resizeHelper does
+                      if (window.K3DInstance && window.K3DInstance.then) {
+                          window.K3DInstance.then(function (k3d) { k3d.resizeHelper(); });
+                      }
                   });
               }
           </script>
