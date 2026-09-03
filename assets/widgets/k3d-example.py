@@ -1,13 +1,10 @@
 import k3d
 import numpy as np
+import SimpleITK as sitk
 
-lines = np.load('vertices.npy')
-lines_attributes = np.load('attributes.npy')
+# K3D takes the array, not the file - any reader that yields NumPy will do
+img = sitk.GetArrayFromImage(sitk.ReadImage('heart.mhd'))
 
 plot = k3d.plot()
-
-for l, a in zip(lines, lines_attributes):
-    plot += k3d.line(l, attribute=a, width=0.0001,
-                     color_map=k3d.matplotlib_color_maps.Inferno, color_range=[0,0.5], shader='mesh',
-                     compression_level=9)
+plot += k3d.volume(img[::4, ::4, ::4].astype(np.float16))
 plot.display()
