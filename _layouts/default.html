@@ -78,7 +78,9 @@ legal:
     <link rel="apple-touch-icon" sizes="167x167" href="/assets/favicons/apple-touch-icon-167x167.png">
     <link rel="me" href="https://hachyderm.io/@ProjectJupyter">
     <script>console.log('Welcome to Project Jupyter! Explore the various tools available and their corresponding documentation. If you are interested in contributing to the platform, please visit the community resources section at https://jupyter.org/community.html.')</script>
-    <script defer src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+    <!-- not deferred: /widgets loads RequireJS in its body, and a deferred anchor.js runs
+         after it, calls an anonymous define() and leaves `anchors` undefined -->
+    <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function(event) {
         anchors.add();
@@ -93,6 +95,37 @@ legal:
     </script>
   </head>
   <body>
+    {%- capture banner_content %}{% include banner.html %}{% endcapture %}
+    {%- assign banner_content = banner_content | strip %}
+    {%- if banner_content != "" %}
+    <div id="global-banner" class="global-banner">
+      <div class="global-banner-content">{{ banner_content }}</div>
+      <button type="button" class="global-banner-dismiss" aria-label="Dismiss this announcement">&times;</button>
+    </div>
+    <script>
+      // Hide the banner if the normalized banner text was dismissed before.
+      (function () {
+        var banner = document.getElementById('global-banner');
+        var key = 'jupyter-banner-dismissal';
+        var text = banner.querySelector('.global-banner-content')
+          .textContent.replace(/\s+/g, ' ').trim();
+        try {
+          var dismissal = JSON.parse(localStorage.getItem(key));
+          if (dismissal && dismissal.text === text) {
+            banner.remove();
+            return;
+          }
+          localStorage.removeItem(key);
+        } catch (e) {}
+        banner.querySelector('.global-banner-dismiss').addEventListener('click', function () {
+          try {
+            localStorage.setItem(key, JSON.stringify({ text: text }));
+          } catch (e) {}
+          banner.remove();
+        });
+      })();
+    </script>
+    {%- endif %}
     <nav class="navbar">
         <div class="navbar-header">
             <a class="navbar-brand" href="/">
@@ -249,6 +282,11 @@ legal:
         </div>
       </section>
     </footer>
-    <script src="/assets/js/bootstrap-native.min.js" defer></script>
+    <!-- same UMD hazard as anchor.js above, but ordering cannot fix this one: the tag
+         necessarily follows the page content, so it always runs after the RequireJS that
+         /widgets loads. Hiding `define` keeps it on its browser-global branch. -->
+    <script>window.__amdDefine = window.define; window.define = undefined;</script>
+    <script src="/assets/js/bootstrap-native.min.js"></script>
+    <script>window.define = window.__amdDefine; delete window.__amdDefine;</script>
   </body>
 </html>
