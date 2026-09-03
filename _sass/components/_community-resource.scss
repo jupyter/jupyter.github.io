@@ -1,37 +1,40 @@
 @import "settings/colors";
-@import "settings/breakpoints";
 
+// A one-column list of resource cards. The container background shows
+// through the 1px gaps between the white cards, drawing divider lines
+// between the cards but not around them.
 .resourcelist {
-  display: table;
-  clear: both;
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background-color: #e8e8e8;
 }
 
 .resource {
-  border-bottom: 1px solid #e8e8e8;
+  background-color: #fff;
   padding: 16px;
-  vertical-align: middle;
-  &:last-child {
-    border-bottom: none;
-  }
-  .resource-text {
-    text-align: left;
-    vertical-align: middle;
+  // Each resource is a horizontal row: logo | text | button.
+  .resource-content {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 24px;
   }
   .resource-logo {
     display: block;
-    height: 80px !important;
+    height: 80px;
     margin: 0 auto;
   }
   .resource-name {
     margin-top: 6px;
   }
   .resource-button {
-    margin-top: 32px;
-    text-align: center;
     a {
       background-color: $button-orange;
       border-radius: 2px;
       color: white;
+      display: inline-block;
       letter-spacing: 1px;
       padding: 13px;
       text-decoration: none;
@@ -46,23 +49,18 @@
   }
 }
 
-@media (max-width: $breakpoint-l) {
+// Once the list is too narrow to give the text a comfortable share of
+// the row, stack each card vertically instead. The threshold is measured
+// against the list's own width in characters, so it follows the text
+// size rather than any particular device width.
+@container (max-width: 70ch) {
   .resource {
-    height: 400px;
-    padding: 10px 0 30px;
-    &:nth-child(even) {
-      border-left: 1px solid #e8e8e8;
-    }
-    img {
-      margin-top: 15px;
-      padding-bottom: 0;
-    }
     .resource-content {
-      padding-top: 48px;
-    }
-    .resource-text {
-      padding-top: 0;
+      display: flex;
+      flex-direction: column;
       text-align: center;
+      // The row layout's 24px gap is too roomy when stacked vertically.
+      gap: 4px;
     }
   }
 }
