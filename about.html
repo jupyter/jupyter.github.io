@@ -561,6 +561,19 @@ community_building:
   affiliation: Jupyter
   gh_handle: sbonaretti
 
+jupyter_foundation_chair:
+- name: Rus Pandey
+  photo: Rus_Pandey.png
+  affiliation: Apple
+  gh_handle: bigsur0
+
+treasurer:
+- name: Neha Singla
+  photo: Neha_Singla.png
+  affiliation: Apple
+  gh_handle: nsingl00
+  linkedin: https://www.linkedin.com/in/neha-singla-55b3a432/
+
 sponsor_box:
   headline: Sponsors
   description: 'Project Jupyter receives direct funding from the following sources:'
@@ -724,6 +737,57 @@ donate_box:
                 mastodon=bio.mastodon
                 bluesky_handle=bio.bluesky_handle
                 subproject=bio.subproject
+            %}
+        {% endfor %}
+        </div>
+    </div>
+
+
+  {% include hr.html %}
+
+    <!-- JUPYTER FOUNDATION CHAIR -->
+    <div class="content content--copy">
+        <h2 class="text-center">Jupyter Foundation Chair</h2>
+    </div>
+
+    <div class="content content--wide">
+        <div class="biocard-wrapper">
+        {% for bio in page.jupyter_foundation_chair %}
+            {% include biocard.html
+                name=bio.name
+                photo=bio.photo
+                affiliation=bio.affiliation
+                personal=bio.personal
+                gh_handle=bio.gh_handle
+                linkedin=bio.linkedin
+                twitter_handle=bio.twitter_handle
+                mastodon=bio.mastodon
+                bluesky_handle=bio.bluesky_handle
+            %}
+        {% endfor %}
+        </div>
+    </div>
+
+  {% include hr.html %}
+
+    <!-- TREASURER -->
+    <div class="content content--copy">
+        <h2 class="text-center">Treasurer</h2>
+    </div>
+
+    <div class="content content--wide">
+        <div class="biocard-wrapper">
+        {% for bio in page.treasurer %}
+            {% include biocard.html
+                name=bio.name
+                photo=bio.photo
+                affiliation=bio.affiliation
+                personal=bio.personal
+                gh_handle=bio.gh_handle
+                linkedin=bio.linkedin
+                twitter_handle=bio.twitter_handle
+                mastodon=bio.mastodon
+                bluesky_handle=bio.bluesky_handle
             %}
         {% endfor %}
         </div>
