@@ -52,6 +52,9 @@ social:
 legal:
   - title: Privacy
     url: /privacy
+footer_extra:
+  - title: Pulse
+    url: /pulse
 
 
 ---
@@ -194,6 +197,14 @@ legal:
           <h2>Project Jupyter</h2>
           <ul>
             {%- for obj in layout.nav -%}
+            <li>
+                <a href="{{ obj.url }}"
+                    {%- if obj.newpage %} target="_blank" rel="noopener noreferrer" {% endif %}>
+                    {{ obj.title }}
+                </a>
+            </li>
+            {%- endfor %}
+            {%- for obj in layout.footer_extra -%}
             <li>
                 <a href="{{ obj.url }}"
                     {%- if obj.newpage %} target="_blank" rel="noopener noreferrer" {% endif %}>
