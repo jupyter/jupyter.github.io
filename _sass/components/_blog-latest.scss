@@ -1,0 +1,130 @@
+@import "settings/colors";
+@import "settings/breakpoints";
+
+// The newest blog posts under the jumbotron (_includes/blog-latest.html)
+.homepage-section.blog-latest {
+  display: block;
+  padding: 2em 1em 4em 1em;
+  @media (max-width: $breakpoint-s) {
+    padding: 1em 1em 3em 1em;
+  }
+  h2 {
+    margin: 0 0 1em 0;
+    text-align: center;
+    @media (max-width: $breakpoint-s) {
+      font-size: 1.8em;
+    }
+  }
+}
+
+.blog-latest-posts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2em;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  @media (max-width: $breakpoint-l) {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 560px;
+  }
+  // shown by the script that fills it: without one, not at all
+  &[hidden] {
+    display: none;
+  }
+}
+
+.blog-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border: 1px solid $gray;
+  border-radius: 5px;
+  overflow: hidden;
+  &:hover,
+  &:focus-within {
+    border-color: $orange;
+  }
+  .blog-card-cover {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1200 / 630;
+    object-fit: cover;
+    background-color: $light-gray;
+    border-bottom: 1px solid $light-gray;
+  }
+  .blog-card-body {
+    padding: 1em 1.25em 1.25em 1.25em;
+  }
+  .blog-card-date {
+    display: block;
+    margin: 0 0 0.5em 0;
+    color: $medium-gray;
+    font-size: 0.9em;
+  }
+  .blog-card-title {
+    font-size: 1.275em;
+    line-height: 1.3;
+    margin: 0 0 0.5em 0;
+    a {
+      color: inherit;
+      text-decoration: none;
+      // the whole card is the link's target
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+      }
+      &:hover {
+        color: $dark-orange;
+      }
+    }
+  }
+  .blog-card-summary {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+  }
+}
+
+// the shape of a card, while the posts load
+.blog-card--placeholder {
+  border-color: $light-gray;
+  .blog-card-date,
+  .blog-card-title,
+  .blog-card-summary {
+    background-color: $light-gray;
+    border-radius: 3px;
+  }
+  .blog-card-date {
+    width: 30%;
+  }
+  .blog-card-title {
+    height: 2.6em;
+    margin: 0 0 0.5em 0;
+  }
+  .blog-card-summary {
+    height: 4.5em;
+  }
+}
+
+.blog-latest-more {
+  margin: 2em 0 0 0;
+  text-align: center;
+  font-size: 1.2em;
+  a {
+    color: $dark-orange;
+    font-weight: 600;
+    &::after {
+      content: " \2192";
+    }
+  }
+}

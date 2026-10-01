@@ -28,6 +28,15 @@ jumbotron:
       height: 286
   background: white-background.svg
 
+# The newest posts from the blog, read from its latest.json when the page
+# loads (_includes/blog-latest.html)
+blog:
+  headline: Latest from the Jupyter blog
+  source: https://blog.jupyter.org/latest.json
+  count: 3
+  url: https://blog.jupyter.org
+  link_text: More news from the Jupyter blog
+
 jupyterlab:
   headline: 'JupyterLab: A Next-Generation Notebook Interface'
   description: JupyterLab is the latest web-based interactive development environment for notebooks, code, and data. Its flexible interface allows users to configure and arrange workflows in data science, scientific computing, computational journalism, and machine learning. A modular design invites extensions to expand and enrich functionality.
@@ -272,6 +281,14 @@ in_use:
 </header>
 
 <article>
+  {% include blog-latest.html
+      headline=page.blog.headline
+      source=page.blog.source
+      count=page.blog.count
+      url=page.blog.url
+      link_text=page.blog.link_text
+  %}
+
   {% include homepage-section.html
       class=page.jupyterlab.class
       headline=page.jupyterlab.headline

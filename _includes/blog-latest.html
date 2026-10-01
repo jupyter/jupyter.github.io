@@ -1,0 +1,116 @@
+<section class="homepage-section section-white blog-latest" aria-labelledby="blog-latest-heading">
+  <h2 id="blog-latest-heading">{{ include.headline }}</h2>
+  {% comment %}
+    The newest posts are read in the browser from the blog's latest.json,
+    which the blog writes on each deploy, so this list is as current as
+    the blog itself, with no rebuild of this site. Until they arrive, the
+    list holds placeholder cards of the same shape; without JavaScript,
+    or if the blog cannot be reached, the list is left out and the link
+    below it remains.
+  {% endcomment %}
+  <ul class="blog-latest-posts" id="blog-latest-posts" hidden>
+    {% for i in (1..include.count) %}
+    <li class="blog-card blog-card--placeholder" aria-hidden="true">
+      <div class="blog-card-cover"></div>
+      <div class="blog-card-body">
+        <p class="blog-card-date">&nbsp;</p>
+        <p class="blog-card-title">&nbsp;</p>
+        <p class="blog-card-summary">&nbsp;</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="blog-latest-more">
+    <a href="{{ include.url }}">{{ include.link_text }}</a>
+  </p>
+</section>
+<script>
+  (function () {
+    var list = document.getElementById('blog-latest-posts');
+    var source = '{{ include.source }}';
+    var count = {{ include.count }};
+    list.hidden = false;
+
+    function drop() {
+      if (list.parentNode) list.parentNode.removeChild(list);
+    }
+
+    // a link from the blog's data, only to the blog itself
+    function blogUrl(value) {
+      try {
+        var url = new URL(value, source);
+        return url.origin === new URL(source).origin ? url.href : null;
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function card(post) {
+      var href = blogUrl(post.url);
+      if (!href || !post.title) return null;
+      var li = document.createElement('li');
+      li.className = 'blog-card';
+      var cover = post.cover && blogUrl(post.cover.url);
+      if (cover) {
+        var img = document.createElement('img');
+        img.className = 'blog-card-cover';
+        img.src = cover;
+        img.alt = '';
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        if (post.cover.width && post.cover.height) {
+          img.width = post.cover.width;
+          img.height = post.cover.height;
+        }
+        li.appendChild(img);
+      } else {
+        var blank = document.createElement('div');
+        blank.className = 'blog-card-cover blog-card-cover--none';
+        li.appendChild(blank);
+      }
+      var body = document.createElement('div');
+      body.className = 'blog-card-body';
+      if (post.date) {
+        var time = document.createElement('time');
+        time.className = 'blog-card-date';
+        time.dateTime = post.date;
+        time.textContent = post.date_text || post.date.slice(0, 10);
+        body.appendChild(time);
+      }
+      var h3 = document.createElement('h3');
+      h3.className = 'blog-card-title';
+      var a = document.createElement('a');
+      a.href = href;
+      a.textContent = post.title;
+      h3.appendChild(a);
+      body.appendChild(h3);
+      if (post.summary) {
+        var p = document.createElement('p');
+        p.className = 'blog-card-summary';
+        p.textContent = post.summary;
+        body.appendChild(p);
+      }
+      li.appendChild(body);
+      return li;
+    }
+
+    // a blog that does not answer in time is treated as unreachable
+    var timer = setTimeout(drop, 10000);
+    fetch(source)
+      .then(function (response) {
+        if (!response.ok) throw new Error(response.status);
+        return response.json();
+      })
+      .then(function (data) {
+        clearTimeout(timer);
+        var cards = (data.posts || []).map(card).filter(Boolean).slice(0, count);
+        if (!cards.length || !list.parentNode) return drop();
+        while (list.firstChild) list.removeChild(list.firstChild);
+        cards.forEach(function (li) { list.appendChild(li); });
+      })
+      .catch(function () {
+        clearTimeout(timer);
+        drop();
+      });
+  })();
+</script>
