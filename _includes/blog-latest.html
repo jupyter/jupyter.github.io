@@ -13,11 +13,9 @@
     <li class="blog-card blog-card--placeholder" aria-hidden="true">
       <div class="blog-card-cover"></div>
       <div class="blog-card-body">
-        <div class="blog-card-text">
-          <p class="blog-card-title">&nbsp;</p>
-          <p class="blog-card-summary">&nbsp;</p>
-        </div>
-        <p class="blog-card-meta">&nbsp;</p>
+        <p class="blog-card-date">&nbsp;</p>
+        <p class="blog-card-title">&nbsp;</p>
+        <p class="blog-card-summary">&nbsp;</p>
       </div>
     </li>
     {% endfor %}
@@ -47,27 +45,13 @@
       }
     }
 
-    // an author's or a tag's link to its page on the blog, with the
-    // tag's description shown on hover
-    function link(item, className) {
-      if (!item || !item.name) return null;
-      var href = blogUrl(item.url);
-      var el = document.createElement(href ? 'a' : 'span');
-      el.className = className;
-      if (href) el.href = href;
-      if (item.description) el.title = item.description;
-      el.textContent = item.name;
-      return el;
-    }
-
     function card(post) {
       var href = blogUrl(post.url);
       if (!href || !post.title) return null;
       var li = document.createElement('li');
       li.className = 'blog-card';
-      // the image in a box of its own, as on the blog: an image that is
-      // itself one of the card's grid items is sized, in some browsers,
-      // from its full natural height, which then spreads over every row
+      // the image in a box, as on the blog's cards: without an image
+      // the box keeps the cover's shape
       var frame = document.createElement('div');
       frame.className = 'blog-card-cover';
       var cover = post.cover && blogUrl(post.cover.url);
@@ -86,48 +70,25 @@
       li.appendChild(frame);
       var body = document.createElement('div');
       body.className = 'blog-card-body';
-      // as the blog's own cards: the title and summary, filling the
-      // card; then the date and authors; then the tags, at its foot
-      var text = document.createElement('div');
-      text.className = 'blog-card-text';
+      if (post.date) {
+        var time = document.createElement('time');
+        time.className = 'blog-card-date';
+        time.dateTime = post.date;
+        time.textContent = post.date_text || post.date.slice(0, 10);
+        body.appendChild(time);
+      }
       var h3 = document.createElement('h3');
       h3.className = 'blog-card-title';
       var a = document.createElement('a');
       a.href = href;
       a.textContent = post.title;
       h3.appendChild(a);
-      text.appendChild(h3);
+      body.appendChild(h3);
       if (post.summary) {
         var p = document.createElement('p');
         p.className = 'blog-card-summary';
         p.textContent = post.summary;
-        text.appendChild(p);
-      }
-      body.appendChild(text);
-      var meta = document.createElement('p');
-      meta.className = 'blog-card-meta';
-      if (post.date) {
-        var time = document.createElement('time');
-        time.dateTime = post.date;
-        time.textContent = post.date_text || post.date.slice(0, 10);
-        meta.appendChild(time);
-      }
-      var authors = (post.authors || []).map(function (author) {
-        return link(author, 'blog-card-author');
-      }).filter(Boolean);
-      authors.forEach(function (a, i) {
-        meta.appendChild(document.createTextNode(i ? ', ' : (meta.firstChild ? ' \u00b7 ' : '')));
-        meta.appendChild(a);
-      });
-      if (meta.firstChild) body.appendChild(meta);
-      var tags = (post.tags || []).map(function (tag) {
-        return link(tag, 'blog-card-tag');
-      }).filter(Boolean);
-      if (tags.length) {
-        var row = document.createElement('p');
-        row.className = 'blog-card-tags';
-        tags.forEach(function (a) { row.appendChild(a); });
-        body.appendChild(row);
+        body.appendChild(p);
       }
       li.appendChild(body);
       return li;

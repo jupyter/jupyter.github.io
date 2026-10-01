@@ -64,32 +64,13 @@
     aspect-ratio: 1200 / 630;
   }
   .blog-card-body {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
     padding: 1em 1.25em 1.25em 1.25em;
   }
-  // the authors' and tags' links lie above the card's own link
-  .blog-card-author,
-  .blog-card-tag {
-    position: relative;
-    z-index: 1;
-  }
-  // the title and summary fill the card, so the dates and the tags
-  // below them line up across a row of cards, as on the blog
-  .blog-card-text {
-    flex: 1;
-  }
-  .blog-card-meta {
-    margin: 1em 0 0 0;
+  .blog-card-date {
+    display: block;
+    margin: 0 0 0.5em 0;
     color: $medium-gray;
     font-size: 0.875em;
-    a {
-      color: inherit;
-      &:hover {
-        color: $dark-orange;
-      }
-    }
   }
   .blog-card-title {
     font-size: 1.275em;
@@ -116,100 +97,34 @@
     line-height: 1.5;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-    line-clamp: 4;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
     overflow: hidden;
-  }
-  .blog-card-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.35em;
-    margin: 0.75em 0 0 0;
-  }
-  .blog-card-tag {
-    padding: 0.05em 0.65em;
-    background-color: $light-gray;
-    border: 1px solid darken($light-gray, 10%);
-    border-radius: 999px;
-    color: $medium-dark-gray;
-    font-size: 0.875em;
-    line-height: 1.5;
-    text-decoration: none;
-    &:hover,
-    &:focus {
-      border-color: $orange;
-      color: $dark-orange;
-      text-decoration: none;
-    }
-  }
-}
-
-// As on the blog's listings: the cards of a row share their tracks
-// (cover, title and summary, date and authors, tags), so the dates and
-// the tags line up across the row however long each card's title,
-// summary or tags; tags that wrap only lengthen the row's foot. A grid
-// gap would also fall between a card's own tracks, so the space
-// between cards stacked in a column is a margin.
-@supports (grid-template-rows: subgrid) {
-  // the last row's margin is taken back: the link below sets its own
-  .blog-latest-posts {
-    row-gap: 0;
-    margin-bottom: -2em;
-  }
-  .blog-card {
-    display: grid;
-    grid-row: span 4;
-    grid-template-rows: subgrid;
-    row-gap: 0;
-    margin-bottom: 2em;
-    .blog-card-cover {
-      grid-row: 1;
-    }
-    .blog-card-body {
-      grid-row: 2 / span 3;
-      display: grid;
-      grid-template-rows: subgrid;
-      row-gap: 0;
-    }
-    .blog-card-text {
-      grid-row: 1;
-    }
-    .blog-card-meta {
-      grid-row: 2;
-    }
-    .blog-card-tags {
-      grid-row: 3;
-      align-content: flex-start;
-    }
-  }
-  .blog-latest-more {
-    margin-top: 1.5em;
   }
 }
 
 // the shape of a card, while the posts load
 .blog-card--placeholder {
   border-color: $light-gray;
-  .blog-card-meta,
+  .blog-card-date,
   .blog-card-title,
   .blog-card-summary {
     background-color: $light-gray;
     border-radius: 3px;
   }
-  .blog-card-meta {
-    width: 60%;
+  .blog-card-date {
+    width: 30%;
   }
   .blog-card-title {
     height: 2.6em;
-    margin: 0 0 0.5em 0;
   }
   .blog-card-summary {
-    height: 6em;
+    height: 4.5em;
   }
 }
 
 .blog-latest-more {
-  margin: 2em 0 0 0;
+  margin: 1.5em 0 0 0;
   text-align: center;
   font-size: 1.2em;
   a {
