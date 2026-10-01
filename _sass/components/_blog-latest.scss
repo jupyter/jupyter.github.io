@@ -14,6 +14,10 @@
     @media (max-width: $breakpoint-s) {
       font-size: 1.8em;
     }
+    // the link to the blog kept on one line
+    a {
+      white-space: nowrap;
+    }
   }
 }
 
@@ -64,18 +68,7 @@
     aspect-ratio: 1200 / 630;
   }
   .blog-card-body {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
     padding: 1em 1.25em 1.25em 1.25em;
-  }
-  // at the foot of the card, so the dates of a row of cards line up
-  .blog-card-date {
-    display: block;
-    margin: auto 0 0 0;
-    padding-top: 0.75em;
-    color: $medium-gray;
-    font-size: 0.875em;
   }
   .blog-card-title {
     font-size: 1.275em;
@@ -106,21 +99,20 @@
     line-clamp: 3;
     overflow: hidden;
   }
+  // the dateline that leads the summary
+  .blog-card-date {
+    color: $dark-gray;
+    font-weight: 600;
+  }
 }
 
 // the shape of a card, while the posts load
 .blog-card--placeholder {
   border-color: $light-gray;
-  .blog-card-date,
   .blog-card-title,
   .blog-card-summary {
     background-color: $light-gray;
     border-radius: 3px;
-  }
-  .blog-card-date {
-    width: 30%;
-    margin-top: 0.75em;
-    padding-top: 0;
   }
   .blog-card-title {
     height: 2.6em;

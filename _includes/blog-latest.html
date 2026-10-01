@@ -15,7 +15,6 @@
       <div class="blog-card-body">
         <p class="blog-card-title">&nbsp;</p>
         <p class="blog-card-summary">&nbsp;</p>
-        <p class="blog-card-date">&nbsp;</p>
       </div>
     </li>
     {% endfor %}
@@ -31,6 +30,19 @@
 
     function drop() {
       if (list.parentNode) list.parentNode.removeChild(list);
+    }
+
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+    // a newspaper's dateline, "Sep 24.", from the date as the blog wrote
+    // it (YYYY-MM-DD...); the year only when it is not this year's
+    function dateline(value) {
+      var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(value || '');
+      if (!m) return null;
+      var text = months[+m[2] - 1] + ' ' + (+m[3]);
+      if (+m[1] !== new Date().getFullYear()) text += ', ' + m[1];
+      return text + '.';
     }
 
     // a link from the blog's data, only to the blog itself
@@ -77,19 +89,23 @@
       a.textContent = post.title;
       h3.appendChild(a);
       body.appendChild(h3);
-      if (post.summary) {
-        var p = document.createElement('p');
-        p.className = 'blog-card-summary';
-        p.textContent = post.summary;
-        body.appendChild(p);
-      }
-      if (post.date) {
+      // the date leads the summary, on its line, as a newspaper's
+      // dateline; the full date on hover
+      var p = document.createElement('p');
+      p.className = 'blog-card-summary';
+      var date = dateline(post.date);
+      if (date) {
         var time = document.createElement('time');
         time.className = 'blog-card-date';
         time.dateTime = post.date;
-        time.textContent = post.date_text || post.date.slice(0, 10);
-        body.appendChild(time);
+        if (post.date_text) time.title = post.date_text;
+        time.textContent = date;
+        p.appendChild(time);
       }
+      if (post.summary) {
+        p.appendChild(document.createTextNode((date ? ' ' : '') + post.summary));
+      }
+      if (p.firstChild) body.appendChild(p);
       li.appendChild(body);
       return li;
     }
