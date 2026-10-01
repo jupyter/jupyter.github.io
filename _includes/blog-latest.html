@@ -65,10 +65,14 @@
       if (!href || !post.title) return null;
       var li = document.createElement('li');
       li.className = 'blog-card';
+      // the image in a box of its own, as on the blog: an image that is
+      // itself one of the card's grid items is sized, in some browsers,
+      // from its full natural height, which then spreads over every row
+      var frame = document.createElement('div');
+      frame.className = 'blog-card-cover';
       var cover = post.cover && blogUrl(post.cover.url);
       if (cover) {
         var img = document.createElement('img');
-        img.className = 'blog-card-cover';
         img.src = cover;
         img.alt = '';
         img.loading = 'lazy';
@@ -77,12 +81,9 @@
           img.width = post.cover.width;
           img.height = post.cover.height;
         }
-        li.appendChild(img);
-      } else {
-        var blank = document.createElement('div');
-        blank.className = 'blog-card-cover blog-card-cover--none';
-        li.appendChild(blank);
+        frame.appendChild(img);
       }
+      li.appendChild(frame);
       var body = document.createElement('div');
       body.className = 'blog-card-body';
       // as the blog's own cards: the title and summary, filling the
