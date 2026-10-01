@@ -34,6 +34,8 @@ blog:
   headline: Latest from the Jupyter blog
   source: https://blog.jupyter.org/latest.json
   count: 3
+  # each post's cover image above its date and title
+  covers: false
   url: https://blog.jupyter.org
   link_text: More news from the Jupyter blog
 
@@ -285,6 +287,7 @@ in_use:
       headline=page.blog.headline
       source=page.blog.source
       count=page.blog.count
+      covers=page.blog.covers
       url=page.blog.url
       link_text=page.blog.link_text
   %}
