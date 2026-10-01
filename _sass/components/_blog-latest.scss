@@ -64,11 +64,16 @@
     aspect-ratio: 1200 / 630;
   }
   .blog-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     padding: 1em 1.25em 1.25em 1.25em;
   }
+  // at the foot of the card, so the dates of a row of cards line up
   .blog-card-date {
     display: block;
-    margin: 0 0 0.5em 0;
+    margin: auto 0 0 0;
+    padding-top: 0.75em;
     color: $medium-gray;
     font-size: 0.875em;
   }
@@ -114,6 +119,8 @@
   }
   .blog-card-date {
     width: 30%;
+    margin-top: 0.75em;
+    padding-top: 0;
   }
   .blog-card-title {
     height: 2.6em;
