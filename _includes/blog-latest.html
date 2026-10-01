@@ -1,12 +1,12 @@
 <section class="homepage-section section-white blog-latest" aria-labelledby="blog-latest-heading">
-  <h2 id="blog-latest-heading">{{ include.headline }}</h2>
+  <h2 id="blog-latest-heading">{{ include.headline }} <a href="{{ include.url }}">{{ include.link_text }}</a></h2>
   {% comment %}
     The newest posts are read in the browser from the blog's latest.json,
     which the blog writes on each deploy, so this list is as current as
     the blog itself, with no rebuild of this site. Until they arrive, the
     list holds placeholder cards of the same shape; without JavaScript,
-    or if the blog cannot be reached, the list is left out and the link
-    below it remains.
+    or if the blog cannot be reached, the list is left out and the
+    heading's link to the blog remains.
   {% endcomment %}
   <ul class="blog-latest-posts" id="blog-latest-posts" hidden>
     {% for i in (1..include.count) %}
@@ -20,9 +20,6 @@
     </li>
     {% endfor %}
   </ul>
-  <p class="blog-latest-more">
-    <a href="{{ include.url }}">{{ include.link_text }}</a>
-  </p>
 </section>
 <script>
   (function () {

@@ -4,12 +4,12 @@
 // The newest blog posts under the jumbotron (_includes/blog-latest.html)
 .homepage-section.blog-latest {
   display: block;
-  padding: 2em 1em 4em 1em;
+  padding: 1em 1em 3em 1em;
   @media (max-width: $breakpoint-s) {
-    padding: 1em 1em 3em 1em;
+    padding: 0.5em 1em 2em 1em;
   }
   h2 {
-    margin: 0 0 1em 0;
+    margin: 0 0 0.75em 0;
     text-align: center;
     @media (max-width: $breakpoint-s) {
       font-size: 1.8em;
@@ -127,18 +127,5 @@
   }
   .blog-card-summary {
     height: 4.5em;
-  }
-}
-
-.blog-latest-more {
-  margin: 1.5em 0 0 0;
-  text-align: center;
-  font-size: 1.2em;
-  a {
-    color: $dark-orange;
-    font-weight: 600;
-    &::after {
-      content: " \2192";
-    }
   }
 }

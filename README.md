@@ -66,7 +66,7 @@ html_theme_options = {
 ## Latest blog posts on the homepage
 
 Under the jumbotron, the homepage shows the three newest posts from the
-[Jupyter blog](https://blog.jupyter.org) and links to the blog
+[Jupyter blog](https://blog.jupyter.org) under a heading that links to the blog
 (`_includes/blog-latest.html`, configured by `blog:` in `index.html`'s
 front matter). The posts are read in the browser from
 <https://blog.jupyter.org/latest.json>, a short list of the newest posts
