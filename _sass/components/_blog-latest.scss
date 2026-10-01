@@ -99,10 +99,10 @@
     line-clamp: 3;
     overflow: hidden;
   }
-  // the dateline that leads the summary
+  // the dateline that leads the summary, in italic: set apart from the
+  // summary without competing with the title
   .blog-card-date {
-    color: $dark-gray;
-    font-weight: 600;
+    font-style: italic;
   }
 }
 
