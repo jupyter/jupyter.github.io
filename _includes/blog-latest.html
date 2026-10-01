@@ -13,7 +13,7 @@
     <li class="blog-card blog-card--placeholder" aria-hidden="true">
       <div class="blog-card-cover"></div>
       <div class="blog-card-body">
-        <p class="blog-card-date">&nbsp;</p>
+        <p class="blog-card-meta">&nbsp;</p>
         <p class="blog-card-title">&nbsp;</p>
         <p class="blog-card-summary">&nbsp;</p>
       </div>
@@ -45,6 +45,19 @@
       }
     }
 
+    // an author's or a tag's link to its page on the blog, with the
+    // tag's description shown on hover
+    function link(item, className) {
+      if (!item || !item.name) return null;
+      var href = blogUrl(item.url);
+      var el = document.createElement(href ? 'a' : 'span');
+      el.className = className;
+      if (href) el.href = href;
+      if (item.description) el.title = item.description;
+      el.textContent = item.name;
+      return el;
+    }
+
     function card(post) {
       var href = blogUrl(post.url);
       if (!href || !post.title) return null;
@@ -70,13 +83,22 @@
       }
       var body = document.createElement('div');
       body.className = 'blog-card-body';
+      var meta = document.createElement('p');
+      meta.className = 'blog-card-meta';
       if (post.date) {
         var time = document.createElement('time');
-        time.className = 'blog-card-date';
         time.dateTime = post.date;
         time.textContent = post.date_text || post.date.slice(0, 10);
-        body.appendChild(time);
+        meta.appendChild(time);
       }
+      var authors = (post.authors || []).map(function (author) {
+        return link(author, 'blog-card-author');
+      }).filter(Boolean);
+      authors.forEach(function (a, i) {
+        meta.appendChild(document.createTextNode(i ? ', ' : (meta.firstChild ? ' \u00b7 ' : '')));
+        meta.appendChild(a);
+      });
+      if (meta.firstChild) body.appendChild(meta);
       var h3 = document.createElement('h3');
       h3.className = 'blog-card-title';
       var a = document.createElement('a');
@@ -89,6 +111,15 @@
         p.className = 'blog-card-summary';
         p.textContent = post.summary;
         body.appendChild(p);
+      }
+      var tags = (post.tags || []).map(function (tag) {
+        return link(tag, 'blog-card-tag');
+      }).filter(Boolean);
+      if (tags.length) {
+        var row = document.createElement('p');
+        row.className = 'blog-card-tags';
+        tags.forEach(function (a) { row.appendChild(a); });
+        body.appendChild(row);
       }
       li.appendChild(body);
       return li;
