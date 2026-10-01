@@ -65,15 +65,12 @@ html_theme_options = {
 
 ## Latest blog posts on the homepage
 
-Under the jumbotron, the homepage shows the three newest posts from
-[the Jupyter blog](https://blog.jupyter.org) and links to the blog
+Under the jumbotron, the homepage shows the three newest posts from the
+[Jupyter blog](https://blog.jupyter.org) and links to the blog
 (`_includes/blog-latest.html`, configured by `blog:` in `index.html`'s
 front matter). The posts are read in the browser from
 <https://blog.jupyter.org/latest.json>, a short list of the newest posts
-that the blog writes each time it is deployed, so the section is as
-current as the blog and nothing here needs rebuilding when a post is
-published. Without JavaScript, or when the blog cannot be reached, the
-section shows only its link to the blog.
+that the blog writes each time it is deployed.
 
 ## Web analytics (experimental)
 
