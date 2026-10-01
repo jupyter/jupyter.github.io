@@ -144,8 +144,10 @@
 // gap would also fall between a card's own tracks, so the space
 // between cards stacked in a column is a margin.
 @supports (grid-template-rows: subgrid) {
+  // the last row's margin is taken back: the link below sets its own
   .blog-latest-posts {
     row-gap: 0;
+    margin-bottom: -2em;
   }
   .blog-card {
     display: grid;
@@ -174,7 +176,7 @@
     }
   }
   .blog-latest-more {
-    margin-top: 0;
+    margin-top: 1.5em;
   }
 }
 
