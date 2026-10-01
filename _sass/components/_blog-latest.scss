@@ -51,22 +51,6 @@
   &:focus-within {
     border-color: $orange;
   }
-  // Covers all have the blog's cover shape, 1200 x 630, which the img's
-  // width and height give it; a card without one, and a placeholder,
-  // keep the shape with an empty box.
-  .blog-card-cover {
-    display: block;
-    background-color: $light-gray;
-    border-bottom: 1px solid $light-gray;
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-  }
-  .blog-card-cover:empty {
-    aspect-ratio: 1200 / 630;
-  }
   .blog-card-body {
     padding: 1em 1.25em 1.25em 1.25em;
   }

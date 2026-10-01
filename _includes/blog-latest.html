@@ -11,7 +11,6 @@
   <ul class="blog-latest-posts" id="blog-latest-posts" hidden>
     {% for i in (1..include.count) %}
     <li class="blog-card blog-card--placeholder" aria-hidden="true">
-      {% if include.covers %}<div class="blog-card-cover"></div>{% endif %}
       <div class="blog-card-body">
         <p class="blog-card-title">&nbsp;</p>
         <p class="blog-card-summary">&nbsp;</p>
@@ -25,24 +24,26 @@
     var list = document.getElementById('blog-latest-posts');
     var source = '{{ include.source }}';
     var count = {{ include.count }};
-    var covers = {% if include.covers %}true{% else %}false{% endif %};
     list.hidden = false;
 
     function drop() {
       if (list.parentNode) list.parentNode.removeChild(list);
     }
 
-    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-    // a newspaper's dateline, "Sep 24.", from the date as the blog wrote
-    // it (YYYY-MM-DD...); the year only when it is not this year's
+    // a newspaper's dateline, "Sep 24.", with the year only when it is
+    // not this year's. The post's own calendar date, as the blog shows it:
+    // its YYYY-MM-DD, read as UTC and formatted in UTC, so a reader in
+    // another time zone does not see the day before or after.
+    var thisYear = new Date().getFullYear();
+    var shortDate = new Intl.DateTimeFormat('en-US',
+      { month: 'short', day: 'numeric', timeZone: 'UTC' });
+    var longDate = new Intl.DateTimeFormat('en-US',
+      { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
     function dateline(value) {
-      var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(value || '');
-      if (!m) return null;
-      var text = months[+m[2] - 1] + ' ' + (+m[3]);
-      if (+m[1] !== new Date().getFullYear()) text += ', ' + m[1];
-      return text + '.';
+      var date = new Date(String(value).slice(0, 10));
+      if (isNaN(date)) return null;
+      var format = date.getUTCFullYear() === thisYear ? shortDate : longDate;
+      return format.format(date) + '.';
     }
 
     // a link from the blog's data, only to the blog itself
@@ -60,26 +61,6 @@
       if (!href || !post.title) return null;
       var li = document.createElement('li');
       li.className = 'blog-card';
-      // the cover, when the page asks for covers: the image in a box, as
-      // on the blog's cards; without an image the box keeps its shape
-      if (covers) {
-        var frame = document.createElement('div');
-        frame.className = 'blog-card-cover';
-        var cover = post.cover && blogUrl(post.cover.url);
-        if (cover) {
-          var img = document.createElement('img');
-          img.src = cover;
-          img.alt = '';
-          img.loading = 'lazy';
-          img.decoding = 'async';
-          if (post.cover.width && post.cover.height) {
-            img.width = post.cover.width;
-            img.height = post.cover.height;
-          }
-          frame.appendChild(img);
-        }
-        li.appendChild(frame);
-      }
       var body = document.createElement('div');
       body.className = 'blog-card-body';
       var h3 = document.createElement('h3');
