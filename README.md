@@ -79,6 +79,13 @@ Access it at this link, using the [1Password](https://ec.jupyter.org/accounts/#p
 
 Plausible dashboard link: https://plausible.io/jupyter.org/
 
+The public dashboards of Jupyter's Plausible sites are gathered at
+<https://jupyter.org/webstats> (`webstats.html`), a plain page for
+administrators that is not linked from the site. Each one is embedded through
+a password-free shared link, whose `auth=` token goes under `shared_links:` in
+that page's front matter; a site without a token is shown as a link to its
+dashboard on plausible.io.
+
 - See [this issue for updates](https://github.com/jupyter/jupyter.github.io/issues/815).
 - [Here's the change that adds the Plausible script](https://github.com/jupyter/jupyter.github.io/pull/816/files#diff-7c00ab81dd0968f6fb395b5986f71fd56704c48a71f0b9583058f5aaaad03aa7R17).
 
