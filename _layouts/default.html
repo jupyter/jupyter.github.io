@@ -82,8 +82,11 @@ legal:
          after it, calls an anonymous define() and leaves `anchors` undefined -->
     <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
     <script>
+      // every heading but those marked no-anchor, such as the homepage's
+      // blog cards, whose titles can be on the page before this runs
       document.addEventListener('DOMContentLoaded', function(event) {
-        anchors.add();
+        anchors.add('h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), ' +
+                    'h5:not(.no-anchor), h6:not(.no-anchor)');
       });
     </script>
 
