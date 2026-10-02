@@ -64,7 +64,9 @@
       var body = document.createElement('div');
       body.className = 'blog-card-body';
       var h3 = document.createElement('h3');
-      h3.className = 'blog-card-title';
+      // no anchor link of its own (_layouts/default.html): the card is
+      // the link, and an anchor would be a second tab stop on each card
+      h3.className = 'blog-card-title no-anchor';
       var a = document.createElement('a');
       a.href = href;
       a.textContent = post.title;
