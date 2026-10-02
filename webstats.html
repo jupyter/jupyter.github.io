@@ -26,7 +26,7 @@ shared_links:
 # Light, dark or system: the embedded dashboards' color scheme
 theme: light
 
-# One tab each, in this order. `site` is the Plausible site, `query` any
+# One section each, in this order. `site` is the Plausible site, `query` any
 # filters added to its dashboard's URL, as plausible.io writes them.
 dashboards:
   - id: jupyter.org
@@ -73,37 +73,27 @@ dashboards:
   <div class="container">
     <p class="webstats-intro">
       Jupyter websites count visits with <a href="https://plausible.io">Plausible Analytics</a>,
-      which uses no cookies and collects no personal data. Pick a site to see its dashboard,
-      or open the dashboard on plausible.io for the whole view. See our
+      which uses no cookies and collects no personal data. Each site's dashboard is below;
+      open it on plausible.io for the whole view. See our
       <a href="/privacy">data privacy page</a> for more about Jupyter and your data.
     </p>
 
     {% comment %}
-      Without JavaScript, the tabs are a list of links to the sections
-      below, and each section links to its dashboard on plausible.io; the
-      embedded dashboards need the script at the end of the page anyway.
-      With it, one section is shown at a time, picked by the URL's #id,
-      and its dashboard is loaded the first time it is shown.
+      Every dashboard on one page, one after another. Each is loaded only
+      as it nears the screen (loading="lazy"), so the page does not fetch
+      all of them at once.
     {% endcomment %}
-    <nav class="webstats-tabs" aria-label="Websites">
-      <ul>
-        {% for dashboard in page.dashboards %}
-        <li><a href="#{{ dashboard.id }}">{{ dashboard.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-
     {% for dashboard in page.dashboards %}
     {%- assign auth = page.shared_links[dashboard.site] %}
     {%- capture public_url %}https://plausible.io/{{ dashboard.site }}{% if dashboard.query %}?{{ dashboard.query }}{% endif %}{% endcapture %}
-    <section class="webstats-dashboard" id="{{ dashboard.id }}" aria-labelledby="{{ dashboard.id }}-heading">
-      <h2 id="{{ dashboard.id }}-heading" class="no-anchor">{{ dashboard.title }}</h2>
+    <section class="webstats-dashboard">
+      <h2 id="{{ dashboard.id }}">{{ dashboard.title }}</h2>
       {% if dashboard.note %}<p>{{ dashboard.note }}</p>{% endif %}
       <p><a href="{{ public_url }}">Open the {{ dashboard.title }} dashboard on plausible.io</a></p>
       {% if auth and auth != "" %}
       {%- capture embed_url %}https://plausible.io/share/{{ dashboard.site }}?auth={{ auth }}{% if dashboard.query %}&{{ dashboard.query }}{% endif %}&embed=true&theme={{ page.theme }}{% endcapture %}
-      <iframe plausible-embed data-src="{{ embed_url | escape }}" title="{{ dashboard.title }} visitor statistics"
-              scrolling="no" frameborder="0"
+      <iframe plausible-embed src="{{ embed_url | escape }}" title="{{ dashboard.title }} visitor statistics"
+              scrolling="no" frameborder="0" loading="lazy"
               style="width: 1px; min-width: 100%; height: 1600px; color-scheme: auto;"></iframe>
       {% endif %}
     </section>
@@ -111,44 +101,6 @@ dashboards:
   </div>
 </article>
 
-<script>
-  (function () {
-    var tabs = document.querySelectorAll('.webstats-tabs a');
-    var sections = document.querySelectorAll('.webstats-dashboard');
-
-    // show the section named by the URL's #id, or the first one, and load
-    // its dashboard if it has not been loaded yet
-    function show() {
-      var current = document.getElementById(decodeURIComponent(location.hash.slice(1)));
-      if (!current || !current.classList.contains('webstats-dashboard')) current = sections[0];
-      sections.forEach(function (section) {
-        section.hidden = section !== current;
-      });
-      tabs.forEach(function (tab) {
-        if (tab.getAttribute('href') === '#' + current.id) {
-          tab.setAttribute('aria-current', 'page');
-        } else {
-          tab.removeAttribute('aria-current');
-        }
-      });
-      var iframe = current.querySelector('iframe[data-src]');
-      if (iframe && !iframe.getAttribute('src')) {
-        iframe.setAttribute('src', iframe.getAttribute('data-src'));
-      }
-    }
-
-    // a tab shows its section in place, rather than scrolling to it
-    tabs.forEach(function (tab) {
-      tab.addEventListener('click', function (event) {
-        event.preventDefault();
-        history.replaceState(null, '', tab.getAttribute('href'));
-        show();
-      });
-    });
-    window.addEventListener('hashchange', show);
-    show();
-  })();
-</script>
 {% comment %}
   Plausible's script that sizes each embedded dashboard to its content. It
   attaches to every iframe on the page when it runs, and resizes each one

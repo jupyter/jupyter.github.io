@@ -15,47 +15,9 @@
     line-height: 1.5;
   }
   .webstats-dashboard {
-    margin-bottom: 2em;
-    &[hidden] {
-      display: none;
-    }
+    margin-bottom: 3em;
     h2 {
       margin: 0 0 0.5em 0;
-    }
-  }
-}
-
-.webstats-tabs {
-  margin-bottom: 2em;
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5em;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  a {
-    display: block;
-    padding: 0.4em 0.9em;
-    border: 1px solid $gray;
-    border-radius: 5px;
-    color: $dark-gray;
-    text-decoration: none;
-    @media (max-width: $breakpoint-s) {
-      padding: 0.3em 0.6em;
-      font-size: 0.9em;
-    }
-    &:hover,
-    &:focus {
-      border-color: $orange;
-      color: $dark-orange;
-    }
-    &[aria-current] {
-      background-color: $orange;
-      border-color: $orange;
-      color: $white;
     }
   }
 }
