@@ -1,0 +1,157 @@
+---
+layout: default
+title: Web Statistics
+tagline: Public visitor statistics for Jupyter websites, collected with privacy-friendly Plausible Analytics
+permalink: /webstats
+
+# The Plausible sites whose dashboards are public, and the token of each
+# one's shared link. A dashboard can be embedded only through a shared link
+# without a password: plausible.io refuses to show its public dashboard
+# pages (plausible.io/<site>) inside another page. To add one, in the site's
+# settings on plausible.io go to Visibility > Shared links, create a link
+# with no password, and copy the value of its `auth=` parameter here. A site
+# without a token is shown as a link to its dashboard on plausible.io.
+shared_links:
+  jupyter.org: jTfI9_lNJ2wX1hQeDgk18
+  nbviewer.org: 0ZNyBcbyQeGw0QoK6Vt-9
+  mybinder.org: KADuJ__6JoImj8_D4mBxp
+  jupyterlab.readthedocs.io: ""
+  ipython.org: ""
+  ipywidgets.readthedocs.io: ""
+  jupyterbook.org: ""
+  jupyterlite.readthedocs.io: ""
+  jupyter-documentation: ""
+  jupyterfoundation.org: ""
+
+# Light, dark or system: the embedded dashboards' color scheme
+theme: light
+
+# One tab each, in this order. `site` is the Plausible site, `query` any
+# filters added to its dashboard's URL, as plausible.io writes them.
+dashboards:
+  - id: jupyter.org
+    title: jupyter.org
+    site: jupyter.org
+  - id: nbviewer.org
+    title: nbviewer.org
+    site: nbviewer.org
+  - id: mybinder.org
+    title: mybinder.org
+    site: mybinder.org
+  - id: jupyterlab
+    title: JupyterLab docs
+    site: jupyterlab.readthedocs.io
+  - id: ipython.org
+    title: ipython.org
+    site: ipython.org
+  - id: ipywidgets
+    title: ipywidgets docs
+    site: ipywidgets.readthedocs.io
+  - id: jupyterbook.org
+    title: jupyterbook.org
+    site: jupyterbook.org
+  - id: jupyterlite
+    title: JupyterLite docs
+    site: jupyterlite.readthedocs.io
+  - id: docs
+    title: Jupyter docs
+    site: jupyter-documentation
+  - id: jupyterfoundation.org
+    title: jupyterfoundation.org
+    site: jupyterfoundation.org
+  - id: blog
+    title: blog.jupyter.org
+    site: jupyter.org
+    # the blog is counted under jupyter.org, as the segment 8515
+    query: f=is,segment,8515&l=segment-8515,blog.jupyter.org
+    note: The Jupyter blog's visitors, counted with jupyter.org's as its "blog.jupyter.org" segment.
+---
+
+{% include page-header.html title=page.title tagline=page.tagline %}
+
+<article class="section-white webstats">
+  <div class="container">
+    <p class="webstats-intro">
+      Jupyter websites count visits with <a href="https://plausible.io">Plausible Analytics</a>,
+      which uses no cookies and collects no personal data. Pick a site to see its dashboard,
+      or open the dashboard on plausible.io for the whole view. See our
+      <a href="/privacy">data privacy page</a> for more about Jupyter and your data.
+    </p>
+
+    {% comment %}
+      Without JavaScript, the tabs are a list of links to the sections
+      below, and each section links to its dashboard on plausible.io; the
+      embedded dashboards need the script at the end of the page anyway.
+      With it, one section is shown at a time, picked by the URL's #id,
+      and its dashboard is loaded the first time it is shown.
+    {% endcomment %}
+    <nav class="webstats-tabs" aria-label="Websites">
+      <ul>
+        {% for dashboard in page.dashboards %}
+        <li><a href="#{{ dashboard.id }}">{{ dashboard.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    {% for dashboard in page.dashboards %}
+    {%- assign auth = page.shared_links[dashboard.site] %}
+    {%- capture public_url %}https://plausible.io/{{ dashboard.site }}{% if dashboard.query %}?{{ dashboard.query }}{% endif %}{% endcapture %}
+    <section class="webstats-dashboard" id="{{ dashboard.id }}" aria-labelledby="{{ dashboard.id }}-heading">
+      <h2 id="{{ dashboard.id }}-heading" class="no-anchor">{{ dashboard.title }}</h2>
+      {% if dashboard.note %}<p>{{ dashboard.note }}</p>{% endif %}
+      <p><a href="{{ public_url }}">Open the {{ dashboard.title }} dashboard on plausible.io</a></p>
+      {% if auth and auth != "" %}
+      {%- capture embed_url %}https://plausible.io/share/{{ dashboard.site }}?auth={{ auth }}{% if dashboard.query %}&{{ dashboard.query }}{% endif %}&embed=true&theme={{ page.theme }}{% endcapture %}
+      <iframe plausible-embed data-src="{{ embed_url | escape }}" title="{{ dashboard.title }} visitor statistics"
+              scrolling="no" frameborder="0"
+              style="width: 1px; min-width: 100%; height: 1600px; color-scheme: auto;"></iframe>
+      {% endif %}
+    </section>
+    {% endfor %}
+  </div>
+</article>
+
+<script>
+  (function () {
+    var tabs = document.querySelectorAll('.webstats-tabs a');
+    var sections = document.querySelectorAll('.webstats-dashboard');
+
+    // show the section named by the URL's #id, or the first one, and load
+    // its dashboard if it has not been loaded yet
+    function show() {
+      var current = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (!current || !current.classList.contains('webstats-dashboard')) current = sections[0];
+      sections.forEach(function (section) {
+        section.hidden = section !== current;
+      });
+      tabs.forEach(function (tab) {
+        if (tab.getAttribute('href') === '#' + current.id) {
+          tab.setAttribute('aria-current', 'page');
+        } else {
+          tab.removeAttribute('aria-current');
+        }
+      });
+      var iframe = current.querySelector('iframe[data-src]');
+      if (iframe && !iframe.getAttribute('src')) {
+        iframe.setAttribute('src', iframe.getAttribute('data-src'));
+      }
+    }
+
+    // a tab shows its section in place, rather than scrolling to it
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function (event) {
+        event.preventDefault();
+        history.replaceState(null, '', tab.getAttribute('href'));
+        show();
+      });
+    });
+    window.addEventListener('hashchange', show);
+    show();
+  })();
+</script>
+{% comment %}
+  Plausible's script that sizes each embedded dashboard to its content. It
+  attaches to every iframe on the page when it runs, and resizes each one
+  again whenever it loads, so the dashboards loaded later are sized too.
+{% endcomment %}
+<script async src="https://plausible.io/js/embed.host.js"></script>
