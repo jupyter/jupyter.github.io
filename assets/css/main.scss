@@ -2,6 +2,7 @@
 # this ensures Jekyll reads the file to be transformed into CSS later
 # only Main files contain this front matter, not partials.
 ---
+@import "components/banner";
 @import "components/box";
 @import "components/copy";
 @import "components/headlines";
@@ -16,6 +17,7 @@
 @import "components/containers";
 @import "components/biocard";
 @import "components/homepage";
+@import "components/blog-latest";
 @import "components/syntax";
 @import "components/sections";
 @import "components/community-resource";
@@ -23,30 +25,6 @@
 @import "components/widgets";
 @import "components/hr";
 @import "components/details";
-
-/* Styling for the call-to-survey banner */
-.survey-banner {
-    background-color: $orange;
-    color: $white;
-    text-align: center;
-    padding: 0.6em 1em;
-}
-
-.survey-banner p {
-    margin: 0;
-}
-
-.survey-banner a {
-    color: $white;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-}
-
-.survey-banner a:hover,
-.survey-banner a:focus,
-.survey-banner a:active {
-    color: $white;
-}
 
 .dropshadow {
     /* Make the foreground stand out from the background slightly */

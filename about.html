@@ -338,7 +338,7 @@ distinguished_inaugural:
     gh_handle: ellisonbg
   - name: Jason Grout
     photo: JasonGrout.jpeg
-    affiliation: Independent
+    affiliation: buildopen.net
     gh_handle: jasongrout
     linkedin: https://www.linkedin.com/in/jason-grout/
     personal: https://jasongrout.org/
@@ -489,12 +489,18 @@ software_steering_council:
     gh_handle: agoose77
     linkedin: https://www.linkedin.com/in/angushollands/
     subproject: Jupyter Book
+  - name: Yann Pellegrini
+    gh_handle: Yann-P
+    linkedin: https://www.linkedin.com/in/yann-p/
+    photo: Yann_Pellegrini.jpg
+    personal: https://yann.md
+    subproject: Security
 
 
 trademark_subcomittee:
   - name: Jason Grout
     photo: JasonGrout.jpeg
-    affiliation: Independent
+    affiliation: buildopen.net
     gh_handle: jasongrout
     linkedin: https://www.linkedin.com/in/jason-grout/
     personal: https://jasongrout.org/
@@ -522,10 +528,6 @@ community_building:
   affiliation: Amazon Web Services
   linkedin: https://www.linkedin.com/in/lahari-chowtoori/
   gh_handle: LahariChowtoori
-- name: Martha Cryan
-  photo: Martha_Cryan.jpg
-  gh_handle: marthacryan
-  affiliation: Plotly
 - name: Matt Fisher
   photo: Matt_Fisher.jpg
   affiliation: Schmidt Center for Data Science & Environment
@@ -534,7 +536,7 @@ community_building:
   personal: https://mfisher87.github.io/
 - name: Jason Grout
   photo: JasonGrout.jpeg
-  affiliation: Independent
+  affiliation: buildopen.net
   gh_handle: jasongrout
   linkedin: https://www.linkedin.com/in/jason-grout/
   personal: https://jasongrout.org/
@@ -547,6 +549,23 @@ community_building:
   photo: Rosio_Reyes.jpeg
   affiliation: Anaconda
   gh_handle: RRosio
+- name: Serena Bonaretti
+  photo: Serena_Bonaretti.jpg
+  affiliation: Jupyter
+  gh_handle: sbonaretti
+
+jupyter_foundation:
+- name: Rus Pandey
+  photo: Rus_Pandey.png
+  affiliation: Apple
+  gh_handle: bigsur0
+  role: Board Chair
+- name: Neha Singla
+  photo: Neha_Singla.png
+  affiliation: Apple
+  gh_handle: nsingl00
+  linkedin: https://www.linkedin.com/in/neha-singla-55b3a432/
+  role: Treasurer
 
 sponsor_box:
   headline: Sponsors
@@ -711,6 +730,33 @@ donate_box:
                 mastodon=bio.mastodon
                 bluesky_handle=bio.bluesky_handle
                 subproject=bio.subproject
+            %}
+        {% endfor %}
+        </div>
+    </div>
+
+
+  {% include hr.html %}
+
+    <!-- JUPYTER FOUNDATION -->
+    <div class="content content--copy">
+        <h2 class="text-center"><a href="https://jupyter.org/governance/jupyter_foundation.html">Jupyter Foundation</a></h2>
+    </div>
+
+    <div class="content content--wide">
+        <div class="biocard-wrapper">
+        {% for bio in page.jupyter_foundation %}
+            {% include biocard.html
+                name=bio.name
+                photo=bio.photo
+                affiliation=bio.affiliation
+                personal=bio.personal
+                gh_handle=bio.gh_handle
+                linkedin=bio.linkedin
+                twitter_handle=bio.twitter_handle
+                mastodon=bio.mastodon
+                bluesky_handle=bio.bluesky_handle
+                subproject=bio.role
             %}
         {% endfor %}
         </div>

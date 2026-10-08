@@ -1,0 +1,115 @@
+<section class="homepage-section section-white blog-latest" aria-labelledby="blog-latest-heading">
+  <h2 id="blog-latest-heading">{{ include.headline }} <a href="{{ include.url }}">{{ include.link_text }}</a></h2>
+  {% comment %}
+    The newest posts are read in the browser from the blog's latest.json,
+    which the blog writes on each deploy, so this list is as current as
+    the blog itself, with no rebuild of this site. Until they arrive, the
+    list holds placeholder cards of the same shape; without JavaScript,
+    or if the blog cannot be reached, the list is left out and the
+    heading's link to the blog remains.
+  {% endcomment %}
+  <ul class="blog-latest-posts" id="blog-latest-posts" hidden>
+    {% for i in (1..include.count) %}
+    <li class="blog-card blog-card--placeholder" aria-hidden="true">
+      <div class="blog-card-body">
+        <p class="blog-card-title">&nbsp;</p>
+        <p class="blog-card-summary">&nbsp;</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+<script>
+  (function () {
+    var list = document.getElementById('blog-latest-posts');
+    var source = '{{ include.source }}';
+    var count = {{ include.count }};
+    list.hidden = false;
+
+    function drop() {
+      if (list.parentNode) list.parentNode.removeChild(list);
+    }
+
+    // a newspaper's dateline, "Sep 24.", with the year only when it is
+    // not this year's. The post's own calendar date, as the blog shows it:
+    // its YYYY-MM-DD, read as UTC and formatted in UTC, so a reader in
+    // another time zone does not see the day before or after.
+    var thisYear = new Date().getFullYear();
+    var shortDate = new Intl.DateTimeFormat('en-US',
+      { month: 'short', day: 'numeric', timeZone: 'UTC' });
+    var longDate = new Intl.DateTimeFormat('en-US',
+      { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+    function dateline(value) {
+      var date = new Date(String(value).slice(0, 10));
+      if (isNaN(date)) return null;
+      var format = date.getUTCFullYear() === thisYear ? shortDate : longDate;
+      return format.format(date) + '.';
+    }
+
+    // a link from the blog's data, only to the blog itself
+    function blogUrl(value) {
+      try {
+        var url = new URL(value, source);
+        return url.origin === new URL(source).origin ? url.href : null;
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function card(post) {
+      var href = blogUrl(post.url);
+      if (!href || !post.title) return null;
+      var li = document.createElement('li');
+      li.className = 'blog-card';
+      var body = document.createElement('div');
+      body.className = 'blog-card-body';
+      var h3 = document.createElement('h3');
+      // no anchor link of its own (_layouts/default.html): the card is
+      // the link, and an anchor would be a second tab stop on each card
+      h3.className = 'blog-card-title no-anchor';
+      var a = document.createElement('a');
+      a.href = href;
+      a.textContent = post.title;
+      h3.appendChild(a);
+      body.appendChild(h3);
+      // the date leads the summary, on its line, as a newspaper's
+      // dateline; the full date on hover
+      var p = document.createElement('p');
+      p.className = 'blog-card-summary';
+      var date = dateline(post.date);
+      if (date) {
+        var time = document.createElement('time');
+        time.className = 'blog-card-date';
+        time.dateTime = post.date;
+        if (post.date_text) time.title = post.date_text;
+        time.textContent = date;
+        p.appendChild(time);
+      }
+      if (post.summary) {
+        p.appendChild(document.createTextNode((date ? ' ' : '') + post.summary));
+      }
+      if (p.firstChild) body.appendChild(p);
+      li.appendChild(body);
+      return li;
+    }
+
+    // a blog that does not answer in time is treated as unreachable
+    var timer = setTimeout(drop, 10000);
+    fetch(source)
+      .then(function (response) {
+        if (!response.ok) throw new Error(response.status);
+        return response.json();
+      })
+      .then(function (data) {
+        clearTimeout(timer);
+        var cards = (data.posts || []).map(card).filter(Boolean).slice(0, count);
+        if (!cards.length || !list.parentNode) return drop();
+        while (list.firstChild) list.removeChild(list.firstChild);
+        cards.forEach(function (li) { list.appendChild(li); });
+      })
+      .catch(function () {
+        clearTimeout(timer);
+        drop();
+      });
+  })();
+</script>

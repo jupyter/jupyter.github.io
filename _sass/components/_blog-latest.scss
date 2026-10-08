@@ -1,0 +1,107 @@
+@import "settings/colors";
+@import "settings/breakpoints";
+
+// The newest blog posts under the jumbotron (_includes/blog-latest.html)
+.homepage-section.blog-latest {
+  display: block;
+  padding: 1em 1em 3em 1em;
+  @media (max-width: $breakpoint-s) {
+    padding: 0.5em 1em 2em 1em;
+  }
+  h2 {
+    margin: 0 0 0.75em 0;
+    text-align: center;
+    @media (max-width: $breakpoint-s) {
+      font-size: 1.8em;
+    }
+    // the link to the blog kept on one line
+    a {
+      white-space: nowrap;
+    }
+  }
+}
+
+.blog-latest-posts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2em;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  @media (max-width: $breakpoint-l) {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 560px;
+  }
+  // shown by the script that fills it: without one, not at all
+  &[hidden] {
+    display: none;
+  }
+}
+
+.blog-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border: 1px solid $gray;
+  border-radius: 5px;
+  overflow: hidden;
+  &:hover,
+  &:focus-within {
+    border-color: $orange;
+  }
+  .blog-card-body {
+    padding: 1em 1.25em 1.25em 1.25em;
+  }
+  .blog-card-title {
+    font-size: 1.275em;
+    line-height: 1.3;
+    margin: 0 0 0.5em 0;
+    a {
+      color: inherit;
+      text-decoration: none;
+      // the whole card is the link's target
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+      }
+      &:hover {
+        color: $dark-orange;
+      }
+    }
+  }
+  .blog-card-summary {
+    margin: 0;
+    color: $medium-dark-gray;
+    font-size: 0.95em;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+  }
+  // the dateline that leads the summary, in italic: set apart from the
+  // summary without competing with the title
+  .blog-card-date {
+    font-style: italic;
+  }
+}
+
+// the shape of a card, while the posts load
+.blog-card--placeholder {
+  border-color: $light-gray;
+  .blog-card-title,
+  .blog-card-summary {
+    background-color: $light-gray;
+    border-radius: 3px;
+  }
+  .blog-card-title {
+    height: 2.6em;
+  }
+  .blog-card-summary {
+    height: 4.5em;
+  }
+}
