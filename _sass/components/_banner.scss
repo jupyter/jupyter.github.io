@@ -3,8 +3,6 @@
 .global-banner {
     position: relative;
     background-color: $orange;
-    color: $white;
-    text-shadow: 0px 0px 4px $black;
     text-align: center;
     // Symmetric horizontal padding keeps the text centered while leaving
     // room for the absolutely-positioned dismiss button on the right.
@@ -16,7 +14,7 @@
 
     a, a:hover, a:focus {
         opacity: 1;
-        color: $white;
+        color: inherit;
         text-decoration: underline;
         text-decoration-thickness: 2px;
     }
@@ -29,8 +27,7 @@
         background: none;
         border: none;
         padding: 0.2em 0.4em;
-        color: $white;
-        text-shadow: 0px 0px 4px $black;
+        color: inherit;
         font-size: 1.4em;
         line-height: 1;
         cursor: pointer;
