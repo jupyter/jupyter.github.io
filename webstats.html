@@ -1,0 +1,218 @@
+---
+# A plain page for Jupyter's administrators, without the site's layout,
+# not linked from the site, and kept out of the sitemap and search engines
+layout: null
+sitemap: false
+title: Jupyter web statistics
+permalink: /webstats
+
+# The Plausible sites whose dashboards are public, and the token of each
+# one's shared link. A dashboard can be embedded only through a shared link
+# without a password: plausible.io refuses to show its public dashboard
+# pages (plausible.io/<site>) inside another page. To add one, in the site's
+# settings on plausible.io go to Visibility > Shared links, create a link
+# with no password, and copy the value of its `auth=` parameter here. A site
+# without a token is shown as a link to its dashboard on plausible.io.
+shared_links:
+  jupyter.org: jTfI9_lNJ2wX1hQeDgk18
+  nbviewer.org: 0ZNyBcbyQeGw0QoK6Vt-9
+  mybinder.org: KADuJ__6JoImj8_D4mBxp
+  jupyterlab.readthedocs.io: lQ4WcqpeLHygIRG4DtQiQ
+  ipython.org: p3QR2aDlNLhVXZgxmM8cF
+  ipywidgets.readthedocs.io: WhlwtIm5pdRfFlvx1JUpq
+  jupyterbook.org: WsDViQ9f6zI9M267d7Juf
+  jupyterlite.readthedocs.io: 2tuNpPEUgKlVi2sRpt7kp
+  jupyter-documentation: bsGxjoM2vsQ-T1SfyZn0Q
+  jupyterfoundation.org: AMWDWh4Xc0NY9IlLuVk2i
+
+# Light, dark or system: the embedded dashboards' color scheme. The page
+# itself follows the system's.
+theme: system
+
+# One tab each, in this order. `site` is the Plausible site, `query` any
+# filters added to its dashboard's URL, as plausible.io writes them.
+dashboards:
+  - id: jupyter.org
+    title: jupyter.org
+    site: jupyter.org
+  - id: nbviewer.org
+    title: nbviewer.org
+    site: nbviewer.org
+  - id: mybinder.org
+    title: mybinder.org
+    site: mybinder.org
+  - id: jupyterlab
+    title: JupyterLab docs
+    site: jupyterlab.readthedocs.io
+  - id: ipython.org
+    title: ipython.org
+    site: ipython.org
+  - id: ipywidgets
+    title: ipywidgets docs
+    site: ipywidgets.readthedocs.io
+  - id: jupyterbook.org
+    title: jupyterbook.org
+    site: jupyterbook.org
+  - id: jupyterlite
+    title: JupyterLite docs
+    site: jupyterlite.readthedocs.io
+  - id: docs
+    title: Jupyter docs
+    site: jupyter-documentation
+  - id: jupyterfoundation.org
+    title: jupyterfoundation.org
+    site: jupyterfoundation.org
+  - id: blog
+    title: blog.jupyter.org
+    site: jupyter.org
+    # the blog is counted under jupyter.org, as the segment 8515
+    query: f=is,segment,8515&l=segment-8515,blog.jupyter.org
+    note: The Jupyter blog's visitors, counted with jupyter.org's as its "blog.jupyter.org" segment.
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>{{ page.title }}</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --accent: #f37626;
+      --muted: #757575;
+    }
+    body {
+      margin: 0 auto;
+      padding: 1em;
+      max-width: 1100px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: Canvas;
+      color: CanvasText;
+    }
+    h1 {
+      margin: 0 0 0.75em 0;
+      font-size: 1.25em;
+      font-weight: 600;
+    }
+    a {
+      color: var(--accent);
+    }
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4em;
+      margin: 0 0 1em 0;
+      padding: 0;
+      list-style: none;
+    }
+    nav a {
+      display: block;
+      padding: 0.3em 0.75em;
+      border: 1px solid var(--muted);
+      border-radius: 4px;
+      color: inherit;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+    nav a:hover,
+    nav a:focus {
+      border-color: var(--accent);
+    }
+    nav a[aria-current] {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    section p {
+      margin: 0 0 0.75em 0;
+      font-size: 0.9em;
+      color: var(--muted);
+    }
+    section[hidden] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>{{ page.title }}</h1>
+
+  {% comment %}
+    One section is shown at a time, picked by the URL's ?site=<id>, so a
+    tab's address can be shared; its dashboard is loaded the first time it
+    is shown. Without JavaScript, every section is shown, each with its
+    link to plausible.io; the embedded dashboards need the script at the
+    end of the page anyway.
+  {% endcomment %}
+  <nav aria-label="Websites">
+    <ul>
+      {% for dashboard in page.dashboards %}
+      <li><a href="?site={{ dashboard.id }}" data-site="{{ dashboard.id }}">{{ dashboard.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  {% for dashboard in page.dashboards %}
+  {%- assign auth = page.shared_links[dashboard.site] %}
+  {%- capture public_url %}https://plausible.io/{{ dashboard.site }}{% if dashboard.query %}?{{ dashboard.query }}{% endif %}{% endcapture %}
+  <section id="{{ dashboard.id }}" aria-label="{{ dashboard.title }}">
+    <p>{% if dashboard.note %}{{ dashboard.note }} {% endif %}<a href="{{ public_url }}">Open on plausible.io</a></p>
+    {% if auth and auth != "" %}
+    {%- capture embed_url %}https://plausible.io/share/{{ dashboard.site }}?auth={{ auth }}{% if dashboard.query %}&{{ dashboard.query }}{% endif %}&embed=true&theme={{ page.theme }}{% endcapture %}
+    <iframe plausible-embed data-src="{{ embed_url | escape }}" title="{{ dashboard.title }} visitor statistics"
+            scrolling="no" frameborder="0"
+            style="width: 1px; min-width: 100%; height: 1600px; color-scheme: auto;"></iframe>
+    {% endif %}
+  </section>
+  {% endfor %}
+
+  <script>
+    (function () {
+      var tabs = document.querySelectorAll('nav a');
+      var sections = document.querySelectorAll('section');
+
+      // show the section named by the URL's ?site=, or the first one, and
+      // load its dashboard if it has not been loaded yet
+      function show() {
+        var site = new URLSearchParams(location.search).get('site');
+        var current = site && document.getElementById(site);
+        if (!current || current.tagName !== 'SECTION') current = sections[0];
+        sections.forEach(function (section) {
+          section.hidden = section !== current;
+        });
+        tabs.forEach(function (tab) {
+          if (tab.getAttribute('data-site') === current.id) {
+            tab.setAttribute('aria-current', 'page');
+          } else {
+            tab.removeAttribute('aria-current');
+          }
+        });
+        var iframe = current.querySelector('iframe[data-src]');
+        if (iframe && !iframe.getAttribute('src')) {
+          iframe.setAttribute('src', iframe.getAttribute('data-src'));
+        }
+      }
+
+      // a tab shows its section in place, without reloading the page, and
+      // puts it in the URL, so the back button returns to the previous one
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function (event) {
+          event.preventDefault();
+          if (tab.getAttribute('aria-current')) return;
+          history.pushState(null, '', tab.getAttribute('href'));
+          show();
+        });
+      });
+      window.addEventListener('popstate', show);
+      show();
+    })();
+  </script>
+  {% comment %}
+    Plausible's script that sizes each embedded dashboard to its content. It
+    attaches to every iframe on the page when it runs, and resizes each one
+    again whenever it loads, so the dashboards loaded later are sized too.
+  {% endcomment %}
+  <script async src="https://plausible.io/js/embed.host.js"></script>
+</body>
+</html>
