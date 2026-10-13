@@ -1,101 +1,262 @@
+// Mobile-first responsive styling for widget tabs
+
 .jupyter-widget-header {
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     justify-content: space-between;
+    align-items: center;
     margin: 0 0 16px 0;
-}
-
-.jupyter-widget-header h2 {
-    display: inline;
+    
+    @media (max-width: 480px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        
+        > span:last-child {
+            align-self: flex-end;
+        }
+    }
+    
+    h2 {
+        display: inline;
+    }
 }
 
 .img-scaling {
     height: 32px;
     vertical-align: top;
+    
+    @media (max-width: 480px) {
+        height: 28px;
+    }
 }
 
 .gallery-title {
     font-size: 32px;
     height: 32px;
     line-height: 32px;
+    
+    @media (max-width: 768px) {
+        font-size: 26px;
+    }
+    
+    @media (max-width: 480px) {
+        font-size: 22px;
+    }
 }
 
 .support-paragraph {
-  font-size: 15px;
-  line-height: 1.5;
-  text-align: center;
-  max-width: 630px;
-  margin: 0 auto 16px auto;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 630px;
+    margin: 0 auto 16px auto;
+    
+    @media (max-width: 768px) {
+        padding: 0 20px;
+        font-size: 14px;
+    }
 }
 
 .section-header {
-  margin: 12px auto 8px;
-  text-align: center;
+    margin: 12px auto 8px;
+    text-align: center;
 }
 
 .section-icon {
-  display: block;
-  margin: 2em auto 0 auto;
-  max-width: 60px;
-  max-height: 60px;
+    display: block;
+    margin: 2em auto 0 auto;
+    max-width: 60px;
+    max-height: 60px;
 }
 
-.tabs-left {
-  display: flex;
+// Responsive tabs - fixes the two-column layout on mobile
+.tabbable.tabs-left {
+    display: flex;
+    
+    @media (max-width: 991px) {
+        flex-direction: column;
+    }
 }
 
-.tab-content {
-  lex-shrink: 0;
-  flex-grow: 1;
+// Tab navigation
+.tabbable.tabs-left > .nav-tabs {
+    border-bottom: 0;
+    border-right: 1px solid #ddd;
+    flex: 0 0 240px; // Fixed width on desktop
+    margin-right: 20px;
+    
+    @media (max-width: 991px) {
+        flex: none;
+        width: 100%;
+        border-right: 0;
+        border-bottom: 1px solid #ddd;
+        margin-right: 0;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 1px; // Prevent cutting off focus ring
+    }
+    
+    > li {
+        float: none;
+        margin-bottom: 2px;
+        
+        @media (max-width: 991px) {
+            float: left;
+            margin-bottom: 0;
+            margin-right: 2px;
+            flex: 0 0 auto;
+        }
+        
+        > a {
+            display: block;
+            padding: 10px 15px;
+            border-radius: 4px 0 0 4px;
+            margin-right: -1px;
+            border: 1px solid transparent;
+            white-space: normal;
+            min-width: 200px;
+            
+            @media (max-width: 991px) {
+                min-width: auto;
+                border-radius: 4px 4px 0 0;
+                margin-right: 0;
+                padding: 10px 12px;
+                white-space: nowrap;
+            }
+            
+            @media (max-width: 480px) {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+            
+            small {
+                display: block;
+                font-size: 12px;
+                color: #6c757d;
+                margin-top: 2px;
+                
+                @media (max-width: 991px) {
+                    display: none; // Hide descriptions on mobile to save space
+                }
+            }
+            
+            &:hover,
+            &:focus {
+                border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+                text-decoration: none;
+            }
+            
+            &.active {
+                border-color: #ddd transparent #ddd #ddd;
+                background-color: #fff;
+                
+                @media (max-width: 991px) {
+                    border-color: #ddd #ddd transparent #ddd;
+                }
+                
+                small {
+                    color: #495057;
+                }
+            }
+        }
+    }
 }
 
-.tabs-left > .nav-tabs {
-  border-bottom: 0;
+// Tab content area
+.tabbable.tabs-left .tab-content {
+    flex: 1;
+    min-width: 0; // Prevents flex overflow issues
+    
+    > .tab-pane {
+        display: none;
+        
+        &.active {
+            display: block;
+            min-height: 1100px;
+            
+            @media (max-width: 991px) {
+                min-height: auto;
+                padding: 20px 0;
+            }
+        }
+    }
+    
+    // Code block responsiveness
+    pre.highlight {
+        @media (max-width: 768px) {
+            font-size: 13px;
+            white-space: pre-wrap;
+            word-break: break-all;
+            overflow-x: auto;
+        }
+    }
+    
+    // Installation instructions
+    h3 {
+        @media (max-width: 768px) {
+            font-size: 18px;
+            margin-top: 24px;
+        }
+    }
+    
+    p {
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
+    }
+    
+    // Widget container responsiveness
+    .jupyter-widget-view,
+    .widget-subarea {
+        @media (max-width: 768px) {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+    }
 }
 
-.tab-content > .tab-pane,
-.pill-content > .pill-pane {
-  display: none;
+// Binder and GitHub icons section
+.jupyter-widget-header > span:last-child {
+    display: flex;
+    gap: 8px;
+    
+    @media (max-width: 480px) {
+        gap: 6px;
+    }
+    
+    a {
+        display: inline-block;
+        transition: opacity 0.2s;
+        
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 }
 
-.tab-content > .active,
-.pill-content > .active {
-  display: block;
-  margin-bottom: 26px;
-  margin-top: 26px;
-  min-height: 1100px;
+// Responsive table styling for any included tables
+table {
+    @media (max-width: 768px) {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 }
 
-.tabs-left > .nav-tabs > li {
-  float: none;
+// Fix for embedded widgets
+.jupyter-widgets {
+    @media (max-width: 768px) {
+        max-width: 100% !important;
+    }
 }
 
-.tabs-left > .nav-tabs > li > a{
-  margin-bottom: 3px;
-  margin-right: 0;
-  min-width: 200px;
-}
-
-.tabs-left > .nav-tabs {
-  border-right: 1px solid #ddd;
-  float: left;
-  height: 1100px;
-  margin-right: 19px;
-}
-
-.tabs-left > .nav-tabs > li > a {
-  -webkit-border-radius: 4px 0 0 4px;
-  -moz-border-radius: 4px 0 0 4px;
-  border-radius: 4px 0 0 4px;
-  margin-right: -1px;
-}
-
-.tabs-left > .nav-tabs > li > a:hover,
-.tabs-left > .nav-tabs > li > a:focus {
-  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
-}
-
-.tabs-left > .nav-tabs a.active {
-  border-color: #ddd transparent #ddd #ddd;
-  *border-right-color: #ffffff;
+// Ensure iframes (like maps) are responsive
+iframe {
+    max-width: 100%;
 }
