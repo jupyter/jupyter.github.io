@@ -6,22 +6,22 @@ permalink: /community
 
 channels:
   - title: Jupyter Chatroom
-    description: For real-time discussion project-wide. Also used by several sub-projects for their team conversation.
+    description: A chat for real-time discussion.
     src: assets/community/zulip-icon.svg
     alt: Zulip logo
     url: https://jupyter.zulipchat.com
   - title: Jupyter Forum
-    description: A forum for asynchronous communication across the Jupyter community and many of its subprojects.
+    description: A forum for asynchronous communication.
     src: assets/community/discourse.svg
     alt: Discourse logo
     url: https://discourse.jupyter.org/
   - title: Jupyter GitHub
-    description: A place where the community collaborates on the development of Jupyter software.
+    description: Where the community collaborates to develop Jupyter software.
     src: assets/widgets/GitHub_Invertocat_Black.svg
     alt: GitHub logo
     url: https://github.com/jupyter/
   - title: Jupyter General Mailing List
-    description: A Google Group for general discussions of Jupyter's use.
+    description: A Google Group for email discussion.
     src: assets/community/mail-list.svg
     alt: Mailing list
     url: https://groups.google.com/forum/#!forum/jupyter
@@ -30,22 +30,19 @@ channels:
 Jupyter is an open community including educators, developers, scientists, and data enthusiasts who believe in the power of open
 tools and standards for education, research, and data analytics.
 
-In our community, we have [online spaces](#where-to-talk) and [virtual and in-person meetings](#live-events).
+* [Online spaces](#where-to-talk)
+* [Calendar of virtual and in-person events](#calendar)
 
-## Where to learn
-
-We welcome contributions and contributors of all kinds - whether they come as contributions to code, participation in the community, opening issues and pointing out bugs, or simply sharing your work with your colleagues and friends.
-
-To learn more about contributing, see the [Jupyter Contributing guide](https://docs.jupyter.org/en/latest/contributing/content-contributor.html).
+We welcome contributors of all kinds, including contributions to code, participation in the community, opening issues and pointing out bugs, or simply sharing your work with others. See the [Jupyter Contributing guide](https://docs.jupyter.org/en/latest/contributing/content-contributor.html) for more information.
 
 Jupyter is organized into sub-projects, each of which has their own goals, practices, and spaces for communication. 
 To get started, see [this list of Jupyter Subprojects](https://jupyter.org/governance/list_of_subprojects.html).
 
-## Where to talk
+## Online spaces
 
-Jupyter has a number of online communication channels as well as regular virtual and in-person events. To learn more about the Jupyter community, see the [Jupyter Community Guide](https://docs.jupyter.org/en/latest/community/content-community.html).
+Jupyter has a number of online communication channels as well as [regular virtual and in-person events](#calendar). See the [Jupyter Community Guide](https://docs.jupyter.org/en/latest/community/content-community.html) for more information.
 
-Remember that we have a strong commitment to being an **open, inclusive, and positive community**. Please read the [Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/main/conduct/code_of_conduct.md)
+We have a strong commitment to being an **open, inclusive, and positive community**. Please read the [Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/main/conduct/code_of_conduct.md)
 for guidance on how to interact with others.
 
 <section class="resourcelist">
@@ -60,32 +57,34 @@ for guidance on how to interact with others.
   {% endfor %}
 </section>
 
-## Live events
+## Calendar of events {#calendar}
 
-Project Jupyter events provide a forum for community members to come together in person
-or virtually to share and learn from each other.
-
-### Calendar
-
-This is a calendar of regular online and in-person events.
+Visitors are welcome to join our virtual and in-person events. Click on an event to see the connection or registration information.
 
 <div class="iframe-container">
   <iframe title="Calendar of Project Jupyter events" class="responsive-iframe" id="calendariframe" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&title=Project%20Jupyter&src=bTNoZWs2OWRhZzczODF1bXQ4a2NqZDc1dTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=Y184YWIxNzY1YjY1ODY3NDVkOGI3NWU5MmJkYzdjYTZlNDZjYWExMmE1ZjhkOTUwZDVmNzNmMzI2Zjk3NjE0NGQ3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=YXFwa3VpNXE3b2kzMnBrOXRjcDUzaG5zc2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23AD1457&color=%239E69AF&color=%23616161" style="border:0;overflow:hidden" width="800" height="600"></iframe>
 </div>
 <script>document.getElementById("calendariframe").src = document.getElementById("calendariframe").src.replace("ctz=local", "ctz=" + Intl.DateTimeFormat().resolvedOptions().timeZone)</script>
 
-See [this page](https://jupyter.readthedocs.io/en/latest/community/content-community.html#jupyter-wide-meetings) for
-more information.
+## Past Events
+
+Project Jupyter events provide a forum for community members to come together in person
+or virtually to share and learn from each other.
 
 ### JupyterCon
 
 Global JupyterCon conferences provide opportunities for the Jupyter community to come together to learn and share.
+
+<details markdown="1">
+<summary>See past JupyterCon conferences.</summary>
 
 * [JupyterCon 2017 (New York)](https://conferences.oreilly.com/jupyter/jup-ny-2017.html) ([videos](https://www.youtube.com/playlist?list=PL055Epbe6d5aP6Ru42r7hk68GTSaclYgi))
 * [JupyterCon 2018 (New York)](https://conferences.oreilly.com/jupyter/jup-ny.html) ([videos](https://www.youtube.com/playlist?list=PL055Epbe6d5b572IRmYAHkUgcq3y6K3Ae))
 * [JupyterCon 2020 (virtual)](https://jupytercon.com/) ([videos](https://www.youtube.com/c/JupyterCon/videos))
 * [JupyterCon 2023 (Paris)](https://web.archive.org/web/20230715062821/https://www.jupytercon.com) ([videos](https://youtube.com/playlist?list=PL_1BH3ug7n1Ih_Yy2TmM7MZ2zogSLZvzE&si=drGUpsbcpZihlo-t))
 * [JupyterCon 2025 (San Diego)](https://events.linuxfoundation.org/jupytercon/) ([videos](https://youtube.com/playlist?list=PL_1BH3ug7n1LbTQg67bUAK5qEBB3LVgbT&si=no6qhQNXMesAnMDt))
+
+</details>
 
 ### Jupyter Community Workshops
 
