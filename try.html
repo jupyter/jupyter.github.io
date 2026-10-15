@@ -10,6 +10,8 @@ intro: |
     <a href="https://jupyterlite.readthedocs.io/en/stable/">JupyterLite</a>, a distribution of Jupyter that
     runs entirely in the Web browser, and <a href="https://mybinder.org">mybinder.org</a>, a free public
     service provided by the Jupyter community.
+    The icon in the corner of each card indicates whether the demo runs in your browser via
+    WebAssembly (JupyterLite) or on a remote Linux server (native Jupyter).
 
 applications_copy: |
     The Jupyter team builds several end-user applications that facilitate interactive computing workflows.
@@ -24,18 +26,21 @@ kernels_copy: |
 application_boxes:
     - title: JupyterLab
       description: The latest web-based interactive development environment
+      deployment: lite
       src: try/jupyter.png
       alt: Jupyter logo - Launch JupyterLab demo
       url: https://jupyter.org/try-jupyter/lab/?path=notebooks%2FIntro.ipynb
 
     - title: Jupyter Notebook
       description: The original web application for creating and sharing computational documents
+      deployment: lite
       src: try/python.svg
       alt: Python logo - Launch Jupyter Notebook demo
       url: https://jupyter.org/try-jupyter/notebooks/?path=notebooks/Intro.ipynb
 
     - title: Voilà
       description: Share insights by converting notebooks into interactive dashboards
+      deployment: native
       src: try/voila.svg
       alt: Voilà logo - Launch Voilà demo
       url: https://mybinder.org/v2/gh/voila-dashboards/voila/stable?urlpath=voila%2Ftree%2Fnotebooks
@@ -43,36 +48,42 @@ application_boxes:
 kernel_boxes:
     - title: C++
       description: How to use Jupyter with C++
+      deployment: lite
       src: try/Cpp.svg
       alt: C++ logo - Launch C++ demo
       url: https://jupyter.org/try-jupyter/lab/?path=notebooks%2Fcpp.ipynb
 
     - title: Julia
       description: How to use Jupyter with Julia
+      deployment: native
       src: try/julia.svg
       alt: Julia logo - Launch Julia demo Binder
       url: https://mybinder.org/v2/gh/binder-examples/demo-julia/HEAD?filepath=demo.ipynb
 
     - title: GNU Octave
       description: How to use Jupyter with GNU Octave
+      deployment: native
       src: try/GNUOctave.png
       alt: GNU Octave logo - Launch GNU Octave demo Binder
       url: https://mybinder.org/v2/gh/jupyter-xeus/xeus-octave/stable?urlpath=/lab/tree/notebooks/xeus-octave.ipynb
 
     - title: R
       description: How to use Jupyter with R
+      deployment: lite
       src: try/R.svg
       alt: R logo - Launch R demo
       url: https://jupyter.org/try-jupyter/lab/?path=notebooks%2Fr.ipynb
 
     - title: Ruby
       description: How to use Jupyter with Ruby
+      deployment: native
       src: try/ruby.png
       alt: Ruby logo - Launch Ruby demo Binder
       url: https://mybinder.org/v2/gh/RubyData/binder/HEAD?filepath=ruby-data.ipynb
 
     - title: Scheme
       description: How to use Jupyter with Calysto Scheme
+      deployment: native
       src: try/Scheme.png
       alt: Scheme logo - Launch Scheme demo Binder
       url: https://mybinder.org/v2/gh/Calysto/calysto_scheme/HEAD?filepath=notebooks/Reference%20Guide%20for%20Calysto%20Scheme.ipynb
@@ -101,6 +112,7 @@ kernel_boxes:
             src=obj.src
             alt=obj.alt
             description=obj.description
+            deployment=obj.deployment
         %}
       {%- endfor -%}
     </div>
@@ -117,6 +129,7 @@ kernel_boxes:
             src=obj.src
             alt=obj.alt
             description=obj.description
+            deployment=obj.deployment
         %}
       {%- endfor -%}
     </div>

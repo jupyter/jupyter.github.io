@@ -1,6 +1,21 @@
 <section class="box">
   <a href="{{ include.url }}" class="box-link">
-    <h2 class="box-title">{{ include.title }}</h2>
+    <h2 class="box-title">
+      {{ include.title }}
+      {%- if include.deployment == "lite" %}
+      <img class="box-deployment-icon"
+           src="/assets/try/wasm.svg"
+           alt="WebAssembly icon - this demo runs in your browser via JupyterLite"
+           title="JupyterLite: runs entirely in your browser"
+           loading="lazy" />
+      {%- elsif include.deployment == "native" %}
+      <img class="box-deployment-icon"
+           src="/assets/try/linux.svg"
+           alt="Linux icon - this demo runs on a remote native Jupyter server"
+           title="Native Jupyter: runs on a remote server"
+           loading="lazy" />
+      {%- endif %}
+    </h2>
     <div class="box-body">
       <img class="box-logo"
            alt="{{ include.alt }}"
