@@ -15,14 +15,14 @@ The goal of this page is to point you in the right direction to learn more about
 
 [Jupyter AI](https://github.com/jupyterlab/jupyter-ai) is an extension that connects AI agents to computational notebooks in JupyterLab. It is currently incubating as a part of the [Jupyter-Frontends subproject](https://github.com/jupyterlab/frontends-team-compass).
 
+### Jupyter AI Lite
+
+[Jupyter AI Lite](https://github.com/jupyterlab/jupyter-ai-lite) provides AI code completions and chat for JupyterLab, Notebook 7 and JupyterLite, with a persona named Jupyternaut running in the browser. It is maintained alongside Jupyter AI in the [JupyterLab organization](https://github.com/jupyterlab).
+
 ### Jupyter AI Contrib
 
 [jupyter-ai-contrib](https://github.com/jupyter-ai-contrib) is a community organization hosting extensions, integrations, and experiments that compose or build on Jupyter AI.
 It is a combination of earlier-stage projects that undergo more rapid development and prototyping, and community-maintained projects.
-
-### JupyterLite AI
-
-[jupyterlite/ai](https://github.com/jupyterlite/ai) provides AI code completions and chat for JupyterLab, Notebook 7 and JupyterLite. It is maintained within the [JupyterLite organization](https://github.com/jupyterlite).
 
 ## Where to discuss AI in the Jupyter community?
 
@@ -32,9 +32,9 @@ Because the Jupyter AI project is incubating within the Jupyter Frontends subpro
 
 ## Frequently Asked Questions
 
-### What is the difference between `jupyter-ai` and `jupyterlite/ai`
+### What is the difference between Jupyter AI and Jupyter AI Lite?
 
-Both projects integrate AI features into JupyterLab and Notebook v7+ interfaces. `jupyterlite/ai` does not depend on a server component which makes it possible to use it with JupyterLite, the in-browser Jupyter distribution. `jupyter-ai` enables agentic workflows that can continue to run on the server even when the browser is closed or disconnected. Server dependency distinction aside, the set of features overlaps, with both packages implementing agentic workflows and tool calling. Notably, `jupyterlite/ai` also implements AI code completion, and `jupyter-ai` implements multi-agent workflow.
+Both projects integrate AI features into JupyterLab and Notebook v7+ interfaces. Jupyter AI Lite does not depend on a server component, which makes it possible to use it with JupyterLite, the in-browser Jupyter distribution. Jupyter AI enables agentic workflows that can continue to run on the server even when the browser is closed or disconnected. Server dependency distinction aside, the set of features overlaps, with both packages implementing agentic workflows and tool calling, and Jupyter AI Lite reuses the chat interface and persona manager of Jupyter AI, so the user experience is the same in the browser and on a server. Notably, Jupyter AI Lite also implements AI code completion, and Jupyter AI implements multi-agent workflow.
 
 ### Does Jupyter have an AI contribution policy?
 
