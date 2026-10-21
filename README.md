@@ -74,8 +74,8 @@ that the blog writes each time it is deployed.
 
 ## Web analytics (experimental)
 
-We are experimenting with [Plausible.io](https://plausible.io/) for web analytics.
-Access it at this link, using the [1Password](https://ec.jupyter.org/accounts/#password) for login credentials.
+We are using [Plausible.io](https://plausible.io/) for web analytics.
+Access it at this link, using the [1Password](https://ec.jupyter.org/accounts/#password) for login credentials. We are also experimenting with using the Scientific Python's hosted Plausible instance.
 
 Plausible dashboard link: https://plausible.io/jupyter.org/
 
