@@ -72,15 +72,12 @@ front matter). The posts are read in the browser from
 <https://blog.jupyter.org/latest.json>, a short list of the newest posts
 that the blog writes each time it is deployed.
 
-## Web analytics (experimental)
+## Web analytics
 
-We are using [Plausible.io](https://plausible.io/) for web analytics.
-Access it at this link, using the [1Password](https://ec.jupyter.org/accounts/#password) for login credentials. We are also experimenting with using the Scientific Python's hosted Plausible instance.
+We are using [Plausible.io](https://plausible.io/) for web analytics. We are also experimenting with using the Scientific Python's hosted Plausible instance (see https://github.com/jupyter/jupyter.github.io/pull/902).
 
-Plausible dashboard link: https://plausible.io/jupyter.org/
-
-- See [this issue for updates](https://github.com/jupyter/jupyter.github.io/issues/815).
-- [Here's the change that adds the Plausible script](https://github.com/jupyter/jupyter.github.io/pull/816/files#diff-7c00ab81dd0968f6fb395b5986f71fd56704c48a71f0b9583058f5aaaad03aa7R17).
+* [Plausible metrics dashboard](https://plausible.io/jupyter.org/) 
+* [Scientific Python metrics dashboard](https://views.scientific-python.org/jupyter.org)
 
 ## Build the site locally
 
