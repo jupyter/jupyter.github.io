@@ -55,7 +55,7 @@ We welcome contributions and contributors of all kinds - whether they come as co
 
 Project Jupyter has official channels to publish community information and news. These are maintained by the [Jupyter Media Strategy Working Group](https://jupyter.org/governance/charters/MediaStrategyCharter.html).
 
-Use the [Jupyter Content Intake form](https://form.asana.com/?k=W0N5n7-VC0sj2Xk7IiVFoA&d=9283783873717) to submit content for these channels.
+Use the [Jupyter Content Submission form](https://form.asana.com/?k=W0N5n7-VC0sj2Xk7IiVFoA&d=9283783873717) to submit content for these channels.
 
 <ul class="social-links">
   {% for obj in page.social_channels %}
