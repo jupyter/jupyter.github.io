@@ -8,6 +8,18 @@ permalink: /media_submissions
 ## Editorial Principles
 Read more about our [editorial principles](https://jupyter.org/governance/charters/MediaStrategyCharter.html#editorial-principles) in our charter.
 
+## Submit Blog or Social Media Content
+
+Please fill out the [Jupyter Content Intake form](https://form.asana.com/?k=W0N5n7-VC0sj2Xk7IiVFoA&d=9283783873717) to submit content for consideration to publish on the Jupyter blog or to amplify with Jupyter social media channels.
+
+We will vet content against our editorial principles and follow up with you if there are any issues. Plan ahead: we are primarily a group of volunteers and we usually review requests for publication on a weekly basis.
+
+If you are writing a blog post, we recommend copying and modifying one of our blog post templates:
+
+* [Google Docs Blog Template](https://docs.google.com/document/d/1Pn5YyMXc24oHpMaKTxmQ657vaI0lUYPggYN0xaqISJY)
+* [HackMD Blog Template](https://hackmd.io/@fQfdqEa8SW-zpP1Ua2Zovw/jupyter-blog-example?both)
+
+
 ## Blog Posts
 The [Project Jupyter blog](https://blog.jupyter.org/) is designed for community members to share valuable and educational content about Jupyter. Blog posts can be about various topics, for example how you got started with Jupyter, the latest extension you built around Jupyter, a quick tutorial on how to use a specific feature, and more. This channel is powered by our community members so there are no particular requirements for how the blog post has to be written. 
 
@@ -29,8 +41,3 @@ Blog Post Examples:
 - Longer post: [Generative AI in Jupyter](https://blog.jupyter.org/posts/2023/generative-ai-in-jupyter/)
 - Post using the Jupyter Voice: [JupyterLab is Ready for Users](https://blog.jupyter.org/posts/2018/jupyterlab-is-ready-for-users/)
 
-## Submission Process
-
-Please fill out the [Jupyter Content Intake form](https://form.asana.com/?k=W0N5n7-VC0sj2Xk7IiVFoA&d=9283783873717) to submit relevant content for consideration to publish on the Jupyter blog or to amplify with Jupyter social media channels.
-
-We will vet content against our editorial principles and follow up with you if there are any issues. Plan ahead: we are primarily a group of volunteers and we usually review requests for publication on a weekly basis.
