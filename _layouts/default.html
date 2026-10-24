@@ -18,10 +18,11 @@ nav:
     url: /social
   - title: Governance
     url: /governance/
-  - title: Security
-    url: /security
   - title: About
     url: /about
+  - title: Security & reporting issues
+    url: /security
+    footer_only: true # listed in the footer's Project Jupyter column, not the top navbar
 projects:
   - title: Binder
     url: /binder
@@ -162,6 +163,7 @@ legal:
         <div class="collapse navbar-collapse" id="bs-navbar-collapse">
             <ul class="navbar-links">
             {%- for nav in layout.nav -%}
+            {%- if nav.footer_only %}{% continue %}{% endif -%}
             <li>
                 <a href="{{nav.url}}"
                    {%- if nav.newpage %} target="_blank" rel="noopener noreferrer" {% endif %}
