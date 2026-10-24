@@ -85,9 +85,37 @@ See the sections below for a few ways to build the site locally.
 
 The site is built with Jekyll, see [the Jekyll website](https://jekyllrb.com/) for how to customize the build process.
 
+### Build the site with pixi
+
+The easiest way to build the site locally is with [pixi](https://pixi.sh). The repository's `pixi.toml` installs Ruby and the compilers from conda-forge, then installs the site's Ruby gems with Bundler. Everything is kept inside the repository's `.pixi/` folder, so nothing is installed globally.
+
+1. **[Install pixi](https://pixi.sh/latest/#installation)**.
+2. **Clone this repository**.
+
+   ```console
+   $ git clone https://github.com/jupyter/jupyter.github.io
+   $ cd jupyter.github.io
+   ```
+3. **Build and serve the site**.
+
+   ```console
+   $ pixi run serve
+   ```
+
+   The first run takes a few minutes to download the environment and install the gems. Later runs start quickly.
+
+**When the build is finished, go to `localhost:4000`**. The preview reloads automatically when you change a file. To stop the server, press **`Ctrl`**-`C`.
+
+Other tasks:
+
+- `pixi run build` builds the site into `_site/` without starting a server.
+- `pixi run install` reinstalls the gems, for example after changing `Gemfile`. `serve` and `build` run this automatically.
+
+To start over with a clean environment, delete the `.pixi/` folder.
+
 ### Build the site automatically with `nox`
 
-The easiest way to build the site locally is by using the [`nox` command line tool](https://nox.thea.codes/). This tool makes it easy to automate commands in a repository, and we have included a `build` command to quickly install the dependencies and build the site.
+Another way to build the site locally is by using the [`nox` command line tool](https://nox.thea.codes/). This tool makes it easy to automate commands in a repository, and we have included a `build` command to quickly install the dependencies and build the site.
 
 To build and preview the site locally, follow these steps:
 
