@@ -1,0 +1,33 @@
+@import "settings/colors";
+
+// A row of platform icons with the name beneath each (community.md "Where to publish").
+// The icons share the column width equally and wrap when there's no room.
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  gap: 2rem 3rem;
+  margin: 1.5rem 0 2rem;
+  padding: 0;
+  list-style: none;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    color: $dark-orange;
+    font-size: 1.15em;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+}
