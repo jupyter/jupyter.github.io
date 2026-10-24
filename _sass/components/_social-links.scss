@@ -1,22 +1,26 @@
 @import "settings/colors";
 
-// A row of platform icons with the name beneath each (community.md "Where to publish").
-// The icons share the column width equally and wrap when there's no room.
+// A row of platform icons with the name beneath each (community.md).
+// Each item is as wide as its icon or label, the row spreads across the column,
+// and items wrap onto centered rows when there isn't room.
 .social-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
-  gap: 2rem 3rem;
-  margin: 1.5rem 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1.5em;
+  margin: 1.5em 0 2em;
   padding: 0;
   list-style: none;
+  // Set here so the em sizes below don't depend on the 14px base font.
+  font-size: 18px;
 
   a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.5em;
     color: $dark-orange;
-    font-size: 1.15em;
+    text-align: center;
     text-decoration: none;
 
     &:hover,
@@ -26,8 +30,8 @@
   }
 
   img {
-    width: 100%;
-    aspect-ratio: 1;
+    width: 4.5em;
+    height: 4.5em;
     object-fit: contain;
   }
 }

@@ -25,17 +25,17 @@ social_channels:
     url: https://youtube.com/@ProjectJupyter
 
 discussion_channels:
-  - title: Jupyter Chatroom
+  - title: Zulip chat
     description: A Zulip chat for real-time discussion.
     src: assets/community/zulip-icon.svg
     alt: Zulip logo
     url: https://jupyter.zulipchat.com
-  - title: Jupyter Forum
+  - title: Discourse forum
     description: A Discourse forum for asynchronous communication.
     src: assets/community/discourse.svg
     alt: Discourse logo
     url: https://discourse.jupyter.org/
-  - title: Jupyter GitHub
+  - title: GitHub code
     description: Where the community collaborates on code and documentation.
     src: assets/widgets/GitHub_Invertocat_Black.svg
     alt: GitHub logo
@@ -75,19 +75,13 @@ If you are writing a blog post, we recommend copying and modifying one of our bl
 
 ## Discussion Spaces
 
-Jupyter has online spaces for community discussion. We have a strong commitment to being an **open, inclusive, and positive community**. Please read the [Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/main/conduct/code_of_conduct.md) for guidance on how to interact with others, and the [Jupyter Community Guide](https://docs.jupyter.org/en/latest/community/content-community.html) for more information about our community. 
+Jupyter has online spaces for community discussion. We have a strong commitment to being an **open, inclusive, and positive community**. See the [Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/main/conduct/code_of_conduct.md) for guidance on how to interact with others, and the [Jupyter Community Guide](https://docs.jupyter.org/en/latest/community/content-community.html) for more information about our community. 
 
-<section class="resourcelist">
+<ul class="social-links">
   {% for obj in page.discussion_channels %}
-    {% include community-resource.html
-         title=obj.title
-         description=obj.description
-         url=obj.url
-         src=obj.src
-         alt=obj.alt
-    %}
+  <li><a href="{{ obj.url }}"><img src="{{ obj.src | relative_url }}" alt="{{ obj.alt }}" title="{{ obj.description }}"><span>{{ obj.title }}</span></a></li>
   {% endfor %}
-</section>
+</ul>
 
 ## Live events
 
