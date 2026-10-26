@@ -47,7 +47,7 @@ Jupyter is an [open community](https://docs.jupyter.org/en/latest/community/cont
 In our community, we have:
 * [a blog and social media presence](#blog-and-social-media)
 * [online discussion spaces](#discussion-spaces)
-* [virtual and in-person events](#live-events)
+* [virtual and in-person events](#events)
 
 ## Blog and Social Media
 
