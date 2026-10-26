@@ -42,14 +42,13 @@ discussion_channels:
     url: https://github.com/jupyter/
 ---
 
-Jupyter is an open community including educators, developers, scientists, professionals, and data enthusiasts who believe in the power of open tools and standards for data analytics, education, and research.
+Jupyter is an open community including educators, developers, scientists, professionals, and data enthusiasts who believe in the power of open tools and standards for data analytics, education, and research. We welcome [contributions and contributors](https://docs.jupyter.org/en/latest/contributing/content-contributor.html) of all kinds.
 
 In our community, we have:
 * [blog and social media presence](#blog-and-social-media)
 * [online discussion spaces](#discussion-spaces)
-* [virtual and in-person meetings](#live-events)
+* [virtual and in-person events](#live-events)
 
-We welcome contributions and contributors of all kinds - whether they come as contributions to code, participation in the community, opening issues and pointing out bugs, or simply sharing your work with your colleagues and friends. To learn more about contributing, see the [Jupyter Contributing guide](https://docs.jupyter.org/en/latest/contributing/content-contributor.html).
 
 ## Blog and Social Media
 
@@ -83,10 +82,9 @@ Jupyter has online spaces for community discussion. We have a strong commitment 
   {% endfor %}
 </ul>
 
-## Live events
+## Events
 
-Project Jupyter events provide a forum for community members to come together in person
-or virtually to share and learn from each other.
+Community members often come together in person or virtually to share and learn from each other.
 
 ### Calendar
 
