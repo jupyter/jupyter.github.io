@@ -42,19 +42,16 @@ discussion_channels:
     url: https://github.com/jupyter/
 ---
 
-Jupyter is an open community including educators, developers, scientists, professionals, and data enthusiasts who believe in the power of open tools and standards for data analytics, education, and research. We welcome [contributions and contributors](https://docs.jupyter.org/en/latest/contributing/content-contributor.html) of all kinds.
+Jupyter is an [open community](https://docs.jupyter.org/en/latest/community/content-community.html) including educators, developers, scientists, professionals, and data enthusiasts who believe in the power of open tools and standards for data analytics, education, and research. We welcome [contributions and contributors](https://docs.jupyter.org/en/latest/contributing/content-contributor.html) of all kinds.
 
 In our community, we have:
-* [blog and social media presence](#blog-and-social-media)
+* [a blog and social media presence](#blog-and-social-media)
 * [online discussion spaces](#discussion-spaces)
 * [virtual and in-person events](#live-events)
 
-
 ## Blog and Social Media
 
-Project Jupyter has official channels to publish community information and news. These are maintained by the [Jupyter Media Strategy Working Group](https://jupyter.org/governance/charters/MediaStrategyCharter.html).
-
-Use the [Jupyter Content Submission form](https://form.asana.com/?k=W0N5n7-VC0sj2Xk7IiVFoA&d=9283783873717) to submit content for these channels.
+Project Jupyter has official channels to publish community information and news, mantained by the [Jupyter Media Strategy Working Group](https://jupyter.org/governance/charters/MediaStrategyCharter.html). Use the [Jupyter Content Submission form](https://form.asana.com/?k=W0N5n7-VC0sj2Xk7IiVFoA&d=9283783873717) to submit content for these channels.
 
 <ul class="social-links">
   {% for obj in page.social_channels %}
@@ -74,7 +71,7 @@ If you are writing a blog post, we recommend copying and modifying one of our bl
 
 ## Discussion Spaces
 
-Jupyter has online spaces for community discussion. We have a strong commitment to being an **open, inclusive, and positive community**. See the [Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/main/conduct/code_of_conduct.md) for guidance on how to interact with others, and the [Jupyter Community Guide](https://docs.jupyter.org/en/latest/community/content-community.html) for more information about our community. 
+Jupyter has online spaces for community discussion. We have a strong commitment to being an **open, inclusive, and positive community**. See the [Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/main/conduct/code_of_conduct.md) for guidance on how to interact with others.
 
 <ul class="social-links">
   {% for obj in page.discussion_channels %}
@@ -84,19 +81,12 @@ Jupyter has online spaces for community discussion. We have a strong commitment 
 
 ## Events
 
-Community members often come together in person or virtually to share and learn from each other.
-
-### Calendar
-
-This is a calendar of regular online and in-person events.
+We often [come together in person or virtually](https://jupyter.readthedocs.io/en/latest/community/content-community.html#jupyter-wide-meetings) to share and learn from each other.
 
 <div class="iframe-container">
   <iframe title="Calendar of Project Jupyter events" class="responsive-iframe" id="calendariframe" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&title=Project%20Jupyter&src=bTNoZWs2OWRhZzczODF1bXQ4a2NqZDc1dTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=Y184YWIxNzY1YjY1ODY3NDVkOGI3NWU5MmJkYzdjYTZlNDZjYWExMmE1ZjhkOTUwZDVmNzNmMzI2Zjk3NjE0NGQ3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=YXFwa3VpNXE3b2kzMnBrOXRjcDUzaG5zc2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23AD1457&color=%239E69AF&color=%23616161" style="border:0;overflow:hidden" width="800" height="600"></iframe>
 </div>
 <script>document.getElementById("calendariframe").src = document.getElementById("calendariframe").src.replace("ctz=local", "ctz=" + Intl.DateTimeFormat().resolvedOptions().timeZone)</script>
-
-See [this page](https://jupyter.readthedocs.io/en/latest/community/content-community.html#jupyter-wide-meetings) for
-more information.
 
 ### JupyterCon
 
