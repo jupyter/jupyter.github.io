@@ -4,19 +4,24 @@ h1, h2, h3 {
   font-family: $font-family-sans-serif;
   font-weight: 500;
   line-height: 1.3;
-  margin-top: 2em;
   margin-bottom: 0.33em;
 }
 
+// margin-top is in em, so it scales with each heading's own font size.
+// Lower levels get a smaller multiplier so they stay close to the text
+// they introduce.
 h1 {
   font-size: 3.66rem;
+  margin-top: 2em;
 }
 
 h2 {
   font-size: 2.66rem;
+  margin-top: 1.5em;
 }
 
 h3 {
   font-size: 2rem;
+  margin-top: 1.25em;
 }
 
