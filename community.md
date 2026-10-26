@@ -42,13 +42,11 @@ discussion_channels:
     url: https://github.com/jupyter/
 ---
 
-Jupyter is an [open community](https://docs.jupyter.org/en/latest/community/content-community.html) including educators, developers, scientists, professionals, and data enthusiasts who believe in open tools and standards for data analytics, education, and research. We welcome [contributors and contributions](https://docs.jupyter.org/en/latest/contributing/content-contributor.html).
+Jupyter is an [open community](https://docs.jupyter.org/en/latest/community/content-community.html) including educators, developers, scientists, professionals, and data enthusiasts who believe in open tools and standards for data analytics, education, and research. We welcome [contributors](https://docs.jupyter.org/en/latest/contributing/content-contributor.html) and have a strong commitment to being an **[open, inclusive, and positive community](https://jupyter.org/governance/conduct/code-of-conduct/)**.
 
-In our community, we have a [blog and social media presence](#blog-and-social-media), [online discussion spaces](#discussion-spaces), and [virtual and in-person events](#events).
+## Connect online
 
-## Blog and Social Media
-
-Project Jupyter has official channels to publish community information and news, mantained by the [Jupyter Media Strategy Working Group](https://jupyter.org/governance/charters/MediaStrategyCharter.html). Use the [Jupyter Content Submission form](https://form.asana.com/?k=W0N5n7-VC0sj2Xk7IiVFoA&d=9283783873717) to submit content for these channels.
+Project Jupyter has official channels to publish community information and news. Use the [Jupyter Content Submission form](https://form.asana.com/?k=W0N5n7-VC0sj2Xk7IiVFoA&d=9283783873717) to submit content for these channels.
 
 <ul class="social-links">
   {% for obj in page.social_channels %}
@@ -66,9 +64,7 @@ If you are writing a blog post, we recommend copying and modifying one of our bl
 
 <!-- end Asana form additions -->
 
-## Discussion Spaces
-
-Jupyter has online spaces for community discussion. We have a strong commitment to being an **open, inclusive, and positive community**. See the [Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/main/conduct/code_of_conduct.md) for guidance on how to interact with others.
+We have community discussion and collaboration in several online spaces:
 
 <ul class="social-links">
   {% for obj in page.discussion_channels %}
