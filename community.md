@@ -64,7 +64,7 @@ If you are writing a blog post, we recommend copying and modifying one of our bl
 
 <!-- end Asana form additions -->
 
-We have community discussion and collaboration in several online spaces:
+We also have community discussion and collaboration in several online spaces:
 
 <ul class="social-links">
   {% for obj in page.discussion_channels %}
