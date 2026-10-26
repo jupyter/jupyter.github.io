@@ -42,12 +42,9 @@ discussion_channels:
     url: https://github.com/jupyter/
 ---
 
-Jupyter is an [open community](https://docs.jupyter.org/en/latest/community/content-community.html) including educators, developers, scientists, professionals, and data enthusiasts who believe in the power of open tools and standards for data analytics, education, and research. We welcome [contributions and contributors](https://docs.jupyter.org/en/latest/contributing/content-contributor.html) of all kinds.
+Jupyter is an [open community](https://docs.jupyter.org/en/latest/community/content-community.html) including educators, developers, scientists, professionals, and data enthusiasts who believe in open tools and standards for data analytics, education, and research. We welcome [contributors and contributions](https://docs.jupyter.org/en/latest/contributing/content-contributor.html).
 
-In our community, we have:
-* [a blog and social media presence](#blog-and-social-media)
-* [online discussion spaces](#discussion-spaces)
-* [virtual and in-person events](#events)
+In our community, we have a [blog and social media presence](#blog-and-social-media), [online discussion spaces](#discussion-spaces), and [virtual and in-person events](#events).
 
 ## Blog and Social Media
 
