@@ -83,7 +83,7 @@ We often [come together in person or virtually](https://jupyter.readthedocs.io/e
 
 ### JupyterCon
 
-Global JupyterCon conferences provide opportunities for the Jupyter community to come together to learn and share.
+Global JupyterCon conferences gather our world-wide community together.
 
 * [JupyterCon 2017 (New York)](https://conferences.oreilly.com/jupyter/jup-ny-2017.html) ([videos](https://www.youtube.com/playlist?list=PL055Epbe6d5aP6Ru42r7hk68GTSaclYgi))
 * [JupyterCon 2018 (New York)](https://conferences.oreilly.com/jupyter/jup-ny.html) ([videos](https://www.youtube.com/playlist?list=PL055Epbe6d5b572IRmYAHkUgcq3y6K3Ae))
