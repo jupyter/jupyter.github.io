@@ -8,6 +8,11 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://jupyter.org" # the base hostname & protocol for your site
 
+# Source of the /pulse activity feed (JSON produced by jupyter/security's
+# tools/repo_activity.py --json). Defaults to /assets/pulse.json when unset.
+# May be any URL serving permissive CORS, e.g. a GitHub Pages site.
+pulse_data_url: "/assets/pulse.json"
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
@@ -21,3 +26,14 @@ plugins:
 sass:
   sass_dir: _sass
   style: compressed
+
+# Keep local build/tooling directories out of the site and, more importantly,
+# out of `jekyll serve --livereload`'s watch list -- the conda envs under .nox
+# contain enough files to swamp the watcher.
+exclude:
+  - .nox
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - noxfile.py
+  - README.md
