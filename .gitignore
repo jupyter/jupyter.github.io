@@ -8,3 +8,4 @@ vendor
 .sass-cache
 .nox
 __pycache__/
+.pixi
