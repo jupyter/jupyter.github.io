@@ -46,7 +46,7 @@ Jupyter is an [open community](https://docs.jupyter.org/en/latest/community/cont
 
 ## Connect online
 
-Project Jupyter has official channels to publish community information and news. Use the [Jupyter Content Submission form](https://form.asana.com/?k=W0N5n7-VC0sj2Xk7IiVFoA&d=9283783873717) to submit content for these channels.
+Project Jupyter has official channels to publish community information and news. Use the [Jupyter Content Submission form](https://form.asana.com/?k=W0N5n7-VC0sj2Xk7IiVFoA&d=9283783873717) to submit [appropriate content](https://jupyter.org/governance/charters/mediastrategycharter/#editorial-principles) for these channels.
 
 <ul class="social-links">
   {% for obj in page.social_channels %}
