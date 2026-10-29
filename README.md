@@ -74,7 +74,7 @@ that the blog writes each time it is deployed.
 
 ## Web analytics
 
-We are using [Plausible.io](https://plausible.io/) for web analytics. We are also experimenting with using the Scientific Python's hosted Plausible instance (see https://github.com/jupyter/jupyter.github.io/pull/902).
+We are using [Plausible.io](https://plausible.io/) for web analytics. We are also experimenting with using the Scientific Python's hosted Plausible instance (see https://github.com/jupyter/jupyter.github.io/pull/902). Two Plausible scripts cannot share a page, so only the plausible.io script is loaded, and `_layouts/default.html` sends a copy of each pageview and custom event to the Scientific Python instance. Engagement events (scroll depth, time on page) are not copied.
 
 * [Plausible metrics dashboard](https://plausible.io/jupyter.org/) 
 * [Scientific Python metrics dashboard](https://views.scientific-python.org/jupyter.org)
