@@ -94,13 +94,24 @@ legal:
     <script async src="https://plausible.io/js/pa-B75UO5--FNXYQSG7GBWkf.js"></script>
     <script>
       window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-      plausible.init({hashBasedRouting: true})
-    </script>
-    <!-- Privacy-friendly analytics by Scientific Python Views -->
-    <script async src="https://views.scientific-python.org/js/pa-IgWFNiVtHYl3OaXolc2-e.js"></script>
-    <script>
-      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-      plausible.init({hashBasedRouting: true})
+      // Two Plausible scripts cannot share a page (the first to load takes
+      // window.plausible and the other stays inert), so this script sends
+      // a copy of each pageview and custom event to Scientific Python
+      // Views itself. Engagement events are not copied.
+      plausible.init({
+        hashBasedRouting: true,
+        transformRequest: function (p) {
+          try {
+            fetch("https://views.scientific-python.org/api/event", {
+              method: "POST",
+              headers: {"Content-Type": "text/plain"},
+              keepalive: true,
+              body: JSON.stringify(p)
+            }).catch(function () {});
+          } catch (e) {}
+          return p;
+        }
+      })
     </script>
   </head>
   <body>
