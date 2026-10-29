@@ -54,16 +54,6 @@ Project Jupyter has official channels to publish community information and news.
   {% endfor %}
 </ul>
 
-<!-- Add this to the Asana form and delete from here
-We will vet content against our [editorial principles](https://jupyter.org/governance/charters/MediaStrategyCharter.html#editorial-principles) and follow up with you about your submission. We usually review requests for publication on a weekly basis.
-
-If you are writing a blog post, we recommend copying and modifying one of our blog post templates:
-
-* [Google Docs Blog Template](https://docs.google.com/document/d/1Pn5YyMXc24oHpMaKTxmQ657vaI0lUYPggYN0xaqISJY)
-* [HackMD Blog Template](https://hackmd.io/@fQfdqEa8SW-zpP1Ua2Zovw/jupyter-blog-example?both)
-
-<!-- end Asana form additions -->
-
 We also have community discussion and collaboration in several online spaces:
 
 <ul class="social-links">
