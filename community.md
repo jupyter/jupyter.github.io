@@ -86,13 +86,10 @@ Global JupyterCon conferences gather our worldwide community together.
 ### Jupyter Community Workshops
 
 [Jupyter Community Workshops](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549)
-bring together small groups (approximately 12 to 24 people) of Jupyter community members and
-core contributors for high-impact strategic work and community engagement on focused topics.
-
-Much of Jupyter's work is accomplished through remote, online collaboration; however, over the years,
-we have found deep value in focused in-person work over a few days. These in-person events are
-particularly useful for tackling challenging development and design projects, growing the community
-of contributors, and strengthening collaborations.
+bring together small groups (up to a few dozen) of Jupyter community members and
+core contributors for high-impact strategic work and community engagement on focused topics. 
+These in-person events are particularly useful for tackling challenging development and design projects,
+growing the community of contributors, and strengthening collaborations.
 
 <details markdown="1">
 <summary>See past community workshops</summary>
