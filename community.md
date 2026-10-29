@@ -75,11 +75,13 @@ We often [come together in person or virtually](https://jupyter.readthedocs.io/e
 
 Global JupyterCon conferences gather our worldwide community together.
 
-* [JupyterCon 2017 (New York)](https://conferences.oreilly.com/jupyter/jup-ny-2017.html) ([videos](https://www.youtube.com/playlist?list=PL055Epbe6d5aP6Ru42r7hk68GTSaclYgi))
-* [JupyterCon 2018 (New York)](https://conferences.oreilly.com/jupyter/jup-ny.html) ([videos](https://www.youtube.com/playlist?list=PL055Epbe6d5b572IRmYAHkUgcq3y6K3Ae))
-* [JupyterCon 2020 (virtual)](https://jupytercon.com/) ([videos](https://www.youtube.com/c/JupyterCon/videos))
-* [JupyterCon 2023 (Paris)](https://web.archive.org/web/20230715062821/https://www.jupytercon.com) ([videos](https://youtube.com/playlist?list=PL_1BH3ug7n1Ih_Yy2TmM7MZ2zogSLZvzE&si=drGUpsbcpZihlo-t))
+* [Jupyter Day 2026 (San Jose)](https://jupyterday-2026.sessionize.com/schedule/day/20261019) ([videos](https://www.youtube.com/playlist?list=PLQTkT0ZPozr8))
+* [Jupyter Mini Summit 2026 (Prague)](https://osselceu2026.sched.com/event/2RjI5) ([videos](https://www.youtube.com/playlist?list=PLbJk0fi9gFmE))
 * [JupyterCon 2025 (San Diego)](https://events.linuxfoundation.org/jupytercon/) ([videos](https://youtube.com/playlist?list=PL_1BH3ug7n1LbTQg67bUAK5qEBB3LVgbT&si=no6qhQNXMesAnMDt))
+* [JupyterCon 2023 (Paris)](https://web.archive.org/web/20230715062821/https://www.jupytercon.com) ([videos](https://youtube.com/playlist?list=PL_1BH3ug7n1Ih_Yy2TmM7MZ2zogSLZvzE&si=drGUpsbcpZihlo-t))
+* [JupyterCon 2020 (virtual)](https://jupytercon.com/) ([videos](https://www.youtube.com/c/JupyterCon/videos))
+* [JupyterCon 2018 (New York)](https://conferences.oreilly.com/jupyter/jup-ny.html) ([videos](https://www.youtube.com/playlist?list=PL055Epbe6d5b572IRmYAHkUgcq3y6K3Ae))
+* [JupyterCon 2017 (New York)](https://conferences.oreilly.com/jupyter/jup-ny-2017.html) ([videos](https://www.youtube.com/playlist?list=PL055Epbe6d5aP6Ru42r7hk68GTSaclYgi))
 
 ### Jupyter Community Workshops
 
@@ -95,12 +97,28 @@ of contributors, and strengthening collaborations.
 <details markdown="1">
 <summary>See past community workshops</summary>
 
-#### Round 1: 2018
+#### Round 5: 2025–2026
+- [Round 5: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-are-back-3cca15d02975)
+- [Round 5: Announcement of Workshops](https://blog.jupyter.org/jupyter-community-workshops-early-2026-a9ce9670ba19)
+- [Round 5: Workshop Submission and List of Workshops](https://events.linuxfoundation.org/jupyter-workshops/)
+- Roadmap Workshop for JupyterHub and Binder
+- AI in Jupyter: Building Extensible AI Capabilities for Interactive Computing
+- [Security Tooling Sprint](https://blog.jupyter.org/jupyter-security-sprint-march-31st-5a2293de5cd5)
+- [Demystifying MyST Markdown in Education](https://blog.jupyter.org/navigating-the-post-workshop-fog-a-path-to-myst-6aaaaa6bf81f)
 
-- [Round 1: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549)
-- [Jupyter Widgets Workshop](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549)
-- [Jupyter Hackathon in Hawaii](https://blog.jupyter.org/jupyter-hackathon-series-in-hawaii-97b3d1fbce68)
-- [Teaching and Learning with Jupyter](https://blog.jupyter.org/teaching-and-learning-with-jupyter-c1d965f7b93a)
+#### Round 4: 2022–2023
+- [Round 4: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-c7491a3cca00)
+- [Jupyter Widgets Workshop](https://blog.jupyter.org/jupyter-community-workshop-the-future-of-jupyter-widgets-475f67288da0)
+- [JupyterLite Community Workshop](https://blog.jupyter.org/report-on-the-jupyterlite-community-workshop-aafaefe254ef)
+- [Jupyter in Education Workshop](https://blog.jupyter.org/jupyter-community-workshop-jupyter-for-education-82af9e34b510)
+- [Jupyter Notebook Format Workshop](https://blog.jupyter.org/jupyter-notebook-format-workshop-outcomes-c45faf113018)
+
+#### Round 3: 2020–2022
+
+- [Round 3: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-call-for-proposals-for-jan-aug-2020-710f687e30f4)
+- Africa Jupyter Community Workshop (Narcisse Mbunzama)
+- [Building the Jupyter Community in Musculoskeletal Imaging Research](https://blog.jupyter.org/report-on-the-jupyter-community-workshop-77016ab1d49b) (Serena Bonaretti)
+- [An Accessibility Audit and Roadmap for the Jupyter Ecosystem](https://blog.jupyter.org/jupyter-accessibility-workshops-wrap-up-8649dfe5f89) (Tania Allard, Isabela Presedo-Floyd)
 
 #### Round 2: 2019
 
@@ -115,28 +133,12 @@ of contributors, and strengthening collaborations.
 - [Jupyter for Scientific User Facilities and High-Performance Computing](https://blog.jupyter.org/jupyter-for-science-user-facilities-and-high-performance-computing-de178106872) (Rollin Thomas)
 - [South America Jupyter Community Workshop](https://blog.jupyter.org/south-america-jupyter-community-workshop-4edc51c7a6ce) (Damian Avila)
 
-#### Round 3: 2020–2022
+#### Round 1: 2018
 
-- [Round 3: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-call-for-proposals-for-jan-aug-2020-710f687e30f4)
-- Africa Jupyter Community Workshop (Narcisse Mbunzama)
-- [Building the Jupyter Community in Musculoskeletal Imaging Research](https://blog.jupyter.org/report-on-the-jupyter-community-workshop-77016ab1d49b) (Serena Bonaretti)
-- [An Accessibility Audit and Roadmap for the Jupyter Ecosystem](https://blog.jupyter.org/jupyter-accessibility-workshops-wrap-up-8649dfe5f89) (Tania Allard, Isabela Presedo-Floyd)
-
-#### Round 4: 2022–2023
-- [Round 4: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-c7491a3cca00)
-- [Jupyter Widgets Workshop](https://blog.jupyter.org/jupyter-community-workshop-the-future-of-jupyter-widgets-475f67288da0)
-- [JupyterLite Community Workshop](https://blog.jupyter.org/report-on-the-jupyterlite-community-workshop-aafaefe254ef)
-- [Jupyter in Education Workshop](https://blog.jupyter.org/jupyter-community-workshop-jupyter-for-education-82af9e34b510)
-- [Jupyter Notebook Format Workshop](https://blog.jupyter.org/jupyter-notebook-format-workshop-outcomes-c45faf113018)
-
-#### Round 5: 2025–2026
-- [Round 5: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-are-back-3cca15d02975)
-- [Round 5: Announcement of Workshops](https://blog.jupyter.org/jupyter-community-workshops-early-2026-a9ce9670ba19)
-- [Round 5: Workshop Submission and List of Workshops](https://events.linuxfoundation.org/jupyter-workshops/)
-- Roadmap Workshop for JupyterHub and Binder
-- AI in Jupyter: Building Extensible AI Capabilities for Interactive Computing
-- [Security Tooling Sprint](https://blog.jupyter.org/jupyter-security-sprint-march-31st-5a2293de5cd5)
-- [Demystifying MyST Markdown in Education](https://blog.jupyter.org/navigating-the-post-workshop-fog-a-path-to-myst-6aaaaa6bf81f)
+- [Round 1: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549)
+- [Jupyter Widgets Workshop](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549)
+- [Jupyter Hackathon in Hawaii](https://blog.jupyter.org/jupyter-hackathon-series-in-hawaii-97b3d1fbce68)
+- [Teaching and Learning with Jupyter](https://blog.jupyter.org/teaching-and-learning-with-jupyter-c1d965f7b93a)
 
 </details>
 
