@@ -103,7 +103,7 @@ growing the community of contributors, and strengthening collaborations.
   - [Pre-workshop blog post](https://blog.jupyter.org/posts/2026/jupyter-security-sprint-march-31st/)
 - [Demystifying MyST Markdown in Education](https://events.linuxfoundation.org/demystifying-myst-markdown/)
   - [Pre-workshop blog post](https://blog.jupyter.org/posts/2026/a-jupyter-workshop-demystifying-myst-markdown-in/)
-  - [Post-workshop report]([Demystifying MyST Markdown in Education](https://blog.jupyter.org/posts/2026/navigating-the-post-workshop-fog-a-path-to-myst/))
+  - [Post-workshop report](https://blog.jupyter.org/posts/2026/navigating-the-post-workshop-fog-a-path-to-myst/)
 
 #### Round 4: 2022-2023
 - [Round 4: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-c7491a3cca00)
