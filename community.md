@@ -95,13 +95,15 @@ growing the community of contributors, and strengthening collaborations.
 <summary>See past community workshops</summary>
 
 #### Round 5: 2025–2026
-- [Round 5: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-are-back-3cca15d02975)
-- [Round 5: Announcement of Workshops](https://blog.jupyter.org/jupyter-community-workshops-early-2026-a9ce9670ba19)
-- [Round 5: Workshop Submission and List of Workshops](https://events.linuxfoundation.org/jupyter-workshops/)
-- Roadmap Workshop for JupyterHub and Binder
-- AI in Jupyter: Building Extensible AI Capabilities for Interactive Computing
-- [Security Tooling Sprint](https://blog.jupyter.org/jupyter-security-sprint-march-31st-5a2293de5cd5)
-- [Demystifying MyST Markdown in Education](https://blog.jupyter.org/navigating-the-post-workshop-fog-a-path-to-myst-6aaaaa6bf81f)
+- [Call for Proposals](https://blog.jupyter.org/posts/2025/jupyter-community-workshops-are-back/), [Main workshop series page](https://events.linuxfoundation.org/archive/2026/jupyter-workshops/)
+- [Announcement of Funded Workshops](https://blog.jupyter.org/posts/2025/jupyter-community-workshops-early-2026/)
+- [Roadmap Workshop for JupyterHub and Binder](https://events.linuxfoundation.org/roadmap-workshop-for-jupyterhub-and-binder/)
+- [AI in Jupyter: Building Extensible AI Capabilities for Interactive Computing](https://events.linuxfoundation.org/ai-in-jupyter/)
+- [Security Tooling Sprint](https://events.linuxfoundation.org/security-tooling-sprint/)
+  - [Pre-workshop blog post](https://blog.jupyter.org/posts/2026/jupyter-security-sprint-march-31st/)
+- [Demystifying MyST Markdown in Education](https://events.linuxfoundation.org/demystifying-myst-markdown/)
+  - [Pre-workshop blog post](https://blog.jupyter.org/posts/2026/a-jupyter-workshop-demystifying-myst-markdown-in/)
+  - [Post-workshop report]([Demystifying MyST Markdown in Education](https://blog.jupyter.org/posts/2026/navigating-the-post-workshop-fog-a-path-to-myst/))
 
 #### Round 4: 2022–2023
 - [Round 4: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-c7491a3cca00)
