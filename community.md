@@ -94,7 +94,7 @@ growing the community of contributors, and strengthening collaborations.
 <details markdown="1">
 <summary>See past community workshops</summary>
 
-#### Round 5: 2025–2026
+#### Round 5: 2025-2026
 - [Call for Proposals](https://blog.jupyter.org/posts/2025/jupyter-community-workshops-are-back/), [Main workshop series page](https://events.linuxfoundation.org/archive/2026/jupyter-workshops/)
 - [Announcement of Funded Workshops](https://blog.jupyter.org/posts/2025/jupyter-community-workshops-early-2026/)
 - [Roadmap Workshop for JupyterHub and Binder](https://events.linuxfoundation.org/roadmap-workshop-for-jupyterhub-and-binder/)
@@ -105,14 +105,14 @@ growing the community of contributors, and strengthening collaborations.
   - [Pre-workshop blog post](https://blog.jupyter.org/posts/2026/a-jupyter-workshop-demystifying-myst-markdown-in/)
   - [Post-workshop report]([Demystifying MyST Markdown in Education](https://blog.jupyter.org/posts/2026/navigating-the-post-workshop-fog-a-path-to-myst/))
 
-#### Round 4: 2022–2023
+#### Round 4: 2022-2023
 - [Round 4: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-c7491a3cca00)
 - [Jupyter Widgets Workshop](https://blog.jupyter.org/jupyter-community-workshop-the-future-of-jupyter-widgets-475f67288da0)
 - [JupyterLite Community Workshop](https://blog.jupyter.org/report-on-the-jupyterlite-community-workshop-aafaefe254ef)
 - [Jupyter in Education Workshop](https://blog.jupyter.org/jupyter-community-workshop-jupyter-for-education-82af9e34b510)
 - [Jupyter Notebook Format Workshop](https://blog.jupyter.org/jupyter-notebook-format-workshop-outcomes-c45faf113018)
 
-#### Round 3: 2020–2022
+#### Round 3: 2020-2022
 
 - [Round 3: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-call-for-proposals-for-jan-aug-2020-710f687e30f4)
 - Africa Jupyter Community Workshop (Narcisse Mbunzama)
