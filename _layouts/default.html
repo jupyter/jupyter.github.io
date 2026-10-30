@@ -239,8 +239,17 @@ policies:
             </li>
             {%- endfor %}
           </ul>
-
-
+          <h2>Policies</h2>
+          <ul>
+            {%- for obj in layout.policies -%}
+            <li>
+              <a href="{{ obj.url }}"
+                  target="_blank" rel="noopener noreferrer">
+                  {{ obj.title }}
+              </a>
+            </li>
+            {%- endfor %}
+          </ul>
         </div>
       </div>
       </section>
@@ -277,12 +286,6 @@ policies:
       </section>
       <section class="footer-text">
         <div class="content content--wide">
-          <p class="footer-policies">
-            {%- for obj in layout.policies -%}
-              {%- unless forloop.first %} · {% endunless -%}
-              <a href="{{ obj.url }}">{{ obj.title }}</a>
-            {%- endfor -%}
-          </p>
           <p>
               The Jupyter® and Jupyter Logo® trademarks are registered with the U.S. Patent & Trademark Office by <a href="https://lf-charities.org/">LF Charities</a>. © {{site.time | date: '%Y' }}
           </p>
