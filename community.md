@@ -66,7 +66,7 @@ We also have community discussion and collaboration in several online spaces:
 
 We often [come together in person or virtually](https://jupyter.readthedocs.io/en/latest/community/content-community.html#jupyter-wide-meetings) to share and learn from each other.
 
-<div class="iframe-container">
+<div class="iframe-container" id="calendar">
   <iframe title="Calendar of Project Jupyter events" class="responsive-iframe" id="calendariframe" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&title=Project%20Jupyter&src=bTNoZWs2OWRhZzczODF1bXQ4a2NqZDc1dTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=Y184YWIxNzY1YjY1ODY3NDVkOGI3NWU5MmJkYzdjYTZlNDZjYWExMmE1ZjhkOTUwZDVmNzNmMzI2Zjk3NjE0NGQ3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=YXFwa3VpNXE3b2kzMnBrOXRjcDUzaG5zc2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23AD1457&color=%239E69AF&color=%23616161" style="border:0;overflow:hidden" width="800" height="600"></iframe>
 </div>
 <script>document.getElementById("calendariframe").src = document.getElementById("calendariframe").src.replace("ctz=local", "ctz=" + Intl.DateTimeFormat().resolvedOptions().timeZone)</script>
@@ -106,7 +106,7 @@ growing the community of contributors, and strengthening collaborations.
   - [Post-workshop report](https://blog.jupyter.org/posts/2026/navigating-the-post-workshop-fog-a-path-to-myst/)
 
 #### Round 4: 2022-2023
-- [Round 4: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-c7491a3cca00)
+- [Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-c7491a3cca00)
 - [Jupyter Widgets Workshop](https://blog.jupyter.org/jupyter-community-workshop-the-future-of-jupyter-widgets-475f67288da0)
 - [JupyterLite Community Workshop](https://blog.jupyter.org/report-on-the-jupyterlite-community-workshop-aafaefe254ef)
 - [Jupyter in Education Workshop](https://blog.jupyter.org/jupyter-community-workshop-jupyter-for-education-82af9e34b510)
@@ -114,16 +114,16 @@ growing the community of contributors, and strengthening collaborations.
 
 #### Round 3: 2020-2022
 
-- [Round 3: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-call-for-proposals-for-jan-aug-2020-710f687e30f4)
+- [Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-call-for-proposals-for-jan-aug-2020-710f687e30f4)
 - Africa Jupyter Community Workshop (Narcisse Mbunzama)
 - [Building the Jupyter Community in Musculoskeletal Imaging Research](https://blog.jupyter.org/report-on-the-jupyter-community-workshop-77016ab1d49b) (Serena Bonaretti)
 - [An Accessibility Audit and Roadmap for the Jupyter Ecosystem](https://blog.jupyter.org/jupyter-accessibility-workshops-wrap-up-8649dfe5f89) (Tania Allard, Isabela Presedo-Floyd)
 
 #### Round 2: 2019
 
-- [Round 2: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-call-for-proposals-26a8417e5b6a)
-- [Round 2: Announcement of Workshops](https://blog.jupyter.org/jupyter-community-workshops-a7f1dca1735e)
-- [Round 2: 2019 Year in Review](https://blog.jupyter.org/jupyter-community-workshops-2019-year-in-review-8876336924e4)
+- [Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-call-for-proposals-26a8417e5b6a)
+- [Announcement of Workshops](https://blog.jupyter.org/jupyter-community-workshops-a7f1dca1735e)
+- [2019 Year in Review](https://blog.jupyter.org/jupyter-community-workshops-2019-year-in-review-8876336924e4)
 - [Jupyter Server Design and Roadmap Workshop](https://blog.jupyter.org/jupyter-community-workshop-jupyter-server-design-and-roadmap-workshop-6e6760cc5098) (Luciano Resende)
 - [Building upon the Jupyter Kernel Protocol](https://blog.jupyter.org/field-report-on-the-kernel-community-workshop-a4ad73a1a718) (Sylvain Corlay)
 - [Jupyter nbgrader Hackathon/Code Sprint](https://blog.jupyter.org/https-blog-jupyter-org-university-of-edinburgh-jupyter-community-nbgrader-hackathon-2eff14df298a) (James Slack)
@@ -134,7 +134,7 @@ growing the community of contributors, and strengthening collaborations.
 
 #### Round 1: 2018
 
-- [Round 1: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549)
+- [Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549)
 - [Jupyter Widgets Workshop](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549)
 - [Jupyter Hackathon in Hawaii](https://blog.jupyter.org/jupyter-hackathon-series-in-hawaii-97b3d1fbce68)
 - [Teaching and Learning with Jupyter](https://blog.jupyter.org/teaching-and-learning-with-jupyter-c1d965f7b93a)
