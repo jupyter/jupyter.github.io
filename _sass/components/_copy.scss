@@ -10,6 +10,12 @@ summary {
   margin: 0 0 10px;
 }
 
+// List items in page content match paragraph text (otherwise they get the 14px base size).
+.content--copy li {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
 .text-center {
   text-align: center;
 }

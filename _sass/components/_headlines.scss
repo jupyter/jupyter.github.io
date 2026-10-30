@@ -1,10 +1,9 @@
 @import "settings/fonts";
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: $font-family-sans-serif;
   font-weight: 500;
   line-height: 1.3;
-  margin-top: 2em;
   margin-bottom: 0.33em;
 }
 
@@ -20,3 +19,6 @@ h3 {
   font-size: 2rem;
 }
 
+h4 {
+  font-size: 1.8rem;
+}

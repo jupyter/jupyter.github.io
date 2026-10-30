@@ -3,146 +3,141 @@ layout: page
 title: Get Involved in the Community
 tagline: How to learn about and join our open source community
 permalink: /community
+redirect_from:
+  - /social
+  - /media_submissions
 
-channels:
-  - title: Jupyter Chatroom
-    description: For real-time discussion project-wide. Also used by several sub-projects for their team conversation.
+social_channels:
+  - title: Blog
+    src: assets/jupyter/logo/logomark-orangebody-greyplanets.svg
+    url: https://blog.jupyter.org
+  - title: LinkedIn
+    src: assets/badges/LI-In-Bug.png
+    url: https://linkedin.com/company/project-jupyter
+  - title: Bluesky
+    src: assets/badges/bluesky_media_kit_logo_svgs.svg
+    url: https://bsky.app/profile/jupyter.org
+  - title: Mastodon
+    src: assets/badges/mastodon.svg
+    url: https://hachyderm.io/@ProjectJupyter
+  - title: YouTube
+    src: assets/badges/yt_icon_red_digital.png
+    url: https://youtube.com/@ProjectJupyter
+
+discussion_channels:
+  - title: Zulip chat
+    description: A Zulip chat for real-time discussion.
     src: assets/community/zulip-icon.svg
     alt: Zulip logo
     url: https://jupyter.zulipchat.com
-  - title: Jupyter Forum
-    description: A forum for asynchronous communication across the Jupyter community and many of its subprojects.
+  - title: Discourse forum
+    description: A Discourse forum for asynchronous communication.
     src: assets/community/discourse.svg
     alt: Discourse logo
     url: https://discourse.jupyter.org/
-  - title: Jupyter GitHub
-    description: A place where the community collaborates on the development of Jupyter software.
+  - title: GitHub code
+    description: Where the community collaborates on code and documentation.
     src: assets/widgets/GitHub_Invertocat_Black.svg
     alt: GitHub logo
     url: https://github.com/jupyter/
-  - title: Jupyter General Mailing List
-    description: A Google Group for general discussions of Jupyter's use.
-    src: assets/community/mail-list.svg
-    alt: Mailing list
-    url: https://groups.google.com/forum/#!forum/jupyter
 ---
 
-Jupyter is an open community including educators, developers, scientists, and data enthusiasts who believe in the power of open
-tools and standards for education, research, and data analytics.
+Jupyter is an [open community](https://docs.jupyter.org/en/latest/community/content-community.html) including educators, developers, scientists, professionals, and data enthusiasts who believe in open tools and standards for data analytics, education, and research. We welcome [contributors](https://docs.jupyter.org/en/latest/contributing/content-contributor.html) and have a strong commitment to being an **[open, inclusive, and positive community](https://jupyter.org/governance/conduct/code-of-conduct/)**.
 
-In our community, we have [online spaces](#where-to-talk) and [virtual and in-person meetings](#live-events).
+## Connect online
 
-## Where to learn
+Project Jupyter has official channels to publish community information and news. Use our [Content Submission form](https://form.asana.com/?k=W0N5n7-VC0sj2Xk7IiVFoA&d=9283783873717) to submit [appropriate content](https://jupyter.org/governance/charters/mediastrategycharter/#editorial-principles) for these channels.
 
-We welcome contributions and contributors of all kinds - whether they come as contributions to code, participation in the community, opening issues and pointing out bugs, or simply sharing your work with your colleagues and friends.
-
-To learn more about contributing, see the [Jupyter Contributing guide](https://docs.jupyter.org/en/latest/contributing/content-contributor.html).
-
-Jupyter is organized into sub-projects, each of which has their own goals, practices, and spaces for communication. 
-To get started, see [this list of Jupyter Subprojects](https://jupyter.org/governance/list_of_subprojects.html).
-
-## Where to talk
-
-Jupyter has a number of online communication channels as well as regular virtual and in-person events. To learn more about the Jupyter community, see the [Jupyter Community Guide](https://docs.jupyter.org/en/latest/community/content-community.html).
-
-Remember that we have a strong commitment to being an **open, inclusive, and positive community**. Please read the [Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/main/conduct/code_of_conduct.md)
-for guidance on how to interact with others.
-
-<section class="resourcelist">
-  {% for obj in page.channels %}
-    {% include community-resource.html
-         title=obj.title
-         description=obj.description
-         url=obj.url
-         src=obj.src
-         alt=obj.alt
-    %}
+<ul class="social-links">
+  {% for obj in page.social_channels %}
+  <li><a href="{{ obj.url }}"><img src="{{ obj.src | relative_url }}" alt=""><span>{{ obj.title }}</span></a></li>
   {% endfor %}
-</section>
+</ul>
 
-## Live events
+We also have community discussion and collaboration in several online spaces:
 
-Project Jupyter events provide a forum for community members to come together in person
-or virtually to share and learn from each other.
+<ul class="social-links">
+  {% for obj in page.discussion_channels %}
+  <li><a href="{{ obj.url }}"><img src="{{ obj.src | relative_url }}" alt="{{ obj.alt }}" title="{{ obj.description }}"><span>{{ obj.title }}</span></a></li>
+  {% endfor %}
+</ul>
 
-### Calendar
+## Events
 
-This is a calendar of regular online and in-person events.
+We often [come together in person or virtually](https://jupyter.readthedocs.io/en/latest/community/content-community.html#jupyter-wide-meetings) to share and learn from each other.
 
-<div class="iframe-container">
+<div class="iframe-container" id="calendar">
   <iframe title="Calendar of Project Jupyter events" class="responsive-iframe" id="calendariframe" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&title=Project%20Jupyter&src=bTNoZWs2OWRhZzczODF1bXQ4a2NqZDc1dTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=Y184YWIxNzY1YjY1ODY3NDVkOGI3NWU5MmJkYzdjYTZlNDZjYWExMmE1ZjhkOTUwZDVmNzNmMzI2Zjk3NjE0NGQ3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=YXFwa3VpNXE3b2kzMnBrOXRjcDUzaG5zc2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23AD1457&color=%239E69AF&color=%23616161" style="border:0;overflow:hidden" width="800" height="600"></iframe>
 </div>
 <script>document.getElementById("calendariframe").src = document.getElementById("calendariframe").src.replace("ctz=local", "ctz=" + Intl.DateTimeFormat().resolvedOptions().timeZone)</script>
 
-See [this page](https://jupyter.readthedocs.io/en/latest/community/content-community.html#jupyter-wide-meetings) for
-more information.
-
 ### JupyterCon
 
-Global JupyterCon conferences provide opportunities for the Jupyter community to come together to learn and share.
+Global JupyterCon conferences gather our worldwide community together.
 
-* [JupyterCon 2017 (New York)](https://conferences.oreilly.com/jupyter/jup-ny-2017.html) ([videos](https://www.youtube.com/playlist?list=PL055Epbe6d5aP6Ru42r7hk68GTSaclYgi))
-* [JupyterCon 2018 (New York)](https://conferences.oreilly.com/jupyter/jup-ny.html) ([videos](https://www.youtube.com/playlist?list=PL055Epbe6d5b572IRmYAHkUgcq3y6K3Ae))
-* [JupyterCon 2020 (virtual)](https://jupytercon.com/) ([videos](https://www.youtube.com/c/JupyterCon/videos))
-* [JupyterCon 2023 (Paris)](https://web.archive.org/web/20230715062821/https://www.jupytercon.com) ([videos](https://youtube.com/playlist?list=PL_1BH3ug7n1Ih_Yy2TmM7MZ2zogSLZvzE&si=drGUpsbcpZihlo-t))
+* [Jupyter Day 2026 (San Jose)](https://jupyterday-2026.sessionize.com/schedule/day/20261019) ([videos](https://www.youtube.com/playlist?list=PLQTkT0ZPozr8))
+* [Jupyter Mini Summit 2026 (Prague)](https://osselceu2026.sched.com/event/2RjI5) ([videos](https://www.youtube.com/playlist?list=PLbJk0fi9gFmE))
 * [JupyterCon 2025 (San Diego)](https://events.linuxfoundation.org/jupytercon/) ([videos](https://youtube.com/playlist?list=PL_1BH3ug7n1LbTQg67bUAK5qEBB3LVgbT&si=no6qhQNXMesAnMDt))
+* [JupyterCon 2023 (Paris)](https://web.archive.org/web/20230715062821/https://www.jupytercon.com) ([videos](https://youtube.com/playlist?list=PL_1BH3ug7n1Ih_Yy2TmM7MZ2zogSLZvzE&si=drGUpsbcpZihlo-t))
+* [JupyterCon 2020 (virtual)](https://jupytercon.com/) ([videos](https://www.youtube.com/c/JupyterCon/videos))
+* [JupyterCon 2018 (New York)](https://conferences.oreilly.com/jupyter/jup-ny.html) ([videos](https://www.youtube.com/playlist?list=PL055Epbe6d5b572IRmYAHkUgcq3y6K3Ae))
+* [JupyterCon 2017 (New York)](https://conferences.oreilly.com/jupyter/jup-ny-2017.html) ([videos](https://www.youtube.com/playlist?list=PL055Epbe6d5aP6Ru42r7hk68GTSaclYgi))
 
 ### Jupyter Community Workshops
 
 [Jupyter Community Workshops](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549)
-bring together small groups (approximately 12 to 24 people) of Jupyter community members and
-core contributors for high-impact strategic work and community engagement on focused topics.
-
-Much of Jupyter's work is accomplished through remote, online collaboration; yet, over the years,
-we have found deep value in focused in-person work over a few days. These in-person events are
-particularly useful for tackling challenging development and design projects, growing the community
-of contributors, and strengthening collaborations.
+bring together small groups (up to a few dozen) of Jupyter community members and
+core contributors for high-impact strategic work and community engagement on focused topics. 
+These in-person events are particularly useful for tackling challenging development and design projects,
+growing the community of contributors, and strengthening collaborations.
 
 <details markdown="1">
-<summary>See past community workshops.</summary>
+<summary>See past community workshops</summary>
 
-#### Round 1: 2018
+#### Round 5: 2025-2026
+- [Call for Proposals](https://blog.jupyter.org/posts/2025/jupyter-community-workshops-are-back/), [Main workshop series page](https://events.linuxfoundation.org/archive/2026/jupyter-workshops/)
+- [Announcement of Funded Workshops](https://blog.jupyter.org/posts/2025/jupyter-community-workshops-early-2026/)
+- [Roadmap Workshop for JupyterHub and Binder](https://events.linuxfoundation.org/roadmap-workshop-for-jupyterhub-and-binder/)
+- [AI in Jupyter: Building Extensible AI Capabilities for Interactive Computing](https://events.linuxfoundation.org/ai-in-jupyter/)
+- [Security Tooling Sprint](https://events.linuxfoundation.org/security-tooling-sprint/)
+  - [Pre-workshop blog post](https://blog.jupyter.org/posts/2026/jupyter-security-sprint-march-31st/)
+- [Demystifying MyST Markdown in Education](https://events.linuxfoundation.org/demystifying-myst-markdown/)
+  - [Pre-workshop blog post](https://blog.jupyter.org/posts/2026/a-jupyter-workshop-demystifying-myst-markdown-in/)
+  - [Post-workshop report](https://blog.jupyter.org/posts/2026/navigating-the-post-workshop-fog-a-path-to-myst/)
 
-- [Round 1: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549)
-- [Jupyter Widgets workshop](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549)
-- [Jupyter Hackathon in Hawaii](https://blog.jupyter.org/jupyter-hackathon-series-in-hawaii-97b3d1fbce68)
-- [Teaching and Learning with Jupyter](https://blog.jupyter.org/teaching-and-learning-with-jupyter-c1d965f7b93a)
-
-#### Round 2: 2019
-
-- [Round 2: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-call-for-proposals-26a8417e5b6a)
-- [Round 2: Announcement of Workshops](https://blog.jupyter.org/jupyter-community-workshops-a7f1dca1735e)
-- [Round 2: 2019 Year in Review](https://blog.jupyter.org/jupyter-community-workshops-2019-year-in-review-8876336924e4)
-- [Jupyter Server Design and Roadmap Workshop](https://blog.jupyter.org/jupyter-community-workshop-jupyter-server-design-and-roadmap-workshop-6e6760cc5098): (Luciano Resende)
-- [Building upon the Jupyter Kernel Protocol](https://blog.jupyter.org/field-report-on-the-kernel-community-workshop-a4ad73a1a718) (Sylvain Corlay)
-- [Jupyter nbgrader Hackathon/Code Sprint](https://blog.jupyter.org/https-blog-jupyter-org-university-of-edinburgh-jupyter-community-nbgrader-hackathon-2eff14df298a): (James Slack)
-- [Intro to Python for Kids, Parents & Teachers Series](https://datasciencecornwall.blogspot.com/2019/06/python-data-science-for-kids-taster.html): (Tariq Rashad)
-- [Dashboarding in the Jupyter Ecosystem](https://blog.jupyter.org/report-on-the-jupyter-community-workshop-on-dashboarding-14f8ad9f3c0): (Pascal Bugnion, Sylvain Corlay)
-- [Jupyter for Scientific User Facilities and High-Performance Computing](https://blog.jupyter.org/jupyter-for-science-user-facilities-and-high-performance-computing-de178106872): (Rollin Thomas)
-- [South America Jupyter Community Workshop](https://blog.jupyter.org/south-america-jupyter-community-workshop-4edc51c7a6ce): (Damian Avila)
+#### Round 4: 2022-2023
+- [Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-c7491a3cca00)
+- [Jupyter Widgets Workshop](https://blog.jupyter.org/jupyter-community-workshop-the-future-of-jupyter-widgets-475f67288da0)
+- [JupyterLite Community Workshop](https://blog.jupyter.org/report-on-the-jupyterlite-community-workshop-aafaefe254ef)
+- [Jupyter in Education Workshop](https://blog.jupyter.org/jupyter-community-workshop-jupyter-for-education-82af9e34b510)
+- [Jupyter Notebook Format Workshop](https://blog.jupyter.org/jupyter-notebook-format-workshop-outcomes-c45faf113018)
 
 #### Round 3: 2020-2022
 
-- [Round 3: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-call-for-proposals-for-jan-aug-2020-710f687e30f4)
-- Africa Jupyter Community Workshop: (Narcisse Mbunzama)
-- [Building the Jupyter Community in Musculoskeletal Imaging Research](https://blog.jupyter.org/report-on-the-jupyter-community-workshop-77016ab1d49b): (Serena Bonaretti)
-- [An accessibility audit and roadmap for the Jupyter ecosystem](https://blog.jupyter.org/jupyter-accessibility-workshops-wrap-up-8649dfe5f89): (Tania Allard, Isabela Presedo-Floyd)
+- [Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-call-for-proposals-for-jan-aug-2020-710f687e30f4)
+- Africa Jupyter Community Workshop (Narcisse Mbunzama)
+- [Building the Jupyter Community in Musculoskeletal Imaging Research](https://blog.jupyter.org/report-on-the-jupyter-community-workshop-77016ab1d49b) (Serena Bonaretti)
+- [An Accessibility Audit and Roadmap for the Jupyter Ecosystem](https://blog.jupyter.org/jupyter-accessibility-workshops-wrap-up-8649dfe5f89) (Tania Allard, Isabela Presedo-Floyd)
 
-#### Round 4: 2022-2023
-- [Round 4: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-c7491a3cca00)
-- [Jupyter Widgets workshop](https://blog.jupyter.org/jupyter-community-workshop-the-future-of-jupyter-widgets-475f67288da0)
-- [JupyterLite community workshop](https://blog.jupyter.org/report-on-the-jupyterlite-community-workshop-aafaefe254ef)
-- [Jupyter in Education workshop](https://blog.jupyter.org/jupyter-community-workshop-jupyter-for-education-82af9e34b510)
-- [Jupyter Notebook Format workshop](https://blog.jupyter.org/jupyter-notebook-format-workshop-outcomes-c45faf113018)
+#### Round 2: 2019
 
-#### Round 5: 2025-2026
-- [Round 5: Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-are-back-3cca15d02975)
-- [Round 5: Announcement of Workshops](https://blog.jupyter.org/jupyter-community-workshops-early-2026-a9ce9670ba19)
-- [Round 5: Workshop Submission and List of Workshops](https://events.linuxfoundation.org/jupyter-workshops/)
-- Roadmap Workshop for JupyterHub and Binder
-- AI in Jupyter: Building Extensible AI Capabilities for Interactive Computing
-- [Security Tooling Sprint](https://blog.jupyter.org/jupyter-security-sprint-march-31st-5a2293de5cd5)
-- [Demystifying MyST Markdown in Education](https://blog.jupyter.org/navigating-the-post-workshop-fog-a-path-to-myst-6aaaaa6bf81f)
+- [Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-call-for-proposals-26a8417e5b6a)
+- [Announcement of Workshops](https://blog.jupyter.org/jupyter-community-workshops-a7f1dca1735e)
+- [2019 Year in Review](https://blog.jupyter.org/jupyter-community-workshops-2019-year-in-review-8876336924e4)
+- [Jupyter Server Design and Roadmap Workshop](https://blog.jupyter.org/jupyter-community-workshop-jupyter-server-design-and-roadmap-workshop-6e6760cc5098) (Luciano Resende)
+- [Building upon the Jupyter Kernel Protocol](https://blog.jupyter.org/field-report-on-the-kernel-community-workshop-a4ad73a1a718) (Sylvain Corlay)
+- [Jupyter nbgrader Hackathon/Code Sprint](https://blog.jupyter.org/https-blog-jupyter-org-university-of-edinburgh-jupyter-community-nbgrader-hackathon-2eff14df298a) (James Slack)
+- [Intro to Python for Kids, Parents & Teachers Series](https://datasciencecornwall.blogspot.com/2019/06/python-data-science-for-kids-taster.html) (Tariq Rashad)
+- [Dashboarding in the Jupyter Ecosystem](https://blog.jupyter.org/report-on-the-jupyter-community-workshop-on-dashboarding-14f8ad9f3c0) (Pascal Bugnion, Sylvain Corlay)
+- [Jupyter for Scientific User Facilities and High-Performance Computing](https://blog.jupyter.org/jupyter-for-science-user-facilities-and-high-performance-computing-de178106872) (Rollin Thomas)
+- [South America Jupyter Community Workshop](https://blog.jupyter.org/south-america-jupyter-community-workshop-4edc51c7a6ce) (Damian Avila)
+
+#### Round 1: 2018
+
+- [Call for Proposals](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549)
+- [Jupyter Widgets Workshop](https://blog.jupyter.org/jupyter-community-workshops-cbd34ac82549)
+- [Jupyter Hackathon in Hawaii](https://blog.jupyter.org/jupyter-hackathon-series-in-hawaii-97b3d1fbce68)
+- [Teaching and Learning with Jupyter](https://blog.jupyter.org/teaching-and-learning-with-jupyter-c1d965f7b93a)
 
 </details>
 

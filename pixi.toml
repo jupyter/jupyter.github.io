@@ -1,0 +1,17 @@
+[workspace]
+name = "jupyter-github-io"
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "osx-64", "linux-64"]
+
+[dependencies]
+ruby = "<4"
+c-compiler = "*"
+cxx-compiler = "*"
+
+[activation.env]
+BUNDLE_PATH = "$PIXI_PROJECT_ROOT/.pixi/bundle"
+
+[tasks]
+install = "bundle install"
+build = { cmd = "bundle exec jekyll build", depends-on = ["install"] }
+serve = { cmd = "bundle exec jekyll serve --livereload", depends-on = ["install"] }

@@ -4,6 +4,9 @@ nav:
     url: /try
   - title: Install
     url: /install
+  - title: Blog
+    url: https://blog.jupyter.org
+    newpage: true
   - title: Community
     url: /community
   - title: AI
@@ -11,11 +14,6 @@ nav:
   - title: Documentation
     url: https://docs.jupyter.org/
     newpage: true
-  - title: Blog
-    url: https://blog.jupyter.org
-    newpage: true
-  - title: Social
-    url: /social
   - title: Governance
     url: /governance/
   - title: Security
@@ -41,15 +39,19 @@ projects:
   - title: Widgets
     url: /widgets
 social:
-  - title: GitHub
-    url: https://github.com/jupyter/
+  - title: Blog
+    url: https://blog.jupyter.org
+  - title: LinkedIn
+    url: https://linkedin.com/company/project-jupyter
   - title: Mastodon
     url: https://hachyderm.io/@ProjectJupyter
   - title: BlueSky
     url: https://bsky.app/profile/jupyter.org
   - title: YouTube
     url: https://www.youtube.com/@projectjupyter
-legal:
+  - title: GitHub
+    url: https://github.com/jupyter/
+policies:
   - title: Privacy
     url: /privacy
 
@@ -180,7 +182,7 @@ legal:
                    {{nav.title}}
                </a>
             </li>
-            {%- if nav.title == "Community" %}
+            {%- if nav.title == "Documentation" %}
             <li class="navbar-dropdown dropdown">
                 <button type="button"
                         class="navbar-dropdown-toggle"
@@ -248,18 +250,17 @@ legal:
             </li>
             {%- endfor %}
           </ul>
-          <h2>Legal</h2>
+          <h2>Policies</h2>
           <ul>
-            {%- for obj in layout.legal -%}
+            {%- for obj in layout.policies -%}
             <li>
-              <a href="{{ obj.url }}">
+              <a href="{{ obj.url }}"
+                  target="_blank" rel="noopener noreferrer">
                   {{ obj.title }}
               </a>
             </li>
             {%- endfor %}
           </ul>
-
-
         </div>
       </div>
       </section>
