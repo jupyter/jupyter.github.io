@@ -37,5 +37,3 @@ For more detailed information, see:
 
 - [JupyterLab accessibility statement](https://jupyter-accessibility.readthedocs.io/en/latest/resources/JupyterLab-a11y-statement.html)
 - [Jupyter Book accessibility](https://jupyterbook.org/accessibility/)
-- [Jupyter Notebook accessibility issues](https://github.com/jupyter/notebook/issues?q=is%3Aopen+is%3Aissue+label%3Atag%3AAccessibility)
-- [JupyterHub accessibility issues](https://github.com/jupyterhub/jupyterhub/issues?q=is%3Aopen+is%3Aissue+label%3Aaccessibility)
