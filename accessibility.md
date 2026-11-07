@@ -10,8 +10,8 @@ accessible. Jupyter is an ecosystem of independently maintained subprojects,
 each with its own user interfaces and accessibility work. Accessibility varies
 by project and feature, and there is still significant work to do.
 
-This page directs you to the current accessibility information for Jupyter
-projects and ways to participate in improving them.
+This page directs you to accessibility information for Jupyter
+projects and ways to participate in improving accessibility in Project Jupyter.
 
 ## Accessibility Subproject
 
@@ -19,7 +19,7 @@ The [Jupyter Accessibility Subproject](https://jupyter-accessibility.readthedocs
 provides cross-project guidance and strategy for making Jupyter's core
 user-facing software and related tools accessible. Its
 [accessibility documentation](https://jupyter-accessibility.readthedocs.io/en/latest/accessibility-docs.html)
-includes resources, guidance, and the project's current work.
+includes resources, guidance, and notes on completed work.
 
 ## Get involved
 
