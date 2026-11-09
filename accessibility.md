@@ -25,7 +25,7 @@ includes resources, guidance, and notes on completed work.
 
 Join the [accessibility category on the Jupyter Discourse forum](https://discourse.jupyter.org/c/special-topics/accessibility)
 or [Jupyter Zulip #accessibility channel](https://jupyter.zulipchat.com/#narrow/channel/644830-accessibility) to ask questions and share
-ideas. On the first Wednesday of each month, the Jupyter Contributor Call (see the [Jupyter Community Calendar](https://jupyter.org/community) for details) focuses on accessibility.
+ideas. On the first Wednesday of each month, the Jupyter Contributor Call (see the [Jupyter Community Calendar](https://jupyter.org/community#calendar) for details) focuses on accessibility.
 You can follow and contribute to work in the
 [Jupyter Accessibility GitHub repository](https://github.com/jupyter/accessibility).
 
