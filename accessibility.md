@@ -24,7 +24,7 @@ includes resources, guidance, and notes on completed work.
 ## Get involved
 
 Join the [accessibility category on the Jupyter Discourse forum](https://discourse.jupyter.org/c/special-topics/accessibility)
-or [Jupyter Zulip](https://jupyter.zulipchat.com/) to ask questions and share
+or [Jupyter Zulip #accessibility channel](https://jupyter.zulipchat.com/#narrow/channel/644830-accessibility) to ask questions and share
 ideas. The Accessibility and Jupyter Frontends
 subprojects also hold [weekly community meetings](https://github.com/jupyter/accessibility#join-our-accessibility-meetings).
 You can follow and contribute to work in the
