@@ -35,5 +35,5 @@ You can follow and contribute to work in the
 Accessibility status and documentation are maintained by individual projects.
 For more detailed information, see:
 
-- [JupyterLab accessibility statement](https://jupyter-accessibility.readthedocs.io/en/latest/resources/JupyterLab-a11y-statement.html)
+- [JupyterLab accessibility statement](https://jupyterlab.readthedocs.io/en/latest/getting_started/accessibility.html)
 - [Jupyter Book accessibility](https://jupyterbook.org/accessibility/)
