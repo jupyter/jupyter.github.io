@@ -44,7 +44,7 @@ discussion_channels:
 
 Jupyter is an [open community](https://docs.jupyter.org/en/latest/community/content-community.html) including educators, developers, scientists, professionals, and data enthusiasts who believe in open tools and standards for data analytics, education, and research. We welcome [contributors](https://docs.jupyter.org/en/latest/contributing/content-contributor.html) and have a strong commitment to being an **[open, inclusive, and positive community](https://jupyter.org/governance/conduct/code-of-conduct/)**.
 
-## Connect online
+## Connect and Share Online
 
 Project Jupyter has official channels to publish community information and news. Use our [Content Submission form](https://form.asana.com/?k=W0N5n7-VC0sj2Xk7IiVFoA&d=9283783873717) to submit [appropriate content](https://jupyter.org/governance/charters/mediastrategycharter/#editorial-principles) for these channels.
 
